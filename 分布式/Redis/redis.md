@@ -1,0 +1,106 @@
+### redis是什么
+
+Redis 是互联网技术领域使用最为广泛的存储中间件
+
+### 5种基础数据结构
+
+Red is 种基础数据结构，分别为 string（字符串）、list （列表〉、 hash（字典〉、set（集合）和 zset（有序集合〉。
+
+zset
+
+## Redis的过期键删除策略
+
+Redis服务器使用的是惰性删除和定期删除两种策略
+
+### 惰性删除策略的实现
+所有读写数据库的Redis命令在执行之前都会对输入键进行检查：
+·如果输入键已经过期，那么将输入键从数据库中删除。
+·如果输入键未过期，那么不做动作。
+
+在命令真正执行之前，过滤掉过期的输入键，从而避免命令接触到过期键。
+另外，因为每个被访问的键都可能因为过期而被删除，所以每个命令的实现函数都必须能同时处理键存在以及键不存在这两种情况：
+- 当键存在时，命令按照键存在的情况执行。
+- 当键不存在或者键因为过期而被expireIfNeeded函数删除时，命令按照键不存在的情况执行。
+
+### 定期删除策略的实现
+每当Redis的服务器周期性操作定期删除策略时，它在规定的时间内，分多次遍历服务器中的各个数据库，从数据库的expires字典中随机检查一部分键的过期时间，并删除其中的过期键。
+- 每次运行时，都从一定数量的数据库中取出一定数量的随机键进行检查，并删除其中的过期键。
+- 记录当前函数检查的进度，并在下一次调用时，接着上一次的进度进行处理。比如说，如果当前activeExpireCycle函数在遍历10号数据库时返回了，那么下次activeExpireCycle函数执行时，将从11号数据库开始查找并删除过期键。
+- 随着不断执行，服务器中的所有数据库都会被检查一遍，这时函数将current_db变量重置为0，然后再次开始新一轮的检查工作。
+
+### 持久化
+
+
+
+### 为什么Redis先执行指令，再记录AOF日志
+
+Redis是一种内存数据库，对于大多数的操作，Redis会先将请求写入内存中的数据结构，然后再异步地将修改同步到磁盘上的AOF（Append-Only File）文件中，这就是非常高效的原因。Redis的性能很大程度上取决于CPU的速度和内存的大小。因此，Redis选择将大部分数据保存在内存中，以提高运行速度。Redis 的数据是存内存的，断电之后就丢了。Redis 的 AOF / RDB 相当于有一个把硬盘当内存的 slave。存储引擎数据是存硬盘的，断电之后，可能有脏数据，也可能没有，需要 redo log / undo log 来做原子 commit。保护 commit 的数据是不可能在 commit 之后写的。存储引擎的日志只保护 uncommitted data。
+
+
+
+## 数据库和缓存如何保证一致性？
+
+一般来说，如果允许缓存可以稍微的跟数据库偶尔有不一致的情况，也就是说如果你的系统**不是严格要求** “缓存+数据库” 必须保持一致性的话，最好不要做这个方案，即：**读请求和写请求串行化**，串到一个**内存队列**里去。
+
+串行化可以保证一定不会出现不一致的情况，但是它也会导致系统的吞吐量大幅度降低，用比正常情况下多几倍的机器去支撑线上的一个请求。
+
+### Cache Aside Pattern
+
+- 读的时候，先读缓存，缓存没有的话，就读数据库，然后取出数据后放入缓存，同时返回响应。
+- 更新的时候，**先更新数据库，然后再删除缓存**。
+
+##### 为什么是删除缓存，而不是更新缓存？
+
+- 防止频繁修改，缓存频繁刷新
+
+  在复杂点的缓存场景，缓存不单单是数据库中直接取出来的值。比如可能更新了某个表的一个字段，然后其对应的缓存，是需要查询另外两个表的数据并进行运算，才能计算出缓存最新的值的。
+
+  另外更新缓存的代价有时候是很高的。是不是说，每次修改数据库的时候，都一定要将其对应的缓存更新一份？也许有的场景是这样，但是对于**比较复杂的缓存数据计算的场景**，就不是这样了。如果你频繁修改一个缓存涉及的多个表，缓存也频繁更新。但是问题在于，**这个缓存到底会不会被频繁访问到？**
+
+  举个例子，一个缓存涉及的表的字段，在 1 分钟内就修改了 20 次，或者是 100 次，那么缓存更新 20 次、100 次；但是这个缓存在 1 分钟内只被读取了 1 次，有**大量的冷数据**。实际上，如果你只是删除缓存的话，那么在 1 分钟内，这个缓存不过就重新计算一次而已，开销大幅度降低。
+
+- 用到缓存才去计算缓存，就是一个 lazy 计算的思想，不要每次都重新做复杂的计算，不管它会不会用到，而是让它到需要被使用的时候再重新计算。
+
+  像 mybatis，hibernate，都有懒加载思想。查询一个部门，部门带了一个员工的 list，没有必要说每次查询部门，都里面的 1000 个员工的数据也同时查出来啊。80% 的情况，查这个部门，就只是要访问这个部门的信息就可以了。先查部门，同时要访问里面的员工，那么这个时候只有在你要访问里面的员工的时候，才会去数据库里面查询 1000 个员工。
+
+
+
+### 延迟双删
+
+# redis实现限流
+
+## 滑动窗口zset
+
+```java
+public boolean isActonAllowed(String userid, String actionKey, int period, int maxCount) {
+    String key = String.format("hist:%s:%s", userid, actionKey);
+    long nowTs = System.currentTimeMillis();
+    List list = redisTemplate.executePipelined((RedisCallback<Object>) connection -> {
+        connection.multi();
+        connection.zAdd(key.getBytes(StandardCharsets.UTF_8), (double) nowTs, (String.valueOf(nowTs).getBytes(StandardCharsets.UTF_8)));
+        connection.zRemRangeByScore(key.getBytes(StandardCharsets.UTF_8), 0, nowTs - period * 1000L);
+        Long l = connection.zCard(key.getBytes(StandardCharsets.UTF_8));
+        connection.expire(key.getBytes(StandardCharsets.UTF_8), period + 1);
+        if (l != null) {
+            if (maxCount <= l) {
+                throw new RuntimeException("限流了");
+            }
+        }
+        connection.exec();
+        return null;
+    });
+    log.info(list.toString());
+    return false;
+}
+```
+具体见RedissonRateLimiter
+
+## 漏斗限流
+
+#### AOF持久化的效率和安全性
+
+服务器配置appendfsync选项的值直接决定AOF持久化功能的效率和安全性。
+
+- 当appendfsync的值为always时，服务器在每个事件循环都要将aof_buf缓冲区中的所有内容写入到AOF文件，并且同步AOF文件，所以always的效率是appendfsync选项三个值当中最慢的一个，但从安全性来说，always也是最安全的，因为即使出现故障停机，AOF持久化也只会丢失一个事件循环中所产生的命令数据。
+- 当appendfsync的值为everysec时，服务器在每个事件循环都要将aof_buf缓冲区中的所有内容写入到AOF文件，并且每隔一秒就要在子线程中对AOF文件进行一次同步。从效率上来讲，everysec模式足够快，并且就算出现故障停机，数据库也只丢失一秒钟的命令数据。
+- 当appendfsync的值为no时，服务器在每个事件循环都要将aof_buf缓冲区中的所有内容写入到AOF文件，至于何时对AOF文件进行同步，则由操作系统控制。因为处于no模式下的flushAppendOnlyFile调用无须执行同步操作，所以该模式下的AOF文件写入速度总是最快的，不过因为这种模式会在系统缓存中积累一段时间的写入数据，所以该模式的单次同步时长通常是三种模式中时间最长的。从平摊操作的角度来看，no模式和everysec模式的效率类似，当出现故障停机时，使用no模式的服务器将丢失上次同步AOF文件之后的所有写命令数据。

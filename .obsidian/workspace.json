@@ -1,0 +1,282 @@
+{
+  "main": {
+    "id": "220271616e480541",
+    "type": "split",
+    "children": [
+      {
+        "id": "1bb15617c0b4c0e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "46140e999c3f8420",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8cd914f96da5bf5b",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/zset 2023-12-20 21.01.01.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "5412c9126678d3b1",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "8ee8c82dc3f89d42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mysql/brew安装mysql.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bfc585cdb2fb7db9",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Drawing 2023-12-19 22.35.55.excalidraw.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "70700f501bbb42dc",
+    "type": "split",
+    "children": [
+      {
+        "id": "c169c003852fc39c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a1058dfcb5948e2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a1a16ca91714f819",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "allkeys-lru",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "582c53239ea82b41",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 251.5
+  },
+  "right": {
+    "id": "609c7c35c75da3fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "70b1f976066d59ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf148b7b1382b252",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6933979cb707c92f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b5e3dba364cb7355",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a25ee8f512f7d750",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md"
+              }
+            }
+          },
+          {
+            "id": "c39a7d4de1e5f2c9",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "floating": {
+    "id": "efb981293c9e3298",
+    "type": "floating",
+    "children": [
+      {
+        "id": "ffae3b650197bb01",
+        "type": "window",
+        "children": [
+          {
+            "id": "f43d67ea361d8f0e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "15a1b089a7cba826",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "Excalidraw/类的加载过程 2023-12-22 15.22.29.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 613,
+        "y": 73,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "46140e999c3f8420",
+  "lastOpenFiles": [
+    "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
+    "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
+    "框架/Spring/SpringBoot/DeferredImportSelector.md",
+    "框架/Spring/SpringBoot/springboot的启动流程.md",
+    "框架/Spring/过滤器 (Filter) 和 拦截器 (Interceptor) 有啥区别啊.md",
+    "框架/Spring/AbstractApplicationContext.md",
+    "框架/Spring/bean的别名.md",
+    "框架/Spring/cglib和jdk动态代理.md",
+    "框架/Spring/InstantiationAwareBeanPostProcessor.md",
+    "框架/Spring/SmartInstantiationAwareBeanPostProcessor.md",
+    "框架/Spring/spring bean的范围.md",
+    "框架/Spring/spring bean的生命周期.md",
+    "框架/Spring/Spring的事务传播行为.md",
+    "框架/Spring/spring三级缓存.md",
+    "框架/Spring/SpringMVC执行流程.md",
+    "框架/Spring/@EnableConfigurationProperties.md",
+    "框架/Spring/springMvc/DispatcherServlet.md",
+    "框架/Spring/springMvc/注解EnableAspectJAutoProxy.md",
+    "框架/Spring/springMvc/SpringMvc的执行流程.md",
+    "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md",
+    "Java基础/JVM/类的加载过程.md",
+    "Java基础/JVM/性能优化/01-概述.md",
+    "Java基础/JVM/性能优化/03. JVM 监控及诊断工具-GUI 篇.md",
+    "Java基础/JVM/性能优化/补充：浅堆深堆与内存泄露.md",
+    "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
+    "Java基础/sleep与wait的区别 sleep(0).md",
+    "Pasted Image 20231220210201_774.png",
+    "计算机网络",
+    "Pasted image 20231209135344.png",
+    "Excalidraw",
+    "设计模式/Untitled/Untitled",
+    "设计模式/Untitled",
+    "Java基础/JVM/性能优化",
+    "Java基础/JVM/工具",
+    "分布式/elasticsearch",
+    "Untitled 1",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "框架",
+    "分布式/kafka",
+    "Pasted image 20231205220432.png"
+  ]
+}

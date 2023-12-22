@@ -1,0 +1,1 @@
+/Users/yuchaofan/.obsidian/.obsidian.vimrc
