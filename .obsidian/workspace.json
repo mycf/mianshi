@@ -250,6 +250,8 @@
   },
   "active": "b7fa95b25813bb9f",
   "lastOpenFiles": [
+    "Mysql/快照读和当前读.md",
+    "Mysql/日志-undo log.md",
     "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
     "框架/Spring/springMvc/DispatcherServlet.md",
     "框架/Spring/springMvc/常用注解.md",
@@ -274,8 +276,6 @@
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/快速了解kafka.md",
     "分布式/消息队列/中间件的选型.md",
-    "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
-    "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
