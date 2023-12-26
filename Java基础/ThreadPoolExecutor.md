@@ -81,7 +81,46 @@ public void execute(Runnable command) {
 > [!NOTE] 核心线程数为空的时候，线程池如何处理任务
 > Contents
 
-线程池的线程是怎么复用的
 
-```ja
+```java
+final void runWorker(Worker w) {
+	Thread wt = Thread.currentThread();
+	Runnable task = w.firstTask;
+	w.firstTask = null;
+	w.unlock(); // allow interrupts
+	boolean completedAbruptly = true;
+	try {
+		while (task != null || (task = getTask()) != null) {
+			w.lock();
+			// If pool is stopping, ensure thread is interrupted;
+			// if not, ensure thread is not interrupted.  This
+			// requires a recheck in second case to deal with
+			// shutdownNow race while clearing interrupt
+			if ((runStateAtLeast(ctl.get(), STOP) ||
+				 (Thread.interrupted() &&
+				  runStateAtLeast(ctl.get(), STOP))) &&
+				!wt.isInterrupted())
+				wt.interrupt();
+			try {
+				beforeExecute(wt, task);
+				try {
+					task.run();
+					afterExecute(task, null);
+				} catch (Throwable ex) {
+					afterExecute(task, ex);
+					throw ex;
+				}
+			} finally {
+				task = null;
+				w.completedTasks++;
+				w.unlock();
+			}
+		}
+		completedAbruptly = false;
+	} finally {
+		processWorkerExit(w, completedAbruptly);
+	}
+}
 ```
+
+线程池的线程是怎么复用的
