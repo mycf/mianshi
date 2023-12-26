@@ -6,7 +6,6 @@
       {
         "id": "1bb15617c0b4c0e4",
         "type": "tabs",
-        "dimension": 33.0945558739255,
         "children": [
           {
             "id": "46140e999c3f8420",
@@ -76,23 +75,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "773efca25207d1f9",
-        "type": "tabs",
-        "dimension": 66.9054441260745,
-        "children": [
-          {
-            "id": "ab72674d77a99e33",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md"
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -142,8 +124,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -298,8 +279,9 @@
   },
   "active": "b7fa95b25813bb9f",
   "lastOpenFiles": [
-    "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
+    "Java基础/线程池.md",
     "Java基础/ThreadPoolExecutor.md",
+    "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "分布式/分布式锁.md",
     "Excalidraw/分布式锁 2023-12-26 12.53.41.excalidraw.md",
     "Mysql/日志-redolog 重做日志.md",
@@ -323,7 +305,6 @@
     "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
     "框架/Spring/SpringBoot/springboot的启动流程.md",
     "框架/Spring/SpringBoot/AutoConfigurationPackage.md",
-    "框架/Spring/SpringBoot/DeferredImportSelector.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",

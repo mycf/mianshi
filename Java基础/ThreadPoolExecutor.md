@@ -1,5 +1,45 @@
-==线程池的处理流程：==
+# ==线程池的处理流程：==
 ![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw]]
+# 线程池的构造函数
+```java
+public ThreadPoolExecutor(int corePoolSize,
+						  int maximumPoolSize,
+						  long keepAliveTime,
+						  TimeUnit unit,
+						  BlockingQueue<Runnable> workQueue,
+						  ThreadFactory threadFactory,
+						  RejectedExecutionHandler handler) {
+	if (corePoolSize < 0 ||
+		maximumPoolSize <= 0 ||
+		maximumPoolSize < corePoolSize ||
+		keepAliveTime < 0)
+		throw new IllegalArgumentException();
+	if (workQueue == null || threadFactory == null || handler == null)
+		throw new NullPointerException();
+	this.corePoolSize = corePoolSize;
+	this.maximumPoolSize = maximumPoolSize;
+	this.workQueue = workQueue;
+	this.keepAliveTime = unit.toNanos(keepAliveTime);
+	this.threadFactory = threadFactory;
+	this.handler = handler;
+}
+```
+分别介绍一下：
+1. `corePoolSize`（核心线程数）：线程池中保留的核心线程数量。即使线程处于空闲状态，核心线程也会一直存在，除非设置了 `allowCoreThreadTimeOut` 参数为 `true`，才会在空闲一定时间后被回收。
+
+2. `maximumPoolSize`（最大线程数）：线程池中允许创建的最大线程数量。当工作队列已满且活动线程数达到最大线程数时，新的任务将会触发创建额外的线程，直到达到最大线程数。
+
+3. `keepAliveTime`（线程空闲时间）：非核心线程在空闲一定时间后会被回收，以控制线程池的大小。这个参数指定了非核心线程的最大空闲时间。
+
+4. `unit`（时间单位）：用于指定 `keepAliveTime` 的时间单位，例如 `TimeUnit.SECONDS`。
+
+5. `workQueue`（工作队列）：用于存储等待执行的任务的队列。常见的队列类型有 `ArrayBlockingQueue`、`LinkedBlockingQueue`、`SynchronousQueue` 等。
+
+6. `threadFactory`（线程工厂）：用于创建新线程的工厂。可以通过自定义线程工厂来对线程进行一些自定义设置，如线程名称、优先级等。
+
+7. `rejectedExecutionHandler`（拒绝策略）：当线程池和工作队列都已满时，无法处理新提交的任务时的处理策略。常见的策略有 `AbortPolicy`（默认，抛出异常）、`CallerRunsPolicy`（在调用者线程中执行）等。
+
+
 先对线程池里面的一些属性介绍一下：
 ```java
 private static final int COUNT_BITS = Integer.SIZE - 3;
@@ -125,5 +165,5 @@ final void runWorker(Worker w) {
 
 
 > [!NOTE]  线程池的线程是怎么复用的
-> 正常可能以为线程xl
+> 正常可能以为线程像一个对象一样，存储到List或者Map里面，使用的时候拿出来。
 
