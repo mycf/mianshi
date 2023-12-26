@@ -166,7 +166,45 @@ final void runWorker(Worker w) {
 }
 ```
 
+```java
+private Runnable getTask() {
+	boolean timedOut = false; // Did the last poll() time out?
 
-> [!NOTE]  线程池的线程是怎么复用的
-> 正常可能以为线程像一个对象一样，存储到List或者Map里面，使用的时候拿出来。
+	for (;;) {
+		int c = ctl.get();
 
+		// Check if queue empty only if necessary.
+		if (runStateAtLeast(c, SHUTDOWN)
+			&& (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {
+			decrementWorkerCount();
+			return null;
+		}
+
+		int wc = workerCountOf(c);
+
+		// Are workers subject to culling?
+		// 此线程是否使用存活时间
+		boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;
+
+		if ((wc > maximumPoolSize || (timed && timedOut))
+			&& (wc > 1 || workQueue.isEmpty())) {
+			if (compareAndDecrementWorkerCount(c))
+				return null;
+			continue;
+		}
+
+		try {
+			// 
+			Runnable r = timed ?
+				workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :
+				workQueue.take();
+			if (r != null)
+				return r;
+			timedOut = true;
+		} catch (InterruptedException retry) {
+			timedOut = false;
+		}
+	}
+}
+
+```
