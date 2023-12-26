@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mysql/日志-redolog 重做日志.md",
+                "file": "分布式/分布式锁.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mysql/日志-redolog 重做日志.md",
+                "file": "分布式/分布式锁.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mysql/日志-redolog 重做日志.md",
+                "file": "分布式/分布式锁.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mysql/日志-redolog 重做日志.md"
+                "file": "分布式/分布式锁.md"
               }
             }
           },
@@ -245,11 +245,43 @@
         "height": 800,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "414083bd82cc6701",
+        "type": "window",
+        "children": [
+          {
+            "id": "2a64f5512d0e8f77",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f369a25573f7a2a5",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "Excalidraw/分布式锁 2023-12-26 12.53.41.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 208,
+        "y": 25,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "b7fa95b25813bb9f",
   "lastOpenFiles": [
+    "Excalidraw/分布式锁 2023-12-26 12.53.41.excalidraw.md",
+    "Mysql/日志-redolog 重做日志.md",
+    "分布式/分布式锁.md",
     "Mysql/日志-binlog 二进制文件.md",
     "Mysql/日志-undo log.md",
     "Mysql/快照读和当前读.md",
@@ -273,9 +305,6 @@
     "框架/Spring/SpringBoot/DeferredImportSelector.md",
     "计算机网络/Untitled 1.md",
     "分布式/Redis/Redis big key.md",
-    "分布式/Redis/redis.md",
-    "分布式/消息队列/kafka/kafka.md",
-    "分布式/消息队列/kafka/快速了解kafka.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
