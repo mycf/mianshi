@@ -7,11 +7,15 @@ private static int runStateOf(int c)     { return c & ~COUNT_MASK; }
 private static int workerCountOf(int c)  { return c & COUNT_MASK; }
 ```
 
+
 上面用到了`Integer.SIZE`值是32
 ```java
 @Native public static final int SIZE = 32;
 ```
 
+```java
+private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));
+```
 
 看一下任务是如何提交的
 ```java
@@ -60,6 +64,8 @@ public void execute(Runnable command) {
 	// 当核心线程达到后，则尝试添加到阻塞队列中，具体添加方法由阻塞队列实现
 	if (isRunning(c) && workQueue.offer(command)) {
 		int recheck = ctl.get();
+		// 添加队列成功后，还要再次检测线程池的运行状态，决定启动线程或者状态过期
+		// 当线程池已关闭，则将刚刚添加的任务移除，走reject策略
 		if (! isRunning(recheck) && remove(command))
 			reject(command);
 		else if (workerCountOf(recheck) == 0)
