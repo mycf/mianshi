@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mysql/日志-undo log.md",
+                "file": "Mysql/日志-redolog 重做日志.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mysql/日志-undo log.md",
+                "file": "Mysql/日志-redolog 重做日志.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mysql/日志-undo log.md",
+                "file": "Mysql/日志-redolog 重做日志.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mysql/日志-undo log.md"
+                "file": "Mysql/日志-redolog 重做日志.md"
               }
             }
           },
@@ -248,10 +248,11 @@
       }
     ]
   },
-  "active": "b7fa95b25813bb9f",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
-    "Mysql/快照读和当前读.md",
+    "Mysql/日志-binlog 二进制文件.md",
     "Mysql/日志-undo log.md",
+    "Mysql/快照读和当前读.md",
     "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
     "框架/Spring/springMvc/DispatcherServlet.md",
     "框架/Spring/springMvc/常用注解.md",
@@ -275,7 +276,6 @@
     "分布式/Redis/redis.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/快速了解kafka.md",
-    "分布式/消息队列/中间件的选型.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
