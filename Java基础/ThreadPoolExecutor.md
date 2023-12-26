@@ -186,7 +186,7 @@ private Runnable getTask() {
 		// 此线程是否使用空闲时间
 		boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;
 
-		// 
+		// 如果线程池中的活动线程数大于最大线程数，并且启用了定时回收功能而且线程已经超过了空闲时间，或者线程池中的线程数大于 1 并且工作队列为空，那么就满足了执行线程回收的条件。 
 		if ((wc > maximumPoolSize || (timed && timedOut))
 			&& (wc > 1 || workQueue.isEmpty())) {
 			if (compareAndDecrementWorkerCount(c))
@@ -210,3 +210,7 @@ private Runnable getTask() {
 }
 
 ```
+
+
+> [!NOTE] 上面代码中什么时候会出现工作线程数大于最大线程数，`wc > maximumPoolSize`
+> 动态调整最大线程数的时候
