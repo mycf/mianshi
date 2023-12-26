@@ -186,6 +186,7 @@ private Runnable getTask() {
 		// 此线程是否使用空闲时间
 		boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;
 
+		// 
 		if ((wc > maximumPoolSize || (timed && timedOut))
 			&& (wc > 1 || workQueue.isEmpty())) {
 			if (compareAndDecrementWorkerCount(c))
