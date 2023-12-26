@@ -183,7 +183,7 @@ private Runnable getTask() {
 		int wc = workerCountOf(c);
 
 		// Are workers subject to culling?
-		// 此线程是否使用存活时间
+		// 此线程是否使用空闲时间
 		boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;
 
 		if ((wc > maximumPoolSize || (timed && timedOut))
@@ -194,7 +194,8 @@ private Runnable getTask() {
 		}
 
 		try {
-			// 
+			// 1.允许空闲回收的线程，等待keepAliveTime时间获取任务
+			// 2.不允许回收的核心线程，阻塞至新任务到来
 			Runnable r = timed ?
 				workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :
 				workQueue.take();
