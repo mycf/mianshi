@@ -1,4 +1,5 @@
 
+![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw]]
 先对线程池里面的一些属性介绍一下：
 ```java
 private static final int COUNT_BITS = Integer.SIZE - 3;
