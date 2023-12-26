@@ -1,5 +1,4 @@
-实际上spring boot自动配置的核心原理, 就是让大家去理解@SpringBootApplication这个注解, 这个注解啊其实又是三个注解的组合, 分别是这里的 @SpringBootConfiguration
-, 还有`@EnableAutoConfiguration` , 以及最后这个`@ComponentScan`, 它实际上的功能就是我们以上三个注解功能的组合, 那这三个注解我们把它理解了, 那这个`@SpringBootApplication`注解的功能我们也就理解了, 我们分别来看一下啊:
+实际上spring boot自动配置的核心原理, 就是让大家去理解@SpringBootApplication这个注解, 这个注解其实又是三个注解的组合, 分别是这里的 `@SpringBootConfiguration` 还有`@EnableAutoConfiguration` , 以及最后这个`@ComponentScan`, 它实际上的功能就是我们以上三个注解功能的组合, 那这三个注解我们把它理解了, 那这个`@SpringBootApplication`注解的功能我们也就理解了, 我们分别来看一下：
 ```java
 @SpringBootConfiguration
 @EnableAutoConfiguration
@@ -7,17 +6,19 @@
 		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) })
 public @interface SpringBootApplication {
 ```
+
 第一个是 `@SpringBootConfiguration` , 它实际上跟我们普通的`@Configuration` 是类似的, 大家可以看到它这个注解上又标注了`@Configuration` 注解, 它的功能就相当于继承了这个`@Configuration`注解, 功能上完全等价。
 
-那它跟`@Configuration`区别在哪呢
-其实就是`@Configuration`标注的, 将来在一个应用程序里是可以有多个的, 你可以有多个配置类, 但是 `@SpringBootConfiguration` 它对应的配置类, 整个应用程序应该只有一个, 因为要根据他去断定你的一个主配置类, 这个根据主配置类才能找到我们的应用程序的, 算是一个入口, 从他的文档上也可以看出来, 他说你的应用程序呢, 应该只包含一个标注了`@SpringBootConfiguration`类, 
 
-我们再来看这个叫`@ComponentScan`, 他就是做组件扫描的, 可以扫被扫描的类, 上面可以标注`@Component`、`@Service`、`@Repository`、`@Controller`, 不过我们看到他的这个`@ComponentScan`里加了一个`excludeFilters`,这个是干嘛的呢, 就是在扫描时加一些过滤器, 这些过滤器是用来扫描做一个排除动作的, 如果匹配到了, 他就会把匹配到的这些类做一个排除, 那他用了两个过滤器。
+> [!NOTE] `@SpringBootConfiguration`跟`@Configuration`的区别
+`@Configuration`标注的, 将来在一个应用程序里是可以有多个的, 可以==有多个==配置类, 但是 `@SpringBootConfiguration` 它对应的配置类, 整个应用程序应该==只有一个==。
+
+我们再来看这个叫`@ComponentScan`, 他就是做组件扫描的, 可以扫被扫描的类, 上面可以标注`@Component`、`@Service`、`@Repository`、`@Controller`, 不过我们看到他的这个`@ComponentScan`里加了一个`excludeFilters`, 就是在扫描时加一些过滤器, 这些过滤器是用来扫描做一个排除动作的, 如果匹配到了, 他就会把匹配到的这些类做一个排除, 那他用了两个过滤器。
 
 
 接下来呢我们来看第三个注解, 就是这个 `@EnableAutoConfiguration`, 这个注解呢, 其实你也可以看成是一个组合注解, 它由两部分组成, 一个是加了一个`@AutoConfigurationPackage`
 , 还有一个是加了一个`@Import(AutoConfigurationImportSelector.class)` ,  先来看这个`@AutoConfigurationPackage`
-
+![[AutoConfigurationPackage]]
 我这提前已经写好了一段测试代码, 好那么大家来看啊, 就是首先我有个my config啊, 这么一个主配置类呀, 这个配置类里啊, 我会去做一个组件扫描啊, 为了缩小这个扫描范围, 我只扫描了我这个day 04 boot sub这个报价啊, 这个报价呢有两个类啊, 有两个病啊, 一个病因, 一个b2 啊, 他们都用component这个标注了, 所以将来应该都是会被扫描到啊, 好那如果我不加任何的这个过滤器啊什么的啊, 它最终应该把b1 b2 都扫描到, 那我这里会去在容器这个准备好以后啊, 去看一下容器内有多少bean的名字, 把所有bean的名字打印出来, 好可以看到除了这些是一些后处理器的啊, 除了后处理器之外, 我们的my config自身以及它扫描到的b1 b2 , 都出现在我们最终的容器中了, 好, 那比如说我现在想在扫描的过程中对一些类啊, 做一些排除, 那排除的话, 那我们就可以加一个特殊的病啊, 就加一个my filter这样一个过滤器病啊, 这个过滤器病呢要实现type exclude filter这个接口, 也就是哎我要做一些排除动作啊, 你必须实现这个接口, 实现完接口以后, 你的内部啊, 就是去通过实现match方法, 来判断这个类到底是该被排除还是该被保留, 那当它的返回值是真的话, 就表示要过滤掉, 就把它排除掉, 当它这个方法返回值是假的话, 就表示要保留, 那我我这个怎么去判断它是真是假的啊, 这个就是我们可以通过他传过来一个参数, 叫metadata reader, 这个呢是在我们在扫描过程中啊, 能拿到的一些原数据啊, 一些原数据, 通过原数据呢, 我们可以得到当前这个类它的各种信息, 包括他类的信息, 他类上加的注解信息等等, 那这里呢我就做一个很简单的过滤啊, 我们通过这个reader呢拿到它的类的信息, 类的原数据, 然后呢可以进一步get class name, 也就是得到它的当前扫描到的这个类的类比二, 那我会把这个类名呢通过日志先打印一下, 然后我的判断规则很简单啊, 如果你的类名是一种病一的话啊, 我们刚才不是有病一并二吗, 是并一的话, 我有return true, 就表示啊b一我不要, 那剩下的我就把它保留return false啊, 也就是我想排除掉b好, 那这个过滤器写好了, 写好以后呢, 我们也要把它注册到容器当中, 但这样能不能工作呢, 其实还不行啊, 因为我们这个过滤器虽然你实现了, 但是你没把它用上, 你可以看到最终还是b1 b2 , 他并没有为这个调用, 也就是他这个match方法并没有用上, 那为了让它生效呢, 好简单啊, 就是我们就模仿人家这个视频, boot application中的这个components, 看你看人家咋用的啊, 它里面就加了一个说排除过滤器是谁呢, 哎后面你跟上这个具体的过滤器就可以了, 当然我们这里啊啊, 不用去把我们的过滤器名字给他, 我们只要仿照人家这个写法
 
 直接拷贝粘贴过来就可以了, 好把这个包找一下, 啊他这个过滤器的作用, 它就是会读取容器中所有实现了这个type exclude, filter接口的啊, 这么样的过滤器啊, 然后呢去调用他们的match方法, 然后根据我们刚才说的这个规则, 返回出的过滤掉, 返回false, 保留好, 我们加上这个exclude future以后啊, 我们再来看, 好可以看到我在每次调用match的时候, 我都会把这个并打印出来啊, 所以最终扫描到的有宾语和宾二, 但是呢最终保留在容器里的只有b2 b一呢, 因为我们return true啊, 就把它过滤掉了, 好, 这就是我们这个component sky里面, 这个exclude filters, 它的一个作用就是去排除某些类, 好, 当然我们看一下人家的写法里, 它还有一个过滤器, 那下面这个过滤器其实跟他差不多, 那下面这个过滤器我只说一下它排出的是什么, 他就是把那些啊它是吧, 你有可能扫描到spring boot的一些包, 你扫描到子分部的包了, 万一你把人家一些自动装配类也扫描到了, 怎么办呢, 哎自动装配类啊, 我们待会儿是要通过这个以内包, auto confusion中使用input的方法来导入的啊, 不是通过组件扫描扫描扫描的, 所以呢我这个组件扫描的时候, 他为了防止你不小心, 这个报名指定了什么spring boot的包, 万一扫描到了一些自动装配自动配置类啊, 这是我不希望看到的, 所以呢接下来这个过滤器呢, 它就是排除掉所有的自动配置类啊, 排除叫spring自己的spring boot, 自己的那些自动配置类好, 那到此为止呢, 我们就把前两个给大家讲完了, 一个是spring boot computation, 他们有什么特殊之处, 它就表示他当前的这个配置类, 然后commander干呢, 这里我们新学了一个, 它可以通过一些过滤器啊, 排除掉, 实现了这个type exclude filter接口的一些这个类, 另外呢, 它还可以把spring boot自身带的一些自动配置类, 进行一个排除, 好这两个注解我们就给大家讲到这儿

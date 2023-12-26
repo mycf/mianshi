@@ -13,19 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "file": "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "8cd914f96da5bf5b",
+            "id": "b7fa95b25813bb9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "框架/Spring/springMvc/DispatcherServlet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "50ee78193ea04168",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/zset 2023-12-20 21.01.01.excalidraw.md"
+                "file": "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md"
               }
             }
           },
@@ -61,7 +73,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -111,7 +124,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -127,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "file": "框架/Spring/springMvc/DispatcherServlet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "file": "框架/Spring/springMvc/DispatcherServlet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md"
+                "file": "框架/Spring/springMvc/DispatcherServlet.md"
               }
             }
           },
@@ -180,7 +193,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -196,8 +209,8 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
   "floating": {
@@ -226,8 +239,8 @@
           }
         ],
         "direction": "vertical",
-        "x": 613,
-        "y": 73,
+        "x": 299,
+        "y": 41,
         "width": 1024,
         "height": 800,
         "maximize": false,
@@ -235,34 +248,34 @@
       }
     ]
   },
-  "active": "46140e999c3f8420",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
-    "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
-    "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
-    "框架/Spring/SpringBoot/DeferredImportSelector.md",
-    "框架/Spring/SpringBoot/springboot的启动流程.md",
-    "框架/Spring/过滤器 (Filter) 和 拦截器 (Interceptor) 有啥区别啊.md",
-    "框架/Spring/AbstractApplicationContext.md",
-    "框架/Spring/bean的别名.md",
-    "框架/Spring/cglib和jdk动态代理.md",
-    "框架/Spring/InstantiationAwareBeanPostProcessor.md",
-    "框架/Spring/SmartInstantiationAwareBeanPostProcessor.md",
-    "框架/Spring/spring bean的范围.md",
-    "框架/Spring/spring bean的生命周期.md",
-    "框架/Spring/Spring的事务传播行为.md",
-    "框架/Spring/spring三级缓存.md",
-    "框架/Spring/SpringMVC执行流程.md",
-    "框架/Spring/@EnableConfigurationProperties.md",
-    "框架/Spring/springMvc/DispatcherServlet.md",
+    "框架/Spring/springMvc/常用注解.md",
+    "框架/Spring/springMvc/注解@ResponseStatus.md",
+    "框架/Spring/springMvc/注解@Configuration.md",
+    "框架/Spring/springMvc/注解@Import.md",
     "框架/Spring/springMvc/注解EnableAspectJAutoProxy.md",
-    "框架/Spring/springMvc/SpringMvc的执行流程.md",
-    "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md",
-    "Java基础/JVM/类的加载过程.md",
-    "Java基础/JVM/性能优化/01-概述.md",
-    "Java基础/JVM/性能优化/03. JVM 监控及诊断工具-GUI 篇.md",
-    "Java基础/JVM/性能优化/补充：浅堆深堆与内存泄露.md",
-    "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
-    "Java基础/sleep与wait的区别 sleep(0).md",
+    "框架/Spring/springMvc/DispatcherServlet.md",
+    "框架/Spring/spring bean的范围.md",
+    "框架/Spring/SpringMVC执行流程.md",
+    "分布式/Redis/复制.md",
+    "Excalidraw/复制 2023-12-25 23.44.02.excalidraw.md",
+    "框架/Spring/Spring的事务传播行为.md",
+    "Excalidraw/Spring的事务传播行为 2023-12-25 22.47.01.excalidraw.md",
+    "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
+    "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
+    "框架/Spring/SpringBoot/springboot的启动流程.md",
+    "框架/Spring/SpringBoot/AutoConfigurationPackage.md",
+    "框架/Spring/SpringBoot/DeferredImportSelector.md",
+    "计算机网络/Untitled 1.md",
+    "分布式/Redis/Redis big key.md",
+    "分布式/Redis/redis.md",
+    "分布式/消息队列/kafka/kafka.md",
+    "分布式/消息队列/kafka/快速了解kafka.md",
+    "分布式/消息队列/中间件的选型.md",
+    "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
+    "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md",
+    "Excalidraw/kafka 2023-12-24 23.09.53.excalidraw.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
