@@ -49,11 +49,15 @@ public void execute(Runnable command) {
 	 * and so reject the task.
 	 */
 	int c = ctl.get();
+	// 当还没有达到核心线程池的数量时，直接添加1个新线程，然后让其执行任务即可
 	if (workerCountOf(c) < corePoolSize) {
+		// 添加新线程，且执行command任务
+		// 添加成功，即不需要后续操作了，添加失败，则说明外部环境变化了
 		if (addWorker(command, true))
 			return;
 		c = ctl.get();
 	}
+	// 当核心线程达到后，则尝试添加到阻塞队列中，具体添加方法由阻塞队列实现
 	if (isRunning(c) && workQueue.offer(command)) {
 		int recheck = ctl.get();
 		if (! isRunning(recheck) && remove(command))
