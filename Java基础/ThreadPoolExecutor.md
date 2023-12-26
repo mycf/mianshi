@@ -1,5 +1,5 @@
 ==线程池的处理流程：==
-![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw]]
+![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw|1000]]
 先对线程池里面的一些属性介绍一下：
 ```java
 private static final int COUNT_BITS = Integer.SIZE - 3;
