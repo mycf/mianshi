@@ -39,6 +39,9 @@ public ThreadPoolExecutor(int corePoolSize,
 
 7. `rejectedExecutionHandler`（拒绝策略）：当线程池和工作队列都已满时，无法处理新提交的任务时的处理策略。常见的策略有 `AbortPolicy`（默认，抛出异常）、`CallerRunsPolicy`（在调用者线程中执行）等。
 
+> [!NOTE] 为什么线程池使用阻塞队列`BlockingQueue`
+> 在线程池任务执行完成后，调用 `workQueue.take();` 阻塞线程等待新任务到来
+
 
 先对线程池里面的一些属性介绍一下：
 ```java
