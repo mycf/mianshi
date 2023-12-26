@@ -123,4 +123,7 @@ final void runWorker(Worker w) {
 }
 ```
 
-线程池的线程是怎么复用的
+
+> [!NOTE]  线程池的线程是怎么复用的
+> 正常可能以为线程xl
+
