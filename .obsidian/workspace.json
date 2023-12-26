@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
+                "file": "Mysql/日志-undo log.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
+                "file": "Mysql/日志-undo log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
+                "file": "Mysql/日志-undo log.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md"
+                "file": "Mysql/日志-undo log.md"
               }
             }
           },
@@ -250,8 +250,8 @@
   },
   "active": "b7fa95b25813bb9f",
   "lastOpenFiles": [
-    "框架/Spring/springMvc/DispatcherServlet.md",
     "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
+    "框架/Spring/springMvc/DispatcherServlet.md",
     "框架/Spring/springMvc/常用注解.md",
     "框架/Spring/springMvc/注解@ResponseStatus.md",
     "框架/Spring/springMvc/注解@Configuration.md",
