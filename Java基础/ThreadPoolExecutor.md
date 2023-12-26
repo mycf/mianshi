@@ -1,5 +1,5 @@
 ==线程池的处理流程：==
-![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw|1000]]
+![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw]]
 先对线程池里面的一些属性介绍一下：
 ```java
 private static final int COUNT_BITS = Integer.SIZE - 3;
@@ -80,3 +80,8 @@ public void execute(Runnable command) {
 
 > [!NOTE] 核心线程数为空的时候，线程池如何处理任务
 > Contents
+
+线程池的线程是怎么复用的
+
+```ja
+```
