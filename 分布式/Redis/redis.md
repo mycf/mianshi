@@ -5,6 +5,8 @@ Redis 是互联网技术领域使用最为广泛的存储中间件
 ### 5种基础数据结构
 
 Red is 种基础数据结构，分别为 string（字符串）、list （列表〉、 hash（字典〉、set（集合）和 zset（有序集合〉。
+string
+SDS与C字符串的区别
 
 zset
 
