@@ -11,7 +11,7 @@ public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionR
 }
 
 ```
-
+注入FeignClientSpecification到spring容器，
 ```java
 private void registerDefaultConfiguration(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
 	Map<String, Object> defaultAttrs = metadata.getAnnotationAttributes(EnableFeignClients.class.getName(), true);
