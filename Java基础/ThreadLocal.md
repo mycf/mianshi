@@ -48,8 +48,11 @@ static class ThreadLocalMap {
 
 `ThreadLocalMap`开放寻址法来解决冲突hash冲突
 
-`ThreadLocalMap`是一个类似hash map结构的数据结构 用于存储资local对象和对应的值 它的内部结构由元素数组table和散列方法组成 元素数组 `ThreadLocalMap`中的table数组用于存储entry类型的元素 每个entry由ThreadLoacl对象的弱引用作为key 对应的值作为value table的长度是一个二的幂次方 这是为了优化散列方法的运算效率 
-列方法 ThreadLocalMap 使用哈希取余法来确定key在table数组中的位置 具体的计算方式是通过将的ThreadLocal的hashcode与 (table.length-1)进行&运算来得到 下 按这里的z local hash code 是资源logo对象的一个特殊值 每次创建一个最漏口对象 他的最local hash code会自增 0×61 c88647 这个值也叫波纳契数或黄金分割数哈希增量 所以logo的增量值061C47 是一个特殊的数字 它的带来的好处是能够使散列分布得非常均匀 这样可以减少散列冲突 提高存取效率 总结虽然local map的结构和四部 但它并没有实现map接口 它通过持有资源local的弱引用和对应的值 使用哈希取余法来存储和定位数据 这种数据结构的设计和散列方法的优化 使得资源logo对象能够高效地存储和获取 对应的值 点击折叠32行 💡提示💡 可以尝试将概览生成的内容粘贴到视频评论里，发布后看看有什么效果🥳 youtube caption proYouTube Caption Pro 这是YouTube版的字幕列表 Chrome商店 Edge商店
+`ThreadLocalMap`是一个类似HashMap结构的数据结构 用于存储ThreadLocal和对应的值 它的内部结构由元素数组table和散列方法组成 
+==元素数组：== `ThreadLocalMap`中的table数组用于存储entry类型的元素 每个entry由ThreadLoacl对象的弱引用作为key 对应的值作为value table的长度是一个二的幂次方 这是为了优化散列方法的运算效率 
+列方法 ThreadLocalMap 使用哈希取余法来确定key在table数组中的位置 具体的计算方式是通过将的ThreadLocal的hashcode与 (table.length-1)进行&运算来得到下标i 按这里的ThreadLocal hashcode 是ThreadLocal对象的一个特殊值 每次创建一个ThreadLocal对象 他的ThreadLocal hashcode会自增 0×61 c88647 这个值也叫波那契数或黄金分割数
+哈希增量： ThreadLocal的增量值0x61C47 是一个特殊的数字 它的带来的好处是能够使散列分布得非常均匀 这样可以减少散列冲突 提高存取效率 
+总结虽然ThreadLocalMap的结构相似 但它并没有实现map接口 它通过持有ThreadLocal的弱引用和对应的值 使用哈希取余法来存储和定位数据 这种数据结构的设计和散列方法的优化 使得ThreaLocal对象能够高效地存储和获取 对应的值 
 
 
 
