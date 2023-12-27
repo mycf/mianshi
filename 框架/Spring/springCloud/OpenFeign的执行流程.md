@@ -11,7 +11,7 @@ public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionR
 }
 
 ```
-注入FeignClientSpecification到spring容器，
+注入FeignClientSpecification到spring容器
 ```java
 private void registerDefaultConfiguration(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
 	Map<String, Object> defaultAttrs = metadata.getAnnotationAttributes(EnableFeignClients.class.getName(), true);
@@ -39,6 +39,46 @@ private void registerClientConfiguration(BeanDefinitionRegistry registry, Object
 
 ```
 
+```java
+public void registerFeignClients(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
+	LinkedHashSet<BeanDefinition> candidateComponents = new LinkedHashSet<>();
+	Map<String, Object> attrs = metadata.getAnnotationAttributes(EnableFeignClients.class.getName());
+	final Class<?>[] clients = attrs == null ? null : (Class<?>[]) attrs.get("clients");
+	if (clients == null || clients.length == 0) {
+		ClassPathScanningCandidateComponentProvider scanner = getScanner();
+		scanner.setResourceLoader(this.resourceLoader);
+		// 设置FeignClient.class为查询条件
+		scanner.addIncludeFilter(new AnnotationTypeFilter(FeignClient.class));
+		Set<String> basePackages = getBasePackages(metadata);
+		for (String basePackage : basePackages) {
+			candidateComponents.addAll(scanner.findCandidateComponents(basePackage));
+		}
+	}
+	else {
+		for (Class<?> clazz : clients) {
+			candidateComponents.add(new AnnotatedGenericBeanDefinition(clazz));
+		}
+	}
+
+	for (BeanDefinition candidateComponent : candidateComponents) {
+		if (candidateComponent instanceof AnnotatedBeanDefinition beanDefinition) {
+			// verify annotated class is an interface
+			AnnotationMetadata annotationMetadata = beanDefinition.getMetadata();
+			Assert.isTrue(annotationMetadata.isInterface(), "@FeignClient can only be specified on an interface");
+
+			Map<String, Object> attributes = annotationMetadata
+					.getAnnotationAttributes(FeignClient.class.getCanonicalName());
+
+			String name = getClientName(attributes);
+			String className = annotationMetadata.getClassName();
+			registerClientConfiguration(registry, name, className, attributes.get("configuration"));
+
+			registerFeignClient(registry, annotationMetadata, attributes);
+		}
+	}
+}
+
+```
 
 
 
