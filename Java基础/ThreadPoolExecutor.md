@@ -213,4 +213,4 @@ private Runnable getTask() {
 
 
 > [!NOTE] 上面代码中什么时候会出现工作线程数大于最大线程数，`wc > maximumPoolSize`
-> 动态调整最大线程数的时候
+> 动态调整最大线程数：如果在线程池运行过程中，通过调用线程池的 `setMaximumPoolSize()` 方法动态减少了最大线程数，而此时活动线程数超过了原先的最大线程数，就会出现 `wc > maximumPoolSize` 的情况。
