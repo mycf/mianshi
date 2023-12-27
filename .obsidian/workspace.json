@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/ThreadLocal.md",
+                "file": "Java基础/BlockingQueue.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/ThreadLocal.md",
+                "file": "Java基础/BlockingQueue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/ThreadLocal.md",
+                "file": "Java基础/BlockingQueue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/ThreadLocal.md"
+                "file": "Java基础/BlockingQueue.md"
               }
             }
           },
@@ -274,11 +274,43 @@
         "height": 800,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "1d4848d11f0d9559",
+        "type": "window",
+        "children": [
+          {
+            "id": "1b73345e5dc513b5",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f788e9e727d0416f",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 208,
+        "y": 25,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "b7fa95b25813bb9f",
   "lastOpenFiles": [
+    "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
+    "Java基础/ThreadLocal.md",
+    "Java基础/BlockingQueue.md",
     "分布式/Redis/redis.md",
     "框架/Spring/springCloud/OpenFeign的执行流程.md",
     "Java基础/ThreadPoolExecutor.md",
@@ -302,9 +334,6 @@
     "框架/Spring/SpringMVC执行流程.md",
     "分布式/Redis/复制.md",
     "Excalidraw/复制 2023-12-25 23.44.02.excalidraw.md",
-    "框架/Spring/Spring的事务传播行为.md",
-    "Excalidraw/Spring的事务传播行为 2023-12-25 22.47.01.excalidraw.md",
-    "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
