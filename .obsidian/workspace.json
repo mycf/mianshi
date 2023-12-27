@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "Java基础/ThreadLocal.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "Java基础/ThreadLocal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "Java基础/ThreadLocal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/redis.md"
+                "file": "Java基础/ThreadLocal.md"
               }
             }
           },
@@ -277,8 +277,9 @@
       }
     ]
   },
-  "active": "b7fa95b25813bb9f",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "分布式/Redis/redis.md",
     "框架/Spring/springCloud/OpenFeign的执行流程.md",
     "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
@@ -304,7 +305,6 @@
     "框架/Spring/Spring的事务传播行为.md",
     "Excalidraw/Spring的事务传播行为 2023-12-25 22.47.01.excalidraw.md",
     "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
-    "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
