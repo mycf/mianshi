@@ -156,6 +156,7 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 	 */
 	@SuppressWarnings("unchecked")
 	<T> T getTarget() {
+		// 这个bean是通过FeignAutoConfiguration自动注入地
 		FeignClientFactory feignClientFactory = beanFactory != null ? beanFactory.getBean(FeignClientFactory.class)
 				: applicationContext.getBean(FeignClientFactory.class);
 		Feign.Builder builder = feign(feignClientFactory);
