@@ -165,17 +165,20 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 				: applicationContext.getBean(FeignClientFactory.class);
 		// 获取feign的builder，里面设置了从yml读取配置
 		Feign.Builder builder = feign(feignClientFactory);
+		// 正常应该不配置url的
 		if (!StringUtils.hasText(url) && !isUrlAvailableInConfig(contextId)) {
 
 			if (LOG.isInfoEnabled()) {
 				LOG.info("For '" + name + "' URL not provided. Will try picking an instance via load-balancing.");
 			}
+			// 默认添加http协议
 			if (!name.startsWith("http://") && !name.startsWith("https://")) {
 				url = "http://" + name;
 			}
 			else {
 				url = name;
 			}
+			// 清除path的前后缀/
 			url += cleanPath();
 			return (T) loadBalance(builder, feignClientFactory, new HardCodedTarget<>(type, name, url));
 		}
@@ -201,6 +204,23 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 
 		Targeter targeter = get(feignClientFactory, Targeter.class);
 		return targeter.target(this, builder, feignClientFactory, resolveTarget(feignClientFactory, contextId, url));
+	}
+
+```
+
+```java
+	protected <T> T loadBalance(Feign.Builder builder, FeignClientFactory context, HardCodedTarget<T> target) {
+		// 如果FeignLoadBalancerAutoConfiguration
+		Client client = getOptional(context, Client.class);
+		if (client != null) {
+			builder.client(client);
+			applyBuildCustomizers(context, builder);
+			Targeter targeter = get(context, Targeter.class);
+			return targeter.target(this, builder, context, target);
+		}
+
+		throw new IllegalStateException(
+				"No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?");
 	}
 
 ```
@@ -269,6 +289,7 @@ spring:
 
 ```
 
+# Feign.Builder的生成
 跟踪一下`feign(feignClientFactory);`方法，看下Feign.Builder怎么生成的
 ```java
 	protected Feign.Builder feign(FeignClientFactory context) {
