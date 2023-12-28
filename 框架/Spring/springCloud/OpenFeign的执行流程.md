@@ -226,7 +226,48 @@ public class FeignAutoConfiguration {
 > [!NOTE] 扩展一下gpt来的
 >  对于`List<FeignClientSpecification> configurations`字段，它是一个列表类型的依赖项，用于存储`FeignClientSpecification`类型的对象。当Spring容器进行自动装配时，它会查找所有匹配`FeignClientSpecification`类型的Bean，并将它们注入到`configurations`字段中的列表中。
 
+```yml
+spring:
+  cloud:
+    openfeign:
+      client:
+        default-config:
+        config:
+          my-service:
+            #  配置Feign客户端的错误解码器：
+            errorDecoder: com.example.MyErrorDecoder
+            #  配置Feign客户端的请求拦截器：
+            requestInterceptors:
+              - com.example.MyRequestInterceptor
+            #  启用Feign客户端的重试机制，并配置最大重试次数和重试间隔：
+            retryer: com.example.MyRetryer
+            maxAttempts: 3
+            retryInterval: 1000
+            #    设置Feign客户端的连接超时和读取超时时间：
+            connectTimeout: 5000
+            readTimeout: 5000
+
+```
+
 跟踪一下`feign(feignClientFactory);`方法
+```java
+	protected Feign.Builder feign(FeignClientFactory context) {
+		FeignLoggerFactory loggerFactory = get(context, FeignLoggerFactory.class);
+		Logger logger = loggerFactory.create(type);
+
+		// @formatter:off
+		Feign.Builder builder = get(context, Feign.Builder.class)
+				// required values
+				.logger(logger)
+				.encoder(get(context, Encoder.class))
+				.decoder(get(context, Decoder.class))
+				.contract(get(context, Contract.class));
+		// @formatter:on
+
+		configureFeign(context, builder);
+
+		return builder;
+	}
 
 ```
 
