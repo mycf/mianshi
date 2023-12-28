@@ -9,7 +9,7 @@ public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionR
 	// 使用EnableFeignClients#defaultConfiguration元数据注册FeignClientSpecification.class到spring容器
 	registerDefaultConfiguration(metadata, registry);
 	// 遍历FeignClient注解的rpc接口，为每个rpc注册一个FeignClientFactoryBean到spring容器
-	// 为每个F
+	// 为每个FeignClient注解的rpc接口，注册一个对应FeignClient#configuration信息的FeignClientSpecification.class到spring容器
 	registerFeignClients(metadata, registry);
 }
 
