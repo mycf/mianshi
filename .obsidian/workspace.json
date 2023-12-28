@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/BlockingQueue.md",
+                "file": "Java基础/MethodHandle.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/BlockingQueue.md",
+                "file": "Java基础/MethodHandle.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/BlockingQueue.md",
+                "file": "Java基础/MethodHandle.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/BlockingQueue.md"
+                "file": "Java基础/MethodHandle.md"
               }
             }
           },
@@ -308,9 +308,9 @@
   },
   "active": "b7fa95b25813bb9f",
   "lastOpenFiles": [
+    "Java基础/BlockingQueue.md",
     "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
     "Java基础/ThreadLocal.md",
-    "Java基础/BlockingQueue.md",
     "分布式/Redis/redis.md",
     "框架/Spring/springCloud/OpenFeign的执行流程.md",
     "Java基础/ThreadPoolExecutor.md",

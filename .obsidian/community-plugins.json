@@ -8,5 +8,6 @@
   "table-editor-obsidian",
   "obsidian-excalidraw-plugin",
   "templater-obsidian",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-code-block-enhancer"
 ]
