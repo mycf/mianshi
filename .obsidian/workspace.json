@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/springCloud/eureka.md",
+                "file": "Java基础/JVM/JVM内存结构.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/springCloud/eureka.md",
+                "file": "Java基础/JVM/JVM内存结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/springCloud/eureka.md",
+                "file": "Java基础/JVM/JVM内存结构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/springCloud/eureka.md"
+                "file": "Java基础/JVM/JVM内存结构.md"
               }
             }
           },
@@ -303,13 +303,49 @@
         "height": 800,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "79c56bec3992b306",
+        "type": "window",
+        "children": [
+          {
+            "id": "44e2d9d3641a1e65",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3faa72a9a5c2e11d",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 208,
+        "y": 25,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
   "active": "b7fa95b25813bb9f",
   "lastOpenFiles": [
+    "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "框架/Spring/springCloud/OpenFeign的执行流程.md",
     "框架/Spring/springCloud/eureka.md",
+    "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
+    "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
+    "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
+    "框架/Spring/SpringBoot/springboot的启动流程.md",
+    "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
+    "框架/Spring/SpringBoot/AutoConfigurationPackage.md",
     "Java基础/MethodHandle.md",
     "Java基础/BlockingQueue.md",
     "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
@@ -325,15 +361,8 @@
     "Mysql/日志-binlog 二进制文件.md",
     "Mysql/日志-undo log.md",
     "Mysql/快照读和当前读.md",
-    "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
     "框架/Spring/springMvc/DispatcherServlet.md",
     "框架/Spring/springMvc/常用注解.md",
-    "框架/Spring/springMvc/注解@ResponseStatus.md",
-    "框架/Spring/springMvc/注解@Configuration.md",
-    "框架/Spring/springMvc/注解@Import.md",
-    "框架/Spring/springMvc/注解EnableAspectJAutoProxy.md",
-    "框架/Spring/spring bean的范围.md",
-    "框架/Spring/SpringMVC执行流程.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
