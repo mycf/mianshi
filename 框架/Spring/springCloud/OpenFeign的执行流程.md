@@ -219,6 +219,7 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 			applyBuildCustomizers(context, builder);
 			// 没有配置也是FeignAutoConfiguration注入的
 			Targeter targeter = get(context, Targeter.class);
+			// targer默认类只是掉了builder.target方法
 			return targeter.target(this, builder, context, target);
 		}
 
@@ -227,6 +228,30 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 	}
 
 ```
+
+最终返回的是一个JDK代理的类，这里我们就得到了FeignClient
+```java
+  public <T> T newInstance(Target<T> target, C requestContext) {
+    TargetSpecificationVerifier.verify(target);
+
+    Map<Method, MethodHandler> methodToHandler =
+        targetToHandlersByName.apply(target, requestContext);
+    InvocationHandler handler = factory.create(target, methodToHandler);
+    T proxy = (T) Proxy.newProxyInstance(target.type().getClassLoader(),
+        new Class<?>[] {target.type()}, handler);
+
+    for (MethodHandler methodHandler : methodToHandler.values()) {
+      if (methodHandler instanceof DefaultMethodHandler) {
+        ((DefaultMethodHandler) methodHandler).bindTo(proxy);
+      }
+    }
+
+    return proxy;
+  }
+```
+
+
+
 FeignClientFactory是starter自动配置进来的
 ```java
 @Configuration(proxyBeanMethods = false)
