@@ -222,8 +222,28 @@ public class FeignAutoConfiguration {
 	}
 
 ```
+FeignClientFactory是NamedContextFactory的子类
+```plantuml
+@startuml
+skin rose
+!theme plain
+top to bottom direction
+skinparam linetype ortho
 
-> [!NOTE] 扩展一下gpt来的
+interface ApplicationContextAware << interface >>
+interface Aware << interface >>
+interface DisposableBean << interface >>
+class FeignClientFactory
+class NamedContextFactory<C>
+
+ApplicationContextAware  -[#008200,plain]-^  Aware                   
+FeignClientFactory       -[#000082,plain]-^  NamedContextFactory     
+NamedContextFactory      -[#008200,dashed]-^  ApplicationContextAware 
+NamedContextFactory      -[#008200,dashed]-^  DisposableBean          
+@enduml
+
+```
+> [!NOTE] 拓展一下gpt来的
 >  对于`List<FeignClientSpecification> configurations`字段，它是一个列表类型的依赖项，用于存储`FeignClientSpecification`类型的对象。当Spring容器进行自动装配时，它会查找所有匹配`FeignClientSpecification`类型的Bean，并将它们注入到`configurations`字段中的列表中。
 
 ```yml
@@ -283,6 +303,7 @@ spring:
 ```
 这里看到返回了一个spring容器ApplicationContext
 ```java
+// org.springframework.cloud.context.named.NamedContextFactory
 	public <T> T getInstance(String name, Class<T> type) {
 		GenericApplicationContext context = getContext(name);
 		try {
@@ -294,9 +315,6 @@ spring:
 		return null;
 	}
 
-```
-跳过
-```java
 	protected GenericApplicationContext getContext(String name) {
 		if (!this.contexts.containsKey(name)) {
 			synchronized (this.contexts) {
@@ -323,9 +341,6 @@ spring:
 		return context;
 	}
 
-```
-
-```java
 	public GenericApplicationContext buildContext(String name) {
 		// https://github.com/spring-cloud/spring-cloud-netflix/issues/3101
 		// https://github.com/spring-cloud/spring-cloud-openfeign/issues/475
