@@ -20,7 +20,7 @@
     
 - [`sync_binlog=1`](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)：在提交事务之前启用二进制日志到磁盘的同步。这是最安全的设置，但由于磁盘写入次数增加，可能会对性能产生负面影响。如果发生电源故障或操作系统崩溃，二进制日志中丢失的事务仅处于准备状态。这允许自动恢复例程回滚事务，从而保证二进制日志中不会丢失任何事务。
     
-- [``sync_binlog=_`N`_``](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)，其中_`N`_是非 0 或 1 的值： `N`收集二进制日志提交组后，将二进制日志同步到磁盘。如果发生电源故障或操作系统崩溃，服务器可能已提交尚未刷新到二进制日志的事务。由于磁盘写入次数增加，此设置可能会对性能产生负面影响。较高的值可以提高性能，但数据丢失的风险也会增加。
+- [``sync_binlog=_`N`_``](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)，其中_`N`_是非 0 或 1 的值： 收集`N`个二进制日志提交组后，将二进制日志同步到磁盘。如果发生电源故障或操作系统崩溃，可能出现服务器已提交但尚未刷新到二进制日志的事务。由于磁盘写入次数增加，此设置可能会对性能产生负面影响。较高的值可以提高性能，但数据丢失的风险也会增加。
     
 
 `InnoDB`为了在与事务一起 使用的复制设置中获得最大可能的持久性和一致性，请使用以下设置：
