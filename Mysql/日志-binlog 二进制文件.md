@@ -15,4 +15,18 @@
 
 在默认情况下，二进制日志并不是在每次写的时候同步到磁盘（用户可以理解为==缓冲写==）。因此，当数据库所在操作系统发生宕机时，可能会有最后一部分数据没有写入二进制日志文件中，这会给恢复和复制带来问题。参数sync_binlog=[N]表示每写缓冲多少次就同步到磁盘。如果sync_binlog=1表示采用同步写磁盘的方式来写二进制日志，这时写操作不使用操作系统的缓冲来写二进制日志。sync_binlog的默认值为0，如果使用InnoDB存储引擎进行复制，并且想得到最大的高可用性，建议将该值设为ON。不过该值为ON时，确实会对数据库的IO系统带来一定的影响。
 
+
+- [`sync_binlog=0`](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)：禁用 MySQL 服务器将二进制日志同步到磁盘。相反，MySQL 服务器依赖操作系统将二进制日志刷新到磁盘，就像处理任何其他文件一样。此设置提供==最佳性能==，但在发生电源故障或操作系统崩溃时，服务器可能已提交尚未同步到二进制日志的事务。
+    
+- [`sync_binlog=1`](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)：在提交事务之前启用二进制日志到磁盘的同步。这是最安全的设置，但由于磁盘写入次数增加，可能会对性能产生负面影响。如果发生电源故障或操作系统崩溃，二进制日志中丢失的事务仅处于准备状态。这允许自动恢复例程回滚事务，从而保证二进制日志中不会丢失任何事务。
+    
+- [``sync_binlog=_`N`_``](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)，其中_`N`_是非 0 或 1 的值： `N`收集二进制日志提交组后，将二进制日志同步到磁盘。如果发生电源故障或操作系统崩溃，服务器可能已提交尚未刷新到二进制日志的事务。由于磁盘写入次数增加，此设置可能会对性能产生负面影响。较高的值可以提高性能，但数据丢失的风险也会增加。
+    
+
+`InnoDB`为了在与事务一起 使用的复制设置中获得最大可能的持久性和一致性，请使用以下设置：
+
+- [`sync_binlog=1`](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)。
+    
+- [`innodb_flush_log_at_trx_commit=1`](https://dev.mysql.com/doc/refman/8.2/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit)。
+- 
 [[日志-redolog 重做日志]]
