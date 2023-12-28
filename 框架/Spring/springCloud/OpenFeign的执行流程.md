@@ -229,11 +229,12 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 
 ```
 
-最终返回的是一个JDK代理的类，这里我们就得到了FeignClient
+最终返回的是一个JDK代理的类，这里我们就得到了FeignClient注解的RPC接口
 ```java
   public <T> T newInstance(Target<T> target, C requestContext) {
     TargetSpecificationVerifier.verify(target);
 
+	// 获取每个@RequestMapping注解的方法
     Map<Method, MethodHandler> methodToHandler =
         targetToHandlersByName.apply(target, requestContext);
     InvocationHandler handler = factory.create(target, methodToHandler);
@@ -249,6 +250,9 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
     return proxy;
   }
 ```
+
+# FeignClient是如何调用provider的呢
+需要看下代理拦截的方法
 
 
 
