@@ -210,11 +210,12 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 
 ```java
 	protected <T> T loadBalance(Feign.Builder builder, FeignClientFactory context, HardCodedTarget<T> target) {
-		// 如果FeignLoadBalancerAutoConfiguration
+		// 如果没有自己注入feignClient，是从FeignLoadBalancerAutoConfiguration获取,顺序如下OkHttpClient->HttpClient5->http2Client->FeignBlockingLoadBalancerClient
 		Client client = getOptional(context, Client.class);
 		if (client != null) {
 			builder.client(client);
 			applyBuildCustomizers(context, builder);
+			// 没有配置也是FeignAutoConfiguration
 			Targeter targeter = get(context, Targeter.class);
 			return targeter.target(this, builder, context, target);
 		}
