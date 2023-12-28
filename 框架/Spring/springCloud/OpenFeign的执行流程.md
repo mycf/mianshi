@@ -252,7 +252,45 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 ```
 
 # FeignClient是如何调用provider的呢
-需要看下代理类的InvocHandler
+需要看下代理类的InvocationHandler
+```java
+    InvocationHandler handler = factory.create(target, methodToHandler);
+
+    public InvocationHandler create(Target target, Map<Method, MethodHandler> dispatch) {
+      return new ReflectiveFeign.FeignInvocationHandler(target, dispatch);
+    }
+
+    FeignInvocationHandler(Target target, Map<Method, MethodHandler> dispatch) {
+      this.target = checkNotNull(target, "target");
+      this.dispatch = checkNotNull(dispatch, "dispatch for %s", target);
+    }
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+      if ("equals".equals(method.getName())) {
+        try {
+          Object otherHandler =
+              args.length > 0 && args[0] != null ? Proxy.getInvocationHandler(args[0]) : null;
+          return equals(otherHandler);
+        } catch (IllegalArgumentException e) {
+          return false;
+        }
+      } else if ("hashCode".equals(method.getName())) {
+        return hashCode();
+      } else if ("toString".equals(method.getName())) {
+        return toString();
+      } else if (!dispatch.containsKey(method)) {
+        throw new UnsupportedOperationException(
+            String.format("Method \"%s\" should not be called", method.getName()));
+      }
+
+		// 通过当前method获取methodHandler
+      return dispatch.get(method).invoke(args);
+    }
+
+
+```
+
+
 
 
 
