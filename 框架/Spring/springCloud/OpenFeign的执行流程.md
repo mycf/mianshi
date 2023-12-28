@@ -6,7 +6,10 @@ public @interface EnableFeignClients {
 FeignClientsRegistrar是ImportBeanDefinitionRegistrar的实现类，直接看一下registerBeanDefinitions方法
 ```java
 public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
+	// 使用EnableFeignClients#defaultConfiguration元数据注册FeignClientSpecification.class到spring容器
 	registerDefaultConfiguration(metadata, registry);
+	// 遍历FeignClient注解的rpc接口，为每个rpc注册一个FeignClientFactoryBean到spring容器
+	// 为每个F
 	registerFeignClients(metadata, registry);
 }
 
