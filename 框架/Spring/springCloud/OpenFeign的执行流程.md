@@ -164,6 +164,7 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 		FeignClientFactory feignClientFactory = beanFactory != null ? beanFactory.getBean(FeignClientFactory.class)
 				: applicationContext.getBean(FeignClientFactory.class);
 		// 获取feign的builder，里面设置了从yml读取配置
+		// 这里会为每个FeignClient生成私有的spring容器
 		Feign.Builder builder = feign(feignClientFactory);
 		// 正常应该不配置url的
 		if (!StringUtils.hasText(url) && !isUrlAvailableInConfig(contextId)) {
@@ -200,6 +201,7 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 			builder.client(client);
 		}
 
+		// 可以自定义FeignBuilderCustomizer对builder自定义
 		applyBuildCustomizers(feignClientFactory, builder);
 
 		Targeter targeter = get(feignClientFactory, Targeter.class);
