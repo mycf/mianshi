@@ -5,17 +5,17 @@
 ```java
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
-import java.lang.invoke.MethodType;
 
 public class GetStaticExample {
     public static int staticField = 42;
 
     public static void main(String[] args) throws Throwable {
         MethodHandles.Lookup lookup = MethodHandles.lookup();
-        MethodHandle getter = lookup.findGetter(GetStaticExample.class, "staticField", int.class);
+        MethodHandle getter = lookup.findStaticGetter(GetStaticExample.class, "staticField", int.class);
         int value = (int) getter.invokeExact();
         System.out.println(value); // Output: 42
     }
+
 }
 ```
 
@@ -26,14 +26,13 @@ public class GetStaticExample {
 ```java
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
-import java.lang.invoke.MethodType;
 
 public class PutStaticExample {
     public static int staticField;
 
     public static void main(String[] args) throws Throwable {
         MethodHandles.Lookup lookup = MethodHandles.lookup();
-        MethodHandle setter = lookup.findSetter(PutStaticExample.class, "staticField", int.class);
+        MethodHandle setter = lookup.findStaticSetter(PutStaticExample.class, "staticField", int.class);
         setter.invokeExact(42);
         System.out.println(staticField); // Output: 42
     }
