@@ -163,7 +163,7 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 		// 这个bean是通过FeignAutoConfiguration自动注入地
 		FeignClientFactory feignClientFactory = beanFactory != null ? beanFactory.getBean(FeignClientFactory.class)
 				: applicationContext.getBean(FeignClientFactory.class);
-		// 获取feign的builder
+		// 获取feign的builder，里面设置了从yml读取配置
 		Feign.Builder builder = feign(feignClientFactory);
 		if (!StringUtils.hasText(url) && !isUrlAvailableInConfig(contextId)) {
 
@@ -301,7 +301,7 @@ spring:
 	}
 
 ```
-这里看到返回了一个spring容器ApplicationContext
+这里看到返回了一个 spring 容器 AnnotationConfigApplicationContext
 ```java
 // org.springframework.cloud.context.named.NamedContextFactory
 	public <T> T getInstance(String name, Class<T> type) {
@@ -325,9 +325,7 @@ spring:
 		}
 		return this.contexts.get(name);
 	}
-```
 
-```java
 	public GenericApplicationContext createContext(String name) {
 		GenericApplicationContext context = buildContext(name);
 		// there's an AOT initializer for this context
@@ -346,6 +344,7 @@ spring:
 		// https://github.com/spring-cloud/spring-cloud-openfeign/issues/475
 		ClassLoader classLoader = getClass().getClassLoader();
 		GenericApplicationContext context;
+		// 实现了ApplicationContextAware，所以这里不为null
 		if (this.parent != null) {
 			DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 			if (parent instanceof ConfigurableApplicationContext) {
@@ -356,6 +355,7 @@ spring:
 				beanFactory.setBeanClassLoader(classLoader);
 			}
 			context = AotDetector.useGeneratedArtifacts() ? new GenericApplicationContext(beanFactory)
+					// 走到了这里
 					: new AnnotationConfigApplicationContext(beanFactory);
 		}
 		else {
