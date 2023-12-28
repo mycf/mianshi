@@ -240,7 +240,7 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
     InvocationHandler handler = factory.create(target, methodToHandler);
     T proxy = (T) Proxy.newProxyInstance(target.type().getClassLoader(),
         new Class<?>[] {target.type()}, handler);
-
+	// 为rpc方法添加代理方法
     for (MethodHandler methodHandler : methodToHandler.values()) {
       if (methodHandler instanceof DefaultMethodHandler) {
         ((DefaultMethodHandler) methodHandler).bindTo(proxy);
@@ -252,7 +252,8 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 ```
 
 # FeignClient是如何调用provider的呢
-需要看下代理拦截的方法
+需要看下代理类的InvocHandler
+
 
 
 
