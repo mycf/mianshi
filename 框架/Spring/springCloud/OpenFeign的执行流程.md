@@ -291,9 +291,102 @@ private void registerFeignClient(BeanDefinitionRegistry registry, AnnotationMeta
 ```
 
 
+```java
+  @Override
+  public Object invoke(Object[] argv) throws Throwable {
+	// 获取请求模版
+    RequestTemplate template = buildTemplateFromArgs.create(argv);
+    Options options = findOptions(argv);
+    Retryer retryer = this.retryer.clone();
+    while (true) {
+      try {
+        return executeAndDecode(template, options);
+      } catch (RetryableException e) {
+        try {
+          retryer.continueOrPropagate(e);
+        } catch (RetryableException th) {
+          Throwable cause = th.getCause();
+          if (propagationPolicy == UNWRAP && cause != null) {
+            throw cause;
+          } else {
+            throw th;
+          }
+        }
+        if (logLevel != Logger.Level.NONE) {
+          logger.logRetry(metadata.configKey(), logLevel);
+        }
+        continue;
+      }
+    }
+  }
 
+  Object executeAndDecode(RequestTemplate template, Options options) throws Throwable {
+	// 使用请求模版获取request
+    Request request = targetRequest(template);
 
+    if (logLevel != Logger.Level.NONE) {
+      logger.logRequest(metadata.configKey(), logLevel, request);
+    }
 
+    Response response;
+    long start = System.nanoTime();
+    try {
+		// 发起请求
+      response = client.execute(request, options);
+      // ensure the request is set. TODO: remove in Feign 12
+      response = response.toBuilder()
+          .request(request)
+          .requestTemplate(template)
+          .build();
+    } catch (IOException e) {
+      if (logLevel != Logger.Level.NONE) {
+        logger.logIOException(metadata.configKey(), logLevel, e, elapsedTime(start));
+      }
+      throw errorExecuting(request, e);
+    }
+
+    long elapsedTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start);
+    return responseHandler.handleResponse(
+        metadata.configKey(), response, metadata.returnType(), elapsedTime);
+  }
+
+```
+
+```java
+	@Override
+	public Response execute(Request request, Request.Options options) throws IOException {
+		final URI originalUri = URI.create(request.url());
+		String serviceId = originalUri.getHost();
+		Assert.state(serviceId != null, "Request URI does not contain a valid hostname: " + originalUri);
+		String hint = getHint(serviceId);
+		DefaultRequest<RequestDataContext> lbRequest = new DefaultRequest<>(
+				new RequestDataContext(buildRequestData(request), hint));
+		Set<LoadBalancerLifecycle> supportedLifecycleProcessors = LoadBalancerLifecycleValidator
+				.getSupportedLifecycleProcessors(
+						loadBalancerClientFactory.getInstances(serviceId, LoadBalancerLifecycle.class),
+						RequestDataContext.class, ResponseData.class, ServiceInstance.class);
+		supportedLifecycleProcessors.forEach(lifecycle -> lifecycle.onStart(lbRequest));
+		ServiceInstance instance = loadBalancerClient.choose(serviceId, lbRequest);
+		org.springframework.cloud.client.loadbalancer.Response<ServiceInstance> lbResponse = new DefaultResponse(
+				instance);
+		if (instance == null) {
+			String message = "Load balancer does not contain an instance for the service " + serviceId;
+			if (LOG.isWarnEnabled()) {
+				LOG.warn(message);
+			}
+			supportedLifecycleProcessors.forEach(lifecycle -> lifecycle
+					.onComplete(new CompletionContext<ResponseData, ServiceInstance, RequestDataContext>(
+							CompletionContext.Status.DISCARD, lbRequest, lbResponse)));
+			return Response.builder().request(request).status(HttpStatus.SERVICE_UNAVAILABLE.value())
+					.body(message, StandardCharsets.UTF_8).build();
+		}
+		String reconstructedUrl = loadBalancerClient.reconstructURI(instance, originalUri).toString();
+		Request newRequest = buildRequest(request, reconstructedUrl, instance);
+		return executeWithLoadBalancerLifecycleProcessing(delegate, options, newRequest, lbRequest, lbResponse,
+				supportedLifecycleProcessors);
+	}
+
+```
 
 FeignClientFactory是starter自动配置进来的
 ```java
