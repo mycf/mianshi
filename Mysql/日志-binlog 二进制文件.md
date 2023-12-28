@@ -7,7 +7,7 @@
 ❑*复制（replication）：* 其原理与恢复类似，通过复制和执行二进制日志使一台远程的MySQL数据库（一般称为slave或standby）与一台MySQL数据库（一般称为master或primary）进行实时同步。
 ❑审计（audit）：用户可以通过二进制日志中的信息来进行审计，判断是否有对数据库进行注入的攻击。
 
-通过配置参数log-bin[=name]可以启动二进制日志。如果不指定name，则默认二进制日志文件名为主机名，后缀名为二进制日志的序列号，所在路径为数据库所在目录（datadir）
+通过配置参数log_bin=[ON/OFF]可以启动二进制日志。如果不指定name(参数[`log_bin_basename`](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_log_bin_basename))，则默认二进制日志文件名为主机名，后缀名为二进制日志的序列号，所在路径为数据库所在目录（datadir）
 二进制日志文件在==默认情况下并没有启动==，需要手动指定参数来启动。可能有人会质疑，开启这个选项是否会==对数据库整体性能有所影响。==
 不错，开启这个选项的确会影响性能，但是性能的损失十分有限。根据MySQL官方手册中的测试表明，开启二进制日志会使性能`下降1%`。但考虑到可以使用复制（replication）和point-in-time的恢复，这些性能损失绝对是可以且应该被接受的。
 
@@ -20,7 +20,9 @@
     
 - [`sync_binlog=1`](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)：在提交事务之前启用二进制日志到磁盘的同步。这是最安全的设置，但由于磁盘写入次数增加，可能会对性能产生负面影响。如果发生电源故障或操作系统崩溃，二进制日志中丢失的事务仅处于准备状态。这允许自动恢复例程回滚事务，从而保证二进制日志中不会丢失任何事务。
     
-- [``sync_binlog=_`N`_``](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)，其中_`N`_是非 0 或 1 的值： 收集`N`个二进制日志提交组后，将二进制日志同步到磁盘。如果发生电源故障或操作系统崩溃，可能出现服务器已提交但尚未刷新到二进制日志的事务。由于磁盘写入次数增加，此设置可能会对性能产生负面影响。较高的值可以提高性能，但数据丢失的风险也会增加。
+- [``sync_binlog=_`N`_``](https://dev.mysql.com/doc/refman/8.2/en/replication-options-binary-log.html#sysvar_sync_binlog)，其中_`N`_是非 0 或 1 的值： 收集`N`个二进制日志提交组后，将二进制日志同步到磁盘。如果发生电源故障或操作系统崩溃，可能出现服务器已提交但尚未刷新到二进制日志的事务。
+
+由于磁盘写入次数增加，此设置可能会对性能产生负面影响。较高的值可以提高性能，但数据丢失的风险也会增加。
     
 
 `InnoDB`为了在与事务一起 使用的复制设置中获得最大可能的持久性和一致性，请使用以下设置：
