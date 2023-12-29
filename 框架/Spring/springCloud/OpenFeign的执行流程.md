@@ -1,5 +1,5 @@
 ![[OpenFeign的执行流程 2023-12-29 08.50.00.excalidraw]]
-使用OpenFeign需要加`EnableFeignClients`注解，如下代码，EnableFeignClients注解上加了`@Import(FeignClientsRegistrar.class)`
+使用OpenFeign需要加`@EnableFeignClients`注解，如下代码，`@EnableFeignClients`注解上加了`@Import(FeignClientsRegistrar.class)`
 ```java
 @Import(FeignClientsRegistrar.class)
 public @interface EnableFeignClients {
@@ -15,7 +15,7 @@ public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionR
 }
 
 ```
-注入FeignClientSpecification到spring容器，从名字可以看出来是一个FeiginCilent默认配置类，信息来自于EnableFeiginClient的注解信息
+注入默认FeignClientSpecification到spring容器，从名字可以看出来是一个FeignCilent默认配置类，信息来自于 `@EnableFeiginClient` 的注解信息
 ```java
 private void registerDefaultConfiguration(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
 	Map<String, Object> defaultAttrs = metadata.getAnnotationAttributes(EnableFeignClients.class.getName(), true);
@@ -42,7 +42,7 @@ private void registerClientConfiguration(BeanDefinitionRegistry registry, Object
 }
 
 ```
-循环遍历FeignClient注解的所有bean，并把FeignClientFactoryBean注入到spring容器中
+循环遍历 `@FeignClient` 注解的所有bean，并把FeignClientFactoryBean注入到spring容器中
 ```java
 public void registerFeignClients(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
 	LinkedHashSet<BeanDefinition> candidateComponents = new LinkedHashSet<>();
