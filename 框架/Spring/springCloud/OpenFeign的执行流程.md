@@ -1,4 +1,4 @@
-![[OpenFeign的执行流程 2023-12-29 08.50.00.excalidraw]]
+![[OpenFeign的执行流程 2023-12-29 08.50.00.excalidraw|1000]]
 使用OpenFeign需要加`@EnableFeignClients`注解，如下代码，`@EnableFeignClients`注解上加了`@Import(FeignClientsRegistrar.class)`
 ```java
 @Import(FeignClientsRegistrar.class)
