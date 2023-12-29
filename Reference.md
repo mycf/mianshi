@@ -1,4 +1,10 @@
 `java.lang.ref.Reference`类是引用对象的抽象基类，用于帮助实现垃圾回收和对象引用的管理。
+
+```java
+    public final boolean refersTo(T obj) {
+        return refersToImpl(obj);
+    }
+```
 # refersToImpl
 `refersToImpl`方法是`Reference`类的一个包私有方法，用于确定引用对象是否指向另一个对象。具体来说，它用于检查引用对象是否仍然有效，即被引用的对象是否仍然存在。
 ```java
