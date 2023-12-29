@@ -11,6 +11,7 @@ ZAB 协议分为两部分：
 
 Zookeeper 使用单一的主进程 Leader 来接收和处理客户端所有事务请求，并采用 ZAB 协议的原子广播协议，将事务请求以 Proposal 提议广播到所有 Follower 节点，当集群中有过半的Follower 服务器进行正确的 ACK 反馈，那么Leader就会再次向所有的 Follower 服务器发送commit 消息，将此次提案进行提交。这个过程可以简称为 2pc 事务提交，整个流程可以参考下图，注意 Observer 节点只负责同步 Leader 数据，不参与 2PC 数据同步过程。
 
+
 ![img](https://www.runoob.com/wp-content/uploads/2020/09/zk-data-stream-async.png)
 
 ### 崩溃恢复
