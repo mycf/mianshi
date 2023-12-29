@@ -8,7 +8,10 @@
 
 Redis可以通过两种方式实现分布式锁：
 第一种是基于Redis本身提供的setnx指令，setnx设置key时，如果key已存在会返回0，表示无法设置，否则返回1，表示设置成功。通过机制去判断是否获得锁
-第二种是基于redisson，redisson提供了分布式锁的封装方法，只需要调用api就行了。
+第二种是基于redisson，redisson提供了分布式锁的封装方法，只需要调用api就行了。redisson里面的指令都是通过lua脚本实现的，lua脚本可以保证脚本执行的原子性。另外，redisson还提供了watchdog，翻译过来就是看门狗，它会在获取锁之后，每隔10秒钟把key的时间续约，从而避免锁的过期。
+
+zookeeper实现分布式锁：
+通过临时有序节点实现
 
 
 | jjfasf |  | \ |
