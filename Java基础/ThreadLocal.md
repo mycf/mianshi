@@ -47,8 +47,8 @@ static class ThreadLocalMap {
 垃圾回收只能让我们这个key的内存释放, 那后续还要根据这个key是否为null, 来进一步释放值的内存, 我们刚才说了, 也是它是强引用的, 他不能垃圾回收, 是释放掉啊, 所以我们还得考虑值的内存释放, 释放的时机又分了三种,
 
 
-`ThreadLocalMap`是一个类似HashMap结构的数据结构 用于存储`ThreadLocal`和对应的值，它的内部结构由元素数组table和散列方法组成 
-==元素数组：== `ThreadLocalMap`中的table数组用于存储entry类型的元素，每个entry由ThreadLoacl对象的弱引用作为key，对应的值作为value，table的长度是一个二的幂次方，这是为了优化散列方法的运算效率 
+`ThreadLocalMap`是一个类似HashMap结构的数据结构，用于存储`ThreadLocal`和对应的值，它的内部结构由元素数组table和散列方法组成 
+==元素数组：== `ThreadLocalMap`中的table数组用于存储entry类型的元素，每个entry由ThreadLocal对象的弱引用作为key，对应的值作为value，table的长度是一个二的幂次方，这是为了优化散列方法的运算效率。
 
 ==列方法：== `ThreadLocalMap` 使用哈希取余法来确定key在table数组中的位置，具体的计算方式是通过将的`threadLocalHashCode`与 (table.length-1)进行&运算来得到下标i 
 `threadLocalHashCode` 是ThreadLocal对象的一个特殊值，每次创建一个ThreadLocal对象，他的`threadLocalHashCode`会自增 `0x61c88647` 这个值也叫波那契数或黄金分割数。
