@@ -202,8 +202,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -345,7 +344,7 @@
       }
     ]
   },
-  "active": "42822a46ba2db1d8",
+  "active": "bf148b7b1382b252",
   "lastOpenFiles": [
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
