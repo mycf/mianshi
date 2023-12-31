@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
+                "file": "分布式/消息队列/kafka/07-客户端.md"
               }
             }
           },
@@ -279,10 +279,10 @@
       }
     ]
   },
-  "active": "5f866e1ffe9eaf4c",
+  "active": "10d31d4a4147cbeb",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/07-客户端.md",
     "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+    "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/控制器.md",
     "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
