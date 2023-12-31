@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
+                "file": "分布式/消息队列/kafka/kafka.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
+                "file": "分布式/消息队列/kafka/kafka.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
+                "file": "分布式/消息队列/kafka/kafka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md"
+                "file": "分布式/消息队列/kafka/kafka.md"
               }
             }
           },
@@ -272,6 +272,7 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/07-客户端.md",
@@ -301,7 +302,6 @@
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.md",
     "2023-12-31.md",
-    "Excalidraw/Drawing 2023-12-31 12.08.01.excalidraw.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
