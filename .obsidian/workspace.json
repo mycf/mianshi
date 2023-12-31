@@ -25,9 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/JVM内存结构.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "42822a46ba2db1d8",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md"
               }
             }
           },
@@ -74,7 +84,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -140,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/JVM内存结构.md",
+                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/JVM内存结构.md",
+                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/JVM内存结构.md"
+                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md"
               }
             }
           },
@@ -335,8 +345,10 @@
       }
     ]
   },
-  "active": "b7fa95b25813bb9f",
+  "active": "42822a46ba2db1d8",
   "lastOpenFiles": [
+    "Java基础/ThreadPoolExecutor.md",
+    "Java基础/JVM/JVM内存结构.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "框架/Spring/springCloud/OpenFeign的执行流程.md",
     "框架/Spring/springCloud/eureka.md",
@@ -351,7 +363,6 @@
     "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
     "Java基础/ThreadLocal.md",
     "分布式/Redis/redis.md",
-    "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
     "Java基础/线程池.md",
@@ -362,7 +373,6 @@
     "Mysql/日志-undo log.md",
     "Mysql/快照读和当前读.md",
     "框架/Spring/springMvc/DispatcherServlet.md",
-    "框架/Spring/springMvc/常用注解.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
