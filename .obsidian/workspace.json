@@ -6,6 +6,7 @@
       {
         "id": "b80a04e86f39f818",
         "type": "tabs",
+        "dimension": 39.25501432664756,
         "children": [
           {
             "id": "10d31d4a4147cbeb",
@@ -39,8 +40,24 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "11eeae8d3aadba8f",
+        "type": "tabs",
+        "dimension": 60.74498567335244,
+        "children": [
+          {
+            "id": "bebe0322597ffe2a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md"
+                "file": "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md"
               }
             }
           },
@@ -272,14 +289,15 @@
       }
     ]
   },
-  "active": "a800c672d4b13d8d",
+  "active": "bebe0322597ffe2a",
   "lastOpenFiles": [
     "分布式/消息队列/kafka/07-客户端.md",
+    "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
     "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md",
+    "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
     "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/控制器.md",
-    "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
@@ -303,7 +321,6 @@
     "框架/Spring/springCloud/OpenFeign的执行流程.md",
     "框架/Spring/springCloud/eureka.md",
     "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
-    "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
