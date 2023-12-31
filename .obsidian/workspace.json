@@ -6,6 +6,7 @@
       {
         "id": "b80a04e86f39f818",
         "type": "tabs",
+        "dimension": 38.18051575931232,
         "children": [
           {
             "id": "10d31d4a4147cbeb",
@@ -26,6 +27,23 @@
               "type": "excalidraw",
               "state": {
                 "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "39ada896e29ae663",
+        "type": "tabs",
+        "dimension": 61.819484240687686,
+        "children": [
+          {
+            "id": "5f866e1ffe9eaf4c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
               }
             }
           }
@@ -79,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -95,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md"
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
               }
             }
           },
@@ -260,10 +279,11 @@
       }
     ]
   },
-  "active": "10d31d4a4147cbeb",
+  "active": "5f866e1ffe9eaf4c",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/07-客户端.md",
+    "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+    "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/控制器.md",
     "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
@@ -291,7 +311,6 @@
     "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
     "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
     "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
-    "框架/Spring/SpringBoot/springboot的启动流程.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
