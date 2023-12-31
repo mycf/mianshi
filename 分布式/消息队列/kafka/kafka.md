@@ -244,7 +244,7 @@ bin/kafka-console-consumer.sh
 ##### 消费消息
 ###### 消费first主题中的数据
 ```sh
-bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic first
 ```
 ##### 把主题中所有的数据都读取出来（包括历史数据）
 ```sh
