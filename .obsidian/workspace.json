@@ -4,106 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "1bb15617c0b4c0e4",
-        "type": "tabs",
-        "dimension": 42.335243553008596,
-        "children": [
-          {
-            "id": "46140e999c3f8420",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4526418a89901244",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "91a9bc0aeac9cc9b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "b7fa95b25813bb9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Excalidraw/Scripts/Downloaded/Connect elements.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "50ee78193ea04168",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "5412c9126678d3b1",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "8ee8c82dc3f89d42",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mysql/brew安装mysql.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bfc585cdb2fb7db9",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Drawing 2023-12-19 22.35.55.excalidraw.md"
-              }
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
         "id": "b80a04e86f39f818",
         "type": "tabs",
-        "dimension": 57.664756446991404,
         "children": [
           {
             "id": "10d31d4a4147cbeb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "分布式/消息队列/kafka/服务端.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "35392db2ea7f0e17",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -112,7 +29,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -179,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
+                "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -196,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
+                "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -219,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md"
+                "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md"
               }
             }
           },
@@ -373,23 +291,25 @@
       }
     ]
   },
-  "active": "4526418a89901244",
+  "active": "35392db2ea7f0e17",
   "lastOpenFiles": [
-    "Java基础/ThreadPoolExecutor.md",
     "分布式/消息队列/kafka/服务端.md",
     "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
-    "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
-    "Excalidraw/Scripts/Downloaded/Elbow connectors.md",
+    "Drawing 2023-12-19 22.35.55.excalidraw.md",
+    "Mysql/brew安装mysql.md",
     "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md",
     "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md",
+    "Excalidraw/Scripts/Downloaded/Connect elements.md",
+    "Java基础/ThreadPoolExecutor.md",
+    "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
+    "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
+    "Excalidraw/Scripts/Downloaded/Elbow connectors.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
-    "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.md",
     "2023-12-31.md",
-    "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Excalidraw/Drawing 2023-12-31 12.08.01.excalidraw.md",
     "Java基础/JVM/JVM内存结构.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
@@ -402,7 +322,6 @@
     "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
     "框架/Spring/SpringBoot/AutoConfigurationPackage.md",
     "Java基础/MethodHandle.md",
-    "Java基础/BlockingQueue.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
