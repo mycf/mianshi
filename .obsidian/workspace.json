@@ -84,6 +84,22 @@
             }
           }
         ]
+      },
+      {
+        "id": "b80a04e86f39f818",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "10d31d4a4147cbeb",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -133,7 +149,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -149,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/服务端.md",
+                "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/服务端.md",
+                "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/服务端.md"
+                "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md"
               }
             }
           },
@@ -343,14 +360,15 @@
       }
     ]
   },
-  "active": "46140e999c3f8420",
+  "active": "10d31d4a4147cbeb",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/服务端.md",
-    "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
-    "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md",
-    "Excalidraw/Scripts/Downloaded/Connect elements.md",
+    "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
     "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md",
+    "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md",
+    "分布式/消息队列/kafka/kafka.md",
+    "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
+    "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.md",
@@ -372,7 +390,6 @@
     "Java基础/BlockingQueue.md",
     "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
     "Java基础/ThreadLocal.md",
-    "分布式/Redis/redis.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
