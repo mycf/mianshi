@@ -23,9 +23,11 @@
             "id": "b7fa95b25813bb9f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Scripts/Downloaded/Auto Layout.svg"
+                "file": "Excalidraw/Scripts/Downloaded/Connect elements.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -72,7 +74,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -138,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
+                "file": "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
+                "file": "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Scripts/Downloaded/Auto Layout.svg"
+                "file": "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md"
               }
             }
           },
@@ -332,11 +334,11 @@
       }
     ]
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "5412c9126678d3b1",
   "lastOpenFiles": [
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
-    "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
+    "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.md",
     "Java基础/ThreadPoolExecutor.md",
     "2023-12-31.md",
