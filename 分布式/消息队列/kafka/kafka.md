@@ -43,7 +43,7 @@
 4. ZK中记录谁是leader，Kafka2.8.0以后也可以配置不采用ZK
 ![[kafka 2023-12-23 20.26.05.excalidraw|1000]]
 
-(1) Producer：消息生产者，就是向 Kafka broker 发消息的客户端。
+(1) Producer：消息生产者，就jj是向 Kafka broker 发消息的客户端。
 (2) Consumer：消息消费者，向 Kafka broker 取消息的客户端。
 (3) Consumer Group (CG)： 消费者组，由多个 consumer组成。==消费者组内每个消费者负责消费不同分区的数据，一个分区只能由一个组内消费者消费;消费者组之间互不影响。==所有的消费者都属于某个消费者组，即==消费者组是逻辑上的一个订阅者。==
 (4) Broker：一台 Kafka 服务器就是一个 broker。一个集群由多个 broker 组成。一个broker可以容纳多个 topic
