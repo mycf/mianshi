@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/Redis/Redis big key.md",
                 "mode": "source",
                 "source": false
               }
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/Redis/Redis big key.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/Redis/Redis big key.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md"
+                "file": "分布式/Redis/Redis big key.md"
               }
             }
           },
@@ -291,9 +291,9 @@
   },
   "active": "10d31d4a4147cbeb",
   "lastOpenFiles": [
+    "分布式/消息队列/kafka/07-客户端.md",
     "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md",
     "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
-    "分布式/消息队列/kafka/07-客户端.md",
     "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
     "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
     "分布式/消息队列/kafka/06-服务端.md",
