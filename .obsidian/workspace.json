@@ -259,42 +259,16 @@
         "height": 800,
         "maximize": false,
         "zoom": 0
-      },
-      {
-        "id": "79c56bec3992b306",
-        "type": "window",
-        "children": [
-          {
-            "id": "44e2d9d3641a1e65",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "3faa72a9a5c2e11d",
-                "type": "leaf",
-                "state": {
-                  "type": "excalidraw",
-                  "state": {
-                    "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 208,
-        "y": 25,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
       }
     ]
   },
   "active": "35392db2ea7f0e17",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/服务端.md",
+    "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
+    "Excalidraw/Scripts/Downloaded/Set Dimensions.md",
+    "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
+    "分布式/消息队列/kafka/服务端.md",
     "Drawing 2023-12-19 22.35.55.excalidraw.md",
     "Mysql/brew安装mysql.md",
     "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md",
@@ -312,7 +286,6 @@
     "2023-12-31.md",
     "Excalidraw/Drawing 2023-12-31 12.08.01.excalidraw.md",
     "Java基础/JVM/JVM内存结构.md",
-    "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "框架/Spring/springCloud/OpenFeign的执行流程.md",
     "框架/Spring/springCloud/eureka.md",
     "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
@@ -320,8 +293,6 @@
     "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
     "框架/Spring/SpringBoot/springboot的启动流程.md",
     "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
-    "框架/Spring/SpringBoot/AutoConfigurationPackage.md",
-    "Java基础/MethodHandle.md",
     "Pasted Image 20231220210201_774.png",
     "计算机网络",
     "Pasted image 20231209135344.png",
