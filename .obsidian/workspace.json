@@ -40,8 +40,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "11eeae8d3aadba8f",
@@ -125,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md"
+                "file": "分布式/消息队列/kafka/07-客户端.md"
               }
             }
           },
@@ -290,7 +289,7 @@
       }
     ]
   },
-  "active": "bebe0322597ffe2a",
+  "active": "10d31d4a4147cbeb",
   "lastOpenFiles": [
     "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md",
     "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
