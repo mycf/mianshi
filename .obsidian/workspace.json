@@ -174,7 +174,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -287,7 +288,7 @@
       }
     ]
   },
-  "active": "10d31d4a4147cbeb",
+  "active": "a25ee8f512f7d750",
   "lastOpenFiles": [
     "2024-01-01.md",
     "Java基础/JVM/垃圾收集器.md",
