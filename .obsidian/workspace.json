@@ -11,9 +11,11 @@
             "id": "10d31d4a4147cbeb",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md"
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -104,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md"
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md"
               }
             }
           },
@@ -272,6 +274,7 @@
   },
   "active": "10d31d4a4147cbeb",
   "lastOpenFiles": [
+    "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
     "框架/Spring/spring三级缓存.md",
     "Java基础/JVM/垃圾收集器.md",
     "2024-01-01.md",
@@ -298,7 +301,6 @@
     "Mysql/brew安装mysql.md",
     "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md",
     "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md",
-    "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
