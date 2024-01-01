@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "file": "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "file": "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "file": "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md"
+                "file": "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md"
               }
             }
           },
@@ -272,8 +271,13 @@
       }
     ]
   },
-  "active": "10d31d4a4147cbeb",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "分布式/消息队列/kafka/Kafka如何保证消息顺序性.md",
+    "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
+    "分布式/消息队列/kafka/kafka的副本同步机制.md",
+    "分布式/消息队列/kafka/kafka.md",
+    "框架/Spring/SpringBoot/springboot的启动流程.md",
     "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
     "框架/Spring/spring三级缓存.md",
     "Java基础/JVM/垃圾收集器.md",
@@ -281,7 +285,6 @@
     "Excalidraw/垃圾收集器 2024-01-01 11.19.51.excalidraw.md",
     "Java基础/JVM/类的加载过程.md",
     "Java基础/JVM/类加载.md",
-    "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/07-客户端.md",
@@ -297,10 +300,6 @@
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
-    "Drawing 2023-12-19 22.35.55.excalidraw.md",
-    "Mysql/brew安装mysql.md",
-    "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md",
-    "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
