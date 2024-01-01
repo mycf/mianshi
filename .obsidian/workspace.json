@@ -40,6 +40,22 @@
             }
           }
         ]
+      },
+      {
+        "id": "d0d9b666c20927b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d09b0dbc43c2050b",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/垃圾收集器 2024-01-01 11.19.51.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -89,7 +105,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -272,8 +289,9 @@
   },
   "active": "10d31d4a4147cbeb",
   "lastOpenFiles": [
-    "Java基础/JVM/类的加载过程.md",
+    "Excalidraw/垃圾收集器 2024-01-01 11.19.51.excalidraw.md",
     "Java基础/JVM/垃圾收集器.md",
+    "Java基础/JVM/类的加载过程.md",
     "Java基础/JVM/类加载.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
@@ -299,7 +317,6 @@
     "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
-    "Excalidraw/Scripts/Downloaded/Elbow connectors.md",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Pasted Image 20231220210201_774.png",
