@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/怎么避免重复消费.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/怎么避免重复消费.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/怎么避免重复消费.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/怎么避免重复消费.md"
+                "file": "分布式/消息队列/kafka/07-客户端.md"
               }
             }
           },
@@ -271,8 +271,9 @@
       }
     ]
   },
-  "active": "10d31d4a4147cbeb",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "分布式/消息队列/kafka/怎么避免重复消费.md",
     "分布式/消息队列/kafka/一文理解如何实现接口的幂等性.md",
     "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
     "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
@@ -299,7 +300,6 @@
     "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
     "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
-    "Excalidraw/Scripts/Downloaded/Set Dimensions.md",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
