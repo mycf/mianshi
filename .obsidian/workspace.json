@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/kafka.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/kafka.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/kafka.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/kafka.md"
+                "file": "Java基础/JVM/垃圾收集器.md"
               }
             }
           },
@@ -270,10 +270,10 @@
       }
     ]
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "10d31d4a4147cbeb",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
     "分布式/消息队列/kafka/kafka.md",
+    "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/控制器.md",
