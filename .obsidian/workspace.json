@@ -11,11 +11,9 @@
             "id": "10d31d4a4147cbeb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md"
               }
             }
           },
@@ -36,22 +34,6 @@
               "type": "excalidraw",
               "state": {
                 "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "d0d9b666c20927b6",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d09b0dbc43c2050b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/垃圾收集器 2024-01-01 11.19.51.excalidraw.md"
               }
             }
           }
@@ -122,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md"
+                "file": "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md"
               }
             }
           },
@@ -288,10 +270,11 @@
       }
     ]
   },
-  "active": "a25ee8f512f7d750",
+  "active": "10d31d4a4147cbeb",
   "lastOpenFiles": [
-    "2024-01-01.md",
+    "框架/Spring/spring三级缓存.md",
     "Java基础/JVM/垃圾收集器.md",
+    "2024-01-01.md",
     "Excalidraw/垃圾收集器 2024-01-01 11.19.51.excalidraw.md",
     "Java基础/JVM/类的加载过程.md",
     "Java基础/JVM/类加载.md",
@@ -316,7 +299,6 @@
     "Excalidraw/zset 2023-12-20 19.09.36.excalidraw.md",
     "Excalidraw/Kafka如何消息不丢失 2023-12-25 10.58.06.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
-    "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
