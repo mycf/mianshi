@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md"
+                "file": "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md"
               }
             }
           },
@@ -290,10 +290,10 @@
       }
     ]
   },
-  "active": "10d31d4a4147cbeb",
+  "active": "09d7fc3d4f577ba8",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "分布式/消息队列/kafka/07-客户端.md",
+    "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/怎么避免重复消费.md",
