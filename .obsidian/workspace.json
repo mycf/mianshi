@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mysql/事务.md",
+                "file": "框架/Spring/springCloud/面试.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,13 +105,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -127,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mysql/事务.md",
+                "file": "框架/Spring/springCloud/面试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mysql/事务.md",
+                "file": "框架/Spring/springCloud/面试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mysql/事务.md"
+                "file": "框架/Spring/springCloud/面试.md"
               }
             }
           },
@@ -295,9 +293,9 @@
   },
   "active": "057624c854be7dd8",
   "lastOpenFiles": [
+    "Mysql/事务.md",
     "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
     "Excalidraw/事务 2024-01-02 16.22.09.excalidraw 1.md",
-    "Mysql/事务.md",
     "Excalidraw/事务 2024-01-02 17.01.00.excalidraw.md",
     "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "Mysql/快照读和当前读.md",
