@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
+                "file": "框架/Spring/@Autowired和@Resource的区别.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
+                "file": "框架/Spring/@Autowired和@Resource的区别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
+                "file": "框架/Spring/@Autowired和@Resource的区别.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md"
+                "file": "框架/Spring/@Autowired和@Resource的区别.md"
               }
             }
           },
@@ -263,6 +263,8 @@
   },
   "active": "057624c854be7dd8",
   "lastOpenFiles": [
+    "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
+    "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
     "框架/Spring/SpringBoot/springboot的启动流程.md",
     "框架/mybatis/Mybatis中的井号和$有什么区别.md",
     "框架/mybatis.md",
@@ -287,8 +289,6 @@
     "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
     "框架/Spring/spring三级缓存.md",
     "Java基础/JVM/垃圾收集器.md",
-    "2024-01-01.md",
-    "Excalidraw/垃圾收集器 2024-01-01 11.19.51.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
