@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mysql/如何设计索引.md",
+                "file": "Mysql/事务.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mysql/如何设计索引.md",
+                "file": "Mysql/事务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mysql/如何设计索引.md",
+                "file": "Mysql/事务.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mysql/如何设计索引.md"
+                "file": "Mysql/事务.md"
               }
             }
           },
@@ -261,8 +261,10 @@
       }
     ]
   },
-  "active": "057624c854be7dd8",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Mysql/快照读和当前读.md",
+    "Mysql/如何设计索引.md",
     "Mysql/索引.md",
     "框架/Spring/@Autowired和@Resource的区别.md",
     "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
@@ -287,8 +289,6 @@
     "分布式/消息队列/kafka/一文理解如何实现接口的幂等性.md",
     "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
     "分布式/消息队列/kafka/Kafka如何保证消息顺序性.md",
-    "分布式/消息队列/kafka/kafka.md",
-    "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
