@@ -76,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "allkeys-lru",
+                "query": "innodb status",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,12 +93,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -280,7 +280,7 @@
       }
     ]
   },
-  "active": "057624c854be7dd8",
+  "active": "a1a16ca91714f819",
   "lastOpenFiles": [
     "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
     "Mysql/事务.md",
