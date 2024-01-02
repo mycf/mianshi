@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/@Autowired和@Resource的区别.md",
+                "file": "Mysql/如何设计索引.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/@Autowired和@Resource的区别.md",
+                "file": "Mysql/如何设计索引.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/@Autowired和@Resource的区别.md",
+                "file": "Mysql/如何设计索引.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/@Autowired和@Resource的区别.md"
+                "file": "Mysql/如何设计索引.md"
               }
             }
           },
@@ -263,6 +263,8 @@
   },
   "active": "057624c854be7dd8",
   "lastOpenFiles": [
+    "Mysql/索引.md",
+    "框架/Spring/@Autowired和@Resource的区别.md",
     "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
     "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
     "框架/Spring/SpringBoot/springboot的启动流程.md",
@@ -287,8 +289,6 @@
     "分布式/消息队列/kafka/Kafka如何保证消息顺序性.md",
     "分布式/消息队列/kafka/kafka.md",
     "Excalidraw/spring三级缓存 2023-12-20 23.08.26.excalidraw.md",
-    "框架/Spring/spring三级缓存.md",
-    "Java基础/JVM/垃圾收集器.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
