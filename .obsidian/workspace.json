@@ -4,12 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b80a04e86f39f818",
+        "id": "b95be23c1d75c720",
         "type": "tabs",
-        "dimension": 34.45558739255014,
         "children": [
           {
-            "id": "10d31d4a4147cbeb",
+            "id": "057624c854be7dd8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,43 +16,6 @@
                 "file": "分布式/消息队列/kafka/07-客户端.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "a800c672d4b13d8d",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "35392db2ea7f0e17",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "b95be23c1d75c720",
-        "type": "tabs",
-        "dimension": 65.54441260744986,
-        "children": [
-          {
-            "id": "057624c854be7dd8",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
               }
             }
           },
@@ -117,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -134,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
+                "file": "分布式/消息队列/kafka/07-客户端.md"
               }
             }
           },
@@ -300,11 +261,13 @@
       }
     ]
   },
-  "active": "057624c854be7dd8",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/07-客户端.md",
     "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+    "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
+    "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md",
     "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
+    "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/怎么避免重复消费.md",
@@ -326,8 +289,6 @@
     "分布式/消息队列/kafka/主题和分区.md",
     "分布式/消息队列/kafka/Untitled.md",
     "框架/Spring/Spring 中，有两个 id 相同的 bean会报错吗？.md",
-    "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
-    "分布式/Redis/Redis big key.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
