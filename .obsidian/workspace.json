@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/中间件的选型.md",
+                "file": "框架/mybatis/Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/中间件的选型.md",
+                "file": "框架/mybatis/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/中间件的选型.md",
+                "file": "框架/mybatis/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/中间件的选型.md"
+                "file": "框架/mybatis/Untitled.md"
               }
             }
           },
@@ -261,8 +261,12 @@
       }
     ]
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "057624c854be7dd8",
   "lastOpenFiles": [
+    "框架/mybatis.md",
+    "框架/mybatis/Untitled.md",
+    "框架/mybatis/缓存.md",
+    "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/消息队列有哪些作用.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/07-客户端.md",
@@ -285,10 +289,6 @@
     "Java基础/JVM/垃圾收集器.md",
     "2024-01-01.md",
     "Excalidraw/垃圾收集器 2024-01-01 11.19.51.excalidraw.md",
-    "Java基础/JVM/类的加载过程.md",
-    "Java基础/JVM/类加载.md",
-    "分布式/消息队列/kafka/控制器.md",
-    "分布式/消息队列/kafka/主题和分区.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
