@@ -21,6 +21,16 @@
             }
           },
           {
+            "id": "057624c854be7dd8",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
+              }
+            }
+          },
+          {
             "id": "a800c672d4b13d8d",
             "type": "leaf",
             "state": {
@@ -40,7 +50,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "b95be23c1d75c720",
@@ -124,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md"
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
               }
             }
           },
@@ -290,10 +301,10 @@
       }
     ]
   },
-  "active": "10d31d4a4147cbeb",
+  "active": "057624c854be7dd8",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "分布式/消息队列/kafka/07-客户端.md",
+    "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/怎么避免重复消费.md",
