@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/springCloud/面试.md",
+                "file": "分布式/nacos/nacos注册中心的设计原理.md",
                 "mode": "source",
                 "source": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/springCloud/面试.md",
+                "file": "分布式/nacos/nacos注册中心的设计原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/springCloud/面试.md",
+                "file": "分布式/nacos/nacos注册中心的设计原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/springCloud/面试.md"
+                "file": "分布式/nacos/nacos注册中心的设计原理.md"
               }
             }
           },
@@ -293,6 +293,10 @@
   },
   "active": "057624c854be7dd8",
   "lastOpenFiles": [
+    "分布式/nacos/Dynamic Naming and Configuration Service.md",
+    "分布式/nacos/nacos注册中心的设计原理.md",
+    "框架/Spring/springCloud/面试.md",
+    "分布式/nocas",
     "Mysql/事务.md",
     "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
     "Excalidraw/事务 2024-01-02 16.22.09.excalidraw 1.md",
@@ -316,9 +320,6 @@
     "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
     "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
-    "Excalidraw/服务端 2023-12-31 14.51.17.excalidraw.md",
-    "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md",
-    "分布式/消息队列/kafka/06-服务端.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
@@ -336,7 +337,6 @@
     "Untitled 1.canvas",
     "Untitled.canvas",
     "框架",
-    "分布式/kafka",
     "Pasted image 20231205220432.png"
   ]
 }
