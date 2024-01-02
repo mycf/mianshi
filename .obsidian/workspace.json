@@ -6,6 +6,7 @@
       {
         "id": "b95be23c1d75c720",
         "type": "tabs",
+        "dimension": 36.891117478510026,
         "children": [
           {
             "id": "057624c854be7dd8",
@@ -26,6 +27,23 @@
               "type": "excalidraw",
               "state": {
                 "file": "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "5dacc008bdd23c4e",
+        "type": "tabs",
+        "dimension": 63.108882521489974,
+        "children": [
+          {
+            "id": "90b0b243de105e9f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md"
               }
             }
           }
@@ -79,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -95,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mysql/事务.md",
+                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mysql/事务.md",
+                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mysql/事务.md"
+                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md"
               }
             }
           },
@@ -261,8 +280,10 @@
       }
     ]
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "90b0b243de105e9f",
   "lastOpenFiles": [
+    "Mysql/事务.md",
+    "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
     "Mysql/快照读和当前读.md",
     "Mysql/如何设计索引.md",
     "Mysql/索引.md",
@@ -287,8 +308,6 @@
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/怎么避免重复消费.md",
     "分布式/消息队列/kafka/一文理解如何实现接口的幂等性.md",
-    "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
-    "分布式/消息队列/kafka/Kafka如何保证消息顺序性.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
