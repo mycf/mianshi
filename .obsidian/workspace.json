@@ -21,16 +21,6 @@
             }
           },
           {
-            "id": "057624c854be7dd8",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
-              }
-            }
-          },
-          {
             "id": "a800c672d4b13d8d",
             "type": "leaf",
             "state": {
@@ -50,14 +40,23 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "b95be23c1d75c720",
         "type": "tabs",
         "dimension": 65.54441260744986,
         "children": [
+          {
+            "id": "057624c854be7dd8",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
+              }
+            }
+          },
           {
             "id": "09d7fc3d4f577ba8",
             "type": "leaf",
@@ -304,6 +303,7 @@
   "active": "057624c854be7dd8",
   "lastOpenFiles": [
     "分布式/消息队列/kafka/07-客户端.md",
+    "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
     "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/03-消费者.md",
@@ -328,7 +328,6 @@
     "框架/Spring/Spring 中，有两个 id 相同的 bean会报错吗？.md",
     "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
     "分布式/Redis/Redis big key.md",
-    "Excalidraw/07-客户端 2023-12-31 16.57.18.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
