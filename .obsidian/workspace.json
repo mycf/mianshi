@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
+                "file": "Mysql/事务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
+                "file": "Mysql/事务.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md"
+                "file": "Mysql/事务.md"
               }
             }
           },
@@ -280,10 +280,10 @@
       }
     ]
   },
-  "active": "90b0b243de105e9f",
+  "active": "057624c854be7dd8",
   "lastOpenFiles": [
-    "Mysql/事务.md",
     "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
+    "Mysql/事务.md",
     "Mysql/快照读和当前读.md",
     "Mysql/如何设计索引.md",
     "Mysql/索引.md",
