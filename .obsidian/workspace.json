@@ -6,7 +6,6 @@
       {
         "id": "cac965c7f74d9d25",
         "type": "tabs",
-        "dimension": 37.53581661891118,
         "children": [
           {
             "id": "de00890897e0a09a",
@@ -19,16 +18,9 @@
                 "source": false
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "b5451fec37666a09",
-        "type": "tabs",
-        "dimension": 62.46418338108882,
-        "children": [
+          },
           {
-            "id": "a967570c5bbdb635",
+            "id": "678cfd6ecd7d524d",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -37,7 +29,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -270,10 +263,11 @@
       }
     ]
   },
-  "active": "a967570c5bbdb635",
+  "active": "678cfd6ecd7d524d",
   "lastOpenFiles": [
     "Java基础/Thread.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
+    "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "计算机网络/能说下HTTP和RPC的区别吗.md",
     "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",
     "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
@@ -298,7 +292,6 @@
     "框架/mybatis.md",
     "框架/mybatis/缓存.md",
     "分布式/消息队列/中间件的选型.md",
-    "分布式/消息队列/消息队列有哪些作用.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
