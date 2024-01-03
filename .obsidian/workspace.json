@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Java基础/JVM/volatile.md",
                 "mode": "source",
                 "source": false
               }
@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "4b2dfc12a17c0c2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java基础/JVM/synchronized.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "678cfd6ecd7d524d",
             "type": "leaf",
             "state": {
@@ -41,7 +53,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -160,7 +173,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -272,15 +285,16 @@
       }
     ]
   },
-  "active": "de00890897e0a09a",
+  "active": "4b2dfc12a17c0c2c",
   "lastOpenFiles": [
-    "Java基础/java 线程之间是如何通信的.md",
-    "Java基础/JVM/synchronized.md",
+    "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
+    "Java基础/synchronized.md",
     "Java基础/Thread.md",
     "Java基础/JVM/volatile.md",
+    "Java基础/JVM/synchronized.md",
+    "Java基础/java 线程之间是如何通信的.md",
     "Java基础/JVM/Java内存模型.md",
     "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
-    "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "计算机网络/能说下HTTP和RPC的区别吗.md",
     "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",
@@ -300,7 +314,6 @@
     "Mysql/索引.md",
     "框架/Spring/@Autowired和@Resource的区别.md",
     "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
-    "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
