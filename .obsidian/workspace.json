@@ -60,6 +60,22 @@
             }
           }
         ]
+      },
+      {
+        "id": "c4f81755df4cc4bc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a0f5f65e15d6a1c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -293,10 +309,10 @@
   },
   "active": "057624c854be7dd8",
   "lastOpenFiles": [
+    "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
     "分布式/nacos/Nacos.md",
     "分布式/nacos/Nacos配置管理.md",
     "分布式/nacos/nacos注册中心的设计原理.md",
-    "分布式/nacos/Nacos.md",
     "框架/Spring/springCloud/面试.md",
     "分布式/nocas",
     "Mysql/事务.md",
@@ -319,7 +335,6 @@
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
-    "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",

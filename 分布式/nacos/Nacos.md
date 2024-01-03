@@ -25,12 +25,17 @@ Nacos 中的某个配置集的 ID。配置集 ID 是划分配置的维度之一�
 ${prefix}-${spring.profiles.active}-${file-extension}
 ```
 
-
+## 下载
 [下载地址](https://github.com/alibaba/nacos/releases)
-```java
+```bash
 unzip nacos-server-1.0.0.zip
 cd nacos/bin
 ```
+## 启动服务
+```sh
+sh startup.sh -m standalone
+```
+![[Nacos 2024-01-03 10.28.12.excalidraw]]
 # Nacos 一致性协议
 
 ## 从服务注册来看
