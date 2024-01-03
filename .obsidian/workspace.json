@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/volatile.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/volatile.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/volatile.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/volatile.md"
+                "file": "Java基础/java 线程之间是如何通信的.md"
               }
             }
           },
@@ -282,8 +282,8 @@
   },
   "active": "de00890897e0a09a",
   "lastOpenFiles": [
-    "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
     "Java基础/JVM/volatile.md",
+    "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/Thread.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
