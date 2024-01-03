@@ -35,7 +35,7 @@ cd nacos/bin
 ```sh
 sh startup.sh -m standalone
 ```
-![[Nacos 2024-01-03 10.28.12.excalidraw]]
+![[Nacos 2024-01-03 10.28.12.excalidraw|100%]]
 # Nacos 一致性协议
 
 ## 从服务注册来看
