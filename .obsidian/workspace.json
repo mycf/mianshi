@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "Java基础/JVM/volatile.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "Java基础/JVM/volatile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "Java基础/JVM/volatile.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/Thread.md"
+                "file": "Java基础/JVM/volatile.md"
               }
             }
           },
@@ -263,8 +263,10 @@
   },
   "active": "de00890897e0a09a",
   "lastOpenFiles": [
-    "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
+    "Java基础/java 线程之间是如何通信的.md",
+    "Java基础/JVM/volatile.md",
     "Java基础/Thread.md",
+    "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "计算机网络/能说下HTTP和RPC的区别吗.md",
     "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",
@@ -288,8 +290,6 @@
     "框架/Spring/SpringBoot/springboot的启动流程.md",
     "框架/mybatis/Mybatis中的井号和$有什么区别.md",
     "框架/mybatis.md",
-    "框架/mybatis/缓存.md",
-    "分布式/消息队列/中间件的选型.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
