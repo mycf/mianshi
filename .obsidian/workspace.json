@@ -29,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
+                "file": "Java基础/Thread.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
+                "file": "Java基础/Thread.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md"
+                "file": "Java基础/Thread.md"
               }
             }
           },
@@ -263,10 +262,10 @@
       }
     ]
   },
-  "active": "678cfd6ecd7d524d",
+  "active": "de00890897e0a09a",
   "lastOpenFiles": [
-    "Java基础/Thread.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
+    "Java基础/Thread.md",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "计算机网络/能说下HTTP和RPC的区别吗.md",
     "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",

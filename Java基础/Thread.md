@@ -7,8 +7,7 @@
 | WAITING       | 等待状态的线程正在**等待**另一线程执行特定的操作（如notify） |
 | TIMED_WAITING | 具有**指定等待时间**的等待状态                               |
 | TERMINATED    | 线程完成执行，**终止状态**                                   |
-![[Thread 2024-01-03 19.38.36.excalidraw]]
-![image.png](https://gitee.com/ycfan/images/raw/master/img/20231215121728.png)
+![[Thread 2024-01-03 19.38.36.excalidraw|100%]]
 
 ```java
         Object lock = new Object();
