@@ -4,76 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "b95be23c1d75c720",
+        "id": "cac965c7f74d9d25",
         "type": "tabs",
-        "dimension": 37.96561604584527,
         "children": [
           {
-            "id": "057624c854be7dd8",
+            "id": "de00890897e0a09a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/nacos/Nacos.md",
+                "file": "计算机网络/能说下HTTP和RPC的区别吗.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "aaf889db6e8c4955",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "0daaca1b455fade5",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/事务 2024-01-02 16.22.09.excalidraw 1.md"
-              }
-            }
-          },
-          {
-            "id": "ba9c627860be9274",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/事务 2024-01-02 17.01.00.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "09d7fc3d4f577ba8",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "c4f81755df4cc4bc",
-        "type": "tabs",
-        "dimension": 62.03438395415473,
-        "children": [
-          {
-            "id": "1a0f5f65e15d6a1c",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md"
               }
             }
           }
@@ -143,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
+                "file": "计算机网络/能说下HTTP和RPC的区别吗.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
+                "file": "计算机网络/能说下HTTP和RPC的区别吗.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md"
+                "file": "计算机网络/能说下HTTP和RPC的区别吗.md"
               }
             }
           },
@@ -309,8 +251,13 @@
       }
     ]
   },
-  "active": "1a0f5f65e15d6a1c",
+  "active": "de00890897e0a09a",
   "lastOpenFiles": [
+    "计算机网络/能说下HTTP和RPC的区别吗.md",
+    "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
+    "Excalidraw/事务 2024-01-02 17.01.00.excalidraw.md",
+    "Excalidraw/事务 2024-01-02 16.22.09.excalidraw 1.md",
+    "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
     "分布式/nacos/Nacos.md",
     "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
     "分布式/nacos/Nacos配置管理.md",
@@ -318,10 +265,6 @@
     "框架/Spring/springCloud/面试.md",
     "分布式/nocas",
     "Mysql/事务.md",
-    "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
-    "Excalidraw/事务 2024-01-02 16.22.09.excalidraw 1.md",
-    "Excalidraw/事务 2024-01-02 17.01.00.excalidraw.md",
-    "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "Mysql/快照读和当前读.md",
     "Mysql/如何设计索引.md",
     "Mysql/索引.md",
