@@ -6,7 +6,7 @@
       {
         "id": "cac965c7f74d9d25",
         "type": "tabs",
-        "dimension": 31.51862464183381,
+        "dimension": 37.53581661891118,
         "children": [
           {
             "id": "de00890897e0a09a",
@@ -23,17 +23,17 @@
         ]
       },
       {
-        "id": "eb464013cdace2e5",
+        "id": "b5451fec37666a09",
         "type": "tabs",
-        "dimension": 68.48137535816619,
+        "dimension": 62.46418338108882,
         "children": [
           {
-            "id": "ac88e301b5b4ffe8",
+            "id": "a967570c5bbdb635",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md"
+                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/Thread.md"
+                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md"
               }
             }
           },
@@ -270,8 +270,10 @@
       }
     ]
   },
-  "active": "de00890897e0a09a",
+  "active": "a967570c5bbdb635",
   "lastOpenFiles": [
+    "Java基础/Thread.md",
+    "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
     "计算机网络/能说下HTTP和RPC的区别吗.md",
     "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",
     "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
@@ -297,8 +299,6 @@
     "框架/mybatis/缓存.md",
     "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/消息队列有哪些作用.md",
-    "分布式/消息队列/kafka/03-消费者.md",
-    "分布式/消息队列/kafka/07-客户端.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
