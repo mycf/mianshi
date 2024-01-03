@@ -6,7 +6,6 @@
       {
         "id": "cac965c7f74d9d25",
         "type": "tabs",
-        "dimension": 33.5243553008596,
         "children": [
           {
             "id": "de00890897e0a09a",
@@ -14,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/JVM/Java内存模型.md",
                 "mode": "source",
                 "source": false
               }
@@ -27,23 +26,6 @@
               "type": "excalidraw",
               "state": {
                 "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "29e9aee4035cd87f",
-        "type": "tabs",
-        "dimension": 66.4756446991404,
-        "children": [
-          {
-            "id": "d6c8b42579778fd6",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md"
               }
             }
           }
@@ -97,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -114,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/JVM/Java内存模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/JVM/Java内存模型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md"
+                "file": "Java基础/JVM/Java内存模型.md"
               }
             }
           },
@@ -283,9 +264,10 @@
   "active": "de00890897e0a09a",
   "lastOpenFiles": [
     "Java基础/JVM/volatile.md",
-    "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
-    "Java基础/java 线程之间是如何通信的.md",
+    "Java基础/JVM/Java内存模型.md",
     "Java基础/Thread.md",
+    "Java基础/java 线程之间是如何通信的.md",
+    "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "计算机网络/能说下HTTP和RPC的区别吗.md",
@@ -308,7 +290,6 @@
     "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
     "框架/Spring/SpringBoot/SpringBoot为什么默认使用CGLIB.md",
     "框架/Spring/SpringBoot/springboot的启动流程.md",
-    "框架/mybatis/Mybatis中的井号和$有什么区别.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
