@@ -11,6 +11,14 @@ Dynamic Naming and Configuration Service
 **稳定**：99.9%高可用
 **实时**：
 **规模**：
+# Nacos 配置模型
+
+## 命名空间(Namespace)
+用于进行租户粒度的配置隔离。不同的命名空间下，可以存在相同的 Group 或 Data lD 的配置。Namespace 的常用场景之一是不同环境的配置的区分隔离，例如开发测试环境和生产环境的资源(如数据库配置、限流阈值、降级开关)隔离等。如果在没有指定 Namespace 的情况下，默认使用 public 命名空间。
+
+## 配置组(Group)
+Nacos 中的一组配置集，是配置的维度之一。通过一个有意义的字符串(如 ABTest 中的实验组对照组)对配置集进行分组，从而区分 Data lD 相同的配置集。当您在 Nacos 上创建一个配置时,如果未填写配置分组的名称，则配置分组的名称默认采用 ==DEFAULT_GROUP== 。配置分组的常见场景:不同的应用或组件使用了相同的配置项，如 database_url 配置和 MQ_Topic 配置。
+
 
 # Nacos 一致性协议
 
