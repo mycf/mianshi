@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/nacos/Nacos配置管理.md",
+                "file": "分布式/nacos/Nacos.md",
                 "mode": "source",
                 "source": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/nacos/Nacos配置管理.md",
+                "file": "分布式/nacos/Nacos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/nacos/Nacos配置管理.md",
+                "file": "分布式/nacos/Nacos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/nacos/Nacos配置管理.md"
+                "file": "分布式/nacos/Nacos.md"
               }
             }
           },
@@ -293,9 +293,10 @@
   },
   "active": "057624c854be7dd8",
   "lastOpenFiles": [
-    "分布式/nacos/nacos注册中心的设计原理.md",
+    "分布式/nacos/Nacos.md",
     "分布式/nacos/Nacos配置管理.md",
-    "分布式/nacos/Dynamic Naming and Configuration Service.md",
+    "分布式/nacos/nacos注册中心的设计原理.md",
+    "分布式/nacos/Nacos.md",
     "框架/Spring/springCloud/面试.md",
     "分布式/nocas",
     "Mysql/事务.md",
@@ -319,7 +320,6 @@
     "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
     "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
-    "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
