@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/nacos/Nacos.md",
+                "file": "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/nacos/Nacos.md",
+                "file": "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/nacos/Nacos.md"
+                "file": "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md"
               }
             }
           },
@@ -310,10 +310,10 @@
       }
     ]
   },
-  "active": "057624c854be7dd8",
+  "active": "1a0f5f65e15d6a1c",
   "lastOpenFiles": [
-    "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
     "分布式/nacos/Nacos.md",
+    "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
     "分布式/nacos/Nacos配置管理.md",
     "分布式/nacos/nacos注册中心的设计原理.md",
     "框架/Spring/springCloud/面试.md",
