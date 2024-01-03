@@ -6,6 +6,7 @@
       {
         "id": "cac965c7f74d9d25",
         "type": "tabs",
+        "dimension": 31.51862464183381,
         "children": [
           {
             "id": "de00890897e0a09a",
@@ -16,6 +17,23 @@
                 "file": "计算机网络/能说下HTTP和RPC的区别吗.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "eb464013cdace2e5",
+        "type": "tabs",
+        "dimension": 68.48137535816619,
+        "children": [
+          {
+            "id": "ac88e301b5b4ffe8",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md"
               }
             }
           }
@@ -69,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -85,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机网络/能说下HTTP和RPC的区别吗.md",
+                "file": "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机网络/能说下HTTP和RPC的区别吗.md",
+                "file": "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机网络/能说下HTTP和RPC的区别吗.md"
+                "file": "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md"
               }
             }
           },
@@ -251,9 +270,10 @@
       }
     ]
   },
-  "active": "de00890897e0a09a",
+  "active": "ac88e301b5b4ffe8",
   "lastOpenFiles": [
     "计算机网络/能说下HTTP和RPC的区别吗.md",
+    "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",
     "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "Excalidraw/事务 2024-01-02 17.01.00.excalidraw.md",
     "Excalidraw/事务 2024-01-02 16.22.09.excalidraw 1.md",
@@ -279,7 +299,6 @@
     "分布式/消息队列/消息队列有哪些作用.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/07-客户端.md",
-    "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
