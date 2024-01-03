@@ -63,7 +63,7 @@ main true
 状态线程 开始清除标志位
 状态线程 false
 ```
-
+# interrupt
 
 > [!NOTE] 状态线程收到中断异常后为什么中断状态是`false`?
 > 中断线程时，如果线程被下面方法阻塞，中断状态会被清除并且收到`InterruptedException`.

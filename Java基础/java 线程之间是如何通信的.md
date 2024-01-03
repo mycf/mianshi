@@ -1,12 +1,8 @@
 java线程之间的通信方式总共有 8 种，分别是 `volatile、synchronized、interrupt、wait、notify、notifyAll、join、管道输入/输出`， 我们一个一个的来说明！
 
 **1.volatile**
+![[volatile]]
 
-![](https://ask.qcloudimg.com/http-save/4069641/h62bxf2ppc.jpeg)
-
-线程会将内存中的数据，拷贝到各自的本地内存中( 这里的本地内存指的是 cpu cache ( 比如 CPU 的一级缓存、二级缓存等 )，寄存器)。当某个变量被 volatile 修饰并且发生改变时，volatile 变量底层会通过 lock前缀的指令，将该变量写会主存，同时利用 缓存一致性协议，促使其他线程的本地变量的数据无效，从而再次直接从主存读取数据。
-
-代码演示： [java 如何优雅的停止一个线程](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2Fb614a1f32853&source=article&objectId=1579294)
 
 **2.synchronized**
 
@@ -17,7 +13,7 @@ monitor可以理解为一个同步工具，成功则获得了对象的锁，失�
 代码演示： [java 如何优雅的停止一个线程](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2Fb614a1f32853&source=article&objectId=1579294)
 
 **3. interrupt** 代码演示： [java 如何优雅的停止一个线程](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2Fb614a1f32853&source=article&objectId=1579294)
-
+![[Thread#interrupt]]
 **4. wait、notify、notifyAll** 代码演示：
 
 ```javascript
