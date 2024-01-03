@@ -36,6 +36,10 @@ cd nacos/bin
 sh startup.sh -m standalone
 ```
 ![[Nacos 2024-01-03 10.28.12.excalidraw|100%]]
+## 打开控制台
+```
+http://192.168.1.5:8848/nacos/index.html
+```
 # Nacos 一致性协议
 
 ## 从服务注册来看
