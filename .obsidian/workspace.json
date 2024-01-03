@@ -54,7 +54,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/synchronized.md"
+                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md"
               }
             }
           },
@@ -285,13 +285,13 @@
       }
     ]
   },
-  "active": "4b2dfc12a17c0c2c",
+  "active": "678cfd6ecd7d524d",
   "lastOpenFiles": [
+    "Java基础/JVM/synchronized.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
     "Java基础/synchronized.md",
     "Java基础/Thread.md",
     "Java基础/JVM/volatile.md",
-    "Java基础/JVM/synchronized.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/JVM/Java内存模型.md",
     "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
