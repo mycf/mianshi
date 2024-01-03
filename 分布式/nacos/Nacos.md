@@ -26,7 +26,11 @@ ${prefix}-${spring.profiles.active}-${file-extension}
 ```
 
 
-
+[下载地址](https://github.com/alibaba/nacos/releases)
+```java
+unzip nacos-server-1.0.0.zip
+cd nacos/bin
+```
 # Nacos 一致性协议
 
 ## 从服务注册来看
