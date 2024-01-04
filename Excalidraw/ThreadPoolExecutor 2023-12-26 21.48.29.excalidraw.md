@@ -2220,10 +2220,6 @@ not操作，操作符“~” ^61pEFIUS
 3、shutdown状态+工作队列为空
  ^r7sfONdW
 
-第二个条件：非shutdown状态
-          或 任务不为空
-           或 队列为空 ^jryd9p9A
-
 %%
 # Drawing
 ```json
@@ -4667,43 +4663,6 @@ not操作，操作符“~” ^61pEFIUS
 			"lineHeight": 1.2
 		},
 		{
-			"id": "jryd9p9A",
-			"type": "text",
-			"x": 528.7879937942233,
-			"y": 18989.078415006057,
-			"width": 219,
-			"height": 57.599999999999994,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 2063271256,
-			"version": 336,
-			"versionNonce": 280626472,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704367737803,
-			"link": null,
-			"locked": false,
-			"text": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
-			"rawText": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
-			"fontSize": 16,
-			"fontFamily": 3,
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"baseline": 53,
-			"containerId": null,
-			"originalText": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
-			"lineHeight": 1.2
-		},
-		{
 			"id": "qaWqv7Hl",
 			"type": "text",
 			"x": 843.8796273218377,
@@ -5367,6 +5326,43 @@ not操作，操作符“~” ^61pEFIUS
 			"baseline": 15,
 			"containerId": null,
 			"originalText": "2",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "jryd9p9A",
+			"type": "text",
+			"x": 528.7879937942233,
+			"y": 18989.078415006057,
+			"width": 219,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2063271256,
+			"version": 337,
+			"versionNonce": 1867644456,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704367873449,
+			"link": null,
+			"locked": false,
+			"text": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
+			"rawText": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 53,
+			"containerId": null,
+			"originalText": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
 			"lineHeight": 1.2
 		},
 		{
