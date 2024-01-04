@@ -2190,6 +2190,10 @@ COUNT_BITS=29 ^r8Jy8cRC
 
 536870912 ^3wqx3EmY
 
+1073741824 ^qYpWM769
+
+1610612736 ^l1Md3CGB
+
 %%
 # Drawing
 ```json
@@ -4143,6 +4147,80 @@ COUNT_BITS=29 ^r8Jy8cRC
 			"baseline": 15,
 			"containerId": null,
 			"originalText": "536870912",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "qYpWM769",
+			"type": "text",
+			"x": 347.7559426383458,
+			"y": 9334.825333174307,
+			"width": 93.75,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1742792792,
+			"version": 97,
+			"versionNonce": 593398056,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704363365748,
+			"link": null,
+			"locked": false,
+			"text": "1073741824",
+			"rawText": "1073741824",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "1073741824",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "l1Md3CGB",
+			"type": "text",
+			"x": 348.956883971714,
+			"y": 9352.00620672158,
+			"width": 93.75,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1801215784,
+			"version": 80,
+			"versionNonce": 1258562136,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704363381230,
+			"link": null,
+			"locked": false,
+			"text": "1610612736",
+			"rawText": "1610612736",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "1610612736",
 			"lineHeight": 1.2
 		},
 		{
