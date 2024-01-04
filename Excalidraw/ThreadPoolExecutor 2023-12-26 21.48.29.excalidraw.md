@@ -2214,6 +2214,10 @@ not操作，操作符“~” ^61pEFIUS
 
 定义：称为按位非运算符。它是一个单运算符，对运算数的所有二进制位进行取反操作。 ^1J0eQdto
 
+相当于不是running时候 ^r7sfONdW
+
+不是running或shutdown状态 ^jryd9p9A
+
 %%
 # Drawing
 ```json
@@ -4620,6 +4624,80 @@ not操作，操作符“~” ^61pEFIUS
 			"lineHeight": 1.2
 		},
 		{
+			"id": "r7sfONdW",
+			"type": "text",
+			"x": 212.80299766114672,
+			"y": 19012.339770068458,
+			"width": 177.625,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 437132376,
+			"version": 285,
+			"versionNonce": 115508824,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704366573482,
+			"link": null,
+			"locked": false,
+			"text": "相当于不是running时候",
+			"rawText": "相当于不是running时候",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "相当于不是running时候",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "jryd9p9A",
+			"type": "text",
+			"x": 208.51357848706493,
+			"y": 19031.803311123356,
+			"width": 220.625,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2063271256,
+			"version": 133,
+			"versionNonce": 252751192,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704366615287,
+			"link": null,
+			"locked": false,
+			"text": "不是running或shutdown状态",
+			"rawText": "不是running或shutdown状态",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "不是running或shutdown状态",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "qaWqv7Hl",
 			"type": "text",
 			"x": 843.8796273218377,
@@ -5301,8 +5379,8 @@ not操作，操作符“~” ^61pEFIUS
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 348.1579656162201,
-		"scrollY": -19700.26529044321,
+		"scrollX": 401.23052394269445,
+		"scrollY": -18362.278162107366,
 		"zoom": {
 			"value": 0.7160009089112283
 		},
