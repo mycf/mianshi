@@ -2230,6 +2230,10 @@ cas失败，重新循环 ^pjoVVsxd
 
 自增成功 ^Fz3L8Ibe
 
+线程是否启动成功 ^6kL2KVh9
+
+线程是否添加成功 ^DwDG2Hfe
+
 %%
 # Drawing
 ```json
@@ -3833,8 +3837,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 47,
-			"versionNonce": 165647704,
+			"version": 55,
+			"versionNonce": 2142401320,
 			"isDeleted": false,
 			"id": "NPcqCzcP",
 			"fillStyle": "solid",
@@ -3843,8 +3847,8 @@ cas失败，重新循环 ^pjoVVsxd
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -203.81221563577384,
-			"y": 1819.004663926763,
+			"x": -75.12239462883178,
+			"y": 1793.1938156578499,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#ffffff",
 			"width": 918.75,
@@ -3853,8 +3857,17 @@ cas失败，重新循环 ^pjoVVsxd
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"boundElements": [],
-			"updated": 1704371085857,
+			"boundElements": [
+				{
+					"id": "IWYaJoGEueMuVZTCvELl_",
+					"type": "arrow"
+				},
+				{
+					"id": "MlDeUPCfTKHYz4NJzARmt",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704376093556,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -4767,11 +4780,11 @@ cas失败，重新循环 ^pjoVVsxd
 				"type": 2
 			},
 			"seed": 1486411048,
-			"version": 468,
-			"versionNonce": 210736984,
+			"version": 469,
+			"versionNonce": 23077416,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704371085858,
+			"updated": 1704376093556,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -4793,7 +4806,11 @@ cas失败，重新循环 ^pjoVVsxd
 				-263.6592650763014
 			],
 			"startBinding": null,
-			"endBinding": null,
+			"endBinding": {
+				"elementId": "NPcqCzcP",
+				"focus": 0.18745119559004497,
+				"gap": 12.382368785044775
+			},
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
 		},
@@ -4940,8 +4957,8 @@ cas失败，重新循环 ^pjoVVsxd
 				"type": 2
 			},
 			"seed": 732709672,
-			"version": 115,
-			"versionNonce": 1465851432,
+			"version": 116,
+			"versionNonce": 646690856,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -4949,7 +4966,7 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "Fz3L8Ibe"
 				}
 			],
-			"updated": 1704375586898,
+			"updated": 1704376093556,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -4968,7 +4985,11 @@ cas失败，重新循环 ^pjoVVsxd
 			],
 			"lastCommittedPoint": null,
 			"startBinding": null,
-			"endBinding": null,
+			"endBinding": {
+				"elementId": "NPcqCzcP",
+				"focus": 0.11184071709662982,
+				"gap": 13.397801548050325
+			},
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
 		},
@@ -5007,6 +5028,80 @@ cas失败，重新循环 ^pjoVVsxd
 			"baseline": 15,
 			"containerId": "MlDeUPCfTKHYz4NJzARmt",
 			"originalText": "自增成功",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "6kL2KVh9",
+			"type": "text",
+			"x": 293.3626525651083,
+			"y": 19351.991288483736,
+			"width": 128,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 511387176,
+			"version": 136,
+			"versionNonce": 639105320,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704376112382,
+			"link": null,
+			"locked": false,
+			"text": "线程是否启动成功",
+			"rawText": "线程是否启动成功",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "线程是否启动成功",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "DwDG2Hfe",
+			"type": "text",
+			"x": 275.04036518978734,
+			"y": 19370.752329421113,
+			"width": 128,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 371988312,
+			"version": 165,
+			"versionNonce": 1649200168,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704376133132,
+			"link": null,
+			"locked": false,
+			"text": "线程是否添加成功",
+			"rawText": "线程是否添加成功",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "线程是否添加成功",
 			"lineHeight": 1.2
 		},
 		{
@@ -6161,6 +6256,43 @@ cas失败，重新循环 ^pjoVVsxd
 			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": null
+		},
+		{
+			"id": "HhBjUzlD",
+			"type": "text",
+			"x": -306.956900599616,
+			"y": 19393.30862703029,
+			"width": 9.375,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 669450840,
+			"version": 2,
+			"versionNonce": 720030248,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704376093083,
+			"link": null,
+			"locked": false,
+			"text": "",
+			"rawText": "",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "",
+			"lineHeight": 1.2
 		}
 	],
 	"appState": {
@@ -6178,8 +6310,8 @@ cas失败，重新循环 ^pjoVVsxd
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 496.2024704216494,
-		"scrollY": -18772.892166001686,
+		"scrollX": 390.05735376870126,
+		"scrollY": -19024.28849491652,
 		"zoom": {
 			"value": 0.7160009089112283
 		},
