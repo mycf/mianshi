@@ -2222,6 +2222,8 @@ not操作，操作符“~” ^61pEFIUS
 
 防止数值超出COUNT_MASK ^hmTieWFN
 
+尝试自增 ^oGKrBGMO
+
 %%
 # Drawing
 ```json
@@ -4699,6 +4701,43 @@ not操作，操作符“~” ^61pEFIUS
 			"baseline": 15,
 			"containerId": null,
 			"originalText": "防止数值超出COUNT_MASK",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "oGKrBGMO",
+			"type": "text",
+			"x": 309.4177765954939,
+			"y": 19204.831408720158,
+			"width": 64,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1841865256,
+			"version": 82,
+			"versionNonce": 18531160,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704370415721,
+			"link": null,
+			"locked": false,
+			"text": "尝试自增",
+			"rawText": "尝试自增",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "尝试自增",
 			"lineHeight": 1.2
 		},
 		{
