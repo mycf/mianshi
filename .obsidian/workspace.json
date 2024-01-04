@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,7 +66,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/synchronized.md"
+                "file": "Java基础/java 线程之间是如何通信的.md"
               }
             }
           },
@@ -297,14 +297,14 @@
       }
     ]
   },
-  "active": "3992f76f8175b8d4",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/Thread.md",
+    "Java基础/JVM/synchronized.md",
     "Java基础/synchronized.md",
     "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
     "Java基础/JVM/volatile.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
-    "Java基础/JVM/synchronized.md",
-    "Java基础/Thread.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/JVM/Java内存模型.md",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
