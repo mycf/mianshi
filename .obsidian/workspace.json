@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,7 +84,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -150,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md"
+                "file": "Java基础/JVM/垃圾收集器.md"
               }
             }
           },
@@ -316,11 +316,11 @@
       }
     ]
   },
-  "active": "73948001f53c3b8c",
+  "active": "3992f76f8175b8d4",
   "lastOpenFiles": [
+    "Java基础/JVM/synchronized.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Java基础/ThreadPoolExecutor.md",
-    "Java基础/JVM/synchronized.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/Thread.md",
