@@ -2186,6 +2186,10 @@ COUNT_BITS=29 ^r8Jy8cRC
 
 0 ^1OPjqjHo
 
+-536870912 ^XCFyHt02
+
+536870912 ^3wqx3EmY
+
 %%
 # Drawing
 ```json
@@ -4068,6 +4072,80 @@ COUNT_BITS=29 ^r8Jy8cRC
 			"lineHeight": 1.2
 		},
 		{
+			"id": "XCFyHt02",
+			"type": "text",
+			"x": 340.5275789732939,
+			"y": 9275.03035060758,
+			"width": 93.75,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 376300120,
+			"version": 62,
+			"versionNonce": 1120570712,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704363332613,
+			"link": null,
+			"locked": false,
+			"text": "-536870912",
+			"rawText": "-536870912",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "-536870912",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "3wqx3EmY",
+			"type": "text",
+			"x": 353.4325872824131,
+			"y": 9316.957549877821,
+			"width": 84.375,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 266906152,
+			"version": 75,
+			"versionNonce": 392339032,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704363352014,
+			"link": null,
+			"locked": false,
+			"text": "536870912",
+			"rawText": "536870912",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "536870912",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "-m6_dd8euEoq6B3KtFRo-",
 			"type": "rectangle",
 			"x": 362.8709460243496,
@@ -4186,8 +4264,8 @@ COUNT_BITS=29 ^r8Jy8cRC
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 468.1465027253333,
-		"scrollY": -8850.140953323904,
+		"scrollX": 292.77427721952347,
+		"scrollY": -8697.890644392568,
 		"zoom": {
 			"value": 0.5105146500468254
 		},

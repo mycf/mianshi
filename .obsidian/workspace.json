@@ -94,7 +94,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
+                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
+                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md"
+                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md"
               }
             }
           },
@@ -326,8 +326,9 @@
       }
     ]
   },
-  "active": "777458f37e94fc4d",
+  "active": "73948001f53c3b8c",
   "lastOpenFiles": [
+    "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Java基础/JVM/JVM内存结构.md",
     "Java基础/JVM/synchronized.md",
     "Java基础/JVM/垃圾收集器.md",
@@ -354,7 +355,6 @@
     "框架/Spring/springCloud/面试.md",
     "分布式/nocas",
     "Mysql/事务.md",
-    "Mysql/快照读和当前读.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
