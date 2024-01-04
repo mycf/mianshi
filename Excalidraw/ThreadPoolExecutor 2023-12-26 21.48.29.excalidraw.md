@@ -201,234 +201,7 @@ tags: [excalidraw]
         new RuntimePermission("modifyThread");
 
     
-    private final class Worker
-        extends AbstractQueuedSynchronizer
-        implements Runnable
-    {
-        /**
-         * This class will never be serialized, but we provide a
-         * serialVersionUID to suppress a javac warning.
-         */
-        private static final long serialVersionUID = 6138294804551838833L;
-
-        /** Thread this worker is running in.  Null if factory fails. */
-        @SuppressWarnings("serial") // Unlikely to be serializable
-        final Thread thread;
-        /** Initial task to run.  Possibly null. */
-        @SuppressWarnings("serial") // Not statically typed as Serializable
-        Runnable firstTask;
-        /** Per-thread task counter */
-        volatile long completedTasks;
-
-        // TODO: switch to AbstractQueuedLongSynchronizer and move
-        // completedTasks into the lock word.
-
-        /**
-         * Creates with given first task and thread from ThreadFactory.
-         * @param firstTask the first task (null if none)
-         */
-        Worker(Runnable firstTask) {
-            setState(-1); // inhibit interrupts until runWorker
-            this.firstTask = firstTask;
-            this.thread = getThreadFactory().newThread(this);
-        }
-
-        /** Delegates main run loop to outer runWorker. */
-        public void run() {
-            runWorker(this);
-        }
-
-        // Lock methods
-        //
-        // The value 0 represents the unlocked state.
-        // The value 1 represents the locked state.
-
-        protected boolean isHeldExclusively() {
-            return getState() != 0;
-        }
-
-        protected boolean tryAcquire(int unused) {
-            if (compareAndSetState(0, 1)) {
-                setExclusiveOwnerThread(Thread.currentThread());
-                return true;
-            }
-            return false;
-        }
-
-        protected boolean tryRelease(int unused) {
-            setExclusiveOwnerThread(null);
-            setState(0);
-            return true;
-        }
-
-        public void lock()        { acquire(1); }
-        public boolean tryLock()  { return tryAcquire(1); }
-        public void unlock()      { release(1); }
-        public boolean isLocked() { return isHeldExclusively(); }
-
-        void interruptIfStarted() {
-            Thread t;
-            if (getState() >= 0 && (t = thread) != null && !t.isInterrupted()) {
-                try {
-                    t.interrupt();
-                } catch (SecurityException ignore) {
-                }
-            }
-        }
-    }
-
-    /*
-     * Methods for setting control state
-     */
-
-    /**
-     * Transitions runState to given target, or leaves it alone if
-     * already at least the given target.
-     *
-     * @param targetState the desired state, either SHUTDOWN or STOP
-     *        (but not TIDYING or TERMINATED -- use tryTerminate for that)
-     */
-    private void advanceRunState(int targetState) {
-        // assert targetState == SHUTDOWN || targetState == STOP;
-        for (;;) {
-            int c = ctl.get();
-            if (runStateAtLeast(c, targetState) ||
-                ctl.compareAndSet(c, ctlOf(targetState, workerCountOf(c))))
-                break;
-        }
-    }
-
-    /**
-     * Transitions to TERMINATED state if either (SHUTDOWN and pool
-     * and queue empty) or (STOP and pool empty).  If otherwise
-     * eligible to terminate but workerCount is nonzero, interrupts an
-     * idle worker to ensure that shutdown signals propagate. This
-     * method must be called following any action that might make
-     * termination possible -- reducing worker count or removing tasks
-     * from the queue during shutdown. The method is non-private to
-     * allow access from ScheduledThreadPoolExecutor.
-     */
-    final void tryTerminate() {
-        for (;;) {
-            int c = ctl.get();
-            if (isRunning(c) ||
-                runStateAtLeast(c, TIDYING) ||
-                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))
-                return;
-            if (workerCountOf(c) != 0) { // Eligible to terminate
-                interruptIdleWorkers(ONLY_ONE);
-                return;
-            }
-
-            final ReentrantLock mainLock = this.mainLock;
-            mainLock.lock();
-            try {
-                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {
-                    try {
-                        terminated();
-                    } finally {
-                        ctl.set(ctlOf(TERMINATED, 0));
-                        termination.signalAll();
-                    }
-                    return;
-                }
-            } finally {
-                mainLock.unlock();
-            }
-            // else retry on failed CAS
-        }
-    }
-
-    /*
-     * Methods for controlling interrupts to worker threads.
-     */
-
-    /**
-     * If there is a security manager, makes sure caller has
-     * permission to shut down threads in general (see shutdownPerm).
-     * If this passes, additionally makes sure the caller is allowed
-     * to interrupt each worker thread. This might not be true even if
-     * first check passed, if the SecurityManager treats some threads
-     * specially.
-     */
-    private void checkShutdownAccess() {
-        // assert mainLock.isHeldByCurrentThread();
-        @SuppressWarnings("removal")
-        SecurityManager security = System.getSecurityManager();
-        if (security != null) {
-            security.checkPermission(shutdownPerm);
-            for (Worker w : workers)
-                security.checkAccess(w.thread);
-        }
-    }
-
-    /**
-     * Interrupts all threads, even if active. Ignores SecurityExceptions
-     * (in which case some threads may remain uninterrupted).
-     */
-    private void interruptWorkers() {
-        // assert mainLock.isHeldByCurrentThread();
-        for (Worker w : workers)
-            w.interruptIfStarted();
-    }
-
-    /**
-     * Interrupts threads that might be waiting for tasks (as
-     * indicated by not being locked) so they can check for
-     * termination or configuration changes. Ignores
-     * SecurityExceptions (in which case some threads may remain
-     * uninterrupted).
-     *
-     * @param onlyOne If true, interrupt at most one worker. This is
-     * called only from tryTerminate when termination is otherwise
-     * enabled but there are still other workers.  In this case, at
-     * most one waiting worker is interrupted to propagate shutdown
-     * signals in case all threads are currently waiting.
-     * Interrupting any arbitrary thread ensures that newly arriving
-     * workers since shutdown began will also eventually exit.
-     * To guarantee eventual termination, it suffices to always
-     * interrupt only one idle worker, but shutdown() interrupts all
-     * idle workers so that redundant workers exit promptly, not
-     * waiting for a straggler task to finish.
-     */
-    private void interruptIdleWorkers(boolean onlyOne) {
-        final ReentrantLock mainLock = this.mainLock;
-        mainLock.lock();
-        try {
-            for (Worker w : workers) {
-                Thread t = w.thread;
-                if (!t.isInterrupted() && w.tryLock()) {
-                    try {
-                        t.interrupt();
-                    } catch (SecurityException ignore) {
-                    } finally {
-                        w.unlock();
-                    }
-                }
-                if (onlyOne)
-                    break;
-            }
-        } finally {
-            mainLock.unlock();
-        }
-    }
-
-    /**
-     * Common form of interruptIdleWorkers, to avoid having to
-     * remember what the boolean argument means.
-     */
-    private void interruptIdleWorkers() {
-        interruptIdleWorkers(false);
-    }
-
-    private static final boolean ONLY_ONE = true;
-
-    /*
-     * Misc utilities, most of which are also exported to
-     * ScheduledThreadPoolExecutor
-     */
-
-
+    
     private boolean addWorker(Runnable firstTask, boolean core) {
         retry:
         for (int c = ctl.get();;) {
@@ -492,121 +265,7 @@ tags: [excalidraw]
         return workerStarted;
     }
 
-    /**
-     * Rolls back the worker thread creation.
-     * - removes worker from workers, if present
-     * - decrements worker count
-     * - rechecks for termination, in case the existence of this
-     *   worker was holding up termination
-     */
-    private void addWorkerFailed(Worker w) {
-        final ReentrantLock mainLock = this.mainLock;
-        mainLock.lock();
-        try {
-            if (w != null)
-                workers.remove(w);
-            decrementWorkerCount();
-            tryTerminate();
-        } finally {
-            mainLock.unlock();
-        }
-    }
-
-    /**
-     * Performs cleanup and bookkeeping for a dying worker. Called
-     * only from worker threads. Unless completedAbruptly is set,
-     * assumes that workerCount has already been adjusted to account
-     * for exit.  This method removes thread from worker set, and
-     * possibly terminates the pool or replaces the worker if either
-     * it exited due to user task exception or if fewer than
-     * corePoolSize workers are running or queue is non-empty but
-     * there are no workers.
-     *
-     * @param w the worker
-     * @param completedAbruptly if the worker died due to user exception
-     */
-    private void processWorkerExit(Worker w, boolean completedAbruptly) {
-        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted
-            decrementWorkerCount();
-
-        final ReentrantLock mainLock = this.mainLock;
-        mainLock.lock();
-        try {
-            completedTaskCount += w.completedTasks;
-            workers.remove(w);
-        } finally {
-            mainLock.unlock();
-        }
-
-        tryTerminate();
-
-        int c = ctl.get();
-        if (runStateLessThan(c, STOP)) {
-            if (!completedAbruptly) {
-                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;
-                if (min == 0 && ! workQueue.isEmpty())
-                    min = 1;
-                if (workerCountOf(c) >= min)
-                    return; // replacement not needed
-            }
-            addWorker(null, false);
-        }
-    }
-
-    /**
-     * Performs blocking or timed wait for a task, depending on
-     * current configuration settings, or returns null if this worker
-     * must exit because of any of:
-     * 1. There are more than maximumPoolSize workers (due to
-     *    a call to setMaximumPoolSize).
-     * 2. The pool is stopped.
-     * 3. The pool is shutdown and the queue is empty.
-     * 4. This worker timed out waiting for a task, and timed-out
-     *    workers are subject to termination (that is,
-     *    {@code allowCoreThreadTimeOut || workerCount > corePoolSize})
-     *    both before and after the timed wait, and if the queue is
-     *    non-empty, this worker is not the last thread in the pool.
-     *
-     * @return task, or null if the worker must exit, in which case
-     *         workerCount is decremented
-     */
-    private Runnable getTask() {
-        boolean timedOut = false; // Did the last poll() time out?
-
-        for (;;) {
-            int c = ctl.get();
-
-            // Check if queue empty only if necessary.
-            if (runStateAtLeast(c, SHUTDOWN)
-                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {
-                decrementWorkerCount();
-                return null;
-            }
-
-            int wc = workerCountOf(c);
-
-            // Are workers subject to culling?
-            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;
-
-            if ((wc > maximumPoolSize || (timed && timedOut))
-                && (wc > 1 || workQueue.isEmpty())) {
-                if (compareAndDecrementWorkerCount(c))
-                    return null;
-                continue;
-            }
-
-            try {
-                Runnable r = timed ?
-                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :
-                    workQueue.take();
-                if (r != null)
-                    return r;
-                timedOut = true;
-            } catch (InterruptedException retry) {
-                timedOut = false;
-            }
-        }
-    }
+   
 
   
  ^NPcqCzcP
@@ -656,32 +315,32 @@ not操作，操作符“~” ^61pEFIUS
 
 定义：称为按位非运算符。它是一个单运算符，对运算数的所有二进制位进行取反操作。 ^1J0eQdto
 
+
+ ^43qID4cW
+
 满足return false条件的情况有：
 1、stop、tidying、terminated状态
 2、shutdown状态+firstTask不为null
 3、shutdown状态+工作队列为空
- ^r7sfONdW
+ ^3Yhb8X9L
 
-防止数值超出COUNT_MASK ^hmTieWFN
+防止数值超出COUNT_MASK ^QDnp1mor
 
-尝试自增 ^oGKrBGMO
+尝试自增 ^BnthpH9M
 
-cas失败，重新循环 ^pjoVVsxd
+cas失败，重新循环 ^M4Poncut
 
-状态变化 ^F1cRS3Dr
+状态变化 ^rMWwuyIW
 
-线程是否启动成功 ^6kL2KVh9
+线程是否启动成功 ^NyTyJsmO
 
-线程是否添加成功 ^DwDG2Hfe
+线程是否添加成功 ^rxsDpxRS
 
-添加到工作线程集合 ^UUd5Gg3c
+添加到工作线程集合 ^MSNhqP1k
 
-线程启动 ^2YmFq6G7
+线程启动 ^P0mIVURa
 
-线程启动失败 ^wSDkieLA
-
-
- ^43qID4cW
+线程启动失败 ^mGrdNTJH
 
 %%
 # Drawing
@@ -693,8 +352,8 @@ cas失败，重新循环 ^pjoVVsxd
 	"elements": [
 		{
 			"type": "rectangle",
-			"version": 181,
-			"versionNonce": 627110319,
+			"version": 184,
+			"versionNonce": 424452577,
 			"isDeleted": false,
 			"id": "T_IfEJgzej3u9o0aMojVk",
 			"fillStyle": "solid",
@@ -725,14 +384,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377762781,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 169,
-			"versionNonce": 312706241,
+			"version": 172,
+			"versionNonce": 1756342447,
 			"isDeleted": false,
 			"id": "4n420RxD",
 			"fillStyle": "solid",
@@ -752,7 +411,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762781,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -768,8 +427,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "rectangle",
-			"version": 249,
-			"versionNonce": 2127881167,
+			"version": 252,
+			"versionNonce": 2046803393,
 			"isDeleted": false,
 			"id": "cSCQqxhqorGcisT6jgZ8W",
 			"fillStyle": "solid",
@@ -804,14 +463,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377762781,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 225,
-			"versionNonce": 808928417,
+			"version": 228,
+			"versionNonce": 1966389967,
 			"isDeleted": false,
 			"id": "HPDOSMbb",
 			"fillStyle": "solid",
@@ -831,7 +490,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762781,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -847,8 +506,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 1254,
-			"versionNonce": 88445423,
+			"version": 1261,
+			"versionNonce": 321783407,
 			"isDeleted": false,
 			"id": "gM9uDHGxHDbmNZx2fb7Y9",
 			"fillStyle": "solid",
@@ -857,12 +516,12 @@ cas失败，重新循环 ^pjoVVsxd
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -197.77753036090837,
+			"x": -197.77753036096522,
 			"y": -324.94020042385114,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 0.6783166556958804,
-			"height": 38.146688042651874,
+			"width": 0.6783166556783158,
+			"height": 38.146688042697804,
 			"seed": 701722388,
 			"groupIds": [],
 			"frameId": null,
@@ -870,7 +529,7 @@ cas失败，重新循环 ^pjoVVsxd
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377782405,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -892,15 +551,15 @@ cas失败，重新循环 ^pjoVVsxd
 					0
 				],
 				[
-					-0.6783166556958804,
-					38.146688042651874
+					-0.6783166556783158,
+					38.146688042697804
 				]
 			]
 		},
 		{
 			"type": "arrow",
-			"version": 3240,
-			"versionNonce": 151521409,
+			"version": 3245,
+			"versionNonce": 1558476463,
 			"isDeleted": false,
 			"id": "C_Rb9IbOW7akGqW5d9orl",
 			"fillStyle": "solid",
@@ -909,12 +568,12 @@ cas失败，重新循环 ^pjoVVsxd
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -199.89746922724697,
-			"y": -129.02178078987285,
+			"x": -199.8974693566231,
+			"y": -129.0217809412099,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
-			"width": 3.5189542207715476,
-			"height": 89.81137212432162,
+			"width": 3.518954144399885,
+			"height": 89.81137221475664,
 			"seed": 329105068,
 			"groupIds": [],
 			"frameId": null,
@@ -927,7 +586,7 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "nSVnUTBr"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377782405,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -949,15 +608,15 @@ cas失败，重新循环 ^pjoVVsxd
 					0
 				],
 				[
-					-3.5189542207715476,
-					89.81137212432162
+					-3.518954144399885,
+					89.81137221475664
 				]
 			]
 		},
 		{
 			"type": "text",
-			"version": 70,
-			"versionNonce": 1908112399,
+			"version": 73,
+			"versionNonce": 1869218177,
 			"isDeleted": false,
 			"id": "nSVnUTBr",
 			"fillStyle": "solid",
@@ -977,7 +636,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762781,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -993,8 +652,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 3145,
-			"versionNonce": 919949409,
+			"version": 3148,
+			"versionNonce": 357667599,
 			"isDeleted": false,
 			"id": "yZBF-raaQCqh61VvxiCnC",
 			"fillStyle": "solid",
@@ -1021,7 +680,7 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "aH6hUxEf"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377762781,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1050,8 +709,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 68,
-			"versionNonce": 1211048495,
+			"version": 71,
+			"versionNonce": 1351625057,
 			"isDeleted": false,
 			"id": "aH6hUxEf",
 			"fillStyle": "solid",
@@ -1071,7 +730,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1087,8 +746,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 996,
-			"versionNonce": 1869519937,
+			"version": 1000,
+			"versionNonce": 1139721935,
 			"isDeleted": false,
 			"id": "nNmQBNr2-Tz2uYIY4uJhD",
 			"fillStyle": "solid",
@@ -1115,7 +774,7 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "ZKfTL8XU"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377782397,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1140,8 +799,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 65,
-			"versionNonce": 2039022671,
+			"version": 68,
+			"versionNonce": 510022977,
 			"isDeleted": false,
 			"id": "ZKfTL8XU",
 			"fillStyle": "solid",
@@ -1161,7 +820,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1177,8 +836,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "ellipse",
-			"version": 470,
-			"versionNonce": 45313057,
+			"version": 473,
+			"versionNonce": 566582095,
 			"isDeleted": false,
 			"id": "z7hRMv-_l1mhRi6DggYVQ",
 			"fillStyle": "solid",
@@ -1209,14 +868,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 655,
-			"versionNonce": 1168220783,
+			"version": 658,
+			"versionNonce": 1280050465,
 			"isDeleted": false,
 			"id": "gvJG81DLcbyQvfgp3qFDY",
 			"fillStyle": "solid",
@@ -1251,14 +910,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 867,
-			"versionNonce": 412303361,
+			"version": 870,
+			"versionNonce": 1916475759,
 			"isDeleted": false,
 			"id": "NsXRwofq",
 			"fillStyle": "solid",
@@ -1278,7 +937,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1294,8 +953,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "rectangle",
-			"version": 920,
-			"versionNonce": 1564572815,
+			"version": 923,
+			"versionNonce": 900774145,
 			"isDeleted": false,
 			"id": "KFlCeFOaKunOIV71uAJVZ",
 			"fillStyle": "solid",
@@ -1330,14 +989,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1344,
-			"versionNonce": 789420001,
+			"version": 1347,
+			"versionNonce": 1167332239,
 			"isDeleted": false,
 			"id": "kOE4EpYm",
 			"fillStyle": "solid",
@@ -1357,7 +1016,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1373,8 +1032,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "rectangle",
-			"version": 533,
-			"versionNonce": 1143018159,
+			"version": 536,
+			"versionNonce": 471068897,
 			"isDeleted": false,
 			"id": "Yxh_94PFSuKFPbsKze27r",
 			"fillStyle": "solid",
@@ -1409,14 +1068,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 746,
-			"versionNonce": 1479668673,
+			"version": 749,
+			"versionNonce": 1409862063,
 			"isDeleted": false,
 			"id": "vryEFD3S",
 			"fillStyle": "solid",
@@ -1436,7 +1095,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1452,8 +1111,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 1487,
-			"versionNonce": 1927865551,
+			"version": 1494,
+			"versionNonce": 2070664943,
 			"isDeleted": false,
 			"id": "e8QVRqdayhgBvPYKkvCK6",
 			"fillStyle": "solid",
@@ -1478,7 +1137,7 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "XQfTqQvv"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377782406,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1507,8 +1166,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 66,
-			"versionNonce": 941609889,
+			"version": 69,
+			"versionNonce": 985775055,
 			"isDeleted": false,
 			"id": "XQfTqQvv",
 			"fillStyle": "solid",
@@ -1528,7 +1187,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1544,8 +1203,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 3177,
-			"versionNonce": 959541999,
+			"version": 3182,
+			"versionNonce": 1724405167,
 			"isDeleted": false,
 			"id": "KZLdTHeJqOywDihRKDcZ2",
 			"fillStyle": "solid",
@@ -1554,12 +1213,12 @@ cas失败，重新循环 ^pjoVVsxd
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -146.44517995121046,
-			"y": 22.445448807023837,
+			"x": -146.4451799512169,
+			"y": 22.445448806979172,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#ffffff",
-			"width": 94.56913089873945,
-			"height": 0.668054044231738,
+			"width": 94.56913089874587,
+			"height": 0.6680540442035579,
 			"seed": 1277249812,
 			"groupIds": [],
 			"frameId": null,
@@ -1570,7 +1229,7 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "G5aan4TS"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377782403,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1592,15 +1251,15 @@ cas失败，重新循环 ^pjoVVsxd
 					0
 				],
 				[
-					94.56913089873945,
-					-0.668054044231738
+					94.56913089874587,
+					-0.6680540442035579
 				]
 			]
 		},
 		{
 			"type": "text",
-			"version": 67,
-			"versionNonce": 1124513665,
+			"version": 70,
+			"versionNonce": 1574398447,
 			"isDeleted": false,
 			"id": "G5aan4TS",
 			"fillStyle": "solid",
@@ -1620,7 +1279,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660602,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1636,8 +1295,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 662,
-			"versionNonce": 1602436367,
+			"version": 667,
+			"versionNonce": 36528143,
 			"isDeleted": false,
 			"id": "k1cC5DU5JGpSPfd19KAcA",
 			"fillStyle": "solid",
@@ -1662,7 +1321,7 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "YqCmve2i"
 				}
 			],
-			"updated": 1704377660602,
+			"updated": 1704377782404,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1691,8 +1350,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 69,
-			"versionNonce": 992354145,
+			"version": 72,
+			"versionNonce": 173167631,
 			"isDeleted": false,
 			"id": "YqCmve2i",
 			"fillStyle": "solid",
@@ -1712,7 +1371,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1728,8 +1387,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 1013,
-			"versionNonce": 156681007,
+			"version": 1017,
+			"versionNonce": 254649711,
 			"isDeleted": false,
 			"id": "ZPEXTIlR7mhLNM11sy4Xy",
 			"fillStyle": "solid",
@@ -1739,7 +1398,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"opacity": 100,
 			"angle": 0,
 			"x": 220.78812149458588,
-			"y": -174.09729326437838,
+			"y": -174.09729326437835,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#ffffff",
 			"width": 415.5535556177231,
@@ -1749,7 +1408,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377782401,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1782,8 +1441,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 441,
-			"versionNonce": 1858964289,
+			"version": 445,
+			"versionNonce": 952403503,
 			"isDeleted": false,
 			"id": "gHnC0qdj-7I5CbrTI6wYi",
 			"fillStyle": "solid",
@@ -1803,7 +1462,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377782404,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1828,8 +1487,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "diamond",
-			"version": 2389,
-			"versionNonce": 1460962639,
+			"version": 2392,
+			"versionNonce": 1337738305,
 			"isDeleted": false,
 			"id": "HUxSIj4LqHtmZjeeB5ARv",
 			"fillStyle": "solid",
@@ -1867,14 +1526,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 309,
-			"versionNonce": 912030497,
+			"version": 312,
+			"versionNonce": 1279908943,
 			"isDeleted": false,
 			"id": "LFRrU0lX",
 			"fillStyle": "solid",
@@ -1896,7 +1555,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 17.44989636159525,
@@ -1912,8 +1571,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "diamond",
-			"version": 2127,
-			"versionNonce": 1209336687,
+			"version": 2130,
+			"versionNonce": 1527518241,
 			"isDeleted": false,
 			"id": "WEVCdVaLjtz4Fcffub1u0",
 			"fillStyle": "solid",
@@ -1951,14 +1610,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 787,
-			"versionNonce": 843214593,
+			"version": 790,
+			"versionNonce": 981957231,
 			"isDeleted": false,
 			"id": "wJT1xs79",
 			"fillStyle": "solid",
@@ -1980,7 +1639,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 17.973135195917568,
@@ -1996,8 +1655,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "diamond",
-			"version": 2169,
-			"versionNonce": 1554038159,
+			"version": 2172,
+			"versionNonce": 798418945,
 			"isDeleted": false,
 			"id": "nt7nr4Gu1S748ZfR_-6Xk",
 			"fillStyle": "solid",
@@ -2039,14 +1698,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 767,
-			"versionNonce": 1224664801,
+			"version": 770,
+			"versionNonce": 1739347087,
 			"isDeleted": false,
 			"id": "doY0TAMK",
 			"fillStyle": "solid",
@@ -2069,7 +1728,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 19.30540392595248,
@@ -2085,8 +1744,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 130,
-			"versionNonce": 2012230575,
+			"version": 135,
+			"versionNonce": 771268367,
 			"isDeleted": false,
 			"id": "XwG1KmlJC-7BuU5kMnnk-",
 			"fillStyle": "solid",
@@ -2106,7 +1765,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377782399,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2135,8 +1794,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "rectangle",
-			"version": 253,
-			"versionNonce": 1696686785,
+			"version": 256,
+			"versionNonce": 1802562223,
 			"isDeleted": false,
 			"id": "hzEQ0ow4Zc4vtwJxATPeM",
 			"fillStyle": "solid",
@@ -2163,14 +1822,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "r8Jy8cRC"
 				}
 			],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 306,
-			"versionNonce": 36431311,
+			"version": 309,
+			"versionNonce": 1886100417,
 			"isDeleted": false,
 			"id": "r8Jy8cRC",
 			"fillStyle": "solid",
@@ -2190,7 +1849,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2206,8 +1865,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 556,
-			"versionNonce": 1934189217,
+			"version": 560,
+			"versionNonce": 1706018767,
 			"isDeleted": false,
 			"id": "_v-BtdCvnsMkNaksOGJ7l",
 			"fillStyle": "solid",
@@ -2227,7 +1886,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377782403,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2252,8 +1911,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "rectangle",
-			"version": 96,
-			"versionNonce": 1248613359,
+			"version": 99,
+			"versionNonce": 1793358753,
 			"isDeleted": false,
 			"id": "cO2ShusooszR-hj-UXi7k",
 			"fillStyle": "solid",
@@ -2280,14 +1939,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "YHCkOjSZ"
 				}
 			],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 901,
-			"versionNonce": 539387521,
+			"version": 915,
+			"versionNonce": 7031535,
 			"isDeleted": false,
 			"id": "NPcqCzcP",
 			"fillStyle": "solid",
@@ -2300,31 +1959,31 @@ cas失败，重新循环 ^pjoVVsxd
 			"y": 9131.65791908211,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#ffffff",
-			"width": 750,
-			"height": 10982.4,
+			"width": 731.25,
+			"height": 4435.2,
 			"seed": 1591035480,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
 			"fontFamily": 3,
-			"text": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    private final class Worker\n        extends AbstractQueuedSynchronizer\n        implements Runnable\n    {\n        /**\n         * This class will never be serialized, but we provide a\n         * serialVersionUID to suppress a javac warning.\n         */\n        private static final long serialVersionUID = 6138294804551838833L;\n\n        /** Thread this worker is running in.  Null if factory fails. */\n        @SuppressWarnings(\"serial\") // Unlikely to be serializable\n        final Thread thread;\n        /** Initial task to run.  Possibly null. */\n        @SuppressWarnings(\"serial\") // Not statically typed as Serializable\n        Runnable firstTask;\n        /** Per-thread task counter */\n        volatile long completedTasks;\n\n        // TODO: switch to AbstractQueuedLongSynchronizer and move\n        // completedTasks into the lock word.\n\n        /**\n         * Creates with given first task and thread from ThreadFactory.\n         * @param firstTask the first task (null if none)\n         */\n        Worker(Runnable firstTask) {\n            setState(-1); // inhibit interrupts until runWorker\n            this.firstTask = firstTask;\n            this.thread = getThreadFactory().newThread(this);\n        }\n\n        /** Delegates main run loop to outer runWorker. */\n        public void run() {\n            runWorker(this);\n        }\n\n        // Lock methods\n        //\n        // The value 0 represents the unlocked state.\n        // The value 1 represents the locked state.\n\n        protected boolean isHeldExclusively() {\n            return getState() != 0;\n        }\n\n        protected boolean tryAcquire(int unused) {\n            if (compareAndSetState(0, 1)) {\n                setExclusiveOwnerThread(Thread.currentThread());\n                return true;\n            }\n            return false;\n        }\n\n        protected boolean tryRelease(int unused) {\n            setExclusiveOwnerThread(null);\n            setState(0);\n            return true;\n        }\n\n        public void lock()        { acquire(1); }\n        public boolean tryLock()  { return tryAcquire(1); }\n        public void unlock()      { release(1); }\n        public boolean isLocked() { return isHeldExclusively(); }\n\n        void interruptIfStarted() {\n            Thread t;\n            if (getState() >= 0 && (t = thread) != null && !t.isInterrupted()) {\n                try {\n                    t.interrupt();\n                } catch (SecurityException ignore) {\n                }\n            }\n        }\n    }\n\n    /*\n     * Methods for setting control state\n     */\n\n    /**\n     * Transitions runState to given target, or leaves it alone if\n     * already at least the given target.\n     *\n     * @param targetState the desired state, either SHUTDOWN or STOP\n     *        (but not TIDYING or TERMINATED -- use tryTerminate for that)\n     */\n    private void advanceRunState(int targetState) {\n        // assert targetState == SHUTDOWN || targetState == STOP;\n        for (;;) {\n            int c = ctl.get();\n            if (runStateAtLeast(c, targetState) ||\n                ctl.compareAndSet(c, ctlOf(targetState, workerCountOf(c))))\n                break;\n        }\n    }\n\n    /**\n     * Transitions to TERMINATED state if either (SHUTDOWN and pool\n     * and queue empty) or (STOP and pool empty).  If otherwise\n     * eligible to terminate but workerCount is nonzero, interrupts an\n     * idle worker to ensure that shutdown signals propagate. This\n     * method must be called following any action that might make\n     * termination possible -- reducing worker count or removing tasks\n     * from the queue during shutdown. The method is non-private to\n     * allow access from ScheduledThreadPoolExecutor.\n     */\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n    /*\n     * Methods for controlling interrupts to worker threads.\n     */\n\n    /**\n     * If there is a security manager, makes sure caller has\n     * permission to shut down threads in general (see shutdownPerm).\n     * If this passes, additionally makes sure the caller is allowed\n     * to interrupt each worker thread. This might not be true even if\n     * first check passed, if the SecurityManager treats some threads\n     * specially.\n     */\n    private void checkShutdownAccess() {\n        // assert mainLock.isHeldByCurrentThread();\n        @SuppressWarnings(\"removal\")\n        SecurityManager security = System.getSecurityManager();\n        if (security != null) {\n            security.checkPermission(shutdownPerm);\n            for (Worker w : workers)\n                security.checkAccess(w.thread);\n        }\n    }\n\n    /**\n     * Interrupts all threads, even if active. Ignores SecurityExceptions\n     * (in which case some threads may remain uninterrupted).\n     */\n    private void interruptWorkers() {\n        // assert mainLock.isHeldByCurrentThread();\n        for (Worker w : workers)\n            w.interruptIfStarted();\n    }\n\n    /**\n     * Interrupts threads that might be waiting for tasks (as\n     * indicated by not being locked) so they can check for\n     * termination or configuration changes. Ignores\n     * SecurityExceptions (in which case some threads may remain\n     * uninterrupted).\n     *\n     * @param onlyOne If true, interrupt at most one worker. This is\n     * called only from tryTerminate when termination is otherwise\n     * enabled but there are still other workers.  In this case, at\n     * most one waiting worker is interrupted to propagate shutdown\n     * signals in case all threads are currently waiting.\n     * Interrupting any arbitrary thread ensures that newly arriving\n     * workers since shutdown began will also eventually exit.\n     * To guarantee eventual termination, it suffices to always\n     * interrupt only one idle worker, but shutdown() interrupts all\n     * idle workers so that redundant workers exit promptly, not\n     * waiting for a straggler task to finish.\n     */\n    private void interruptIdleWorkers(boolean onlyOne) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            for (Worker w : workers) {\n                Thread t = w.thread;\n                if (!t.isInterrupted() && w.tryLock()) {\n                    try {\n                        t.interrupt();\n                    } catch (SecurityException ignore) {\n                    } finally {\n                        w.unlock();\n                    }\n                }\n                if (onlyOne)\n                    break;\n            }\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Common form of interruptIdleWorkers, to avoid having to\n     * remember what the boolean argument means.\n     */\n    private void interruptIdleWorkers() {\n        interruptIdleWorkers(false);\n    }\n\n    private static final boolean ONLY_ONE = true;\n\n    /*\n     * Misc utilities, most of which are also exported to\n     * ScheduledThreadPoolExecutor\n     */\n\n\n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n    /**\n     * Rolls back the worker thread creation.\n     * - removes worker from workers, if present\n     * - decrements worker count\n     * - rechecks for termination, in case the existence of this\n     *   worker was holding up termination\n     */\n    private void addWorkerFailed(Worker w) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            if (w != null)\n                workers.remove(w);\n            decrementWorkerCount();\n            tryTerminate();\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Performs cleanup and bookkeeping for a dying worker. Called\n     * only from worker threads. Unless completedAbruptly is set,\n     * assumes that workerCount has already been adjusted to account\n     * for exit.  This method removes thread from worker set, and\n     * possibly terminates the pool or replaces the worker if either\n     * it exited due to user task exception or if fewer than\n     * corePoolSize workers are running or queue is non-empty but\n     * there are no workers.\n     *\n     * @param w the worker\n     * @param completedAbruptly if the worker died due to user exception\n     */\n    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    /**\n     * Performs blocking or timed wait for a task, depending on\n     * current configuration settings, or returns null if this worker\n     * must exit because of any of:\n     * 1. There are more than maximumPoolSize workers (due to\n     *    a call to setMaximumPoolSize).\n     * 2. The pool is stopped.\n     * 3. The pool is shutdown and the queue is empty.\n     * 4. This worker timed out waiting for a task, and timed-out\n     *    workers are subject to termination (that is,\n     *    {@code allowCoreThreadTimeOut || workerCount > corePoolSize})\n     *    both before and after the timed wait, and if the queue is\n     *    non-empty, this worker is not the last thread in the pool.\n     *\n     * @return task, or null if the worker must exit, in which case\n     *         workerCount is decremented\n     */\n    private Runnable getTask() {\n        boolean timedOut = false; // Did the last poll() time out?\n\n        for (;;) {\n            int c = ctl.get();\n\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {\n                decrementWorkerCount();\n                return null;\n            }\n\n            int wc = workerCountOf(c);\n\n            // Are workers subject to culling?\n            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;\n\n            if ((wc > maximumPoolSize || (timed && timedOut))\n                && (wc > 1 || workQueue.isEmpty())) {\n                if (compareAndDecrementWorkerCount(c))\n                    return null;\n                continue;\n            }\n\n            try {\n                Runnable r = timed ?\n                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :\n                    workQueue.take();\n                if (r != null)\n                    return r;\n                timedOut = true;\n            } catch (InterruptedException retry) {\n                timedOut = false;\n            }\n        }\n    }\n\n  \n",
-			"rawText": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    private final class Worker\n        extends AbstractQueuedSynchronizer\n        implements Runnable\n    {\n        /**\n         * This class will never be serialized, but we provide a\n         * serialVersionUID to suppress a javac warning.\n         */\n        private static final long serialVersionUID = 6138294804551838833L;\n\n        /** Thread this worker is running in.  Null if factory fails. */\n        @SuppressWarnings(\"serial\") // Unlikely to be serializable\n        final Thread thread;\n        /** Initial task to run.  Possibly null. */\n        @SuppressWarnings(\"serial\") // Not statically typed as Serializable\n        Runnable firstTask;\n        /** Per-thread task counter */\n        volatile long completedTasks;\n\n        // TODO: switch to AbstractQueuedLongSynchronizer and move\n        // completedTasks into the lock word.\n\n        /**\n         * Creates with given first task and thread from ThreadFactory.\n         * @param firstTask the first task (null if none)\n         */\n        Worker(Runnable firstTask) {\n            setState(-1); // inhibit interrupts until runWorker\n            this.firstTask = firstTask;\n            this.thread = getThreadFactory().newThread(this);\n        }\n\n        /** Delegates main run loop to outer runWorker. */\n        public void run() {\n            runWorker(this);\n        }\n\n        // Lock methods\n        //\n        // The value 0 represents the unlocked state.\n        // The value 1 represents the locked state.\n\n        protected boolean isHeldExclusively() {\n            return getState() != 0;\n        }\n\n        protected boolean tryAcquire(int unused) {\n            if (compareAndSetState(0, 1)) {\n                setExclusiveOwnerThread(Thread.currentThread());\n                return true;\n            }\n            return false;\n        }\n\n        protected boolean tryRelease(int unused) {\n            setExclusiveOwnerThread(null);\n            setState(0);\n            return true;\n        }\n\n        public void lock()        { acquire(1); }\n        public boolean tryLock()  { return tryAcquire(1); }\n        public void unlock()      { release(1); }\n        public boolean isLocked() { return isHeldExclusively(); }\n\n        void interruptIfStarted() {\n            Thread t;\n            if (getState() >= 0 && (t = thread) != null && !t.isInterrupted()) {\n                try {\n                    t.interrupt();\n                } catch (SecurityException ignore) {\n                }\n            }\n        }\n    }\n\n    /*\n     * Methods for setting control state\n     */\n\n    /**\n     * Transitions runState to given target, or leaves it alone if\n     * already at least the given target.\n     *\n     * @param targetState the desired state, either SHUTDOWN or STOP\n     *        (but not TIDYING or TERMINATED -- use tryTerminate for that)\n     */\n    private void advanceRunState(int targetState) {\n        // assert targetState == SHUTDOWN || targetState == STOP;\n        for (;;) {\n            int c = ctl.get();\n            if (runStateAtLeast(c, targetState) ||\n                ctl.compareAndSet(c, ctlOf(targetState, workerCountOf(c))))\n                break;\n        }\n    }\n\n    /**\n     * Transitions to TERMINATED state if either (SHUTDOWN and pool\n     * and queue empty) or (STOP and pool empty).  If otherwise\n     * eligible to terminate but workerCount is nonzero, interrupts an\n     * idle worker to ensure that shutdown signals propagate. This\n     * method must be called following any action that might make\n     * termination possible -- reducing worker count or removing tasks\n     * from the queue during shutdown. The method is non-private to\n     * allow access from ScheduledThreadPoolExecutor.\n     */\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n    /*\n     * Methods for controlling interrupts to worker threads.\n     */\n\n    /**\n     * If there is a security manager, makes sure caller has\n     * permission to shut down threads in general (see shutdownPerm).\n     * If this passes, additionally makes sure the caller is allowed\n     * to interrupt each worker thread. This might not be true even if\n     * first check passed, if the SecurityManager treats some threads\n     * specially.\n     */\n    private void checkShutdownAccess() {\n        // assert mainLock.isHeldByCurrentThread();\n        @SuppressWarnings(\"removal\")\n        SecurityManager security = System.getSecurityManager();\n        if (security != null) {\n            security.checkPermission(shutdownPerm);\n            for (Worker w : workers)\n                security.checkAccess(w.thread);\n        }\n    }\n\n    /**\n     * Interrupts all threads, even if active. Ignores SecurityExceptions\n     * (in which case some threads may remain uninterrupted).\n     */\n    private void interruptWorkers() {\n        // assert mainLock.isHeldByCurrentThread();\n        for (Worker w : workers)\n            w.interruptIfStarted();\n    }\n\n    /**\n     * Interrupts threads that might be waiting for tasks (as\n     * indicated by not being locked) so they can check for\n     * termination or configuration changes. Ignores\n     * SecurityExceptions (in which case some threads may remain\n     * uninterrupted).\n     *\n     * @param onlyOne If true, interrupt at most one worker. This is\n     * called only from tryTerminate when termination is otherwise\n     * enabled but there are still other workers.  In this case, at\n     * most one waiting worker is interrupted to propagate shutdown\n     * signals in case all threads are currently waiting.\n     * Interrupting any arbitrary thread ensures that newly arriving\n     * workers since shutdown began will also eventually exit.\n     * To guarantee eventual termination, it suffices to always\n     * interrupt only one idle worker, but shutdown() interrupts all\n     * idle workers so that redundant workers exit promptly, not\n     * waiting for a straggler task to finish.\n     */\n    private void interruptIdleWorkers(boolean onlyOne) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            for (Worker w : workers) {\n                Thread t = w.thread;\n                if (!t.isInterrupted() && w.tryLock()) {\n                    try {\n                        t.interrupt();\n                    } catch (SecurityException ignore) {\n                    } finally {\n                        w.unlock();\n                    }\n                }\n                if (onlyOne)\n                    break;\n            }\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Common form of interruptIdleWorkers, to avoid having to\n     * remember what the boolean argument means.\n     */\n    private void interruptIdleWorkers() {\n        interruptIdleWorkers(false);\n    }\n\n    private static final boolean ONLY_ONE = true;\n\n    /*\n     * Misc utilities, most of which are also exported to\n     * ScheduledThreadPoolExecutor\n     */\n\n\n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n    /**\n     * Rolls back the worker thread creation.\n     * - removes worker from workers, if present\n     * - decrements worker count\n     * - rechecks for termination, in case the existence of this\n     *   worker was holding up termination\n     */\n    private void addWorkerFailed(Worker w) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            if (w != null)\n                workers.remove(w);\n            decrementWorkerCount();\n            tryTerminate();\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Performs cleanup and bookkeeping for a dying worker. Called\n     * only from worker threads. Unless completedAbruptly is set,\n     * assumes that workerCount has already been adjusted to account\n     * for exit.  This method removes thread from worker set, and\n     * possibly terminates the pool or replaces the worker if either\n     * it exited due to user task exception or if fewer than\n     * corePoolSize workers are running or queue is non-empty but\n     * there are no workers.\n     *\n     * @param w the worker\n     * @param completedAbruptly if the worker died due to user exception\n     */\n    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    /**\n     * Performs blocking or timed wait for a task, depending on\n     * current configuration settings, or returns null if this worker\n     * must exit because of any of:\n     * 1. There are more than maximumPoolSize workers (due to\n     *    a call to setMaximumPoolSize).\n     * 2. The pool is stopped.\n     * 3. The pool is shutdown and the queue is empty.\n     * 4. This worker timed out waiting for a task, and timed-out\n     *    workers are subject to termination (that is,\n     *    {@code allowCoreThreadTimeOut || workerCount > corePoolSize})\n     *    both before and after the timed wait, and if the queue is\n     *    non-empty, this worker is not the last thread in the pool.\n     *\n     * @return task, or null if the worker must exit, in which case\n     *         workerCount is decremented\n     */\n    private Runnable getTask() {\n        boolean timedOut = false; // Did the last poll() time out?\n\n        for (;;) {\n            int c = ctl.get();\n\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {\n                decrementWorkerCount();\n                return null;\n            }\n\n            int wc = workerCountOf(c);\n\n            // Are workers subject to culling?\n            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;\n\n            if ((wc > maximumPoolSize || (timed && timedOut))\n                && (wc > 1 || workQueue.isEmpty())) {\n                if (compareAndDecrementWorkerCount(c))\n                    return null;\n                continue;\n            }\n\n            try {\n                Runnable r = timed ?\n                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :\n                    workQueue.take();\n                if (r != null)\n                    return r;\n                timedOut = true;\n            } catch (InterruptedException retry) {\n                timedOut = false;\n            }\n        }\n    }\n\n  \n",
+			"text": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    \n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
+			"rawText": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    \n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    private final class Worker\n        extends AbstractQueuedSynchronizer\n        implements Runnable\n    {\n        /**\n         * This class will never be serialized, but we provide a\n         * serialVersionUID to suppress a javac warning.\n         */\n        private static final long serialVersionUID = 6138294804551838833L;\n\n        /** Thread this worker is running in.  Null if factory fails. */\n        @SuppressWarnings(\"serial\") // Unlikely to be serializable\n        final Thread thread;\n        /** Initial task to run.  Possibly null. */\n        @SuppressWarnings(\"serial\") // Not statically typed as Serializable\n        Runnable firstTask;\n        /** Per-thread task counter */\n        volatile long completedTasks;\n\n        // TODO: switch to AbstractQueuedLongSynchronizer and move\n        // completedTasks into the lock word.\n\n        /**\n         * Creates with given first task and thread from ThreadFactory.\n         * @param firstTask the first task (null if none)\n         */\n        Worker(Runnable firstTask) {\n            setState(-1); // inhibit interrupts until runWorker\n            this.firstTask = firstTask;\n            this.thread = getThreadFactory().newThread(this);\n        }\n\n        /** Delegates main run loop to outer runWorker. */\n        public void run() {\n            runWorker(this);\n        }\n\n        // Lock methods\n        //\n        // The value 0 represents the unlocked state.\n        // The value 1 represents the locked state.\n\n        protected boolean isHeldExclusively() {\n            return getState() != 0;\n        }\n\n        protected boolean tryAcquire(int unused) {\n            if (compareAndSetState(0, 1)) {\n                setExclusiveOwnerThread(Thread.currentThread());\n                return true;\n            }\n            return false;\n        }\n\n        protected boolean tryRelease(int unused) {\n            setExclusiveOwnerThread(null);\n            setState(0);\n            return true;\n        }\n\n        public void lock()        { acquire(1); }\n        public boolean tryLock()  { return tryAcquire(1); }\n        public void unlock()      { release(1); }\n        public boolean isLocked() { return isHeldExclusively(); }\n\n        void interruptIfStarted() {\n            Thread t;\n            if (getState() >= 0 && (t = thread) != null && !t.isInterrupted()) {\n                try {\n                    t.interrupt();\n                } catch (SecurityException ignore) {\n                }\n            }\n        }\n    }\n\n    /*\n     * Methods for setting control state\n     */\n\n    /**\n     * Transitions runState to given target, or leaves it alone if\n     * already at least the given target.\n     *\n     * @param targetState the desired state, either SHUTDOWN or STOP\n     *        (but not TIDYING or TERMINATED -- use tryTerminate for that)\n     */\n    private void advanceRunState(int targetState) {\n        // assert targetState == SHUTDOWN || targetState == STOP;\n        for (;;) {\n            int c = ctl.get();\n            if (runStateAtLeast(c, targetState) ||\n                ctl.compareAndSet(c, ctlOf(targetState, workerCountOf(c))))\n                break;\n        }\n    }\n\n    /**\n     * Transitions to TERMINATED state if either (SHUTDOWN and pool\n     * and queue empty) or (STOP and pool empty).  If otherwise\n     * eligible to terminate but workerCount is nonzero, interrupts an\n     * idle worker to ensure that shutdown signals propagate. This\n     * method must be called following any action that might make\n     * termination possible -- reducing worker count or removing tasks\n     * from the queue during shutdown. The method is non-private to\n     * allow access from ScheduledThreadPoolExecutor.\n     */\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n    /*\n     * Methods for controlling interrupts to worker threads.\n     */\n\n    /**\n     * If there is a security manager, makes sure caller has\n     * permission to shut down threads in general (see shutdownPerm).\n     * If this passes, additionally makes sure the caller is allowed\n     * to interrupt each worker thread. This might not be true even if\n     * first check passed, if the SecurityManager treats some threads\n     * specially.\n     */\n    private void checkShutdownAccess() {\n        // assert mainLock.isHeldByCurrentThread();\n        @SuppressWarnings(\"removal\")\n        SecurityManager security = System.getSecurityManager();\n        if (security != null) {\n            security.checkPermission(shutdownPerm);\n            for (Worker w : workers)\n                security.checkAccess(w.thread);\n        }\n    }\n\n    /**\n     * Interrupts all threads, even if active. Ignores SecurityExceptions\n     * (in which case some threads may remain uninterrupted).\n     */\n    private void interruptWorkers() {\n        // assert mainLock.isHeldByCurrentThread();\n        for (Worker w : workers)\n            w.interruptIfStarted();\n    }\n\n    /**\n     * Interrupts threads that might be waiting for tasks (as\n     * indicated by not being locked) so they can check for\n     * termination or configuration changes. Ignores\n     * SecurityExceptions (in which case some threads may remain\n     * uninterrupted).\n     *\n     * @param onlyOne If true, interrupt at most one worker. This is\n     * called only from tryTerminate when termination is otherwise\n     * enabled but there are still other workers.  In this case, at\n     * most one waiting worker is interrupted to propagate shutdown\n     * signals in case all threads are currently waiting.\n     * Interrupting any arbitrary thread ensures that newly arriving\n     * workers since shutdown began will also eventually exit.\n     * To guarantee eventual termination, it suffices to always\n     * interrupt only one idle worker, but shutdown() interrupts all\n     * idle workers so that redundant workers exit promptly, not\n     * waiting for a straggler task to finish.\n     */\n    private void interruptIdleWorkers(boolean onlyOne) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            for (Worker w : workers) {\n                Thread t = w.thread;\n                if (!t.isInterrupted() && w.tryLock()) {\n                    try {\n                        t.interrupt();\n                    } catch (SecurityException ignore) {\n                    } finally {\n                        w.unlock();\n                    }\n                }\n                if (onlyOne)\n                    break;\n            }\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Common form of interruptIdleWorkers, to avoid having to\n     * remember what the boolean argument means.\n     */\n    private void interruptIdleWorkers() {\n        interruptIdleWorkers(false);\n    }\n\n    private static final boolean ONLY_ONE = true;\n\n    /*\n     * Misc utilities, most of which are also exported to\n     * ScheduledThreadPoolExecutor\n     */\n\n\n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n    /**\n     * Rolls back the worker thread creation.\n     * - removes worker from workers, if present\n     * - decrements worker count\n     * - rechecks for termination, in case the existence of this\n     *   worker was holding up termination\n     */\n    private void addWorkerFailed(Worker w) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            if (w != null)\n                workers.remove(w);\n            decrementWorkerCount();\n            tryTerminate();\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Performs cleanup and bookkeeping for a dying worker. Called\n     * only from worker threads. Unless completedAbruptly is set,\n     * assumes that workerCount has already been adjusted to account\n     * for exit.  This method removes thread from worker set, and\n     * possibly terminates the pool or replaces the worker if either\n     * it exited due to user task exception or if fewer than\n     * corePoolSize workers are running or queue is non-empty but\n     * there are no workers.\n     *\n     * @param w the worker\n     * @param completedAbruptly if the worker died due to user exception\n     */\n    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    /**\n     * Performs blocking or timed wait for a task, depending on\n     * current configuration settings, or returns null if this worker\n     * must exit because of any of:\n     * 1. There are more than maximumPoolSize workers (due to\n     *    a call to setMaximumPoolSize).\n     * 2. The pool is stopped.\n     * 3. The pool is shutdown and the queue is empty.\n     * 4. This worker timed out waiting for a task, and timed-out\n     *    workers are subject to termination (that is,\n     *    {@code allowCoreThreadTimeOut || workerCount > corePoolSize})\n     *    both before and after the timed wait, and if the queue is\n     *    non-empty, this worker is not the last thread in the pool.\n     *\n     * @return task, or null if the worker must exit, in which case\n     *         workerCount is decremented\n     */\n    private Runnable getTask() {\n        boolean timedOut = false; // Did the last poll() time out?\n\n        for (;;) {\n            int c = ctl.get();\n\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {\n                decrementWorkerCount();\n                return null;\n            }\n\n            int wc = workerCountOf(c);\n\n            // Are workers subject to culling?\n            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;\n\n            if ((wc > maximumPoolSize || (timed && timedOut))\n                && (wc > 1 || workQueue.isEmpty())) {\n                if (compareAndDecrementWorkerCount(c))\n                    return null;\n                continue;\n            }\n\n            try {\n                Runnable r = timed ?\n                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :\n                    workQueue.take();\n                if (r != null)\n                    return r;\n                timedOut = true;\n            } catch (InterruptedException retry) {\n                timedOut = false;\n            }\n        }\n    }\n\n  \n",
+			"originalText": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    \n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
 			"lineHeight": 1.2,
-			"baseline": 10976
+			"baseline": 4430
 		},
 		{
 			"type": "rectangle",
-			"version": 471,
-			"versionNonce": 683277839,
+			"version": 474,
+			"versionNonce": 116809601,
 			"isDeleted": false,
 			"id": "O8q29OUubiYYe-bntwt9_",
 			"fillStyle": "solid",
@@ -2353,14 +2012,14 @@ cas失败，重新循环 ^pjoVVsxd
 					"id": "YHCkOjSZ"
 				}
 			],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 334,
-			"versionNonce": 1611490351,
+			"version": 337,
+			"versionNonce": 853591905,
 			"isDeleted": false,
 			"id": "9kmxIQru",
 			"fillStyle": "solid",
@@ -2382,7 +2041,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762782,
 			"link": null,
 			"locked": false,
 			"fontSize": 16.50466058863272,
@@ -2398,8 +2057,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 334,
-			"versionNonce": 2098035265,
+			"version": 337,
+			"versionNonce": 2113575727,
 			"isDeleted": false,
 			"id": "ofOIy6n7",
 			"fillStyle": "solid",
@@ -2421,7 +2080,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16.50466058863272,
@@ -2437,8 +2096,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 413,
-			"versionNonce": 1078920783,
+			"version": 416,
+			"versionNonce": 1760768833,
 			"isDeleted": false,
 			"id": "7h9LiOwn",
 			"fillStyle": "solid",
@@ -2465,7 +2124,7 @@ cas失败，重新循环 ^pjoVVsxd
 					"type": "arrow"
 				}
 			],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16.50466058863272,
@@ -2481,8 +2140,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 563,
-			"versionNonce": 1959168545,
+			"version": 566,
+			"versionNonce": 964517199,
 			"isDeleted": false,
 			"id": "YHCkOjSZ",
 			"fillStyle": "hachure",
@@ -2502,7 +2161,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2535,8 +2194,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 182,
-			"versionNonce": 139945071,
+			"version": 185,
+			"versionNonce": 764224289,
 			"isDeleted": false,
 			"id": "1OPjqjHo",
 			"fillStyle": "solid",
@@ -2556,7 +2215,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2572,8 +2231,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 137,
-			"versionNonce": 1452449281,
+			"version": 140,
+			"versionNonce": 396548975,
 			"isDeleted": false,
 			"id": "XCFyHt02",
 			"fillStyle": "solid",
@@ -2593,7 +2252,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2609,8 +2268,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 159,
-			"versionNonce": 133103247,
+			"version": 162,
+			"versionNonce": 1293817601,
 			"isDeleted": false,
 			"id": "3wqx3EmY",
 			"fillStyle": "solid",
@@ -2630,7 +2289,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2646,8 +2305,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 193,
-			"versionNonce": 1903244769,
+			"version": 196,
+			"versionNonce": 749966735,
 			"isDeleted": false,
 			"id": "qYpWM769",
 			"fillStyle": "solid",
@@ -2667,7 +2326,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2683,8 +2342,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 143,
-			"versionNonce": 30299311,
+			"version": 146,
+			"versionNonce": 1512410849,
 			"isDeleted": false,
 			"id": "l1Md3CGB",
 			"fillStyle": "solid",
@@ -2704,7 +2363,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2720,8 +2379,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 117,
-			"versionNonce": 141676993,
+			"version": 120,
+			"versionNonce": 1877478319,
 			"isDeleted": false,
 			"id": "C1v7WYVX",
 			"fillStyle": "solid",
@@ -2741,7 +2400,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2757,8 +2416,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 159,
-			"versionNonce": 1302193871,
+			"version": 162,
+			"versionNonce": 1798507201,
 			"isDeleted": false,
 			"id": "PI9c484y",
 			"fillStyle": "solid",
@@ -2778,7 +2437,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2794,8 +2453,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 257,
-			"versionNonce": 1353970081,
+			"version": 260,
+			"versionNonce": 1567145423,
 			"isDeleted": false,
 			"id": "hdo43w4V",
 			"fillStyle": "solid",
@@ -2815,7 +2474,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2831,8 +2490,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 320,
-			"versionNonce": 972436719,
+			"version": 323,
+			"versionNonce": 417729185,
 			"isDeleted": false,
 			"id": "orrySlph",
 			"fillStyle": "solid",
@@ -2852,7 +2511,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2868,8 +2527,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 61,
-			"versionNonce": 795284865,
+			"version": 64,
+			"versionNonce": 1481518063,
 			"isDeleted": false,
 			"id": "QNnuUB83",
 			"fillStyle": "solid",
@@ -2889,7 +2548,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2905,8 +2564,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 125,
-			"versionNonce": 778026767,
+			"version": 128,
+			"versionNonce": 1005457025,
 			"isDeleted": false,
 			"id": "daZJgN0g",
 			"fillStyle": "solid",
@@ -2926,7 +2585,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660603,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2942,8 +2601,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 364,
-			"versionNonce": 936033633,
+			"version": 367,
+			"versionNonce": 1285608975,
 			"isDeleted": false,
 			"id": "Jn4zVZDH",
 			"fillStyle": "solid",
@@ -2963,7 +2622,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660604,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2979,8 +2638,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 399,
-			"versionNonce": 223544623,
+			"version": 402,
+			"versionNonce": 1795855969,
 			"isDeleted": false,
 			"id": "sqVkHS59",
 			"fillStyle": "solid",
@@ -3000,7 +2659,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660604,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3016,8 +2675,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 61,
-			"versionNonce": 1764649281,
+			"version": 64,
+			"versionNonce": 291060783,
 			"isDeleted": false,
 			"id": "61pEFIUS",
 			"fillStyle": "solid",
@@ -3037,7 +2696,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660604,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3053,8 +2712,8 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 161,
-			"versionNonce": 1446545231,
+			"version": 164,
+			"versionNonce": 957030977,
 			"isDeleted": false,
 			"id": "1J0eQdto",
 			"fillStyle": "solid",
@@ -3074,7 +2733,7 @@ cas失败，重新循环 ^pjoVVsxd
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377660604,
+			"updated": 1704377762783,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3090,28 +2749,67 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 789,
-			"versionNonce": 564836673,
+			"version": 14,
+			"versionNonce": 1397153071,
 			"isDeleted": false,
-			"id": "r7sfONdW",
+			"id": "43qID4cW",
+			"fillStyle": "hachure",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -8.074598445259028,
+			"y": 42546.91052009073,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"width": 9.375,
+			"height": 38.4,
+			"seed": 3910,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704377762783,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "\n",
+			"rawText": "\n",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "\n",
+			"lineHeight": 1.2,
+			"baseline": 34
+		},
+		{
+			"type": "text",
+			"version": 822,
+			"versionNonce": 886120719,
+			"isDeleted": false,
+			"id": "3Yhb8X9L",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 93.42691562156256,
-			"y": 16737.027005042866,
+			"x": 792.5865332888696,
+			"y": 12312.283011209627,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 295.625,
 			"height": 96,
-			"seed": 437132376,
-			"groupIds": [],
+			"seed": 1380964225,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3127,28 +2825,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 411,
-			"versionNonce": 828631329,
+			"version": 444,
+			"versionNonce": 353925985,
 			"isDeleted": false,
-			"id": "hmTieWFN",
+			"id": "QDnp1mor",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 413.7112192934378,
-			"y": 16889.440291673687,
+			"x": 1112.8708369607448,
+			"y": 12464.696297840448,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 189.75,
 			"height": 19.2,
-			"seed": 990606936,
-			"groupIds": [],
+			"seed": 1145782113,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3164,28 +2864,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 334,
-			"versionNonce": 1982602497,
+			"version": 367,
+			"versionNonce": 1128802095,
 			"isDeleted": false,
-			"id": "oGKrBGMO",
+			"id": "BnthpH9M",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 190.04169455590971,
-			"y": 16929.518643694566,
+			"x": 889.2013122232169,
+			"y": 12504.774649861327,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 64,
 			"height": 19.2,
-			"seed": 1841865256,
-			"groupIds": [],
+			"seed": 1447996225,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3201,28 +2903,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 354,
-			"versionNonce": 2139280609,
+			"version": 387,
+			"versionNonce": 303327041,
 			"isDeleted": false,
-			"id": "pjoVVsxd",
+			"id": "M4Poncut",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 418.9477903672632,
-			"y": 17024.119904363426,
+			"x": 1118.1074080345702,
+			"y": 12599.375910530187,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 140.125,
 			"height": 19.2,
-			"seed": 1914897752,
-			"groupIds": [],
+			"seed": 1354341153,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3238,30 +2942,32 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "arrow",
-			"version": 459,
-			"versionNonce": 1089966273,
+			"version": 492,
+			"versionNonce": 356084047,
 			"isDeleted": false,
-			"id": "MugQrGKGsrQhaLNOEkux-",
+			"id": "CT31Rn4KSTnW4XvIcaPMm",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 379.01056065491514,
-			"y": 17028.030582119944,
+			"x": 1078.170178322222,
+			"y": 12603.286588286705,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 368.23494480852673,
 			"height": 141.92377753466644,
-			"seed": 1537458216,
-			"groupIds": [],
+			"seed": 1140559617,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3286,28 +2992,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 378,
-			"versionNonce": 271175841,
+			"version": 411,
+			"versionNonce": 73914145,
 			"isDeleted": false,
-			"id": "F1cRS3Dr",
+			"id": "rMWwuyIW",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 143.3632426868104,
-			"y": 16987.365918266973,
+			"x": 842.5228603541175,
+			"y": 12562.621924433734,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 64,
 			"height": 19.2,
-			"seed": 97344552,
-			"groupIds": [],
+			"seed": 110364385,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3323,28 +3031,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 386,
-			"versionNonce": 1657345153,
+			"version": 419,
+			"versionNonce": 939353967,
 			"isDeleted": false,
-			"id": "6kL2KVh9",
+			"id": "NyTyJsmO",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 173.98657052552414,
-			"y": 17076.678523458144,
+			"x": 873.1461881928312,
+			"y": 12651.934529624908,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 128,
 			"height": 19.2,
-			"seed": 511387176,
-			"groupIds": [],
+			"seed": 1930592961,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3360,28 +3070,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 415,
-			"versionNonce": 1284824161,
+			"version": 448,
+			"versionNonce": 1585597185,
 			"isDeleted": false,
-			"id": "DwDG2Hfe",
+			"id": "rxsDpxRS",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 155.66428315020318,
-			"y": 17095.43956439552,
+			"x": 854.8239008175102,
+			"y": 12670.695570562282,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 128,
 			"height": 19.2,
-			"seed": 371988312,
-			"groupIds": [],
+			"seed": 1712751265,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3397,28 +3109,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 407,
-			"versionNonce": 1029482561,
+			"version": 440,
+			"versionNonce": 2044502415,
 			"isDeleted": false,
-			"id": "UUd5Gg3c",
+			"id": "MSNhqP1k",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 177.73954591370995,
-			"y": 17440.689261153006,
+			"x": 876.899163581017,
+			"y": 13015.945267319767,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 144,
 			"height": 19.2,
-			"seed": 476473688,
-			"groupIds": [],
+			"seed": 2085586561,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3434,28 +3148,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 323,
-			"versionNonce": 2130704417,
+			"version": 356,
+			"versionNonce": 417546977,
 			"isDeleted": false,
-			"id": "2YmFq6G7",
+			"id": "P0mIVURa",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 91.61930550239316,
-			"y": 17634.747822011985,
+			"x": 790.7789231697003,
+			"y": 13210.00382817875,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 64,
 			"height": 19.2,
-			"seed": 1104846424,
-			"groupIds": [],
+			"seed": 276631137,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3471,28 +3187,30 @@ cas失败，重新循环 ^pjoVVsxd
 		},
 		{
 			"type": "text",
-			"version": 342,
-			"versionNonce": 1936608257,
+			"version": 375,
+			"versionNonce": 1276090287,
 			"isDeleted": false,
-			"id": "wSDkieLA",
+			"id": "mGrdNTJH",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 114.91650588689546,
-			"y": 17728.973623177422,
+			"x": 814.0761235542026,
+			"y": 13304.229629344183,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 96,
 			"height": 19.2,
-			"seed": 1086206504,
-			"groupIds": [],
+			"seed": 2037291585,
+			"groupIds": [
+				"RRFKLcxZEv454WkhKx9V1"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377668123,
+			"updated": 1704377784966,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -3505,273 +3223,6 @@ cas失败，重新循环 ^pjoVVsxd
 			"originalText": "线程启动失败",
 			"lineHeight": 1.2,
 			"baseline": 15
-		},
-		{
-			"type": "text",
-			"version": 11,
-			"versionNonce": 36722753,
-			"isDeleted": false,
-			"id": "43qID4cW",
-			"fillStyle": "hachure",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -8.074598445259028,
-			"y": 42546.91052009073,
-			"strokeColor": "#e03131",
-			"backgroundColor": "transparent",
-			"width": 9.375,
-			"height": 38.4,
-			"seed": 3910,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377660604,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "\n",
-			"rawText": "\n",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "\n",
-			"lineHeight": 1.2,
-			"baseline": 34
-		},
-		{
-			"id": "KAkJb8dZ",
-			"type": "text",
-			"x": 1077.1778421392094,
-			"y": 9198.651372497003,
-			"width": 9.375,
-			"height": 19.2,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"groupIds": [
-				"Yhfrf9v_rSqZbw8Qhjj6m"
-			],
-			"frameId": null,
-			"roundness": null,
-			"seed": 382607265,
-			"version": 11,
-			"versionNonce": 1450700385,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1704377660603,
-			"link": null,
-			"locked": false,
-			"text": "",
-			"rawText": "",
-			"fontSize": 16,
-			"fontFamily": 3,
-			"textAlign": "center",
-			"verticalAlign": "middle",
-			"baseline": 15,
-			"containerId": "O8q29OUubiYYe-bntwt9_",
-			"originalText": "",
-			"lineHeight": 1.2
-		},
-		{
-			"type": "arrow",
-			"version": 2020,
-			"versionNonce": 1076641679,
-			"isDeleted": true,
-			"id": "IWYaJoGEueMuVZTCvELl_",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -211.08580198979217,
-			"y": 19619.524321743545,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 34.61285362505879,
-			"height": 684.2378044840225,
-			"seed": 1486411048,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1704377660604,
-			"link": null,
-			"locked": false,
-			"startBinding": {
-				"elementId": "NPcqCzcP",
-				"focus": 0.05828696636637058,
-				"gap": 7.769201167533254
-			},
-			"endBinding": {
-				"elementId": "NPcqCzcP",
-				"focus": 0.18745119559004497,
-				"gap": 12.382368785044775
-			},
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": "arrow",
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					29.999686007547382,
-					-441.93727582042266
-				],
-				[
-					-4.613167617511408,
-					242.30052866359983
-				]
-			]
-		},
-		{
-			"type": "arrow",
-			"version": 1642,
-			"versionNonce": 1983834063,
-			"isDeleted": true,
-			"id": "MlDeUPCfTKHYz4NJzARmt",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -224.3957130843051,
-			"y": 20060.233502024097,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 45.61639915038819,
-			"height": 773.3719277486744,
-			"seed": 732709672,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [
-				{
-					"type": "text",
-					"id": "Fz3L8Ibe"
-				}
-			],
-			"updated": 1704377660604,
-			"link": null,
-			"locked": false,
-			"startBinding": {
-				"elementId": "NPcqCzcP",
-				"focus": 0.10783093778732877,
-				"gap": 21.07911226204618
-			},
-			"endBinding": {
-				"elementId": "NPcqCzcP",
-				"focus": 0.11184071709662982,
-				"gap": 13.397801548050325
-			},
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": "arrow",
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					45.61639915038819,
-					-773.3719277486744
-				],
-				[
-					7.681310713995856,
-					-124.385636937448
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 27,
-			"versionNonce": 1063223457,
-			"isDeleted": true,
-			"id": "Fz3L8Ibe",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -210.7793139339169,
-			"y": 19277.261574275424,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 64,
-			"height": 19.2,
-			"seed": 251665752,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377660604,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "自增成功",
-			"rawText": "自增成功",
-			"textAlign": "center",
-			"verticalAlign": "middle",
-			"containerId": "MlDeUPCfTKHYz4NJzARmt",
-			"originalText": "自增成功",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"id": "9hkru0eI",
-			"type": "text",
-			"x": 2422.747585358802,
-			"y": 18758.44632351585,
-			"width": 9.375,
-			"height": 19.2,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 279579297,
-			"version": 11,
-			"versionNonce": 970000463,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1704377660604,
-			"link": null,
-			"locked": false,
-			"text": "",
-			"rawText": "",
-			"fontSize": 16,
-			"fontFamily": 3,
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"baseline": 15,
-			"containerId": null,
-			"originalText": "",
-			"lineHeight": 1.2
 		}
 	],
 	"appState": {
@@ -3789,8 +3240,8 @@ cas失败，重新循环 ^pjoVVsxd
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 590.4572610221743,
-		"scrollY": -16564.440558425988,
+		"scrollX": 443.71678987060943,
+		"scrollY": -12241.814476029123,
 		"zoom": {
 			"value": 0.8041408009254721
 		},
