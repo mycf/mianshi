@@ -25,9 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Java基础/JVM/JVM内存结构.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "777458f37e94fc4d",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md"
               }
             }
           },
@@ -84,7 +94,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -150,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/synchronized.md"
+                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md"
               }
             }
           },
@@ -316,10 +326,11 @@
       }
     ]
   },
-  "active": "3992f76f8175b8d4",
+  "active": "777458f37e94fc4d",
   "lastOpenFiles": [
-    "Java基础/JVM/垃圾收集器.md",
+    "Java基础/JVM/JVM内存结构.md",
     "Java基础/JVM/synchronized.md",
+    "Java基础/JVM/垃圾收集器.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
@@ -344,7 +355,6 @@
     "分布式/nocas",
     "Mysql/事务.md",
     "Mysql/快照读和当前读.md",
-    "Mysql/如何设计索引.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
