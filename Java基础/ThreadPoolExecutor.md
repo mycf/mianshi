@@ -1,3 +1,6 @@
+# 基本属性
+![[ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw]]
+
 # ==线程池的处理流程：==
 ![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw]]
 # 线程池的构造函数
