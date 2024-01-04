@@ -37,9 +37,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "7ca5f55b983d1e5a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md"
               }
             }
           },
@@ -132,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md"
+                "file": "Java基础/ThreadPoolExecutor.md"
               }
             }
           },
@@ -297,15 +307,17 @@
       }
     ]
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "8e602f904b722929",
   "lastOpenFiles": [
+    "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
+    "Java基础/ThreadPoolExecutor.md",
+    "Java基础/java 线程之间是如何通信的.md",
     "Java基础/Thread.md",
     "Java基础/JVM/synchronized.md",
     "Java基础/synchronized.md",
     "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
     "Java基础/JVM/volatile.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
-    "Java基础/java 线程之间是如何通信的.md",
     "Java基础/JVM/Java内存模型.md",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "计算机网络/能说下HTTP和RPC的区别吗.md",
@@ -324,8 +336,6 @@
     "Mysql/快照读和当前读.md",
     "Mysql/如何设计索引.md",
     "Mysql/索引.md",
-    "框架/Spring/@Autowired和@Resource的区别.md",
-    "框架/Spring/SpringBoot/SpringBoot自动装配的时候为什么没有走selectImports方法?.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
