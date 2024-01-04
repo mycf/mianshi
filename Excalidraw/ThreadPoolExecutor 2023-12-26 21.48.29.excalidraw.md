@@ -2169,6 +2169,9 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 }
  ^NPcqCzcP
 
+Integer.SIZE=32
+COUNT_BITS=29 ^r8Jy8cRC
+
 %%
 # Drawing
 ```json
@@ -3703,6 +3706,77 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"lineHeight": 1.2
 		},
 		{
+			"id": "hzEQ0ow4Zc4vtwJxATPeM",
+			"type": "rectangle",
+			"x": 469.15444173029687,
+			"y": 9173.470519116494,
+			"width": 217.6749093191964,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1064450392,
+			"version": 178,
+			"versionNonce": 1210975832,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "r8Jy8cRC"
+				}
+			],
+			"updated": 1704344727976,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "r8Jy8cRC",
+			"type": "text",
+			"x": 507.6793963898951,
+			"y": 9178.770519116493,
+			"width": 140.625,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1129824088,
+			"version": 158,
+			"versionNonce": 508263256,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704344727976,
+			"link": null,
+			"locked": false,
+			"text": "Integer.SIZE=32\nCOUNT_BITS=29",
+			"rawText": "Integer.SIZE=32\nCOUNT_BITS=29",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "hzEQ0ow4Zc4vtwJxATPeM",
+			"originalText": "Integer.SIZE=32\nCOUNT_BITS=29",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "U3wrq37E",
 			"type": "text",
 			"x": -386.86754836456845,
@@ -3738,12 +3812,49 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"containerId": null,
 			"originalText": "",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "Bp6TKM2V",
+			"type": "text",
+			"x": 579.2761632704755,
+			"y": 9180.600035718056,
+			"width": 9.375,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2063245656,
+			"version": 2,
+			"versionNonce": 392941864,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704344686117,
+			"link": null,
+			"locked": false,
+			"text": "",
+			"rawText": "",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "hzEQ0ow4Zc4vtwJxATPeM",
+			"originalText": "",
+			"lineHeight": 1.2
 		}
 	],
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#1e1e1e",
+		"currentItemStrokeColor": "#e03131",
 		"currentItemBackgroundColor": "#ffffff",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
@@ -3755,12 +3866,12 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 481.8675483645675,
-		"scrollY": -16625.889603937947,
+		"scrollX": 293.29611979314035,
+		"scrollY": -8825.889603937921,
 		"zoom": {
 			"value": 0.7000000000000001
 		},
-		"currentItemRoundness": "sharp",
+		"currentItemRoundness": "round",
 		"gridSize": null,
 		"gridColor": {
 			"Bold": "#C9C9C9FF",
