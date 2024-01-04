@@ -2214,9 +2214,11 @@ not操作，操作符“~” ^61pEFIUS
 
 定义：称为按位非运算符。它是一个单运算符，对运算数的所有二进制位进行取反操作。 ^1J0eQdto
 
-不是running状态 ^r7sfONdW
+第一个条件：非running状态 ^r7sfONdW
 
-不是shutdown状态不能创建worker ^jryd9p9A
+第二个条件：非shutdown状态
+          或 任务不为空
+           或 队列为空 ^jryd9p9A
 
 %%
 # Drawing
@@ -4628,7 +4630,7 @@ not操作，操作符“~” ^61pEFIUS
 			"type": "text",
 			"x": 212.80299766114672,
 			"y": 19012.339770068458,
-			"width": 129.625,
+			"width": 209.625,
 			"height": 19.2,
 			"angle": 0,
 			"strokeColor": "#e03131",
@@ -4642,22 +4644,22 @@ not操作，操作符“~” ^61pEFIUS
 			"frameId": null,
 			"roundness": null,
 			"seed": 437132376,
-			"version": 301,
-			"versionNonce": 1711925288,
+			"version": 322,
+			"versionNonce": 168298792,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704367192575,
+			"updated": 1704367352027,
 			"link": null,
 			"locked": false,
-			"text": "不是running状态",
-			"rawText": "不是running状态",
+			"text": "第一个条件：非running状态",
+			"rawText": "第一个条件：非running状态",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"baseline": 15,
 			"containerId": null,
-			"originalText": "不是running状态",
+			"originalText": "第一个条件：非running状态",
 			"lineHeight": 1.2
 		},
 		{
@@ -4665,8 +4667,8 @@ not操作，操作符“~” ^61pEFIUS
 			"type": "text",
 			"x": 212.71741215963073,
 			"y": 19031.803311123356,
-			"width": 259.25,
-			"height": 19.2,
+			"width": 219,
+			"height": 57.599999999999994,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
@@ -4679,22 +4681,22 @@ not操作，操作符“~” ^61pEFIUS
 			"frameId": null,
 			"roundness": null,
 			"seed": 2063271256,
-			"version": 172,
-			"versionNonce": 813986392,
+			"version": 282,
+			"versionNonce": 1354958632,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704367205969,
+			"updated": 1704367526236,
 			"link": null,
 			"locked": false,
-			"text": "不是shutdown状态不能创建worker",
-			"rawText": "不是shutdown状态不能创建worker",
+			"text": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
+			"rawText": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 15,
+			"baseline": 53,
 			"containerId": null,
-			"originalText": "不是shutdown状态不能创建worker",
+			"originalText": "第二个条件：非shutdown状态\n          或 任务不为空\n           或 队列为空",
 			"lineHeight": 1.2
 		},
 		{
@@ -5701,8 +5703,8 @@ not操作，操作符“~” ^61pEFIUS
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 465.4762524431631,
-		"scrollY": -18311.998896324403,
+		"scrollX": 77.20858889684897,
+		"scrollY": -18295.239141063415,
 		"zoom": {
 			"value": 0.7160009089112283
 		},
