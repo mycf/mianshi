@@ -2224,6 +2224,8 @@ not操作，操作符“~” ^61pEFIUS
 
 尝试自增 ^oGKrBGMO
 
+这个判断看起来没啥用 ^43CaB404
+
 %%
 # Drawing
 ```json
@@ -4741,6 +4743,43 @@ not操作，操作符“~” ^61pEFIUS
 			"lineHeight": 1.2
 		},
 		{
+			"id": "43CaB404",
+			"type": "text",
+			"x": 260.58417268523493,
+			"y": 19265.133682944845,
+			"width": 160,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1312664664,
+			"version": 164,
+			"versionNonce": 1200430376,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704370737565,
+			"link": null,
+			"locked": false,
+			"text": "这个判断看起来没啥用",
+			"rawText": "这个判断看起来没啥用",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "这个判断看起来没啥用",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "qaWqv7Hl",
 			"type": "text",
 			"x": 843.8796273218377,
@@ -5828,8 +5867,8 @@ not操作，操作符“~” ^61pEFIUS
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 398.4372313991958,
-		"scrollY": -18719.8196076752,
+		"scrollX": 390.0573537686999,
+		"scrollY": -18739.372655479685,
 		"zoom": {
 			"value": 0.7160009089112283
 		},
