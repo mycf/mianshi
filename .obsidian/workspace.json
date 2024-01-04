@@ -82,16 +82,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "678cfd6ecd7d524d",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md"
-              }
-            }
           }
         ],
         "currentTab": 4
@@ -328,13 +318,16 @@
   },
   "active": "73948001f53c3b8c",
   "lastOpenFiles": [
+    "计算机网络/Untitled.md",
+    "计算机网络/Untitled 1.md",
+    "计算机网络/未命名.md",
+    "Java基础/JVM/synchronized.md",
+    "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
+    "Java基础/ThreadPoolExecutor.md",
+    "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Java基础/JVM/JVM内存结构.md",
-    "Java基础/JVM/synchronized.md",
     "Java基础/JVM/垃圾收集器.md",
-    "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
-    "Java基础/ThreadPoolExecutor.md",
-    "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/Thread.md",
     "Java基础/synchronized.md",
@@ -351,10 +344,7 @@
     "分布式/nacos/Nacos.md",
     "Excalidraw/Nacos 2024-01-03 10.28.12.excalidraw.md",
     "分布式/nacos/Nacos配置管理.md",
-    "分布式/nacos/nacos注册中心的设计原理.md",
-    "框架/Spring/springCloud/面试.md",
     "分布式/nocas",
-    "Mysql/事务.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
