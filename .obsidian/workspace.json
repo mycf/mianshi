@@ -54,6 +54,16 @@
             }
           },
           {
+            "id": "3832fa2dd0ab81d6",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md"
+              }
+            }
+          },
+          {
             "id": "73948001f53c3b8c",
             "type": "leaf",
             "state": {
@@ -84,23 +94,7 @@
             }
           }
         ],
-        "currentTab": 4
-      },
-      {
-        "id": "5d19caf4a6a6223f",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3832fa2dd0ab81d6",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md"
-              }
-            }
-          }
-        ]
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
