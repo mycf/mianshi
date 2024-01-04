@@ -8,200 +8,7 @@ tags: [excalidraw]
 
 
 # Text Elements
-提交任务 ^4n420RxD
 
-拒绝策略 ^HPDOSMbb
-
-放入队列 ^kOE4EpYm
-
-创建线程执行任务 ^vryEFD3S
-
-创建线程执行任务 ^NsXRwofq
-
-已到
-最大线程数 ^wJT1xs79
-
-否 ^XQfTqQvv
-
-否 ^G5aan4TS
-
-否 ^YqCmve2i
-
-是 ^nSVnUTBr
-
-是 ^aH6hUxEf
-
-是 ^ZKfTL8XU
-
-到达核心线程数 ^doY0TAMK
-
-阻塞队列
-已满 ^LFRrU0lX
-
-
- 
-     
-    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));
-    private static final int COUNT_BITS = Integer.SIZE - 3;
-    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;
-
-    // runState is stored in the high-order bits
-    private static final int RUNNING    = -1 << COUNT_BITS;
-    private static final int SHUTDOWN   =  0 << COUNT_BITS;
-    private static final int STOP       =  1 << COUNT_BITS;
-    private static final int TIDYING    =  2 << COUNT_BITS;
-    private static final int TERMINATED =  3 << COUNT_BITS;
-
-    // Packing and unpacking ctl
-    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }
-    private static int workerCountOf(int c)  { return c & COUNT_MASK; }
-    private static int ctlOf(int rs, int wc) { return rs | wc; }
-
-    /*
-     * Bit field accessors that don't require unpacking ctl.
-     * These depend on the bit layout and on workerCount being never negative.
-     */
-
-    private static boolean runStateLessThan(int c, int s) {
-        return c < s;
-    }
-
-    private static boolean runStateAtLeast(int c, int s) {
-        return c >= s;
-    }
-
-    private static boolean isRunning(int c) {
-        return c < SHUTDOWN;
-    }
-
-    /**
-     * Attempts to CAS-increment the workerCount field of ctl.
-     */
-    private boolean compareAndIncrementWorkerCount(int expect) {
-        return ctl.compareAndSet(expect, expect + 1);
-    }
-
-    /**
-     * Attempts to CAS-decrement the workerCount field of ctl.
-     */
-    private boolean compareAndDecrementWorkerCount(int expect) {
-        return ctl.compareAndSet(expect, expect - 1);
-    }
-
-    /**
-     * Decrements the workerCount field of ctl. This is called only on
-     * abrupt termination of a thread (see processWorkerExit). Other
-     * decrements are performed within getTask.
-     */
-    private void decrementWorkerCount() {
-        ctl.addAndGet(-1);
-    }
-
-    
-    private final BlockingQueue<Runnable> workQueue;
-
-   
-    private final ReentrantLock mainLock = new ReentrantLock();
-
-    /**
-     * Set containing all worker threads in pool. Accessed only when
-     * holding mainLock.
-     */
-    private final HashSet<Worker> workers = new HashSet<>();
-
-    /**
-     * Wait condition to support awaitTermination.
-     */
-    private final Condition termination = mainLock.newCondition();
-
-    /**
-     * Tracks largest attained pool size. Accessed only under
-     * mainLock.
-     */
-    private int largestPoolSize;
-
-    /**
-     * Counter for completed tasks. Updated only on termination of
-     * worker threads. Accessed only under mainLock.
-     */
-    private long completedTaskCount;
-
-    /*
-     * All user control parameters are declared as volatiles so that
-     * ongoing actions are based on freshest values, but without need
-     * for locking, since no internal invariants depend on them
-     * changing synchronously with respect to other actions.
-     */
-
-    /**
-     * Factory for new threads. All threads are created using this
-     * factory (via method addWorker).  All callers must be prepared
-     * for addWorker to fail, which may reflect a system or user's
-     * policy limiting the number of threads.  Even though it is not
-     * treated as an error, failure to create threads may result in
-     * new tasks being rejected or existing ones remaining stuck in
-     * the queue.
-     *
-     * We go further and preserve pool invariants even in the face of
-     * errors such as OutOfMemoryError, that might be thrown while
-     * trying to create threads.  Such errors are rather common due to
-     * the need to allocate a native stack in Thread.start, and users
-     * will want to perform clean pool shutdown to clean up.  There
-     * will likely be enough memory available for the cleanup code to
-     * complete without encountering yet another OutOfMemoryError.
-     */
-    private volatile ThreadFactory threadFactory;
-
-    /**
-     * Handler called when saturated or shutdown in execute.
-     */
-    private volatile RejectedExecutionHandler handler;
-
-    /**
-     * Timeout in nanoseconds for idle threads waiting for work.
-     * Threads use this timeout when there are more than corePoolSize
-     * present or if allowCoreThreadTimeOut. Otherwise they wait
-     * forever for new work.
-     */
-    private volatile long keepAliveTime;
-
-    /**
-     * If false (default), core threads stay alive even when idle.
-     * If true, core threads use keepAliveTime to time out waiting
-     * for work.
-     */
-    private volatile boolean allowCoreThreadTimeOut;
-
-    /**
-     * Core pool size is the minimum number of workers to keep alive
-     * (and not allow to time out etc) unless allowCoreThreadTimeOut
-     * is set, in which case the minimum is zero.
-     *
-     * Since the worker count is actually stored in COUNT_BITS bits,
-     * the effective limit is {@code corePoolSize & COUNT_MASK}.
-     */
-    private volatile int corePoolSize;
-
-    /**
-     * Maximum pool size.
-     *
-     * Since the worker count is actually stored in COUNT_BITS bits,
-     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.
-     */
-    private volatile int maximumPoolSize;
-
-    /**
-     * The default rejected execution handler.
-     */
-    private static final RejectedExecutionHandler defaultHandler =
-        new AbortPolicy();
-
-    
-    private static final RuntimePermission shutdownPerm =
-        new RuntimePermission("modifyThread");
-
-    
-    
     private boolean addWorker(Runnable firstTask, boolean core) {
         retry:
         for (int c = ctl.get();;) {
@@ -270,54 +77,6 @@ tags: [excalidraw]
   
  ^NPcqCzcP
 
-Integer.SIZE=32
-COUNT_BITS=29 ^r8Jy8cRC
-
-0000 0000 0000 0000 0000 0000 0000 0001 ^9kmxIQru
-
-1<< COUNT_BITS ^ofOIy6n7
-
-0010 0000 0000 0000 0000 0000 0000 0000
-
--1
-
-0001 1111 1111 1111 1111 1111 1111 1111
-
-=536870911 ^7h9LiOwn
-
-0 ^1OPjqjHo
-
--536870912 ^XCFyHt02
-
-536870912 ^3wqx3EmY
-
-1073741824 ^qYpWM769
-
-1610612736 ^l1Md3CGB
-
-or 操作，操作符“|” ^C1v7WYVX
-
-定义：称为按位或运算符。它对整型参数的每一个二进制位进行布尔或操作，即两个对应的二进制位，任意一个为1时，就等于1。 ^PI9c484y
-
-1110 0000 0000 0000 0000 0000 0000 0000 ^hdo43w4V
-
-1000 0000 0000 0000 0000 0000 0000 0000 ^sqVkHS59
-
-and 操作，操作符“&” ^QNnuUB83
-
-定义：称为按位与运算符。它对整型参数的每一个二进制位进行布尔与操作，即两个对应的二进制位同时为1时，才等于1。 ^daZJgN0g
-
-100 0000 0000 0000 0000 0000 0000 0000 ^Jn4zVZDH
-
-10 0000 0000 0000 0000 0000 0000 0000 ^orrySlph
-
-not操作，操作符“~” ^61pEFIUS
-
-定义：称为按位非运算符。它是一个单运算符，对运算数的所有二进制位进行取反操作。 ^1J0eQdto
-
-
- ^43qID4cW
-
 满足return false条件的情况有：
 1、stop、tidying、terminated状态
 2、shutdown状态+firstTask不为null
@@ -351,10 +110,465 @@ cas失败，重新循环 ^M4Poncut
 	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.13",
 	"elements": [
 		{
-			"type": "rectangle",
-			"version": 184,
-			"versionNonce": 424452577,
+			"type": "text",
+			"version": 918,
+			"versionNonce": 205125519,
 			"isDeleted": false,
+			"id": "NPcqCzcP",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -203.31660082225875,
+			"y": 9131.65791908211,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "#ffffff",
+			"width": 731.25,
+			"height": 1305.6,
+			"seed": 1591035480,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378444480,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "\n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
+			"rawText": "\n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "\n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
+			"lineHeight": 1.2,
+			"baseline": 1301
+		},
+		{
+			"type": "text",
+			"version": 1188,
+			"versionNonce": 1255062607,
+			"isDeleted": false,
+			"id": "3Yhb8X9L",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 214.93920405170184,
+			"y": 9226.209154990676,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 295.625,
+			"height": 96,
+			"seed": 1380964225,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378510924,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "满足return false条件的情况有：\n1、stop、tidying、terminated状态\n2、shutdown状态+firstTask不为null\n3、shutdown状态+工作队列为空\n",
+			"rawText": "满足return false条件的情况有：\n1、stop、tidying、terminated状态\n2、shutdown状态+firstTask不为null\n3、shutdown状态+工作队列为空\n",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "满足return false条件的情况有：\n1、stop、tidying、terminated状态\n2、shutdown状态+firstTask不为null\n3、shutdown状态+工作队列为空\n",
+			"lineHeight": 1.2,
+			"baseline": 92
+		},
+		{
+			"type": "text",
+			"version": 810,
+			"versionNonce": 465908769,
+			"isDeleted": false,
+			"id": "QDnp1mor",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 535.223507723577,
+			"y": 9378.622441621497,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 189.75,
+			"height": 19.2,
+			"seed": 1145782113,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378510924,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "防止数值超出COUNT_MASK",
+			"rawText": "防止数值超出COUNT_MASK",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "防止数值超出COUNT_MASK",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "text",
+			"version": 733,
+			"versionNonce": 1433426543,
+			"isDeleted": false,
+			"id": "BnthpH9M",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 311.55398298604905,
+			"y": 9418.700793642376,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 64,
+			"height": 19.2,
+			"seed": 1447996225,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378510924,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "尝试自增",
+			"rawText": "尝试自增",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "尝试自增",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "text",
+			"version": 753,
+			"versionNonce": 1009518593,
+			"isDeleted": false,
+			"id": "M4Poncut",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 540.4600787974024,
+			"y": 9513.302054311236,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 140.125,
+			"height": 19.2,
+			"seed": 1354341153,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378510924,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "cas失败，重新循环",
+			"rawText": "cas失败，重新循环",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "cas失败，重新循环",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "arrow",
+			"version": 858,
+			"versionNonce": 1920545935,
+			"isDeleted": false,
+			"id": "CT31Rn4KSTnW4XvIcaPMm",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 500.5228490850542,
+			"y": 9517.212732067754,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 368.23494480852673,
+			"height": 141.92377753466644,
+			"seed": 1140559617,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704378510924,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-99.66661811738527,
+					-93.24361376656816
+				],
+				[
+					-368.23494480852673,
+					-141.92377753466644
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 777,
+			"versionNonce": 1951227873,
+			"isDeleted": false,
+			"id": "rMWwuyIW",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 264.8755311169497,
+			"y": 9476.548068214783,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 64,
+			"height": 19.2,
+			"seed": 110364385,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378510924,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "状态变化",
+			"rawText": "状态变化",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "状态变化",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "text",
+			"version": 869,
+			"versionNonce": 125960079,
+			"isDeleted": false,
+			"id": "NyTyJsmO",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 156.5985054995259,
+			"y": 9594.571847228208,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 128,
+			"height": 19.2,
+			"seed": 1930592961,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378518447,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "线程是否启动成功",
+			"rawText": "线程是否启动成功",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "线程是否启动成功",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "text",
+			"version": 912,
+			"versionNonce": 1713406049,
+			"isDeleted": false,
+			"id": "rxsDpxRS",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 144.16772646997288,
+			"y": 9615.123634000283,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 128,
+			"height": 19.2,
+			"seed": 1712751265,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378526616,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "线程是否添加成功",
+			"rawText": "线程是否添加成功",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "线程是否添加成功",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "text",
+			"version": 889,
+			"versionNonce": 1720921263,
+			"isDeleted": false,
+			"id": "MSNhqP1k",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 165.14102358023774,
+			"y": 9959.316867154606,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 144,
+			"height": 19.2,
+			"seed": 2085586561,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378532618,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "添加到工作线程集合",
+			"rawText": "添加到工作线程集合",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "添加到工作线程集合",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "text",
+			"version": 798,
+			"versionNonce": 296077345,
+			"isDeleted": false,
+			"id": "P0mIVURa",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 79.07465222480471,
+			"y": 10148.561507378228,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 64,
+			"height": 19.2,
+			"seed": 276631137,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378537265,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "线程启动",
+			"rawText": "线程启动",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "线程启动",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "text",
+			"version": 772,
+			"versionNonce": 682265199,
+			"isDeleted": false,
+			"id": "mGrdNTJH",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 105.11380304823456,
+			"y": 10246.074405564423,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"width": 96,
+			"height": 19.2,
+			"seed": 2037291585,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704378541017,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "线程启动失败",
+			"rawText": "线程启动失败",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "线程启动失败",
+			"lineHeight": 1.2,
+			"baseline": 15
+		},
+		{
+			"type": "rectangle",
+			"version": 186,
+			"versionNonce": 278721807,
+			"isDeleted": true,
 			"id": "T_IfEJgzej3u9o0aMojVk",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -378,21 +592,17 @@ cas失败，重新循环 ^M4Poncut
 				{
 					"type": "text",
 					"id": "4n420RxD"
-				},
-				{
-					"id": "gM9uDHGxHDbmNZx2fb7Y9",
-					"type": "arrow"
 				}
 			],
-			"updated": 1704377762781,
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 172,
-			"versionNonce": 1756342447,
-			"isDeleted": false,
+			"version": 173,
+			"versionNonce": 743514497,
+			"isDeleted": true,
 			"id": "4n420RxD",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -411,7 +621,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762781,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -427,9 +637,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "rectangle",
-			"version": 252,
-			"versionNonce": 2046803393,
-			"isDeleted": false,
+			"version": 254,
+			"versionNonce": 195290977,
+			"isDeleted": true,
 			"id": "cSCQqxhqorGcisT6jgZ8W",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -453,25 +663,17 @@ cas失败，重新循环 ^M4Poncut
 				{
 					"type": "text",
 					"id": "HPDOSMbb"
-				},
-				{
-					"id": "nNmQBNr2-Tz2uYIY4uJhD",
-					"type": "arrow"
-				},
-				{
-					"id": "XwG1KmlJC-7BuU5kMnnk-",
-					"type": "arrow"
 				}
 			],
-			"updated": 1704377762781,
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 228,
-			"versionNonce": 1966389967,
-			"isDeleted": false,
+			"version": 229,
+			"versionNonce": 596855137,
+			"isDeleted": true,
 			"id": "HPDOSMbb",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -490,7 +692,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762781,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -506,9 +708,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 1261,
-			"versionNonce": 321783407,
-			"isDeleted": false,
+			"version": 1266,
+			"versionNonce": 153696559,
+			"isDeleted": true,
 			"id": "gM9uDHGxHDbmNZx2fb7Y9",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -516,12 +718,12 @@ cas失败，重新循环 ^M4Poncut
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -197.77753036096522,
+			"x": -197.77753036096834,
 			"y": -324.94020042385114,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 0.6783166556783158,
-			"height": 38.146688042697804,
+			"width": 0.6783166556773494,
+			"height": 38.14668804270036,
 			"seed": 701722388,
 			"groupIds": [],
 			"frameId": null,
@@ -529,7 +731,7 @@ cas失败，重新循环 ^M4Poncut
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704377782405,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -551,16 +753,16 @@ cas失败，重新循环 ^M4Poncut
 					0
 				],
 				[
-					-0.6783166556783158,
-					38.146688042697804
+					-0.6783166556773494,
+					38.14668804270036
 				]
 			]
 		},
 		{
 			"type": "arrow",
-			"version": 3245,
-			"versionNonce": 1558476463,
-			"isDeleted": false,
+			"version": 3248,
+			"versionNonce": 1678079297,
+			"isDeleted": true,
 			"id": "C_Rb9IbOW7akGqW5d9orl",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -568,12 +770,12 @@ cas失败，重新循环 ^M4Poncut
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -199.8974693566231,
-			"y": -129.0217809412099,
+			"x": -199.89746938124807,
+			"y": -129.02178097001485,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
-			"width": 3.518954144399885,
-			"height": 89.81137221475664,
+			"width": 3.5189541298635447,
+			"height": 89.81137223196973,
 			"seed": 329105068,
 			"groupIds": [],
 			"frameId": null,
@@ -586,7 +788,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "nSVnUTBr"
 				}
 			],
-			"updated": 1704377782405,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -608,16 +810,16 @@ cas失败，重新循环 ^M4Poncut
 					0
 				],
 				[
-					-3.518954144399885,
-					89.81137221475664
+					-3.5189541298635447,
+					89.81137223196973
 				]
 			]
 		},
 		{
 			"type": "text",
-			"version": 73,
-			"versionNonce": 1869218177,
-			"isDeleted": false,
+			"version": 74,
+			"versionNonce": 1630026575,
+			"isDeleted": true,
 			"id": "nSVnUTBr",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -636,7 +838,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762781,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -652,9 +854,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 3148,
-			"versionNonce": 357667599,
-			"isDeleted": false,
+			"version": 3149,
+			"versionNonce": 1359422753,
+			"isDeleted": true,
 			"id": "yZBF-raaQCqh61VvxiCnC",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -680,7 +882,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "aH6hUxEf"
 				}
 			],
-			"updated": 1704377762781,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -709,9 +911,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 71,
-			"versionNonce": 1351625057,
-			"isDeleted": false,
+			"version": 72,
+			"versionNonce": 37878127,
+			"isDeleted": true,
 			"id": "aH6hUxEf",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -730,7 +932,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -746,9 +948,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 1000,
-			"versionNonce": 1139721935,
-			"isDeleted": false,
+			"version": 1002,
+			"versionNonce": 906483969,
+			"isDeleted": true,
 			"id": "nNmQBNr2-Tz2uYIY4uJhD",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -774,7 +976,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "ZKfTL8XU"
 				}
 			],
-			"updated": 1704377782397,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -799,9 +1001,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 68,
-			"versionNonce": 510022977,
-			"isDeleted": false,
+			"version": 69,
+			"versionNonce": 1908339599,
+			"isDeleted": true,
 			"id": "ZKfTL8XU",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -820,7 +1022,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -836,9 +1038,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "ellipse",
-			"version": 473,
-			"versionNonce": 566582095,
-			"isDeleted": false,
+			"version": 475,
+			"versionNonce": 1585019695,
+			"isDeleted": true,
 			"id": "z7hRMv-_l1mhRi6DggYVQ",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -858,25 +1060,16 @@ cas失败，重新循环 ^M4Poncut
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": [
-				{
-					"id": "ZPEXTIlR7mhLNM11sy4Xy",
-					"type": "arrow"
-				},
-				{
-					"id": "XwG1KmlJC-7BuU5kMnnk-",
-					"type": "arrow"
-				}
-			],
-			"updated": 1704377762782,
+			"boundElements": [],
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 658,
-			"versionNonce": 1280050465,
-			"isDeleted": false,
+			"version": 660,
+			"versionNonce": 2085770049,
+			"isDeleted": true,
 			"id": "gvJG81DLcbyQvfgp3qFDY",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -900,25 +1093,17 @@ cas失败，重新循环 ^M4Poncut
 				{
 					"type": "text",
 					"id": "NsXRwofq"
-				},
-				{
-					"id": "e8QVRqdayhgBvPYKkvCK6",
-					"type": "arrow"
-				},
-				{
-					"id": "ZPEXTIlR7mhLNM11sy4Xy",
-					"type": "arrow"
 				}
 			],
-			"updated": 1704377762782,
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 870,
-			"versionNonce": 1916475759,
-			"isDeleted": false,
+			"version": 871,
+			"versionNonce": 1377062081,
+			"isDeleted": true,
 			"id": "NsXRwofq",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -937,7 +1122,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -953,9 +1138,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "rectangle",
-			"version": 923,
-			"versionNonce": 900774145,
-			"isDeleted": false,
+			"version": 925,
+			"versionNonce": 1730166095,
+			"isDeleted": true,
 			"id": "KFlCeFOaKunOIV71uAJVZ",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -979,25 +1164,17 @@ cas失败，重新循环 ^M4Poncut
 				{
 					"type": "text",
 					"id": "kOE4EpYm"
-				},
-				{
-					"id": "KZLdTHeJqOywDihRKDcZ2",
-					"type": "arrow"
-				},
-				{
-					"id": "_v-BtdCvnsMkNaksOGJ7l",
-					"type": "arrow"
 				}
 			],
-			"updated": 1704377762782,
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1347,
-			"versionNonce": 1167332239,
-			"isDeleted": false,
+			"version": 1348,
+			"versionNonce": 1448021153,
+			"isDeleted": true,
 			"id": "kOE4EpYm",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1016,7 +1193,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1032,9 +1209,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "rectangle",
-			"version": 536,
-			"versionNonce": 471068897,
-			"isDeleted": false,
+			"version": 538,
+			"versionNonce": 1208501025,
+			"isDeleted": true,
 			"id": "Yxh_94PFSuKFPbsKze27r",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1058,25 +1235,17 @@ cas失败，重新循环 ^M4Poncut
 				{
 					"type": "text",
 					"id": "vryEFD3S"
-				},
-				{
-					"id": "k1cC5DU5JGpSPfd19KAcA",
-					"type": "arrow"
-				},
-				{
-					"id": "gHnC0qdj-7I5CbrTI6wYi",
-					"type": "arrow"
 				}
 			],
-			"updated": 1704377762782,
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 749,
-			"versionNonce": 1409862063,
-			"isDeleted": false,
+			"version": 750,
+			"versionNonce": 686215297,
+			"isDeleted": true,
 			"id": "vryEFD3S",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1095,7 +1264,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1111,9 +1280,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 1494,
-			"versionNonce": 2070664943,
-			"isDeleted": false,
+			"version": 1499,
+			"versionNonce": 1510814735,
+			"isDeleted": true,
 			"id": "e8QVRqdayhgBvPYKkvCK6",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1137,7 +1306,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "XQfTqQvv"
 				}
 			],
-			"updated": 1704377782406,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1166,9 +1335,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 69,
-			"versionNonce": 985775055,
-			"isDeleted": false,
+			"version": 70,
+			"versionNonce": 2140870753,
+			"isDeleted": true,
 			"id": "XQfTqQvv",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1187,7 +1356,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1203,9 +1372,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 3182,
-			"versionNonce": 1724405167,
-			"isDeleted": false,
+			"version": 3185,
+			"versionNonce": 764009007,
+			"isDeleted": true,
 			"id": "KZLdTHeJqOywDihRKDcZ2",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1213,12 +1382,12 @@ cas失败，重新循环 ^M4Poncut
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -146.4451799512169,
-			"y": 22.445448806979172,
+			"x": -146.4451799512178,
+			"y": 22.44544880697291,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#ffffff",
-			"width": 94.56913089874587,
-			"height": 0.6680540442035579,
+			"width": 94.56913089874678,
+			"height": 0.6680540441996072,
 			"seed": 1277249812,
 			"groupIds": [],
 			"frameId": null,
@@ -1229,7 +1398,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "G5aan4TS"
 				}
 			],
-			"updated": 1704377782403,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1251,16 +1420,16 @@ cas失败，重新循环 ^M4Poncut
 					0
 				],
 				[
-					94.56913089874587,
-					-0.6680540442035579
+					94.56913089874678,
+					-0.6680540441996072
 				]
 			]
 		},
 		{
 			"type": "text",
-			"version": 70,
-			"versionNonce": 1574398447,
-			"isDeleted": false,
+			"version": 71,
+			"versionNonce": 742089793,
+			"isDeleted": true,
 			"id": "G5aan4TS",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1279,7 +1448,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1295,9 +1464,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 667,
-			"versionNonce": 36528143,
-			"isDeleted": false,
+			"version": 670,
+			"versionNonce": 1389149263,
+			"isDeleted": true,
 			"id": "k1cC5DU5JGpSPfd19KAcA",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1321,7 +1490,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "YqCmve2i"
 				}
 			],
-			"updated": 1704377782404,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1350,9 +1519,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 72,
-			"versionNonce": 173167631,
-			"isDeleted": false,
+			"version": 73,
+			"versionNonce": 447165473,
+			"isDeleted": true,
 			"id": "YqCmve2i",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1371,7 +1540,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1387,9 +1556,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 1017,
-			"versionNonce": 254649711,
-			"isDeleted": false,
+			"version": 1019,
+			"versionNonce": 766401135,
+			"isDeleted": true,
 			"id": "ZPEXTIlR7mhLNM11sy4Xy",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1398,7 +1567,7 @@ cas失败，重新循环 ^M4Poncut
 			"opacity": 100,
 			"angle": 0,
 			"x": 220.78812149458588,
-			"y": -174.09729326437835,
+			"y": -174.09729326437838,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#ffffff",
 			"width": 415.5535556177231,
@@ -1408,7 +1577,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377782401,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1441,9 +1610,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 445,
-			"versionNonce": 952403503,
-			"isDeleted": false,
+			"version": 447,
+			"versionNonce": 248383489,
+			"isDeleted": true,
 			"id": "gHnC0qdj-7I5CbrTI6wYi",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1462,7 +1631,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377782404,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1487,9 +1656,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "diamond",
-			"version": 2392,
-			"versionNonce": 1337738305,
-			"isDeleted": false,
+			"version": 2394,
+			"versionNonce": 1307163503,
+			"isDeleted": true,
 			"id": "HUxSIj4LqHtmZjeeB5ARv",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1512,29 +1681,16 @@ cas失败，重新循环 ^M4Poncut
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": [
-				{
-					"id": "C_Rb9IbOW7akGqW5d9orl",
-					"type": "arrow"
-				},
-				{
-					"id": "yZBF-raaQCqh61VvxiCnC",
-					"type": "arrow"
-				},
-				{
-					"id": "KZLdTHeJqOywDihRKDcZ2",
-					"type": "arrow"
-				}
-			],
-			"updated": 1704377762782,
+			"boundElements": [],
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 312,
-			"versionNonce": 1279908943,
-			"isDeleted": false,
+			"version": 313,
+			"versionNonce": 581918689,
+			"isDeleted": true,
 			"id": "LFRrU0lX",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1555,7 +1711,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 17.44989636159525,
@@ -1571,9 +1727,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "diamond",
-			"version": 2130,
-			"versionNonce": 1527518241,
-			"isDeleted": false,
+			"version": 2132,
+			"versionNonce": 724907777,
+			"isDeleted": true,
 			"id": "WEVCdVaLjtz4Fcffub1u0",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1596,29 +1752,16 @@ cas失败，重新循环 ^M4Poncut
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": [
-				{
-					"id": "nNmQBNr2-Tz2uYIY4uJhD",
-					"type": "arrow"
-				},
-				{
-					"id": "yZBF-raaQCqh61VvxiCnC",
-					"type": "arrow"
-				},
-				{
-					"id": "k1cC5DU5JGpSPfd19KAcA",
-					"type": "arrow"
-				}
-			],
-			"updated": 1704377762782,
+			"boundElements": [],
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 790,
-			"versionNonce": 981957231,
-			"isDeleted": false,
+			"version": 791,
+			"versionNonce": 73055169,
+			"isDeleted": true,
 			"id": "wJT1xs79",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1639,7 +1782,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 17.973135195917568,
@@ -1655,9 +1798,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "diamond",
-			"version": 2172,
-			"versionNonce": 798418945,
-			"isDeleted": false,
+			"version": 2174,
+			"versionNonce": 924743055,
+			"isDeleted": true,
 			"id": "nt7nr4Gu1S748ZfR_-6Xk",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1680,33 +1823,16 @@ cas失败，重新循环 ^M4Poncut
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": [
-				{
-					"id": "gM9uDHGxHDbmNZx2fb7Y9",
-					"type": "arrow"
-				},
-				{
-					"id": "C_Rb9IbOW7akGqW5d9orl",
-					"type": "arrow"
-				},
-				{
-					"type": "text",
-					"id": "doY0TAMK"
-				},
-				{
-					"id": "e8QVRqdayhgBvPYKkvCK6",
-					"type": "arrow"
-				}
-			],
-			"updated": 1704377762782,
+			"boundElements": [],
+			"updated": 1704378406256,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 770,
-			"versionNonce": 1739347087,
-			"isDeleted": false,
+			"version": 771,
+			"versionNonce": 1945082785,
+			"isDeleted": true,
 			"id": "doY0TAMK",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1728,7 +1854,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"fontSize": 19.30540392595248,
@@ -1744,9 +1870,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 135,
-			"versionNonce": 771268367,
-			"isDeleted": false,
+			"version": 138,
+			"versionNonce": 958540527,
+			"isDeleted": true,
 			"id": "XwG1KmlJC-7BuU5kMnnk-",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1765,7 +1891,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377782399,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1794,9 +1920,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "rectangle",
-			"version": 256,
-			"versionNonce": 1802562223,
-			"isDeleted": false,
+			"version": 257,
+			"versionNonce": 701845761,
+			"isDeleted": true,
 			"id": "hzEQ0ow4Zc4vtwJxATPeM",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1822,15 +1948,15 @@ cas失败，重新循环 ^M4Poncut
 					"id": "r8Jy8cRC"
 				}
 			],
-			"updated": 1704377762782,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 309,
-			"versionNonce": 1886100417,
-			"isDeleted": false,
+			"version": 310,
+			"versionNonce": 94698383,
+			"isDeleted": true,
 			"id": "r8Jy8cRC",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1849,7 +1975,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1865,9 +1991,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 560,
-			"versionNonce": 1706018767,
-			"isDeleted": false,
+			"version": 562,
+			"versionNonce": 27099009,
+			"isDeleted": true,
 			"id": "_v-BtdCvnsMkNaksOGJ7l",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1886,7 +2012,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377782403,
+			"updated": 1704378406255,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1911,9 +2037,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "rectangle",
-			"version": 99,
-			"versionNonce": 1793358753,
-			"isDeleted": false,
+			"version": 101,
+			"versionNonce": 970797807,
+			"isDeleted": true,
 			"id": "cO2ShusooszR-hj-UXi7k",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1933,58 +2059,16 @@ cas失败，重新循环 ^M4Poncut
 			"roundness": {
 				"type": 3
 			},
-			"boundElements": [
-				{
-					"type": "arrow",
-					"id": "YHCkOjSZ"
-				}
-			],
-			"updated": 1704377762782,
+			"boundElements": [],
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false
 		},
 		{
-			"type": "text",
-			"version": 915,
-			"versionNonce": 7031535,
-			"isDeleted": false,
-			"id": "NPcqCzcP",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -203.31660082225875,
-			"y": 9131.65791908211,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "#ffffff",
-			"width": 731.25,
-			"height": 4435.2,
-			"seed": 1591035480,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377762782,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    \n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
-			"rawText": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    \n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "\n \n     \n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    \n    private final BlockingQueue<Runnable> workQueue;\n\n   \n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    \n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    \n    \n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n   \n\n  \n",
-			"lineHeight": 1.2,
-			"baseline": 4430
-		},
-		{
 			"type": "rectangle",
-			"version": 474,
-			"versionNonce": 116809601,
-			"isDeleted": false,
+			"version": 475,
+			"versionNonce": 834449839,
+			"isDeleted": true,
 			"id": "O8q29OUubiYYe-bntwt9_",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2012,15 +2096,15 @@ cas失败，重新循环 ^M4Poncut
 					"id": "YHCkOjSZ"
 				}
 			],
-			"updated": 1704377762782,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 337,
-			"versionNonce": 853591905,
-			"isDeleted": false,
+			"version": 338,
+			"versionNonce": 1524876481,
+			"isDeleted": true,
 			"id": "9kmxIQru",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2041,7 +2125,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762782,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false,
 			"fontSize": 16.50466058863272,
@@ -2057,9 +2141,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 337,
-			"versionNonce": 2113575727,
-			"isDeleted": false,
+			"version": 338,
+			"versionNonce": 163095503,
+			"isDeleted": true,
 			"id": "ofOIy6n7",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2080,7 +2164,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false,
 			"fontSize": 16.50466058863272,
@@ -2096,9 +2180,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 416,
-			"versionNonce": 1760768833,
-			"isDeleted": false,
+			"version": 418,
+			"versionNonce": 1140258689,
+			"isDeleted": true,
 			"id": "7h9LiOwn",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2118,13 +2202,8 @@ cas失败，重新循环 ^M4Poncut
 			],
 			"frameId": null,
 			"roundness": null,
-			"boundElements": [
-				{
-					"id": "YHCkOjSZ",
-					"type": "arrow"
-				}
-			],
-			"updated": 1704377762783,
+			"boundElements": [],
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16.50466058863272,
@@ -2140,9 +2219,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 566,
-			"versionNonce": 964517199,
-			"isDeleted": false,
+			"version": 567,
+			"versionNonce": 2108772847,
+			"isDeleted": true,
 			"id": "YHCkOjSZ",
 			"fillStyle": "hachure",
 			"strokeWidth": 2,
@@ -2161,7 +2240,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2194,9 +2273,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 185,
-			"versionNonce": 764224289,
-			"isDeleted": false,
+			"version": 186,
+			"versionNonce": 1849182337,
+			"isDeleted": true,
 			"id": "1OPjqjHo",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2215,7 +2294,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2231,9 +2310,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 140,
-			"versionNonce": 396548975,
-			"isDeleted": false,
+			"version": 141,
+			"versionNonce": 1722760207,
+			"isDeleted": true,
 			"id": "XCFyHt02",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2252,7 +2331,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2268,9 +2347,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 162,
-			"versionNonce": 1293817601,
-			"isDeleted": false,
+			"version": 163,
+			"versionNonce": 201166945,
+			"isDeleted": true,
 			"id": "3wqx3EmY",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2289,7 +2368,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450568,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2305,9 +2384,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 196,
-			"versionNonce": 749966735,
-			"isDeleted": false,
+			"version": 197,
+			"versionNonce": 1756029487,
+			"isDeleted": true,
 			"id": "qYpWM769",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2326,7 +2405,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2342,9 +2421,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 146,
-			"versionNonce": 1512410849,
-			"isDeleted": false,
+			"version": 147,
+			"versionNonce": 1972296769,
+			"isDeleted": true,
 			"id": "l1Md3CGB",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2363,7 +2442,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2379,9 +2458,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 120,
-			"versionNonce": 1877478319,
-			"isDeleted": false,
+			"version": 121,
+			"versionNonce": 344769615,
+			"isDeleted": true,
 			"id": "C1v7WYVX",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2400,7 +2479,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2416,9 +2495,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 162,
-			"versionNonce": 1798507201,
-			"isDeleted": false,
+			"version": 163,
+			"versionNonce": 1523297313,
+			"isDeleted": true,
 			"id": "PI9c484y",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2437,7 +2516,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2453,9 +2532,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 260,
-			"versionNonce": 1567145423,
-			"isDeleted": false,
+			"version": 261,
+			"versionNonce": 1244488303,
+			"isDeleted": true,
 			"id": "hdo43w4V",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2474,7 +2553,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2490,9 +2569,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 323,
-			"versionNonce": 417729185,
-			"isDeleted": false,
+			"version": 324,
+			"versionNonce": 1134788609,
+			"isDeleted": true,
 			"id": "orrySlph",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2511,7 +2590,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2527,9 +2606,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 64,
-			"versionNonce": 1481518063,
-			"isDeleted": false,
+			"version": 65,
+			"versionNonce": 1515535503,
+			"isDeleted": true,
 			"id": "QNnuUB83",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2548,7 +2627,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2564,9 +2643,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 128,
-			"versionNonce": 1005457025,
-			"isDeleted": false,
+			"version": 129,
+			"versionNonce": 236312545,
+			"isDeleted": true,
 			"id": "daZJgN0g",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2585,7 +2664,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2601,9 +2680,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 367,
-			"versionNonce": 1285608975,
-			"isDeleted": false,
+			"version": 368,
+			"versionNonce": 1757205167,
+			"isDeleted": true,
 			"id": "Jn4zVZDH",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2622,7 +2701,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2638,9 +2717,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 402,
-			"versionNonce": 1795855969,
-			"isDeleted": false,
+			"version": 403,
+			"versionNonce": 741487553,
+			"isDeleted": true,
 			"id": "sqVkHS59",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2659,7 +2738,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2675,9 +2754,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 64,
-			"versionNonce": 291060783,
-			"isDeleted": false,
+			"version": 65,
+			"versionNonce": 235709647,
+			"isDeleted": true,
 			"id": "61pEFIUS",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2696,7 +2775,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2712,9 +2791,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 164,
-			"versionNonce": 957030977,
-			"isDeleted": false,
+			"version": 165,
+			"versionNonce": 572003233,
+			"isDeleted": true,
 			"id": "1J0eQdto",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -2733,7 +2812,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378450569,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2749,9 +2828,9 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 14,
-			"versionNonce": 1397153071,
-			"isDeleted": false,
+			"version": 15,
+			"versionNonce": 1119449825,
+			"isDeleted": true,
 			"id": "43qID4cW",
 			"fillStyle": "hachure",
 			"strokeWidth": 1,
@@ -2770,7 +2849,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704377762783,
+			"updated": 1704378392614,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -2785,444 +2864,41 @@ cas失败，重新循环 ^M4Poncut
 			"baseline": 34
 		},
 		{
+			"id": "0JQ1N6ZJ",
 			"type": "text",
-			"version": 822,
-			"versionNonce": 886120719,
-			"isDeleted": false,
-			"id": "3Yhb8X9L",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 792.5865332888696,
-			"y": 12312.283011209627,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 295.625,
-			"height": 96,
-			"seed": 1380964225,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "满足return false条件的情况有：\n1、stop、tidying、terminated状态\n2、shutdown状态+firstTask不为null\n3、shutdown状态+工作队列为空\n",
-			"rawText": "满足return false条件的情况有：\n1、stop、tidying、terminated状态\n2、shutdown状态+firstTask不为null\n3、shutdown状态+工作队列为空\n",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "满足return false条件的情况有：\n1、stop、tidying、terminated状态\n2、shutdown状态+firstTask不为null\n3、shutdown状态+工作队列为空\n",
-			"lineHeight": 1.2,
-			"baseline": 92
-		},
-		{
-			"type": "text",
-			"version": 444,
-			"versionNonce": 353925985,
-			"isDeleted": false,
-			"id": "QDnp1mor",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 1112.8708369607448,
-			"y": 12464.696297840448,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 189.75,
+			"x": -168.2617181565015,
+			"y": 8963.742182590744,
+			"width": 9.375,
 			"height": 19.2,
-			"seed": 1145782113,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "防止数值超出COUNT_MASK",
-			"rawText": "防止数值超出COUNT_MASK",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "防止数值超出COUNT_MASK",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"type": "text",
-			"version": 367,
-			"versionNonce": 1128802095,
-			"isDeleted": false,
-			"id": "BnthpH9M",
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 0,
 			"opacity": 100,
-			"angle": 0,
-			"x": 889.2013122232169,
-			"y": 12504.774649861327,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 64,
-			"height": 19.2,
-			"seed": 1447996225,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
+			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
+			"seed": 57531777,
+			"version": 2,
+			"versionNonce": 1778761007,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704378439921,
 			"link": null,
 			"locked": false,
+			"text": "",
+			"rawText": "",
 			"fontSize": 16,
 			"fontFamily": 3,
-			"text": "尝试自增",
-			"rawText": "尝试自增",
 			"textAlign": "left",
 			"verticalAlign": "top",
+			"baseline": 15,
 			"containerId": null,
-			"originalText": "尝试自增",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"type": "text",
-			"version": 387,
-			"versionNonce": 303327041,
-			"isDeleted": false,
-			"id": "M4Poncut",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 1118.1074080345702,
-			"y": 12599.375910530187,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 140.125,
-			"height": 19.2,
-			"seed": 1354341153,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "cas失败，重新循环",
-			"rawText": "cas失败，重新循环",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "cas失败，重新循环",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"type": "arrow",
-			"version": 492,
-			"versionNonce": 356084047,
-			"isDeleted": false,
-			"id": "CT31Rn4KSTnW4XvIcaPMm",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 1078.170178322222,
-			"y": 12603.286588286705,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 368.23494480852673,
-			"height": 141.92377753466644,
-			"seed": 1140559617,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": "arrow",
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-99.66661811738527,
-					-93.24361376656816
-				],
-				[
-					-368.23494480852673,
-					-141.92377753466644
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 411,
-			"versionNonce": 73914145,
-			"isDeleted": false,
-			"id": "rMWwuyIW",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 842.5228603541175,
-			"y": 12562.621924433734,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 64,
-			"height": 19.2,
-			"seed": 110364385,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "状态变化",
-			"rawText": "状态变化",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "状态变化",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"type": "text",
-			"version": 419,
-			"versionNonce": 939353967,
-			"isDeleted": false,
-			"id": "NyTyJsmO",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 873.1461881928312,
-			"y": 12651.934529624908,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 128,
-			"height": 19.2,
-			"seed": 1930592961,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "线程是否启动成功",
-			"rawText": "线程是否启动成功",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "线程是否启动成功",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"type": "text",
-			"version": 448,
-			"versionNonce": 1585597185,
-			"isDeleted": false,
-			"id": "rxsDpxRS",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 854.8239008175102,
-			"y": 12670.695570562282,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 128,
-			"height": 19.2,
-			"seed": 1712751265,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "线程是否添加成功",
-			"rawText": "线程是否添加成功",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "线程是否添加成功",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"type": "text",
-			"version": 440,
-			"versionNonce": 2044502415,
-			"isDeleted": false,
-			"id": "MSNhqP1k",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 876.899163581017,
-			"y": 13015.945267319767,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 144,
-			"height": 19.2,
-			"seed": 2085586561,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "添加到工作线程集合",
-			"rawText": "添加到工作线程集合",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "添加到工作线程集合",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"type": "text",
-			"version": 356,
-			"versionNonce": 417546977,
-			"isDeleted": false,
-			"id": "P0mIVURa",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 790.7789231697003,
-			"y": 13210.00382817875,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 64,
-			"height": 19.2,
-			"seed": 276631137,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "线程启动",
-			"rawText": "线程启动",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "线程启动",
-			"lineHeight": 1.2,
-			"baseline": 15
-		},
-		{
-			"type": "text",
-			"version": 375,
-			"versionNonce": 1276090287,
-			"isDeleted": false,
-			"id": "mGrdNTJH",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": 814.0761235542026,
-			"y": 13304.229629344183,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#ffffff",
-			"width": 96,
-			"height": 19.2,
-			"seed": 2037291585,
-			"groupIds": [
-				"RRFKLcxZEv454WkhKx9V1"
-			],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1704377784966,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 3,
-			"text": "线程启动失败",
-			"rawText": "线程启动失败",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "线程启动失败",
-			"lineHeight": 1.2,
-			"baseline": 15
+			"originalText": "",
+			"lineHeight": 1.2
 		}
 	],
 	"appState": {
@@ -3240,10 +2916,10 @@ cas失败，重新循环 ^M4Poncut
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 443.71678987060943,
-		"scrollY": -12241.814476029123,
+		"scrollX": 617.8874449036083,
+		"scrollY": -9141.23350322415,
 		"zoom": {
-			"value": 0.8041408009254721
+			"value": 0.5908741755783558
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
