@@ -23,9 +23,11 @@
             "id": "3992f76f8175b8d4",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md"
+                "file": "Java基础/JVM/synchronized.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -130,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md"
+                "file": "Java基础/JVM/synchronized.md"
               }
             }
           },
@@ -297,14 +299,14 @@
   },
   "active": "3992f76f8175b8d4",
   "lastOpenFiles": [
+    "Java基础/synchronized.md",
+    "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
     "Java基础/JVM/volatile.md",
     "Excalidraw/Thread 2024-01-03 19.38.36.excalidraw.md",
     "Java基础/JVM/synchronized.md",
-    "Java基础/synchronized.md",
     "Java基础/Thread.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/JVM/Java内存模型.md",
-    "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "计算机网络/能说下HTTP和RPC的区别吗.md",
     "Excalidraw/能说下HTTP和RPC的区别吗 2024-01-03 17.02.22.excalidraw.md",
