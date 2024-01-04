@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "mode": "source",
                 "source": false
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md"
+                "file": "Java基础/JVM/synchronized.md"
               }
             }
           },
@@ -318,6 +318,7 @@
   },
   "active": "3992f76f8175b8d4",
   "lastOpenFiles": [
+    "Java基础/JVM/垃圾收集器.md",
     "Java基础/JVM/synchronized.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Java基础/ThreadPoolExecutor.md",
@@ -344,7 +345,6 @@
     "Mysql/事务.md",
     "Mysql/快照读和当前读.md",
     "Mysql/如何设计索引.md",
-    "Mysql/索引.md",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
