@@ -2228,6 +2228,8 @@ cas失败，重新循环 ^pjoVVsxd
 
 状态变化 ^F1cRS3Dr
 
+自增成功 ^Fz3L8Ibe
+
 %%
 # Drawing
 ```json
@@ -4915,6 +4917,96 @@ cas失败，重新循环 ^pjoVVsxd
 			"baseline": 15,
 			"containerId": null,
 			"originalText": "状态变化",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "MlDeUPCfTKHYz4NJzARmt",
+			"type": "arrow",
+			"x": 13.736832518257131,
+			"y": 19237.60315428269,
+			"width": 192.51614645217404,
+			"height": 147.30411349724818,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 732709672,
+			"version": 115,
+			"versionNonce": 1465851432,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "Fz3L8Ibe"
+				}
+			],
+			"updated": 1704375586898,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-192.51614645217404,
+					49.25841999273325
+				],
+				[
+					-102.25702869513924,
+					147.30411349724818
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
+		},
+		{
+			"id": "Fz3L8Ibe",
+			"type": "text",
+			"x": -210.7793139339169,
+			"y": 19277.261574275424,
+			"width": 64,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 251665752,
+			"version": 13,
+			"versionNonce": 154256168,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704375584244,
+			"link": null,
+			"locked": false,
+			"text": "自增成功",
+			"rawText": "自增成功",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "MlDeUPCfTKHYz4NJzARmt",
+			"originalText": "自增成功",
 			"lineHeight": 1.2
 		},
 		{
