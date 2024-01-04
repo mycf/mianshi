@@ -2179,8 +2179,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 	"elements": [
 		{
 			"type": "rectangle",
-			"version": 147,
-			"versionNonce": 67738383,
+			"version": 148,
+			"versionNonce": 1134758440,
 			"isDeleted": false,
 			"id": "T_IfEJgzej3u9o0aMojVk",
 			"fillStyle": "solid",
@@ -2211,14 +2211,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704005880593,
+			"updated": 1704344366539,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 135,
-			"versionNonce": 1329373537,
+			"version": 136,
+			"versionNonce": 59247704,
 			"isDeleted": false,
 			"id": "4n420RxD",
 			"fillStyle": "solid",
@@ -2238,7 +2238,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880593,
+			"updated": 1704344366539,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2254,8 +2254,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "rectangle",
-			"version": 215,
-			"versionNonce": 1231118639,
+			"version": 216,
+			"versionNonce": 1645184296,
 			"isDeleted": false,
 			"id": "cSCQqxhqorGcisT6jgZ8W",
 			"fillStyle": "solid",
@@ -2290,14 +2290,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704005880594,
+			"updated": 1704344366539,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 191,
-			"versionNonce": 12832065,
+			"version": 192,
+			"versionNonce": 745849176,
 			"isDeleted": false,
 			"id": "HPDOSMbb",
 			"fillStyle": "solid",
@@ -2317,7 +2317,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366539,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2333,8 +2333,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 1200,
-			"versionNonce": 1274415448,
+			"version": 1201,
+			"versionNonce": 322215976,
 			"isDeleted": false,
 			"id": "gM9uDHGxHDbmNZx2fb7Y9",
 			"fillStyle": "solid",
@@ -2356,7 +2356,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704344195623,
+			"updated": 1704344366539,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2385,8 +2385,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 3196,
-			"versionNonce": 416650072,
+			"version": 3197,
+			"versionNonce": 1610798680,
 			"isDeleted": false,
 			"id": "C_Rb9IbOW7akGqW5d9orl",
 			"fillStyle": "solid",
@@ -2413,7 +2413,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"id": "nSVnUTBr"
 				}
 			],
-			"updated": 1704344195623,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2442,8 +2442,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "text",
-			"version": 36,
-			"versionNonce": 1620058479,
+			"version": 37,
+			"versionNonce": 922639144,
 			"isDeleted": false,
 			"id": "nSVnUTBr",
 			"fillStyle": "solid",
@@ -2463,7 +2463,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2479,8 +2479,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 3111,
-			"versionNonce": 1225797889,
+			"version": 3112,
+			"versionNonce": 50744152,
 			"isDeleted": false,
 			"id": "yZBF-raaQCqh61VvxiCnC",
 			"fillStyle": "solid",
@@ -2507,7 +2507,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"id": "aH6hUxEf"
 				}
 			],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2536,8 +2536,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "text",
-			"version": 34,
-			"versionNonce": 872946575,
+			"version": 35,
+			"versionNonce": 1339602472,
 			"isDeleted": false,
 			"id": "aH6hUxEf",
 			"fillStyle": "solid",
@@ -2557,7 +2557,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2573,8 +2573,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 957,
-			"versionNonce": 642909272,
+			"version": 958,
+			"versionNonce": 1070800984,
 			"isDeleted": false,
 			"id": "nNmQBNr2-Tz2uYIY4uJhD",
 			"fillStyle": "solid",
@@ -2601,7 +2601,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"id": "ZKfTL8XU"
 				}
 			],
-			"updated": 1704344195596,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -2626,8 +2626,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "text",
-			"version": 31,
-			"versionNonce": 1723584943,
+			"version": 32,
+			"versionNonce": 850374952,
 			"isDeleted": false,
 			"id": "ZKfTL8XU",
 			"fillStyle": "solid",
@@ -2647,7 +2647,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2663,8 +2663,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "ellipse",
-			"version": 436,
-			"versionNonce": 1357292737,
+			"version": 437,
+			"versionNonce": 1446860120,
 			"isDeleted": false,
 			"id": "z7hRMv-_l1mhRi6DggYVQ",
 			"fillStyle": "solid",
@@ -2695,14 +2695,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 621,
-			"versionNonce": 1948601633,
+			"version": 622,
+			"versionNonce": 921652264,
 			"isDeleted": false,
 			"id": "gvJG81DLcbyQvfgp3qFDY",
 			"fillStyle": "solid",
@@ -2737,14 +2737,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704005903747,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 833,
-			"versionNonce": 589365505,
+			"version": 834,
+			"versionNonce": 1805183576,
 			"isDeleted": false,
 			"id": "NsXRwofq",
 			"fillStyle": "solid",
@@ -2764,7 +2764,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005903747,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2780,8 +2780,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "rectangle",
-			"version": 886,
-			"versionNonce": 478732888,
+			"version": 887,
+			"versionNonce": 1719895848,
 			"isDeleted": false,
 			"id": "KFlCeFOaKunOIV71uAJVZ",
 			"fillStyle": "solid",
@@ -2816,14 +2816,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704344195612,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1310,
-			"versionNonce": 515438168,
+			"version": 1311,
+			"versionNonce": 1522130776,
 			"isDeleted": false,
 			"id": "kOE4EpYm",
 			"fillStyle": "solid",
@@ -2843,7 +2843,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704344195615,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2859,8 +2859,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "rectangle",
-			"version": 499,
-			"versionNonce": 1173908312,
+			"version": 500,
+			"versionNonce": 769155624,
 			"isDeleted": false,
 			"id": "Yxh_94PFSuKFPbsKze27r",
 			"fillStyle": "solid",
@@ -2895,14 +2895,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704344195616,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 712,
-			"versionNonce": 60555096,
+			"version": 713,
+			"versionNonce": 66335832,
 			"isDeleted": false,
 			"id": "vryEFD3S",
 			"fillStyle": "solid",
@@ -2922,7 +2922,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704344195621,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2938,8 +2938,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 1433,
-			"versionNonce": 651861336,
+			"version": 1434,
+			"versionNonce": 198827304,
 			"isDeleted": false,
 			"id": "e8QVRqdayhgBvPYKkvCK6",
 			"fillStyle": "solid",
@@ -2964,7 +2964,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"id": "XQfTqQvv"
 				}
 			],
-			"updated": 1704344195624,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2993,8 +2993,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "text",
-			"version": 32,
-			"versionNonce": 1663155265,
+			"version": 33,
+			"versionNonce": 488368472,
 			"isDeleted": false,
 			"id": "XQfTqQvv",
 			"fillStyle": "solid",
@@ -3014,7 +3014,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3030,8 +3030,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 3133,
-			"versionNonce": 1128672344,
+			"version": 3134,
+			"versionNonce": 1106507816,
 			"isDeleted": false,
 			"id": "KZLdTHeJqOywDihRKDcZ2",
 			"fillStyle": "solid",
@@ -3056,7 +3056,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"id": "G5aan4TS"
 				}
 			],
-			"updated": 1704344195613,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -3085,8 +3085,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "text",
-			"version": 33,
-			"versionNonce": 1392675873,
+			"version": 34,
+			"versionNonce": 25493080,
 			"isDeleted": false,
 			"id": "G5aan4TS",
 			"fillStyle": "solid",
@@ -3106,7 +3106,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3122,8 +3122,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 618,
-			"versionNonce": 1529312600,
+			"version": 619,
+			"versionNonce": 68334376,
 			"isDeleted": false,
 			"id": "k1cC5DU5JGpSPfd19KAcA",
 			"fillStyle": "solid",
@@ -3148,7 +3148,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"id": "YqCmve2i"
 				}
 			],
-			"updated": 1704344195620,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -3177,8 +3177,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "text",
-			"version": 35,
-			"versionNonce": 1375625217,
+			"version": 36,
+			"versionNonce": 33780568,
 			"isDeleted": false,
 			"id": "YqCmve2i",
 			"fillStyle": "solid",
@@ -3198,7 +3198,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3214,8 +3214,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 974,
-			"versionNonce": 600591704,
+			"version": 975,
+			"versionNonce": 681709096,
 			"isDeleted": false,
 			"id": "ZPEXTIlR7mhLNM11sy4Xy",
 			"fillStyle": "solid",
@@ -3235,7 +3235,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704344195610,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -3268,8 +3268,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 402,
-			"versionNonce": 239012440,
+			"version": 403,
+			"versionNonce": 887834712,
 			"isDeleted": false,
 			"id": "gHnC0qdj-7I5CbrTI6wYi",
 			"fillStyle": "solid",
@@ -3289,7 +3289,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704344195621,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -3314,8 +3314,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "diamond",
-			"version": 2355,
-			"versionNonce": 1419506351,
+			"version": 2356,
+			"versionNonce": 1485703464,
 			"isDeleted": false,
 			"id": "HUxSIj4LqHtmZjeeB5ARv",
 			"fillStyle": "solid",
@@ -3353,14 +3353,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 275,
-			"versionNonce": 1230312385,
+			"version": 276,
+			"versionNonce": 1175485784,
 			"isDeleted": false,
 			"id": "LFRrU0lX",
 			"fillStyle": "solid",
@@ -3382,7 +3382,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 17.44989636159525,
@@ -3398,8 +3398,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "diamond",
-			"version": 2093,
-			"versionNonce": 1896334543,
+			"version": 2094,
+			"versionNonce": 1061332008,
 			"isDeleted": false,
 			"id": "WEVCdVaLjtz4Fcffub1u0",
 			"fillStyle": "solid",
@@ -3437,14 +3437,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 753,
-			"versionNonce": 1474229153,
+			"version": 754,
+			"versionNonce": 1187451480,
 			"isDeleted": false,
 			"id": "wJT1xs79",
 			"fillStyle": "solid",
@@ -3466,7 +3466,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005880594,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 17.973135195917568,
@@ -3482,8 +3482,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "diamond",
-			"version": 2135,
-			"versionNonce": 216050063,
+			"version": 2136,
+			"versionNonce": 984342312,
 			"isDeleted": false,
 			"id": "nt7nr4Gu1S748ZfR_-6Xk",
 			"fillStyle": "solid",
@@ -3525,14 +3525,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 					"type": "arrow"
 				}
 			],
-			"updated": 1704005890737,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 733,
-			"versionNonce": 1744359535,
+			"version": 734,
+			"versionNonce": 2112030552,
 			"isDeleted": false,
 			"id": "doY0TAMK",
 			"fillStyle": "solid",
@@ -3555,7 +3555,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704005890738,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"fontSize": 19.30540392595248,
@@ -3571,8 +3571,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 86,
-			"versionNonce": 1655623256,
+			"version": 87,
+			"versionNonce": 188070440,
 			"isDeleted": false,
 			"id": "XwG1KmlJC-7BuU5kMnnk-",
 			"fillStyle": "solid",
@@ -3592,7 +3592,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704344195599,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -3621,8 +3621,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		},
 		{
 			"type": "arrow",
-			"version": 517,
-			"versionNonce": 258924888,
+			"version": 518,
+			"versionNonce": 934829144,
 			"isDeleted": false,
 			"id": "_v-BtdCvnsMkNaksOGJ7l",
 			"fillStyle": "solid",
@@ -3642,7 +3642,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704344195614,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -3684,11 +3684,11 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"seed": 1591035480,
-			"version": 3,
-			"versionNonce": 1974688344,
+			"version": 5,
+			"versionNonce": 370872664,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704344212829,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"text": "/*\n * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.\n *\n * This code is free software; you can redistribute it and/or modify it\n * under the terms of the GNU General Public License version 2 only, as\n * published by the Free Software Foundation.  Oracle designates this\n * particular file as subject to the \"Classpath\" exception as provided\n * by Oracle in the LICENSE file that accompanied this code.\n *\n * This code is distributed in the hope that it will be useful, but WITHOUT\n * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\n * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License\n * version 2 for more details (a copy is included in the LICENSE file that\n * accompanied this code).\n *\n * You should have received a copy of the GNU General Public License version\n * 2 along with this work; if not, write to the Free Software Foundation,\n * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.\n *\n * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA\n * or visit www.oracle.com if you need additional information or have any\n * questions.\n */\n\n/*\n * This file is available under and governed by the GNU General Public\n * License version 2 only, as published by the Free Software Foundation.\n * However, the following notice accompanied the original version of this\n * file:\n *\n * Written by Doug Lea with assistance from members of JCP JSR-166\n * Expert Group and released to the public domain, as explained at\n * http://creativecommons.org/publicdomain/zero/1.0/\n */\n\npackage java.util.concurrent;\n\nimport java.util.ArrayList;\nimport java.util.ConcurrentModificationException;\nimport java.util.HashSet;\nimport java.util.Iterator;\nimport java.util.List;\nimport java.util.concurrent.atomic.AtomicInteger;\nimport java.util.concurrent.locks.AbstractQueuedSynchronizer;\nimport java.util.concurrent.locks.Condition;\nimport java.util.concurrent.locks.ReentrantLock;\n\n/**\n * An {@link ExecutorService} that executes each submitted task using\n * one of possibly several pooled threads, normally configured\n * using {@link Executors} factory methods.\n *\n * <p>Thread pools address two different problems: they usually\n * provide improved performance when executing large numbers of\n * asynchronous tasks, due to reduced per-task invocation overhead,\n * and they provide a means of bounding and managing the resources,\n * including threads, consumed when executing a collection of tasks.\n * Each {@code ThreadPoolExecutor} also maintains some basic\n * statistics, such as the number of completed tasks.\n *\n * <p>To be useful across a wide range of contexts, this class\n * provides many adjustable parameters and extensibility\n * hooks. However, programmers are urged to use the more convenient\n * {@link Executors} factory methods {@link\n * Executors#newCachedThreadPool} (unbounded thread pool, with\n * automatic thread reclamation), {@link Executors#newFixedThreadPool}\n * (fixed size thread pool) and {@link\n * Executors#newSingleThreadExecutor} (single background thread), that\n * preconfigure settings for the most common usage\n * scenarios. Otherwise, use the following guide when manually\n * configuring and tuning this class:\n *\n * <dl>\n *\n * <dt>Core and maximum pool sizes</dt>\n *\n * <dd>A {@code ThreadPoolExecutor} will automatically adjust the\n * pool size (see {@link #getPoolSize})\n * according to the bounds set by\n * corePoolSize (see {@link #getCorePoolSize}) and\n * maximumPoolSize (see {@link #getMaximumPoolSize}).\n *\n * When a new task is submitted in method {@link #execute(Runnable)},\n * if fewer than corePoolSize threads are running, a new thread is\n * created to handle the request, even if other worker threads are\n * idle.  Else if fewer than maximumPoolSize threads are running, a\n * new thread will be created to handle the request only if the queue\n * is full.  By setting corePoolSize and maximumPoolSize the same, you\n * create a fixed-size thread pool. By setting maximumPoolSize to an\n * essentially unbounded value such as {@code Integer.MAX_VALUE}, you\n * allow the pool to accommodate an arbitrary number of concurrent\n * tasks. Most typically, core and maximum pool sizes are set only\n * upon construction, but they may also be changed dynamically using\n * {@link #setCorePoolSize} and {@link #setMaximumPoolSize}. </dd>\n *\n * <dt>On-demand construction</dt>\n *\n * <dd>By default, even core threads are initially created and\n * started only when new tasks arrive, but this can be overridden\n * dynamically using method {@link #prestartCoreThread} or {@link\n * #prestartAllCoreThreads}.  You probably want to prestart threads if\n * you construct the pool with a non-empty queue. </dd>\n *\n * <dt>Creating new threads</dt>\n *\n * <dd>New threads are created using a {@link ThreadFactory}.  If not\n * otherwise specified, a {@link Executors#defaultThreadFactory} is\n * used, that creates threads to all be in the same {@link\n * ThreadGroup} and with the same {@code NORM_PRIORITY} priority and\n * non-daemon status. By supplying a different ThreadFactory, you can\n * alter the thread's name, thread group, priority, daemon status,\n * etc. If a {@code ThreadFactory} fails to create a thread when asked\n * by returning null from {@code newThread}, the executor will\n * continue, but might not be able to execute any tasks. Threads\n * should possess the \"modifyThread\" {@code RuntimePermission}. If\n * worker threads or other threads using the pool do not possess this\n * permission, service may be degraded: configuration changes may not\n * take effect in a timely manner, and a shutdown pool may remain in a\n * state in which termination is possible but not completed.</dd>\n *\n * <dt>Keep-alive times</dt>\n *\n * <dd>If the pool currently has more than corePoolSize threads,\n * excess threads will be terminated if they have been idle for more\n * than the keepAliveTime (see {@link #getKeepAliveTime(TimeUnit)}).\n * This provides a means of reducing resource consumption when the\n * pool is not being actively used. If the pool becomes more active\n * later, new threads will be constructed. This parameter can also be\n * changed dynamically using method {@link #setKeepAliveTime(long,\n * TimeUnit)}.  Using a value of {@code Long.MAX_VALUE} {@link\n * TimeUnit#NANOSECONDS} effectively disables idle threads from ever\n * terminating prior to shut down. By default, the keep-alive policy\n * applies only when there are more than corePoolSize threads, but\n * method {@link #allowCoreThreadTimeOut(boolean)} can be used to\n * apply this time-out policy to core threads as well, so long as the\n * keepAliveTime value is non-zero. </dd>\n *\n * <dt>Queuing</dt>\n *\n * <dd>Any {@link BlockingQueue} may be used to transfer and hold\n * submitted tasks.  The use of this queue interacts with pool sizing:\n *\n * <ul>\n *\n * <li>If fewer than corePoolSize threads are running, the Executor\n * always prefers adding a new thread\n * rather than queuing.\n *\n * <li>If corePoolSize or more threads are running, the Executor\n * always prefers queuing a request rather than adding a new\n * thread.\n *\n * <li>If a request cannot be queued, a new thread is created unless\n * this would exceed maximumPoolSize, in which case, the task will be\n * rejected.\n *\n * </ul>\n *\n * There are three general strategies for queuing:\n * <ol>\n *\n * <li><em> Direct handoffs.</em> A good default choice for a work\n * queue is a {@link SynchronousQueue} that hands off tasks to threads\n * without otherwise holding them. Here, an attempt to queue a task\n * will fail if no threads are immediately available to run it, so a\n * new thread will be constructed. This policy avoids lockups when\n * handling sets of requests that might have internal dependencies.\n * Direct handoffs generally require unbounded maximumPoolSizes to\n * avoid rejection of new submitted tasks. This in turn admits the\n * possibility of unbounded thread growth when commands continue to\n * arrive on average faster than they can be processed.\n *\n * <li><em> Unbounded queues.</em> Using an unbounded queue (for\n * example a {@link LinkedBlockingQueue} without a predefined\n * capacity) will cause new tasks to wait in the queue when all\n * corePoolSize threads are busy. Thus, no more than corePoolSize\n * threads will ever be created. (And the value of the maximumPoolSize\n * therefore doesn't have any effect.)  This may be appropriate when\n * each task is completely independent of others, so tasks cannot\n * affect each others execution; for example, in a web page server.\n * While this style of queuing can be useful in smoothing out\n * transient bursts of requests, it admits the possibility of\n * unbounded work queue growth when commands continue to arrive on\n * average faster than they can be processed.\n *\n * <li><em>Bounded queues.</em> A bounded queue (for example, an\n * {@link ArrayBlockingQueue}) helps prevent resource exhaustion when\n * used with finite maximumPoolSizes, but can be more difficult to\n * tune and control.  Queue sizes and maximum pool sizes may be traded\n * off for each other: Using large queues and small pools minimizes\n * CPU usage, OS resources, and context-switching overhead, but can\n * lead to artificially low throughput.  If tasks frequently block (for\n * example if they are I/O bound), a system may be able to schedule\n * time for more threads than you otherwise allow. Use of small queues\n * generally requires larger pool sizes, which keeps CPUs busier but\n * may encounter unacceptable scheduling overhead, which also\n * decreases throughput.\n *\n * </ol>\n *\n * </dd>\n *\n * <dt>Rejected tasks</dt>\n *\n * <dd>New tasks submitted in method {@link #execute(Runnable)} will be\n * <em>rejected</em> when the Executor has been shut down, and also when\n * the Executor uses finite bounds for both maximum threads and work queue\n * capacity, and is saturated.  In either case, the {@code execute} method\n * invokes the {@link\n * RejectedExecutionHandler#rejectedExecution(Runnable, ThreadPoolExecutor)}\n * method of its {@link RejectedExecutionHandler}.  Four predefined handler\n * policies are provided:\n *\n * <ol>\n *\n * <li>In the default {@link ThreadPoolExecutor.AbortPolicy}, the handler\n * throws a runtime {@link RejectedExecutionException} upon rejection.\n *\n * <li>In {@link ThreadPoolExecutor.CallerRunsPolicy}, the thread\n * that invokes {@code execute} itself runs the task. This provides a\n * simple feedback control mechanism that will slow down the rate that\n * new tasks are submitted.\n *\n * <li>In {@link ThreadPoolExecutor.DiscardPolicy}, a task that cannot\n * be executed is simply dropped. This policy is designed only for\n * those rare cases in which task completion is never relied upon.\n *\n * <li>In {@link ThreadPoolExecutor.DiscardOldestPolicy}, if the\n * executor is not shut down, the task at the head of the work queue\n * is dropped, and then execution is retried (which can fail again,\n * causing this to be repeated.) This policy is rarely acceptable.  In\n * nearly all cases, you should also cancel the task to cause an\n * exception in any component waiting for its completion, and/or log\n * the failure, as illustrated in {@link\n * ThreadPoolExecutor.DiscardOldestPolicy} documentation.\n *\n * </ol>\n *\n * It is possible to define and use other kinds of {@link\n * RejectedExecutionHandler} classes. Doing so requires some care\n * especially when policies are designed to work only under particular\n * capacity or queuing policies. </dd>\n *\n * <dt>Hook methods</dt>\n *\n * <dd>This class provides {@code protected} overridable\n * {@link #beforeExecute(Thread, Runnable)} and\n * {@link #afterExecute(Runnable, Throwable)} methods that are called\n * before and after execution of each task.  These can be used to\n * manipulate the execution environment; for example, reinitializing\n * ThreadLocals, gathering statistics, or adding log entries.\n * Additionally, method {@link #terminated} can be overridden to perform\n * any special processing that needs to be done once the Executor has\n * fully terminated.\n *\n * <p>If hook, callback, or BlockingQueue methods throw exceptions,\n * internal worker threads may in turn fail, abruptly terminate, and\n * possibly be replaced.</dd>\n *\n * <dt>Queue maintenance</dt>\n *\n * <dd>Method {@link #getQueue()} allows access to the work queue\n * for purposes of monitoring and debugging.  Use of this method for\n * any other purpose is strongly discouraged.  Two supplied methods,\n * {@link #remove(Runnable)} and {@link #purge} are available to\n * assist in storage reclamation when large numbers of queued tasks\n * become cancelled.</dd>\n *\n * <dt>Reclamation</dt>\n *\n * <dd>A pool that is no longer referenced in a program <em>AND</em>\n * has no remaining threads may be reclaimed (garbage collected)\n * without being explicitly shutdown. You can configure a pool to\n * allow all unused threads to eventually die by setting appropriate\n * keep-alive times, using a lower bound of zero core threads and/or\n * setting {@link #allowCoreThreadTimeOut(boolean)}.  </dd>\n *\n * </dl>\n *\n * <p><b>Extension example.</b> Most extensions of this class\n * override one or more of the protected hook methods. For example,\n * here is a subclass that adds a simple pause/resume feature:\n *\n * <pre> {@code\n * class PausableThreadPoolExecutor extends ThreadPoolExecutor {\n *   private boolean isPaused;\n *   private ReentrantLock pauseLock = new ReentrantLock();\n *   private Condition unpaused = pauseLock.newCondition();\n *\n *   public PausableThreadPoolExecutor(...) { super(...); }\n *\n *   protected void beforeExecute(Thread t, Runnable r) {\n *     super.beforeExecute(t, r);\n *     pauseLock.lock();\n *     try {\n *       while (isPaused) unpaused.await();\n *     } catch (InterruptedException ie) {\n *       t.interrupt();\n *     } finally {\n *       pauseLock.unlock();\n *     }\n *   }\n *\n *   public void pause() {\n *     pauseLock.lock();\n *     try {\n *       isPaused = true;\n *     } finally {\n *       pauseLock.unlock();\n *     }\n *   }\n *\n *   public void resume() {\n *     pauseLock.lock();\n *     try {\n *       isPaused = false;\n *       unpaused.signalAll();\n *     } finally {\n *       pauseLock.unlock();\n *     }\n *   }\n * }}</pre>\n *\n * @since 1.5\n * @author Doug Lea\n */\npublic class ThreadPoolExecutor extends AbstractExecutorService {\n    /**\n     * The main pool control state, ctl, is an atomic integer packing\n     * two conceptual fields\n     *   workerCount, indicating the effective number of threads\n     *   runState,    indicating whether running, shutting down etc\n     *\n     * In order to pack them into one int, we limit workerCount to\n     * (2^29)-1 (about 500 million) threads rather than (2^31)-1 (2\n     * billion) otherwise representable. If this is ever an issue in\n     * the future, the variable can be changed to be an AtomicLong,\n     * and the shift/mask constants below adjusted. But until the need\n     * arises, this code is a bit faster and simpler using an int.\n     *\n     * The workerCount is the number of workers that have been\n     * permitted to start and not permitted to stop.  The value may be\n     * transiently different from the actual number of live threads,\n     * for example when a ThreadFactory fails to create a thread when\n     * asked, and when exiting threads are still performing\n     * bookkeeping before terminating. The user-visible pool size is\n     * reported as the current size of the workers set.\n     *\n     * The runState provides the main lifecycle control, taking on values:\n     *\n     *   RUNNING:  Accept new tasks and process queued tasks\n     *   SHUTDOWN: Don't accept new tasks, but process queued tasks\n     *   STOP:     Don't accept new tasks, don't process queued tasks,\n     *             and interrupt in-progress tasks\n     *   TIDYING:  All tasks have terminated, workerCount is zero,\n     *             the thread transitioning to state TIDYING\n     *             will run the terminated() hook method\n     *   TERMINATED: terminated() has completed\n     *\n     * The numerical order among these values matters, to allow\n     * ordered comparisons. The runState monotonically increases over\n     * time, but need not hit each state. The transitions are:\n     *\n     * RUNNING -> SHUTDOWN\n     *    On invocation of shutdown()\n     * (RUNNING or SHUTDOWN) -> STOP\n     *    On invocation of shutdownNow()\n     * SHUTDOWN -> TIDYING\n     *    When both queue and pool are empty\n     * STOP -> TIDYING\n     *    When pool is empty\n     * TIDYING -> TERMINATED\n     *    When the terminated() hook method has completed\n     *\n     * Threads waiting in awaitTermination() will return when the\n     * state reaches TERMINATED.\n     *\n     * Detecting the transition from SHUTDOWN to TIDYING is less\n     * straightforward than you'd like because the queue may become\n     * empty after non-empty and vice versa during SHUTDOWN state, but\n     * we can only terminate if, after seeing that it is empty, we see\n     * that workerCount is 0 (which sometimes entails a recheck -- see\n     * below).\n     */\n    private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));\n    private static final int COUNT_BITS = Integer.SIZE - 3;\n    private static final int COUNT_MASK = (1 << COUNT_BITS) - 1;\n\n    // runState is stored in the high-order bits\n    private static final int RUNNING    = -1 << COUNT_BITS;\n    private static final int SHUTDOWN   =  0 << COUNT_BITS;\n    private static final int STOP       =  1 << COUNT_BITS;\n    private static final int TIDYING    =  2 << COUNT_BITS;\n    private static final int TERMINATED =  3 << COUNT_BITS;\n\n    // Packing and unpacking ctl\n    private static int runStateOf(int c)     { return c & ~COUNT_MASK; }\n    private static int workerCountOf(int c)  { return c & COUNT_MASK; }\n    private static int ctlOf(int rs, int wc) { return rs | wc; }\n\n    /*\n     * Bit field accessors that don't require unpacking ctl.\n     * These depend on the bit layout and on workerCount being never negative.\n     */\n\n    private static boolean runStateLessThan(int c, int s) {\n        return c < s;\n    }\n\n    private static boolean runStateAtLeast(int c, int s) {\n        return c >= s;\n    }\n\n    private static boolean isRunning(int c) {\n        return c < SHUTDOWN;\n    }\n\n    /**\n     * Attempts to CAS-increment the workerCount field of ctl.\n     */\n    private boolean compareAndIncrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect + 1);\n    }\n\n    /**\n     * Attempts to CAS-decrement the workerCount field of ctl.\n     */\n    private boolean compareAndDecrementWorkerCount(int expect) {\n        return ctl.compareAndSet(expect, expect - 1);\n    }\n\n    /**\n     * Decrements the workerCount field of ctl. This is called only on\n     * abrupt termination of a thread (see processWorkerExit). Other\n     * decrements are performed within getTask.\n     */\n    private void decrementWorkerCount() {\n        ctl.addAndGet(-1);\n    }\n\n    /**\n     * The queue used for holding tasks and handing off to worker\n     * threads.  We do not require that workQueue.poll() returning\n     * null necessarily means that workQueue.isEmpty(), so rely\n     * solely on isEmpty to see if the queue is empty (which we must\n     * do for example when deciding whether to transition from\n     * SHUTDOWN to TIDYING).  This accommodates special-purpose\n     * queues such as DelayQueues for which poll() is allowed to\n     * return null even if it may later return non-null when delays\n     * expire.\n     */\n    private final BlockingQueue<Runnable> workQueue;\n\n    /**\n     * Lock held on access to workers set and related bookkeeping.\n     * While we could use a concurrent set of some sort, it turns out\n     * to be generally preferable to use a lock. Among the reasons is\n     * that this serializes interruptIdleWorkers, which avoids\n     * unnecessary interrupt storms, especially during shutdown.\n     * Otherwise exiting threads would concurrently interrupt those\n     * that have not yet interrupted. It also simplifies some of the\n     * associated statistics bookkeeping of largestPoolSize etc. We\n     * also hold mainLock on shutdown and shutdownNow, for the sake of\n     * ensuring workers set is stable while separately checking\n     * permission to interrupt and actually interrupting.\n     */\n    private final ReentrantLock mainLock = new ReentrantLock();\n\n    /**\n     * Set containing all worker threads in pool. Accessed only when\n     * holding mainLock.\n     */\n    private final HashSet<Worker> workers = new HashSet<>();\n\n    /**\n     * Wait condition to support awaitTermination.\n     */\n    private final Condition termination = mainLock.newCondition();\n\n    /**\n     * Tracks largest attained pool size. Accessed only under\n     * mainLock.\n     */\n    private int largestPoolSize;\n\n    /**\n     * Counter for completed tasks. Updated only on termination of\n     * worker threads. Accessed only under mainLock.\n     */\n    private long completedTaskCount;\n\n    /*\n     * All user control parameters are declared as volatiles so that\n     * ongoing actions are based on freshest values, but without need\n     * for locking, since no internal invariants depend on them\n     * changing synchronously with respect to other actions.\n     */\n\n    /**\n     * Factory for new threads. All threads are created using this\n     * factory (via method addWorker).  All callers must be prepared\n     * for addWorker to fail, which may reflect a system or user's\n     * policy limiting the number of threads.  Even though it is not\n     * treated as an error, failure to create threads may result in\n     * new tasks being rejected or existing ones remaining stuck in\n     * the queue.\n     *\n     * We go further and preserve pool invariants even in the face of\n     * errors such as OutOfMemoryError, that might be thrown while\n     * trying to create threads.  Such errors are rather common due to\n     * the need to allocate a native stack in Thread.start, and users\n     * will want to perform clean pool shutdown to clean up.  There\n     * will likely be enough memory available for the cleanup code to\n     * complete without encountering yet another OutOfMemoryError.\n     */\n    private volatile ThreadFactory threadFactory;\n\n    /**\n     * Handler called when saturated or shutdown in execute.\n     */\n    private volatile RejectedExecutionHandler handler;\n\n    /**\n     * Timeout in nanoseconds for idle threads waiting for work.\n     * Threads use this timeout when there are more than corePoolSize\n     * present or if allowCoreThreadTimeOut. Otherwise they wait\n     * forever for new work.\n     */\n    private volatile long keepAliveTime;\n\n    /**\n     * If false (default), core threads stay alive even when idle.\n     * If true, core threads use keepAliveTime to time out waiting\n     * for work.\n     */\n    private volatile boolean allowCoreThreadTimeOut;\n\n    /**\n     * Core pool size is the minimum number of workers to keep alive\n     * (and not allow to time out etc) unless allowCoreThreadTimeOut\n     * is set, in which case the minimum is zero.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code corePoolSize & COUNT_MASK}.\n     */\n    private volatile int corePoolSize;\n\n    /**\n     * Maximum pool size.\n     *\n     * Since the worker count is actually stored in COUNT_BITS bits,\n     * the effective limit is {@code maximumPoolSize & COUNT_MASK}.\n     */\n    private volatile int maximumPoolSize;\n\n    /**\n     * The default rejected execution handler.\n     */\n    private static final RejectedExecutionHandler defaultHandler =\n        new AbortPolicy();\n\n    /**\n     * Permission required for callers of shutdown and shutdownNow.\n     * We additionally require (see checkShutdownAccess) that callers\n     * have permission to actually interrupt threads in the worker set\n     * (as governed by Thread.interrupt, which relies on\n     * ThreadGroup.checkAccess, which in turn relies on\n     * SecurityManager.checkAccess). Shutdowns are attempted only if\n     * these checks pass.\n     *\n     * All actual invocations of Thread.interrupt (see\n     * interruptIdleWorkers and interruptWorkers) ignore\n     * SecurityExceptions, meaning that the attempted interrupts\n     * silently fail. In the case of shutdown, they should not fail\n     * unless the SecurityManager has inconsistent policies, sometimes\n     * allowing access to a thread and sometimes not. In such cases,\n     * failure to actually interrupt threads may disable or delay full\n     * termination. Other uses of interruptIdleWorkers are advisory,\n     * and failure to actually interrupt will merely delay response to\n     * configuration changes so is not handled exceptionally.\n     */\n    private static final RuntimePermission shutdownPerm =\n        new RuntimePermission(\"modifyThread\");\n\n    /**\n     * Class Worker mainly maintains interrupt control state for\n     * threads running tasks, along with other minor bookkeeping.\n     * This class opportunistically extends AbstractQueuedSynchronizer\n     * to simplify acquiring and releasing a lock surrounding each\n     * task execution.  This protects against interrupts that are\n     * intended to wake up a worker thread waiting for a task from\n     * instead interrupting a task being run.  We implement a simple\n     * non-reentrant mutual exclusion lock rather than use\n     * ReentrantLock because we do not want worker tasks to be able to\n     * reacquire the lock when they invoke pool control methods like\n     * setCorePoolSize.  Additionally, to suppress interrupts until\n     * the thread actually starts running tasks, we initialize lock\n     * state to a negative value, and clear it upon start (in\n     * runWorker).\n     */\n    private final class Worker\n        extends AbstractQueuedSynchronizer\n        implements Runnable\n    {\n        /**\n         * This class will never be serialized, but we provide a\n         * serialVersionUID to suppress a javac warning.\n         */\n        private static final long serialVersionUID = 6138294804551838833L;\n\n        /** Thread this worker is running in.  Null if factory fails. */\n        @SuppressWarnings(\"serial\") // Unlikely to be serializable\n        final Thread thread;\n        /** Initial task to run.  Possibly null. */\n        @SuppressWarnings(\"serial\") // Not statically typed as Serializable\n        Runnable firstTask;\n        /** Per-thread task counter */\n        volatile long completedTasks;\n\n        // TODO: switch to AbstractQueuedLongSynchronizer and move\n        // completedTasks into the lock word.\n\n        /**\n         * Creates with given first task and thread from ThreadFactory.\n         * @param firstTask the first task (null if none)\n         */\n        Worker(Runnable firstTask) {\n            setState(-1); // inhibit interrupts until runWorker\n            this.firstTask = firstTask;\n            this.thread = getThreadFactory().newThread(this);\n        }\n\n        /** Delegates main run loop to outer runWorker. */\n        public void run() {\n            runWorker(this);\n        }\n\n        // Lock methods\n        //\n        // The value 0 represents the unlocked state.\n        // The value 1 represents the locked state.\n\n        protected boolean isHeldExclusively() {\n            return getState() != 0;\n        }\n\n        protected boolean tryAcquire(int unused) {\n            if (compareAndSetState(0, 1)) {\n                setExclusiveOwnerThread(Thread.currentThread());\n                return true;\n            }\n            return false;\n        }\n\n        protected boolean tryRelease(int unused) {\n            setExclusiveOwnerThread(null);\n            setState(0);\n            return true;\n        }\n\n        public void lock()        { acquire(1); }\n        public boolean tryLock()  { return tryAcquire(1); }\n        public void unlock()      { release(1); }\n        public boolean isLocked() { return isHeldExclusively(); }\n\n        void interruptIfStarted() {\n            Thread t;\n            if (getState() >= 0 && (t = thread) != null && !t.isInterrupted()) {\n                try {\n                    t.interrupt();\n                } catch (SecurityException ignore) {\n                }\n            }\n        }\n    }\n\n    /*\n     * Methods for setting control state\n     */\n\n    /**\n     * Transitions runState to given target, or leaves it alone if\n     * already at least the given target.\n     *\n     * @param targetState the desired state, either SHUTDOWN or STOP\n     *        (but not TIDYING or TERMINATED -- use tryTerminate for that)\n     */\n    private void advanceRunState(int targetState) {\n        // assert targetState == SHUTDOWN || targetState == STOP;\n        for (;;) {\n            int c = ctl.get();\n            if (runStateAtLeast(c, targetState) ||\n                ctl.compareAndSet(c, ctlOf(targetState, workerCountOf(c))))\n                break;\n        }\n    }\n\n    /**\n     * Transitions to TERMINATED state if either (SHUTDOWN and pool\n     * and queue empty) or (STOP and pool empty).  If otherwise\n     * eligible to terminate but workerCount is nonzero, interrupts an\n     * idle worker to ensure that shutdown signals propagate. This\n     * method must be called following any action that might make\n     * termination possible -- reducing worker count or removing tasks\n     * from the queue during shutdown. The method is non-private to\n     * allow access from ScheduledThreadPoolExecutor.\n     */\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n    /*\n     * Methods for controlling interrupts to worker threads.\n     */\n\n    /**\n     * If there is a security manager, makes sure caller has\n     * permission to shut down threads in general (see shutdownPerm).\n     * If this passes, additionally makes sure the caller is allowed\n     * to interrupt each worker thread. This might not be true even if\n     * first check passed, if the SecurityManager treats some threads\n     * specially.\n     */\n    private void checkShutdownAccess() {\n        // assert mainLock.isHeldByCurrentThread();\n        @SuppressWarnings(\"removal\")\n        SecurityManager security = System.getSecurityManager();\n        if (security != null) {\n            security.checkPermission(shutdownPerm);\n            for (Worker w : workers)\n                security.checkAccess(w.thread);\n        }\n    }\n\n    /**\n     * Interrupts all threads, even if active. Ignores SecurityExceptions\n     * (in which case some threads may remain uninterrupted).\n     */\n    private void interruptWorkers() {\n        // assert mainLock.isHeldByCurrentThread();\n        for (Worker w : workers)\n            w.interruptIfStarted();\n    }\n\n    /**\n     * Interrupts threads that might be waiting for tasks (as\n     * indicated by not being locked) so they can check for\n     * termination or configuration changes. Ignores\n     * SecurityExceptions (in which case some threads may remain\n     * uninterrupted).\n     *\n     * @param onlyOne If true, interrupt at most one worker. This is\n     * called only from tryTerminate when termination is otherwise\n     * enabled but there are still other workers.  In this case, at\n     * most one waiting worker is interrupted to propagate shutdown\n     * signals in case all threads are currently waiting.\n     * Interrupting any arbitrary thread ensures that newly arriving\n     * workers since shutdown began will also eventually exit.\n     * To guarantee eventual termination, it suffices to always\n     * interrupt only one idle worker, but shutdown() interrupts all\n     * idle workers so that redundant workers exit promptly, not\n     * waiting for a straggler task to finish.\n     */\n    private void interruptIdleWorkers(boolean onlyOne) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            for (Worker w : workers) {\n                Thread t = w.thread;\n                if (!t.isInterrupted() && w.tryLock()) {\n                    try {\n                        t.interrupt();\n                    } catch (SecurityException ignore) {\n                    } finally {\n                        w.unlock();\n                    }\n                }\n                if (onlyOne)\n                    break;\n            }\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Common form of interruptIdleWorkers, to avoid having to\n     * remember what the boolean argument means.\n     */\n    private void interruptIdleWorkers() {\n        interruptIdleWorkers(false);\n    }\n\n    private static final boolean ONLY_ONE = true;\n\n    /*\n     * Misc utilities, most of which are also exported to\n     * ScheduledThreadPoolExecutor\n     */\n\n    /**\n     * Invokes the rejected execution handler for the given command.\n     * Package-protected for use by ScheduledThreadPoolExecutor.\n     */\n    final void reject(Runnable command) {\n        handler.rejectedExecution(command, this);\n    }\n\n    /**\n     * Performs any further cleanup following run state transition on\n     * invocation of shutdown.  A no-op here, but used by\n     * ScheduledThreadPoolExecutor to cancel delayed tasks.\n     */\n    void onShutdown() {\n    }\n\n    /**\n     * Drains the task queue into a new list, normally using\n     * drainTo. But if the queue is a DelayQueue or any other kind of\n     * queue for which poll or drainTo may fail to remove some\n     * elements, it deletes them one by one.\n     */\n    private List<Runnable> drainQueue() {\n        BlockingQueue<Runnable> q = workQueue;\n        ArrayList<Runnable> taskList = new ArrayList<>();\n        q.drainTo(taskList);\n        if (!q.isEmpty()) {\n            for (Runnable r : q.toArray(new Runnable[0])) {\n                if (q.remove(r))\n                    taskList.add(r);\n            }\n        }\n        return taskList;\n    }\n\n    /*\n     * Methods for creating, running and cleaning up after workers\n     */\n\n    /**\n     * Checks if a new worker can be added with respect to current\n     * pool state and the given bound (either core or maximum). If so,\n     * the worker count is adjusted accordingly, and, if possible, a\n     * new worker is created and started, running firstTask as its\n     * first task. This method returns false if the pool is stopped or\n     * eligible to shut down. It also returns false if the thread\n     * factory fails to create a thread when asked.  If the thread\n     * creation fails, either due to the thread factory returning\n     * null, or due to an exception (typically OutOfMemoryError in\n     * Thread.start()), we roll back cleanly.\n     *\n     * @param firstTask the task the new thread should run first (or\n     * null if none). Workers are created with an initial first task\n     * (in method execute()) to bypass queuing when there are fewer\n     * than corePoolSize threads (in which case we always start one),\n     * or when the queue is full (in which case we must bypass queue).\n     * Initially idle threads are usually created via\n     * prestartCoreThread or to replace other dying workers.\n     *\n     * @param core if true use corePoolSize as bound, else\n     * maximumPoolSize. (A boolean indicator is used here rather than a\n     * value to ensure reads of fresh values after checking other pool\n     * state).\n     * @return true if successful\n     */\n    private boolean addWorker(Runnable firstTask, boolean core) {\n        retry:\n        for (int c = ctl.get();;) {\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP)\n                    || firstTask != null\n                    || workQueue.isEmpty()))\n                return false;\n\n            for (;;) {\n                if (workerCountOf(c)\n                    >= ((core ? corePoolSize : maximumPoolSize) & COUNT_MASK))\n                    return false;\n                if (compareAndIncrementWorkerCount(c))\n                    break retry;\n                c = ctl.get();  // Re-read ctl\n                if (runStateAtLeast(c, SHUTDOWN))\n                    continue retry;\n                // else CAS failed due to workerCount change; retry inner loop\n            }\n        }\n\n        boolean workerStarted = false;\n        boolean workerAdded = false;\n        Worker w = null;\n        try {\n            w = new Worker(firstTask);\n            final Thread t = w.thread;\n            if (t != null) {\n                final ReentrantLock mainLock = this.mainLock;\n                mainLock.lock();\n                try {\n                    // Recheck while holding lock.\n                    // Back out on ThreadFactory failure or if\n                    // shut down before lock acquired.\n                    int c = ctl.get();\n\n                    if (isRunning(c) ||\n                        (runStateLessThan(c, STOP) && firstTask == null)) {\n                        if (t.getState() != Thread.State.NEW)\n                            throw new IllegalThreadStateException();\n                        workers.add(w);\n                        workerAdded = true;\n                        int s = workers.size();\n                        if (s > largestPoolSize)\n                            largestPoolSize = s;\n                    }\n                } finally {\n                    mainLock.unlock();\n                }\n                if (workerAdded) {\n                    t.start();\n                    workerStarted = true;\n                }\n            }\n        } finally {\n            if (! workerStarted)\n                addWorkerFailed(w);\n        }\n        return workerStarted;\n    }\n\n    /**\n     * Rolls back the worker thread creation.\n     * - removes worker from workers, if present\n     * - decrements worker count\n     * - rechecks for termination, in case the existence of this\n     *   worker was holding up termination\n     */\n    private void addWorkerFailed(Worker w) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            if (w != null)\n                workers.remove(w);\n            decrementWorkerCount();\n            tryTerminate();\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Performs cleanup and bookkeeping for a dying worker. Called\n     * only from worker threads. Unless completedAbruptly is set,\n     * assumes that workerCount has already been adjusted to account\n     * for exit.  This method removes thread from worker set, and\n     * possibly terminates the pool or replaces the worker if either\n     * it exited due to user task exception or if fewer than\n     * corePoolSize workers are running or queue is non-empty but\n     * there are no workers.\n     *\n     * @param w the worker\n     * @param completedAbruptly if the worker died due to user exception\n     */\n    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    /**\n     * Performs blocking or timed wait for a task, depending on\n     * current configuration settings, or returns null if this worker\n     * must exit because of any of:\n     * 1. There are more than maximumPoolSize workers (due to\n     *    a call to setMaximumPoolSize).\n     * 2. The pool is stopped.\n     * 3. The pool is shutdown and the queue is empty.\n     * 4. This worker timed out waiting for a task, and timed-out\n     *    workers are subject to termination (that is,\n     *    {@code allowCoreThreadTimeOut || workerCount > corePoolSize})\n     *    both before and after the timed wait, and if the queue is\n     *    non-empty, this worker is not the last thread in the pool.\n     *\n     * @return task, or null if the worker must exit, in which case\n     *         workerCount is decremented\n     */\n    private Runnable getTask() {\n        boolean timedOut = false; // Did the last poll() time out?\n\n        for (;;) {\n            int c = ctl.get();\n\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {\n                decrementWorkerCount();\n                return null;\n            }\n\n            int wc = workerCountOf(c);\n\n            // Are workers subject to culling?\n            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;\n\n            if ((wc > maximumPoolSize || (timed && timedOut))\n                && (wc > 1 || workQueue.isEmpty())) {\n                if (compareAndDecrementWorkerCount(c))\n                    return null;\n                continue;\n            }\n\n            try {\n                Runnable r = timed ?\n                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :\n                    workQueue.take();\n                if (r != null)\n                    return r;\n                timedOut = true;\n            } catch (InterruptedException retry) {\n                timedOut = false;\n            }\n        }\n    }\n\n    /**\n     * Main worker run loop.  Repeatedly gets tasks from queue and\n     * executes them, while coping with a number of issues:\n     *\n     * 1. We may start out with an initial task, in which case we\n     * don't need to get the first one. Otherwise, as long as pool is\n     * running, we get tasks from getTask. If it returns null then the\n     * worker exits due to changed pool state or configuration\n     * parameters.  Other exits result from exception throws in\n     * external code, in which case completedAbruptly holds, which\n     * usually leads processWorkerExit to replace this thread.\n     *\n     * 2. Before running any task, the lock is acquired to prevent\n     * other pool interrupts while the task is executing, and then we\n     * ensure that unless pool is stopping, this thread does not have\n     * its interrupt set.\n     *\n     * 3. Each task run is preceded by a call to beforeExecute, which\n     * might throw an exception, in which case we cause thread to die\n     * (breaking loop with completedAbruptly true) without processing\n     * the task.\n     *\n     * 4. Assuming beforeExecute completes normally, we run the task,\n     * gathering any of its thrown exceptions to send to afterExecute.\n     * We separately handle RuntimeException, Error (both of which the\n     * specs guarantee that we trap) and arbitrary Throwables.\n     * Because we cannot rethrow Throwables within Runnable.run, we\n     * wrap them within Errors on the way out (to the thread's\n     * UncaughtExceptionHandler).  Any thrown exception also\n     * conservatively causes thread to die.\n     *\n     * 5. After task.run completes, we call afterExecute, which may\n     * also throw an exception, which will also cause thread to\n     * die. According to JLS Sec 14.20, this exception is the one that\n     * will be in effect even if task.run throws.\n     *\n     * The net effect of the exception mechanics is that afterExecute\n     * and the thread's UncaughtExceptionHandler have as accurate\n     * information as we can provide about any problems encountered by\n     * user code.\n     *\n     * @param w the worker\n     */\n    final void runWorker(Worker w) {\n        Thread wt = Thread.currentThread();\n        Runnable task = w.firstTask;\n        w.firstTask = null;\n        w.unlock(); // allow interrupts\n        boolean completedAbruptly = true;\n        try {\n            while (task != null || (task = getTask()) != null) {\n                w.lock();\n                // If pool is stopping, ensure thread is interrupted;\n                // if not, ensure thread is not interrupted.  This\n                // requires a recheck in second case to deal with\n                // shutdownNow race while clearing interrupt\n                if ((runStateAtLeast(ctl.get(), STOP) ||\n                     (Thread.interrupted() &&\n                      runStateAtLeast(ctl.get(), STOP))) &&\n                    !wt.isInterrupted())\n                    wt.interrupt();\n                try {\n                    beforeExecute(wt, task);\n                    try {\n                        task.run();\n                        afterExecute(task, null);\n                    } catch (Throwable ex) {\n                        afterExecute(task, ex);\n                        throw ex;\n                    }\n                } finally {\n                    task = null;\n                    w.completedTasks++;\n                    w.unlock();\n                }\n            }\n            completedAbruptly = false;\n        } finally {\n            processWorkerExit(w, completedAbruptly);\n        }\n    }\n\n    // Public constructors and methods\n\n    /**\n     * Creates a new {@code ThreadPoolExecutor} with the given initial\n     * parameters, the\n     * {@linkplain Executors#defaultThreadFactory default thread factory}\n     * and the {@linkplain ThreadPoolExecutor.AbortPolicy\n     * default rejected execution handler}.\n     *\n     * <p>It may be more convenient to use one of the {@link Executors}\n     * factory methods instead of this general purpose constructor.\n     *\n     * @param corePoolSize the number of threads to keep in the pool, even\n     *        if they are idle, unless {@code allowCoreThreadTimeOut} is set\n     * @param maximumPoolSize the maximum number of threads to allow in the\n     *        pool\n     * @param keepAliveTime when the number of threads is greater than\n     *        the core, this is the maximum time that excess idle threads\n     *        will wait for new tasks before terminating.\n     * @param unit the time unit for the {@code keepAliveTime} argument\n     * @param workQueue the queue to use for holding tasks before they are\n     *        executed.  This queue will hold only the {@code Runnable}\n     *        tasks submitted by the {@code execute} method.\n     * @throws IllegalArgumentException if one of the following holds:<br>\n     *         {@code corePoolSize < 0}<br>\n     *         {@code keepAliveTime < 0}<br>\n     *         {@code maximumPoolSize <= 0}<br>\n     *         {@code maximumPoolSize < corePoolSize}\n     * @throws NullPointerException if {@code workQueue} is null\n     */\n    public ThreadPoolExecutor(int corePoolSize,\n                              int maximumPoolSize,\n                              long keepAliveTime,\n                              TimeUnit unit,\n                              BlockingQueue<Runnable> workQueue) {\n        this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,\n             Executors.defaultThreadFactory(), defaultHandler);\n    }\n\n    /**\n     * Creates a new {@code ThreadPoolExecutor} with the given initial\n     * parameters and the {@linkplain ThreadPoolExecutor.AbortPolicy\n     * default rejected execution handler}.\n     *\n     * @param corePoolSize the number of threads to keep in the pool, even\n     *        if they are idle, unless {@code allowCoreThreadTimeOut} is set\n     * @param maximumPoolSize the maximum number of threads to allow in the\n     *        pool\n     * @param keepAliveTime when the number of threads is greater than\n     *        the core, this is the maximum time that excess idle threads\n     *        will wait for new tasks before terminating.\n     * @param unit the time unit for the {@code keepAliveTime} argument\n     * @param workQueue the queue to use for holding tasks before they are\n     *        executed.  This queue will hold only the {@code Runnable}\n     *        tasks submitted by the {@code execute} method.\n     * @param threadFactory the factory to use when the executor\n     *        creates a new thread\n     * @throws IllegalArgumentException if one of the following holds:<br>\n     *         {@code corePoolSize < 0}<br>\n     *         {@code keepAliveTime < 0}<br>\n     *         {@code maximumPoolSize <= 0}<br>\n     *         {@code maximumPoolSize < corePoolSize}\n     * @throws NullPointerException if {@code workQueue}\n     *         or {@code threadFactory} is null\n     */\n    public ThreadPoolExecutor(int corePoolSize,\n                              int maximumPoolSize,\n                              long keepAliveTime,\n                              TimeUnit unit,\n                              BlockingQueue<Runnable> workQueue,\n                              ThreadFactory threadFactory) {\n        this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,\n             threadFactory, defaultHandler);\n    }\n\n    /**\n     * Creates a new {@code ThreadPoolExecutor} with the given initial\n     * parameters and the\n     * {@linkplain Executors#defaultThreadFactory default thread factory}.\n     *\n     * @param corePoolSize the number of threads to keep in the pool, even\n     *        if they are idle, unless {@code allowCoreThreadTimeOut} is set\n     * @param maximumPoolSize the maximum number of threads to allow in the\n     *        pool\n     * @param keepAliveTime when the number of threads is greater than\n     *        the core, this is the maximum time that excess idle threads\n     *        will wait for new tasks before terminating.\n     * @param unit the time unit for the {@code keepAliveTime} argument\n     * @param workQueue the queue to use for holding tasks before they are\n     *        executed.  This queue will hold only the {@code Runnable}\n     *        tasks submitted by the {@code execute} method.\n     * @param handler the handler to use when execution is blocked\n     *        because the thread bounds and queue capacities are reached\n     * @throws IllegalArgumentException if one of the following holds:<br>\n     *         {@code corePoolSize < 0}<br>\n     *         {@code keepAliveTime < 0}<br>\n     *         {@code maximumPoolSize <= 0}<br>\n     *         {@code maximumPoolSize < corePoolSize}\n     * @throws NullPointerException if {@code workQueue}\n     *         or {@code handler} is null\n     */\n    public ThreadPoolExecutor(int corePoolSize,\n                              int maximumPoolSize,\n                              long keepAliveTime,\n                              TimeUnit unit,\n                              BlockingQueue<Runnable> workQueue,\n                              RejectedExecutionHandler handler) {\n        this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,\n             Executors.defaultThreadFactory(), handler);\n    }\n\n    /**\n     * Creates a new {@code ThreadPoolExecutor} with the given initial\n     * parameters.\n     *\n     * @param corePoolSize the number of threads to keep in the pool, even\n     *        if they are idle, unless {@code allowCoreThreadTimeOut} is set\n     * @param maximumPoolSize the maximum number of threads to allow in the\n     *        pool\n     * @param keepAliveTime when the number of threads is greater than\n     *        the core, this is the maximum time that excess idle threads\n     *        will wait for new tasks before terminating.\n     * @param unit the time unit for the {@code keepAliveTime} argument\n     * @param workQueue the queue to use for holding tasks before they are\n     *        executed.  This queue will hold only the {@code Runnable}\n     *        tasks submitted by the {@code execute} method.\n     * @param threadFactory the factory to use when the executor\n     *        creates a new thread\n     * @param handler the handler to use when execution is blocked\n     *        because the thread bounds and queue capacities are reached\n     * @throws IllegalArgumentException if one of the following holds:<br>\n     *         {@code corePoolSize < 0}<br>\n     *         {@code keepAliveTime < 0}<br>\n     *         {@code maximumPoolSize <= 0}<br>\n     *         {@code maximumPoolSize < corePoolSize}\n     * @throws NullPointerException if {@code workQueue}\n     *         or {@code threadFactory} or {@code handler} is null\n     */\n    public ThreadPoolExecutor(int corePoolSize,\n                              int maximumPoolSize,\n                              long keepAliveTime,\n                              TimeUnit unit,\n                              BlockingQueue<Runnable> workQueue,\n                              ThreadFactory threadFactory,\n                              RejectedExecutionHandler handler) {\n        if (corePoolSize < 0 ||\n            maximumPoolSize <= 0 ||\n            maximumPoolSize < corePoolSize ||\n            keepAliveTime < 0)\n            throw new IllegalArgumentException();\n        if (workQueue == null || threadFactory == null || handler == null)\n            throw new NullPointerException();\n        this.corePoolSize = corePoolSize;\n        this.maximumPoolSize = maximumPoolSize;\n        this.workQueue = workQueue;\n        this.keepAliveTime = unit.toNanos(keepAliveTime);\n        this.threadFactory = threadFactory;\n        this.handler = handler;\n    }\n\n    /**\n     * Executes the given task sometime in the future.  The task\n     * may execute in a new thread or in an existing pooled thread.\n     *\n     * If the task cannot be submitted for execution, either because this\n     * executor has been shutdown or because its capacity has been reached,\n     * the task is handled by the current {@link RejectedExecutionHandler}.\n     *\n     * @param command the task to execute\n     * @throws RejectedExecutionException at discretion of\n     *         {@code RejectedExecutionHandler}, if the task\n     *         cannot be accepted for execution\n     * @throws NullPointerException if {@code command} is null\n     */\n    public void execute(Runnable command) {\n        if (command == null)\n            throw new NullPointerException();\n        /*\n         * Proceed in 3 steps:\n         *\n         * 1. If fewer than corePoolSize threads are running, try to\n         * start a new thread with the given command as its first\n         * task.  The call to addWorker atomically checks runState and\n         * workerCount, and so prevents false alarms that would add\n         * threads when it shouldn't, by returning false.\n         *\n         * 2. If a task can be successfully queued, then we still need\n         * to double-check whether we should have added a thread\n         * (because existing ones died since last checking) or that\n         * the pool shut down since entry into this method. So we\n         * recheck state and if necessary roll back the enqueuing if\n         * stopped, or start a new thread if there are none.\n         *\n         * 3. If we cannot queue task, then we try to add a new\n         * thread.  If it fails, we know we are shut down or saturated\n         * and so reject the task.\n         */\n        int c = ctl.get();\n        if (workerCountOf(c) < corePoolSize) {\n            if (addWorker(command, true))\n                return;\n            c = ctl.get();\n        }\n        if (isRunning(c) && workQueue.offer(command)) {\n            int recheck = ctl.get();\n            if (! isRunning(recheck) && remove(command))\n                reject(command);\n            else if (workerCountOf(recheck) == 0)\n                addWorker(null, false);\n        }\n        else if (!addWorker(command, false))\n            reject(command);\n    }\n\n    /**\n     * Initiates an orderly shutdown in which previously submitted\n     * tasks are executed, but no new tasks will be accepted.\n     * Invocation has no additional effect if already shut down.\n     *\n     * <p>This method does not wait for previously submitted tasks to\n     * complete execution.  Use {@link #awaitTermination awaitTermination}\n     * to do that.\n     *\n     * @throws SecurityException {@inheritDoc}\n     */\n    public void shutdown() {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            checkShutdownAccess();\n            advanceRunState(SHUTDOWN);\n            interruptIdleWorkers();\n            onShutdown(); // hook for ScheduledThreadPoolExecutor\n        } finally {\n            mainLock.unlock();\n        }\n        tryTerminate();\n    }\n\n    /**\n     * Attempts to stop all actively executing tasks, halts the\n     * processing of waiting tasks, and returns a list of the tasks\n     * that were awaiting execution. These tasks are drained (removed)\n     * from the task queue upon return from this method.\n     *\n     * <p>This method does not wait for actively executing tasks to\n     * terminate.  Use {@link #awaitTermination awaitTermination} to\n     * do that.\n     *\n     * <p>There are no guarantees beyond best-effort attempts to stop\n     * processing actively executing tasks.  This implementation\n     * interrupts tasks via {@link Thread#interrupt}; any task that\n     * fails to respond to interrupts may never terminate.\n     *\n     * @throws SecurityException {@inheritDoc}\n     */\n    public List<Runnable> shutdownNow() {\n        List<Runnable> tasks;\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            checkShutdownAccess();\n            advanceRunState(STOP);\n            interruptWorkers();\n            tasks = drainQueue();\n        } finally {\n            mainLock.unlock();\n        }\n        tryTerminate();\n        return tasks;\n    }\n\n    public boolean isShutdown() {\n        return runStateAtLeast(ctl.get(), SHUTDOWN);\n    }\n\n    /** Used by ScheduledThreadPoolExecutor. */\n    boolean isStopped() {\n        return runStateAtLeast(ctl.get(), STOP);\n    }\n\n    /**\n     * Returns true if this executor is in the process of terminating\n     * after {@link #shutdown} or {@link #shutdownNow} but has not\n     * completely terminated.  This method may be useful for\n     * debugging. A return of {@code true} reported a sufficient\n     * period after shutdown may indicate that submitted tasks have\n     * ignored or suppressed interruption, causing this executor not\n     * to properly terminate.\n     *\n     * @return {@code true} if terminating but not yet terminated\n     */\n    public boolean isTerminating() {\n        int c = ctl.get();\n        return runStateAtLeast(c, SHUTDOWN) && runStateLessThan(c, TERMINATED);\n    }\n\n    public boolean isTerminated() {\n        return runStateAtLeast(ctl.get(), TERMINATED);\n    }\n\n    public boolean awaitTermination(long timeout, TimeUnit unit)\n        throws InterruptedException {\n        long nanos = unit.toNanos(timeout);\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            while (runStateLessThan(ctl.get(), TERMINATED)) {\n                if (nanos <= 0L)\n                    return false;\n                nanos = termination.awaitNanos(nanos);\n            }\n            return true;\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    // Override without \"throws Throwable\" for compatibility with subclasses\n    // whose finalize method invokes super.finalize() (as is recommended).\n    // Before JDK 11, finalize() had a non-empty method body.\n\n    /**\n     * @implNote Previous versions of this class had a finalize method\n     * that shut down this executor, but in this version, finalize\n     * does nothing.\n     */\n    @Deprecated(since=\"9\")\n    protected void finalize() {}\n\n    /**\n     * Sets the thread factory used to create new threads.\n     *\n     * @param threadFactory the new thread factory\n     * @throws NullPointerException if threadFactory is null\n     * @see #getThreadFactory\n     */\n    public void setThreadFactory(ThreadFactory threadFactory) {\n        if (threadFactory == null)\n            throw new NullPointerException();\n        this.threadFactory = threadFactory;\n    }\n\n    /**\n     * Returns the thread factory used to create new threads.\n     *\n     * @return the current thread factory\n     * @see #setThreadFactory(ThreadFactory)\n     */\n    public ThreadFactory getThreadFactory() {\n        return threadFactory;\n    }\n\n    /**\n     * Sets a new handler for unexecutable tasks.\n     *\n     * @param handler the new handler\n     * @throws NullPointerException if handler is null\n     * @see #getRejectedExecutionHandler\n     */\n    public void setRejectedExecutionHandler(RejectedExecutionHandler handler) {\n        if (handler == null)\n            throw new NullPointerException();\n        this.handler = handler;\n    }\n\n    /**\n     * Returns the current handler for unexecutable tasks.\n     *\n     * @return the current handler\n     * @see #setRejectedExecutionHandler(RejectedExecutionHandler)\n     */\n    public RejectedExecutionHandler getRejectedExecutionHandler() {\n        return handler;\n    }\n\n    /**\n     * Sets the core number of threads.  This overrides any value set\n     * in the constructor.  If the new value is smaller than the\n     * current value, excess existing threads will be terminated when\n     * they next become idle.  If larger, new threads will, if needed,\n     * be started to execute any queued tasks.\n     *\n     * @param corePoolSize the new core size\n     * @throws IllegalArgumentException if {@code corePoolSize < 0}\n     *         or {@code corePoolSize} is greater than the {@linkplain\n     *         #getMaximumPoolSize() maximum pool size}\n     * @see #getCorePoolSize\n     */\n    public void setCorePoolSize(int corePoolSize) {\n        if (corePoolSize < 0 || maximumPoolSize < corePoolSize)\n            throw new IllegalArgumentException();\n        int delta = corePoolSize - this.corePoolSize;\n        this.corePoolSize = corePoolSize;\n        if (workerCountOf(ctl.get()) > corePoolSize)\n            interruptIdleWorkers();\n        else if (delta > 0) {\n            // We don't really know how many new threads are \"needed\".\n            // As a heuristic, prestart enough new workers (up to new\n            // core size) to handle the current number of tasks in\n            // queue, but stop if queue becomes empty while doing so.\n            int k = Math.min(delta, workQueue.size());\n            while (k-- > 0 && addWorker(null, true)) {\n                if (workQueue.isEmpty())\n                    break;\n            }\n        }\n    }\n\n    /**\n     * Returns the core number of threads.\n     *\n     * @return the core number of threads\n     * @see #setCorePoolSize\n     */\n    public int getCorePoolSize() {\n        return corePoolSize;\n    }\n\n    /**\n     * Starts a core thread, causing it to idly wait for work. This\n     * overrides the default policy of starting core threads only when\n     * new tasks are executed. This method will return {@code false}\n     * if all core threads have already been started.\n     *\n     * @return {@code true} if a thread was started\n     */\n    public boolean prestartCoreThread() {\n        return workerCountOf(ctl.get()) < corePoolSize &&\n            addWorker(null, true);\n    }\n\n    /**\n     * Same as prestartCoreThread except arranges that at least one\n     * thread is started even if corePoolSize is 0.\n     */\n    void ensurePrestart() {\n        int wc = workerCountOf(ctl.get());\n        if (wc < corePoolSize)\n            addWorker(null, true);\n        else if (wc == 0)\n            addWorker(null, false);\n    }\n\n    /**\n     * Starts all core threads, causing them to idly wait for work. This\n     * overrides the default policy of starting core threads only when\n     * new tasks are executed.\n     *\n     * @return the number of threads started\n     */\n    public int prestartAllCoreThreads() {\n        int n = 0;\n        while (addWorker(null, true))\n            ++n;\n        return n;\n    }\n\n    /**\n     * Returns true if this pool allows core threads to time out and\n     * terminate if no tasks arrive within the keepAlive time, being\n     * replaced if needed when new tasks arrive. When true, the same\n     * keep-alive policy applying to non-core threads applies also to\n     * core threads. When false (the default), core threads are never\n     * terminated due to lack of incoming tasks.\n     *\n     * @return {@code true} if core threads are allowed to time out,\n     *         else {@code false}\n     *\n     * @since 1.6\n     */\n    public boolean allowsCoreThreadTimeOut() {\n        return allowCoreThreadTimeOut;\n    }\n\n    /**\n     * Sets the policy governing whether core threads may time out and\n     * terminate if no tasks arrive within the keep-alive time, being\n     * replaced if needed when new tasks arrive. When false, core\n     * threads are never terminated due to lack of incoming\n     * tasks. When true, the same keep-alive policy applying to\n     * non-core threads applies also to core threads. To avoid\n     * continual thread replacement, the keep-alive time must be\n     * greater than zero when setting {@code true}. This method\n     * should in general be called before the pool is actively used.\n     *\n     * @param value {@code true} if should time out, else {@code false}\n     * @throws IllegalArgumentException if value is {@code true}\n     *         and the current keep-alive time is not greater than zero\n     *\n     * @since 1.6\n     */\n    public void allowCoreThreadTimeOut(boolean value) {\n        if (value && keepAliveTime <= 0)\n            throw new IllegalArgumentException(\"Core threads must have nonzero keep alive times\");\n        if (value != allowCoreThreadTimeOut) {\n            allowCoreThreadTimeOut = value;\n            if (value)\n                interruptIdleWorkers();\n        }\n    }\n\n    /**\n     * Sets the maximum allowed number of threads. This overrides any\n     * value set in the constructor. If the new value is smaller than\n     * the current value, excess existing threads will be\n     * terminated when they next become idle.\n     *\n     * @param maximumPoolSize the new maximum\n     * @throws IllegalArgumentException if the new maximum is\n     *         less than or equal to zero, or\n     *         less than the {@linkplain #getCorePoolSize core pool size}\n     * @see #getMaximumPoolSize\n     */\n    public void setMaximumPoolSize(int maximumPoolSize) {\n        if (maximumPoolSize <= 0 || maximumPoolSize < corePoolSize)\n            throw new IllegalArgumentException();\n        this.maximumPoolSize = maximumPoolSize;\n        if (workerCountOf(ctl.get()) > maximumPoolSize)\n            interruptIdleWorkers();\n    }\n\n    /**\n     * Returns the maximum allowed number of threads.\n     *\n     * @return the maximum allowed number of threads\n     * @see #setMaximumPoolSize\n     */\n    public int getMaximumPoolSize() {\n        return maximumPoolSize;\n    }\n\n    /**\n     * Sets the thread keep-alive time, which is the amount of time\n     * that threads may remain idle before being terminated.\n     * Threads that wait this amount of time without processing a\n     * task will be terminated if there are more than the core\n     * number of threads currently in the pool, or if this pool\n     * {@linkplain #allowsCoreThreadTimeOut() allows core thread timeout}.\n     * This overrides any value set in the constructor.\n     *\n     * @param time the time to wait.  A time value of zero will cause\n     *        excess threads to terminate immediately after executing tasks.\n     * @param unit the time unit of the {@code time} argument\n     * @throws IllegalArgumentException if {@code time} less than zero or\n     *         if {@code time} is zero and {@code allowsCoreThreadTimeOut}\n     * @see #getKeepAliveTime(TimeUnit)\n     */\n    public void setKeepAliveTime(long time, TimeUnit unit) {\n        if (time < 0)\n            throw new IllegalArgumentException();\n        if (time == 0 && allowsCoreThreadTimeOut())\n            throw new IllegalArgumentException(\"Core threads must have nonzero keep alive times\");\n        long keepAliveTime = unit.toNanos(time);\n        long delta = keepAliveTime - this.keepAliveTime;\n        this.keepAliveTime = keepAliveTime;\n        if (delta < 0)\n            interruptIdleWorkers();\n    }\n\n    /**\n     * Returns the thread keep-alive time, which is the amount of time\n     * that threads may remain idle before being terminated.\n     * Threads that wait this amount of time without processing a\n     * task will be terminated if there are more than the core\n     * number of threads currently in the pool, or if this pool\n     * {@linkplain #allowsCoreThreadTimeOut() allows core thread timeout}.\n     *\n     * @param unit the desired time unit of the result\n     * @return the time limit\n     * @see #setKeepAliveTime(long, TimeUnit)\n     */\n    public long getKeepAliveTime(TimeUnit unit) {\n        return unit.convert(keepAliveTime, TimeUnit.NANOSECONDS);\n    }\n\n    /* User-level queue utilities */\n\n    /**\n     * Returns the task queue used by this executor. Access to the\n     * task queue is intended primarily for debugging and monitoring.\n     * This queue may be in active use.  Retrieving the task queue\n     * does not prevent queued tasks from executing.\n     *\n     * @return the task queue\n     */\n    public BlockingQueue<Runnable> getQueue() {\n        return workQueue;\n    }\n\n    /**\n     * Removes this task from the executor's internal queue if it is\n     * present, thus causing it not to be run if it has not already\n     * started.\n     *\n     * <p>This method may be useful as one part of a cancellation\n     * scheme.  It may fail to remove tasks that have been converted\n     * into other forms before being placed on the internal queue.\n     * For example, a task entered using {@code submit} might be\n     * converted into a form that maintains {@code Future} status.\n     * However, in such cases, method {@link #purge} may be used to\n     * remove those Futures that have been cancelled.\n     *\n     * @param task the task to remove\n     * @return {@code true} if the task was removed\n     */\n    public boolean remove(Runnable task) {\n        boolean removed = workQueue.remove(task);\n        tryTerminate(); // In case SHUTDOWN and now empty\n        return removed;\n    }\n\n    /**\n     * Tries to remove from the work queue all {@link Future}\n     * tasks that have been cancelled. This method can be useful as a\n     * storage reclamation operation, that has no other impact on\n     * functionality. Cancelled tasks are never executed, but may\n     * accumulate in work queues until worker threads can actively\n     * remove them. Invoking this method instead tries to remove them now.\n     * However, this method may fail to remove tasks in\n     * the presence of interference by other threads.\n     */\n    public void purge() {\n        final BlockingQueue<Runnable> q = workQueue;\n        try {\n            Iterator<Runnable> it = q.iterator();\n            while (it.hasNext()) {\n                Runnable r = it.next();\n                if (r instanceof Future<?> && ((Future<?>)r).isCancelled())\n                    it.remove();\n            }\n        } catch (ConcurrentModificationException fallThrough) {\n            // Take slow path if we encounter interference during traversal.\n            // Make copy for traversal and call remove for cancelled entries.\n            // The slow path is more likely to be O(N*N).\n            for (Object r : q.toArray())\n                if (r instanceof Future<?> && ((Future<?>)r).isCancelled())\n                    q.remove(r);\n        }\n\n        tryTerminate(); // In case SHUTDOWN and now empty\n    }\n\n    /* Statistics */\n\n    /**\n     * Returns the current number of threads in the pool.\n     *\n     * @return the number of threads\n     */\n    public int getPoolSize() {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            // Remove rare and surprising possibility of\n            // isTerminated() && getPoolSize() > 0\n            return runStateAtLeast(ctl.get(), TIDYING) ? 0\n                : workers.size();\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Returns the approximate number of threads that are actively\n     * executing tasks.\n     *\n     * @return the number of threads\n     */\n    public int getActiveCount() {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            int n = 0;\n            for (Worker w : workers)\n                if (w.isLocked())\n                    ++n;\n            return n;\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Returns the largest number of threads that have ever\n     * simultaneously been in the pool.\n     *\n     * @return the number of threads\n     */\n    public int getLargestPoolSize() {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            return largestPoolSize;\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Returns the approximate total number of tasks that have ever been\n     * scheduled for execution. Because the states of tasks and\n     * threads may change dynamically during computation, the returned\n     * value is only an approximation.\n     *\n     * @return the number of tasks\n     */\n    public long getTaskCount() {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            long n = completedTaskCount;\n            for (Worker w : workers) {\n                n += w.completedTasks;\n                if (w.isLocked())\n                    ++n;\n            }\n            return n + workQueue.size();\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Returns the approximate total number of tasks that have\n     * completed execution. Because the states of tasks and threads\n     * may change dynamically during computation, the returned value\n     * is only an approximation, but one that does not ever decrease\n     * across successive calls.\n     *\n     * @return the number of tasks\n     */\n    public long getCompletedTaskCount() {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            long n = completedTaskCount;\n            for (Worker w : workers)\n                n += w.completedTasks;\n            return n;\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n    /**\n     * Returns a string identifying this pool, as well as its state,\n     * including indications of run state and estimated worker and\n     * task counts.\n     *\n     * @return a string identifying this pool, as well as its state\n     */\n    public String toString() {\n        long ncompleted;\n        int nworkers, nactive;\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            ncompleted = completedTaskCount;\n            nactive = 0;\n            nworkers = workers.size();\n            for (Worker w : workers) {\n                ncompleted += w.completedTasks;\n                if (w.isLocked())\n                    ++nactive;\n            }\n        } finally {\n            mainLock.unlock();\n        }\n        int c = ctl.get();\n        String runState =\n            isRunning(c) ? \"Running\" :\n            runStateAtLeast(c, TERMINATED) ? \"Terminated\" :\n            \"Shutting down\";\n        return super.toString() +\n            \"[\" + runState +\n            \", pool size = \" + nworkers +\n            \", active threads = \" + nactive +\n            \", queued tasks = \" + workQueue.size() +\n            \", completed tasks = \" + ncompleted +\n            \"]\";\n    }\n\n    /* Extension hooks */\n\n    /**\n     * Method invoked prior to executing the given Runnable in the\n     * given thread.  This method is invoked by thread {@code t} that\n     * will execute task {@code r}, and may be used to re-initialize\n     * ThreadLocals, or to perform logging.\n     *\n     * <p>This implementation does nothing, but may be customized in\n     * subclasses. Note: To properly nest multiple overridings, subclasses\n     * should generally invoke {@code super.beforeExecute} at the end of\n     * this method.\n     *\n     * @param t the thread that will run task {@code r}\n     * @param r the task that will be executed\n     */\n    protected void beforeExecute(Thread t, Runnable r) { }\n\n    /**\n     * Method invoked upon completion of execution of the given Runnable.\n     * This method is invoked by the thread that executed the task. If\n     * non-null, the Throwable is the uncaught {@code RuntimeException}\n     * or {@code Error} that caused execution to terminate abruptly.\n     *\n     * <p>This implementation does nothing, but may be customized in\n     * subclasses. Note: To properly nest multiple overridings, subclasses\n     * should generally invoke {@code super.afterExecute} at the\n     * beginning of this method.\n     *\n     * <p><b>Note:</b> When actions are enclosed in tasks (such as\n     * {@link FutureTask}) either explicitly or via methods such as\n     * {@code submit}, these task objects catch and maintain\n     * computational exceptions, and so they do not cause abrupt\n     * termination, and the internal exceptions are <em>not</em>\n     * passed to this method. If you would like to trap both kinds of\n     * failures in this method, you can further probe for such cases,\n     * as in this sample subclass that prints either the direct cause\n     * or the underlying exception if a task has been aborted:\n     *\n     * <pre> {@code\n     * class ExtendedExecutor extends ThreadPoolExecutor {\n     *   // ...\n     *   protected void afterExecute(Runnable r, Throwable t) {\n     *     super.afterExecute(r, t);\n     *     if (t == null\n     *         && r instanceof Future<?>\n     *         && ((Future<?>)r).isDone()) {\n     *       try {\n     *         Object result = ((Future<?>) r).get();\n     *       } catch (CancellationException ce) {\n     *         t = ce;\n     *       } catch (ExecutionException ee) {\n     *         t = ee.getCause();\n     *       } catch (InterruptedException ie) {\n     *         // ignore/reset\n     *         Thread.currentThread().interrupt();\n     *       }\n     *     }\n     *     if (t != null)\n     *       System.out.println(t);\n     *   }\n     * }}</pre>\n     *\n     * @param r the runnable that has completed\n     * @param t the exception that caused termination, or null if\n     * execution completed normally\n     */\n    protected void afterExecute(Runnable r, Throwable t) { }\n\n    /**\n     * Method invoked when the Executor has terminated.  Default\n     * implementation does nothing. Note: To properly nest multiple\n     * overridings, subclasses should generally invoke\n     * {@code super.terminated} within this method.\n     */\n    protected void terminated() { }\n\n    /* Predefined RejectedExecutionHandlers */\n\n    /**\n     * A handler for rejected tasks that runs the rejected task\n     * directly in the calling thread of the {@code execute} method,\n     * unless the executor has been shut down, in which case the task\n     * is discarded.\n     */\n    public static class CallerRunsPolicy implements RejectedExecutionHandler {\n        /**\n         * Creates a {@code CallerRunsPolicy}.\n         */\n        public CallerRunsPolicy() { }\n\n        /**\n         * Executes task r in the caller's thread, unless the executor\n         * has been shut down, in which case the task is discarded.\n         *\n         * @param r the runnable task requested to be executed\n         * @param e the executor attempting to execute this task\n         */\n        public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {\n            if (!e.isShutdown()) {\n                r.run();\n            }\n        }\n    }\n\n    /**\n     * A handler for rejected tasks that throws a\n     * {@link RejectedExecutionException}.\n     *\n     * This is the default handler for {@link ThreadPoolExecutor} and\n     * {@link ScheduledThreadPoolExecutor}.\n     */\n    public static class AbortPolicy implements RejectedExecutionHandler {\n        /**\n         * Creates an {@code AbortPolicy}.\n         */\n        public AbortPolicy() { }\n\n        /**\n         * Always throws RejectedExecutionException.\n         *\n         * @param r the runnable task requested to be executed\n         * @param e the executor attempting to execute this task\n         * @throws RejectedExecutionException always\n         */\n        public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {\n            throw new RejectedExecutionException(\"Task \" + r.toString() +\n                                                 \" rejected from \" +\n                                                 e.toString());\n        }\n    }\n\n    /**\n     * A handler for rejected tasks that silently discards the\n     * rejected task.\n     */\n    public static class DiscardPolicy implements RejectedExecutionHandler {\n        /**\n         * Creates a {@code DiscardPolicy}.\n         */\n        public DiscardPolicy() { }\n\n        /**\n         * Does nothing, which has the effect of discarding task r.\n         *\n         * @param r the runnable task requested to be executed\n         * @param e the executor attempting to execute this task\n         */\n        public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {\n        }\n    }\n\n    /**\n     * A handler for rejected tasks that discards the oldest unhandled\n     * request and then retries {@code execute}, unless the executor\n     * is shut down, in which case the task is discarded. This policy is\n     * rarely useful in cases where other threads may be waiting for\n     * tasks to terminate, or failures must be recorded. Instead consider\n     * using a handler of the form:\n     * <pre> {@code\n     * new RejectedExecutionHandler() {\n     *   public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {\n     *     Runnable dropped = e.getQueue().poll();\n     *     if (dropped instanceof Future<?>) {\n     *       ((Future<?>)dropped).cancel(false);\n     *       // also consider logging the failure\n     *     }\n     *     e.execute(r);  // retry\n     * }}}</pre>\n     */\n    public static class DiscardOldestPolicy implements RejectedExecutionHandler {\n        /**\n         * Creates a {@code DiscardOldestPolicy} for the given executor.\n         */\n        public DiscardOldestPolicy() { }\n\n        /**\n         * Obtains and ignores the next task that the executor\n         * would otherwise execute, if one is immediately available,\n         * and then retries execution of task r, unless the executor\n         * is shut down, in which case task r is instead discarded.\n         *\n         * @param r the runnable task requested to be executed\n         * @param e the executor attempting to execute this task\n         */\n        public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {\n            if (!e.isShutdown()) {\n                e.getQueue().poll();\n                e.execute(r);\n            }\n        }\n    }\n}\n",
@@ -3721,11 +3721,11 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 			"frameId": null,
 			"roundness": null,
 			"seed": 992320040,
-			"version": 2,
-			"versionNonce": 819278168,
+			"version": 3,
+			"versionNonce": 63714600,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704344201677,
+			"updated": 1704344366540,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -3755,8 +3755,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 304.724691221711,
-		"scrollY": -1351.6038896522075,
+		"scrollX": 481.8675483645675,
+		"scrollY": -16625.889603937947,
 		"zoom": {
 			"value": 0.7000000000000001
 		},
