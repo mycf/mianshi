@@ -101,7 +101,9 @@ tags: [excalidraw]
 这里会因为超时返回null ^Gn8kPbfq
 
 思考🤔：既然是只有timed为true，timedOut才可能为true这里为什么还要&&，直接timedOut不就好了吗
-因为allowCoreThreadTimeOut是可以被动态设置的，如果第一次allowCoreThreadTimeOut被设置了true，获取task超时了，尝试执行 ^iwTvfHhA
+因为上一次获取task超时了，尝试执行清除线程的时候timed可能发生变化
+1、allowCoreThreadTimeOut可能变化
+2、其他线程可能被回收了，线程数可能不到核心线程数了 ^iwTvfHhA
 
 %%
 # Drawing
@@ -858,9 +860,9 @@ tags: [excalidraw]
 			"id": "EwpSFe_JXDWRYznQeDvLo",
 			"type": "rectangle",
 			"x": 426.53986031668524,
-			"y": 1010.0080108642586,
-			"width": 355.89564732142867,
-			"height": 178.4575079055059,
+			"y": 1010.0080108642587,
+			"width": 394.8096865699408,
+			"height": 164.87102399553558,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -871,20 +873,22 @@ tags: [excalidraw]
 			"opacity": 100,
 			"groupIds": [],
 			"frameId": null,
-			"roundness": {
-				"type": 3
-			},
+			"roundness": null,
 			"seed": 2075521217,
-			"version": 374,
-			"versionNonce": 14470497,
+			"version": 505,
+			"versionNonce": 1912315233,
 			"isDeleted": false,
 			"boundElements": [
 				{
 					"type": "text",
 					"id": "iwTvfHhA"
+				},
+				{
+					"id": "zFrBqh0kBjnkDvXm1RnXw",
+					"type": "arrow"
 				}
 			],
-			"updated": 1704467666334,
+			"updated": 1704467837784,
 			"link": null,
 			"locked": false
 		},
@@ -892,9 +896,9 @@ tags: [excalidraw]
 			"id": "iwTvfHhA",
 			"type": "text",
 			"x": 431.53986031668524,
-			"y": 1015.0080108642586,
-			"width": 345.875,
-			"height": 115.19999999999999,
+			"y": 1015.0080108642587,
+			"width": 377.375,
+			"height": 153.6,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -907,23 +911,69 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 256949295,
-			"version": 862,
-			"versionNonce": 1702787393,
+			"version": 1014,
+			"versionNonce": 1933506255,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704467666334,
+			"updated": 1704467820456,
 			"link": null,
 			"locked": false,
-			"text": "思考🤔：既然是只有timed为true，timedOut\n才可能为true这里为什么还要&&，直接timedOu\nt不就好了吗\n因为allowCoreThreadTimeOut是可以被动态\n设置的，如果第一次allowCoreThreadTimeOu\nt被设置了true，获取task超时了，尝试执行",
-			"rawText": "思考🤔：既然是只有timed为true，timedOut才可能为true这里为什么还要&&，直接timedOut不就好了吗\n因为allowCoreThreadTimeOut是可以被动态设置的，如果第一次allowCoreThreadTimeOut被设置了true，获取task超时了，尝试执行",
+			"text": "思考🤔：既然是只有timed为true，timedOut才可\n能为true这里为什么还要&&，直接timedOut不就好\n了吗\n因为上一次获取task超时了，尝试执行清除线程的时\n候timed可能发生变化\n1、allowCoreThreadTimeOut可能变化\n2、其他线程可能被回收了，线程数可能不到核心线程\n数了",
+			"rawText": "思考🤔：既然是只有timed为true，timedOut才可能为true这里为什么还要&&，直接timedOut不就好了吗\n因为上一次获取task超时了，尝试执行清除线程的时候timed可能发生变化\n1、allowCoreThreadTimeOut可能变化\n2、其他线程可能被回收了，线程数可能不到核心线程数了",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 111,
+			"baseline": 149,
 			"containerId": "EwpSFe_JXDWRYznQeDvLo",
-			"originalText": "思考🤔：既然是只有timed为true，timedOut才可能为true这里为什么还要&&，直接timedOut不就好了吗\n因为allowCoreThreadTimeOut是可以被动态设置的，如果第一次allowCoreThreadTimeOut被设置了true，获取task超时了，尝试执行",
+			"originalText": "思考🤔：既然是只有timed为true，timedOut才可能为true这里为什么还要&&，直接timedOut不就好了吗\n因为上一次获取task超时了，尝试执行清除线程的时候timed可能发生变化\n1、allowCoreThreadTimeOut可能变化\n2、其他线程可能被回收了，线程数可能不到核心线程数了",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "zFrBqh0kBjnkDvXm1RnXw",
+			"type": "arrow",
+			"x": 480.7157113211495,
+			"y": 982.7063751220708,
+			"width": 80.28808593749994,
+			"height": 26.361839657738074,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1249597807,
+			"version": 94,
+			"versionNonce": 372503937,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704467837784,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					80.28808593749994,
+					26.361839657738074
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "EwpSFe_JXDWRYznQeDvLo",
+				"focus": -0.4258648301559145,
+				"gap": 27.30163574218784
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
 		},
 		{
 			"id": "Iip2O6hr00N2ezZhgEnsr",
@@ -990,7 +1040,7 @@ tags: [excalidraw]
 		"zoom": {
 			"value": 1.05
 		},
-		"currentItemRoundness": "round",
+		"currentItemRoundness": "sharp",
 		"gridSize": null,
 		"gridColor": {
 			"Bold": "#C9C9C9FF",
