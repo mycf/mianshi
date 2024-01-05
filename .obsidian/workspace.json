@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/消息挤压.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "mode": "source",
                 "source": false
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/消息挤压.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/消息挤压.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/消息挤压.md"
+                "file": "分布式/消息队列/kafka/07-客户端.md"
               }
             }
           },
@@ -328,8 +328,9 @@
   },
   "active": "8e602f904b722929",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
+    "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
     "分布式/消息队列/kafka/消息挤压.md",
+    "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/06-服务端.md",
@@ -353,7 +354,6 @@
     "Excalidraw/volatile 2024-01-03 22.13.02.excalidraw.md",
     "Java基础/JVM/volatile.md",
     "Java基础/JVM/Java内存模型.md",
-    "Excalidraw/Scripts/Downloaded/Connect elements.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
