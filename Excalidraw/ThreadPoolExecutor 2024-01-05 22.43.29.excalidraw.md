@@ -105,6 +105,10 @@ tags: [excalidraw]
 1、allowCoreThreadTimeOut可能变化
 2、其他线程可能被回收了，线程数可能不到核心线程数了 ^iwTvfHhA
 
+1、状态为shutdown并且队列为空
+2、状态为stop及以上（不再处理任务了）
+这里写的有点绕。。。感觉可以换一种写法 ^UpMR0sSl
+
 %%
 # Drawing
 ```json
@@ -976,6 +980,75 @@ tags: [excalidraw]
 			"endArrowhead": "arrow"
 		},
 		{
+			"id": "GG1v9Ez-kBfD96Mn-al3C",
+			"type": "rectangle",
+			"x": 403.5373956589472,
+			"y": 652.9144032796224,
+			"width": 321.90917968749994,
+			"height": 67.80245535714278,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 260923279,
+			"version": 213,
+			"versionNonce": 647946095,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "UpMR0sSl"
+				}
+			],
+			"updated": 1704468174246,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "UpMR0sSl",
+			"type": "text",
+			"x": 408.5373956589472,
+			"y": 657.9144032796224,
+			"width": 304,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 807777103,
+			"version": 235,
+			"versionNonce": 408574031,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704468168756,
+			"link": null,
+			"locked": false,
+			"text": "1、状态为shutdown并且队列为空\n2、状态为stop及以上（不再处理任务了）\n这里写的有点绕。。。感觉可以换一种写法",
+			"rawText": "1、状态为shutdown并且队列为空\n2、状态为stop及以上（不再处理任务了）\n这里写的有点绕。。。感觉可以换一种写法",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 54,
+			"containerId": "GG1v9Ez-kBfD96Mn-al3C",
+			"originalText": "1、状态为shutdown并且队列为空\n2、状态为stop及以上（不再处理任务了）\n这里写的有点绕。。。感觉可以换一种写法",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "Iip2O6hr00N2ezZhgEnsr",
 			"type": "arrow",
 			"x": -53.00324794224301,
@@ -1035,8 +1108,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 255.01874505905874,
-		"scrollY": -731.6913459414532,
+		"scrollX": 199.78064982096353,
+		"scrollY": -485.9770602271671,
 		"zoom": {
 			"value": 1.05
 		},
