@@ -94,7 +94,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/中间件的选型.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/中间件的选型.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/中间件的选型.md"
+                "file": "Java基础/JVM/synchronized.md"
               }
             }
           },
@@ -326,8 +326,9 @@
       }
     ]
   },
-  "active": "8e602f904b722929",
+  "active": "4b2dfc12a17c0c2c",
   "lastOpenFiles": [
+    "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/消息队列有哪些作用.md",
     "分布式/消息队列/kafka/Untitled.md",
     "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
@@ -353,7 +354,6 @@
     "计算机网络/Untitled.md",
     "计算机网络/Untitled 1.md",
     "计算机网络/未命名.md",
-    "Java基础/JVM/synchronized.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
