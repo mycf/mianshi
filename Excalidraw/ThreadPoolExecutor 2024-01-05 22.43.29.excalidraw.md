@@ -111,6 +111,12 @@ tags: [excalidraw]
 
 处理firstTask ^DnF7lZC2
 
+除了第一次firstTask，后面都getTask了 ^FhiVBt3t
+
+未获取到task，线程就回收了 ^Hrw6YL2a
+
+不用回收的线程，会使用blockqueue阻塞在这 ^GQT0GLdJ
+
 %%
 # Drawing
 ```json
@@ -138,11 +144,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 925744097,
-			"version": 193,
-			"versionNonce": 2113064481,
+			"version": 194,
+			"versionNonce": 308188463,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505554,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"text": "    final void runWorker(Worker w) {\n        Thread wt = Thread.currentThread();\n        Runnable task = w.firstTask;\n        w.firstTask = null;\n        w.unlock(); // allow interrupts\n        boolean completedAbruptly = true;\n        try {\n            while (task != null || (task = getTask()) != null) {\n                w.lock();\n                // If pool is stopping, ensure thread is interrupted;\n                // if not, ensure thread is not interrupted.  This\n                // requires a recheck in second case to deal with\n                // shutdownNow race while clearing interrupt\n                if ((runStateAtLeast(ctl.get(), STOP) ||\n                     (Thread.interrupted() &&\n                      runStateAtLeast(ctl.get(), STOP))) &&\n                    !wt.isInterrupted())\n                    wt.interrupt();\n                try {\n                    beforeExecute(wt, task);\n                    try {\n                        task.run();\n                        afterExecute(task, null);\n                    } catch (Throwable ex) {\n                        afterExecute(task, ex);\n                        throw ex;\n                    }\n                } finally {\n                    task = null;\n                    w.completedTasks++;\n                    w.unlock();\n                }\n            }\n            completedAbruptly = false;\n        } finally {\n            processWorkerExit(w, completedAbruptly);\n        }\n    }\n\n    private Runnable getTask() {\n        boolean timedOut = false; // Did the last poll() time out?\n\n        for (;;) {\n            int c = ctl.get();\n\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {\n                decrementWorkerCount();\n                return null;\n            }\n\n            int wc = workerCountOf(c);\n\n            // Are workers subject to culling?\n            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;\n\n            if ((wc > maximumPoolSize || (timed && timedOut))\n                && (wc > 1 || workQueue.isEmpty())) {\n                if (compareAndDecrementWorkerCount(c))\n                    return null;\n                continue;\n            }\n\n            try {\n                Runnable r = timed ?\n                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :\n                    workQueue.take();\n                if (r != null)\n                    return r;\n                timedOut = true;\n            } catch (InterruptedException retry) {\n                timedOut = false;\n            }\n        }\n    }\n\n",
@@ -177,8 +183,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1221732449,
-			"version": 141,
-			"versionNonce": 704733295,
+			"version": 142,
+			"versionNonce": 946067777,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -186,7 +192,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704468505554,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -211,8 +217,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1293283375,
-			"version": 40,
-			"versionNonce": 2039898625,
+			"version": 41,
+			"versionNonce": 1397888847,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -220,7 +226,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704468505554,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -245,11 +251,11 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 648511535,
-			"version": 59,
-			"versionNonce": 1526299279,
+			"version": 60,
+			"versionNonce": 1408829729,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505554,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -258,7 +264,7 @@ tags: [excalidraw]
 			"type": "arrow",
 			"x": 321.6104285830546,
 			"y": -201.518769037156,
-			"width": 810.7149832589279,
+			"width": 713.3103143601184,
 			"height": 739.9711390904017,
 			"angle": 0,
 			"strokeColor": "#e03131",
@@ -274,11 +280,16 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 1974624655,
-			"version": 201,
-			"versionNonce": 123501025,
+			"version": 228,
+			"versionNonce": 2105122927,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704468505555,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "Hrw6YL2a"
+				}
+			],
+			"updated": 1704468666340,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -287,8 +298,8 @@ tags: [excalidraw]
 					0
 				],
 				[
-					532.6302083333327,
-					218.48879859560753
+					435.22553943452317,
+					222.5315929594468
 				],
 				[
 					-278.0847749255952,
@@ -298,8 +309,45 @@ tags: [excalidraw]
 			"lastCommittedPoint": null,
 			"startBinding": null,
 			"endBinding": null,
-			"startArrowhead": null,
+			"startArrowhead": "arrow",
 			"endArrowhead": "arrow"
+		},
+		{
+			"id": "Hrw6YL2a",
+			"type": "text",
+			"x": 650.0859680175778,
+			"y": 11.412823922290807,
+			"width": 213.5,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 686576449,
+			"version": 36,
+			"versionNonce": 289105569,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704468655167,
+			"link": null,
+			"locked": false,
+			"text": "未获取到task，线程就回收了",
+			"rawText": "未获取到task，线程就回收了",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "f5jJ4bcpTXWh5kcfJr1Xw",
+			"originalText": "未获取到task，线程就回收了",
+			"lineHeight": 1.2
 		},
 		{
 			"id": "O44hfkXphfKxj7zSK8AwF",
@@ -322,8 +370,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1956953857,
-			"version": 112,
-			"versionNonce": 103370927,
+			"version": 113,
+			"versionNonce": 1226652929,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -331,7 +379,7 @@ tags: [excalidraw]
 					"id": "1Dle7lSO"
 				}
 			],
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -354,11 +402,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1506086721,
-			"version": 40,
-			"versionNonce": 1213502913,
+			"version": 41,
+			"versionNonce": 1344393103,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"text": "线程数",
@@ -393,8 +441,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1683034177,
-			"version": 507,
-			"versionNonce": 87646927,
+			"version": 508,
+			"versionNonce": 391116001,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -406,7 +454,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -429,11 +477,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 29019649,
-			"version": 642,
-			"versionNonce": 262026657,
+			"version": 643,
+			"versionNonce": 1031734703,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"text": "是否允许过期\n1、核心线程允许回收=》所\n有线程都要超时回收\n2、超过核心线程数",
@@ -468,11 +516,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 1027802497,
-			"version": 597,
-			"versionNonce": 1757556975,
+			"version": 598,
+			"versionNonce": 572567745,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -520,8 +568,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 705756399,
-			"version": 93,
-			"versionNonce": 543742337,
+			"version": 94,
+			"versionNonce": 303069135,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -529,7 +577,7 @@ tags: [excalidraw]
 					"id": "SPYEAGem"
 				}
 			],
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -552,11 +600,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1457829999,
-			"version": 142,
-			"versionNonce": 441203471,
+			"version": 143,
+			"versionNonce": 791605409,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"text": "什么时候会出现线程数大于\n最大线程数？\n我认为只有动态调整了最大\n线程数会出现这个问题",
@@ -591,11 +639,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 772943841,
-			"version": 24,
-			"versionNonce": 737411425,
+			"version": 25,
+			"versionNonce": 1408148975,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -639,8 +687,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1150081217,
-			"version": 175,
-			"versionNonce": 1045430575,
+			"version": 176,
+			"versionNonce": 606745729,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -648,7 +696,7 @@ tags: [excalidraw]
 					"id": "OvNtRpCU"
 				}
 			],
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -671,11 +719,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 2070491873,
-			"version": 137,
-			"versionNonce": 261041473,
+			"version": 138,
+			"versionNonce": 841093135,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"text": "未获取到任务会一直阻塞",
@@ -710,11 +758,11 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1183679919,
-			"version": 70,
-			"versionNonce": 1446380367,
+			"version": 71,
+			"versionNonce": 80870497,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -739,8 +787,8 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 418266735,
-			"version": 227,
-			"versionNonce": 1385815329,
+			"version": 228,
+			"versionNonce": 1721972271,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -748,7 +796,7 @@ tags: [excalidraw]
 					"id": "Gn8kPbfq"
 				}
 			],
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -790,11 +838,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 232080239,
-			"version": 61,
-			"versionNonce": 576110959,
+			"version": 62,
+			"versionNonce": 821413953,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"text": "这里会因为超时返回nul\nl",
@@ -829,11 +877,11 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1948728911,
-			"version": 57,
-			"versionNonce": 1140505487,
+			"version": 58,
+			"versionNonce": 1651841057,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -858,11 +906,11 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 381000353,
-			"version": 80,
-			"versionNonce": 449562849,
+			"version": 81,
+			"versionNonce": 2099295855,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -885,8 +933,8 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 2075521217,
-			"version": 507,
-			"versionNonce": 526021039,
+			"version": 508,
+			"versionNonce": 1799318529,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -898,7 +946,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -921,11 +969,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 256949295,
-			"version": 1016,
-			"versionNonce": 1862403265,
+			"version": 1017,
+			"versionNonce": 2076053647,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"text": "思考🤔：既然是只有timed为true，timedOut才可\n能为true这里为什么还要&&，直接timedOut不就好\n了吗\n因为上一次获取task超时了，尝试执行清除线程的时\n候timed可能发生变化\n1、allowCoreThreadTimeOut可能变化\n2、其他线程可能被回收了，线程数可能不到核心线程\n数了",
@@ -958,11 +1006,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1249597807,
-			"version": 96,
-			"versionNonce": 2107532239,
+			"version": 97,
+			"versionNonce": 861160417,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1004,8 +1052,8 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 260923279,
-			"version": 214,
-			"versionNonce": 2093335713,
+			"version": 215,
+			"versionNonce": 233514671,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1013,7 +1061,7 @@ tags: [excalidraw]
 					"id": "UpMR0sSl"
 				}
 			],
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false
 		},
@@ -1036,11 +1084,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 807777103,
-			"version": 236,
-			"versionNonce": 1860112879,
+			"version": 237,
+			"versionNonce": 1992499137,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468505556,
+			"updated": 1704468568365,
 			"link": null,
 			"locked": false,
 			"text": "1、状态为shutdown并且队列为空\n2、状态为stop及以上（不再处理任务了）\n这里写的有点绕。。。感觉可以换一种写法",
@@ -1073,8 +1121,8 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1974276257,
-			"version": 79,
-			"versionNonce": 127042639,
+			"version": 80,
+			"versionNonce": 575699151,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1082,7 +1130,7 @@ tags: [excalidraw]
 					"id": "DnF7lZC2"
 				}
 			],
-			"updated": 1704468510800,
+			"updated": 1704468568365,
 			"link": null,
 			"locked": false
 		},
@@ -1105,11 +1153,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1754078273,
-			"version": 44,
-			"versionNonce": 1376263841,
+			"version": 45,
+			"versionNonce": 1135312801,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468540001,
+			"updated": 1704468568365,
 			"link": null,
 			"locked": false,
 			"text": "处理firstTask",
@@ -1121,6 +1169,203 @@ tags: [excalidraw]
 			"baseline": 15,
 			"containerId": "26skqW70UMstnFLxsRvah",
 			"originalText": "处理firstTask",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "rg5v3LXQOY8IWTrTRJvbp",
+			"type": "rectangle",
+			"x": -13.798332577661313,
+			"y": 276.0039302280952,
+			"width": 161.45484561011904,
+			"height": 23.042747860863066,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 555077903,
+			"version": 105,
+			"versionNonce": 1786047873,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"id": "9T5J_Rpem9QWpIaawKaLO",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704468590662,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "9T5J_Rpem9QWpIaawKaLO",
+			"type": "arrow",
+			"x": -14.209070114863664,
+			"y": 290.66498166038684,
+			"width": 192.01561337425596,
+			"height": 508.1532796223958,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1812661295,
+			"version": 107,
+			"versionNonce": 708413423,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "FhiVBt3t"
+				}
+			],
+			"updated": 1704468624898,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-192.01561337425596,
+					-253.8555036272321
+				],
+				[
+					-87.3440406436012,
+					-508.1532796223958
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "rg5v3LXQOY8IWTrTRJvbp",
+				"focus": -0.9337096179660197,
+				"gap": 1
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
+		},
+		{
+			"id": "FhiVBt3t",
+			"type": "text",
+			"x": -288.4121834891196,
+			"y": 17.609478033154733,
+			"width": 164.375,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 236907407,
+			"version": 49,
+			"versionNonce": 9411023,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704468623930,
+			"link": null,
+			"locked": false,
+			"text": "除了第一次firstTask\n，后面都getTask了",
+			"rawText": "除了第一次firstTask，后面都getTask了",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "9T5J_Rpem9QWpIaawKaLO",
+			"originalText": "除了第一次firstTask，后面都getTask了",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "3qxgcFYpSNZYS8bcqslo4",
+			"type": "rectangle",
+			"x": 266.8575919015057,
+			"y": -309.020890735447,
+			"width": 154.22828311011904,
+			"height": 68,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 143757487,
+			"version": 136,
+			"versionNonce": 1094041711,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "GQT0GLdJ"
+				}
+			],
+			"updated": 1704468736513,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "GQT0GLdJ",
+			"type": "text",
+			"x": 271.97173345656523,
+			"y": -303.820890735447,
+			"width": 144,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1221817825,
+			"version": 113,
+			"versionNonce": 1285675663,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704468736513,
+			"link": null,
+			"locked": false,
+			"text": "不用回收的线程，会\n使用blockqueue阻\n塞在这",
+			"rawText": "不用回收的线程，会使用blockqueue阻塞在这",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 54,
+			"containerId": "3qxgcFYpSNZYS8bcqslo4",
+			"originalText": "不用回收的线程，会使用blockqueue阻塞在这",
 			"lineHeight": 1.2
 		},
 		{
@@ -1144,11 +1389,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 1026208801,
-			"version": 17,
-			"versionNonce": 1686343937,
+			"version": 18,
+			"versionNonce": 1482332239,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704468505555,
+			"updated": 1704468568364,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1159,6 +1404,48 @@ tags: [excalidraw]
 				[
 					81.8388439360119,
 					27.624569847469957
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
+		},
+		{
+			"id": "2x0pzcbmS3AvmNpXQBoUG",
+			"type": "arrow",
+			"x": -33.89575631278035,
+			"y": -222.95242672875008,
+			"width": 18.860212053571445,
+			"height": 524.0482584635416,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1773644385,
+			"version": 106,
+			"versionNonce": 1049003759,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704468568365,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					18.860212053571445,
+					524.0482584635416
 				]
 			],
 			"lastCommittedPoint": null,
@@ -1181,14 +1468,14 @@ tags: [excalidraw]
 		"currentItemFontFamily": 3,
 		"currentItemFontSize": 16,
 		"currentItemTextAlign": "left",
-		"currentItemStartArrowhead": null,
+		"currentItemStartArrowhead": "arrow",
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 378.8282688685839,
-		"scrollY": 493.0705588204539,
+		"scrollX": 133.11398315429784,
+		"scrollY": 763.5467492966449,
 		"zoom": {
 			"value": 1.05
 		},
-		"currentItemRoundness": "sharp",
+		"currentItemRoundness": "round",
 		"gridSize": null,
 		"gridColor": {
 			"Bold": "#C9C9C9FF",
