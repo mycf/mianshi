@@ -87,7 +87,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Java基础/JVM/双亲委派.md",
                 "mode": "source",
                 "source": false
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Java基础/JVM/双亲委派.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/synchronized.md",
+                "file": "Java基础/JVM/双亲委派.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/synchronized.md"
+                "file": "Java基础/JVM/双亲委派.md"
               }
             }
           },
@@ -328,6 +328,7 @@
   },
   "active": "4b2dfc12a17c0c2c",
   "lastOpenFiles": [
+    "Java基础/JVM/synchronized.md",
     "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/消息队列有哪些作用.md",
     "分布式/消息队列/kafka/Untitled.md",
@@ -353,7 +354,6 @@
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "计算机网络/Untitled.md",
     "计算机网络/Untitled 1.md",
-    "计算机网络/未命名.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
