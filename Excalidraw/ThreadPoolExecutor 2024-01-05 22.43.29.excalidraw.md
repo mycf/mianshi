@@ -100,7 +100,8 @@ tags: [excalidraw]
 
 这里会因为超时返回null ^Gn8kPbfq
 
-思考🤔 ^iwTvfHhA
+思考🤔：既然是只有timed为true，timedOut才可能为true这里为什么还要&&，直接timedOut不就好了吗
+因为allowCoreThreadTimeOut是可以被动态设置的，如果第一次allowCoreThreadTimeOut被设置了true，获取task超时了，尝试执行 ^iwTvfHhA
 
 %%
 # Drawing
@@ -856,10 +857,10 @@ tags: [excalidraw]
 		{
 			"id": "EwpSFe_JXDWRYznQeDvLo",
 			"type": "rectangle",
-			"x": 551.5526486351375,
-			"y": 987.0018259684251,
-			"width": 201.16117931547637,
-			"height": 149.8784528459821,
+			"x": 426.53986031668524,
+			"y": 1010.0080108642586,
+			"width": 355.89564732142867,
+			"height": 178.4575079055059,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -874,8 +875,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 2075521217,
-			"version": 50,
-			"versionNonce": 1465811809,
+			"version": 374,
+			"versionNonce": 14470497,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -883,17 +884,17 @@ tags: [excalidraw]
 					"id": "iwTvfHhA"
 				}
 			],
-			"updated": 1704467343386,
+			"updated": 1704467666334,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "iwTvfHhA",
 			"type": "text",
-			"x": 556.5526486351375,
-			"y": 1052.3410523914163,
-			"width": 52,
-			"height": 19.2,
+			"x": 431.53986031668524,
+			"y": 1015.0080108642586,
+			"width": 345.875,
+			"height": 115.19999999999999,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -906,22 +907,22 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 256949295,
-			"version": 24,
-			"versionNonce": 1740496751,
+			"version": 862,
+			"versionNonce": 1702787393,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704467345119,
+			"updated": 1704467666334,
 			"link": null,
 			"locked": false,
-			"text": "思考🤔",
-			"rawText": "思考🤔",
+			"text": "思考🤔：既然是只有timed为true，timedOut\n才可能为true这里为什么还要&&，直接timedOu\nt不就好了吗\n因为allowCoreThreadTimeOut是可以被动态\n设置的，如果第一次allowCoreThreadTimeOu\nt被设置了true，获取task超时了，尝试执行",
+			"rawText": "思考🤔：既然是只有timed为true，timedOut才可能为true这里为什么还要&&，直接timedOut不就好了吗\n因为allowCoreThreadTimeOut是可以被动态设置的，如果第一次allowCoreThreadTimeOut被设置了true，获取task超时了，尝试执行",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "left",
-			"verticalAlign": "middle",
-			"baseline": 15,
+			"verticalAlign": "top",
+			"baseline": 111,
 			"containerId": "EwpSFe_JXDWRYznQeDvLo",
-			"originalText": "思考🤔",
+			"originalText": "思考🤔：既然是只有timed为true，timedOut才可能为true这里为什么还要&&，直接timedOut不就好了吗\n因为allowCoreThreadTimeOut是可以被动态设置的，如果第一次allowCoreThreadTimeOut被设置了true，获取task超时了，尝试执行",
 			"lineHeight": 1.2
 		},
 		{
@@ -984,8 +985,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 237.87588791620163,
-		"scrollY": -487.8818221319295,
+		"scrollX": 255.01874505905874,
+		"scrollY": -731.6913459414532,
 		"zoom": {
 			"value": 1.05
 		},
