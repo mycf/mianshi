@@ -6,6 +6,11 @@
 | ------- | --- |
 | RUNNING |     |
 ![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw|100%]]
+# 线程池如何池化的？怎么保存线程的？
+
+![[ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw]]
+
+
 # 线程池的构造函数
 ```java
 public ThreadPoolExecutor(int corePoolSize,

@@ -6,6 +6,7 @@
       {
         "id": "cac965c7f74d9d25",
         "type": "tabs",
+        "dimension": 36.417748917748916,
         "children": [
           {
             "id": "de00890897e0a09a",
@@ -57,9 +58,11 @@
             "id": "3832fa2dd0ab81d6",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md"
+                "file": "Java基础/ThreadPoolExecutor.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -95,6 +98,23 @@
           }
         ],
         "currentTab": 4
+      },
+      {
+        "id": "0c1704d757f3fa32",
+        "type": "tabs",
+        "dimension": 63.582251082251084,
+        "children": [
+          {
+            "id": "5241d85827bbbcf7",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -144,7 +164,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -160,7 +181,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +198,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +221,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md"
+                "file": "Java基础/ThreadPoolExecutor.md"
               }
             }
           },
@@ -328,15 +349,16 @@
   },
   "active": "3832fa2dd0ab81d6",
   "lastOpenFiles": [
-    "分布式/消息队列/中间件的选型.md",
+    "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
+    "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
+    "分布式/消息队列/中间件的选型.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "Excalidraw/Scripts/Downloaded/Slideshow.md",
     "计算机基础/二进制运算.md",
-    "Java基础/ThreadPoolExecutor.md",
     "计算机基础",
     "Java基础/JVM/双亲委派.md",
     "Java基础/JVM/synchronized.md",
@@ -355,7 +377,6 @@
     "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/消息挤压.md",
     "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
-    "分布式/消息队列/kafka/06-服务端.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
