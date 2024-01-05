@@ -2,6 +2,9 @@
 
 ![[ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw|100%]]
 
+|         |     |
+| ------- | --- |
+| RUNNING |     |
 ![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw|100%]]
 # 线程池的构造函数
 ```java

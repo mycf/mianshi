@@ -87,14 +87,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/双亲委派.md",
+                "file": "计算机基础/二进制运算.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/双亲委派.md",
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/双亲委派.md",
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/双亲委派.md"
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md"
               }
             }
           },
@@ -326,8 +326,12 @@
       }
     ]
   },
-  "active": "4b2dfc12a17c0c2c",
+  "active": "3832fa2dd0ab81d6",
   "lastOpenFiles": [
+    "计算机基础/二进制运算.md",
+    "Java基础/ThreadPoolExecutor.md",
+    "计算机基础",
+    "Java基础/JVM/双亲委派.md",
     "Java基础/JVM/synchronized.md",
     "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/消息队列有哪些作用.md",
@@ -348,19 +352,16 @@
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/Seata.md",
-    "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
-    "计算机网络/Untitled.md",
-    "计算机网络/Untitled 1.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Pasted Image 20231220210201_774.png",
-    "计算机网络",
+    "计算机基础/计算机网络",
     "Pasted image 20231209135344.png",
     "Excalidraw",
     "设计模式/Untitled/Untitled",
@@ -371,7 +372,6 @@
     "Untitled 1",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "框架",
     "Pasted image 20231205220432.png"
   ]
 }
