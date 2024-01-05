@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
+                "file": "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
                 "mode": "source",
                 "source": false
               }
@@ -144,8 +144,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -161,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
+                "file": "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
+                "file": "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/Kafka如何消息不丢失.md"
+                "file": "分布式/消息队列/kafka/kafka为什么不支持读写分离.md"
               }
             }
           },
@@ -329,6 +328,8 @@
   },
   "active": "8e602f904b722929",
   "lastOpenFiles": [
+    "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
+    "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
     "分布式/Seata.md",
     "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
@@ -353,8 +354,6 @@
     "Excalidraw/Drawing 2024-01-01 22.25.47.excalidraw.md",
     "Excalidraw/事务 2024-01-02 17.01.00.excalidraw.md",
     "Excalidraw/事务 2024-01-02 16.22.09.excalidraw 1.md",
-    "Excalidraw/事务 2024-01-02 16.22.09.excalidraw.md",
-    "分布式/nacos/Nacos.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
