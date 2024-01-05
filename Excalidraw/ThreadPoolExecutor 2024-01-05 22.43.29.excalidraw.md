@@ -89,6 +89,10 @@ tags: [excalidraw]
 
 线程数 ^1Dle7lSO
 
+是否允许过期
+1、核心线程允许回收
+2、超过核心线程数 ^S4X3xbjr
+
 %%
 # Drawing
 ```json
@@ -97,6 +101,40 @@ tags: [excalidraw]
 	"version": 2,
 	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.13",
 	"elements": [
+		{
+			"id": "h9WpijYMQd0SZk3CEezC-",
+			"type": "rectangle",
+			"x": -6.612808954147965,
+			"y": 919.739717755999,
+			"width": 66.95021856398807,
+			"height": 30.651884533110206,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#fcfcfc",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1293283375,
+			"version": 38,
+			"versionNonce": 2074089103,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"id": "_dXLwFeSmFSkhBEvZ1Tj_",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704466598956,
+			"link": null,
+			"locked": false
+		},
 		{
 			"id": "r7BTOJwb",
 			"type": "text",
@@ -277,6 +315,133 @@ tags: [excalidraw]
 			"containerId": "O44hfkXphfKxj7zSK8AwF",
 			"originalText": "线程数",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "hXDkZY68xdp5JYVquwaT3",
+			"type": "rectangle",
+			"x": 396.21352568126895,
+			"y": 837.0125972202846,
+			"width": 219.0619187127978,
+			"height": 82,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#fcfcfc",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1683034177,
+			"version": 505,
+			"versionNonce": 1841701089,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "S4X3xbjr"
+				},
+				{
+					"id": "_dXLwFeSmFSkhBEvZ1Tj_",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704466681432,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "S4X3xbjr",
+			"type": "text",
+			"x": 401.21352568126895,
+			"y": 842.0125972202846,
+			"width": 191.71875,
+			"height": 72,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#fcfcfc",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 29019649,
+			"version": 596,
+			"versionNonce": 264233089,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704466681432,
+			"link": null,
+			"locked": false,
+			"text": "是否允许过期\n1、核心线程允许回收\n2、超过核心线程数",
+			"rawText": "是否允许过期\n1、核心线程允许回收\n2、超过核心线程数",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "middle",
+			"baseline": 67,
+			"containerId": "hXDkZY68xdp5JYVquwaT3",
+			"originalText": "是否允许过期\n1、核心线程允许回收\n2、超过核心线程数",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "_dXLwFeSmFSkhBEvZ1Tj_",
+			"type": "arrow",
+			"x": 61.33740960984011,
+			"y": 921.7711688301299,
+			"width": 332.1558082217262,
+			"height": 51.44682298962039,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#fcfcfc",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1027802497,
+			"version": 590,
+			"versionNonce": 1728715937,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704466681432,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					332.1558082217262,
+					-51.44682298962039
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "h9WpijYMQd0SZk3CEezC-",
+				"gap": 1,
+				"focus": -0.3863409931026124
+			},
+			"endBinding": {
+				"elementId": "hXDkZY68xdp5JYVquwaT3",
+				"gap": 2.7203078497026922,
+				"focus": 0.432581515890206
+			},
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
 		}
 	],
 	"appState": {
@@ -294,8 +459,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 348.35207839239183,
-		"scrollY": -503.1199173700241,
+		"scrollX": 329.30445934477297,
+		"scrollY": -516.4532507033576,
 		"zoom": {
 			"value": 1.05
 		},
