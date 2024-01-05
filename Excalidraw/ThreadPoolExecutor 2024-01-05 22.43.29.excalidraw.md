@@ -96,6 +96,12 @@ tags: [excalidraw]
 什么时候会出现线程数大于最大线程数？
 我认为只有动态调整了最大线程数会出现这个问题 ^SPYEAGem
 
+未获取到任务会一直阻塞 ^OvNtRpCU
+
+这里会因为超时返回null ^Gn8kPbfq
+
+思考🤔 ^iwTvfHhA
+
 %%
 # Drawing
 ```json
@@ -598,6 +604,369 @@ tags: [excalidraw]
 			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
+		},
+		{
+			"id": "nY_tjoEEoSVTAECZnteqW",
+			"type": "rectangle",
+			"x": 205.0771092006141,
+			"y": 1210.6945110502697,
+			"width": 194.16120256696428,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1150081217,
+			"version": 174,
+			"versionNonce": 701536079,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "OvNtRpCU"
+				}
+			],
+			"updated": 1704467097654,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "OvNtRpCU",
+			"type": "text",
+			"x": 214.15771048409624,
+			"y": 1215.6945110502697,
+			"width": 176,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2070491873,
+			"version": 136,
+			"versionNonce": 1300157807,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704467097654,
+			"link": null,
+			"locked": false,
+			"text": "未获取到任务会一直阻塞",
+			"rawText": "未获取到任务会一直阻塞",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "nY_tjoEEoSVTAECZnteqW",
+			"originalText": "未获取到任务会一直阻塞",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "Oh8GzOyqvZu-dyMjjy9xW",
+			"type": "rectangle",
+			"x": -11.43784150623111,
+			"y": 1187.8827667236326,
+			"width": 179.37825520833337,
+			"height": 27.572719029017883,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1183679919,
+			"version": 69,
+			"versionNonce": 495108161,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704467120069,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "YFsD-vBxTQeeVnig4zjMr",
+			"type": "arrow",
+			"x": -11.066922142391832,
+			"y": 1204.5098477318174,
+			"width": 165.72980608258925,
+			"height": 90.20937965029748,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 418266735,
+			"version": 226,
+			"versionNonce": 1698003887,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "Gn8kPbfq"
+				}
+			],
+			"updated": 1704467188593,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-165.72980608258925,
+					25.498163132440368
+				],
+				[
+					-47.32404436383925,
+					90.20937965029748
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
+		},
+		{
+			"id": "Gn8kPbfq",
+			"type": "text",
+			"x": -262.85922822498105,
+			"y": 1210.8080108642578,
+			"width": 172.125,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 232080239,
+			"version": 60,
+			"versionNonce": 221611279,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704467177577,
+			"link": null,
+			"locked": false,
+			"text": "这里会因为超时返回nul\nl",
+			"rawText": "这里会因为超时返回null",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "YFsD-vBxTQeeVnig4zjMr",
+			"originalText": "这里会因为超时返回null",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "hB-lo38wATbadByAR7Quw",
+			"type": "rectangle",
+			"x": -55.3110162644156,
+			"y": 1285.5998193650018,
+			"width": 192.6045735677083,
+			"height": 23.100295293898625,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1948728911,
+			"version": 56,
+			"versionNonce": 371655471,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704467145221,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "CbDmvPQl-9kH3195bVLHQ",
+			"type": "rectangle",
+			"x": 240.16220964704263,
+			"y": 965.6085968017575,
+			"width": 240.46677362351193,
+			"height": 31.47693452380952,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 381000353,
+			"version": 79,
+			"versionNonce": 1250768097,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704467267252,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "EwpSFe_JXDWRYznQeDvLo",
+			"type": "rectangle",
+			"x": 551.5526486351375,
+			"y": 987.0018259684251,
+			"width": 201.16117931547637,
+			"height": 149.8784528459821,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 2075521217,
+			"version": 50,
+			"versionNonce": 1465811809,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "iwTvfHhA"
+				}
+			],
+			"updated": 1704467343386,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "iwTvfHhA",
+			"type": "text",
+			"x": 556.5526486351375,
+			"y": 1052.3410523914163,
+			"width": 52,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 256949295,
+			"version": 24,
+			"versionNonce": 1740496751,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704467345119,
+			"link": null,
+			"locked": false,
+			"text": "思考🤔",
+			"rawText": "思考🤔",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "EwpSFe_JXDWRYznQeDvLo",
+			"originalText": "思考🤔",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "Iip2O6hr00N2ezZhgEnsr",
+			"type": "arrow",
+			"x": -53.00324794224301,
+			"y": 1281.6724686395555,
+			"width": 81.8388439360119,
+			"height": 27.624569847469957,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1026208801,
+			"version": 16,
+			"versionNonce": 2022480943,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704467140323,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					81.8388439360119,
+					27.624569847469957
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
 		}
 	],
 	"appState": {
@@ -615,8 +984,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 407.39969744001195,
-		"scrollY": -306.92944117954715,
+		"scrollX": 237.87588791620163,
+		"scrollY": -487.8818221319295,
 		"zoom": {
 			"value": 1.05
 		},
