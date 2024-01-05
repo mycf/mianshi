@@ -349,7 +349,7 @@
             "containerId": null,
             "originalText": "Multi\nInstance\nserver",
             "lineHeight": 1.3443715956615416,
-            "baseline": 53
+            "baseline": 54
           }
         ],
         "id": "uUelCmUsx0jw5-Y_yxB0j",
@@ -424,7 +424,7 @@
             "containerId": null,
             "originalText": "server",
             "lineHeight": 1.320687725575955,
-            "baseline": 19
+            "baseline": 18
           }
         ],
         "id": "4L1nczP8wjjVXT2WUDmXX",
@@ -560,7 +560,7 @@
             "containerId": null,
             "originalText": "Multi Instance",
             "lineHeight": 1.3218415496714844,
-            "baseline": 19
+            "baseline": 18
           }
         ],
         "id": "8v1S5_bPrJMfIadhkdei6",
@@ -2607,7 +2607,7 @@
             "containerId": null,
             "originalText": "}",
             "lineHeight": 1.2232416316348487,
-            "baseline": 29
+            "baseline": 28
           },
           {
             "type": "text",
@@ -2692,7 +2692,7 @@
             "containerId": null,
             "originalText": "Columnar DB",
             "lineHeight": 1.3420772212688767,
-            "baseline": 17
+            "baseline": 16
           },
           {
             "type": "line",
@@ -3047,7 +3047,7 @@
             "containerId": null,
             "originalText": "Graph DB",
             "lineHeight": 1.3499999999999999,
-            "baseline": 17
+            "baseline": 16
           },
           {
             "type": "line",
@@ -4735,7 +4735,7 @@
             "containerId": null,
             "originalText": "Key",
             "lineHeight": 1.3499999999999988,
-            "baseline": 6
+            "baseline": 5
           },
           {
             "type": "text",
@@ -4775,7 +4775,7 @@
             "containerId": null,
             "originalText": "Key",
             "lineHeight": 1.3499999999999988,
-            "baseline": 6
+            "baseline": 5
           },
           {
             "type": "text",
@@ -4815,7 +4815,7 @@
             "containerId": null,
             "originalText": "Value",
             "lineHeight": 1.3499999999999952,
-            "baseline": 6
+            "baseline": 5
           },
           {
             "type": "text",
@@ -4855,7 +4855,7 @@
             "containerId": null,
             "originalText": "Value",
             "lineHeight": 1.3499999999999952,
-            "baseline": 6
+            "baseline": 5
           },
           {
             "type": "text",
@@ -4899,7 +4899,7 @@
             "containerId": null,
             "originalText": "Cache",
             "lineHeight": 1.269574560630744,
-            "baseline": 20
+            "baseline": 19
           }
         ],
         "id": "aP9RjZ0O1VepzYHWVDi6Z",
@@ -6396,7 +6396,7 @@
             "containerId": null,
             "originalText": "Load\nBalancer",
             "lineHeight": 1.355813473102399,
-            "baseline": 33
+            "baseline": 34
           }
         ],
         "id": "57usN3LIkfvRaJ7pWj1N-",
@@ -7747,7 +7747,7 @@
             "containerId": null,
             "originalText": "CDN",
             "lineHeight": 1.2257881191819515,
-            "baseline": 29
+            "baseline": 28
           },
           {
             "type": "line",
@@ -8982,7 +8982,7 @@
             "containerId": null,
             "originalText": "Lorem ipsum dolor sit amet, \nconsectetur adipiscing elit,sed\n do eiusmod tempor incididunt\n ut labore et dolore magna\n aliqua. Ut enim ad miveniam,\n quis nostrud exercitaullamco \nlaboris nisi ut aliquip ex ea \nommodo consequat. Duis aute \nirure dolor in reprehenderit i",
             "lineHeight": 1.3706256908018875,
-            "baseline": 30
+            "baseline": 29
           },
           {
             "type": "text",
@@ -9024,7 +9024,7 @@
             "containerId": null,
             "originalText": "Lorem ipsum dolor s, \nconsectetur adipng d\n do eiusmopor incididunt\nut labore et dolore magna\naliqua. Ut enim ad miveniam,\nquis nostrud exercitaullamco \nlaboris nisi ut aliquip ex ea \nommodo consequat. Duis aute \n",
             "lineHeight": 1.3706256908018875,
-            "baseline": 30
+            "baseline": 29
           },
           {
             "type": "rectangle",
@@ -11073,7 +11073,7 @@
             "containerId": null,
             "originalText": "JSON",
             "lineHeight": 1.5682862358092613,
-            "baseline": 81
+            "baseline": 80
           },
           {
             "type": "line",
@@ -17731,7 +17731,7 @@
             "containerId": null,
             "originalText": "DNS",
             "lineHeight": 1.5723270440251587,
-            "baseline": 77
+            "baseline": 76
           },
           {
             "type": "line",
