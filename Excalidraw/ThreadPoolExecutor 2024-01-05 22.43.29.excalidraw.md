@@ -93,6 +93,9 @@ tags: [excalidraw]
 1、核心线程允许回收
 2、超过核心线程数 ^S4X3xbjr
 
+什么时候会出现线程数大于最大线程数？
+我认为只有动态调整了最大线程数会出现这个问题 ^SPYEAGem
+
 %%
 # Drawing
 ```json
@@ -102,44 +105,10 @@ tags: [excalidraw]
 	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.13",
 	"elements": [
 		{
-			"id": "h9WpijYMQd0SZk3CEezC-",
-			"type": "rectangle",
-			"x": -6.612808954147965,
-			"y": 919.739717755999,
-			"width": 66.95021856398807,
-			"height": 30.651884533110206,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "#fcfcfc",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 3
-			},
-			"seed": 1293283375,
-			"version": 38,
-			"versionNonce": 2074089103,
-			"isDeleted": false,
-			"boundElements": [
-				{
-					"id": "_dXLwFeSmFSkhBEvZ1Tj_",
-					"type": "arrow"
-				}
-			],
-			"updated": 1704466598956,
-			"link": null,
-			"locked": false
-		},
-		{
 			"id": "r7BTOJwb",
 			"type": "text",
-			"x": -238.32702491396958,
-			"y": -398.14168512253536,
+			"x": -238.18077305385054,
+			"y": -397.2820194789341,
 			"width": 855.46875,
 			"height": 1872,
 			"angle": 0,
@@ -154,11 +123,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 925744097,
-			"version": 65,
-			"versionNonce": 339180673,
+			"version": 189,
+			"versionNonce": 1936736399,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704466436356,
+			"updated": 1704466846689,
 			"link": null,
 			"locked": false,
 			"text": "    final void runWorker(Worker w) {\n        Thread wt = Thread.currentThread();\n        Runnable task = w.firstTask;\n        w.firstTask = null;\n        w.unlock(); // allow interrupts\n        boolean completedAbruptly = true;\n        try {\n            while (task != null || (task = getTask()) != null) {\n                w.lock();\n                // If pool is stopping, ensure thread is interrupted;\n                // if not, ensure thread is not interrupted.  This\n                // requires a recheck in second case to deal with\n                // shutdownNow race while clearing interrupt\n                if ((runStateAtLeast(ctl.get(), STOP) ||\n                     (Thread.interrupted() &&\n                      runStateAtLeast(ctl.get(), STOP))) &&\n                    !wt.isInterrupted())\n                    wt.interrupt();\n                try {\n                    beforeExecute(wt, task);\n                    try {\n                        task.run();\n                        afterExecute(task, null);\n                    } catch (Throwable ex) {\n                        afterExecute(task, ex);\n                        throw ex;\n                    }\n                } finally {\n                    task = null;\n                    w.completedTasks++;\n                    w.unlock();\n                }\n            }\n            completedAbruptly = false;\n        } finally {\n            processWorkerExit(w, completedAbruptly);\n        }\n    }\n\n    private Runnable getTask() {\n        boolean timedOut = false; // Did the last poll() time out?\n\n        for (;;) {\n            int c = ctl.get();\n\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {\n                decrementWorkerCount();\n                return null;\n            }\n\n            int wc = workerCountOf(c);\n\n            // Are workers subject to culling?\n            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;\n\n            if ((wc > maximumPoolSize || (timed && timedOut))\n                && (wc > 1 || workQueue.isEmpty())) {\n                if (compareAndDecrementWorkerCount(c))\n                    return null;\n                continue;\n            }\n\n            try {\n                Runnable r = timed ?\n                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :\n                    workQueue.take();\n                if (r != null)\n                    return r;\n                timedOut = true;\n            } catch (InterruptedException retry) {\n                timedOut = false;\n            }\n        }\n    }\n\n",
@@ -171,6 +140,74 @@ tags: [excalidraw]
 			"containerId": null,
 			"originalText": "    final void runWorker(Worker w) {\n        Thread wt = Thread.currentThread();\n        Runnable task = w.firstTask;\n        w.firstTask = null;\n        w.unlock(); // allow interrupts\n        boolean completedAbruptly = true;\n        try {\n            while (task != null || (task = getTask()) != null) {\n                w.lock();\n                // If pool is stopping, ensure thread is interrupted;\n                // if not, ensure thread is not interrupted.  This\n                // requires a recheck in second case to deal with\n                // shutdownNow race while clearing interrupt\n                if ((runStateAtLeast(ctl.get(), STOP) ||\n                     (Thread.interrupted() &&\n                      runStateAtLeast(ctl.get(), STOP))) &&\n                    !wt.isInterrupted())\n                    wt.interrupt();\n                try {\n                    beforeExecute(wt, task);\n                    try {\n                        task.run();\n                        afterExecute(task, null);\n                    } catch (Throwable ex) {\n                        afterExecute(task, ex);\n                        throw ex;\n                    }\n                } finally {\n                    task = null;\n                    w.completedTasks++;\n                    w.unlock();\n                }\n            }\n            completedAbruptly = false;\n        } finally {\n            processWorkerExit(w, completedAbruptly);\n        }\n    }\n\n    private Runnable getTask() {\n        boolean timedOut = false; // Did the last poll() time out?\n\n        for (;;) {\n            int c = ctl.get();\n\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {\n                decrementWorkerCount();\n                return null;\n            }\n\n            int wc = workerCountOf(c);\n\n            // Are workers subject to culling?\n            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;\n\n            if ((wc > maximumPoolSize || (timed && timedOut))\n                && (wc > 1 || workQueue.isEmpty())) {\n                if (compareAndDecrementWorkerCount(c))\n                    return null;\n                continue;\n            }\n\n            try {\n                Runnable r = timed ?\n                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :\n                    workQueue.take();\n                if (r != null)\n                    return r;\n                timedOut = true;\n            } catch (InterruptedException retry) {\n                timedOut = false;\n            }\n        }\n    }\n\n",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "eZjB9pwCM6n-TEszVclUg",
+			"type": "rectangle",
+			"x": -52.74411010742162,
+			"y": 963.5912976946152,
+			"width": 254.67215401785703,
+			"height": 33.322579520089214,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1221732449,
+			"version": 140,
+			"versionNonce": 1945873775,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"id": "9h9DVq4lCWG7_Vl8fUIBF",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704466980261,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "h9WpijYMQd0SZk3CEezC-",
+			"type": "rectangle",
+			"x": -6.612808954147965,
+			"y": 919.739717755999,
+			"width": 66.95021856398807,
+			"height": 30.651884533110206,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1293283375,
+			"version": 39,
+			"versionNonce": 2111146433,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"id": "_dXLwFeSmFSkhBEvZ1Tj_",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704466869266,
+			"link": null,
+			"locked": false
 		},
 		{
 			"id": "utEtbES-y4udhnaGLwbV-",
@@ -442,25 +479,144 @@ tags: [excalidraw]
 			},
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
+		},
+		{
+			"id": "UfgN-yPUMh-9HkEtkxhdH",
+			"type": "rectangle",
+			"x": -284.62265595935617,
+			"y": 999.7271910167879,
+			"width": 214.5726376488095,
+			"height": 87,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 705756399,
+			"version": 92,
+			"versionNonce": 1236022337,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "SPYEAGem"
+				}
+			],
+			"updated": 1704466972755,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "SPYEAGem",
+			"type": "text",
+			"x": -279.62265595935617,
+			"y": 1004.8271910167879,
+			"width": 192,
+			"height": 76.8,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1457829999,
+			"version": 141,
+			"versionNonce": 1904084001,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704466972756,
+			"link": null,
+			"locked": false,
+			"text": "什么时候会出现线程数大于\n最大线程数？\n我认为只有动态调整了最大\n线程数会出现这个问题",
+			"rawText": "什么时候会出现线程数大于最大线程数？\n我认为只有动态调整了最大线程数会出现这个问题",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "middle",
+			"baseline": 73,
+			"containerId": "UfgN-yPUMh-9HkEtkxhdH",
+			"originalText": "什么时候会出现线程数大于最大线程数？\n我认为只有动态调整了最大线程数会出现这个问题",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "9h9DVq4lCWG7_Vl8fUIBF",
+			"type": "arrow",
+			"x": -45.256549653553634,
+			"y": 997.109364100864,
+			"width": 33.51876395089283,
+			"height": 14.711739676339448,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 772943841,
+			"version": 23,
+			"versionNonce": 1426616143,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704466980261,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-33.51876395089283,
+					14.711739676339448
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "eZjB9pwCM6n-TEszVclUg",
+				"focus": 0.4927055428072657,
+				"gap": 1
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
 		}
 	],
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#ffffff",
 		"currentItemStrokeColor": "#e03131",
-		"currentItemBackgroundColor": "#fcfcfc",
+		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
 		"currentItemStrokeStyle": "solid",
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 3,
-		"currentItemFontSize": 20,
+		"currentItemFontSize": 16,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 329.30445934477297,
-		"scrollY": -516.4532507033576,
+		"scrollX": 407.39969744001195,
+		"scrollY": -306.92944117954715,
 		"zoom": {
 			"value": 1.05
 		},
