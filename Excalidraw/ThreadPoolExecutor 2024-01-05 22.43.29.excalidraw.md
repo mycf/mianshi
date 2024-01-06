@@ -118,7 +118,7 @@ tags: [excalidraw]
 不用回收的线程，会使用blockqueue阻塞在这 ^GQT0GLdJ
 
 1、至少stop的状态+当前线程非中断
-2、清除当前线程中断成功并确保状态至少stop状态 ^gYHVFgBW
+2、清除当前线程中断成功并确保状态至少stop状态+非中断 ^gYHVFgBW
 
 防止清除状态的时候调用了shutdowNow进入了stop状态 ^2Q8jSgLD
 
@@ -1426,22 +1426,22 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1584322337,
-			"version": 147,
-			"versionNonce": 2042437601,
+			"version": 156,
+			"versionNonce": 984474657,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704512260801,
+			"updated": 1704513087063,
 			"link": null,
 			"locked": false,
-			"text": "1、至少stop的状态+当前线程\n非中断\n2、清除当前线程中断成功并确\n保状态至少stop状态",
-			"rawText": "1、至少stop的状态+当前线程非中断\n2、清除当前线程中断成功并确保状态至少stop状态",
+			"text": "1、至少stop的状态+当前线程\n非中断\n2、清除当前线程中断成功并确\n保状态至少stop状态+非中断",
+			"rawText": "1、至少stop的状态+当前线程非中断\n2、清除当前线程中断成功并确保状态至少stop状态+非中断",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "middle",
 			"baseline": 73,
 			"containerId": "4SpYSMDe9lTZl-MV6p1C4",
-			"originalText": "1、至少stop的状态+当前线程非中断\n2、清除当前线程中断成功并确保状态至少stop状态",
+			"originalText": "1、至少stop的状态+当前线程非中断\n2、清除当前线程中断成功并确保状态至少stop状态+非中断",
 			"lineHeight": 1.2
 		},
 		{
@@ -1617,10 +1617,10 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": "arrow",
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 58.82826886858346,
-		"scrollY": 481.6419873918826,
+		"scrollX": 182.23067978068497,
+		"scrollY": 488.88933718342787,
 		"zoom": {
-			"value": 1.05
+			"value": 0.8939533477795967
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
