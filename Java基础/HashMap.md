@@ -5,7 +5,7 @@
         this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
     }
 ```
-## 插入
+## put插入
 ![[HashMap 2024-01-06 14.11.10.excalidraw|100%]]
 # 1.7
 
