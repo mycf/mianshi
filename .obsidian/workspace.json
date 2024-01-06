@@ -84,9 +84,11 @@
             "id": "5241d85827bbbcf7",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md"
+                "file": "Java基础/ThreadPoolExecutor.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -157,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -197,7 +199,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md"
+                "file": "Java基础/ThreadPoolExecutor.md"
               }
             }
           },
@@ -323,14 +325,14 @@
       }
     ]
   },
-  "active": "777458f37e94fc4d",
+  "active": "5241d85827bbbcf7",
   "lastOpenFiles": [
+    "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
+    "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
     "Java基础/ThreadPoolExecutor.md",
-    "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
     "分布式/消息队列/中间件的选型.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
-    "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "Excalidraw/Scripts/Downloaded/Slideshow.md",
