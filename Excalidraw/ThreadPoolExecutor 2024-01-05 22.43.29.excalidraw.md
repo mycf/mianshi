@@ -125,6 +125,8 @@ tags: [excalidraw]
 确保stop状态下是中断状态
 暂时没看到有什么用 ^dVQ2PDTs
 
+shut ^aRBtUR7S
+
 %%
 # Drawing
 ```json
@@ -1590,6 +1592,77 @@ tags: [excalidraw]
 			"lineHeight": 1.2
 		},
 		{
+			"id": "aYGklveSOi1pUSz4V9STM",
+			"type": "rectangle",
+			"x": 348.9856645330825,
+			"y": 1293.2684373476322,
+			"width": 220.4968437012451,
+			"height": 68.32040676323322,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1767752001,
+			"version": 32,
+			"versionNonce": 1747589345,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "aRBtUR7S"
+				}
+			],
+			"updated": 1704514216921,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "aRBtUR7S",
+			"type": "text",
+			"x": 440.48408638370506,
+			"y": 1317.828640729249,
+			"width": 37.5,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 310340495,
+			"version": 9,
+			"versionNonce": 634700737,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704514220179,
+			"link": null,
+			"locked": false,
+			"text": "shut",
+			"rawText": "shut",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "aYGklveSOi1pUSz4V9STM",
+			"originalText": "shut",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "Iip2O6hr00N2ezZhgEnsr",
 			"type": "arrow",
 			"x": -53.00324794224301,
@@ -1691,8 +1764,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": "arrow",
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 537.9539407202508,
-		"scrollY": 542.5834143063807,
+		"scrollX": 173.28166692685932,
+		"scrollY": -526.8236217257733,
 		"zoom": {
 			"value": 0.8939533477795967
 		},
