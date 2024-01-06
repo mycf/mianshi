@@ -7,6 +7,8 @@
 ```
 ## put插入
 ![[HashMap 2024-01-06 14.11.10.excalidraw|100%]]
+## 数组扩容
+![[HashMap 2024-01-06 15.31.21.excalidraw]]
 # 1.7
 
 > [!NOTE] 1.7 `HashMap` 为什么采用头插法
