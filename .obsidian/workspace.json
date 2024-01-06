@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "01c46ae0528aaab1",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md"
+              }
+            }
+          },
+          {
             "id": "cb4e697720a96e72",
             "type": "leaf",
             "state": {
@@ -129,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/zookeeper.md",
+                "file": "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/zookeeper.md",
+                "file": "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/zookeeper.md"
+                "file": "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md"
               }
             }
           },
@@ -295,11 +305,12 @@
       }
     ]
   },
-  "active": "cb4e697720a96e72",
+  "active": "01c46ae0528aaab1",
   "lastOpenFiles": [
-    "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
     "Java基础/HashMap.md",
     "Excalidraw/HashMap 2024-01-06 14.11.10.excalidraw.md",
+    "分布式/zookeeper.md",
+    "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
     "计算机基础/二进制运算.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Java基础/JVM/volatile.md",
@@ -324,7 +335,6 @@
     "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "分布式/消息队列/kafka/主题和分区.md",
     "分布式/消息队列/kafka/一文理解如何实现接口的幂等性.md",
-    "分布式/消息队列/kafka/日志存储.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
