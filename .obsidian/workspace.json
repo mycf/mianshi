@@ -23,9 +23,11 @@
             "id": "cb4e697720a96e72",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md"
+                "file": "分布式/zookeeper.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -127,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
+                "file": "分布式/zookeeper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
+                "file": "分布式/zookeeper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md"
+                "file": "分布式/zookeeper.md"
               }
             }
           },
@@ -295,10 +297,10 @@
   },
   "active": "cb4e697720a96e72",
   "lastOpenFiles": [
+    "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
     "Java基础/HashMap.md",
     "Excalidraw/HashMap 2024-01-06 14.11.10.excalidraw.md",
     "计算机基础/二进制运算.md",
-    "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Java基础/JVM/volatile.md",
     "Java基础/JVM/JVM内存结构.md",
