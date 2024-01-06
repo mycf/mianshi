@@ -50,7 +50,7 @@ void transfer(Entry<?,?>[] newTable, boolean rehash) {
 
 ```
 因此，HashMap正常情况下的扩容就是是这样一个过程。我们来看，旧HashMap的节点会依次转移到新的HashMap中，旧HashMap转移链表元素的顺序是A、B、C，而新HashMap使用的是头插法插入，所以，扩容完成后最终在新HashMap中链表元素的顺序是C、B、A。
-![[头插法.excalidraw]]
+![[头插法.excalidraw|100%]]
 
 ```java
 final boolean initHashSeedAsNeeded(int capacity) {
@@ -106,5 +106,5 @@ static {
 	ALTERNATIVE_HASHING_THRESHOLD = threshold;
 ```
 
-# JDK7 死锁问题
+# JDK7 头插法死锁问题
 ![[HashMap死循环.excalidraw|100%]]
