@@ -117,6 +117,9 @@ tags: [excalidraw]
 
 不用回收的线程，会使用blockqueue阻塞在这 ^GQT0GLdJ
 
+1、至少stop的状态+当前线程非中断
+2、 ^gYHVFgBW
+
 %%
 # Drawing
 ```json
@@ -1369,6 +1372,77 @@ tags: [excalidraw]
 			"lineHeight": 1.2
 		},
 		{
+			"id": "4SpYSMDe9lTZl-MV6p1C4",
+			"type": "rectangle",
+			"x": 463.52263096400577,
+			"y": -76.40361604236625,
+			"width": 239.93524460565482,
+			"height": 70.24742489769346,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 810140367,
+			"version": 50,
+			"versionNonce": 635856751,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "gYHVFgBW"
+				}
+			],
+			"updated": 1704511947355,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "gYHVFgBW",
+			"type": "text",
+			"x": 468.52263096400577,
+			"y": -70.07990359351952,
+			"width": 216.25,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1584322337,
+			"version": 62,
+			"versionNonce": 1604988719,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704511987223,
+			"link": null,
+			"locked": false,
+			"text": "1、至少stop的状态+当前线程\n非中断\n2、",
+			"rawText": "1、至少stop的状态+当前线程非中断\n2、",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "middle",
+			"baseline": 54,
+			"containerId": "4SpYSMDe9lTZl-MV6p1C4",
+			"originalText": "1、至少stop的状态+当前线程非中断\n2、",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "Iip2O6hr00N2ezZhgEnsr",
 			"type": "arrow",
 			"x": -53.00324794224301,
@@ -1470,8 +1544,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": "arrow",
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 133.11398315429784,
-		"scrollY": 763.5467492966449,
+		"scrollX": 58.82826886858346,
+		"scrollY": 481.6419873918826,
 		"zoom": {
 			"value": 1.05
 		},
