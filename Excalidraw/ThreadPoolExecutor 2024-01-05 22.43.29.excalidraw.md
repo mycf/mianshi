@@ -120,7 +120,10 @@ tags: [excalidraw]
 1、至少stop的状态+当前线程非中断
 2、清除当前线程中断成功并确保状态至少stop状态+非中断 ^gYHVFgBW
 
-防止清除状态的时候调用了shutdowNow进入了stop状态 ^2Q8jSgLD
+重复判断了至少stop状态防止清除状态的时候调用了shutdowNow进入了stop状态 ^2Q8jSgLD
+
+确保stop状态下是中断状态
+暂时没看到有什么用 ^dVQ2PDTs
 
 %%
 # Drawing
@@ -1447,10 +1450,10 @@ tags: [excalidraw]
 		{
 			"id": "pL_KibyXWDNHFT2Ob0knR",
 			"type": "rectangle",
-			"x": 662.0653439476367,
-			"y": -117.86857604980673,
+			"x": 681.2403955373828,
+			"y": -128.4142809095493,
 			"width": 176.08596075148807,
-			"height": 68,
+			"height": 87,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1465,8 +1468,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 199654735,
-			"version": 42,
-			"versionNonce": 517293871,
+			"version": 68,
+			"versionNonce": 1565855375,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1474,17 +1477,17 @@ tags: [excalidraw]
 					"id": "2Q8jSgLD"
 				}
 			],
-			"updated": 1704512385824,
+			"updated": 1704513325841,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "2Q8jSgLD",
 			"type": "text",
-			"x": 670.1083243233808,
-			"y": -112.66857604980673,
-			"width": 160,
-			"height": 57.599999999999994,
+			"x": 686.5333759131269,
+			"y": -123.3142809095493,
+			"width": 165.5,
+			"height": 76.8,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1497,22 +1500,93 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1743643137,
-			"version": 63,
-			"versionNonce": 1389596097,
+			"version": 113,
+			"versionNonce": 1609721007,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704512390528,
+			"updated": 1704513325841,
 			"link": null,
 			"locked": false,
-			"text": "防止清除状态的时候调\n用了shutdowNow进入\n了stop状态",
-			"rawText": "防止清除状态的时候调用了shutdowNow进入了stop状态",
+			"text": "重复判断了至少stop状\n态防止清除状态的时候\n调用了shutdowNow进\n入了stop状态",
+			"rawText": "重复判断了至少stop状态防止清除状态的时候调用了shutdowNow进入了stop状态",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "middle",
-			"baseline": 54,
+			"baseline": 73,
 			"containerId": "pL_KibyXWDNHFT2Ob0knR",
-			"originalText": "防止清除状态的时候调用了shutdowNow进入了stop状态",
+			"originalText": "重复判断了至少stop状态防止清除状态的时候调用了shutdowNow进入了stop状态",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "dkM04gF89L8hF8_szKMiH",
+			"type": "rectangle",
+			"x": -174.48447728640105,
+			"y": -90.45762041643002,
+			"width": 123.85266651148845,
+			"height": 87,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1247167727,
+			"version": 100,
+			"versionNonce": 1183896353,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "dVQ2PDTs"
+				}
+			],
+			"updated": 1704513468727,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "dVQ2PDTs",
+			"type": "text",
+			"x": -169.48447728640105,
+			"y": -85.35762041643002,
+			"width": 112,
+			"height": 76.8,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 734995617,
+			"version": 83,
+			"versionNonce": 1210337697,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704513481712,
+			"link": null,
+			"locked": false,
+			"text": "确保stop状态\n下是中断状态\n暂时没看到有什\n么用",
+			"rawText": "确保stop状态下是中断状态\n暂时没看到有什么用",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "middle",
+			"baseline": 73,
+			"containerId": "dkM04gF89L8hF8_szKMiH",
+			"originalText": "确保stop状态下是中断状态\n暂时没看到有什么用",
 			"lineHeight": 1.2
 		},
 		{
@@ -1605,7 +1679,7 @@ tags: [excalidraw]
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#e03131",
+		"currentItemStrokeColor": "#1971c2",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
@@ -1617,8 +1691,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": "arrow",
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 182.23067978068497,
-		"scrollY": 488.88933718342787,
+		"scrollX": 537.9539407202508,
+		"scrollY": 542.5834143063807,
 		"zoom": {
 			"value": 0.8939533477795967
 		},
