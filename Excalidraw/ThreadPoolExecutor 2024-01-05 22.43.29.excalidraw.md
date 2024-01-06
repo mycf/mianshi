@@ -118,7 +118,9 @@ tags: [excalidraw]
 不用回收的线程，会使用blockqueue阻塞在这 ^GQT0GLdJ
 
 1、至少stop的状态+当前线程非中断
-2、 ^gYHVFgBW
+2、清除当前线程中断成功并确保状态至少stop状态 ^gYHVFgBW
+
+防止清除状态的时候调用了shutdowNow进入了stop状态 ^2Q8jSgLD
 
 %%
 # Drawing
@@ -283,8 +285,8 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 1974624655,
-			"version": 228,
-			"versionNonce": 2105122927,
+			"version": 229,
+			"versionNonce": 231843681,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -292,7 +294,7 @@ tags: [excalidraw]
 					"id": "Hrw6YL2a"
 				}
 			],
-			"updated": 1704468666340,
+			"updated": 1704512354332,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1377,7 +1379,7 @@ tags: [excalidraw]
 			"x": 463.52263096400577,
 			"y": -76.40361604236625,
 			"width": 239.93524460565482,
-			"height": 70.24742489769346,
+			"height": 87,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1392,8 +1394,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 810140367,
-			"version": 50,
-			"versionNonce": 635856751,
+			"version": 51,
+			"versionNonce": 979040335,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1401,7 +1403,7 @@ tags: [excalidraw]
 					"id": "gYHVFgBW"
 				}
 			],
-			"updated": 1704511947355,
+			"updated": 1704512235690,
 			"link": null,
 			"locked": false
 		},
@@ -1409,9 +1411,9 @@ tags: [excalidraw]
 			"id": "gYHVFgBW",
 			"type": "text",
 			"x": 468.52263096400577,
-			"y": -70.07990359351952,
-			"width": 216.25,
-			"height": 57.599999999999994,
+			"y": -71.30361604236626,
+			"width": 217.375,
+			"height": 76.8,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1424,22 +1426,93 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1584322337,
-			"version": 62,
-			"versionNonce": 1604988719,
+			"version": 147,
+			"versionNonce": 2042437601,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704511987223,
+			"updated": 1704512260801,
 			"link": null,
 			"locked": false,
-			"text": "1、至少stop的状态+当前线程\n非中断\n2、",
-			"rawText": "1、至少stop的状态+当前线程非中断\n2、",
+			"text": "1、至少stop的状态+当前线程\n非中断\n2、清除当前线程中断成功并确\n保状态至少stop状态",
+			"rawText": "1、至少stop的状态+当前线程非中断\n2、清除当前线程中断成功并确保状态至少stop状态",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "middle",
-			"baseline": 54,
+			"baseline": 73,
 			"containerId": "4SpYSMDe9lTZl-MV6p1C4",
-			"originalText": "1、至少stop的状态+当前线程非中断\n2、",
+			"originalText": "1、至少stop的状态+当前线程非中断\n2、清除当前线程中断成功并确保状态至少stop状态",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "pL_KibyXWDNHFT2Ob0knR",
+			"type": "rectangle",
+			"x": 662.0653439476367,
+			"y": -117.86857604980673,
+			"width": 176.08596075148807,
+			"height": 68,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 199654735,
+			"version": 42,
+			"versionNonce": 517293871,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "2Q8jSgLD"
+				}
+			],
+			"updated": 1704512385824,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "2Q8jSgLD",
+			"type": "text",
+			"x": 670.1083243233808,
+			"y": -112.66857604980673,
+			"width": 160,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1743643137,
+			"version": 63,
+			"versionNonce": 1389596097,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704512390528,
+			"link": null,
+			"locked": false,
+			"text": "防止清除状态的时候调\n用了shutdowNow进入\n了stop状态",
+			"rawText": "防止清除状态的时候调用了shutdowNow进入了stop状态",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 54,
+			"containerId": "pL_KibyXWDNHFT2Ob0knR",
+			"originalText": "防止清除状态的时候调用了shutdowNow进入了stop状态",
 			"lineHeight": 1.2
 		},
 		{
