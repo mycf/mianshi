@@ -1522,10 +1522,10 @@ shutdownNow会触发中断 ^aRBtUR7S
 		{
 			"id": "dkM04gF89L8hF8_szKMiH",
 			"type": "rectangle",
-			"x": -186.60857630473396,
-			"y": -88.73892000315067,
-			"width": 146.55169232484718,
-			"height": 94.89483836603972,
+			"x": -156.12286059610318,
+			"y": -35.27400976285617,
+			"width": 143.31966435186746,
+			"height": 52.16745314244605,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1540,8 +1540,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 				"type": 3
 			},
 			"seed": 1247167727,
-			"version": 185,
-			"versionNonce": 1411444399,
+			"version": 300,
+			"versionNonce": 864181711,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1549,16 +1549,16 @@ shutdownNow会触发中断 ^aRBtUR7S
 					"id": "dVQ2PDTs"
 				}
 			],
-			"updated": 1704514906760,
+			"updated": 1704515330615,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "dVQ2PDTs",
 			"type": "text",
-			"x": -181.60857630473396,
-			"y": -60.49150082013081,
-			"width": 133.5,
+			"x": -151.12286059610318,
+			"y": -28.390283191633145,
+			"width": 117.5,
 			"height": 38.4,
 			"angle": 0,
 			"strokeColor": "#1971c2",
@@ -1572,14 +1572,14 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"seed": 734995617,
-			"version": 174,
-			"versionNonce": 781009103,
+			"version": 290,
+			"versionNonce": 2050214895,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704514906760,
+			"updated": 1704515330615,
 			"link": null,
 			"locked": false,
-			"text": "确保stop状态下是\n中断状态",
+			"text": "确保stop状态下\n是中断状态",
 			"rawText": "确保stop状态下是中断状态",
 			"fontSize": 16,
 			"fontFamily": 3,
@@ -1763,8 +1763,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": "arrow",
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 452.93831860890816,
-		"scrollY": 305.43457368000463,
+		"scrollX": 504.39514251840484,
+		"scrollY": 359.12865080295785,
 		"zoom": {
 			"value": 0.8939533477795967
 		},
