@@ -48,18 +48,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/中间件的选型.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3832fa2dd0ab81d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Java基础/ThreadPoolExecutor.md",
                 "mode": "source",
                 "source": false
@@ -97,7 +85,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "0c1704d757f3fa32",
@@ -347,12 +335,12 @@
       }
     ]
   },
-  "active": "3832fa2dd0ab81d6",
+  "active": "8e602f904b722929",
   "lastOpenFiles": [
+    "分布式/消息队列/中间件的选型.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
     "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
-    "分布式/消息队列/中间件的选型.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",

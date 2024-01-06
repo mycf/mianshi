@@ -7,9 +7,7 @@
 | RUNNING |     |
 # 任务提交
 ![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw|100%]]
-# 线程池如何池化的？怎么保存线程的？
-在上面提交线程的时候[[ThreadPoolExecutor#任务提交]]，创建了一个Worker，并从之中取出线程运行
-
+# 任务运行
 ![[ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw|100%]]
 
 
