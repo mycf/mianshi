@@ -43,18 +43,6 @@
             }
           },
           {
-            "id": "8e602f904b722929",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "73948001f53c3b8c",
             "type": "leaf",
             "state": {
@@ -85,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "0c1704d757f3fa32",
@@ -169,7 +157,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
+                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +174,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
+                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -209,7 +197,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md"
+                "file": "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md"
               }
             }
           },
@@ -335,12 +323,12 @@
       }
     ]
   },
-  "active": "8e602f904b722929",
+  "active": "777458f37e94fc4d",
   "lastOpenFiles": [
-    "分布式/消息队列/中间件的选型.md",
-    "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
-    "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
+    "Java基础/ThreadPoolExecutor.md",
+    "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
+    "分布式/消息队列/中间件的选型.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
