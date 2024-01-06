@@ -122,10 +122,9 @@ tags: [excalidraw]
 
 重复判断了至少stop状态防止清除状态的时候调用了shutdowNow进入了stop状态 ^2Q8jSgLD
 
-确保stop状态下是中断状态
-暂时没看到有什么用 ^dVQ2PDTs
+确保stop状态下是中断状态 ^dVQ2PDTs
 
-shut ^aRBtUR7S
+shutdownNow会触发中断 ^aRBtUR7S
 
 %%
 # Drawing
@@ -138,8 +137,8 @@ shut ^aRBtUR7S
 		{
 			"id": "r7BTOJwb",
 			"type": "text",
-			"x": -238.18077305385054,
-			"y": -397.2820194789341,
+			"x": -240.818257539807,
+			"y": -399.09220912884774,
 			"width": 855.46875,
 			"height": 1872,
 			"angle": 0,
@@ -154,11 +153,11 @@ shut ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"seed": 925744097,
-			"version": 194,
-			"versionNonce": 308188463,
+			"version": 254,
+			"versionNonce": 293829871,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704468568364,
+			"updated": 1704514804450,
 			"link": null,
 			"locked": false,
 			"text": "    final void runWorker(Worker w) {\n        Thread wt = Thread.currentThread();\n        Runnable task = w.firstTask;\n        w.firstTask = null;\n        w.unlock(); // allow interrupts\n        boolean completedAbruptly = true;\n        try {\n            while (task != null || (task = getTask()) != null) {\n                w.lock();\n                // If pool is stopping, ensure thread is interrupted;\n                // if not, ensure thread is not interrupted.  This\n                // requires a recheck in second case to deal with\n                // shutdownNow race while clearing interrupt\n                if ((runStateAtLeast(ctl.get(), STOP) ||\n                     (Thread.interrupted() &&\n                      runStateAtLeast(ctl.get(), STOP))) &&\n                    !wt.isInterrupted())\n                    wt.interrupt();\n                try {\n                    beforeExecute(wt, task);\n                    try {\n                        task.run();\n                        afterExecute(task, null);\n                    } catch (Throwable ex) {\n                        afterExecute(task, ex);\n                        throw ex;\n                    }\n                } finally {\n                    task = null;\n                    w.completedTasks++;\n                    w.unlock();\n                }\n            }\n            completedAbruptly = false;\n        } finally {\n            processWorkerExit(w, completedAbruptly);\n        }\n    }\n\n    private Runnable getTask() {\n        boolean timedOut = false; // Did the last poll() time out?\n\n        for (;;) {\n            int c = ctl.get();\n\n            // Check if queue empty only if necessary.\n            if (runStateAtLeast(c, SHUTDOWN)\n                && (runStateAtLeast(c, STOP) || workQueue.isEmpty())) {\n                decrementWorkerCount();\n                return null;\n            }\n\n            int wc = workerCountOf(c);\n\n            // Are workers subject to culling?\n            boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;\n\n            if ((wc > maximumPoolSize || (timed && timedOut))\n                && (wc > 1 || workQueue.isEmpty())) {\n                if (compareAndDecrementWorkerCount(c))\n                    return null;\n                continue;\n            }\n\n            try {\n                Runnable r = timed ?\n                    workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :\n                    workQueue.take();\n                if (r != null)\n                    return r;\n                timedOut = true;\n            } catch (InterruptedException retry) {\n                timedOut = false;\n            }\n        }\n    }\n\n",
@@ -1525,8 +1524,8 @@ shut ^aRBtUR7S
 			"type": "rectangle",
 			"x": -174.48447728640105,
 			"y": -90.45762041643002,
-			"width": 123.85266651148845,
-			"height": 87,
+			"width": 124.2606811966574,
+			"height": 51.52993019686966,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1541,8 +1540,8 @@ shut ^aRBtUR7S
 				"type": 3
 			},
 			"seed": 1247167727,
-			"version": 100,
-			"versionNonce": 1183896353,
+			"version": 116,
+			"versionNonce": 601893185,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1550,7 +1549,7 @@ shut ^aRBtUR7S
 					"id": "dVQ2PDTs"
 				}
 			],
-			"updated": 1704513468727,
+			"updated": 1704514717933,
 			"link": null,
 			"locked": false
 		},
@@ -1558,9 +1557,9 @@ shut ^aRBtUR7S
 			"id": "dVQ2PDTs",
 			"type": "text",
 			"x": -169.48447728640105,
-			"y": -85.35762041643002,
-			"width": 112,
-			"height": 76.8,
+			"y": -83.89265531799519,
+			"width": 101.5,
+			"height": 38.4,
 			"angle": 0,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "transparent",
@@ -1573,31 +1572,31 @@ shut ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"seed": 734995617,
-			"version": 83,
-			"versionNonce": 1210337697,
+			"version": 103,
+			"versionNonce": 931714433,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704513481712,
+			"updated": 1704514717869,
 			"link": null,
 			"locked": false,
-			"text": "确保stop状态\n下是中断状态\n暂时没看到有什\n么用",
-			"rawText": "确保stop状态下是中断状态\n暂时没看到有什么用",
+			"text": "确保stop状态\n下是中断状态",
+			"rawText": "确保stop状态下是中断状态",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "middle",
-			"baseline": 73,
+			"baseline": 34,
 			"containerId": "dkM04gF89L8hF8_szKMiH",
-			"originalText": "确保stop状态下是中断状态\n暂时没看到有什么用",
+			"originalText": "确保stop状态下是中断状态",
 			"lineHeight": 1.2
 		},
 		{
 			"id": "aYGklveSOi1pUSz4V9STM",
 			"type": "rectangle",
-			"x": 348.9856645330825,
-			"y": 1293.2684373476322,
-			"width": 220.4968437012451,
-			"height": 68.32040676323322,
+			"x": 355.9916917927753,
+			"y": 1297.0252311958143,
+			"width": 236.1920270725022,
+			"height": 33.55381408671565,
 			"angle": 0,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "transparent",
@@ -1612,8 +1611,8 @@ shut ^aRBtUR7S
 				"type": 3
 			},
 			"seed": 1767752001,
-			"version": 32,
-			"versionNonce": 1747589345,
+			"version": 69,
+			"versionNonce": 1330604673,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1621,16 +1620,16 @@ shut ^aRBtUR7S
 					"id": "aRBtUR7S"
 				}
 			],
-			"updated": 1704514216921,
+			"updated": 1704514573218,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "aRBtUR7S",
 			"type": "text",
-			"x": 440.48408638370506,
-			"y": 1317.828640729249,
-			"width": 37.5,
+			"x": 382.52520532902645,
+			"y": 1304.2021382391722,
+			"width": 183.125,
 			"height": 19.2,
 			"angle": 0,
 			"strokeColor": "#1971c2",
@@ -1644,22 +1643,22 @@ shut ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"seed": 310340495,
-			"version": 9,
-			"versionNonce": 634700737,
+			"version": 75,
+			"versionNonce": 1105228385,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704514220179,
+			"updated": 1704514573218,
 			"link": null,
 			"locked": false,
-			"text": "shut",
-			"rawText": "shut",
+			"text": "shutdownNow会触发中断",
+			"rawText": "shutdownNow会触发中断",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"baseline": 15,
 			"containerId": "aYGklveSOi1pUSz4V9STM",
-			"originalText": "shut",
+			"originalText": "shutdownNow会触发中断",
 			"lineHeight": 1.2
 		},
 		{
@@ -1764,8 +1763,8 @@ shut ^aRBtUR7S
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": "arrow",
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 173.28166692685932,
-		"scrollY": -526.8236217257733,
+		"scrollX": 486.4971168107537,
+		"scrollY": 421.7717407797357,
 		"zoom": {
 			"value": 0.8939533477795967
 		},
