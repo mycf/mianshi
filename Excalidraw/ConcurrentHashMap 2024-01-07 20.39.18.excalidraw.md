@@ -105,7 +105,9 @@ tags: [excalidraw]
 
 执行插入 ^djOCiHCo
 
-第一个元素不为空 ^IvnjyUcA
+元素不为空 ^IvnjyUcA
+
+是否存在不操作 ^76YNtjq7
 
 %%
 # Drawing
@@ -904,7 +906,7 @@ tags: [excalidraw]
 			"type": "rectangle",
 			"x": 574.6123021443682,
 			"y": 794.085444132486,
-			"width": 182.79541015625003,
+			"width": 115.21573893229166,
 			"height": 34,
 			"angle": 0,
 			"strokeColor": "#e03131",
@@ -920,8 +922,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 715312993,
-			"version": 122,
-			"versionNonce": 53341473,
+			"version": 161,
+			"versionNonce": 46200417,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -929,16 +931,16 @@ tags: [excalidraw]
 					"id": "IvnjyUcA"
 				}
 			],
-			"updated": 1704634863766,
+			"updated": 1704634901715,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "IvnjyUcA",
 			"type": "text",
-			"x": 586.0100072224932,
+			"x": 582.2201716105141,
 			"y": 799.085444132486,
-			"width": 160,
+			"width": 100,
 			"height": 24,
 			"angle": 0,
 			"strokeColor": "#e03131",
@@ -952,22 +954,93 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 151247617,
-			"version": 118,
-			"versionNonce": 135635201,
+			"version": 160,
+			"versionNonce": 1257603649,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634863766,
+			"updated": 1704634901715,
 			"link": null,
 			"locked": false,
-			"text": "第一个元素不为空",
-			"rawText": "第一个元素不为空",
+			"text": "元素不为空",
+			"rawText": "元素不为空",
 			"fontSize": 20,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"baseline": 19,
 			"containerId": "5uQyUALFVvfFL3HDbB9zm",
-			"originalText": "第一个元素不为空",
+			"originalText": "元素不为空",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "pMY1AreKR11MaRwLcirOa",
+			"type": "rectangle",
+			"x": 713.9635391235349,
+			"y": 911.1430613199859,
+			"width": 151.42692057291663,
+			"height": 34,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1075357185,
+			"version": 251,
+			"versionNonce": 1423342959,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "76YNtjq7"
+				}
+			],
+			"updated": 1704635036909,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "76YNtjq7",
+			"type": "text",
+			"x": 719.6769994099932,
+			"y": 916.1430613199859,
+			"width": 140,
+			"height": 24,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1799050145,
+			"version": 266,
+			"versionNonce": 932737057,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704635040893,
+			"link": null,
+			"locked": false,
+			"text": "是否存在不操作",
+			"rawText": "是否存在不操作",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 19,
+			"containerId": "pMY1AreKR11MaRwLcirOa",
+			"originalText": "是否存在不操作",
 			"lineHeight": 1.2
 		},
 		{
