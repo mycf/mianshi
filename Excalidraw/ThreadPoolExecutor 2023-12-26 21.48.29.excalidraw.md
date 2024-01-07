@@ -148,6 +148,8 @@ cas失败，重新循环 ^M4Poncut
 
 队列已满，尝试使用非核心线程 ^rILL5G1r
 
+如果核心线程数为0 ^tk7Hguty
+
 %%
 # Drawing
 ```json
@@ -935,7 +937,7 @@ cas失败，重新循环 ^M4Poncut
 			"x": 267.37727908941997,
 			"y": 9011.810421391778,
 			"width": 126.1785929330639,
-			"height": 33.63766639280584,
+			"height": 49,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
@@ -950,13 +952,55 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 1369465281,
-			"version": 62,
-			"versionNonce": 710906401,
+			"version": 64,
+			"versionNonce": 515286689,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704597412607,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "tk7Hguty"
+				}
+			],
+			"updated": 1704597712273,
 			"link": null,
 			"locked": false
+		},
+		{
+			"id": "tk7Hguty",
+			"type": "text",
+			"x": 274.4665755559519,
+			"y": 9017.110421391777,
+			"width": 112,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2131517135,
+			"version": 33,
+			"versionNonce": 2099417345,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704597720448,
+			"link": null,
+			"locked": false,
+			"text": "如果核心线程数\n为0",
+			"rawText": "如果核心线程数为0",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "KXM6VuiRur7K_thpxEJZ5",
+			"originalText": "如果核心线程数为0",
+			"lineHeight": 1.2
 		},
 		{
 			"id": "ZbQJvlol",
@@ -1011,8 +1055,8 @@ cas失败，重新循环 ^M4Poncut
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 583.7930719501774,
-		"scrollY": -8562.669229881889,
+		"scrollX": 579.4899971980894,
+		"scrollY": -8468.001585335922,
 		"zoom": {
 			"value": 0.9295678626217359
 		},
