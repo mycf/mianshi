@@ -545,8 +545,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 897,
-			"versionNonce": 619099215,
+			"version": 898,
+			"versionNonce": 349475553,
 			"isDeleted": false,
 			"id": "MSNhqP1k",
 			"fillStyle": "solid",
@@ -567,8 +567,13 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			],
 			"frameId": null,
 			"roundness": null,
-			"boundElements": [],
-			"updated": 1704600993193,
+			"boundElements": [
+				{
+					"id": "cVq_sJ9i6giQtWwisZ1JO",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704603611689,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -584,8 +589,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 806,
-			"versionNonce": 155761697,
+			"version": 807,
+			"versionNonce": 627910433,
 			"isDeleted": false,
 			"id": "P0mIVURa",
 			"fillStyle": "solid",
@@ -606,8 +611,13 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			],
 			"frameId": null,
 			"roundness": null,
-			"boundElements": [],
-			"updated": 1704600993193,
+			"boundElements": [
+				{
+					"id": "cVq_sJ9i6giQtWwisZ1JO",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704603611689,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -735,8 +745,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 455,
-			"versionNonce": 1261146945,
+			"version": 457,
+			"versionNonce": 1885236865,
 			"isDeleted": false,
 			"id": "agqkj0jG",
 			"fillStyle": "solid",
@@ -745,11 +755,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 238.5928517282316,
+			"x": 238.57258121338998,
 			"y": 8834.353904613017,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
-			"width": 140.859422349223,
+			"width": 140.89996337890625,
 			"height": 16.914908098743915,
 			"seed": 661876353,
 			"groupIds": [
@@ -758,7 +768,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704603270694,
+			"updated": 1704603372869,
 			"link": null,
 			"locked": false,
 			"fontSize": 14.095756748953262,
@@ -960,8 +970,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 720,
-			"versionNonce": 756633807,
+			"version": 722,
+			"versionNonce": 295192815,
 			"isDeleted": false,
 			"id": "KXM6VuiRur7K_thpxEJZ5",
 			"fillStyle": "solid",
@@ -992,14 +1002,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704603255870,
+			"updated": 1704603612864,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 892,
-			"versionNonce": 533638959,
+			"version": 894,
+			"versionNonce": 1419975503,
 			"isDeleted": false,
 			"id": "tk7Hguty",
 			"fillStyle": "solid",
@@ -1019,7 +1029,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704603255872,
+			"updated": 1704603612864,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1565,8 +1575,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 103,
-			"versionNonce": 712269551,
+			"version": 105,
+			"versionNonce": 1889489679,
 			"isDeleted": false,
 			"id": "tNF9R-U8jlwUTz34plAo9",
 			"fillStyle": "solid",
@@ -1593,7 +1603,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "TUnUNpdN"
 				}
 			],
-			"updated": 1704603255870,
+			"updated": 1704603612864,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1622,8 +1632,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 74,
-			"versionNonce": 25733391,
+			"version": 76,
+			"versionNonce": 176167215,
 			"isDeleted": false,
 			"id": "TUnUNpdN",
 			"fillStyle": "solid",
@@ -1636,26 +1646,26 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"y": 9220.510784684566,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
-			"width": 160,
-			"height": 57.599999999999994,
+			"width": 208,
+			"height": 38.4,
 			"seed": 1095826703,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704603255871,
+			"updated": 1704603612864,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
 			"fontFamily": 3,
-			"text": "可能会有把其他线程提\n交任务执行的情况，队\n列就为空了",
+			"text": "可能会有把其他线程提交任务\n执行的情况，队列就为空了",
 			"rawText": "可能会有把其他线程提交任务执行的情况，队列就为空了",
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"containerId": "tNF9R-U8jlwUTz34plAo9",
 			"originalText": "可能会有把其他线程提交任务执行的情况，队列就为空了",
 			"lineHeight": 1.2,
-			"baseline": 54
+			"baseline": 34
 		},
 		{
 			"type": "arrow",
@@ -1779,6 +1789,110 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"originalText": "添加核心线程",
 			"lineHeight": 1.2,
 			"baseline": 12
+		},
+		{
+			"id": "SaZdBhsWWCsct4O9NKMG1",
+			"type": "arrow",
+			"x": 65.36639793409279,
+			"y": 10318.25356381244,
+			"width": 221.525495700404,
+			"height": 138.6667778431456,
+			"angle": 0,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1412418735,
+			"version": 102,
+			"versionNonce": 1384099361,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704603674171,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					221.525495700404,
+					-56.32138649421904
+				],
+				[
+					118.63685284094504,
+					-138.6667778431456
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": "triangle",
+			"endArrowhead": null
+		},
+		{
+			"id": "cVq_sJ9i6giQtWwisZ1JO",
+			"type": "arrow",
+			"x": 118.15861063940258,
+			"y": 10139.942612466046,
+			"width": 237.2892086242066,
+			"height": 151.42934348745257,
+			"angle": 0,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1468744463,
+			"version": 249,
+			"versionNonce": 1054329249,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704603687251,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					237.2892086242066,
+					-94.6376804880656
+				],
+				[
+					82.35156781996818,
+					-151.42934348745257
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "P0mIVURa",
+				"focus": -0.6883668834765602,
+				"gap": 8.61889491218244
+			},
+			"endBinding": {
+				"elementId": "MSNhqP1k",
+				"focus": 0.9175356646519862,
+				"gap": 9.996401823986162
+			},
+			"startArrowhead": "triangle",
+			"endArrowhead": null
 		}
 	],
 	"appState": {
@@ -1794,12 +1908,12 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		"currentItemFontFamily": 3,
 		"currentItemFontSize": 16,
 		"currentItemTextAlign": "center",
-		"currentItemStartArrowhead": null,
-		"currentItemEndArrowhead": "triangle",
-		"scrollX": 570.5561954242996,
-		"scrollY": -8507.953797722244,
+		"currentItemStartArrowhead": "triangle",
+		"currentItemEndArrowhead": null,
+		"scrollX": 564.7515803834054,
+		"scrollY": -9281.734051568366,
 		"zoom": {
-			"value": 0.8944834952056411
+			"value": 0.988188171386719
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
