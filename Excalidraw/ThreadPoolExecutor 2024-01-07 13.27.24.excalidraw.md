@@ -109,6 +109,10 @@ shutdown+队列为空 ^p5xYBZaG
 
 中断线程，之后poll、take会出现中断异常 ^fWv9BCHl
 
+只中断一个，让他们像链表一样，一个个传递下去 ^iXGBUcbp
+
+如果false，说明其他线程正在执行，就没必要重复执行了 ^fWZRQmLo
+
 %%
 # Drawing
 ```json
@@ -890,6 +894,177 @@ shutdown+队列为空 ^p5xYBZaG
 			"lineHeight": 1.2
 		},
 		{
+			"id": "zBZK3Xjq9X-ZlgorrZ0c6",
+			"type": "rectangle",
+			"x": 91.98634939623105,
+			"y": 1179.6670436570087,
+			"width": 191.6733094673997,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1398299265,
+			"version": 361,
+			"versionNonce": 171296239,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "iXGBUcbp"
+				}
+			],
+			"updated": 1704611536490,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "iXGBUcbp",
+			"type": "text",
+			"x": 99.8230041299309,
+			"y": 1184.9670436570086,
+			"width": 176,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 905633665,
+			"version": 453,
+			"versionNonce": 1384460303,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704611536490,
+			"link": null,
+			"locked": false,
+			"text": "只中断一个，让他们像链\n表一样，一个个传递下去",
+			"rawText": "只中断一个，让他们像链表一样，一个个传递下去",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "zBZK3Xjq9X-ZlgorrZ0c6",
+			"originalText": "只中断一个，让他们像链表一样，一个个传递下去",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "GYV9TinI73RP6XXbgF0xf",
+			"type": "rectangle",
+			"x": 213.857611026622,
+			"y": 966.6677083716227,
+			"width": 158.3700937399851,
+			"height": 85.77202673799708,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1383446607,
+			"version": 352,
+			"versionNonce": 1694224705,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "fWZRQmLo"
+				}
+			],
+			"updated": 1704611683530,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "fWZRQmLo",
+			"type": "text",
+			"x": 218.857611026622,
+			"y": 971.6677083716227,
+			"width": 144,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1448715215,
+			"version": 464,
+			"versionNonce": 1179315425,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704611683530,
+			"link": null,
+			"locked": false,
+			"text": "如果false，说明其\n他线程正在执行，就\n没必要重复执行了",
+			"rawText": "如果false，说明其他线程正在执行，就没必要重复执行了",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 54,
+			"containerId": "GYV9TinI73RP6XXbgF0xf",
+			"originalText": "如果false，说明其他线程正在执行，就没必要重复执行了",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "A8u6J-HLf6IyqVIrbeEFI",
+			"type": "rectangle",
+			"x": 271.08601721730196,
+			"y": 476.2754532970963,
+			"width": 83.94387727072103,
+			"height": 16.460864830673472,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1323276303,
+			"version": 55,
+			"versionNonce": 2087913167,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704611716664,
+			"link": null,
+			"locked": false
+		},
+		{
 			"id": "mTM91wNl",
 			"type": "text",
 			"x": -307.6957702636719,
@@ -967,11 +1142,11 @@ shutdown+队列为空 ^p5xYBZaG
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#2f9e44",
+		"currentItemStrokeColor": "#1971c2",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
-		"currentItemStrokeStyle": "dashed",
+		"currentItemStrokeStyle": "solid",
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 3,
@@ -979,10 +1154,10 @@ shutdown+队列为空 ^p5xYBZaG
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 282.90364536635474,
-		"scrollY": -413.7024974795882,
+		"scrollX": 253.57841217806214,
+		"scrollY": -172.19634890059194,
 		"zoom": {
-			"value": 1.1000818206149383
+			"value": 1.1004957814203962
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
