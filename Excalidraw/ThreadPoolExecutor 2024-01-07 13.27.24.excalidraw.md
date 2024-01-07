@@ -121,6 +121,10 @@ shutdown+队列为空 ^p5xYBZaG
 
 这里没有其他线程了 ^29kAdMzM
 
+没有线程的时候，线程池状态为tidying ^BC26TWsD
+
+进入tidying状态就执行terminated方法然后进入terminated状态 ^5zWV7LOF
+
 %%
 # Drawing
 ```json
@@ -144,15 +148,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 397017633,
-			"version": 49,
-			"versionNonce": 244337167,
+			"version": 50,
+			"versionNonce": 777583375,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611254077,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n    private void interruptIdleWorkers(boolean onlyOne) {\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            for (Worker w : workers) {\n                Thread t = w.thread;\n                if (!t.isInterrupted() && w.tryLock()) {\n                    try {\n                        t.interrupt();\n                    } catch (SecurityException ignore) {\n                    } finally {\n                        w.unlock();\n                    }\n                }\n                if (onlyOne)\n                    break;\n            }\n        } finally {\n            mainLock.unlock();\n        }\n    }\n\n",
@@ -181,14 +187,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1294524737,
-			"version": 123,
-			"versionNonce": 1813739329,
+			"version": 124,
+			"versionNonce": 1007894881,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -196,7 +204,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "xFRrxMvH"
 				}
 			],
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -215,15 +223,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 192402799,
-			"version": 75,
-			"versionNonce": 250304847,
+			"version": 76,
+			"versionNonce": 851755311,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "意外终止",
@@ -252,14 +262,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 368191567,
-			"version": 317,
-			"versionNonce": 99702639,
+			"version": 318,
+			"versionNonce": 1506176321,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -267,7 +279,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "Fij6yKve"
 				}
 			],
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -286,15 +298,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 988397231,
-			"version": 425,
-			"versionNonce": 235232001,
+			"version": 426,
+			"versionNonce": 1578287951,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "队列中存在任务时\n，最小线程数为1",
@@ -323,14 +337,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 2130485089,
-			"version": 225,
-			"versionNonce": 1137873295,
+			"version": 226,
+			"versionNonce": 1407786273,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -338,7 +354,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "iFk0LSXg"
 				}
 			],
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -357,15 +373,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1271293697,
-			"version": 189,
-			"versionNonce": 92558049,
+			"version": 190,
+			"versionNonce": 278626671,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "超过最小线程数，可以销毁",
@@ -394,14 +412,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1186558351,
-			"version": 382,
-			"versionNonce": 1103595439,
+			"version": 383,
+			"versionNonce": 2045432065,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -409,7 +429,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "AdIpuA16"
 				}
 			],
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -428,15 +448,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1417671919,
-			"version": 542,
-			"versionNonce": 1176063681,
+			"version": 543,
+			"versionNonce": 195525519,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "不足最小线程数，重新生成工作线程\n，代替本任务继续运行",
@@ -465,14 +487,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1454433679,
-			"version": 145,
-			"versionNonce": 1039710671,
+			"version": 146,
+			"versionNonce": 21694689,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -480,7 +504,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "KskBA1hq"
 				}
 			],
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -499,15 +523,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 504160495,
-			"version": 167,
-			"versionNonce": 1180946081,
+			"version": 168,
+			"versionNonce": 1399796143,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "running或shutdown状态",
@@ -536,17 +562,19 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 1667129281,
-			"version": 126,
-			"versionNonce": 494839791,
+			"version": 127,
+			"versionNonce": 1134118081,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611009183,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -584,14 +612,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 492149761,
-			"version": 304,
-			"versionNonce": 562911169,
+			"version": 305,
+			"versionNonce": 1360733135,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -599,7 +629,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "NFVWwE9D"
 				}
 			],
-			"updated": 1704611011704,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -618,15 +648,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 59446273,
-			"version": 608,
-			"versionNonce": 141473697,
+			"version": 609,
+			"versionNonce": 1014301857,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611011704,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "running状态",
@@ -655,14 +687,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1745617761,
-			"version": 305,
-			"versionNonce": 252691279,
+			"version": 306,
+			"versionNonce": 885248495,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -670,7 +704,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "MQWOFxbK"
 				}
 			],
-			"updated": 1704611053706,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -689,15 +723,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 834830831,
-			"version": 480,
-			"versionNonce": 1770795439,
+			"version": 481,
+			"versionNonce": 1200474241,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611053706,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "tidying、terminated状态",
@@ -726,14 +762,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1023461505,
-			"version": 64,
-			"versionNonce": 353341231,
+			"version": 65,
+			"versionNonce": 393329679,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -741,7 +779,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "p5xYBZaG"
 				}
 			],
-			"updated": 1704611107691,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -760,15 +798,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 873094817,
-			"version": 41,
-			"versionNonce": 164876623,
+			"version": 42,
+			"versionNonce": 514003041,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611107691,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "shutdown+\n队列为空",
@@ -797,17 +837,19 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 100815439,
-			"version": 229,
-			"versionNonce": 989679311,
+			"version": 230,
+			"versionNonce": 1562206767,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611271040,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -845,14 +887,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1122971009,
-			"version": 704,
-			"versionNonce": 1417696961,
+			"version": 705,
+			"versionNonce": 394550337,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -860,7 +904,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "fWv9BCHl"
 				}
 			],
-			"updated": 1704611391193,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -879,15 +923,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 731580961,
-			"version": 1098,
-			"versionNonce": 44684961,
+			"version": 1099,
+			"versionNonce": 1454326863,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611391193,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "中断线程，之后poll、take会出现中断异常",
@@ -916,14 +962,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1398299265,
-			"version": 361,
-			"versionNonce": 171296239,
+			"version": 362,
+			"versionNonce": 571550753,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -931,7 +979,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "iXGBUcbp"
 				}
 			],
-			"updated": 1704611536490,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -950,15 +998,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 905633665,
-			"version": 453,
-			"versionNonce": 1384460303,
+			"version": 454,
+			"versionNonce": 603972207,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611536490,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "只中断一个，让他们像链\n表一样，一个个传递下去",
@@ -987,14 +1037,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1383446607,
-			"version": 352,
-			"versionNonce": 1694224705,
+			"version": 353,
+			"versionNonce": 104398849,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1002,7 +1054,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "fWZRQmLo"
 				}
 			],
-			"updated": 1704611683530,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -1021,15 +1073,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1448715215,
-			"version": 464,
-			"versionNonce": 1179315425,
+			"version": 465,
+			"versionNonce": 1440201871,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611683530,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "如果false，说明其\n他线程正在执行，就\n没必要重复执行了",
@@ -1058,14 +1112,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1323276303,
-			"version": 190,
-			"versionNonce": 1675203073,
+			"version": 191,
+			"versionNonce": 1643861985,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1073,7 +1129,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "BvALQPUl"
 				}
 			],
-			"updated": 1704611744144,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false
 		},
@@ -1092,15 +1148,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1656497455,
-			"version": 208,
-			"versionNonce": 565815777,
+			"version": 209,
+			"versionNonce": 1341084335,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611744144,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "中断下一个线程",
@@ -1129,14 +1187,16 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 818422575,
-			"version": 144,
-			"versionNonce": 1559317199,
+			"version": 145,
+			"versionNonce": 1734849473,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1144,7 +1204,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "6bztu0lB"
 				}
 			],
-			"updated": 1704611886657,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1178,15 +1238,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 2036804129,
-			"version": 34,
-			"versionNonce": 817772719,
+			"version": 35,
+			"versionNonce": 1794057423,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611884888,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "存在其他线程",
@@ -1215,15 +1277,17 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 328254785,
-			"version": 63,
-			"versionNonce": 159511375,
+			"version": 64,
+			"versionNonce": 1520276385,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611917026,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "把自己移除",
@@ -1252,12 +1316,14 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 780638337,
-			"version": 134,
-			"versionNonce": 2067040847,
+			"version": 135,
+			"versionNonce": 1450160879,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1265,7 +1331,7 @@ shutdown+队列为空 ^p5xYBZaG
 					"type": "arrow"
 				}
 			],
-			"updated": 1704611992286,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"text": "这里没有其他线程了",
@@ -1294,17 +1360,19 @@ shutdown+队列为空 ^p5xYBZaG
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 1877406447,
-			"version": 37,
-			"versionNonce": 1408002159,
+			"version": 38,
+			"versionNonce": 1338800001,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704611992288,
+			"updated": 1704612259351,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1324,6 +1392,275 @@ shutdown+队列为空 ^p5xYBZaG
 				"focus": -0.8116023721985502,
 				"gap": 5.551308780708098
 			},
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "fTVPteC3HPldBGYnoE9b_",
+			"type": "rectangle",
+			"x": 410.6039899545689,
+			"y": 597.9527343311278,
+			"width": 183.72123878678633,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1727158447,
+			"version": 510,
+			"versionNonce": 989429007,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "BC26TWsD"
+				},
+				{
+					"id": "nrvj4XrseEoC-ayrkXNP_",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704612259351,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "BC26TWsD",
+			"type": "text",
+			"x": 422.46460934796204,
+			"y": 603.2527343311277,
+			"width": 160,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1446265071,
+			"version": 400,
+			"versionNonce": 691265377,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704612259351,
+			"link": null,
+			"locked": false,
+			"text": "没有线程的时候，线程\n池状态为tidying",
+			"rawText": "没有线程的时候，线程池状态为tidying",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "fTVPteC3HPldBGYnoE9b_",
+			"originalText": "没有线程的时候，线程池状态为tidying",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "nrvj4XrseEoC-ayrkXNP_",
+			"type": "arrow",
+			"x": 165.81718988831307,
+			"y": 545.818583474242,
+			"width": 303.79848632708837,
+			"height": 50.72110254067104,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1488483425,
+			"version": 290,
+			"versionNonce": 470090543,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704612259352,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					303.79848632708837,
+					50.72110254067104
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "fTVPteC3HPldBGYnoE9b_",
+				"gap": 1.413048316214656,
+				"focus": 0.3516988196350679
+			},
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "XllRR519FZZqhG5LOBWDu",
+			"type": "arrow",
+			"x": 222.28042923998098,
+			"y": 680.6954325063978,
+			"width": 11.277890949423039,
+			"height": 6.0317655718492915,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 2002542383,
+			"version": 115,
+			"versionNonce": 682766817,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704612281207,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.277890949423039,
+					6.0317655718492915
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "5zWV7LOF",
+				"focus": 1.0894218589342248,
+				"gap": 15.331506206476263
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "5zWV7LOF",
+			"type": "text",
+			"x": 178.15815201384112,
+			"y": 646.1639262999215,
+			"width": 493.125,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
+			"frameId": null,
+			"roundness": null,
+			"seed": 636954703,
+			"version": 153,
+			"versionNonce": 1094916609,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"id": "XllRR519FZZqhG5LOBWDu",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704612281204,
+			"link": null,
+			"locked": false,
+			"text": "进入tidying状态就执行terminated方法然后进入terminated状态",
+			"rawText": "进入tidying状态就执行terminated方法然后进入terminated状态",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "进入tidying状态就执行terminated方法然后进入terminated状态",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "XtAoeIpWWFaPzgPwcz5e9",
+			"type": "arrow",
+			"x": 223.99830902830178,
+			"y": 622.694612472985,
+			"width": 69.16183230549314,
+			"height": 23.352789197359357,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"8_bTO0XFSFqLzxhzVj_So"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 309772111,
+			"version": 29,
+			"versionNonce": 1274690337,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704612259352,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-69.16183230549314,
+					23.352789197359357
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": "triangle"
 		},
@@ -1454,8 +1791,8 @@ shutdown+队列为空 ^p5xYBZaG
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 357.16808687255383,
-		"scrollY": 0.45310892356244103,
+		"scrollX": 99.10258149329225,
+		"scrollY": -235.80404388843817,
 		"zoom": {
 			"value": 1.1004957814203962
 		},
