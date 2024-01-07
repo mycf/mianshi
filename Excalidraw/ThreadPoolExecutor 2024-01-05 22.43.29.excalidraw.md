@@ -128,6 +128,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 
 注意：要防止任务出现异常，如果任务出现异常，就会造成任务执行完，线程就销毁（线程池应该只有队列的作用了） ^zJWPPO0L
 
+正常终止的任务在这里-1 ^o2Z4kccy
+
 %%
 # Drawing
 ```json
@@ -508,8 +510,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "arrow",
-			"version": 600,
-			"versionNonce": 753086529,
+			"version": 604,
+			"versionNonce": 484845729,
 			"isDeleted": false,
 			"id": "_dXLwFeSmFSkhBEvZ1Tj_",
 			"fillStyle": "solid",
@@ -519,11 +521,11 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"opacity": 100,
 			"angle": 0,
 			"x": 61.33740960984011,
-			"y": 921.9497156745745,
+			"y": 921.9497786721372,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#fcfcfc",
-			"width": 332.15580822172615,
-			"height": 50.40942749336159,
+			"width": 332.1558082217262,
+			"height": 50.4094801977335,
 			"seed": 1027802497,
 			"groupIds": [],
 			"frameId": null,
@@ -531,7 +533,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704613421140,
+			"updated": 1704614630003,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -553,8 +555,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 					0
 				],
 				[
-					332.15580822172615,
-					-50.40942749336159
+					332.1558082217262,
+					-50.4094801977335
 				]
 			]
 		},
@@ -679,8 +681,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "rectangle",
-			"version": 177,
-			"versionNonce": 1282768929,
+			"version": 179,
+			"versionNonce": 1178233985,
 			"isDeleted": false,
 			"id": "nY_tjoEEoSVTAECZnteqW",
 			"fillStyle": "solid",
@@ -707,14 +709,14 @@ shutdownNow会触发中断 ^aRBtUR7S
 					"id": "OvNtRpCU"
 				}
 			],
-			"updated": 1704613421148,
+			"updated": 1704614630009,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 139,
-			"versionNonce": 150131713,
+			"version": 141,
+			"versionNonce": 1746613345,
 			"isDeleted": false,
 			"id": "OvNtRpCU",
 			"fillStyle": "solid",
@@ -734,7 +736,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704613421149,
+			"updated": 1704614630009,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -927,8 +929,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "rectangle",
-			"version": 509,
-			"versionNonce": 375040993,
+			"version": 511,
+			"versionNonce": 1180172353,
 			"isDeleted": false,
 			"id": "EwpSFe_JXDWRYznQeDvLo",
 			"fillStyle": "solid",
@@ -957,14 +959,14 @@ shutdownNow会触发中断 ^aRBtUR7S
 					"type": "arrow"
 				}
 			],
-			"updated": 1704613421151,
+			"updated": 1704614630012,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1018,
-			"versionNonce": 372762529,
+			"version": 1020,
+			"versionNonce": 1198760961,
 			"isDeleted": false,
 			"id": "iwTvfHhA",
 			"fillStyle": "solid",
@@ -984,7 +986,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704613421154,
+			"updated": 1704614630012,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1000,8 +1002,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "arrow",
-			"version": 98,
-			"versionNonce": 2092730305,
+			"version": 100,
+			"versionNonce": 2127581217,
 			"isDeleted": false,
 			"id": "zFrBqh0kBjnkDvXm1RnXw",
 			"fillStyle": "solid",
@@ -1021,7 +1023,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704613421152,
+			"updated": 1704614630012,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1664,29 +1666,29 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"baseline": 15
 		},
 		{
-			"id": "xplyDxUzD8oEHF5f45vSb",
 			"type": "arrow",
-			"x": -4.844759768382687,
-			"y": 166.78804322949304,
-			"width": 191.6892053993608,
-			"height": 287.0172572269783,
-			"angle": 0,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "transparent",
+			"version": 79,
+			"versionNonce": 1254995919,
+			"isDeleted": false,
+			"id": "xplyDxUzD8oEHF5f45vSb",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -4.844759768382687,
+			"y": 166.78804322949304,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"width": 191.6892053993608,
+			"height": 287.0172572269783,
+			"seed": 1305120545,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
-			"seed": 1305120545,
-			"version": 79,
-			"versionNonce": 1254995919,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"type": "text",
@@ -1696,6 +1698,11 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"updated": 1704613629592,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": "arrow",
+			"endArrowhead": "arrow",
 			"points": [
 				[
 					0,
@@ -1709,20 +1716,96 @@ shutdownNow会触发中断 ^aRBtUR7S
 					-103.98217869715853,
 					287.0172572269783
 				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 221,
+			"versionNonce": 350504367,
+			"isDeleted": false,
+			"id": "zJWPPO0L",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -276.5339651677435,
+			"y": 215.85639382102485,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"width": 208,
+			"height": 76.8,
+			"seed": 363502287,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704613628666,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 3,
+			"text": "注意：要防止任务出现异常，\n如果任务出现异常，就会造成\n任务执行完，线程就销毁（线\n程池应该只有队列的作用了）",
+			"rawText": "注意：要防止任务出现异常，如果任务出现异常，就会造成任务执行完，线程就销毁（线程池应该只有队列的作用了）",
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"containerId": "xplyDxUzD8oEHF5f45vSb",
+			"originalText": "注意：要防止任务出现异常，如果任务出现异常，就会造成任务执行完，线程就销毁（线程池应该只有队列的作用了）",
+			"lineHeight": 1.2,
+			"baseline": 73
+		},
+		{
+			"id": "mtX4Kj0lqZCO6OXdkgYpP",
+			"type": "arrow",
+			"x": 390.1289721994448,
+			"y": 1029.4633312885062,
+			"width": 302.71764331815575,
+			"height": 137.12834086640373,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1280018351,
+			"version": 41,
+			"versionNonce": 260927151,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704614634725,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					302.71764331815575,
+					-137.12834086640373
+				]
 			],
 			"lastCommittedPoint": null,
 			"startBinding": null,
 			"endBinding": null,
-			"startArrowhead": "arrow",
-			"endArrowhead": "arrow"
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		},
 		{
-			"id": "zJWPPO0L",
+			"id": "o2Z4kccy",
 			"type": "text",
-			"x": -276.5339651677435,
-			"y": 215.85639382102485,
-			"width": 160,
-			"height": 115.19999999999999,
+			"x": 710.5914546164755,
+			"y": 875.7574099663672,
+			"width": 178.75,
+			"height": 19.2,
 			"angle": 0,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "transparent",
@@ -1734,23 +1817,23 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 363502287,
-			"version": 221,
-			"versionNonce": 350504367,
+			"seed": 1549098785,
+			"version": 40,
+			"versionNonce": 2050352719,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704613628666,
+			"updated": 1704614691132,
 			"link": null,
 			"locked": false,
-			"text": "注意：要防止任务出现\n异常，如果任务出现异\n常，就会造成任务执行\n完，线程就销毁（线程\n池应该只有队列的作用\n了）",
-			"rawText": "注意：要防止任务出现异常，如果任务出现异常，就会造成任务执行完，线程就销毁（线程池应该只有队列的作用了）",
+			"text": "正常终止的任务在这里-1",
+			"rawText": "正常终止的任务在这里-1",
 			"fontSize": 16,
 			"fontFamily": 3,
-			"textAlign": "center",
-			"verticalAlign": "middle",
-			"baseline": 111,
-			"containerId": "xplyDxUzD8oEHF5f45vSb",
-			"originalText": "注意：要防止任务出现异常，如果任务出现异常，就会造成任务执行完，线程就销毁（线程池应该只有队列的作用了）",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "正常终止的任务在这里-1",
 			"lineHeight": 1.2
 		}
 	],
@@ -1767,12 +1850,12 @@ shutdownNow会触发中断 ^aRBtUR7S
 		"currentItemFontFamily": 3,
 		"currentItemFontSize": 16,
 		"currentItemTextAlign": "left",
-		"currentItemStartArrowhead": "arrow",
-		"currentItemEndArrowhead": "arrow",
-		"scrollX": 472.33629118000226,
-		"scrollY": 326.83273755312575,
+		"currentItemStartArrowhead": null,
+		"currentItemEndArrowhead": "triangle",
+		"scrollX": 857.4731684910088,
+		"scrollY": 988.3464842247761,
 		"zoom": {
-			"value": 0.9096178460121158
+			"value": 0.7091595602035523
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
