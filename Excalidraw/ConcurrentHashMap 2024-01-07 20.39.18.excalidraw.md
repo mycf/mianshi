@@ -141,6 +141,8 @@ tags: [excalidraw]
         }
  ^1LtLcmqy
 
+非首次说明遍历到尾部 ^o4hYLbmu
+
 %%
 # Drawing
 ```json
@@ -151,8 +153,8 @@ tags: [excalidraw]
 	"elements": [
 		{
 			"type": "text",
-			"version": 99,
-			"versionNonce": 877214593,
+			"version": 100,
+			"versionNonce": 625599983,
 			"isDeleted": false,
 			"id": "hMZHCo9O",
 			"fillStyle": "solid",
@@ -172,7 +174,7 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704635366799,
+			"updated": 1704635725977,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -207,8 +209,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1260500097,
-			"version": 237,
-			"versionNonce": 1415561473,
+			"version": 238,
+			"versionNonce": 421721217,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -216,7 +218,7 @@ tags: [excalidraw]
 					"id": "xrKUlGfD"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725977,
 			"link": null,
 			"locked": false
 		},
@@ -239,11 +241,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1977187713,
-			"version": 198,
-			"versionNonce": 1933151119,
+			"version": 199,
+			"versionNonce": 907366415,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725977,
 			"link": null,
 			"locked": false,
 			"text": "获取segment[]的下标",
@@ -278,8 +280,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1911605391,
-			"version": 248,
-			"versionNonce": 507462063,
+			"version": 249,
+			"versionNonce": 170817071,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -287,7 +289,7 @@ tags: [excalidraw]
 					"id": "w52cY6sK"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -310,11 +312,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1806569231,
-			"version": 355,
-			"versionNonce": 1502753985,
+			"version": 356,
+			"versionNonce": 1321109569,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "指定下标为null，创建一个",
@@ -349,8 +351,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1902515343,
-			"version": 138,
-			"versionNonce": 1734947791,
+			"version": 139,
+			"versionNonce": 1753077839,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -358,7 +360,7 @@ tags: [excalidraw]
 					"id": "obqmGVra"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -381,11 +383,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1840883279,
-			"version": 66,
-			"versionNonce": 97514657,
+			"version": 67,
+			"versionNonce": 1227216929,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "自旋",
@@ -420,8 +422,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1020904449,
-			"version": 81,
-			"versionNonce": 134920321,
+			"version": 82,
+			"versionNonce": 1037577217,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -433,7 +435,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -456,11 +458,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1783416001,
-			"version": 137,
-			"versionNonce": 1568394255,
+			"version": 138,
+			"versionNonce": 1276203151,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "本线程设置成功",
@@ -495,11 +497,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 1709817487,
-			"version": 87,
-			"versionNonce": 570556513,
+			"version": 88,
+			"versionNonce": 886375393,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -543,8 +545,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 786353455,
-			"version": 142,
-			"versionNonce": 830819393,
+			"version": 143,
+			"versionNonce": 170647489,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -556,7 +558,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -579,11 +581,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 406651823,
-			"version": 160,
-			"versionNonce": 225793103,
+			"version": 161,
+			"versionNonce": 1725151439,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "其他线程设置成功",
@@ -618,11 +620,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 664100961,
-			"version": 148,
-			"versionNonce": 779361313,
+			"version": 149,
+			"versionNonce": 1811693473,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -670,8 +672,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1472086575,
-			"version": 335,
-			"versionNonce": 1757278209,
+			"version": 336,
+			"versionNonce": 410362753,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -679,7 +681,7 @@ tags: [excalidraw]
 					"id": "DlYyXv5u"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -702,11 +704,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 915246191,
-			"version": 280,
-			"versionNonce": 2119814287,
+			"version": 281,
+			"versionNonce": 231280911,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "从s0中获取初始化信息",
@@ -741,8 +743,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 648433871,
-			"version": 327,
-			"versionNonce": 107104225,
+			"version": 328,
+			"versionNonce": 1540852577,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -750,7 +752,7 @@ tags: [excalidraw]
 					"id": "BJgbzZaB"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -773,11 +775,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 62984687,
-			"version": 328,
-			"versionNonce": 1034904239,
+			"version": 329,
+			"versionNonce": 398595887,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "获取HashEntry的下标",
@@ -812,8 +814,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1164551887,
-			"version": 280,
-			"versionNonce": 1097900993,
+			"version": 281,
+			"versionNonce": 1316058945,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -821,7 +823,7 @@ tags: [excalidraw]
 					"id": "Ss1EFycL"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -844,11 +846,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1209685665,
-			"version": 169,
-			"versionNonce": 1177367759,
+			"version": 170,
+			"versionNonce": 620058959,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "达到阈值扩容",
@@ -883,8 +885,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1283569423,
-			"version": 318,
-			"versionNonce": 1711834017,
+			"version": 319,
+			"versionNonce": 1386407713,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -892,7 +894,7 @@ tags: [excalidraw]
 					"id": "djOCiHCo"
 				}
 			],
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -915,11 +917,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 76630401,
-			"version": 302,
-			"versionNonce": 1064026863,
+			"version": 303,
+			"versionNonce": 1253791599,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "执行插入",
@@ -954,8 +956,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 715312993,
-			"version": 161,
-			"versionNonce": 46200417,
+			"version": 162,
+			"versionNonce": 1067078369,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -963,7 +965,7 @@ tags: [excalidraw]
 					"id": "IvnjyUcA"
 				}
 			],
-			"updated": 1704634901715,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -986,11 +988,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 151247617,
-			"version": 160,
-			"versionNonce": 1257603649,
+			"version": 161,
+			"versionNonce": 1544652719,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704634901715,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "元素不为空",
@@ -1025,8 +1027,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1075357185,
-			"version": 251,
-			"versionNonce": 1423342959,
+			"version": 252,
+			"versionNonce": 1299140289,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1034,7 +1036,7 @@ tags: [excalidraw]
 					"id": "76YNtjq7"
 				}
 			],
-			"updated": 1704635036909,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false
 		},
@@ -1057,11 +1059,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1799050145,
-			"version": 266,
-			"versionNonce": 932737057,
+			"version": 267,
+			"versionNonce": 2130885071,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635040893,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "是否存在不操作",
@@ -1094,11 +1096,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 826712527,
-			"version": 151,
-			"versionNonce": 26479887,
+			"version": 152,
+			"versionNonce": 759736303,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635385651,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "        private HashEntry<K,V> scanAndLockForPut(K key, int hash, V value) {\n            HashEntry<K,V> first = entryForHash(this, hash);\n            HashEntry<K,V> e = first;\n            HashEntry<K,V> node = null;\n            int retries = -1; // negative while locating node\n            while (!tryLock()) {\n                HashEntry<K,V> f; // to recheck first below\n                if (retries < 0) {\n                    if (e == null) {\n                        if (node == null) // speculatively create node\n                            node = new HashEntry<K,V>(hash, key, value, null);\n                        retries = 0;\n                    }\n                    else if (key.equals(e.key))\n                        retries = 0;\n                    else\n                        e = e.next;\n                }\n                else if (++retries > MAX_SCAN_RETRIES) {\n                    lock();\n                    break;\n                }\n                else if ((retries & 1) == 0 &&\n                         (f = entryForHash(this, hash)) != first) {\n                    e = first = f; // re-traverse if entry changed\n                    retries = -1;\n                }\n            }\n            return node;\n        }\n",
@@ -1110,6 +1112,77 @@ tags: [excalidraw]
 			"baseline": 739,
 			"containerId": null,
 			"originalText": "        private HashEntry<K,V> scanAndLockForPut(K key, int hash, V value) {\n            HashEntry<K,V> first = entryForHash(this, hash);\n            HashEntry<K,V> e = first;\n            HashEntry<K,V> node = null;\n            int retries = -1; // negative while locating node\n            while (!tryLock()) {\n                HashEntry<K,V> f; // to recheck first below\n                if (retries < 0) {\n                    if (e == null) {\n                        if (node == null) // speculatively create node\n                            node = new HashEntry<K,V>(hash, key, value, null);\n                        retries = 0;\n                    }\n                    else if (key.equals(e.key))\n                        retries = 0;\n                    else\n                        e = e.next;\n                }\n                else if (++retries > MAX_SCAN_RETRIES) {\n                    lock();\n                    break;\n                }\n                else if ((retries & 1) == 0 &&\n                         (f = entryForHash(this, hash)) != first) {\n                    e = first = f; // re-traverse if entry changed\n                    retries = -1;\n                }\n            }\n            return node;\n        }\n",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "2bcPOWFHR0xBeWMjCfyPU",
+			"type": "rectangle",
+			"x": 576.062985738118,
+			"y": 1853.443272908528,
+			"width": 231.10465494791669,
+			"height": 34,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1576884833,
+			"version": 92,
+			"versionNonce": 1578826401,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "o4hYLbmu"
+				}
+			],
+			"updated": 1704635749547,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "o4hYLbmu",
+			"type": "text",
+			"x": 591.6153132120763,
+			"y": 1858.443272908528,
+			"width": 200,
+			"height": 24,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 773329217,
+			"version": 78,
+			"versionNonce": 1947719873,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704635758294,
+			"link": null,
+			"locked": false,
+			"text": "非首次说明遍历到尾部",
+			"rawText": "非首次说明遍历到尾部",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 19,
+			"containerId": "2bcPOWFHR0xBeWMjCfyPU",
+			"originalText": "非首次说明遍历到尾部",
 			"lineHeight": 1.2
 		},
 		{
@@ -1133,11 +1206,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 2029440335,
-			"version": 30,
-			"versionNonce": 530708705,
+			"version": 31,
+			"versionNonce": 1555217505,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725977,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1177,11 +1250,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 728443585,
-			"version": 23,
-			"versionNonce": 1993335279,
+			"version": 24,
+			"versionNonce": 651949679,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1221,11 +1294,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 1007485153,
-			"version": 27,
-			"versionNonce": 2003137071,
+			"version": 28,
+			"versionNonce": 1909876399,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1265,11 +1338,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 157032527,
-			"version": 26,
-			"versionNonce": 931394159,
+			"version": 27,
+			"versionNonce": 279037679,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1309,11 +1382,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 2038427521,
-			"version": 23,
-			"versionNonce": 417124687,
+			"version": 24,
+			"versionNonce": 1390107393,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704634779905,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1353,11 +1426,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 1123274607,
-			"version": 17,
-			"versionNonce": 274294657,
+			"version": 18,
+			"versionNonce": 1599902095,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704634840870,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1395,11 +1468,11 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 855473953,
-			"version": 2,
-			"versionNonce": 33192335,
+			"version": 3,
+			"versionNonce": 1928973985,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704635370883,
+			"updated": 1704635725978,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1412,12 +1485,59 @@ tags: [excalidraw]
 			"containerId": null,
 			"originalText": "",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "99ktG-B-jOyHj7S13Hp9N",
+			"type": "arrow",
+			"x": 581.646237691243,
+			"y": 1854.836339314778,
+			"width": 0,
+			"height": 0,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 451656513,
+			"version": 22,
+			"versionNonce": 652825217,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704635725978,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"lastCommittedPoint": [
+				0,
+				0
+			],
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
 		}
 	],
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#1e1e1e",
+		"currentItemStrokeColor": "#e03131",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
@@ -1429,8 +1549,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 248.298383076986,
-		"scrollY": -477.75526428222537,
+		"scrollX": 154.96504974365297,
+		"scrollY": -931.088597615559,
 		"zoom": {
 			"value": 0.75
 		},
