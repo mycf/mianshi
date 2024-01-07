@@ -45,6 +45,8 @@ tags: [excalidraw]
 
 不足最小线程数，重新生成工作线程，代替本任务继续运行 ^AdIpuA16
 
+running或shutdown状态 ^KskBA1hq
+
 %%
 # Drawing
 ```json
@@ -375,6 +377,77 @@ tags: [excalidraw]
 			"lineHeight": 1.2
 		},
 		{
+			"id": "Zj4pIBzbSmDn7uCigcrrR",
+			"type": "rectangle",
+			"x": 206.86331176757812,
+			"y": 87.51502990722656,
+			"width": 201.99096679687503,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1454433679,
+			"version": 142,
+			"versionNonce": 238826689,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "KskBA1hq"
+				}
+			],
+			"updated": 1704605854036,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "KskBA1hq",
+			"type": "text",
+			"x": 213.54629516601562,
+			"y": 92.51502990722656,
+			"width": 188.625,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 504160495,
+			"version": 164,
+			"versionNonce": 1592524897,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704605854037,
+			"link": null,
+			"locked": false,
+			"text": "running或shutdown状态",
+			"rawText": "running或shutdown状态",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "Zj4pIBzbSmDn7uCigcrrR",
+			"originalText": "running或shutdown状态",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "mTM91wNl",
 			"type": "text",
 			"x": -307.6957702636719,
@@ -464,8 +537,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 175.23715209960938,
-		"scrollY": 485.08221435546875,
+		"scrollX": 179.23715209960938,
+		"scrollY": 573.0822143554688,
 		"zoom": {
 			"value": 1
 		},
