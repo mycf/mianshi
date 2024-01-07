@@ -157,6 +157,10 @@ tags: [excalidraw]
 
 偶数 ^hHAtrors
 
+遍历到最后或者first为null ^TkScBEwn
+
+其他线程修改了当前链表，如果新链表包含此key，这里提前生成的node就无效了 ^8rRT3cgz
+
 %%
 # Drawing
 ```json
@@ -1362,16 +1366,20 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 436963809,
-			"version": 107,
-			"versionNonce": 258655503,
+			"version": 108,
+			"versionNonce": 1724353601,
 			"isDeleted": false,
 			"boundElements": [
 				{
 					"type": "text",
 					"id": "F1wzcXYm"
+				},
+				{
+					"id": "3IxUfn0F6xbbhr5IPjFN6",
+					"type": "arrow"
 				}
 			],
-			"updated": 1704635996273,
+			"updated": 1704637094631,
 			"link": null,
 			"locked": false
 		},
@@ -1504,16 +1512,20 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 1106739663,
-			"version": 63,
-			"versionNonce": 161540001,
+			"version": 64,
+			"versionNonce": 484243585,
 			"isDeleted": false,
 			"boundElements": [
 				{
 					"type": "text",
 					"id": "Cv6VZstd"
+				},
+				{
+					"id": "3IxUfn0F6xbbhr5IPjFN6",
+					"type": "arrow"
 				}
 			],
-			"updated": 1704636200053,
+			"updated": 1704637094631,
 			"link": null,
 			"locked": false
 		},
@@ -1742,6 +1754,171 @@ tags: [excalidraw]
 			"baseline": 19,
 			"containerId": "bwPz9H-TO9F9RyFH4L3uG",
 			"originalText": "偶数",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "tAojXUZ88jvfstWHdg7Z1",
+			"type": "rectangle",
+			"x": 470.71752675374296,
+			"y": 1099.3495229085283,
+			"width": 330.53841145833326,
+			"height": 34.882486979166735,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1496076161,
+			"version": 120,
+			"versionNonce": 440210927,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "TkScBEwn"
+				}
+			],
+			"updated": 1704637006522,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "TkScBEwn",
+			"type": "text",
+			"x": 503.2523574829096,
+			"y": 1104.7907663981116,
+			"width": 265.46875,
+			"height": 24,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 748429569,
+			"version": 113,
+			"versionNonce": 1545982337,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704637028403,
+			"link": null,
+			"locked": false,
+			"text": "遍历到最后或者first为null",
+			"rawText": "遍历到最后或者first为null",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 19,
+			"containerId": "tAojXUZ88jvfstWHdg7Z1",
+			"originalText": "遍历到最后或者first为null",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "3IxUfn0F6xbbhr5IPjFN6",
+			"type": "arrow",
+			"x": 1063.982419331868,
+			"y": 2214.4212188720703,
+			"width": 52.427734375,
+			"height": 266.3715820312502,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 204622191,
+			"version": 73,
+			"versionNonce": 944971969,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "8rRT3cgz"
+				}
+			],
+			"updated": 1704637190727,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					52.427734375,
+					-266.3715820312502
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "L23dNp9uXapy3VpQcZ4P-",
+				"focus": 0.16746278220728206,
+				"gap": 1
+			},
+			"endBinding": {
+				"elementId": "NW8Nvu7jJ4PbmsAakdflZ",
+				"focus": 0.06311952840221603,
+				"gap": 1.1773274739582575
+			},
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "8rRT3cgz",
+			"type": "text",
+			"x": 980.899411519368,
+			"y": 2033.2354278564453,
+			"width": 218.59375,
+			"height": 96,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 118039215,
+			"version": 150,
+			"versionNonce": 521168097,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704637189787,
+			"link": null,
+			"locked": false,
+			"text": "其他线程修改了当前链\n表，如果新链表包含此k\ney，这里提前生成的nod\ne就无效了",
+			"rawText": "其他线程修改了当前链表，如果新链表包含此key，这里提前生成的node就无效了",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 91,
+			"containerId": "3IxUfn0F6xbbhr5IPjFN6",
+			"originalText": "其他线程修改了当前链表，如果新链表包含此key，这里提前生成的node就无效了",
 			"lineHeight": 1.2
 		},
 		{
@@ -2107,9 +2284,9 @@ tags: [excalidraw]
 		"currentItemFontSize": 20,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
-		"currentItemEndArrowhead": "arrow",
-		"scrollX": 165.63171641031946,
-		"scrollY": -1136.421930948893,
+		"currentItemEndArrowhead": "triangle",
+		"scrollX": 181.6317164103195,
+		"scrollY": -1229.7552642822263,
 		"zoom": {
 			"value": 0.75
 		},
