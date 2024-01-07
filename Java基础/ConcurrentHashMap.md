@@ -2,6 +2,7 @@
 ## 属性
 
 ```java
+        SSHIFT = 31 - Integer.numberOfLeadingZeros(ss);
 
 ```
 
