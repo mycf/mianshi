@@ -167,6 +167,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 同时提交多个任务，
 其他线程增加线程成功了 ^PE1slBxA
 
+正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程 ^GULgEaPH
+
 %%
 # Drawing
 ```json
@@ -177,8 +179,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 	"elements": [
 		{
 			"type": "text",
-			"version": 925,
-			"versionNonce": 1423557487,
+			"version": 926,
+			"versionNonce": 1271583937,
 			"isDeleted": false,
 			"id": "NPcqCzcP",
 			"fillStyle": "solid",
@@ -200,7 +202,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -216,8 +218,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 1196,
-			"versionNonce": 1361686273,
+			"version": 1197,
+			"versionNonce": 1250595791,
 			"isDeleted": false,
 			"id": "3Yhb8X9L",
 			"fillStyle": "solid",
@@ -244,7 +246,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -260,8 +262,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 836,
-			"versionNonce": 1926069647,
+			"version": 837,
+			"versionNonce": 1744082081,
 			"isDeleted": false,
 			"id": "QDnp1mor",
 			"fillStyle": "solid",
@@ -283,7 +285,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -299,8 +301,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 740,
-			"versionNonce": 150873825,
+			"version": 741,
+			"versionNonce": 784679407,
 			"isDeleted": false,
 			"id": "BnthpH9M",
 			"fillStyle": "solid",
@@ -322,7 +324,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -338,8 +340,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 760,
-			"versionNonce": 713356207,
+			"version": 761,
+			"versionNonce": 2090555521,
 			"isDeleted": false,
 			"id": "M4Poncut",
 			"fillStyle": "solid",
@@ -361,7 +363,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -377,8 +379,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 866,
-			"versionNonce": 1934338799,
+			"version": 867,
+			"versionNonce": 801451023,
 			"isDeleted": false,
 			"id": "CT31Rn4KSTnW4XvIcaPMm",
 			"fillStyle": "solid",
@@ -402,7 +404,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704599888368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -427,8 +429,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 784,
-			"versionNonce": 69772751,
+			"version": 785,
+			"versionNonce": 2071896161,
 			"isDeleted": false,
 			"id": "rMWwuyIW",
 			"fillStyle": "solid",
@@ -450,7 +452,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -466,8 +468,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 876,
-			"versionNonce": 746103457,
+			"version": 877,
+			"versionNonce": 2038616623,
 			"isDeleted": false,
 			"id": "NyTyJsmO",
 			"fillStyle": "solid",
@@ -489,7 +491,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -505,8 +507,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 919,
-			"versionNonce": 1859195887,
+			"version": 920,
+			"versionNonce": 1919806529,
 			"isDeleted": false,
 			"id": "rxsDpxRS",
 			"fillStyle": "solid",
@@ -528,7 +530,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -544,8 +546,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 896,
-			"versionNonce": 1903011457,
+			"version": 897,
+			"versionNonce": 619099215,
 			"isDeleted": false,
 			"id": "MSNhqP1k",
 			"fillStyle": "solid",
@@ -567,7 +569,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -583,8 +585,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 805,
-			"versionNonce": 1652997647,
+			"version": 806,
+			"versionNonce": 155761697,
 			"isDeleted": false,
 			"id": "P0mIVURa",
 			"fillStyle": "solid",
@@ -606,7 +608,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -622,8 +624,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 779,
-			"versionNonce": 2094476897,
+			"version": 780,
+			"versionNonce": 432624239,
 			"isDeleted": false,
 			"id": "mGrdNTJH",
 			"fillStyle": "solid",
@@ -645,7 +647,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -678,11 +680,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1758843727,
-			"version": 273,
-			"versionNonce": 361019969,
+			"version": 274,
+			"versionNonce": 821243023,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"text": "    public void execute(Runnable command) {\n        if (command == null)\n            throw new NullPointerException();\n        /*\n         * Proceed in 3 steps:\n         *\n         * 1. If fewer than corePoolSize threads are running, try to\n         * start a new thread with the given command as its first\n         * task.  The call to addWorker atomically checks runState and\n         * workerCount, and so prevents false alarms that would add\n         * threads when it shouldn't, by returning false.\n         *\n         * 2. If a task can be successfully queued, then we still need\n         * to double-check whether we should have added a thread\n         * (because existing ones died since last checking) or that\n         * the pool shut down since entry into this method. So we\n         * recheck state and if necessary roll back the enqueuing if\n         * stopped, or start a new thread if there are none.\n         *\n         * 3. If we cannot queue task, then we try to add a new\n         * thread.  If it fails, we know we are shut down or saturated\n         * and so reject the task.\n         */\n        int c = ctl.get();\n        if (workerCountOf(c) < corePoolSize) {\n            if (addWorker(command, true))\n                return;\n            c = ctl.get();\n        }\n        if (isRunning(c) && workQueue.offer(command)) {\n            int recheck = ctl.get();\n            if (! isRunning(recheck) && remove(command))\n                reject(command);\n            else if (workerCountOf(recheck) == 0)\n                addWorker(null, false);\n        }\n        else if (!addWorker(command, false))\n            reject(command);\n    }\n",
@@ -717,8 +719,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 1551922913,
-			"version": 198,
-			"versionNonce": 2112603727,
+			"version": 199,
+			"versionNonce": 1821304801,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -726,7 +728,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "agqkj0jG"
 				}
 			],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false
 		},
@@ -749,11 +751,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 661876353,
-			"version": 393,
-			"versionNonce": 2085997089,
+			"version": 394,
+			"versionNonce": 370983599,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"text": "线程数小于核心线程数",
@@ -788,8 +790,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 1609602305,
-			"version": 255,
-			"versionNonce": 1952195695,
+			"version": 256,
+			"versionNonce": 2030650305,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -797,7 +799,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "ItWAXEVb"
 				}
 			],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false
 		},
@@ -820,11 +822,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 2081053167,
-			"version": 188,
-			"versionNonce": 708435457,
+			"version": 189,
+			"versionNonce": 1777243343,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"text": "队列未满",
@@ -859,11 +861,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 975670305,
-			"version": 64,
-			"versionNonce": 358334095,
+			"version": 65,
+			"versionNonce": 1636639649,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -903,8 +905,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 1141601889,
-			"version": 495,
-			"versionNonce": 1311798753,
+			"version": 496,
+			"versionNonce": 604054255,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -912,7 +914,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "rILL5G1r"
 				}
 			],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false
 		},
@@ -935,11 +937,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 155560673,
-			"version": 471,
-			"versionNonce": 1134761135,
+			"version": 472,
+			"versionNonce": 1917454209,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"text": "队列已满，尝试使用非核心线程",
@@ -974,8 +976,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 1369465281,
-			"version": 557,
-			"versionNonce": 189338049,
+			"version": 558,
+			"versionNonce": 886893839,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -983,7 +985,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "tk7Hguty"
 				}
 			],
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false
 		},
@@ -1006,11 +1008,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 2131517135,
-			"version": 649,
-			"versionNonce": 1994041039,
+			"version": 650,
+			"versionNonce": 1165979489,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "如果核心线程数为0，直接开启一个工作线程",
@@ -1045,8 +1047,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 40235585,
-			"version": 152,
-			"versionNonce": 1990406561,
+			"version": 153,
+			"versionNonce": 1744466735,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1054,7 +1056,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "MOo5wHHN"
 				}
 			],
-			"updated": 1704599292368,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false
 		},
@@ -1077,11 +1079,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1306498383,
-			"version": 247,
-			"versionNonce": 496694511,
+			"version": 248,
+			"versionNonce": 24959809,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "运行状态，尝试放入队列",
@@ -1116,8 +1118,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 1612062671,
-			"version": 613,
-			"versionNonce": 1433294209,
+			"version": 614,
+			"versionNonce": 96613711,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1125,7 +1127,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "Y0I9J28I"
 				}
 			],
-			"updated": 1704599292368,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false
 		},
@@ -1148,11 +1150,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 723555617,
-			"version": 466,
-			"versionNonce": 1064075023,
+			"version": 467,
+			"versionNonce": 1453443873,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "放入队列后，重新检查运行状态，否则移除并拒绝",
@@ -1187,11 +1189,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 690602639,
-			"version": 318,
-			"versionNonce": 1590150447,
+			"version": 319,
+			"versionNonce": 1029553921,
 			"isDeleted": false,
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false
 		},
@@ -1214,11 +1216,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1839231279,
-			"version": 180,
-			"versionNonce": 454379343,
+			"version": 181,
+			"versionNonce": 1949316833,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "因为ctl前三位是状态，所以COUNT_MAK是线程最大值\n",
@@ -1251,11 +1253,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1427317377,
-			"version": 431,
-			"versionNonce": 1094768929,
+			"version": 432,
+			"versionNonce": 1329324975,
 			"isDeleted": false,
 			"boundElements": [],
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1301,8 +1303,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 103422945,
-			"version": 254,
-			"versionNonce": 1558908161,
+			"version": 255,
+			"versionNonce": 1417778639,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1310,7 +1312,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "bwdvew9g"
 				}
 			],
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1352,11 +1354,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 222010369,
-			"version": 60,
-			"versionNonce": 81330063,
+			"version": 61,
+			"versionNonce": 1583788705,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "占位成功",
@@ -1391,8 +1393,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 1823325423,
-			"version": 317,
-			"versionNonce": 1944163663,
+			"version": 318,
+			"versionNonce": 469832751,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1400,7 +1402,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "5M0yN7LH"
 				}
 			],
-			"updated": 1704599503998,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1446,11 +1448,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1155229057,
-			"version": 101,
-			"versionNonce": 380505953,
+			"version": 102,
+			"versionNonce": 1869400641,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599502327,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "正常提交的firstTask，不应该为空\n只有这里，核心线程数为空的时候",
@@ -1485,8 +1487,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 1390175791,
-			"version": 478,
-			"versionNonce": 1461958401,
+			"version": 479,
+			"versionNonce": 1059001455,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1494,7 +1496,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "RNgtVFuR"
 				}
 			],
-			"updated": 1704599950244,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1536,11 +1538,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 514729025,
-			"version": 193,
-			"versionNonce": 1740855567,
+			"version": 194,
+			"versionNonce": 358477313,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599725138,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "firstTask为null，队\n列为空，应该也只有上\n面的情况，原task放入\n后，队列中的task都被\n其他线程poll了",
@@ -1573,8 +1575,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1218367407,
-			"version": 195,
-			"versionNonce": 225238881,
+			"version": 196,
+			"versionNonce": 1782623887,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1582,7 +1584,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704599955558,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "同时提交多个任务，\n其他线程增加线程成功了",
@@ -1617,11 +1619,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 385903535,
-			"version": 60,
-			"versionNonce": 119895937,
+			"version": 61,
+			"versionNonce": 1515357665,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599955558,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1639,6 +1641,129 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"elementId": "PE1slBxA",
 				"focus": -0.3258350977353726,
 				"gap": 1
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "8TZcgj-NoErIpbf2qbI6m",
+			"type": "rectangle",
+			"x": 616.4833253281586,
+			"y": 9004.670584530304,
+			"width": 346.25464201420647,
+			"height": 54.59287816309188,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1582162561,
+			"version": 313,
+			"versionNonce": 1513827969,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "GULgEaPH"
+				},
+				{
+					"id": "tNF9R-U8jlwUTz34plAo9",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704600997580,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "GULgEaPH",
+			"type": "text",
+			"x": 621.6106463352618,
+			"y": 9012.76702361185,
+			"width": 336,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 113914881,
+			"version": 490,
+			"versionNonce": 1755914689,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704600993194,
+			"link": null,
+			"locked": false,
+			"text": "正常应该在队列未满之前只有一个线程，如果并\n发多个线程同时到这个方法，会产生多个线程",
+			"rawText": "正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "8TZcgj-NoErIpbf2qbI6m",
+			"originalText": "正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "tNF9R-U8jlwUTz34plAo9",
+			"type": "arrow",
+			"x": 916.4783379243797,
+			"y": 9065.140124229052,
+			"width": 145.5619302513187,
+			"height": 240.91443840201646,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 929424623,
+			"version": 57,
+			"versionNonce": 1113008801,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704600997580,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-145.5619302513187,
+					240.91443840201646
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "8TZcgj-NoErIpbf2qbI6m",
+				"focus": -0.7747657540541096,
+				"gap": 5.87666153565533
 			},
 			"endBinding": null,
 			"startArrowhead": null,
@@ -1663,11 +1788,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 599483809,
-			"version": 8,
-			"versionNonce": 1111630895,
+			"version": 9,
+			"versionNonce": 1073647617,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993193,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1700,11 +1825,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1233837569,
-			"version": 8,
-			"versionNonce": 451542369,
+			"version": 9,
+			"versionNonce": 898413423,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1737,11 +1862,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 319549039,
-			"version": 8,
-			"versionNonce": 644196673,
+			"version": 9,
+			"versionNonce": 530738575,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292368,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1774,11 +1899,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 2112197377,
-			"version": 8,
-			"versionNonce": 313361775,
+			"version": 9,
+			"versionNonce": 1034465985,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1811,11 +1936,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 2037705327,
-			"version": 60,
-			"versionNonce": 283362529,
+			"version": 61,
+			"versionNonce": 646710255,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1856,11 +1981,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 945360271,
-			"version": 55,
-			"versionNonce": 869283247,
+			"version": 56,
+			"versionNonce": 1528411777,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1901,11 +2026,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 978711567,
-			"version": 82,
-			"versionNonce": 1488617665,
+			"version": 83,
+			"versionNonce": 1164160527,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1947,11 +2072,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1793348577,
-			"version": 32,
-			"versionNonce": 112961487,
+			"version": 33,
+			"versionNonce": 1988181601,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false
 		},
@@ -1974,11 +2099,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 2069763087,
-			"version": 3,
-			"versionNonce": 982516865,
+			"version": 4,
+			"versionNonce": 575452751,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -2013,11 +2138,40 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 247249551,
-			"version": 23,
-			"versionNonce": 2042707983,
+			"version": 24,
+			"versionNonce": 2126240289,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704599292369,
+			"updated": 1704600993194,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "kboT7NOSclhCCknZAzIXQ",
+			"type": "rectangle",
+			"x": 908.9533412044425,
+			"y": 9061.568400156379,
+			"width": 17.16502401717912,
+			"height": 176.32527718081656,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 684446721,
+			"version": 26,
+			"versionNonce": 725849807,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704600993194,
 			"link": null,
 			"locked": false
 		}
@@ -2037,8 +2191,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		"currentItemTextAlign": "center",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 755.9160620336976,
-		"scrollY": -8872.490612032072,
+		"scrollX": 603.156908334573,
+		"scrollY": -8672.397636059959,
 		"zoom": {
 			"value": 0.9295678626217359
 		},
