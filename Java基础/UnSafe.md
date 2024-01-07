@@ -10,6 +10,7 @@ public class UnSafeDemo {
             Field unsafe = Unsafe.class.getDeclaredField("theUnsafe");
             unsafe.setAccessible(true);
             UNSAFE = (Unsafe) unsafe.get(Unsafe.class);
+			// 获取属性i的偏移量
             offset = UNSAFE.objectFieldOffset(UnSafeDemo.class.getDeclaredField("i"));
 
         } catch (Exception e) {
