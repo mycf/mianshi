@@ -52,6 +52,8 @@ segment的长度 ^7sQfTwf4
 因为segment的下标
 也是&hash得到的，所以需要2的次幂 ^URdbFWep
 
+不能超过最大值 ^Rm4xsPJ2
+
 %%
 # Drawing
 ```json
@@ -378,6 +380,43 @@ segment的长度 ^7sQfTwf4
 			"lineHeight": 1.2
 		},
 		{
+			"id": "Rm4xsPJ2",
+			"type": "text",
+			"x": 123.0653073252621,
+			"y": 40.36542846032813,
+			"width": 88.8621303778732,
+			"height": 15.233508064778267,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 703359553,
+			"version": 141,
+			"versionNonce": 1173956687,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704624863937,
+			"link": null,
+			"locked": false,
+			"text": "不能超过最大值",
+			"rawText": "不能超过最大值",
+			"fontSize": 12.69459005398188,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 12.000000000000009,
+			"containerId": null,
+			"originalText": "不能超过最大值",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "S6kJ75R0ct6c5kCFbre93",
 			"type": "arrow",
 			"x": -71.93946075439453,
@@ -503,10 +542,10 @@ segment的长度 ^7sQfTwf4
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 396.7697067260742,
-		"scrollY": 251.3115005493164,
+		"scrollX": 407.3945715829233,
+		"scrollY": 277.63083009578037,
 		"zoom": {
-			"value": 1.6
+			"value": 1.4810151942914025
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
