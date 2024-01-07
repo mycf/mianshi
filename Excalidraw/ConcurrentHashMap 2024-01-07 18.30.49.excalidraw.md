@@ -68,7 +68,8 @@ HashEntry数组的下标也要&hash获取下标，
 
 预初始化了0号segment
 segment中保存了负载因子、阈值，
-因为扩容是针对segment的部分扩容 ^QV4srs4m
+后面方便提供这些属性给其他位置需要初始化的segment使用
+扩容是针对segment的部分扩容 ^QV4srs4m
 
 %%
 # Drawing
@@ -585,8 +586,8 @@ segment中保存了负载因子、阈值，
 			"type": "text",
 			"x": 278.24335398388143,
 			"y": 196.5361001636488,
-			"width": 155.863037109375,
-			"height": 34.88953491118511,
+			"width": 262.34295654296875,
+			"height": 46.51937988158015,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "transparent",
@@ -599,22 +600,22 @@ segment中保存了负载因子、阈值，
 			"frameId": null,
 			"roundness": null,
 			"seed": 64623407,
-			"version": 436,
-			"versionNonce": 2088160161,
+			"version": 527,
+			"versionNonce": 715556591,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704626474378,
+			"updated": 1704626749118,
 			"link": null,
 			"locked": false,
-			"text": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
-			"rawText": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
+			"text": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n后面方便提供这些属性给其他位置需要初始化的segment使用\n扩容是针对segment的部分扩容",
+			"rawText": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n后面方便提供这些属性给其他位置需要初始化的segment使用\n扩容是针对segment的部分扩容",
 			"fontSize": 9.691537475329199,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 32,
+			"baseline": 44,
 			"containerId": null,
-			"originalText": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
+			"originalText": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n后面方便提供这些属性给其他位置需要初始化的segment使用\n扩容是针对segment的部分扩容",
 			"lineHeight": 1.2
 		},
 		{
@@ -824,8 +825,8 @@ segment中保存了负载因子、阈值，
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 289.9075932786585,
-		"scrollY": 183.10107743717688,
+		"scrollX": 288.5571682406785,
+		"scrollY": 102.07557515837382,
 		"zoom": {
 			"value": 1.4810151942914025
 		},
