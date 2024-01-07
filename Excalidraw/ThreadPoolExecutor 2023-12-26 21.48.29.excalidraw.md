@@ -164,10 +164,9 @@ cas失败，重新循环 ^M4Poncut
 
 firstTask为null，队列为空，应该也只有上面的情况，原task放入后，队列中的task都被其他线程poll了 ^RNgtVFuR
 
-同时提交多个任务，
-其他线程增加线程成功了 ^PE1slBxA
-
 正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程 ^GULgEaPH
+
+可能会有把其他线程提交任务执行的情况，队列就为空了 ^TUnUNpdN
 
 %%
 # Drawing
@@ -1471,8 +1470,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"type": "arrow",
 			"x": 454.92642709118775,
 			"y": 9295.513749772985,
-			"width": 231.49604545575198,
-			"height": 162.09622709459836,
+			"width": 233.70641393192227,
+			"height": 146.40115983419855,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1487,8 +1486,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 1390175791,
-			"version": 479,
-			"versionNonce": 1059001455,
+			"version": 651,
+			"versionNonce": 1647132353,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1496,7 +1495,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "RNgtVFuR"
 				}
 			],
-			"updated": 1704600993194,
+			"updated": 1704601079670,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1509,8 +1508,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					-12.04698094504056
 				],
 				[
-					231.49604545575198,
-					-162.09622709459836
+					233.70641393192227,
+					-146.40115983419855
 				]
 			],
 			"lastCommittedPoint": null,
@@ -1538,11 +1537,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 514729025,
-			"version": 194,
-			"versionNonce": 358477313,
+			"version": 232,
+			"versionNonce": 1375343535,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704600993194,
+			"updated": 1704601076170,
 			"link": null,
 			"locked": false,
 			"text": "firstTask为null，队\n列为空，应该也只有上\n面的情况，原task放入\n后，队列中的task都被\n其他线程poll了",
@@ -1555,96 +1554,6 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"containerId": "pZQY8QwPFmd9AEOcbsT_S",
 			"originalText": "firstTask为null，队列为空，应该也只有上面的情况，原task放入后，队列中的task都被其他线程poll了",
 			"lineHeight": 1.2
-		},
-		{
-			"id": "PE1slBxA",
-			"type": "text",
-			"x": 708.2263873916403,
-			"y": 9178.008574716952,
-			"width": 176,
-			"height": 38.4,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 0,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 1218367407,
-			"version": 196,
-			"versionNonce": 1782623887,
-			"isDeleted": false,
-			"boundElements": [
-				{
-					"id": "M2ykKKpXj2wreCMzUj-Yx",
-					"type": "arrow"
-				}
-			],
-			"updated": 1704600993194,
-			"link": null,
-			"locked": false,
-			"text": "同时提交多个任务，\n其他线程增加线程成功了",
-			"rawText": "同时提交多个任务，\n其他线程增加线程成功了",
-			"fontSize": 16,
-			"fontFamily": 3,
-			"textAlign": "center",
-			"verticalAlign": "top",
-			"baseline": 34,
-			"containerId": null,
-			"originalText": "同时提交多个任务，\n其他线程增加线程成功了",
-			"lineHeight": 1.2
-		},
-		{
-			"id": "M2ykKKpXj2wreCMzUj-Yx",
-			"type": "arrow",
-			"x": 816.7581786968457,
-			"y": 9217.067500722394,
-			"width": 52.83925763388538,
-			"height": 88.28217209239483,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 0,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"seed": 385903535,
-			"version": 61,
-			"versionNonce": 1515357665,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704600993194,
-			"link": null,
-			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-52.83925763388538,
-					88.28217209239483
-				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": {
-				"elementId": "PE1slBxA",
-				"focus": -0.3258350977353726,
-				"gap": 1
-			},
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": "triangle"
 		},
 		{
 			"id": "8TZcgj-NoErIpbf2qbI6m",
@@ -1742,17 +1651,26 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 929424623,
-			"version": 57,
-			"versionNonce": 1113008801,
+			"version": 97,
+			"versionNonce": 467183201,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704600997580,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "TUnUNpdN"
+				}
+			],
+			"updated": 1704601042415,
 			"link": null,
 			"locked": false,
 			"points": [
 				[
 					0,
 					0
+				],
+				[
+					-7.412718615901667,
+					184.17066045551292
 				],
 				[
 					-145.5619302513187,
@@ -1762,12 +1680,49 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"lastCommittedPoint": null,
 			"startBinding": {
 				"elementId": "8TZcgj-NoErIpbf2qbI6m",
-				"focus": -0.7747657540541096,
+				"focus": -0.7358425047039099,
 				"gap": 5.87666153565533
 			},
 			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": "triangle"
+		},
+		{
+			"id": "TUnUNpdN",
+			"type": "text",
+			"x": 829.0656193084781,
+			"y": 9220.510784684566,
+			"width": 160,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1095826703,
+			"version": 71,
+			"versionNonce": 1899896449,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704601041209,
+			"link": null,
+			"locked": false,
+			"text": "可能会有把其他线程提\n交任务执行的情况，队\n列就为空了",
+			"rawText": "可能会有把其他线程提交任务执行的情况，队列就为空了",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 54,
+			"containerId": "tNF9R-U8jlwUTz34plAo9",
+			"originalText": "可能会有把其他线程提交任务执行的情况，队列就为空了",
+			"lineHeight": 1.2
 		},
 		{
 			"id": "ZbQJvlol",
@@ -2145,6 +2100,92 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"updated": 1704600993194,
 			"link": null,
 			"locked": false
+		},
+		{
+			"id": "PE1slBxA",
+			"type": "text",
+			"x": 708.2263873916403,
+			"y": 9178.008574716952,
+			"width": 176,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1218367407,
+			"version": 197,
+			"versionNonce": 1935229473,
+			"isDeleted": true,
+			"boundElements": [
+				{
+					"id": "M2ykKKpXj2wreCMzUj-Yx",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704601044359,
+			"link": null,
+			"locked": false,
+			"text": "同时提交多个任务，\n其他线程增加线程成功了",
+			"rawText": "同时提交多个任务，\n其他线程增加线程成功了",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "top",
+			"baseline": 34,
+			"containerId": null,
+			"originalText": "同时提交多个任务，\n其他线程增加线程成功了",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "M2ykKKpXj2wreCMzUj-Yx",
+			"type": "arrow",
+			"x": 816.7581786968457,
+			"y": 9217.067500722394,
+			"width": 52.83925763388538,
+			"height": 88.28217209239483,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 385903535,
+			"version": 63,
+			"versionNonce": 1113557441,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704601046370,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-52.83925763388538,
+					88.28217209239483
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		},
 		{
 			"id": "kboT7NOSclhCCknZAzIXQ",
