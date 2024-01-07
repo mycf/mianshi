@@ -155,6 +155,8 @@ tags: [excalidraw]
 
 当前链表被修改需要重新遍历 ^FOJwNb4V
 
+偶数 ^hHAtrors
+
 %%
 # Drawing
 ```json
@@ -1672,6 +1674,77 @@ tags: [excalidraw]
 			"endArrowhead": "arrow"
 		},
 		{
+			"id": "bwPz9H-TO9F9RyFH4L3uG",
+			"type": "rectangle",
+			"x": 697.6297175089514,
+			"y": 2193.5337677001953,
+			"width": 72.69921875,
+			"height": 34,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 734386831,
+			"version": 66,
+			"versionNonce": 1416880353,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "hHAtrors"
+				}
+			],
+			"updated": 1704636681758,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "hHAtrors",
+			"type": "text",
+			"x": 713.9793268839514,
+			"y": 2198.5337677001953,
+			"width": 40,
+			"height": 24,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1861477007,
+			"version": 6,
+			"versionNonce": 1726477601,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704636678611,
+			"link": null,
+			"locked": false,
+			"text": "偶数",
+			"rawText": "偶数",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 19,
+			"containerId": "bwPz9H-TO9F9RyFH4L3uG",
+			"originalText": "偶数",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "u019i49IJq-Ms5B1LJexZ",
 			"type": "arrow",
 			"x": 537.2454401652019,
@@ -2026,7 +2099,7 @@ tags: [excalidraw]
 		"currentItemStrokeColor": "#e03131",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
-		"currentItemStrokeWidth": 2,
+		"currentItemStrokeWidth": 0.5,
 		"currentItemStrokeStyle": "dashed",
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
