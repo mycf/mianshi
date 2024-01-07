@@ -130,6 +130,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 
 正常终止的任务在这里-1 ^o2Z4kccy
 
+异常终止的任务，在终止方法-1 ^5xLI9RxO
+
 %%
 # Drawing
 ```json
@@ -1818,11 +1820,16 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"seed": 1549098785,
-			"version": 40,
-			"versionNonce": 2050352719,
+			"version": 41,
+			"versionNonce": 254188929,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704614691132,
+			"boundElements": [
+				{
+					"id": "vO-mTv6M71oLpCddR8GgE",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704614748909,
 			"link": null,
 			"locked": false,
 			"text": "正常终止的任务在这里-1",
@@ -1835,6 +1842,144 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"containerId": null,
 			"originalText": "正常终止的任务在这里-1",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "fkWrqgIE80wGKxhJlw1q7",
+			"type": "arrow",
+			"x": 271.2321281909997,
+			"y": 204.14968541209078,
+			"width": 27.18371008788472,
+			"height": 243.54880835384586,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 2124493999,
+			"version": 95,
+			"versionNonce": 1712589825,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "5xLI9RxO"
+				}
+			],
+			"updated": 1704614741396,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					27.18371008788472,
+					243.54880835384586
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "5xLI9RxO",
+			"type": "text",
+			"x": 204.82398323494203,
+			"y": 306.7240895890137,
+			"width": 160,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 686936111,
+			"version": 45,
+			"versionNonce": 1130215457,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704614739926,
+			"link": null,
+			"locked": false,
+			"text": "异常终止的任务，在终\n止方法-1",
+			"rawText": "异常终止的任务，在终止方法-1",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "fkWrqgIE80wGKxhJlw1q7",
+			"originalText": "异常终止的任务，在终止方法-1",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "vO-mTv6M71oLpCddR8GgE",
+			"type": "arrow",
+			"x": 850.9577696799572,
+			"y": 873.0998366070701,
+			"width": 515.7297464491676,
+			"height": 544.7849810107197,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1522391247,
+			"version": 108,
+			"versionNonce": 1362861569,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704614757920,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-106.04163530072128,
+					-381.25402131563476
+				],
+				[
+					-515.7297464491676,
+					-544.7849810107197
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "o2Z4kccy",
+				"focus": 0.5910211877357398,
+				"gap": 2.657573359297089
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		}
 	],
 	"appState": {
@@ -1852,8 +1997,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 857.4731684910088,
-		"scrollY": 988.3464842247761,
+		"scrollX": 801.068372948919,
+		"scrollY": 503.2652425628005,
 		"zoom": {
 			"value": 0.7091595602035523
 		},
