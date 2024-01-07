@@ -161,6 +161,9 @@ tags: [excalidraw]
 
 其他线程修改了当前链表，如果新链表包含此key，这里提前生成的node就无效了 ^8rRT3cgz
 
+主方法会重新处理
+key相同的问题 ^TZyBBeBc
+
 %%
 # Drawing
 ```json
@@ -171,8 +174,8 @@ tags: [excalidraw]
 	"elements": [
 		{
 			"type": "text",
-			"version": 100,
-			"versionNonce": 625599983,
+			"version": 101,
+			"versionNonce": 2002498671,
 			"isDeleted": false,
 			"id": "hMZHCo9O",
 			"fillStyle": "solid",
@@ -188,11 +191,13 @@ tags: [excalidraw]
 			"width": 937.5,
 			"height": 1872,
 			"seed": 290355311,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704635725977,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -221,14 +226,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1260500097,
-			"version": 238,
-			"versionNonce": 421721217,
+			"version": 239,
+			"versionNonce": 79384065,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -236,7 +243,7 @@ tags: [excalidraw]
 					"id": "xrKUlGfD"
 				}
 			],
-			"updated": 1704635725977,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -255,15 +262,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1977187713,
-			"version": 199,
-			"versionNonce": 907366415,
+			"version": 200,
+			"versionNonce": 837373583,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725977,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "获取segment[]的下标",
@@ -292,14 +301,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1911605391,
-			"version": 249,
-			"versionNonce": 170817071,
+			"version": 250,
+			"versionNonce": 923002337,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -307,7 +318,7 @@ tags: [excalidraw]
 					"id": "w52cY6sK"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -326,15 +337,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1806569231,
-			"version": 356,
-			"versionNonce": 1321109569,
+			"version": 357,
+			"versionNonce": 402564271,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "指定下标为null，创建一个",
@@ -363,14 +376,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1902515343,
-			"version": 139,
-			"versionNonce": 1753077839,
+			"version": 140,
+			"versionNonce": 1747878337,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -378,7 +393,7 @@ tags: [excalidraw]
 					"id": "obqmGVra"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -397,15 +412,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1840883279,
-			"version": 67,
-			"versionNonce": 1227216929,
+			"version": 68,
+			"versionNonce": 1497642703,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "自旋",
@@ -434,14 +451,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1020904449,
-			"version": 82,
-			"versionNonce": 1037577217,
+			"version": 83,
+			"versionNonce": 1968873889,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -453,7 +472,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -472,15 +491,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1783416001,
-			"version": 138,
-			"versionNonce": 1276203151,
+			"version": 139,
+			"versionNonce": 475170031,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "本线程设置成功",
@@ -509,17 +530,19 @@ tags: [excalidraw]
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 1709817487,
-			"version": 88,
-			"versionNonce": 886375393,
+			"version": 89,
+			"versionNonce": 1807205761,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -557,14 +580,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 786353455,
-			"version": 143,
-			"versionNonce": 170647489,
+			"version": 144,
+			"versionNonce": 548540175,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -576,7 +601,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -595,15 +620,17 @@ tags: [excalidraw]
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 406651823,
-			"version": 161,
-			"versionNonce": 1725151439,
+			"version": 162,
+			"versionNonce": 109407585,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "其他线程设置成功",
@@ -632,17 +659,19 @@ tags: [excalidraw]
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 664100961,
-			"version": 149,
-			"versionNonce": 1811693473,
+			"version": 150,
+			"versionNonce": 551245103,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -684,14 +713,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1472086575,
-			"version": 336,
-			"versionNonce": 410362753,
+			"version": 337,
+			"versionNonce": 1829968193,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -699,7 +730,7 @@ tags: [excalidraw]
 					"id": "DlYyXv5u"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -718,15 +749,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 915246191,
-			"version": 281,
-			"versionNonce": 231280911,
+			"version": 282,
+			"versionNonce": 1949751119,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "从s0中获取初始化信息",
@@ -755,14 +788,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 648433871,
-			"version": 328,
-			"versionNonce": 1540852577,
+			"version": 329,
+			"versionNonce": 817908001,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -770,7 +805,7 @@ tags: [excalidraw]
 					"id": "BJgbzZaB"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -789,15 +824,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 62984687,
-			"version": 329,
-			"versionNonce": 398595887,
+			"version": 330,
+			"versionNonce": 1897731439,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "获取HashEntry的下标",
@@ -826,14 +863,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1164551887,
-			"version": 281,
-			"versionNonce": 1316058945,
+			"version": 282,
+			"versionNonce": 184319233,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -841,7 +880,7 @@ tags: [excalidraw]
 					"id": "Ss1EFycL"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -860,15 +899,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1209685665,
-			"version": 170,
-			"versionNonce": 620058959,
+			"version": 171,
+			"versionNonce": 248942479,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "达到阈值扩容",
@@ -897,14 +938,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1283569423,
-			"version": 319,
-			"versionNonce": 1386407713,
+			"version": 320,
+			"versionNonce": 1531393249,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -912,7 +955,7 @@ tags: [excalidraw]
 					"id": "djOCiHCo"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -931,15 +974,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 76630401,
-			"version": 303,
-			"versionNonce": 1253791599,
+			"version": 304,
+			"versionNonce": 1201391023,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "执行插入",
@@ -968,14 +1013,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 715312993,
-			"version": 162,
-			"versionNonce": 1067078369,
+			"version": 163,
+			"versionNonce": 1697640641,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -983,7 +1030,7 @@ tags: [excalidraw]
 					"id": "IvnjyUcA"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1002,15 +1049,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 151247617,
-			"version": 161,
-			"versionNonce": 1544652719,
+			"version": 162,
+			"versionNonce": 982857679,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "元素不为空",
@@ -1039,14 +1088,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1075357185,
-			"version": 252,
-			"versionNonce": 1299140289,
+			"version": 253,
+			"versionNonce": 1314271393,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1054,7 +1105,7 @@ tags: [excalidraw]
 					"id": "76YNtjq7"
 				}
 			],
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1073,15 +1124,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1799050145,
-			"version": 267,
-			"versionNonce": 2130885071,
+			"version": 268,
+			"versionNonce": 232482287,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "是否存在不操作",
@@ -1110,15 +1163,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 826712527,
-			"version": 152,
-			"versionNonce": 759736303,
+			"version": 153,
+			"versionNonce": 1550414977,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635725978,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "        private HashEntry<K,V> scanAndLockForPut(K key, int hash, V value) {\n            HashEntry<K,V> first = entryForHash(this, hash);\n            HashEntry<K,V> e = first;\n            HashEntry<K,V> node = null;\n            int retries = -1; // negative while locating node\n            while (!tryLock()) {\n                HashEntry<K,V> f; // to recheck first below\n                if (retries < 0) {\n                    if (e == null) {\n                        if (node == null) // speculatively create node\n                            node = new HashEntry<K,V>(hash, key, value, null);\n                        retries = 0;\n                    }\n                    else if (key.equals(e.key))\n                        retries = 0;\n                    else\n                        e = e.next;\n                }\n                else if (++retries > MAX_SCAN_RETRIES) {\n                    lock();\n                    break;\n                }\n                else if ((retries & 1) == 0 &&\n                         (f = entryForHash(this, hash)) != first) {\n                    e = first = f; // re-traverse if entry changed\n                    retries = -1;\n                }\n            }\n            return node;\n        }\n",
@@ -1147,14 +1202,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1576884833,
-			"version": 92,
-			"versionNonce": 1578826401,
+			"version": 93,
+			"versionNonce": 276221967,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1162,7 +1219,7 @@ tags: [excalidraw]
 					"id": "o4hYLbmu"
 				}
 			],
-			"updated": 1704635749547,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1181,15 +1238,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 773329217,
-			"version": 78,
-			"versionNonce": 1947719873,
+			"version": 79,
+			"versionNonce": 1932082273,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635758294,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "非首次说明遍历到尾部",
@@ -1218,14 +1277,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 103910959,
-			"version": 73,
-			"versionNonce": 2047838703,
+			"version": 74,
+			"versionNonce": 476050991,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1233,7 +1294,7 @@ tags: [excalidraw]
 					"id": "iyKMDMLr"
 				}
 			],
-			"updated": 1704635858677,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1252,15 +1313,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1918120673,
-			"version": 16,
-			"versionNonce": 713454607,
+			"version": 17,
+			"versionNonce": 1382352961,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635858678,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "当前key存在",
@@ -1289,14 +1352,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 484121135,
-			"version": 497,
-			"versionNonce": 145899503,
+			"version": 498,
+			"versionNonce": 947869775,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1304,7 +1369,7 @@ tags: [excalidraw]
 					"id": "3kKZ1Is6"
 				}
 			],
-			"updated": 1704635944584,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1323,15 +1388,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1433090319,
-			"version": 440,
-			"versionNonce": 1087140431,
+			"version": 441,
+			"versionNonce": 335304737,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635944584,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "遍历中，直到找到相同key，或者到尾部",
@@ -1360,14 +1427,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 436963809,
-			"version": 108,
-			"versionNonce": 1724353601,
+			"version": 109,
+			"versionNonce": 2058188399,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1379,7 +1448,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704637094631,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1398,15 +1467,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1721161537,
-			"version": 103,
-			"versionNonce": 1661815599,
+			"version": 104,
+			"versionNonce": 1776200705,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704635996273,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "没有相同key，\n提前生成HashE\nntry",
@@ -1435,14 +1506,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 2076805999,
-			"version": 100,
-			"versionNonce": 39588609,
+			"version": 101,
+			"versionNonce": 699584655,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1450,7 +1523,7 @@ tags: [excalidraw]
 					"id": "ntlTE4TI"
 				}
 			],
-			"updated": 1704636067293,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1469,15 +1542,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1605078543,
-			"version": 75,
-			"versionNonce": 295621217,
+			"version": 76,
+			"versionNonce": 470516705,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704636325642,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "遍历中间不断尝试获取锁",
@@ -1506,14 +1581,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1106739663,
-			"version": 64,
-			"versionNonce": 484243585,
+			"version": 65,
+			"versionNonce": 524805807,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1525,7 +1602,7 @@ tags: [excalidraw]
 					"type": "arrow"
 				}
 			],
-			"updated": 1704637094631,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1544,15 +1621,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1080942863,
-			"version": 57,
-			"versionNonce": 537111521,
+			"version": 58,
+			"versionNonce": 1183997889,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704636198701,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "不相等代表其他线程\n修改了当前链表",
@@ -1581,14 +1660,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1799703425,
-			"version": 103,
-			"versionNonce": 444432303,
+			"version": 104,
+			"versionNonce": 1779775695,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1596,7 +1677,7 @@ tags: [excalidraw]
 					"id": "FOJwNb4V"
 				}
 			],
-			"updated": 1704636251601,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1615,15 +1696,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1016640193,
-			"version": 159,
-			"versionNonce": 1259773935,
+			"version": 160,
+			"versionNonce": 1469235105,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704636251601,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "当前链表被修改需要\n重新遍历",
@@ -1652,17 +1735,19 @@ tags: [excalidraw]
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 2000282209,
-			"version": 110,
-			"versionNonce": 1158540783,
+			"version": 111,
+			"versionNonce": 800278255,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704636279246,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1700,14 +1785,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 734386831,
-			"version": 68,
-			"versionNonce": 1749393537,
+			"version": 69,
+			"versionNonce": 1295786881,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1715,7 +1802,7 @@ tags: [excalidraw]
 					"id": "hHAtrors"
 				}
 			],
-			"updated": 1704636686566,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1734,15 +1821,17 @@ tags: [excalidraw]
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1861477007,
-			"version": 6,
-			"versionNonce": 1726477601,
+			"version": 7,
+			"versionNonce": 1319801103,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704636678611,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "偶数",
@@ -1771,14 +1860,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1496076161,
-			"version": 120,
-			"versionNonce": 440210927,
+			"version": 121,
+			"versionNonce": 869141345,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1786,7 +1877,7 @@ tags: [excalidraw]
 					"id": "TkScBEwn"
 				}
 			],
-			"updated": 1704637006522,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false
 		},
@@ -1805,15 +1896,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 748429569,
-			"version": 113,
-			"versionNonce": 1545982337,
+			"version": 114,
+			"versionNonce": 1081317167,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704637028403,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "遍历到最后或者first为null",
@@ -1842,14 +1935,16 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 204622191,
-			"version": 73,
-			"versionNonce": 944971969,
+			"version": 74,
+			"versionNonce": 1670903617,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1857,7 +1952,7 @@ tags: [excalidraw]
 					"id": "8rRT3cgz"
 				}
 			],
-			"updated": 1704637190727,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1899,15 +1994,17 @@ tags: [excalidraw]
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"groupIds": [],
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 118039215,
-			"version": 150,
-			"versionNonce": 521168097,
+			"version": 151,
+			"versionNonce": 997644623,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704637189787,
+			"updated": 1704637465050,
 			"link": null,
 			"locked": false,
 			"text": "其他线程修改了当前链\n表，如果新链表包含此k\ney，这里提前生成的nod\ne就无效了",
@@ -1920,6 +2017,154 @@ tags: [excalidraw]
 			"containerId": "3IxUfn0F6xbbhr5IPjFN6",
 			"originalText": "其他线程修改了当前链表，如果新链表包含此key，这里提前生成的node就无效了",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "Nd-npSqRA3L0tsd41q2vH",
+			"type": "arrow",
+			"x": 1194.1188125610347,
+			"y": 2071.315424601236,
+			"width": 392.48046875,
+			"height": 1195.4996948242188,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 675886575,
+			"version": 246,
+			"versionNonce": 2130274081,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "TZyBBeBc"
+				}
+			],
+			"updated": 1704637465050,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					69.52864583333326,
+					-193.01920572916606
+				],
+				[
+					98.05240885416652,
+					-394.72770182291606
+				],
+				[
+					61.455729166666515,
+					-791.7152913411458
+				],
+				[
+					-294.4280598958335,
+					-1195.4996948242188
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "TZyBBeBc",
+			"type": "text",
+			"x": 1212.1712214152012,
+			"y": 1652.5877227783199,
+			"width": 160,
+			"height": 48,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1347239503,
+			"version": 49,
+			"versionNonce": 353163119,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704637465050,
+			"link": null,
+			"locked": false,
+			"text": "主方法会重新处理\nkey相同的问题",
+			"rawText": "主方法会重新处理\nkey相同的问题",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 43,
+			"containerId": "Nd-npSqRA3L0tsd41q2vH",
+			"originalText": "主方法会重新处理\nkey相同的问题",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "FNHaH9kY1zbRdgyNdhOZT",
+			"type": "arrow",
+			"x": 1027.890622456868,
+			"y": 1003.8186798095694,
+			"width": 477.37565104166674,
+			"height": 23.861002604166515,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [
+				"ENfpyAf1UFfvZuGvRg4EM"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1752389601,
+			"version": 51,
+			"versionNonce": 811719425,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704637465050,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-477.37565104166674,
+					23.861002604166515
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		},
 		{
 			"id": "u019i49IJq-Ms5B1LJexZ",
@@ -2268,6 +2513,43 @@ tags: [excalidraw]
 			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
+		},
+		{
+			"id": "eaGFKJUv",
+			"type": "text",
+			"x": 1249.7151667277012,
+			"y": 1267.6001332600902,
+			"width": 11.71875,
+			"height": 24,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1915286927,
+			"version": 2,
+			"versionNonce": 826453633,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704637293792,
+			"link": null,
+			"locked": false,
+			"text": "",
+			"rawText": "",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 19,
+			"containerId": "Nd-npSqRA3L0tsd41q2vH",
+			"originalText": "",
+			"lineHeight": 1.2
 		}
 	],
 	"appState": {
@@ -2277,7 +2559,7 @@ tags: [excalidraw]
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 1,
-		"currentItemStrokeStyle": "solid",
+		"currentItemStrokeStyle": "dashed",
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 3,
@@ -2285,8 +2567,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 181.6317164103195,
-		"scrollY": -1229.7552642822263,
+		"scrollX": 269.63171641031965,
+		"scrollY": -997.7552642822244,
 		"zoom": {
 			"value": 0.75
 		},
