@@ -172,6 +172,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 
 核心线程数为0的情况 ^xCeLv8rH
 
+状态正常 ^aS9IjQWD
+
 %%
 # Drawing
 ```json
@@ -182,8 +184,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 	"elements": [
 		{
 			"type": "text",
-			"version": 929,
-			"versionNonce": 14676399,
+			"version": 998,
+			"versionNonce": 1843842881,
 			"isDeleted": false,
 			"id": "NPcqCzcP",
 			"fillStyle": "solid",
@@ -192,20 +194,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -203.31660082225875,
-			"y": 9131.65791908211,
+			"x": -201.25662499566073,
+			"y": 9129.248388477754,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#ffffff",
 			"width": 731.25,
 			"height": 1305.6,
 			"seed": 1591035480,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001458,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -221,8 +224,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 1200,
-			"versionNonce": 1922335937,
+			"version": 1269,
+			"versionNonce": 1679917391,
 			"isDeleted": false,
 			"id": "3Yhb8X9L",
 			"fillStyle": "solid",
@@ -231,15 +234,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 214.93920405170184,
-			"y": 9226.209154990676,
+			"x": 216.99917987829986,
+			"y": 9223.79962438632,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 295.625,
 			"height": 96,
 			"seed": 1380964225,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
@@ -249,7 +253,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704604001458,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -265,8 +269,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 840,
-			"versionNonce": 309584847,
+			"version": 909,
+			"versionNonce": 162348833,
 			"isDeleted": false,
 			"id": "QDnp1mor",
 			"fillStyle": "solid",
@@ -275,20 +279,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 535.223507723577,
-			"y": 9378.622441621497,
+			"x": 537.2834835501749,
+			"y": 9376.21291101714,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 189.75,
 			"height": 19.2,
 			"seed": 1145782113,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001458,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -304,8 +309,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 744,
-			"versionNonce": 1778926753,
+			"version": 813,
+			"versionNonce": 572686191,
 			"isDeleted": false,
 			"id": "BnthpH9M",
 			"fillStyle": "solid",
@@ -314,20 +319,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 311.55398298604905,
-			"y": 9418.700793642376,
+			"x": 313.61395881264707,
+			"y": 9416.29126303802,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 64,
 			"height": 19.2,
 			"seed": 1447996225,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001458,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -343,8 +349,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 764,
-			"versionNonce": 1292145135,
+			"version": 833,
+			"versionNonce": 1725608705,
 			"isDeleted": false,
 			"id": "M4Poncut",
 			"fillStyle": "solid",
@@ -353,20 +359,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 540.4600787974024,
-			"y": 9513.302054311236,
+			"x": 542.5200546240003,
+			"y": 9510.89252370688,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 140.125,
 			"height": 19.2,
 			"seed": 1354341153,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001458,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -382,8 +389,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 870,
-			"versionNonce": 1622739073,
+			"version": 939,
+			"versionNonce": 262060431,
 			"isDeleted": false,
 			"id": "CT31Rn4KSTnW4XvIcaPMm",
 			"fillStyle": "solid",
@@ -392,22 +399,23 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 500.5228490850542,
-			"y": 9517.212732067754,
+			"x": 502.5828249116522,
+			"y": 9514.803201463397,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 368.23494480852673,
 			"height": 141.92377753466644,
 			"seed": 1140559617,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704604001458,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -432,8 +440,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 788,
-			"versionNonce": 1771731983,
+			"version": 857,
+			"versionNonce": 1240378081,
 			"isDeleted": false,
 			"id": "rMWwuyIW",
 			"fillStyle": "solid",
@@ -442,20 +450,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 264.8755311169497,
-			"y": 9476.548068214783,
+			"x": 266.9355069435477,
+			"y": 9474.138537610426,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 64,
 			"height": 19.2,
 			"seed": 110364385,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -471,8 +480,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 880,
-			"versionNonce": 1885753441,
+			"version": 949,
+			"versionNonce": 298758063,
 			"isDeleted": false,
 			"id": "NyTyJsmO",
 			"fillStyle": "solid",
@@ -481,20 +490,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 156.5985054995259,
-			"y": 9594.571847228208,
+			"x": 158.65848132612393,
+			"y": 9592.162316623851,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 128,
 			"height": 19.2,
 			"seed": 1930592961,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -510,8 +520,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 988,
-			"versionNonce": 1814962735,
+			"version": 1057,
+			"versionNonce": 997762753,
 			"isDeleted": false,
 			"id": "rxsDpxRS",
 			"fillStyle": "solid",
@@ -520,20 +530,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 144.16772646997288,
-			"y": 9615.123634000283,
+			"x": 146.2277022965709,
+			"y": 9612.714103395927,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 400,
 			"height": 19.2,
 			"seed": 1712751265,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -549,8 +560,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 901,
-			"versionNonce": 1323277377,
+			"version": 970,
+			"versionNonce": 1390076367,
 			"isDeleted": false,
 			"id": "MSNhqP1k",
 			"fillStyle": "solid",
@@ -559,15 +570,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 165.14102358023774,
-			"y": 9959.316867154606,
+			"x": 167.20099940683576,
+			"y": 9956.90733655025,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 144,
 			"height": 19.2,
 			"seed": 2085586561,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
@@ -577,7 +589,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -593,8 +605,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 810,
-			"versionNonce": 1168639055,
+			"version": 879,
+			"versionNonce": 102246049,
 			"isDeleted": false,
 			"id": "P0mIVURa",
 			"fillStyle": "solid",
@@ -603,15 +615,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 79.07465222480471,
-			"y": 10148.561507378228,
+			"x": 81.13462805140273,
+			"y": 10146.151976773872,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 64,
 			"height": 19.2,
 			"seed": 276631137,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
@@ -621,7 +634,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -637,8 +650,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 783,
-			"versionNonce": 1275358241,
+			"version": 852,
+			"versionNonce": 601608175,
 			"isDeleted": false,
 			"id": "mGrdNTJH",
 			"fillStyle": "solid",
@@ -647,20 +660,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 105.11380304823456,
-			"y": 10246.074405564423,
+			"x": 107.17377887483258,
+			"y": 10243.664874960066,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 96,
 			"height": 19.2,
 			"seed": 2037291585,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -676,8 +690,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 276,
-			"versionNonce": 903914095,
+			"version": 345,
+			"versionNonce": 1954327169,
 			"isDeleted": false,
 			"id": "uEgW2oxe",
 			"fillStyle": "solid",
@@ -686,20 +700,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -203.31660130780378,
-			"y": 8373.332145970126,
+			"x": -201.25662548120576,
+			"y": 8370.92261536577,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#ffffff",
 			"width": 656.25,
 			"height": 768,
 			"seed": 1758843727,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -715,8 +730,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 245,
-			"versionNonce": 264519681,
+			"version": 314,
+			"versionNonce": 517601807,
 			"isDeleted": false,
 			"id": "-C3j5jfWAoxz5SZzIyRtK",
 			"fillStyle": "solid",
@@ -725,15 +740,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 229.57251920385897,
-			"y": 8829.31135866239,
+			"x": 231.632495030457,
+			"y": 8826.901828058033,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 158.90008739796826,
 			"height": 27,
 			"seed": 1551922913,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -745,14 +761,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "agqkj0jG"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 460,
-			"versionNonce": 1839234191,
+			"version": 529,
+			"versionNonce": 1332064865,
 			"isDeleted": false,
 			"id": "agqkj0jG",
 			"fillStyle": "solid",
@@ -761,20 +777,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 238.57258121338998,
-			"y": 8834.353904613017,
+			"x": 240.632557039988,
+			"y": 8831.94437400866,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 140.89996337890625,
 			"height": 16.914908098743915,
 			"seed": 661876353,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 14.095756748953262,
@@ -790,8 +807,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 258,
-			"versionNonce": 404658145,
+			"version": 327,
+			"versionNonce": 147709999,
 			"isDeleted": false,
 			"id": "lJwzhkOrx22ppjaTQTEKu",
 			"fillStyle": "solid",
@@ -800,15 +817,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -174.5521289319775,
-			"y": 8978.451611787248,
+			"x": -172.4921531053795,
+			"y": 8976.042081182892,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 77.28541820820135,
 			"height": 29.2,
 			"seed": 1609602305,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -820,14 +838,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "ItWAXEVb"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 191,
-			"versionNonce": 1889538735,
+			"version": 260,
+			"versionNonce": 463650369,
 			"isDeleted": false,
 			"id": "ItWAXEVb",
 			"fillStyle": "solid",
@@ -836,20 +854,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -167.90941982787683,
-			"y": 8983.451611787248,
+			"x": -165.8494440012788,
+			"y": 8981.042081182892,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 64,
 			"height": 19.2,
 			"seed": 2081053167,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -865,8 +884,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 67,
-			"versionNonce": 1998779329,
+			"version": 136,
+			"versionNonce": 1939866191,
 			"isDeleted": false,
 			"id": "R07j44TcMx88vijDHo1SZ",
 			"fillStyle": "solid",
@@ -875,22 +894,23 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -133.22508673534531,
-			"y": 8939.367472453087,
+			"x": -131.1651109087473,
+			"y": 8936.95794184873,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 1.0843701100270664,
 			"height": 118.35340001917939,
 			"seed": 975670305,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -911,8 +931,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 498,
-			"versionNonce": 931652815,
+			"version": 567,
+			"versionNonce": 403918369,
 			"isDeleted": false,
 			"id": "u9l5avXYvXBs195ZOAMfN",
 			"fillStyle": "solid",
@@ -921,15 +941,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 214.51950541732504,
-			"y": 9060.259736477376,
+			"x": 216.57948124392306,
+			"y": 9057.85020587302,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 236.97541391181426,
 			"height": 29.2,
 			"seed": 1141601889,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -941,14 +962,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "rILL5G1r"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 474,
-			"versionNonce": 1357960097,
+			"version": 543,
+			"versionNonce": 539549807,
 			"isDeleted": false,
 			"id": "rILL5G1r",
 			"fillStyle": "solid",
@@ -957,20 +978,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 221.00721237323216,
-			"y": 9065.259736477376,
+			"x": 223.06718819983018,
+			"y": 9062.85020587302,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#ffffff",
 			"width": 224,
 			"height": 19.2,
 			"seed": 155560673,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110416,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -986,8 +1008,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 725,
-			"versionNonce": 300970735,
+			"version": 794,
+			"versionNonce": 2074534401,
 			"isDeleted": false,
 			"id": "KXM6VuiRur7K_thpxEJZ5",
 			"fillStyle": "solid",
@@ -996,15 +1018,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 267.3772790894199,
-			"y": 9011.810421391778,
+			"x": 269.43725491601793,
+			"y": 9009.400890787421,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "#ffc9c9",
 			"width": 676.5975068952836,
 			"height": 49,
 			"seed": 1369465281,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -1020,14 +1043,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 897,
-			"versionNonce": 431470465,
+			"version": 966,
+			"versionNonce": 540080783,
 			"isDeleted": false,
 			"id": "tk7Hguty",
 			"fillStyle": "solid",
@@ -1036,20 +1059,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 272.9885325370617,
-			"y": 9017.110421391777,
+			"x": 275.0485083636597,
+			"y": 9014.70089078742,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "#ffffff",
 			"width": 665.375,
 			"height": 38.4,
 			"seed": 2131517135,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1065,8 +1089,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 155,
-			"versionNonce": 1214397711,
+			"version": 224,
+			"versionNonce": 1935473121,
 			"isDeleted": false,
 			"id": "j_c6jZrZsJ8IDJhZ1grqM",
 			"fillStyle": "solid",
@@ -1075,15 +1099,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 314.31622386667505,
-			"y": 8924.347879458819,
+			"x": 316.37619969327307,
+			"y": 8921.938348854463,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 190.06575336520254,
 			"height": 29.847522221971303,
 			"seed": 40235585,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -1095,14 +1120,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "MOo5wHHN"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 250,
-			"versionNonce": 330768225,
+			"version": 319,
+			"versionNonce": 946917551,
 			"isDeleted": false,
 			"id": "MOo5wHHN",
 			"fillStyle": "solid",
@@ -1111,20 +1136,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 321.34910054927633,
-			"y": 8929.671640569804,
+			"x": 323.40907637587435,
+			"y": 8927.262109965448,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 176,
 			"height": 19.2,
 			"seed": 1306498383,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1140,8 +1166,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 616,
-			"versionNonce": 2119549743,
+			"version": 685,
+			"versionNonce": 1615140289,
 			"isDeleted": false,
 			"id": "Rjbnxjn56y020NAZrmU09",
 			"fillStyle": "solid",
@@ -1150,15 +1176,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 324.6404253417239,
-			"y": 8967.132895515164,
+			"x": 326.70040116832195,
+			"y": 8964.723364910808,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 373.23717152465525,
 			"height": 29.2,
 			"seed": 1612062671,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -1170,14 +1197,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "Y0I9J28I"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 469,
-			"versionNonce": 222202689,
+			"version": 538,
+			"versionNonce": 43049679,
 			"isDeleted": false,
 			"id": "Y0I9J28I",
 			"fillStyle": "solid",
@@ -1186,20 +1213,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 335.2590111040515,
-			"y": 8972.132895515164,
+			"x": 337.31898693064954,
+			"y": 8969.723364910808,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 352,
 			"height": 19.2,
 			"seed": 723555617,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1215,8 +1243,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 321,
-			"versionNonce": 1412662607,
+			"version": 390,
+			"versionNonce": 1434367393,
 			"isDeleted": false,
 			"id": "3gimwo_5ZtpnIiwnr9xtI",
 			"fillStyle": "solid",
@@ -1225,29 +1253,30 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 393.1403117181318,
-			"y": 9375.521222577103,
+			"x": 395.2002875447298,
+			"y": 9373.111691972746,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 344.9241793112404,
 			"height": 25.214576160005915,
 			"seed": 690602639,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 183,
-			"versionNonce": 1588427553,
+			"version": 252,
+			"versionNonce": 1328132335,
 			"isDeleted": false,
 			"id": "OxVDl7XY",
 			"fillStyle": "solid",
@@ -1256,20 +1285,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 388.6475460639631,
-			"y": 9350.093416509002,
+			"x": 390.7075218905611,
+			"y": 9347.683885904646,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 372.243896484375,
 			"height": 37.1970860796795,
 			"seed": 1839231279,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 15.498785866533126,
@@ -1285,8 +1315,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 435,
-			"versionNonce": 1230242671,
+			"version": 504,
+			"versionNonce": 1446599041,
 			"isDeleted": false,
 			"id": "v4U7MtJ_5coL_d4thSVZp",
 			"fillStyle": "solid",
@@ -1295,20 +1325,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -13.137416796933053,
-			"y": 9504.6026312876,
+			"x": -11.077440970335033,
+			"y": 9502.193100683244,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 177.05639805124605,
 			"height": 325.4871323502357,
 			"seed": 1427317377,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1337,8 +1368,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 258,
-			"versionNonce": 678653697,
+			"version": 327,
+			"versionNonce": 1204009743,
 			"isDeleted": false,
 			"id": "PrkgU9XaGSvxVk4cM9Ufp",
 			"fillStyle": "solid",
@@ -1347,15 +1378,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -12.004327182114025,
-			"y": 9449.303760918528,
+			"x": -9.944351355516005,
+			"y": 9446.894230314172,
 			"strokeColor": "#f08c00",
 			"backgroundColor": "transparent",
 			"width": 118.22659478437623,
 			"height": 152.68909478859314,
 			"seed": 103422945,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
@@ -1365,7 +1397,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "bwdvew9g"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1390,8 +1422,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 64,
-			"versionNonce": 1577041295,
+			"version": 133,
+			"versionNonce": 1404338529,
 			"isDeleted": false,
 			"id": "bwdvew9g",
 			"fillStyle": "solid",
@@ -1400,20 +1432,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -180.16856379079564,
-			"y": 9438.910788601313,
+			"x": -178.10858796419762,
+			"y": 9436.501257996957,
 			"strokeColor": "#f08c00",
 			"backgroundColor": "transparent",
 			"width": 64,
 			"height": 19.2,
 			"seed": 222010369,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1429,8 +1462,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 320,
-			"versionNonce": 1359996641,
+			"version": 459,
+			"versionNonce": 1356300591,
 			"isDeleted": false,
 			"id": "PVllQbFBx98HcNm1HMl11",
 			"fillStyle": "solid",
@@ -1439,15 +1472,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 511.4037579346631,
-			"y": 9274.5863258854,
+			"x": 513.463733761261,
+			"y": 9272.176795281044,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 540.2398204461872,
 			"height": 236.6101817751478,
 			"seed": 1823325423,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -1459,12 +1493,12 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "5M0yN7LH"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"startBinding": {
 				"elementId": "3Yhb8X9L",
-				"focus": 0.7615097333945998,
+				"focus": 0.7615097333945993,
 				"gap": 1
 			},
 			"endBinding": null,
@@ -1488,8 +1522,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 104,
-			"versionNonce": 1970221999,
+			"version": 173,
+			"versionNonce": 1799335233,
 			"isDeleted": false,
 			"id": "5M0yN7LH",
 			"fillStyle": "solid",
@@ -1498,20 +1532,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 564.8227373323263,
-			"y": 9071.353025543129,
+			"x": 566.8827131589242,
+			"y": 9068.943494938772,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 260.375,
 			"height": 38.4,
 			"seed": 1155229057,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1527,8 +1562,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 653,
-			"versionNonce": 1125278401,
+			"version": 722,
+			"versionNonce": 734888783,
 			"isDeleted": false,
 			"id": "pZQY8QwPFmd9AEOcbsT_S",
 			"fillStyle": "solid",
@@ -1537,15 +1572,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 454.92642709118775,
-			"y": 9295.513749772985,
+			"x": 456.98640291778577,
+			"y": 9293.104219168628,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 233.70641393192227,
 			"height": 146.40115983419855,
 			"seed": 1390175791,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -1557,7 +1593,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "RNgtVFuR"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1582,8 +1618,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 234,
-			"versionNonce": 2009785807,
+			"version": 303,
+			"versionNonce": 1681546529,
 			"isDeleted": false,
 			"id": "RNgtVFuR",
 			"fillStyle": "solid",
@@ -1592,20 +1628,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 594.9373862695012,
-			"y": 9235.466768827944,
+			"x": 596.9973620960991,
+			"y": 9233.057238223588,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 217.875,
 			"height": 76.8,
 			"seed": 514729025,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1621,8 +1658,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 108,
-			"versionNonce": 1796891297,
+			"version": 247,
+			"versionNonce": 1493057903,
 			"isDeleted": false,
 			"id": "tNF9R-U8jlwUTz34plAo9",
 			"fillStyle": "solid",
@@ -1631,15 +1668,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 916.4783379243798,
-			"y": 9065.140124229052,
+			"x": 918.5383137509777,
+			"y": 9062.730593624696,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 145.5619302513188,
 			"height": 240.91443840201646,
 			"seed": 929424623,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -1651,13 +1689,13 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "TUnUNpdN"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"startBinding": {
 				"elementId": "KXM6VuiRur7K_thpxEJZ5",
-				"gap": 4.3297028372744535,
-				"focus": -0.9194712632186743
+				"focus": -0.9194712632186741,
+				"gap": 4.3297028372744535
 			},
 			"endBinding": null,
 			"lastCommittedPoint": null,
@@ -1680,8 +1718,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "text",
-			"version": 79,
-			"versionNonce": 875254767,
+			"version": 148,
+			"versionNonce": 1846808833,
 			"isDeleted": false,
 			"id": "TUnUNpdN",
 			"fillStyle": "solid",
@@ -1690,20 +1728,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 829.0656193084781,
-			"y": 9220.510784684566,
+			"x": 831.1255951350761,
+			"y": 9218.10125408021,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 208,
 			"height": 38.4,
 			"seed": 1095826703,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1719,8 +1758,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "rectangle",
-			"version": 232,
-			"versionNonce": 1977050753,
+			"version": 301,
+			"versionNonce": 967981967,
 			"isDeleted": false,
 			"id": "32-nCxCtoC_j0wkFstsFm",
 			"fillStyle": "solid",
@@ -1729,15 +1768,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 188.99035082689085,
-			"y": 8858.459117651693,
+			"x": 191.05032665348887,
+			"y": 8856.049587047337,
 			"strokeColor": "#f08c00",
 			"backgroundColor": "transparent",
 			"width": 96.3636722233283,
 			"height": 27,
 			"seed": 1127290209,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
@@ -1749,14 +1789,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "lGroBr57"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 293,
-			"versionNonce": 43580943,
+			"version": 362,
+			"versionNonce": 508315873,
 			"isDeleted": false,
 			"id": "lGroBr57",
 			"fillStyle": "solid",
@@ -1765,20 +1805,21 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": 197.18222722175813,
-			"y": 8863.955887767213,
+			"x": 199.24220304835615,
+			"y": 8861.546357162857,
 			"strokeColor": "#f08c00",
 			"backgroundColor": "transparent",
 			"width": 79.97991943359375,
 			"height": 16.006459768958653,
 			"seed": 1067942497,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"fontSize": 13.33871647413221,
@@ -1795,8 +1836,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		{
 			"id": "SaZdBhsWWCsct4O9NKMG1",
 			"type": "arrow",
-			"x": 65.36639793409279,
-			"y": 10318.25356381244,
+			"x": 67.42637376069081,
+			"y": 10315.844033208083,
 			"width": 221.525495700404,
 			"height": 138.6667778431456,
 			"angle": 0,
@@ -1808,18 +1849,19 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 1412418735,
-			"version": 104,
-			"versionNonce": 1309208161,
+			"version": 173,
+			"versionNonce": 1914827183,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1845,8 +1887,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		{
 			"id": "cVq_sJ9i6giQtWwisZ1JO",
 			"type": "arrow",
-			"x": 118.15861063940258,
-			"y": 10139.942612466046,
+			"x": 120.2185864660006,
+			"y": 10137.53308186169,
 			"width": 237.2892086242066,
 			"height": 151.42934348745257,
 			"angle": 0,
@@ -1858,18 +1900,19 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"seed": 1468744463,
-			"version": 251,
-			"versionNonce": 638346287,
+			"version": 460,
+			"versionNonce": 779257025,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1903,8 +1946,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		{
 			"id": "YzvRTOAIR0clU8033bpDm",
 			"type": "rectangle",
-			"x": -156.0763639366977,
-			"y": 9121.493616991893,
+			"x": -154.01638811009968,
+			"y": 9119.084086387536,
 			"width": 507.74245351047443,
 			"height": 29.2,
 			"angle": 0,
@@ -1916,15 +1959,16 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
 			"seed": 1682642049,
-			"version": 191,
-			"versionNonce": 1518238273,
+			"version": 260,
+			"versionNonce": 192275407,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1936,15 +1980,15 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "wucn5LbN",
 			"type": "text",
-			"x": -135.5801371814605,
-			"y": 9126.493616991893,
+			"x": -133.52016135486247,
+			"y": 9124.084086387536,
 			"width": 466.75,
 			"height": 19.2,
 			"angle": 0,
@@ -1956,16 +2000,17 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1953724353,
-			"version": 234,
-			"versionNonce": 1852704335,
+			"version": 303,
+			"versionNonce": 2049328289,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"text": "添加失败：1、状态不对，2、线程数满了（核心线程或最大线程）",
@@ -1981,8 +2026,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 93,
-			"versionNonce": 2081917473,
+			"version": 232,
+			"versionNonce": 1439076847,
 			"isDeleted": false,
 			"id": "GOoZotPe3AeH2dKNDSUgY",
 			"fillStyle": "solid",
@@ -1991,29 +2036,30 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
-			"x": -88.70283104158466,
-			"y": 8864.295109844967,
+			"x": -86.64285521498664,
+			"y": 8861.88557924061,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 151.96218764427852,
 			"height": 271.77405233633,
 			"seed": 918398351,
 			"groupIds": [
-				"h32QGEiwMP9DG9wOPrMIQ"
+				"h32QGEiwMP9DG9wOPrMIQ",
+				"7zkV0g-sdfr1uZQhqngnI"
 			],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704604001459,
+			"updated": 1704604110417,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
 			"endBinding": {
 				"elementId": "YzvRTOAIR0clU8033bpDm",
-				"gap": 6.962149041334214,
-				"focus": -1.0021353116795906
+				"focus": -1.0021353116795937,
+				"gap": 6.962149041334214
 			},
 			"lastCommittedPoint": null,
 			"startArrowhead": null,
@@ -2036,10 +2082,164 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		{
 			"id": "54LwCMSSYEJF_RHHRuWem",
 			"type": "rectangle",
-			"x": 506.43486471044446,
-			"y": 9899.244187779837,
-			"width": 98.59733123947558,
-			"height": 49,
+			"x": 506.0359097424108,
+			"y": 9893.92906632711,
+			"width": 166.3665221690921,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [
+				"7zkV0g-sdfr1uZQhqngnI"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1347245231,
+			"version": 249,
+			"versionNonce": 500534095,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "xCeLv8rH"
+				},
+				{
+					"id": "n13A7_BTJQQ-Z3HXwNRdo",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704604129472,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "xCeLv8rH",
+			"type": "text",
+			"x": 512.5316708269569,
+			"y": 9898.92906632711,
+			"width": 153.375,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [
+				"7zkV0g-sdfr1uZQhqngnI"
+			],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1277143663,
+			"version": 202,
+			"versionNonce": 169638927,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704604110417,
+			"link": null,
+			"locked": false,
+			"text": "核心线程数为0的情况",
+			"rawText": "核心线程数为0的情况",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "54LwCMSSYEJF_RHHRuWem",
+			"originalText": "核心线程数为0的情况",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "yHku3Eq7_wSk0WAnB7NLe",
+			"type": "rectangle",
+			"x": -97.33825644019242,
+			"y": 9874.013222214979,
+			"width": 76.0758087086603,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [
+				"7zkV0g-sdfr1uZQhqngnI"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1224277359,
+			"version": 144,
+			"versionNonce": 285495393,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "aS9IjQWD"
+				}
+			],
+			"updated": 1704604110417,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "aS9IjQWD",
+			"type": "text",
+			"x": -91.30035208586227,
+			"y": 9879.013222214979,
+			"width": 64,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [
+				"7zkV0g-sdfr1uZQhqngnI"
+			],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1991985697,
+			"version": 102,
+			"versionNonce": 745546287,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704604110417,
+			"link": null,
+			"locked": false,
+			"text": "状态正常",
+			"rawText": "状态正常",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "yHku3Eq7_wSk0WAnB7NLe",
+			"originalText": "状态正常",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "n13A7_BTJQQ-Z3HXwNRdo",
+			"type": "arrow",
+			"x": 675.0047575886247,
+			"y": 9904.745693389068,
+			"width": 153.89396896461494,
+			"height": 609.1087949326229,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -2051,58 +2251,39 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
-				"type": 3
+				"type": 2
 			},
-			"seed": 1347245231,
-			"version": 50,
-			"versionNonce": 1703561665,
-			"isDeleted": false,
-			"boundElements": [
-				{
-					"type": "text",
-					"id": "xCeLv8rH"
-				}
-			],
-			"updated": 1704604011824,
-			"link": null,
-			"locked": false
-		},
-		{
-			"id": "xCeLv8rH",
-			"type": "text",
-			"x": 515.7335303301822,
-			"y": 9904.544187779837,
-			"width": 80,
-			"height": 38.4,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 0,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 1277143663,
-			"version": 25,
-			"versionNonce": 2133539969,
+			"seed": 1294090241,
+			"version": 70,
+			"versionNonce": 850920257,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704604017871,
+			"updated": 1704604132006,
 			"link": null,
 			"locked": false,
-			"text": "核心线程数\n为0的情况",
-			"rawText": "核心线程数为0的情况",
-			"fontSize": 16,
-			"fontFamily": 3,
-			"textAlign": "center",
-			"verticalAlign": "middle",
-			"baseline": 34,
-			"containerId": "54LwCMSSYEJF_RHHRuWem",
-			"originalText": "核心线程数为0的情况",
-			"lineHeight": 1.2
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					116.67246764469724,
+					-305.49936399953003
+				],
+				[
+					153.89396896461494,
+					-609.1087949326229
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "54LwCMSSYEJF_RHHRuWem",
+				"focus": 0.9502200898691734,
+				"gap": 2.6023256771218826
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		},
 		{
 			"type": "arrow",
@@ -2212,10 +2393,10 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		"currentItemTextAlign": "center",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 507.8284943027139,
-		"scrollY": -9278.283780882093,
+		"scrollX": 493.17604131948593,
+		"scrollY": -8671.026150479085,
 		"zoom": {
-			"value": 1.008188171386719
+			"value": 0.7056753611564638
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
