@@ -164,7 +164,8 @@ cas失败，重新循环 ^M4Poncut
 
 firstTask为null，队列为空，应该也只有上面的情况，原task放入后，队列中的task都被其他线程poll了 ^RNgtVFuR
 
-同时提交多个任务 ^PE1slBxA
+同时提交多个任务，
+其他线程增加线程成功了 ^PE1slBxA
 
 %%
 # Drawing
@@ -376,13 +377,13 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		},
 		{
 			"type": "arrow",
-			"version": 865,
-			"versionNonce": 1664656065,
+			"version": 866,
+			"versionNonce": 1934338799,
 			"isDeleted": false,
 			"id": "CT31Rn4KSTnW4XvIcaPMm",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
-			"strokeStyle": "solid",
+			"strokeStyle": "dashed",
 			"roughness": 0,
 			"opacity": 100,
 			"angle": 0,
@@ -401,7 +402,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704599292368,
+			"updated": 1704599888368,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1484,8 +1485,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 1390175791,
-			"version": 477,
-			"versionNonce": 1261657903,
+			"version": 478,
+			"versionNonce": 1461958401,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1493,7 +1494,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "RNgtVFuR"
 				}
 			],
-			"updated": 1704599726445,
+			"updated": 1704599950244,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1556,10 +1557,10 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		{
 			"id": "PE1slBxA",
 			"type": "text",
-			"x": 742.617299132011,
-			"y": 9247.055997414736,
-			"width": 128,
-			"height": 19.2,
+			"x": 708.2263873916403,
+			"y": 9178.008574716952,
+			"width": 176,
+			"height": 38.4,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1572,23 +1573,76 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 1218367407,
-			"version": 40,
-			"versionNonce": 782327695,
+			"version": 195,
+			"versionNonce": 225238881,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704599767506,
+			"boundElements": [
+				{
+					"id": "M2ykKKpXj2wreCMzUj-Yx",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704599955558,
 			"link": null,
 			"locked": false,
-			"text": "同时提交多个任务",
-			"rawText": "同时提交多个任务",
+			"text": "同时提交多个任务，\n其他线程增加线程成功了",
+			"rawText": "同时提交多个任务，\n其他线程增加线程成功了",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "top",
-			"baseline": 15,
+			"baseline": 34,
 			"containerId": null,
-			"originalText": "同时提交多个任务",
+			"originalText": "同时提交多个任务，\n其他线程增加线程成功了",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "M2ykKKpXj2wreCMzUj-Yx",
+			"type": "arrow",
+			"x": 816.7581786968457,
+			"y": 9217.067500722394,
+			"width": 52.83925763388538,
+			"height": 88.28217209239483,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 385903535,
+			"version": 60,
+			"versionNonce": 119895937,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704599955558,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-52.83925763388538,
+					88.28217209239483
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "PE1slBxA",
+				"focus": -0.3258350977353726,
+				"gap": 1
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		},
 		{
 			"id": "ZbQJvlol",
@@ -1983,8 +2037,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		"currentItemTextAlign": "center",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 717.1883892649058,
-		"scrollY": -8805.792953374817,
+		"scrollX": 755.9160620336976,
+		"scrollY": -8872.490612032072,
 		"zoom": {
 			"value": 0.9295678626217359
 		},
