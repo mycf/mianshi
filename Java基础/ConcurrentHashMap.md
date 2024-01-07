@@ -13,3 +13,5 @@
 
 ![[ConcurrentHashMap 2024-01-07 20.39.18.excalidraw|100%]]
 ## 扩容
+
+![[ConcurrentHashMap 2024-01-07 22.41.52.excalidraw]]

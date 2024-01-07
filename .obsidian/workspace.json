@@ -6,6 +6,7 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
+        "dimension": 46.374458874458874,
         "children": [
           {
             "id": "22e9b385c4f84668",
@@ -146,6 +147,23 @@
             }
           }
         ]
+      },
+      {
+        "id": "56cc2c92acde6d1c",
+        "type": "tabs",
+        "dimension": 53.62554112554112,
+        "children": [
+          {
+            "id": "093315c4148ac277",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 22.41.52.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -195,7 +213,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -211,7 +230,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/ConcurrentHashMap.md",
+                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 22.41.52.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,7 +247,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/ConcurrentHashMap.md",
+                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 22.41.52.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,7 +270,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/ConcurrentHashMap.md"
+                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 22.41.52.excalidraw.md"
               }
             }
           },
@@ -377,11 +396,12 @@
       }
     ]
   },
-  "active": "22e9b385c4f84668",
+  "active": "093315c4148ac277",
   "lastOpenFiles": [
+    "Java基础/ConcurrentHashMap.md",
+    "Excalidraw/ConcurrentHashMap 2024-01-07 22.41.52.excalidraw.md",
     "Excalidraw/ConcurrentHashMap 2024-01-07 20.39.18.excalidraw.md",
     "Java基础/Integer.md",
-    "Java基础/ConcurrentHashMap.md",
     "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md",
     "Java基础/UnSafe.md",
     "Java基础/ThreadPoolExecutor.md",
@@ -406,7 +426,6 @@
     "计算机基础",
     "Java基础/JVM/双亲委派.md",
     "Java基础/JVM/synchronized.md",
-    "分布式/消息队列/消息队列有哪些作用.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
