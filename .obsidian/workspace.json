@@ -135,9 +135,11 @@
             "id": "6072aafc8aef0ca7",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md"
+                "file": "Java基础/UnSafe.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -191,8 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -208,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md",
+                "file": "Java基础/UnSafe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -225,7 +226,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md",
+                "file": "Java基础/UnSafe.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -248,7 +249,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md"
+                "file": "Java基础/UnSafe.md"
               }
             }
           },
@@ -374,10 +375,11 @@
       }
     ]
   },
-  "active": "22e9b385c4f84668",
+  "active": "6072aafc8aef0ca7",
   "lastOpenFiles": [
-    "Java基础/ConcurrentHashMap.md",
     "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md",
+    "Java基础/UnSafe.md",
+    "Java基础/ConcurrentHashMap.md",
     "Java基础/ThreadPoolExecutor.md",
     "Java基础/HashMap.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
@@ -403,7 +405,6 @@
     "分布式/消息队列/消息队列有哪些作用.md",
     "分布式/消息队列/kafka/Untitled.md",
     "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
-    "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
