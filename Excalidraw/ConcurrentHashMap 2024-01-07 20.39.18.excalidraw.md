@@ -149,7 +149,11 @@ tags: [excalidraw]
 
 没有相同key，提前生成HashEntry ^F1wzcXYm
 
-一遍遍历，一遍尝试获取锁 ^ntlTE4TI
+遍历中间不断尝试获取锁 ^ntlTE4TI
+
+不相等代表其他线程修改了当前链表 ^Cv6VZstd
+
+当前链表被修改需要重新遍历 ^FOJwNb4V
 
 %%
 # Drawing
@@ -1443,9 +1447,9 @@ tags: [excalidraw]
 		{
 			"id": "ntlTE4TI",
 			"type": "text",
-			"x": 546.4407119750973,
+			"x": 556.4407119750973,
 			"y": 1790.9540964762368,
-			"width": 240,
+			"width": 220,
 			"height": 24,
 			"angle": 0,
 			"strokeColor": "#e03131",
@@ -1459,23 +1463,213 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"seed": 1605078543,
-			"version": 60,
-			"versionNonce": 776211169,
+			"version": 75,
+			"versionNonce": 295621217,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704636067293,
+			"updated": 1704636325642,
 			"link": null,
 			"locked": false,
-			"text": "一遍遍历，一遍尝试获取锁",
-			"rawText": "一遍遍历，一遍尝试获取锁",
+			"text": "遍历中间不断尝试获取锁",
+			"rawText": "遍历中间不断尝试获取锁",
 			"fontSize": 20,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"baseline": 19,
 			"containerId": "7So0Z-KRSgE8t3CNxeDpZ",
-			"originalText": "一遍遍历，一遍尝试获取锁",
+			"originalText": "遍历中间不断尝试获取锁",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "L23dNp9uXapy3VpQcZ4P-",
+			"type": "rectangle",
+			"x": 941.1583633422847,
+			"y": 2215.3509877522783,
+			"width": 198.6827799479164,
+			"height": 58,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1106739663,
+			"version": 63,
+			"versionNonce": 161540001,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "Cv6VZstd"
+				}
+			],
+			"updated": 1704636200053,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "Cv6VZstd",
+			"type": "text",
+			"x": 950.499753316243,
+			"y": 2220.3509877522783,
+			"width": 180,
+			"height": 48,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1080942863,
+			"version": 57,
+			"versionNonce": 537111521,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704636198701,
+			"link": null,
+			"locked": false,
+			"text": "不相等代表其他线程\n修改了当前链表",
+			"rawText": "不相等代表其他线程修改了当前链表",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 43,
+			"containerId": "L23dNp9uXapy3VpQcZ4P-",
+			"originalText": "不相等代表其他线程修改了当前链表",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "SDvMeOfZNg7eu16IDPA2F",
+			"type": "rectangle",
+			"x": 543.8318659464514,
+			"y": 2267.566157023112,
+			"width": 204.3817545572917,
+			"height": 58,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1799703425,
+			"version": 103,
+			"versionNonce": 444432303,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "FOJwNb4V"
+				}
+			],
+			"updated": 1704636251601,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "FOJwNb4V",
+			"type": "text",
+			"x": 556.0227432250973,
+			"y": 2272.566157023112,
+			"width": 180,
+			"height": 48,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1016640193,
+			"version": 159,
+			"versionNonce": 1259773935,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704636251601,
+			"link": null,
+			"locked": false,
+			"text": "当前链表被修改需要\n重新遍历",
+			"rawText": "当前链表被修改需要重新遍历",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 43,
+			"containerId": "SDvMeOfZNg7eu16IDPA2F",
+			"originalText": "当前链表被修改需要重新遍历",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "oBJxuXJw_7sW7GRUdqkjv",
+			"type": "arrow",
+			"x": 381.54378000895144,
+			"y": 2282.2357533772783,
+			"width": 217.8211263020834,
+			"height": 439.245849609375,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 2000282209,
+			"version": 110,
+			"versionNonce": 1158540783,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704636279246,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-217.8211263020834,
+					-223.76708984375
+				],
+				[
+					-43.225585937500114,
+					-439.245849609375
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
 		},
 		{
 			"id": "u019i49IJq-Ms5B1LJexZ",
@@ -1833,7 +2027,7 @@ tags: [excalidraw]
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
-		"currentItemStrokeStyle": "solid",
+		"currentItemStrokeStyle": "dashed",
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 3,
@@ -1841,8 +2035,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 216.29838307698603,
-		"scrollY": -968.4219309488931,
+		"scrollX": 165.63171641031946,
+		"scrollY": -1136.421930948893,
 		"zoom": {
 			"value": 0.75
 		},
