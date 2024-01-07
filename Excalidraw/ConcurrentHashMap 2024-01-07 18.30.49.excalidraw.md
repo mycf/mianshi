@@ -63,6 +63,9 @@ segment的长度 ^7sQfTwf4
 这里为了往上取整等同于
 Math.ceil(initialCapacity%ssize) ^H0iMCPFK
 
+HashEntry数组的下标也要&hash获取下标，
+所以也要2的次幂 ^gQhmCLq6
+
 %%
 # Drawing
 ```json
@@ -534,6 +537,43 @@ Math.ceil(initialCapacity%ssize) ^H0iMCPFK
 			"baseline": 21,
 			"containerId": null,
 			"originalText": "这里为了往上取整等同于\nMath.ceil(initialCapacity%ssize)",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "gQhmCLq6",
+			"type": "text",
+			"x": -75.28224402800842,
+			"y": 165.12623088502846,
+			"width": 175.04783766435202,
+			"height": 20.8003134087062,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 44577647,
+			"version": 242,
+			"versionNonce": 1456235183,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704625727020,
+			"link": null,
+			"locked": false,
+			"text": "HashEntry数组的下标也要&hash获取下标，\n所以也要2的次幂",
+			"rawText": "HashEntry数组的下标也要&hash获取下标，\n所以也要2的次幂",
+			"fontSize": 8.666797253627577,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 18.000000000000014,
+			"containerId": null,
+			"originalText": "HashEntry数组的下标也要&hash获取下标，\n所以也要2的次幂",
 			"lineHeight": 1.2
 		},
 		{
