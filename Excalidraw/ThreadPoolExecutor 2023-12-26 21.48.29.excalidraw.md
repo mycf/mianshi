@@ -146,6 +146,8 @@ cas失败，重新循环 ^M4Poncut
 
 队列未满 ^ItWAXEVb
 
+队列已满，尝试使用非核心线程 ^rILL5G1r
+
 %%
 # Drawing
 ```json
@@ -744,8 +746,8 @@ cas失败，重新循环 ^M4Poncut
 		{
 			"id": "lJwzhkOrx22ppjaTQTEKu",
 			"type": "rectangle",
-			"x": 320.12001694966193,
-			"y": 8926.150041518244,
+			"x": -174.5521289319775,
+			"y": 8978.451611787248,
 			"width": 77.28541820820135,
 			"height": 29.2,
 			"angle": 0,
@@ -762,8 +764,8 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 1609602305,
-			"version": 177,
-			"versionNonce": 1522230433,
+			"version": 249,
+			"versionNonce": 1921510081,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -771,15 +773,15 @@ cas失败，重新循环 ^M4Poncut
 					"id": "ItWAXEVb"
 				}
 			],
-			"updated": 1704597095666,
+			"updated": 1704597238310,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "ItWAXEVb",
 			"type": "text",
-			"x": 326.7627260537626,
-			"y": 8931.150041518244,
+			"x": -167.90941982787683,
+			"y": 8983.451611787248,
 			"width": 64,
 			"height": 19.2,
 			"angle": 0,
@@ -794,11 +796,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 2081053167,
-			"version": 110,
-			"versionNonce": 235415681,
+			"version": 182,
+			"versionNonce": 580840097,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704597095666,
+			"updated": 1704597238310,
 			"link": null,
 			"locked": false,
 			"text": "队列未满",
@@ -811,6 +813,150 @@ cas失败，重新循环 ^M4Poncut
 			"containerId": "lJwzhkOrx22ppjaTQTEKu",
 			"originalText": "队列未满",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "R07j44TcMx88vijDHo1SZ",
+			"type": "arrow",
+			"x": -133.22508673534531,
+			"y": 8939.367472453087,
+			"width": 1.0843701100270664,
+			"height": 118.35340001917939,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 975670305,
+			"version": 58,
+			"versionNonce": 2035014063,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704597227867,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-1.0843701100270664,
+					118.35340001917939
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "u9l5avXYvXBs195ZOAMfN",
+			"type": "rectangle",
+			"x": 214.51950541732504,
+			"y": 9060.259736477376,
+			"width": 236.97541391181426,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1141601889,
+			"version": 489,
+			"versionNonce": 946543137,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "rILL5G1r"
+				}
+			],
+			"updated": 1704597344874,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "rILL5G1r",
+			"type": "text",
+			"x": 221.00721237323216,
+			"y": 9065.259736477376,
+			"width": 224,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 155560673,
+			"version": 465,
+			"versionNonce": 1462054401,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704597344874,
+			"link": null,
+			"locked": false,
+			"text": "队列已满，尝试使用非核心线程",
+			"rawText": "队列已满，尝试使用非核心线程",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "u9l5avXYvXBs195ZOAMfN",
+			"originalText": "队列已满，尝试使用非核心线程",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "KXM6VuiRur7K_thpxEJZ5",
+			"type": "rectangle",
+			"x": 267.37727908941997,
+			"y": 9011.810421391778,
+			"width": 126.1785929330639,
+			"height": 33.63766639280584,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "#ffffff",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1369465281,
+			"version": 62,
+			"versionNonce": 710906401,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704597412607,
+			"link": null,
+			"locked": false
 		},
 		{
 			"id": "ZbQJvlol",
@@ -864,9 +1010,9 @@ cas失败，重新循环 ^M4Poncut
 		"currentItemFontSize": 16,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
-		"currentItemEndArrowhead": "arrow",
-		"scrollX": 560.1261608136937,
-		"scrollY": -8326.000118517131,
+		"currentItemEndArrowhead": "triangle",
+		"scrollX": 583.7930719501774,
+		"scrollY": -8562.669229881889,
 		"zoom": {
 			"value": 0.9295678626217359
 		},
