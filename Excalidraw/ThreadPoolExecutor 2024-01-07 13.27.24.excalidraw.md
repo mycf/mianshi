@@ -125,7 +125,8 @@ shutdown+队列为空 ^p5xYBZaG
 
 进入tidying状态就执行terminated方法然后进入terminated状态 ^5zWV7LOF
 
-意外中止，为什么要 ^BzQBZZHQ
+为什么只有意外终止才-1？
+因为正常中止是因为未获取到任务，已经在getTask里面-1了 ^BzQBZZHQ
 
 %%
 # Drawing
@@ -1669,10 +1670,10 @@ shutdown+队列为空 ^p5xYBZaG
 		{
 			"id": "TvEwKfrFn04Bphsp9QElO",
 			"type": "rectangle",
-			"x": 156.40570464725212,
-			"y": -178.4353433191459,
-			"width": 260.6051987812596,
-			"height": 37.95860521899789,
+			"x": 141.93180382382855,
+			"y": -182.64905916609507,
+			"width": 462.9036026440336,
+			"height": 49,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1687,8 +1688,8 @@ shutdown+队列为空 ^p5xYBZaG
 				"type": 3
 			},
 			"seed": 1356803023,
-			"version": 79,
-			"versionNonce": 883640047,
+			"version": 397,
+			"versionNonce": 1310264431,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1696,17 +1697,17 @@ shutdown+队列为空 ^p5xYBZaG
 					"id": "BzQBZZHQ"
 				}
 			],
-			"updated": 1704612719513,
+			"updated": 1704613334185,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "BzQBZZHQ",
 			"type": "text",
-			"x": 214.70830403788193,
-			"y": -169.05604070964694,
-			"width": 144,
-			"height": 19.2,
+			"x": 146.93180382382855,
+			"y": -177.34905916609506,
+			"width": 436.375,
+			"height": 38.4,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1719,22 +1720,22 @@ shutdown+队列为空 ^p5xYBZaG
 			"frameId": null,
 			"roundness": null,
 			"seed": 895570799,
-			"version": 27,
-			"versionNonce": 1956811023,
+			"version": 385,
+			"versionNonce": 1523021999,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704612719513,
+			"updated": 1704613333639,
 			"link": null,
 			"locked": false,
-			"text": "意外中止，为什么要",
-			"rawText": "意外中止，为什么要",
+			"text": "为什么只有意外终止才-1？\n因为正常中止是因为未获取到任务，已经在getTask里面-1了",
+			"rawText": "为什么只有意外终止才-1？\n因为正常中止是因为未获取到任务，已经在getTask里面-1了",
 			"fontSize": 16,
 			"fontFamily": 3,
-			"textAlign": "center",
+			"textAlign": "left",
 			"verticalAlign": "middle",
-			"baseline": 15,
+			"baseline": 34,
 			"containerId": "TvEwKfrFn04Bphsp9QElO",
-			"originalText": "意外中止，为什么要",
+			"originalText": "为什么只有意外终止才-1？\n因为正常中止是因为未获取到任务，已经在getTask里面-1了",
 			"lineHeight": 1.2
 		},
 		{
@@ -1864,8 +1865,8 @@ shutdown+队列为空 ^p5xYBZaG
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 131.81511034418497,
-		"scrollY": 482.0542281172536,
+		"scrollX": 320.8208325937843,
+		"scrollY": 656.521048655345,
 		"zoom": {
 			"value": 1.1004957814203962
 		},
