@@ -79,6 +79,12 @@ tags: [excalidraw]
 
 running或shutdown状态 ^KskBA1hq
 
+running状态 ^NFVWwE9D
+
+tidying、terminated状态 ^MQWOFxbK
+
+shutdown+队列为空 ^p5xYBZaG
+
 %%
 # Drawing
 ```json
@@ -106,11 +112,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 397017633,
-			"version": 12,
-			"versionNonce": 892405825,
+			"version": 47,
+			"versionNonce": 142087983,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704610794523,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"text": "    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n",
@@ -145,8 +151,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 1294524737,
-			"version": 121,
-			"versionNonce": 1541347649,
+			"version": 123,
+			"versionNonce": 1813739329,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -154,7 +160,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "xFRrxMvH"
 				}
 			],
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false
 		},
@@ -177,11 +183,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 192402799,
-			"version": 73,
-			"versionNonce": 673896271,
+			"version": 75,
+			"versionNonce": 250304847,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"text": "意外终止",
@@ -216,8 +222,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 368191567,
-			"version": 315,
-			"versionNonce": 110171503,
+			"version": 317,
+			"versionNonce": 99702639,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -225,7 +231,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "Fij6yKve"
 				}
 			],
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false
 		},
@@ -248,11 +254,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 988397231,
-			"version": 423,
-			"versionNonce": 919108865,
+			"version": 425,
+			"versionNonce": 235232001,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"text": "队列中存在任务时\n，最小线程数为1",
@@ -287,8 +293,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 2130485089,
-			"version": 223,
-			"versionNonce": 1439338383,
+			"version": 225,
+			"versionNonce": 1137873295,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -296,7 +302,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "iFk0LSXg"
 				}
 			],
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false
 		},
@@ -319,11 +325,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 1271293697,
-			"version": 187,
-			"versionNonce": 764622049,
+			"version": 189,
+			"versionNonce": 92558049,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"text": "超过最小线程数，可以销毁",
@@ -358,8 +364,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 1186558351,
-			"version": 380,
-			"versionNonce": 269469103,
+			"version": 382,
+			"versionNonce": 1103595439,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -367,7 +373,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "AdIpuA16"
 				}
 			],
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false
 		},
@@ -390,11 +396,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 1417671919,
-			"version": 540,
-			"versionNonce": 234614977,
+			"version": 542,
+			"versionNonce": 1176063681,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"text": "不足最小线程数，重新生成工作线程\n，代替本任务继续运行",
@@ -429,8 +435,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 1454433679,
-			"version": 143,
-			"versionNonce": 1418278863,
+			"version": 145,
+			"versionNonce": 1039710671,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -438,7 +444,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "KskBA1hq"
 				}
 			],
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false
 		},
@@ -461,11 +467,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 504160495,
-			"version": 165,
-			"versionNonce": 2107781281,
+			"version": 167,
+			"versionNonce": 1180946081,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704610791333,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"text": "running或shutdown状态",
@@ -484,14 +490,14 @@ running或shutdown状态 ^KskBA1hq
 			"type": "arrow",
 			"x": -96.94784545898438,
 			"y": 45.40235900878906,
-			"width": 42.4056396484375,
-			"height": 292.855224609375,
+			"width": 144.0628662109375,
+			"height": 288.235428858663,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "transparent",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
-			"strokeStyle": "solid",
+			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
 			"groupIds": [],
@@ -500,11 +506,11 @@ running或shutdown状态 ^KskBA1hq
 				"type": 2
 			},
 			"seed": 1667129281,
-			"version": 64,
-			"versionNonce": 556062863,
+			"version": 126,
+			"versionNonce": 494839791,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704610816921,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -513,8 +519,12 @@ running或shutdown状态 ^KskBA1hq
 					0
 				],
 				[
-					-42.4056396484375,
-					292.855224609375
+					-144.0628662109375,
+					149.68060302734375
+				],
+				[
+					-44.883593649089676,
+					288.235428858663
 				]
 			],
 			"lastCommittedPoint": null,
@@ -522,6 +532,219 @@ running或shutdown状态 ^KskBA1hq
 			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
+		},
+		{
+			"id": "5hUY1ZtegOeaLm_ERMmsW",
+			"type": "rectangle",
+			"x": 116.68621670683751,
+			"y": 368.69820173993304,
+			"width": 112.9706674632551,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 492149761,
+			"version": 304,
+			"versionNonce": 562911169,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "NFVWwE9D"
+				}
+			],
+			"updated": 1704611011704,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "NFVWwE9D",
+			"type": "text",
+			"x": 124.35905043846506,
+			"y": 373.69820173993304,
+			"width": 97.625,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 59446273,
+			"version": 608,
+			"versionNonce": 141473697,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704611011704,
+			"link": null,
+			"locked": false,
+			"text": "running状态",
+			"rawText": "running状态",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "5hUY1ZtegOeaLm_ERMmsW",
+			"originalText": "running状态",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "eJw8Q3FvE9OnrUv1W1nVV",
+			"type": "rectangle",
+			"x": 259.1600829403848,
+			"y": 387.7216668785208,
+			"width": 221.29091290271685,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1745617761,
+			"version": 305,
+			"versionNonce": 252691279,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "MQWOFxbK"
+				}
+			],
+			"updated": 1704611053706,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "MQWOFxbK",
+			"type": "text",
+			"x": 266.11803939174325,
+			"y": 392.7216668785208,
+			"width": 207.375,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 834830831,
+			"version": 480,
+			"versionNonce": 1770795439,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704611053706,
+			"link": null,
+			"locked": false,
+			"text": "tidying、terminated状态",
+			"rawText": "tidying、terminated状态",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "eJw8Q3FvE9OnrUv1W1nVV",
+			"originalText": "tidying、terminated状态",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "cH4B8s11MSvQM4ejtBpqX",
+			"type": "rectangle",
+			"x": 479.4262363072089,
+			"y": 411.2239470433646,
+			"width": 95.03432405429822,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1023461505,
+			"version": 64,
+			"versionNonce": 353341231,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "p5xYBZaG"
+				}
+			],
+			"updated": 1704611107691,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "p5xYBZaG",
+			"type": "text",
+			"x": 484.755898334358,
+			"y": 416.5239470433646,
+			"width": 84.375,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 873094817,
+			"version": 41,
+			"versionNonce": 164876623,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704611107691,
+			"link": null,
+			"locked": false,
+			"text": "shutdown+\n队列为空",
+			"rawText": "shutdown+队列为空",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "cH4B8s11MSvQM4ejtBpqX",
+			"originalText": "shutdown+队列为空",
+			"lineHeight": 1.2
 		},
 		{
 			"id": "mTM91wNl",
@@ -542,11 +765,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 299916271,
-			"version": 3,
-			"versionNonce": 1590783329,
+			"version": 5,
+			"versionNonce": 1723960161,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -579,11 +802,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 533709249,
-			"version": 3,
-			"versionNonce": 1712081185,
+			"version": 5,
+			"versionNonce": 722265889,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704610791332,
+			"updated": 1704611009183,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -605,7 +828,7 @@ running或shutdown状态 ^KskBA1hq
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
-		"currentItemStrokeStyle": "solid",
+		"currentItemStrokeStyle": "dashed",
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 3,
@@ -613,10 +836,10 @@ running或shutdown状态 ^KskBA1hq
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 479.2371520996094,
-		"scrollY": 309.08221435546875,
+		"scrollX": 357.4435554560999,
+		"scrollY": 218.97771498946275,
 		"zoom": {
-			"value": 1
+			"value": 1.1000818206149383
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
