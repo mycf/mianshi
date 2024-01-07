@@ -6,6 +6,7 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
+        "dimension": 32.41341991341991,
         "children": [
           {
             "id": "22e9b385c4f84668",
@@ -13,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
+                "file": "Java基础/ConcurrentHashMap.md",
                 "mode": "source",
                 "source": false
               }
@@ -126,6 +127,23 @@
             }
           }
         ]
+      },
+      {
+        "id": "299885a07235bd6c",
+        "type": "tabs",
+        "dimension": 67.58658008658008,
+        "children": [
+          {
+            "id": "6072aafc8aef0ca7",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,7 +210,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
+                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,7 +227,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
+                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -232,7 +250,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md"
+                "file": "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md"
               }
             }
           },
@@ -358,11 +376,13 @@
       }
     ]
   },
-  "active": "22e9b385c4f84668",
+  "active": "6072aafc8aef0ca7",
   "lastOpenFiles": [
+    "Java基础/ConcurrentHashMap.md",
+    "Excalidraw/ConcurrentHashMap 2024-01-07 18.30.49.excalidraw.md",
+    "Java基础/ThreadPoolExecutor.md",
     "Java基础/HashMap.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
-    "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-07 13.27.24.excalidraw.md",
     "Java基础/ThreadPoolExecutor 2023-12-26 21.48.29.excrridraw.md",
@@ -386,8 +406,6 @@
     "分布式/消息队列/kafka/Untitled.md",
     "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
     "分布式/消息队列/kafka/Kafka如何消息不丢失.md",
-    "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
-    "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
