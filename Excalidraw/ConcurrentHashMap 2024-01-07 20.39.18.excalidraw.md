@@ -1684,8 +1684,8 @@ tags: [excalidraw]
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
 			"groupIds": [],
@@ -1694,8 +1694,8 @@ tags: [excalidraw]
 				"type": 3
 			},
 			"seed": 734386831,
-			"version": 66,
-			"versionNonce": 1416880353,
+			"version": 68,
+			"versionNonce": 1749393537,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1703,7 +1703,7 @@ tags: [excalidraw]
 					"id": "hHAtrors"
 				}
 			],
-			"updated": 1704636681758,
+			"updated": 1704636686566,
 			"link": null,
 			"locked": false
 		},
@@ -2099,8 +2099,8 @@ tags: [excalidraw]
 		"currentItemStrokeColor": "#e03131",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
-		"currentItemStrokeWidth": 0.5,
-		"currentItemStrokeStyle": "dashed",
+		"currentItemStrokeWidth": 1,
+		"currentItemStrokeStyle": "solid",
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 3,
