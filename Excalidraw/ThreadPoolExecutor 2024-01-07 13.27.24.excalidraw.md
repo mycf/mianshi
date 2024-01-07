@@ -35,6 +35,38 @@ tags: [excalidraw]
             addWorker(null, false);
         }
     }
+
+    final void tryTerminate() {
+        for (;;) {
+            int c = ctl.get();
+            if (isRunning(c) ||
+                runStateAtLeast(c, TIDYING) ||
+                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))
+                return;
+            if (workerCountOf(c) != 0) { // Eligible to terminate
+                interruptIdleWorkers(ONLY_ONE);
+                return;
+            }
+
+            final ReentrantLock mainLock = this.mainLock;
+            mainLock.lock();
+            try {
+                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {
+                    try {
+                        terminated();
+                    } finally {
+                        ctl.set(ctlOf(TERMINATED, 0));
+                        termination.signalAll();
+                    }
+                    return;
+                }
+            } finally {
+                mainLock.unlock();
+            }
+            // else retry on failed CAS
+        }
+    }
+
  ^vDmZxDyM
 
 意外终止 ^xFRrxMvH
@@ -61,7 +93,7 @@ running或shutdown状态 ^KskBA1hq
 			"x": -174.69577026367188,
 			"y": -216.93511657714845,
 			"width": 721.875,
-			"height": 537.6,
+			"height": 1152,
 			"angle": 0,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
@@ -74,22 +106,22 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 397017633,
-			"version": 7,
-			"versionNonce": 1025478017,
+			"version": 12,
+			"versionNonce": 892405825,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704605253485,
+			"updated": 1704610794523,
 			"link": null,
 			"locked": false,
-			"text": "    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n",
-			"rawText": "    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n",
+			"text": "    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n",
+			"rawText": "    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 533,
+			"baseline": 1148,
 			"containerId": null,
-			"originalText": "    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n",
+			"originalText": "    private void processWorkerExit(Worker w, boolean completedAbruptly) {\n        if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted\n            decrementWorkerCount();\n\n        final ReentrantLock mainLock = this.mainLock;\n        mainLock.lock();\n        try {\n            completedTaskCount += w.completedTasks;\n            workers.remove(w);\n        } finally {\n            mainLock.unlock();\n        }\n\n        tryTerminate();\n\n        int c = ctl.get();\n        if (runStateLessThan(c, STOP)) {\n            if (!completedAbruptly) {\n                int min = allowCoreThreadTimeOut ? 0 : corePoolSize;\n                if (min == 0 && ! workQueue.isEmpty())\n                    min = 1;\n                if (workerCountOf(c) >= min)\n                    return; // replacement not needed\n            }\n            addWorker(null, false);\n        }\n    }\n\n    final void tryTerminate() {\n        for (;;) {\n            int c = ctl.get();\n            if (isRunning(c) ||\n                runStateAtLeast(c, TIDYING) ||\n                (runStateLessThan(c, STOP) && ! workQueue.isEmpty()))\n                return;\n            if (workerCountOf(c) != 0) { // Eligible to terminate\n                interruptIdleWorkers(ONLY_ONE);\n                return;\n            }\n\n            final ReentrantLock mainLock = this.mainLock;\n            mainLock.lock();\n            try {\n                if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {\n                    try {\n                        terminated();\n                    } finally {\n                        ctl.set(ctlOf(TERMINATED, 0));\n                        termination.signalAll();\n                    }\n                    return;\n                }\n            } finally {\n                mainLock.unlock();\n            }\n            // else retry on failed CAS\n        }\n    }\n\n",
 			"lineHeight": 1.2
 		},
 		{
@@ -113,8 +145,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 1294524737,
-			"version": 120,
-			"versionNonce": 953180321,
+			"version": 121,
+			"versionNonce": 1541347649,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -122,7 +154,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "xFRrxMvH"
 				}
 			],
-			"updated": 1704605292959,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false
 		},
@@ -145,11 +177,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 192402799,
-			"version": 72,
-			"versionNonce": 1478337665,
+			"version": 73,
+			"versionNonce": 673896271,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704605292959,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false,
 			"text": "意外终止",
@@ -184,8 +216,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 368191567,
-			"version": 314,
-			"versionNonce": 1954051009,
+			"version": 315,
+			"versionNonce": 110171503,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -193,7 +225,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "Fij6yKve"
 				}
 			],
-			"updated": 1704605608350,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false
 		},
@@ -216,11 +248,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 988397231,
-			"version": 422,
-			"versionNonce": 127292321,
+			"version": 423,
+			"versionNonce": 919108865,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704605608350,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false,
 			"text": "队列中存在任务时\n，最小线程数为1",
@@ -255,8 +287,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 2130485089,
-			"version": 222,
-			"versionNonce": 92972783,
+			"version": 223,
+			"versionNonce": 1439338383,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -264,7 +296,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "iFk0LSXg"
 				}
 			],
-			"updated": 1704605656702,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false
 		},
@@ -287,11 +319,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 1271293697,
-			"version": 186,
-			"versionNonce": 1678391631,
+			"version": 187,
+			"versionNonce": 764622049,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704605656702,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false,
 			"text": "超过最小线程数，可以销毁",
@@ -326,8 +358,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 1186558351,
-			"version": 379,
-			"versionNonce": 1791301359,
+			"version": 380,
+			"versionNonce": 269469103,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -335,7 +367,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "AdIpuA16"
 				}
 			],
-			"updated": 1704605790900,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false
 		},
@@ -358,11 +390,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 1417671919,
-			"version": 539,
-			"versionNonce": 1542843183,
+			"version": 540,
+			"versionNonce": 234614977,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704605810239,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false,
 			"text": "不足最小线程数，重新生成工作线程\n，代替本任务继续运行",
@@ -397,8 +429,8 @@ running或shutdown状态 ^KskBA1hq
 				"type": 3
 			},
 			"seed": 1454433679,
-			"version": 142,
-			"versionNonce": 238826689,
+			"version": 143,
+			"versionNonce": 1418278863,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -406,7 +438,7 @@ running或shutdown状态 ^KskBA1hq
 					"id": "KskBA1hq"
 				}
 			],
-			"updated": 1704605854036,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false
 		},
@@ -429,11 +461,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 504160495,
-			"version": 164,
-			"versionNonce": 1592524897,
+			"version": 165,
+			"versionNonce": 2107781281,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704605854037,
+			"updated": 1704610791333,
 			"link": null,
 			"locked": false,
 			"text": "running或shutdown状态",
@@ -446,6 +478,50 @@ running或shutdown状态 ^KskBA1hq
 			"containerId": "Zj4pIBzbSmDn7uCigcrrR",
 			"originalText": "running或shutdown状态",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "9S51tvL9dj-akB0u_dveJ",
+			"type": "arrow",
+			"x": -96.94784545898438,
+			"y": 45.40235900878906,
+			"width": 42.4056396484375,
+			"height": 292.855224609375,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1667129281,
+			"version": 64,
+			"versionNonce": 556062863,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704610816921,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-42.4056396484375,
+					292.855224609375
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
 		},
 		{
 			"id": "mTM91wNl",
@@ -466,11 +542,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 299916271,
-			"version": 2,
-			"versionNonce": 425289313,
+			"version": 3,
+			"versionNonce": 1590783329,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704605249245,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -503,11 +579,11 @@ running或shutdown状态 ^KskBA1hq
 			"frameId": null,
 			"roundness": null,
 			"seed": 533709249,
-			"version": 2,
-			"versionNonce": 786830639,
+			"version": 3,
+			"versionNonce": 1712081185,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704605275412,
+			"updated": 1704610791332,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -537,8 +613,8 @@ running或shutdown状态 ^KskBA1hq
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 179.23715209960938,
-		"scrollY": 573.0822143554688,
+		"scrollX": 479.2371520996094,
+		"scrollY": 309.08221435546875,
 		"zoom": {
 			"value": 1
 		},
