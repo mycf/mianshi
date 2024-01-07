@@ -157,6 +157,8 @@ cas失败，重新循环 ^M4Poncut
 因为ctl前三位是状态，所以COUNT_MAK是线程最大值
  ^OxVDl7XY
 
+占位成功 ^bwdvew9g
+
 %%
 # Drawing
 ```json
@@ -167,8 +169,8 @@ cas失败，重新循环 ^M4Poncut
 	"elements": [
 		{
 			"type": "text",
-			"version": 919,
-			"versionNonce": 333132239,
+			"version": 922,
+			"versionNonce": 1451693665,
 			"isDeleted": false,
 			"id": "NPcqCzcP",
 			"fillStyle": "solid",
@@ -190,7 +192,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -206,8 +208,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 1189,
-			"versionNonce": 268752545,
+			"version": 1192,
+			"versionNonce": 165985327,
 			"isDeleted": false,
 			"id": "3Yhb8X9L",
 			"fillStyle": "solid",
@@ -229,7 +231,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -245,8 +247,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 830,
-			"versionNonce": 984271439,
+			"version": 833,
+			"versionNonce": 16228929,
 			"isDeleted": false,
 			"id": "QDnp1mor",
 			"fillStyle": "solid",
@@ -268,7 +270,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704598124468,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -284,8 +286,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 734,
-			"versionNonce": 2102614657,
+			"version": 737,
+			"versionNonce": 1702583887,
 			"isDeleted": false,
 			"id": "BnthpH9M",
 			"fillStyle": "solid",
@@ -307,7 +309,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -323,8 +325,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 754,
-			"versionNonce": 939936271,
+			"version": 757,
+			"versionNonce": 1227600417,
 			"isDeleted": false,
 			"id": "M4Poncut",
 			"fillStyle": "solid",
@@ -346,7 +348,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -362,8 +364,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "arrow",
-			"version": 859,
-			"versionNonce": 1776706145,
+			"version": 862,
+			"versionNonce": 1983429743,
 			"isDeleted": false,
 			"id": "CT31Rn4KSTnW4XvIcaPMm",
 			"fillStyle": "solid",
@@ -387,7 +389,7 @@ cas失败，重新循环 ^M4Poncut
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -412,8 +414,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 778,
-			"versionNonce": 1475358767,
+			"version": 781,
+			"versionNonce": 873645569,
 			"isDeleted": false,
 			"id": "rMWwuyIW",
 			"fillStyle": "solid",
@@ -435,7 +437,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -451,8 +453,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 870,
-			"versionNonce": 42823233,
+			"version": 873,
+			"versionNonce": 1608865423,
 			"isDeleted": false,
 			"id": "NyTyJsmO",
 			"fillStyle": "solid",
@@ -474,7 +476,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -490,8 +492,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 913,
-			"versionNonce": 1241010767,
+			"version": 916,
+			"versionNonce": 2091671009,
 			"isDeleted": false,
 			"id": "rxsDpxRS",
 			"fillStyle": "solid",
@@ -513,7 +515,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -529,8 +531,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 890,
-			"versionNonce": 774372897,
+			"version": 893,
+			"versionNonce": 960081071,
 			"isDeleted": false,
 			"id": "MSNhqP1k",
 			"fillStyle": "solid",
@@ -552,7 +554,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -568,8 +570,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 799,
-			"versionNonce": 653733999,
+			"version": 802,
+			"versionNonce": 1376254401,
 			"isDeleted": false,
 			"id": "P0mIVURa",
 			"fillStyle": "solid",
@@ -591,7 +593,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -607,8 +609,8 @@ cas失败，重新循环 ^M4Poncut
 		},
 		{
 			"type": "text",
-			"version": 773,
-			"versionNonce": 1269142017,
+			"version": 776,
+			"versionNonce": 769539791,
 			"isDeleted": false,
 			"id": "mGrdNTJH",
 			"fillStyle": "solid",
@@ -630,7 +632,7 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704596857297,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -663,11 +665,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 1758843727,
-			"version": 267,
-			"versionNonce": 1694365007,
+			"version": 270,
+			"versionNonce": 1617661167,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704596886709,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"text": "    public void execute(Runnable command) {\n        if (command == null)\n            throw new NullPointerException();\n        /*\n         * Proceed in 3 steps:\n         *\n         * 1. If fewer than corePoolSize threads are running, try to\n         * start a new thread with the given command as its first\n         * task.  The call to addWorker atomically checks runState and\n         * workerCount, and so prevents false alarms that would add\n         * threads when it shouldn't, by returning false.\n         *\n         * 2. If a task can be successfully queued, then we still need\n         * to double-check whether we should have added a thread\n         * (because existing ones died since last checking) or that\n         * the pool shut down since entry into this method. So we\n         * recheck state and if necessary roll back the enqueuing if\n         * stopped, or start a new thread if there are none.\n         *\n         * 3. If we cannot queue task, then we try to add a new\n         * thread.  If it fails, we know we are shut down or saturated\n         * and so reject the task.\n         */\n        int c = ctl.get();\n        if (workerCountOf(c) < corePoolSize) {\n            if (addWorker(command, true))\n                return;\n            c = ctl.get();\n        }\n        if (isRunning(c) && workQueue.offer(command)) {\n            int recheck = ctl.get();\n            if (! isRunning(recheck) && remove(command))\n                reject(command);\n            else if (workerCountOf(recheck) == 0)\n                addWorker(null, false);\n        }\n        else if (!addWorker(command, false))\n            reject(command);\n    }\n",
@@ -702,8 +704,8 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 1551922913,
-			"version": 192,
-			"versionNonce": 1753384289,
+			"version": 195,
+			"versionNonce": 1469267329,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -711,7 +713,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "agqkj0jG"
 				}
 			],
-			"updated": 1704596995450,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false
 		},
@@ -734,11 +736,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 661876353,
-			"version": 387,
-			"versionNonce": 1068314945,
+			"version": 390,
+			"versionNonce": 208279311,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704596995450,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"text": "线程数小于核心线程数",
@@ -773,8 +775,8 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 1609602305,
-			"version": 249,
-			"versionNonce": 1921510081,
+			"version": 252,
+			"versionNonce": 1479664993,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -782,7 +784,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "ItWAXEVb"
 				}
 			],
-			"updated": 1704597238310,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false
 		},
@@ -805,11 +807,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 2081053167,
-			"version": 182,
-			"versionNonce": 580840097,
+			"version": 185,
+			"versionNonce": 1750228271,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704597238310,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"text": "队列未满",
@@ -844,11 +846,11 @@ cas失败，重新循环 ^M4Poncut
 				"type": 2
 			},
 			"seed": 975670305,
-			"version": 58,
-			"versionNonce": 2035014063,
+			"version": 61,
+			"versionNonce": 1114673473,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704597227867,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -888,8 +890,8 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 1141601889,
-			"version": 489,
-			"versionNonce": 946543137,
+			"version": 492,
+			"versionNonce": 1200414543,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -897,7 +899,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "rILL5G1r"
 				}
 			],
-			"updated": 1704597344874,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false
 		},
@@ -920,11 +922,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 155560673,
-			"version": 465,
-			"versionNonce": 1462054401,
+			"version": 468,
+			"versionNonce": 1806614817,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704597344874,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"text": "队列已满，尝试使用非核心线程",
@@ -959,8 +961,8 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 1369465281,
-			"version": 548,
-			"versionNonce": 662855393,
+			"version": 551,
+			"versionNonce": 2087853423,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -968,7 +970,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "tk7Hguty"
 				}
 			],
-			"updated": 1704597822387,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false
 		},
@@ -991,11 +993,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 2131517135,
-			"version": 643,
-			"versionNonce": 1871609985,
+			"version": 646,
+			"versionNonce": 1364980993,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704597789220,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"text": "如果核心线程数为0，直接开启一个工作线程",
@@ -1030,8 +1032,8 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 40235585,
-			"version": 146,
-			"versionNonce": 795590479,
+			"version": 149,
+			"versionNonce": 2051708815,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1039,7 +1041,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "MOo5wHHN"
 				}
 			],
-			"updated": 1704597935783,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false
 		},
@@ -1062,11 +1064,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 1306498383,
-			"version": 241,
-			"versionNonce": 1165294959,
+			"version": 244,
+			"versionNonce": 385330401,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704597935783,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"text": "运行状态，尝试放入队列",
@@ -1101,8 +1103,8 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 1612062671,
-			"version": 607,
-			"versionNonce": 1282413551,
+			"version": 610,
+			"versionNonce": 927911343,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1110,7 +1112,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "Y0I9J28I"
 				}
 			],
-			"updated": 1704598003432,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false
 		},
@@ -1133,11 +1135,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 723555617,
-			"version": 460,
-			"versionNonce": 876985871,
+			"version": 463,
+			"versionNonce": 1141991617,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704598003432,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"text": "放入队列后，重新检查运行状态，否则移除并拒绝",
@@ -1172,11 +1174,11 @@ cas失败，重新循环 ^M4Poncut
 				"type": 3
 			},
 			"seed": 690602639,
-			"version": 312,
-			"versionNonce": 4924865,
+			"version": 315,
+			"versionNonce": 1112058017,
 			"isDeleted": false,
 			"boundElements": [],
-			"updated": 1704598155081,
+			"updated": 1704598814548,
 			"link": null,
 			"locked": false
 		},
@@ -1199,11 +1201,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 1839231279,
-			"version": 174,
-			"versionNonce": 2093817537,
+			"version": 177,
+			"versionNonce": 458026113,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704598300712,
+			"updated": 1704598814548,
 			"link": null,
 			"locked": false,
 			"text": "因为ctl前三位是状态，所以COUNT_MAK是线程最大值\n",
@@ -1222,8 +1224,8 @@ cas失败，重新循环 ^M4Poncut
 			"type": "arrow",
 			"x": -13.137416796933053,
 			"y": 9504.6026312876,
-			"width": 120.15910770285188,
-			"height": 325.0696679142966,
+			"width": 177.05639805124605,
+			"height": 325.4871323502357,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -1234,15 +1236,13 @@ cas失败，重新循环 ^M4Poncut
 			"opacity": 100,
 			"groupIds": [],
 			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
+			"roundness": null,
 			"seed": 1427317377,
-			"version": 182,
-			"versionNonce": 1344909121,
+			"version": 428,
+			"versionNonce": 1034344463,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704598616038,
+			"boundElements": [],
+			"updated": 1704598814548,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1251,8 +1251,12 @@ cas失败，重新循环 ^M4Poncut
 					0
 				],
 				[
-					-116.52714084628838,
-					-121.64373940480982
+					-171.9059847420948,
+					-2.5087918579502
+				],
+				[
+					-177.05639805124605,
+					-325.4871323502357
 				],
 				[
 					-120.15910770285188,
@@ -1264,6 +1268,94 @@ cas失败，重新循环 ^M4Poncut
 			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": "triangle"
+		},
+		{
+			"id": "PrkgU9XaGSvxVk4cM9Ufp",
+			"type": "arrow",
+			"x": -12.004327182114025,
+			"y": 9449.303760918528,
+			"width": 118.22659478437623,
+			"height": 152.68909478859314,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 103422945,
+			"version": 251,
+			"versionNonce": 422403023,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "bwdvew9g"
+				}
+			],
+			"updated": 1704598894904,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-118.22659478437623,
+					-0.8328277611617523
+				],
+				[
+					-117.1820636233071,
+					151.8562670274314
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "bwdvew9g",
+			"type": "text",
+			"x": -180.16856379079564,
+			"y": 9438.910788601313,
+			"width": 64,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 222010369,
+			"version": 57,
+			"versionNonce": 1952656449,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704598888520,
+			"link": null,
+			"locked": false,
+			"text": "占位成功",
+			"rawText": "占位成功",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "PrkgU9XaGSvxVk4cM9Ufp",
+			"originalText": "占位成功",
+			"lineHeight": 1.2
 		},
 		{
 			"id": "ZbQJvlol",
@@ -1284,11 +1376,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 599483809,
-			"version": 2,
-			"versionNonce": 866126607,
+			"version": 5,
+			"versionNonce": 1430591905,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704596862323,
+			"updated": 1704598814547,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1321,11 +1413,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 1233837569,
-			"version": 2,
-			"versionNonce": 503452847,
+			"version": 5,
+			"versionNonce": 1319583695,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704598094822,
+			"updated": 1704598814548,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1358,11 +1450,11 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 319549039,
-			"version": 2,
-			"versionNonce": 120899489,
+			"version": 5,
+			"versionNonce": 1651273199,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704598135683,
+			"updated": 1704598814548,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1375,6 +1467,133 @@ cas失败，重新循环 ^M4Poncut
 			"containerId": "3gimwo_5ZtpnIiwnr9xtI",
 			"originalText": "",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "cGs8p3gy",
+			"type": "text",
+			"x": -134.35205764322143,
+			"y": 9373.35889188279,
+			"width": 9.375,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2112197377,
+			"version": 5,
+			"versionNonce": 1994241121,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704598814548,
+			"link": null,
+			"locked": false,
+			"text": "",
+			"rawText": "",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "v4U7MtJ_5coL_d4thSVZp",
+			"originalText": "",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "KdvDN19H5YQAlY1KVd8MU",
+			"type": "arrow",
+			"x": -65.05993356032502,
+			"y": 9525.36922171563,
+			"width": 8.010418955688237,
+			"height": 15.253998158726972,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2037705327,
+			"version": 57,
+			"versionNonce": 364489711,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704598814299,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					8.010418955688237,
+					-15.253998158726972
+				]
+			],
+			"lastCommittedPoint": [
+				8.010418955688237,
+				-15.253998158726972
+			],
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "BZMgd8nbNMQQ-Kg75-uWV",
+			"type": "arrow",
+			"x": -66.29939190528296,
+			"y": 9521.64421505005,
+			"width": 3.2895514691101653,
+			"height": 2.4708405455894535,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 945360271,
+			"version": 52,
+			"versionNonce": 1489666113,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704598814548,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					3.2895514691101653,
+					-2.4708405455894535
+				]
+			],
+			"lastCommittedPoint": [
+				3.2895514691101653,
+				-2.4708405455894535
+			],
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		}
 	],
 	"appState": {
@@ -1384,7 +1603,7 @@ cas失败，重新循环 ^M4Poncut
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
-		"currentItemStrokeStyle": "solid",
+		"currentItemStrokeStyle": "dashed",
 		"currentItemRoughness": 0,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 3,
@@ -1397,7 +1616,7 @@ cas失败，重新循环 ^M4Poncut
 		"zoom": {
 			"value": 0.9295678626217359
 		},
-		"currentItemRoundness": "round",
+		"currentItemRoundness": "sharp",
 		"gridSize": null,
 		"gridColor": {
 			"Bold": "#C9C9C9FF",
