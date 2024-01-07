@@ -955,7 +955,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		{
 			"id": "KXM6VuiRur7K_thpxEJZ5",
 			"type": "rectangle",
-			"x": 267.37727908941997,
+			"x": 267.3772790894199,
 			"y": 9011.810421391778,
 			"width": 676.5975068952836,
 			"height": 49,
@@ -973,8 +973,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 1369465281,
-			"version": 716,
-			"versionNonce": 425255745,
+			"version": 717,
+			"versionNonce": 201948143,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -986,14 +986,14 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"type": "arrow"
 				}
 			],
-			"updated": 1704602805257,
+			"updated": 1704602828293,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "tk7Hguty",
 			"type": "text",
-			"x": 272.98853253706176,
+			"x": 272.9885325370617,
 			"y": 9017.110421391777,
 			"width": 665.375,
 			"height": 38.4,
@@ -1009,11 +1009,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 2131517135,
-			"version": 888,
-			"versionNonce": 1886821103,
+			"version": 889,
+			"versionNonce": 1786809391,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704602803882,
+			"updated": 1704602828294,
 			"link": null,
 			"locked": false,
 			"text": "如果核心线程数为0，直接开启一个工作线程正常应该在队列未满之前只有一个线程，如果并发\n多个线程同时到这个方法，会产生多个线程",
@@ -1560,9 +1560,9 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		{
 			"id": "tNF9R-U8jlwUTz34plAo9",
 			"type": "arrow",
-			"x": 916.4783379243797,
+			"x": 916.4783379243798,
 			"y": 9065.140124229052,
-			"width": 145.5619302513187,
+			"width": 145.5619302513188,
 			"height": 240.91443840201646,
 			"angle": 0,
 			"strokeColor": "#e03131",
@@ -1578,8 +1578,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 929424623,
-			"version": 99,
-			"versionNonce": 1782347617,
+			"version": 100,
+			"versionNonce": 208807439,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1587,7 +1587,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "TUnUNpdN"
 				}
 			],
-			"updated": 1704602805257,
+			"updated": 1704602828293,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1596,19 +1596,19 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					0
 				],
 				[
-					-7.412718615901667,
+					-7.412718615901781,
 					184.17066045551292
 				],
 				[
-					-145.5619302513187,
+					-145.5619302513188,
 					240.91443840201646
 				]
 			],
 			"lastCommittedPoint": null,
 			"startBinding": {
 				"elementId": "KXM6VuiRur7K_thpxEJZ5",
-				"focus": -0.9194712632186743,
-				"gap": 4.3297028372744535
+				"gap": 4.3297028372744535,
+				"focus": -0.9194712632186743
 			},
 			"endBinding": null,
 			"startArrowhead": null,
