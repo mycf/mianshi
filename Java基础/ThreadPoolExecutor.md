@@ -19,6 +19,9 @@
 # 任务运行
 ![[ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw|100%]]
 
+> [!NOTE] 线程什么时候执行完成
+> getTask为null的时候
+
 
 # 线程池的构造函数
 ```java
