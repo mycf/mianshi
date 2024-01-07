@@ -69,6 +69,10 @@ lastRun=000
 
 1010111 ^Vqo0Pdc9
 
+单个元素直接放入 ^64jnQ80z
+
+新节点插入数组，不用扩容的数组会在前面代码插入 ^kjHjgkDp
+
 %%
 # Drawing
 ```json
@@ -447,10 +451,10 @@ lastRun=000
 		{
 			"id": "QJ2UeRjz70qRdnXQXDMv4",
 			"type": "rectangle",
-			"x": 403.99121771918436,
-			"y": -20.989015367296076,
-			"width": 121.9093153211806,
-			"height": 29.449598524305543,
+			"x": 360.724073621962,
+			"y": 24.152586195203924,
+			"width": 139.43264431423614,
+			"height": 29.2,
 			"angle": 0,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -465,13 +469,126 @@ lastRun=000
 				"type": 3
 			},
 			"seed": 1173071073,
-			"version": 33,
-			"versionNonce": 1816322273,
+			"version": 148,
+			"versionNonce": 212536623,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704638970121,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "64jnQ80z"
+				}
+			],
+			"updated": 1704639133087,
 			"link": null,
 			"locked": false
+		},
+		{
+			"id": "64jnQ80z",
+			"type": "text",
+			"x": 366.44039577908006,
+			"y": 29.152586195203924,
+			"width": 128,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1810756097,
+			"version": 169,
+			"versionNonce": 52512655,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704639133087,
+			"link": null,
+			"locked": false,
+			"text": "单个元素直接放入",
+			"rawText": "单个元素直接放入",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "QJ2UeRjz70qRdnXQXDMv4",
+			"originalText": "单个元素直接放入",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "lrAxEIOV4slG6FM3kLkeQ",
+			"type": "rectangle",
+			"x": 384.5602010091148,
+			"y": 660.6512366400825,
+			"width": 220.13617621527777,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 413202593,
+			"version": 102,
+			"versionNonce": 1762632015,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "kjHjgkDp"
+				}
+			],
+			"updated": 1704639337685,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "kjHjgkDp",
+			"type": "text",
+			"x": 390.62828911675365,
+			"y": 665.9512366400825,
+			"width": 208,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1155650593,
+			"version": 60,
+			"versionNonce": 1303550991,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704639357683,
+			"link": null,
+			"locked": false,
+			"text": "新节点插入数组，不用扩容的\n数组会在前面代码插入",
+			"rawText": "新节点插入数组，不用扩容的数组会在前面代码插入",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "lrAxEIOV4slG6FM3kLkeQ",
+			"originalText": "新节点插入数组，不用扩容的数组会在前面代码插入",
+			"lineHeight": 1.2
 		},
 		{
 			"id": "XTzW-tYZodvIwblN2gGkC",
@@ -577,8 +694,8 @@ lastRun=000
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 203.68578423394067,
-		"scrollY": 398.00424363878034,
+		"scrollX": 261.4635620117186,
+		"scrollY": 64.67091030544705,
 		"zoom": {
 			"value": 0.9
 		},
