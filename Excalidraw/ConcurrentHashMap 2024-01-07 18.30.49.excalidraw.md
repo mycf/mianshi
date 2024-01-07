@@ -66,6 +66,9 @@ Math.ceil(initialCapacity%ssize) ^H0iMCPFK
 HashEntry数组的下标也要&hash获取下标，
 所以也要2的次幂 ^gQhmCLq6
 
+segment中保存了负载因子、阈值，
+因为扩容是针对segment的部分扩容 ^QV4srs4m
+
 %%
 # Drawing
 ```json
@@ -577,6 +580,43 @@ HashEntry数组的下标也要&hash获取下标，
 			"lineHeight": 1.2
 		},
 		{
+			"id": "QV4srs4m",
+			"type": "text",
+			"x": 286.5297084008912,
+			"y": 223.14517711135707,
+			"width": 156.04889638010533,
+			"height": 23.25968994079008,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 64623407,
+			"version": 317,
+			"versionNonce": 1559270209,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704626385532,
+			"link": null,
+			"locked": false,
+			"text": "segment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
+			"rawText": "segment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
+			"fontSize": 9.691537475329199,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 21.000000000000004,
+			"containerId": null,
+			"originalText": "segment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "S6kJ75R0ct6c5kCFbre93",
 			"type": "arrow",
 			"x": -71.93946075439453,
@@ -783,8 +823,8 @@ HashEntry数组的下标也要&hash获取下标，
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 333.12119449402064,
-		"scrollY": 243.87020414627898,
+		"scrollX": 289.9075932786585,
+		"scrollY": 183.10107743717688,
 		"zoom": {
 			"value": 1.4810151942914025
 		},
