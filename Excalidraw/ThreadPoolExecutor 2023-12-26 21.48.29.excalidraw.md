@@ -162,7 +162,9 @@ cas失败，重新循环 ^M4Poncut
 正常提交的firstTask，不应该为空
 只有这里，核心线程数为空的时候 ^5M0yN7LH
 
-队列为空，应该也只有上面的情况，firstTask为null，原task放入后，队列中的task都被poll了 ^RNgtVFuR
+firstTask为null，队列为空，应该也只有上面的情况，原task放入后，队列中的task都被其他线程poll了 ^RNgtVFuR
+
+同时提交多个任务 ^PE1slBxA
 
 %%
 # Drawing
@@ -1482,8 +1484,8 @@ cas失败，重新循环 ^M4Poncut
 				"type": 2
 			},
 			"seed": 1390175791,
-			"version": 475,
-			"versionNonce": 526186543,
+			"version": 477,
+			"versionNonce": 1261657903,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1491,7 +1493,7 @@ cas失败，重新循环 ^M4Poncut
 					"id": "RNgtVFuR"
 				}
 			],
-			"updated": 1704599512313,
+			"updated": 1704599726445,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1517,9 +1519,9 @@ cas失败，重新循环 ^M4Poncut
 		{
 			"id": "RNgtVFuR",
 			"type": "text",
-			"x": 557.2640049203873,
-			"y": 9237.39027003129,
-			"width": 174.875,
+			"x": 594.9373862695012,
+			"y": 9235.466768827944,
+			"width": 169.875,
 			"height": 96,
 			"angle": 0,
 			"strokeColor": "#e03131",
@@ -1533,22 +1535,59 @@ cas失败，重新循环 ^M4Poncut
 			"frameId": null,
 			"roundness": null,
 			"seed": 514729025,
-			"version": 146,
-			"versionNonce": 2139374849,
+			"version": 193,
+			"versionNonce": 1740855567,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704599438155,
+			"updated": 1704599725138,
 			"link": null,
 			"locked": false,
-			"text": "队列为空，应该也只有\n上面的情况，firstTas\nk为null，原task放入\n后，队列中的task都被p\noll了",
-			"rawText": "队列为空，应该也只有上面的情况，firstTask为null，原task放入后，队列中的task都被poll了",
+			"text": "firstTask为null，队\n列为空，应该也只有上\n面的情况，原task放入\n后，队列中的task都被\n其他线程poll了",
+			"rawText": "firstTask为null，队列为空，应该也只有上面的情况，原task放入后，队列中的task都被其他线程poll了",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"baseline": 92,
 			"containerId": "pZQY8QwPFmd9AEOcbsT_S",
-			"originalText": "队列为空，应该也只有上面的情况，firstTask为null，原task放入后，队列中的task都被poll了",
+			"originalText": "firstTask为null，队列为空，应该也只有上面的情况，原task放入后，队列中的task都被其他线程poll了",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "PE1slBxA",
+			"type": "text",
+			"x": 742.617299132011,
+			"y": 9247.055997414736,
+			"width": 128,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1218367407,
+			"version": 40,
+			"versionNonce": 782327695,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704599767506,
+			"link": null,
+			"locked": false,
+			"text": "同时提交多个任务",
+			"rawText": "同时提交多个任务",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "top",
+			"baseline": 15,
+			"containerId": null,
+			"originalText": "同时提交多个任务",
 			"lineHeight": 1.2
 		},
 		{
