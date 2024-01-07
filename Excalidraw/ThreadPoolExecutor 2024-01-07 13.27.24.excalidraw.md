@@ -125,6 +125,8 @@ shutdown+队列为空 ^p5xYBZaG
 
 进入tidying状态就执行terminated方法然后进入terminated状态 ^5zWV7LOF
 
+意外中止，为什么要 ^BzQBZZHQ
+
 %%
 # Drawing
 ```json
@@ -1665,6 +1667,77 @@ shutdown+队列为空 ^p5xYBZaG
 			"endArrowhead": "triangle"
 		},
 		{
+			"id": "TvEwKfrFn04Bphsp9QElO",
+			"type": "rectangle",
+			"x": 156.40570464725212,
+			"y": -178.4353433191459,
+			"width": 260.6051987812596,
+			"height": 37.95860521899789,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1356803023,
+			"version": 79,
+			"versionNonce": 883640047,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "BzQBZZHQ"
+				}
+			],
+			"updated": 1704612719513,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "BzQBZZHQ",
+			"type": "text",
+			"x": 214.70830403788193,
+			"y": -169.05604070964694,
+			"width": 144,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 895570799,
+			"version": 27,
+			"versionNonce": 1956811023,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704612719513,
+			"link": null,
+			"locked": false,
+			"text": "意外中止，为什么要",
+			"rawText": "意外中止，为什么要",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "TvEwKfrFn04Bphsp9QElO",
+			"originalText": "意外中止，为什么要",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "mTM91wNl",
 			"type": "text",
 			"x": -307.6957702636719,
@@ -1791,8 +1864,8 @@ shutdown+队列为空 ^p5xYBZaG
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 99.10258149329225,
-		"scrollY": -235.80404388843817,
+		"scrollX": 131.81511034418497,
+		"scrollY": 482.0542281172536,
 		"zoom": {
 			"value": 1.1004957814203962
 		},
