@@ -23,7 +23,7 @@
 > getTask为null的时候
 
 # 线程回收
-
+![[ThreadPoolExecutor 2024-01-07 13.27.24.excalidraw]]
 
 # 线程池的构造函数
 ```java
