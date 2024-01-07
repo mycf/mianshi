@@ -74,7 +74,8 @@ segment中保存了负载因子、阈值，
 ssize左移了多少位（乘了多少2） ^0YnyCfBv
 
 hashcode右移的位数，方便与segment长度&获取下标
- ^yBPewI0n
+ssize-1=n个1，segmentShift=n
+hashcode >> segmentShift = n位，再&就方便了 ^yBPewI0n
 
 %%
 # Drawing
@@ -725,10 +726,10 @@ hashcode右移的位数，方便与segment长度&获取下标
 		{
 			"id": "yBPewI0n",
 			"type": "text",
-			"x": 253.617652687099,
-			"y": -396.719449816252,
-			"width": 487.5,
-			"height": 48,
+			"x": 204.90536598890827,
+			"y": -12.170724833253018,
+			"width": 298.4568905974294,
+			"height": 44.080157973489946,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "transparent",
@@ -741,23 +742,76 @@ hashcode右移的位数，方便与segment长度&获取下标
 			"frameId": null,
 			"roundness": null,
 			"seed": 1308643617,
-			"version": 83,
-			"versionNonce": 1796233825,
+			"version": 473,
+			"versionNonce": 1205124353,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704632392220,
+			"boundElements": [
+				{
+					"id": "X56tXqmYyazxL1I_bGR8m",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704632539622,
 			"link": null,
 			"locked": false,
-			"text": "hashcode右移的位数，方便与segment长度&获取下标\n",
-			"rawText": "hashcode右移的位数，方便与segment长度&获取下标\n",
-			"fontSize": 20,
+			"text": "hashcode右移的位数，方便与segment长度&获取下标\nssize-1=n个1，segmentShift=n\nhashcode >> segmentShift = n位，再&就方便了",
+			"rawText": "hashcode右移的位数，方便与segment长度&获取下标\nssize-1=n个1，segmentShift=n\nhashcode >> segmentShift = n位，再&就方便了",
+			"fontSize": 12.244488325969424,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 43,
+			"baseline": 40.00000000000002,
 			"containerId": null,
-			"originalText": "hashcode右移的位数，方便与segment长度&获取下标\n",
+			"originalText": "hashcode右移的位数，方便与segment长度&获取下标\nssize-1=n个1，segmentShift=n\nhashcode >> segmentShift = n位，再&就方便了",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "X56tXqmYyazxL1I_bGR8m",
+			"type": "arrow",
+			"x": 197.87398749384272,
+			"y": 10.21375844855038,
+			"width": 156.18967156661185,
+			"height": 0.43906763980271535,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 697727727,
+			"version": 85,
+			"versionNonce": 866158881,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704632539622,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-156.18967156661185,
+					0.43906763980271535
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "yBPewI0n",
+				"focus": 0.00422361238545186,
+				"gap": 7.031378495065553
+			},
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		}
 	],
 	"appState": {
@@ -775,8 +829,8 @@ hashcode右移的位数，方便与segment长度&获取下标
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 170.08085291528556,
-		"scrollY": 540.8742895829051,
+		"scrollX": 235.34401081002247,
+		"scrollY": 486.1374474776421,
 		"zoom": {
 			"value": 0.9500000000000001
 		},
