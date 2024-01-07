@@ -132,6 +132,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 
 异常终止的任务，在终止方法-1 ^5xLI9RxO
 
+重新循环的时候再处理超时，这样可以重新判断并且不用写重复代码 ^4Y4cTIhq
+
 %%
 # Drawing
 ```json
@@ -512,8 +514,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "arrow",
-			"version": 606,
-			"versionNonce": 1665580815,
+			"version": 608,
+			"versionNonce": 1626587201,
 			"isDeleted": false,
 			"id": "_dXLwFeSmFSkhBEvZ1Tj_",
 			"fillStyle": "solid",
@@ -522,12 +524,12 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 61.33740960984011,
-			"y": 921.9497786978493,
+			"x": 61.33740960984014,
+			"y": 921.9497786983741,
 			"strokeColor": "#e03131",
 			"backgroundColor": "#fcfcfc",
-			"width": 332.1558082217262,
-			"height": 50.409480219244415,
+			"width": 332.15580822172615,
+			"height": 50.40948021968347,
 			"seed": 1027802497,
 			"groupIds": [],
 			"frameId": null,
@@ -535,7 +537,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704618444691,
+			"updated": 1704618489616,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -557,8 +559,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 					0
 				],
 				[
-					332.1558082217262,
-					-50.409480219244415
+					332.15580822172615,
+					-50.40948021968347
 				]
 			]
 		},
@@ -687,8 +689,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "rectangle",
-			"version": 180,
-			"versionNonce": 224003375,
+			"version": 181,
+			"versionNonce": 1042244609,
 			"isDeleted": false,
 			"id": "nY_tjoEEoSVTAECZnteqW",
 			"fillStyle": "solid",
@@ -697,7 +699,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 205.0771092006141,
+			"x": 205.07710920061413,
 			"y": 1210.6945110502697,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -715,14 +717,14 @@ shutdownNow会触发中断 ^aRBtUR7S
 					"id": "OvNtRpCU"
 				}
 			],
-			"updated": 1704618444699,
+			"updated": 1704618489626,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 142,
-			"versionNonce": 1029670735,
+			"version": 143,
+			"versionNonce": 393559009,
 			"isDeleted": false,
 			"id": "OvNtRpCU",
 			"fillStyle": "solid",
@@ -731,7 +733,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 214.15771048409624,
+			"x": 214.15771048409627,
 			"y": 1215.6945110502697,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
@@ -742,7 +744,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704618444699,
+			"updated": 1704618489626,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -940,8 +942,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "rectangle",
-			"version": 512,
-			"versionNonce": 1907344751,
+			"version": 513,
+			"versionNonce": 470095809,
 			"isDeleted": false,
 			"id": "EwpSFe_JXDWRYznQeDvLo",
 			"fillStyle": "solid",
@@ -951,7 +953,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"opacity": 100,
 			"angle": 0,
 			"x": 426.53986031668524,
-			"y": 1010.0080108642586,
+			"y": 1010.0080108642585,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 394.8096865699408,
@@ -970,14 +972,14 @@ shutdownNow会触发中断 ^aRBtUR7S
 					"type": "arrow"
 				}
 			],
-			"updated": 1704618444702,
+			"updated": 1704618489629,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1021,
-			"versionNonce": 1732408751,
+			"version": 1022,
+			"versionNonce": 2137054081,
 			"isDeleted": false,
 			"id": "iwTvfHhA",
 			"fillStyle": "solid",
@@ -987,7 +989,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"opacity": 100,
 			"angle": 0,
 			"x": 431.53986031668524,
-			"y": 1015.0080108642586,
+			"y": 1015.0080108642585,
 			"strokeColor": "#e03131",
 			"backgroundColor": "transparent",
 			"width": 377.375,
@@ -997,7 +999,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704618444703,
+			"updated": 1704618489629,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -1013,8 +1015,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "arrow",
-			"version": 101,
-			"versionNonce": 1234386831,
+			"version": 102,
+			"versionNonce": 1575909281,
 			"isDeleted": false,
 			"id": "zFrBqh0kBjnkDvXm1RnXw",
 			"fillStyle": "solid",
@@ -1034,7 +1036,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704618444702,
+			"updated": 1704618489629,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2011,11 +2013,16 @@ shutdownNow会触发中断 ^aRBtUR7S
 				"type": 2
 			},
 			"seed": 1693566081,
-			"version": 173,
-			"versionNonce": 514378433,
+			"version": 175,
+			"versionNonce": 1911418721,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704618483762,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "4Y4cTIhq"
+				}
+			],
+			"updated": 1704618647234,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -2045,6 +2052,43 @@ shutdownNow会触发中断 ^aRBtUR7S
 			},
 			"startArrowhead": null,
 			"endArrowhead": "triangle"
+		},
+		{
+			"id": "4Y4cTIhq",
+			"type": "text",
+			"x": -407.4530460697782,
+			"y": 1159.4234050429602,
+			"width": 208,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 467140655,
+			"version": 150,
+			"versionNonce": 713590657,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704618646118,
+			"link": null,
+			"locked": false,
+			"text": "重新循环的时候再处理超时，\n这样可以重新判断并且不用写\n重复代码",
+			"rawText": "重新循环的时候再处理超时，这样可以重新判断并且不用写重复代码",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 54,
+			"containerId": "pwqsEZWkM4ATkVO2GBdR2",
+			"originalText": "重新循环的时候再处理超时，这样可以重新判断并且不用写重复代码",
+			"lineHeight": 1.2
 		}
 	],
 	"appState": {
