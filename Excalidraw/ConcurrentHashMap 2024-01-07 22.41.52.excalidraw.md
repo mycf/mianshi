@@ -73,6 +73,8 @@ lastRun=000
 
 新节点插入数组，不用扩容的数组会在前面代码插入 ^kjHjgkDp
 
+新容量为2倍 ^x243VqKq
+
 %%
 # Drawing
 ```json
@@ -522,7 +524,7 @@ lastRun=000
 		{
 			"id": "lrAxEIOV4slG6FM3kLkeQ",
 			"type": "rectangle",
-			"x": 384.5602010091148,
+			"x": 384.56020100911473,
 			"y": 660.6512366400825,
 			"width": 220.13617621527777,
 			"height": 49,
@@ -540,8 +542,8 @@ lastRun=000
 				"type": 3
 			},
 			"seed": 413202593,
-			"version": 102,
-			"versionNonce": 1762632015,
+			"version": 103,
+			"versionNonce": 1513628751,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -549,7 +551,7 @@ lastRun=000
 					"id": "kjHjgkDp"
 				}
 			],
-			"updated": 1704639337685,
+			"updated": 1704639357752,
 			"link": null,
 			"locked": false
 		},
@@ -588,6 +590,77 @@ lastRun=000
 			"baseline": 34,
 			"containerId": "lrAxEIOV4slG6FM3kLkeQ",
 			"originalText": "新节点插入数组，不用扩容的数组会在前面代码插入",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "tVnBeMDX1PTQepEIgl0rV",
+			"type": "rectangle",
+			"x": 393.30314805772593,
+			"y": -244.506573147244,
+			"width": 125.74083116319446,
+			"height": 29.59404839409723,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1929905359,
+			"version": 59,
+			"versionNonce": 2030217313,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "x243VqKq"
+				}
+			],
+			"updated": 1704639456275,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "x243VqKq",
+			"type": "text",
+			"x": 411.48606363932316,
+			"y": -239.3095489501954,
+			"width": 89.375,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1796514831,
+			"version": 15,
+			"versionNonce": 191807105,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704639463733,
+			"link": null,
+			"locked": false,
+			"text": "新容量为2倍",
+			"rawText": "新容量为2倍",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "tVnBeMDX1PTQepEIgl0rV",
+			"originalText": "新容量为2倍",
 			"lineHeight": 1.2
 		},
 		{
@@ -694,8 +767,8 @@ lastRun=000
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 261.4635620117186,
-		"scrollY": 64.67091030544705,
+		"scrollX": 221.4635620117185,
+		"scrollY": 600.2264658610027,
 		"zoom": {
 			"value": 0.9
 		},
