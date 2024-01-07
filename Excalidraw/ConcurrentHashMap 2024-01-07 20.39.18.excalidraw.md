@@ -109,6 +109,38 @@ tags: [excalidraw]
 
 是否存在不操作 ^76YNtjq7
 
+        private HashEntry<K,V> scanAndLockForPut(K key, int hash, V value) {
+            HashEntry<K,V> first = entryForHash(this, hash);
+            HashEntry<K,V> e = first;
+            HashEntry<K,V> node = null;
+            int retries = -1; // negative while locating node
+            while (!tryLock()) {
+                HashEntry<K,V> f; // to recheck first below
+                if (retries < 0) {
+                    if (e == null) {
+                        if (node == null) // speculatively create node
+                            node = new HashEntry<K,V>(hash, key, value, null);
+                        retries = 0;
+                    }
+                    else if (key.equals(e.key))
+                        retries = 0;
+                    else
+                        e = e.next;
+                }
+                else if (++retries > MAX_SCAN_RETRIES) {
+                    lock();
+                    break;
+                }
+                else if ((retries & 1) == 0 &&
+                         (f = entryForHash(this, hash)) != first) {
+                    e = first = f; // re-traverse if entry changed
+                    retries = -1;
+                }
+            }
+            return node;
+        }
+ ^1LtLcmqy
+
 %%
 # Drawing
 ```json
@@ -119,8 +151,8 @@ tags: [excalidraw]
 	"elements": [
 		{
 			"type": "text",
-			"version": 97,
-			"versionNonce": 87003503,
+			"version": 99,
+			"versionNonce": 877214593,
 			"isDeleted": false,
 			"id": "hMZHCo9O",
 			"fillStyle": "solid",
@@ -140,7 +172,7 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704634840869,
+			"updated": 1704635366799,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1044,6 +1076,43 @@ tags: [excalidraw]
 			"lineHeight": 1.2
 		},
 		{
+			"id": "1LtLcmqy",
+			"type": "text",
+			"x": 146.69632735270142,
+			"y": 1667.018061319986,
+			"width": 914.0625,
+			"height": 744,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 826712527,
+			"version": 151,
+			"versionNonce": 26479887,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704635385651,
+			"link": null,
+			"locked": false,
+			"text": "        private HashEntry<K,V> scanAndLockForPut(K key, int hash, V value) {\n            HashEntry<K,V> first = entryForHash(this, hash);\n            HashEntry<K,V> e = first;\n            HashEntry<K,V> node = null;\n            int retries = -1; // negative while locating node\n            while (!tryLock()) {\n                HashEntry<K,V> f; // to recheck first below\n                if (retries < 0) {\n                    if (e == null) {\n                        if (node == null) // speculatively create node\n                            node = new HashEntry<K,V>(hash, key, value, null);\n                        retries = 0;\n                    }\n                    else if (key.equals(e.key))\n                        retries = 0;\n                    else\n                        e = e.next;\n                }\n                else if (++retries > MAX_SCAN_RETRIES) {\n                    lock();\n                    break;\n                }\n                else if ((retries & 1) == 0 &&\n                         (f = entryForHash(this, hash)) != first) {\n                    e = first = f; // re-traverse if entry changed\n                    retries = -1;\n                }\n            }\n            return node;\n        }\n",
+			"rawText": "        private HashEntry<K,V> scanAndLockForPut(K key, int hash, V value) {\n            HashEntry<K,V> first = entryForHash(this, hash);\n            HashEntry<K,V> e = first;\n            HashEntry<K,V> node = null;\n            int retries = -1; // negative while locating node\n            while (!tryLock()) {\n                HashEntry<K,V> f; // to recheck first below\n                if (retries < 0) {\n                    if (e == null) {\n                        if (node == null) // speculatively create node\n                            node = new HashEntry<K,V>(hash, key, value, null);\n                        retries = 0;\n                    }\n                    else if (key.equals(e.key))\n                        retries = 0;\n                    else\n                        e = e.next;\n                }\n                else if (++retries > MAX_SCAN_RETRIES) {\n                    lock();\n                    break;\n                }\n                else if ((retries & 1) == 0 &&\n                         (f = entryForHash(this, hash)) != first) {\n                    e = first = f; // re-traverse if entry changed\n                    retries = -1;\n                }\n            }\n            return node;\n        }\n",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 739,
+			"containerId": null,
+			"originalText": "        private HashEntry<K,V> scanAndLockForPut(K key, int hash, V value) {\n            HashEntry<K,V> first = entryForHash(this, hash);\n            HashEntry<K,V> e = first;\n            HashEntry<K,V> node = null;\n            int retries = -1; // negative while locating node\n            while (!tryLock()) {\n                HashEntry<K,V> f; // to recheck first below\n                if (retries < 0) {\n                    if (e == null) {\n                        if (node == null) // speculatively create node\n                            node = new HashEntry<K,V>(hash, key, value, null);\n                        retries = 0;\n                    }\n                    else if (key.equals(e.key))\n                        retries = 0;\n                    else\n                        e = e.next;\n                }\n                else if (++retries > MAX_SCAN_RETRIES) {\n                    lock();\n                    break;\n                }\n                else if ((retries & 1) == 0 &&\n                         (f = entryForHash(this, hash)) != first) {\n                    e = first = f; // re-traverse if entry changed\n                    retries = -1;\n                }\n            }\n            return node;\n        }\n",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "u019i49IJq-Ms5B1LJexZ",
 			"type": "arrow",
 			"x": 537.2454401652019,
@@ -1306,12 +1375,49 @@ tags: [excalidraw]
 			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
+		},
+		{
+			"id": "Qj5cJXBM",
+			"type": "text",
+			"x": 188.38639068603473,
+			"y": 1741.6847279866527,
+			"width": 11.71875,
+			"height": 24,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 855473953,
+			"version": 2,
+			"versionNonce": 33192335,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704635370883,
+			"link": null,
+			"locked": false,
+			"text": "",
+			"rawText": "",
+			"fontSize": 20,
+			"fontFamily": 3,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 19,
+			"containerId": null,
+			"originalText": "",
+			"lineHeight": 1.2
 		}
 	],
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#e03131",
+		"currentItemStrokeColor": "#1e1e1e",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
@@ -1323,8 +1429,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 69.6317164103193,
-		"scrollY": -179.0885976155589,
+		"scrollX": 248.298383076986,
+		"scrollY": -477.75526428222537,
 		"zoom": {
 			"value": 0.75
 		},
