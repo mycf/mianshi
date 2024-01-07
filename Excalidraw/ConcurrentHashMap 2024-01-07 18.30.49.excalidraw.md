@@ -66,6 +66,7 @@ Math.ceil(initialCapacity%ssize) ^H0iMCPFK
 HashEntry数组的下标也要&hash获取下标，
 所以也要2的次幂 ^gQhmCLq6
 
+预初始化了0号segment
 segment中保存了负载因子、阈值，
 因为扩容是针对segment的部分扩容 ^QV4srs4m
 
@@ -582,10 +583,10 @@ segment中保存了负载因子、阈值，
 		{
 			"id": "QV4srs4m",
 			"type": "text",
-			"x": 286.5297084008912,
-			"y": 223.14517711135707,
-			"width": 156.04889638010533,
-			"height": 23.25968994079008,
+			"x": 278.24335398388143,
+			"y": 196.5361001636488,
+			"width": 155.863037109375,
+			"height": 34.88953491118511,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "transparent",
@@ -598,22 +599,22 @@ segment中保存了负载因子、阈值，
 			"frameId": null,
 			"roundness": null,
 			"seed": 64623407,
-			"version": 317,
-			"versionNonce": 1559270209,
+			"version": 436,
+			"versionNonce": 2088160161,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704626385532,
+			"updated": 1704626474378,
 			"link": null,
 			"locked": false,
-			"text": "segment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
-			"rawText": "segment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
+			"text": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
+			"rawText": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
 			"fontSize": 9.691537475329199,
 			"fontFamily": 3,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 21.000000000000004,
+			"baseline": 32,
 			"containerId": null,
-			"originalText": "segment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
+			"originalText": "预初始化了0号segment\nsegment中保存了负载因子、阈值，\n因为扩容是针对segment的部分扩容",
 			"lineHeight": 1.2
 		},
 		{
