@@ -132,7 +132,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 
 异常终止的任务，在终止方法-1 ^5xLI9RxO
 
-重新循环的时候再处理超时，这样可以重新判断并且不用写重复代码 ^4Y4cTIhq
+重新循环的时候再处理超时，这样可以重新判断状态并且不用写重复代码 ^4Y4cTIhq
 
 %%
 # Drawing
@@ -566,8 +566,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		},
 		{
 			"type": "rectangle",
-			"version": 95,
-			"versionNonce": 837522767,
+			"version": 96,
+			"versionNonce": 1983454927,
 			"isDeleted": false,
 			"id": "UfgN-yPUMh-9HkEtkxhdH",
 			"fillStyle": "solid",
@@ -592,13 +592,9 @@ shutdownNow会触发中断 ^aRBtUR7S
 				{
 					"type": "text",
 					"id": "SPYEAGem"
-				},
-				{
-					"id": "pwqsEZWkM4ATkVO2GBdR2",
-					"type": "arrow"
 				}
 			],
-			"updated": 1704618476819,
+			"updated": 1704619005268,
 			"link": null,
 			"locked": false
 		},
@@ -1995,9 +1991,9 @@ shutdownNow会触发中断 ^aRBtUR7S
 		{
 			"id": "pwqsEZWkM4ATkVO2GBdR2",
 			"type": "arrow",
-			"x": -58.84432936753865,
-			"y": 1294.6842006035004,
-			"width": 260.6087167022396,
+			"x": -57.43350755702181,
+			"y": 1290.662024714203,
+			"width": 262.5809652764553,
 			"height": 316.2224741286659,
 			"angle": 0,
 			"strokeColor": "#1971c2",
@@ -2013,8 +2009,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 				"type": 2
 			},
 			"seed": 1693566081,
-			"version": 175,
-			"versionNonce": 1911418721,
+			"version": 264,
+			"versionNonce": 962100801,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -2022,7 +2018,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 					"id": "4Y4cTIhq"
 				}
 			],
-			"updated": 1704618647234,
+			"updated": 1704619010791,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -2031,8 +2027,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 					0
 				],
 				[
-					-260.6087167022396,
-					-106.46079556054019
+					-262.5809652764553,
+					-141.43328896039543
 				],
 				[
 					-45.59706913541902,
@@ -2042,14 +2038,10 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"lastCommittedPoint": null,
 			"startBinding": {
 				"elementId": "hB-lo38wATbadByAR7Quw",
-				"focus": -0.7529490512005005,
-				"gap": 3.5333131031230494
+				"focus": -0.7336086362623034,
+				"gap": 2.122491292606213
 			},
-			"endBinding": {
-				"elementId": "UfgN-yPUMh-9HkEtkxhdH",
-				"focus": -0.042854356579506044,
-				"gap": 21.265464541953406
-			},
+			"endBinding": null,
 			"startArrowhead": null,
 			"endArrowhead": "triangle"
 		},
@@ -2058,7 +2050,7 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"type": "text",
 			"x": -407.4530460697782,
 			"y": 1159.4234050429602,
-			"width": 208,
+			"width": 176,
 			"height": 57.599999999999994,
 			"angle": 0,
 			"strokeColor": "#1971c2",
@@ -2072,22 +2064,22 @@ shutdownNow会触发中断 ^aRBtUR7S
 			"frameId": null,
 			"roundness": null,
 			"seed": 467140655,
-			"version": 150,
-			"versionNonce": 713590657,
+			"version": 158,
+			"versionNonce": 1502060993,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704618646118,
+			"updated": 1704618997615,
 			"link": null,
 			"locked": false,
-			"text": "重新循环的时候再处理超时，\n这样可以重新判断并且不用写\n重复代码",
-			"rawText": "重新循环的时候再处理超时，这样可以重新判断并且不用写重复代码",
+			"text": "重新循环的时候再处理超\n时，这样可以重新判断状\n态并且不用写重复代码",
+			"rawText": "重新循环的时候再处理超时，这样可以重新判断状态并且不用写重复代码",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"baseline": 54,
 			"containerId": "pwqsEZWkM4ATkVO2GBdR2",
-			"originalText": "重新循环的时候再处理超时，这样可以重新判断并且不用写重复代码",
+			"originalText": "重新循环的时候再处理超时，这样可以重新判断状态并且不用写重复代码",
 			"lineHeight": 1.2
 		}
 	],
@@ -2106,8 +2098,8 @@ shutdownNow会触发中断 ^aRBtUR7S
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 773.2572553566723,
-		"scrollY": -494.5519999533963,
+		"scrollX": 738.6785492039081,
+		"scrollY": -479.18368610772336,
 		"zoom": {
 			"value": 1.0411031529333854
 		},
