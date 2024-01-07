@@ -148,7 +148,7 @@ cas失败，重新循环 ^M4Poncut
 
 队列已满，尝试使用非核心线程 ^rILL5G1r
 
-如果核心线程数为0，直接开启一个工作线程 ^tk7Hguty
+如果核心线程数为0，直接开启一个工作线程正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程 ^tk7Hguty
 
 运行状态，尝试放入队列 ^MOo5wHHN
 
@@ -163,8 +163,6 @@ cas失败，重新循环 ^M4Poncut
 只有这里，核心线程数为空的时候 ^5M0yN7LH
 
 firstTask为null，队列为空，应该也只有上面的情况，原task放入后，队列中的task都被其他线程poll了 ^RNgtVFuR
-
-正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程 ^GULgEaPH
 
 可能会有把其他线程提交任务执行的情况，队列就为空了 ^TUnUNpdN
 
@@ -959,8 +957,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"type": "rectangle",
 			"x": 267.37727908941997,
 			"y": 9011.810421391778,
-			"width": 335.2662925728889,
-			"height": 29.2,
+			"width": 676.5975068952836,
+			"height": 49,
 			"angle": 0,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "#ffc9c9",
@@ -975,26 +973,30 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 3
 			},
 			"seed": 1369465281,
-			"version": 558,
-			"versionNonce": 886893839,
+			"version": 716,
+			"versionNonce": 425255745,
 			"isDeleted": false,
 			"boundElements": [
 				{
 					"type": "text",
 					"id": "tk7Hguty"
+				},
+				{
+					"id": "tNF9R-U8jlwUTz34plAo9",
+					"type": "arrow"
 				}
 			],
-			"updated": 1704600993193,
+			"updated": 1704602805257,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "tk7Hguty",
 			"type": "text",
-			"x": 278.32292537586443,
-			"y": 9016.810421391778,
-			"width": 313.375,
-			"height": 19.2,
+			"x": 272.98853253706176,
+			"y": 9017.110421391777,
+			"width": 665.375,
+			"height": 38.4,
 			"angle": 0,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "#ffffff",
@@ -1007,22 +1009,22 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 2131517135,
-			"version": 650,
-			"versionNonce": 1165979489,
+			"version": 888,
+			"versionNonce": 1886821103,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704600993194,
+			"updated": 1704602803882,
 			"link": null,
 			"locked": false,
-			"text": "如果核心线程数为0，直接开启一个工作线程",
-			"rawText": "如果核心线程数为0，直接开启一个工作线程",
+			"text": "如果核心线程数为0，直接开启一个工作线程正常应该在队列未满之前只有一个线程，如果并发\n多个线程同时到这个方法，会产生多个线程",
+			"rawText": "如果核心线程数为0，直接开启一个工作线程正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "middle",
-			"baseline": 15,
+			"baseline": 34,
 			"containerId": "KXM6VuiRur7K_thpxEJZ5",
-			"originalText": "如果核心线程数为0，直接开启一个工作线程",
+			"originalText": "如果核心线程数为0，直接开启一个工作线程正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程",
 			"lineHeight": 1.2
 		},
 		{
@@ -1245,18 +1247,18 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"backgroundColor": "transparent",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
-			"strokeStyle": "solid",
+			"strokeStyle": "dashed",
 			"roughness": 0,
 			"opacity": 100,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
 			"seed": 1427317377,
-			"version": 432,
-			"versionNonce": 1329324975,
+			"version": 433,
+			"versionNonce": 576108577,
 			"isDeleted": false,
 			"boundElements": [],
-			"updated": 1704600993194,
+			"updated": 1704602724925,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1291,7 +1293,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"width": 118.22659478437623,
 			"height": 152.68909478859314,
 			"angle": 0,
-			"strokeColor": "#e03131",
+			"strokeColor": "#f08c00",
 			"backgroundColor": "transparent",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1302,8 +1304,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 103422945,
-			"version": 255,
-			"versionNonce": 1417778639,
+			"version": 256,
+			"versionNonce": 135281409,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1311,7 +1313,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "bwdvew9g"
 				}
 			],
-			"updated": 1704600993194,
+			"updated": 1704602756183,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1342,7 +1344,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"width": 64,
 			"height": 19.2,
 			"angle": 0,
-			"strokeColor": "#e03131",
+			"strokeColor": "#f08c00",
 			"backgroundColor": "transparent",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -1353,11 +1355,11 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"frameId": null,
 			"roundness": null,
 			"seed": 222010369,
-			"version": 61,
-			"versionNonce": 1583788705,
+			"version": 62,
+			"versionNonce": 1818603919,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704600993194,
+			"updated": 1704602756183,
 			"link": null,
 			"locked": false,
 			"text": "占位成功",
@@ -1556,81 +1558,6 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"lineHeight": 1.2
 		},
 		{
-			"id": "8TZcgj-NoErIpbf2qbI6m",
-			"type": "rectangle",
-			"x": 616.4833253281586,
-			"y": 9004.670584530304,
-			"width": 346.25464201420647,
-			"height": 54.59287816309188,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 0,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 3
-			},
-			"seed": 1582162561,
-			"version": 313,
-			"versionNonce": 1513827969,
-			"isDeleted": false,
-			"boundElements": [
-				{
-					"type": "text",
-					"id": "GULgEaPH"
-				},
-				{
-					"id": "tNF9R-U8jlwUTz34plAo9",
-					"type": "arrow"
-				}
-			],
-			"updated": 1704600997580,
-			"link": null,
-			"locked": false
-		},
-		{
-			"id": "GULgEaPH",
-			"type": "text",
-			"x": 621.6106463352618,
-			"y": 9012.76702361185,
-			"width": 336,
-			"height": 38.4,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 0,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 113914881,
-			"version": 490,
-			"versionNonce": 1755914689,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704600993194,
-			"link": null,
-			"locked": false,
-			"text": "正常应该在队列未满之前只有一个线程，如果并\n发多个线程同时到这个方法，会产生多个线程",
-			"rawText": "正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程",
-			"fontSize": 16,
-			"fontFamily": 3,
-			"textAlign": "center",
-			"verticalAlign": "middle",
-			"baseline": 34,
-			"containerId": "8TZcgj-NoErIpbf2qbI6m",
-			"originalText": "正常应该在队列未满之前只有一个线程，如果并发多个线程同时到这个方法，会产生多个线程",
-			"lineHeight": 1.2
-		},
-		{
 			"id": "tNF9R-U8jlwUTz34plAo9",
 			"type": "arrow",
 			"x": 916.4783379243797,
@@ -1651,8 +1578,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 				"type": 2
 			},
 			"seed": 929424623,
-			"version": 97,
-			"versionNonce": 467183201,
+			"version": 99,
+			"versionNonce": 1782347617,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1660,7 +1587,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 					"id": "TUnUNpdN"
 				}
 			],
-			"updated": 1704601042415,
+			"updated": 1704602805257,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -1679,9 +1606,9 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			],
 			"lastCommittedPoint": null,
 			"startBinding": {
-				"elementId": "8TZcgj-NoErIpbf2qbI6m",
-				"focus": -0.7358425047039099,
-				"gap": 5.87666153565533
+				"elementId": "KXM6VuiRur7K_thpxEJZ5",
+				"focus": -0.9194712632186743,
+				"gap": 4.3297028372744535
 			},
 			"endBinding": null,
 			"startArrowhead": null,
@@ -1723,6 +1650,54 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"containerId": "tNF9R-U8jlwUTz34plAo9",
 			"originalText": "可能会有把其他线程提交任务执行的情况，队列就为空了",
 			"lineHeight": 1.2
+		},
+		{
+			"id": "w7wLFDjlDgPRn0AHBBqR0",
+			"type": "arrow",
+			"x": -47.96477147454459,
+			"y": 9524.275527926653,
+			"width": 34.38165656638864,
+			"height": 149.90932530763166,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 954942081,
+			"version": 118,
+			"versionNonce": 1902008129,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704602745522,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-34.38165656638864,
+					-71.91182754488909
+				],
+				[
+					-8.516261361237639,
+					-149.90932530763166
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
 		},
 		{
 			"id": "ZbQJvlol",
@@ -2188,6 +2163,77 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 			"endArrowhead": "triangle"
 		},
 		{
+			"id": "8TZcgj-NoErIpbf2qbI6m",
+			"type": "rectangle",
+			"x": 616.4833253281586,
+			"y": 9004.670584530304,
+			"width": 346.25464201420647,
+			"height": 54.59287816309188,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1582162561,
+			"version": 315,
+			"versionNonce": 830525665,
+			"isDeleted": true,
+			"boundElements": [
+				{
+					"id": "tNF9R-U8jlwUTz34plAo9",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704602796315,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "GULgEaPH",
+			"type": "text",
+			"x": 784.9231463352618,
+			"y": 9022.36702361185,
+			"width": 9.375,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 113914881,
+			"version": 493,
+			"versionNonce": 1045550625,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1704602789196,
+			"link": null,
+			"locked": false,
+			"text": "",
+			"rawText": "",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "8TZcgj-NoErIpbf2qbI6m",
+			"originalText": "",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "kboT7NOSclhCCknZAzIXQ",
 			"type": "rectangle",
 			"x": 908.9533412044425,
@@ -2220,7 +2266,7 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#e03131",
+		"currentItemStrokeColor": "#f08c00",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
@@ -2232,8 +2278,8 @@ firstTask为null，队列为空，应该也只有上面的情况，原task放入
 		"currentItemTextAlign": "center",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 603.156908334573,
-		"scrollY": -8672.397636059959,
+		"scrollX": 618.2176699668814,
+		"scrollY": -8663.791486555769,
 		"zoom": {
 			"value": 0.9295678626217359
 		},
