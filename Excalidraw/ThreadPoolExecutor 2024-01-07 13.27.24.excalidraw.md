@@ -39,6 +39,12 @@ tags: [excalidraw]
 
 意外终止 ^xFRrxMvH
 
+队列中存在任务时，最小线程数为1 ^Fij6yKve
+
+超过最小线程数，可以销毁 ^iFk0LSXg
+
+不足最小线程数，重新生成工作线程，代替本任务继续运行 ^AdIpuA16
+
 %%
 # Drawing
 ```json
@@ -156,6 +162,219 @@ tags: [excalidraw]
 			"lineHeight": 1.2
 		},
 		{
+			"id": "-vgd3o5KulgWJqn8qpWUW",
+			"type": "rectangle",
+			"x": 339.4496154785156,
+			"y": 149.48793029785156,
+			"width": 139.2623291015625,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 368191567,
+			"version": 314,
+			"versionNonce": 1954051009,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "Fij6yKve"
+				}
+			],
+			"updated": 1704605608350,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "Fij6yKve",
+			"type": "text",
+			"x": 345.0807800292969,
+			"y": 154.78793029785157,
+			"width": 128,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 988397231,
+			"version": 422,
+			"versionNonce": 127292321,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704605608350,
+			"link": null,
+			"locked": false,
+			"text": "队列中存在任务时\n，最小线程数为1",
+			"rawText": "队列中存在任务时，最小线程数为1",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "-vgd3o5KulgWJqn8qpWUW",
+			"originalText": "队列中存在任务时，最小线程数为1",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "6ngkcdn3BAGFzKqcKn_2l",
+			"type": "rectangle",
+			"x": 326.6816711425781,
+			"y": 202.3399200439453,
+			"width": 202.18750000000003,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 2130485089,
+			"version": 222,
+			"versionNonce": 92972783,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "iFk0LSXg"
+				}
+			],
+			"updated": 1704605656702,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "iFk0LSXg",
+			"type": "text",
+			"x": 331.7754211425781,
+			"y": 207.3399200439453,
+			"width": 192,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1271293697,
+			"version": 186,
+			"versionNonce": 1678391631,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704605656702,
+			"link": null,
+			"locked": false,
+			"text": "超过最小线程数，可以销毁",
+			"rawText": "超过最小线程数，可以销毁",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "6ngkcdn3BAGFzKqcKn_2l",
+			"originalText": "超过最小线程数，可以销毁",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "lQbaXtxvtYJPM0s3XDbYL",
+			"type": "rectangle",
+			"x": 157.88955688476562,
+			"y": 238.71107482910156,
+			"width": 269.406494140625,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1186558351,
+			"version": 379,
+			"versionNonce": 1791301359,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "AdIpuA16"
+				}
+			],
+			"updated": 1704605790900,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "AdIpuA16",
+			"type": "text",
+			"x": 164.59280395507812,
+			"y": 244.01107482910157,
+			"width": 256,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1417671919,
+			"version": 539,
+			"versionNonce": 1542843183,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704605810239,
+			"link": null,
+			"locked": false,
+			"text": "不足最小线程数，重新生成工作线程\n，代替本任务继续运行",
+			"rawText": "不足最小线程数，重新生成工作线程，代替本任务继续运行",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "lQbaXtxvtYJPM0s3XDbYL",
+			"originalText": "不足最小线程数，重新生成工作线程，代替本任务继续运行",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "mTM91wNl",
 			"type": "text",
 			"x": -307.6957702636719,
@@ -245,8 +464,8 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 247.23715209960938,
-		"scrollY": 547.0822143554688,
+		"scrollX": 175.23715209960938,
+		"scrollY": 485.08221435546875,
 		"zoom": {
 			"value": 1
 		},
