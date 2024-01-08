@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
                 "mode": "source",
                 "source": false
               }
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md"
+                "file": "分布式/消息队列/kafka/kafka为什么不支持读写分离.md"
               }
             }
           },
@@ -388,10 +388,12 @@
       }
     ]
   },
-  "active": "879491de20037f58",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/06-服务端.md",
+    "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
+    "分布式/消息队列/kafka/07-客户端.md",
+    "分布式/消息队列/kafka/06-服务端.md",
     "分布式/Redis/Redis 分布式锁.md",
     "分布式/Redis/Redis big key.md",
     "分布式/Redis/Redis Cluter.md",
@@ -408,7 +410,6 @@
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/快速了解kafka.md",
     "分布式/消息队列/kafka/控制器.md",
-    "分布式/消息队列/kafka/07-客户端.md",
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/zk集群搭建.md",
     "分布式/分布式事务.md",
@@ -416,7 +417,6 @@
     "分布式/Zookeeper",
     "分布式/Untitled.md",
     "分布式/nacos/Nacos.md",
-    "Java基础/UnSafe.md",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
     "分布式/nocas",
