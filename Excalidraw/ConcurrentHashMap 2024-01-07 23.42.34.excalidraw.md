@@ -140,6 +140,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 
 树节点 ^Xd6ZclDY
 
+到了树化阈值，转树 ^AIS6fC2i
+
 %%
 # Drawing
 ```json
@@ -981,8 +983,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"type": "rectangle",
 			"x": 425.10957026854385,
 			"y": 1215.5939283901166,
-			"width": 131.99704792893465,
-			"height": 37.53035229658826,
+			"width": 155.365960219581,
+			"height": 29.2,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "transparent",
@@ -997,13 +999,55 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1245681583,
-			"version": 56,
-			"versionNonce": 1607428239,
+			"version": 103,
+			"versionNonce": 819642593,
 			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704702696530,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "AIS6fC2i"
+				}
+			],
+			"updated": 1704702742814,
 			"link": null,
 			"locked": false
+		},
+		{
+			"id": "AIS6fC2i",
+			"type": "text",
+			"x": 430.79255037833434,
+			"y": 1220.5939283901166,
+			"width": 144,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 370245295,
+			"version": 130,
+			"versionNonce": 395870337,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702742814,
+			"link": null,
+			"locked": false,
+			"text": "到了树化阈值，转树",
+			"rawText": "到了树化阈值，转树",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "HW_6O3kTTdhHJVI__0n-l",
+			"originalText": "到了树化阈值，转树",
+			"lineHeight": 1.2
 		},
 		{
 			"id": "Uq0EikE9",
