@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/zookeeper.md",
+                "file": "分布式/Zookeeper/Zookeeper.md",
                 "mode": "source",
                 "source": false
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Untitled.md",
+                "file": "分布式/Zookeeper/Zookeeper.md",
                 "mode": "source",
                 "source": false
               }
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Untitled.md",
+                "file": "分布式/Zookeeper/Zookeeper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Untitled.md",
+                "file": "分布式/Zookeeper/Zookeeper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Untitled.md"
+                "file": "分布式/Zookeeper/Zookeeper.md"
               }
             }
           },
@@ -392,7 +392,12 @@
   },
   "active": "879491de20037f58",
   "lastOpenFiles": [
-    "分布式/zookeeper.md",
+    "分布式/Zookeeper/zk集群搭建.md",
+    "分布式/Zookeeper/Zookeeper.md",
+    "分布式/分布式事务.md",
+    "分布式/Untitled 1.md",
+    "分布式/Zookeeper",
+    "分布式/Untitled.md",
     "分布式/nacos/Nacos.md",
     "Java基础/UnSafe.md",
     "Excalidraw/ConcurrentHashMap 2024-01-07 23.42.34.excalidraw.md",
@@ -414,11 +419,7 @@
     "Java基础/JVM/JVM内存结构.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
     "HashMap死循环.excalidraw.md",
-    "Excalidraw/ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw.md",
-    "分布式/消息队列/中间件的选型.md",
-    "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
-    "Excalidraw/Scripts/Downloaded/Slideshow.md",
     "计算机基础",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
@@ -434,7 +435,6 @@
     "Java基础/JVM/性能优化",
     "Java基础/JVM/工具",
     "分布式/elasticsearch",
-    "Untitled 1",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Pasted image 20231205220432.png"
