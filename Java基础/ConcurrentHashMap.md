@@ -18,4 +18,4 @@
 
 # 1.8
 
-r]]
+![[ConcurrentHashMap 2024-01-07 23.42.34.excalidraw]]

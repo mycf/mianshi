@@ -144,7 +144,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 
 计数数组不为空或cas baseCount失败 ^GkZcVC8U
 
-通过线程随机数获取cs下标 ^sIGC2udc
+cs对应下标null ^sIGC2udc
+
+cs不存在 ^gwKWmnOx
+
+cs自增失败 ^fyxyxulu
 
 %%
 # Drawing
@@ -173,11 +177,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 579666095,
-			"version": 22,
-			"versionNonce": 895366735,
+			"version": 83,
+			"versionNonce": 294056097,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704699632517,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "    public V put(K key, V value) {\n        return putVal(key, value, false);\n    }\n\n    /** Implementation for put and putIfAbsent */\n    final V putVal(K key, V value, boolean onlyIfAbsent) {\n        if (key == null || value == null) throw new NullPointerException();\n        int hash = spread(key.hashCode());\n        int binCount = 0;\n        for (Node<K,V>[] tab = table;;) {\n            Node<K,V> f; int n, i, fh; K fk; V fv;\n            if (tab == null || (n = tab.length) == 0)\n                tab = initTable();\n            else if ((f = tabAt(tab, i = (n - 1) & hash)) == null) {\n                if (casTabAt(tab, i, null, new Node<K,V>(hash, key, value)))\n                    break;                   // no lock when adding to empty bin\n            }\n            else if ((fh = f.hash) == MOVED)\n                tab = helpTransfer(tab, f);\n            else if (onlyIfAbsent // check first node without acquiring lock\n                     && fh == hash\n                     && ((fk = f.key) == key || (fk != null && key.equals(fk)))\n                     && (fv = f.val) != null)\n                return fv;\n            else {\n                V oldVal = null;\n                synchronized (f) {\n                    if (tabAt(tab, i) == f) {\n                        if (fh >= 0) {\n                            binCount = 1;\n                            for (Node<K,V> e = f;; ++binCount) {\n                                K ek;\n                                if (e.hash == hash &&\n                                    ((ek = e.key) == key ||\n                                     (ek != null && key.equals(ek)))) {\n                                    oldVal = e.val;\n                                    if (!onlyIfAbsent)\n                                        e.val = value;\n                                    break;\n                                }\n                                Node<K,V> pred = e;\n                                if ((e = e.next) == null) {\n                                    pred.next = new Node<K,V>(hash, key, value);\n                                    break;\n                                }\n                            }\n                        }\n                        else if (f instanceof TreeBin) {\n                            Node<K,V> p;\n                            binCount = 2;\n                            if ((p = ((TreeBin<K,V>)f).putTreeVal(hash, key,\n                                                           value)) != null) {\n                                oldVal = p.val;\n                                if (!onlyIfAbsent)\n                                    p.val = value;\n                            }\n                        }\n                        else if (f instanceof ReservationNode)\n                            throw new IllegalStateException(\"Recursive update\");\n                    }\n                }\n                if (binCount != 0) {\n                    if (binCount >= TREEIFY_THRESHOLD)\n                        treeifyBin(tab, i);\n                    if (oldVal != null)\n                        return oldVal;\n                    break;\n                }\n            }\n        }\n        addCount(1L, binCount);\n        return null;\n    }\n\n    private final void addCount(long x, int check) {\n        CounterCell[] cs; long b, s;\n        if ((cs = counterCells) != null ||\n            !U.compareAndSetLong(this, BASECOUNT, b = baseCount, s = b + x)) {\n            CounterCell c; long v; int m;\n            boolean uncontended = true;\n            if (cs == null || (m = cs.length - 1) < 0 ||\n                (c = cs[ThreadLocalRandom.getProbe() & m]) == null ||\n                !(uncontended =\n                  U.compareAndSetLong(c, CELLVALUE, v = c.value, v + x))) {\n                fullAddCount(x, uncontended);\n                return;\n            }\n            if (check <= 1)\n                return;\n            s = sumCount();\n        }\n        if (check >= 0) {\n            Node<K,V>[] tab, nt; int n, sc;\n            while (s >= (long)(sc = sizeCtl) && (tab = table) != null &&\n                   (n = tab.length) < MAXIMUM_CAPACITY) {\n                int rs = resizeStamp(n) << RESIZE_STAMP_SHIFT;\n                if (sc < 0) {\n                    if (sc == rs + MAX_RESIZERS || sc == rs + 1 ||\n                        (nt = nextTable) == null || transferIndex <= 0)\n                        break;\n                    if (U.compareAndSetInt(this, SIZECTL, sc, sc + 1))\n                        transfer(tab, nt);\n                }\n                else if (U.compareAndSetInt(this, SIZECTL, sc, rs + 2))\n                    transfer(tab, null);\n                s = sumCount();\n            }\n        }\n    }\n\n",
@@ -212,8 +216,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1771378383,
-			"version": 168,
-			"versionNonce": 1431114785,
+			"version": 169,
+			"versionNonce": 1662428655,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -221,7 +225,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "W32HTwT1"
 				}
 			],
-			"updated": 1704701600422,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -244,11 +248,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1038731759,
-			"version": 179,
-			"versionNonce": 968353793,
+			"version": 180,
+			"versionNonce": 2072130689,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704701600422,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "获取hash",
@@ -283,8 +287,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1330125665,
-			"version": 303,
-			"versionNonce": 1768288321,
+			"version": 304,
+			"versionNonce": 824835169,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -292,7 +296,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "HTHJGQWf"
 				}
 			],
-			"updated": 1704701608374,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -315,11 +319,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 950799759,
-			"version": 289,
-			"versionNonce": 1788887073,
+			"version": 290,
+			"versionNonce": 1271608879,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704701608374,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "数组未初始化，先初始化",
@@ -354,8 +358,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1214283855,
-			"version": 212,
-			"versionNonce": 29212143,
+			"version": 213,
+			"versionNonce": 307087425,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -363,7 +367,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "KzgloNBK"
 				}
 			],
-			"updated": 1704701423594,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -386,11 +390,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1984119183,
-			"version": 160,
-			"versionNonce": 105785359,
+			"version": 161,
+			"versionNonce": 1484953679,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704701423594,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "hash对应下标位置不\n存在数据，cas设置",
@@ -425,8 +429,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1702658081,
-			"version": 105,
-			"versionNonce": 172239,
+			"version": 106,
+			"versionNonce": 1489836065,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -434,7 +438,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "shzX0Lxt"
 				}
 			],
-			"updated": 1704701513653,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -457,11 +461,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1130779457,
-			"version": 38,
-			"versionNonce": 1345626159,
+			"version": 39,
+			"versionNonce": 944289391,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704701520675,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "正在做rehash，\n帮助迁移",
@@ -496,8 +500,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 2054192815,
-			"version": 168,
-			"versionNonce": 1700334543,
+			"version": 169,
+			"versionNonce": 1452764161,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -505,7 +509,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "URLgwNC8"
 				}
 			],
-			"updated": 1704701722284,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -528,11 +532,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 239524047,
-			"version": 257,
-			"versionNonce": 1145326127,
+			"version": 258,
+			"versionNonce": 300290191,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704701722284,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "当前节点存在，直接返回，（\n只允许节点不存在时操作）",
@@ -567,8 +571,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1284295279,
-			"version": 113,
-			"versionNonce": 1428767073,
+			"version": 114,
+			"versionNonce": 1940669409,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -576,7 +580,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "0AeifAXd"
 				}
 			],
-			"updated": 1704701763374,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -599,11 +603,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 725566127,
-			"version": 68,
-			"versionNonce": 1612475713,
+			"version": 69,
+			"versionNonce": 521348783,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704701763375,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "头节点加锁",
@@ -638,8 +642,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1656803585,
-			"version": 206,
-			"versionNonce": 1201432015,
+			"version": 207,
+			"versionNonce": 1813716929,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -647,7 +651,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "16FCdxP0"
 				}
 			],
-			"updated": 1704702042813,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -670,11 +674,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 635908993,
-			"version": 316,
-			"versionNonce": 231527407,
+			"version": 317,
+			"versionNonce": 1316518095,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704702042813,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "recheck头节点是否变化\n，防止其他线程并发修改",
@@ -709,11 +713,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 159352399,
-			"version": 122,
-			"versionNonce": 1021547375,
+			"version": 123,
+			"versionNonce": 1308852129,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704702243877,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -738,8 +742,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1448788911,
-			"version": 231,
-			"versionNonce": 2096602145,
+			"version": 232,
+			"versionNonce": 632194799,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -747,7 +751,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "gwUqg7RF"
 				}
 			],
-			"updated": 1704702369340,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -770,11 +774,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 248650031,
-			"version": 258,
-			"versionNonce": 449933313,
+			"version": 259,
+			"versionNonce": 932504449,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704702369340,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "遍历链表，找到就覆盖原\n值（如果允许），没找到\n就放末尾（尾插法）",
@@ -809,8 +813,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 614736833,
-			"version": 44,
-			"versionNonce": 383761473,
+			"version": 45,
+			"versionNonce": 1664995599,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -822,7 +826,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "CyilUEhl"
 				}
 			],
-			"updated": 1704702532670,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -845,11 +849,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1761329103,
-			"version": 33,
-			"versionNonce": 775708673,
+			"version": 34,
+			"versionNonce": 1427032929,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704702532670,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "元素在链表什\n么位置🤔",
@@ -884,11 +888,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 2
 			},
 			"seed": 489377473,
-			"version": 45,
-			"versionNonce": 1593871393,
+			"version": 46,
+			"versionNonce": 1621022511,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704702532670,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -932,8 +936,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 773002177,
-			"version": 28,
-			"versionNonce": 2129954351,
+			"version": 29,
+			"versionNonce": 515946305,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -941,7 +945,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "Xd6ZclDY"
 				}
 			],
-			"updated": 1704702555191,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -964,11 +968,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1488170081,
-			"version": 10,
-			"versionNonce": 36530031,
+			"version": 11,
+			"versionNonce": 876222799,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704702559910,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "树节点",
@@ -1003,8 +1007,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1245681583,
-			"version": 103,
-			"versionNonce": 819642593,
+			"version": 104,
+			"versionNonce": 1460283169,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1012,7 +1016,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "AIS6fC2i"
 				}
 			],
-			"updated": 1704702742814,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -1035,11 +1039,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 370245295,
-			"version": 130,
-			"versionNonce": 395870337,
+			"version": 131,
+			"versionNonce": 325588847,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704702742814,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "到了树化阈值，转树",
@@ -1074,8 +1078,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 1362758735,
-			"version": 283,
-			"versionNonce": 2031498113,
+			"version": 284,
+			"versionNonce": 1213897473,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1083,7 +1087,7 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "GkZcVC8U"
 				}
 			],
-			"updated": 1704703144226,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false
 		},
@@ -1106,11 +1110,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1161995951,
-			"version": 204,
-			"versionNonce": 1507910369,
+			"version": 205,
+			"versionNonce": 1953583503,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704703144244,
+			"updated": 1704703707852,
 			"link": null,
 			"locked": false,
 			"text": "计数数组不为空或cas baseCount失败",
@@ -1127,10 +1131,10 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 		{
 			"id": "ATWKXGrVoh_osuKteCXw9",
 			"type": "rectangle",
-			"x": 588.1993136087576,
-			"y": 1643.510419455232,
-			"width": 124.25373333810637,
-			"height": 49,
+			"x": 587.0746381594502,
+			"y": 1657.7485099431328,
+			"width": 133.92405931221845,
+			"height": 29.2,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "transparent",
@@ -1145,8 +1149,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 				"type": 3
 			},
 			"seed": 2027708065,
-			"version": 109,
-			"versionNonce": 1708008815,
+			"version": 309,
+			"versionNonce": 240727087,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -1154,17 +1158,17 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 					"id": "sIGC2udc"
 				}
 			],
-			"updated": 1704703519141,
+			"updated": 1704703732965,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "sIGC2udc",
 			"type": "text",
-			"x": 594.3261802778109,
-			"y": 1648.810419455232,
-			"width": 112,
-			"height": 38.4,
+			"x": 593.9116678155594,
+			"y": 1662.7485099431328,
+			"width": 120.25,
+			"height": 19.2,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "transparent",
@@ -1177,22 +1181,164 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1857065825,
-			"version": 126,
-			"versionNonce": 1793433487,
+			"version": 404,
+			"versionNonce": 1419826767,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1704703519141,
+			"updated": 1704703732965,
 			"link": null,
 			"locked": false,
-			"text": "通过线程随机数\n获取cs下标",
-			"rawText": "通过线程随机数获取cs下标",
+			"text": "cs对应下标null",
+			"rawText": "cs对应下标null",
 			"fontSize": 16,
 			"fontFamily": 3,
 			"textAlign": "center",
 			"verticalAlign": "middle",
-			"baseline": 34,
+			"baseline": 15,
 			"containerId": "ATWKXGrVoh_osuKteCXw9",
-			"originalText": "通过线程随机数获取cs下标",
+			"originalText": "cs对应下标null",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "5MOg-21tGKKnLf8zOD5d2",
+			"type": "rectangle",
+			"x": 438.86113042870625,
+			"y": 1638.21651281836,
+			"width": 77.97454702099904,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 169887695,
+			"version": 119,
+			"versionNonce": 1545506497,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "gwKWmnOx"
+				}
+			],
+			"updated": 1704703707852,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "gwKWmnOx",
+			"type": "text",
+			"x": 444.47340393920575,
+			"y": 1643.21651281836,
+			"width": 66.75,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1387294287,
+			"version": 203,
+			"versionNonce": 1709668815,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704703707852,
+			"link": null,
+			"locked": false,
+			"text": "cs不存在",
+			"rawText": "cs不存在",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "5MOg-21tGKKnLf8zOD5d2",
+			"originalText": "cs不存在",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "GBDxiyecIuyA9Y-iPT_UD",
+			"type": "rectangle",
+			"x": 143.75073277831405,
+			"y": 1690.8132164019426,
+			"width": 106.58323286295447,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1864355329,
+			"version": 208,
+			"versionNonce": 625213167,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "fyxyxulu"
+				}
+			],
+			"updated": 1704703774530,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "fyxyxulu",
+			"type": "text",
+			"x": 155.66734920979127,
+			"y": 1695.8132164019426,
+			"width": 82.75,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1002356161,
+			"version": 257,
+			"versionNonce": 1097091343,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704703774530,
+			"link": null,
+			"locked": false,
+			"text": "cs自增失败",
+			"rawText": "cs自增失败",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "GBDxiyecIuyA9Y-iPT_UD",
+			"originalText": "cs自增失败",
 			"lineHeight": 1.2
 		},
 		{
@@ -1214,11 +1360,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1720290881,
-			"version": 2,
-			"versionNonce": 1116803183,
+			"version": 3,
+			"versionNonce": 1714976719,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704642161180,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1251,11 +1397,11 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"frameId": null,
 			"roundness": null,
 			"seed": 1456716623,
-			"version": 4,
-			"versionNonce": 913805487,
+			"version": 5,
+			"versionNonce": 474615823,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1704701596127,
+			"updated": 1704703707851,
 			"link": null,
 			"locked": false,
 			"text": "",
@@ -1285,8 +1431,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 294.2371468422707,
-		"scrollY": -1276.6516754014378,
+		"scrollX": 340.28083140362594,
+		"scrollY": -1260.5363858049636,
 		"zoom": {
 			"value": 0.8687402057647708
 		},
