@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/Redis/zset.md",
                 "mode": "source",
                 "source": false
               }
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/Redis/zset.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/Redis/zset.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/redis.md"
+                "file": "分布式/Redis/zset.md"
               }
             }
           },
@@ -388,10 +388,10 @@
       }
     ]
   },
-  "active": "879491de20037f58",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
-    "HashMap死循环.excalidraw.md",
     "分布式/Redis/redis.md",
+    "HashMap死循环.excalidraw.md",
     "分布式/Redis/list.md",
     "Excalidraw/list 2023-12-20 21.25.39.excalidraw.md",
     "分布式/消息队列/kafka/kafka.md",
