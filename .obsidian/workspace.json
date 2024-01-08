@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/zookeeper.md",
+                "file": "分布式/Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -208,8 +208,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -225,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/zookeeper.md",
+                "file": "分布式/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -242,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/zookeeper.md",
+                "file": "分布式/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -265,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/zookeeper.md"
+                "file": "分布式/Untitled.md"
               }
             }
           },
@@ -393,6 +392,7 @@
   },
   "active": "879491de20037f58",
   "lastOpenFiles": [
+    "分布式/zookeeper.md",
     "分布式/nacos/Nacos.md",
     "Java基础/UnSafe.md",
     "Excalidraw/ConcurrentHashMap 2024-01-07 23.42.34.excalidraw.md",
@@ -410,7 +410,6 @@
     "Excalidraw/HashMap 2024-01-06 15.31.21.excalidraw.md",
     "计算机基础/二进制运算.md",
     "Excalidraw/HashMap 2024-01-06 14.11.10.excalidraw.md",
-    "分布式/zookeeper.md",
     "Java基础/JVM/volatile.md",
     "Java基础/JVM/JVM内存结构.md",
     "Excalidraw/JVM内存结构 2023-12-28 22.57.52.excalidraw.md",
