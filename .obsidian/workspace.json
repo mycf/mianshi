@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/Redis 分布式锁.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "mode": "source",
                 "source": false
               }
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/Redis 分布式锁.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/Redis 分布式锁.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/Redis 分布式锁.md"
+                "file": "分布式/消息队列/kafka/07-客户端.md"
               }
             }
           },
@@ -390,8 +390,10 @@
   },
   "active": "879491de20037f58",
   "lastOpenFiles": [
-    "分布式/Redis/Redis big key.md",
+    "分布式/消息队列/kafka/06-服务端.md",
+    "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
     "分布式/Redis/Redis 分布式锁.md",
+    "分布式/Redis/Redis big key.md",
     "分布式/Redis/Redis Cluter.md",
     "分布式/Redis/Redis Sentinel.md",
     "分布式/Redis/Redis为什么那么快.md",
@@ -403,7 +405,6 @@
     "Excalidraw/list 2023-12-20 21.25.39.excalidraw.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/中间件的选型.md",
-    "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/快速了解kafka.md",
     "分布式/消息队列/kafka/控制器.md",
@@ -416,7 +417,6 @@
     "分布式/Untitled.md",
     "分布式/nacos/Nacos.md",
     "Java基础/UnSafe.md",
-    "Excalidraw/ConcurrentHashMap 2024-01-07 23.42.34.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
     "分布式/nocas",
