@@ -134,6 +134,8 @@ hash对应下标位置不存在数据，cas设置 ^KzgloNBK
 
 recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 
+遍历链表，找到就覆盖原值（如果允许），没找到就放末尾（尾插法） ^gwUqg7RF
+
 %%
 # Drawing
 ```json
@@ -677,6 +679,106 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"lineHeight": 1.2
 		},
 		{
+			"id": "kMP55H0TyjSeiV1cy0bib",
+			"type": "rectangle",
+			"x": 86.86644994405003,
+			"y": 443.56352942196617,
+			"width": 635.4925652468509,
+			"height": 381.5300573046439,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 159352399,
+			"version": 122,
+			"versionNonce": 1021547375,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702243877,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "aQMuY5rj9Z8dJIu4U16kV",
+			"type": "rectangle",
+			"x": 455.37084331181165,
+			"y": 580.6750825160207,
+			"width": 188.44580708064734,
+			"height": 68,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1448788911,
+			"version": 231,
+			"versionNonce": 2096602145,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "gwUqg7RF"
+				}
+			],
+			"updated": 1704702369340,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "gwUqg7RF",
+			"type": "text",
+			"x": 461.5937468521353,
+			"y": 585.8750825160207,
+			"width": 176,
+			"height": 57.599999999999994,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 248650031,
+			"version": 258,
+			"versionNonce": 449933313,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702369340,
+			"link": null,
+			"locked": false,
+			"text": "遍历链表，找到就覆盖原\n值（如果允许），没找到\n就放末尾（尾插法）",
+			"rawText": "遍历链表，找到就覆盖原值（如果允许），没找到就放末尾（尾插法）",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 54,
+			"containerId": "aQMuY5rj9Z8dJIu4U16kV",
+			"originalText": "遍历链表，找到就覆盖原值（如果允许），没找到就放末尾（尾插法）",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "Uq0EikE9",
 			"type": "text",
 			"x": -256.6957702636719,
@@ -766,8 +868,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 275.81967301773005,
-		"scrollY": 385.5253372634875,
+		"scrollX": 121.57332973718974,
+		"scrollY": 261.20738894782806,
 		"zoom": {
 			"value": 0.8687402057647708
 		},
