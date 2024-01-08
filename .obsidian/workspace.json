@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/Redis/list.md",
                 "mode": "source",
                 "source": false
               }
@@ -204,8 +204,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -225,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/Redis/list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -242,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/Redis/list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -265,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/redis.md"
+                "file": "分布式/Redis/list.md"
               }
             }
           },
@@ -393,6 +392,9 @@
   },
   "active": "879491de20037f58",
   "lastOpenFiles": [
+    "Excalidraw/list 2023-12-20 21.25.39.excalidraw.md",
+    "分布式/Redis/list.md",
+    "分布式/Redis/redis.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/kafka/06-服务端.md",
@@ -417,9 +419,6 @@
     "Java基础/ThreadPoolExecutor.md",
     "Java基础/HashMap.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-05 22.43.29.excalidraw.md",
-    "Excalidraw/ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw.md",
-    "Excalidraw/ThreadPoolExecutor 2024-01-07 13.27.24.excalidraw.md",
-    "Java基础/ThreadPoolExecutor 2023-12-26 21.48.29.excrridraw.md",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
     "分布式/nocas",
