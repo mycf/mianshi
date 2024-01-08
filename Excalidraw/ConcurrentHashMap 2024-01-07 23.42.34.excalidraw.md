@@ -132,6 +132,8 @@ hash对应下标位置不存在数据，cas设置 ^KzgloNBK
 
 头节点加锁 ^0AeifAXd
 
+recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
+
 %%
 # Drawing
 ```json
@@ -604,6 +606,77 @@ hash对应下标位置不存在数据，cas设置 ^KzgloNBK
 			"lineHeight": 1.2
 		},
 		{
+			"id": "kxWqZsy3jxxrw6O_SwWSZ",
+			"type": "rectangle",
+			"x": 297.0720712509077,
+			"y": 360.52850493577915,
+			"width": 194.126092567686,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1656803585,
+			"version": 206,
+			"versionNonce": 1201432015,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "16FCdxP0"
+				}
+			],
+			"updated": 1704702042813,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "16FCdxP0",
+			"type": "text",
+			"x": 305.3226175347507,
+			"y": 365.82850493577916,
+			"width": 177.625,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 635908993,
+			"version": 316,
+			"versionNonce": 231527407,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702042813,
+			"link": null,
+			"locked": false,
+			"text": "recheck头节点是否变化\n，防止其他线程并发修改",
+			"rawText": "recheck头节点是否变化，防止其他线程并发修改",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "kxWqZsy3jxxrw6O_SwWSZ",
+			"originalText": "recheck头节点是否变化，防止其他线程并发修改",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "Uq0EikE9",
 			"type": "text",
 			"x": -256.6957702636719,
@@ -693,8 +766,8 @@ hash对应下标位置不存在数据，cas设置 ^KzgloNBK
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 262.00656764932353,
-		"scrollY": 424.6624691406396,
+		"scrollX": 275.81967301773005,
+		"scrollY": 385.5253372634875,
 		"zoom": {
 			"value": 0.8687402057647708
 		},
