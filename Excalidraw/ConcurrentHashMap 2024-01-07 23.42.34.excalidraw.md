@@ -142,6 +142,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 
 到了树化阈值，转树 ^AIS6fC2i
 
+计数数组不为空或cas baseCount失败 ^GkZcVC8U
+
 %%
 # Drawing
 ```json
@@ -1050,6 +1052,77 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"lineHeight": 1.2
 		},
 		{
+			"id": "5s6W11_I8tS0nkkdMJDdC",
+			"type": "rectangle",
+			"x": 291.17764216257837,
+			"y": 1537.2753455870939,
+			"width": 308.6007419609453,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1362758735,
+			"version": 283,
+			"versionNonce": 2031498113,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "GkZcVC8U"
+				}
+			],
+			"updated": 1704703144226,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "GkZcVC8U",
+			"type": "text",
+			"x": 304.54051314305104,
+			"y": 1542.2753455870939,
+			"width": 281.875,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1161995951,
+			"version": 204,
+			"versionNonce": 1507910369,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704703144244,
+			"link": null,
+			"locked": false,
+			"text": "计数数组不为空或cas baseCount失败",
+			"rawText": "计数数组不为空或cas baseCount失败",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "5s6W11_I8tS0nkkdMJDdC",
+			"originalText": "计数数组不为空或cas baseCount失败",
+			"lineHeight": 1.2
+		},
+		{
 			"id": "Uq0EikE9",
 			"type": "text",
 			"x": -256.6957702636719,
@@ -1139,8 +1212,8 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "triangle",
-		"scrollX": 275.81967301772977,
-		"scrollY": -185.41635129731733,
+		"scrollX": 407.04417401759116,
+		"scrollY": -1244.4210962084876,
 		"zoom": {
 			"value": 0.8687402057647708
 		},
