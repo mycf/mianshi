@@ -136,6 +136,10 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 
 遍历链表，找到就覆盖原值（如果允许），没找到就放末尾（尾插法） ^gwUqg7RF
 
+元素在链表什么位置🤔 ^CyilUEhl
+
+树节点 ^Xd6ZclDY
+
 %%
 # Drawing
 ```json
@@ -779,6 +783,229 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 			"lineHeight": 1.2
 		},
 		{
+			"id": "GhR7teOuyzsRnbOvu386V",
+			"type": "rectangle",
+			"x": 526.6802409996707,
+			"y": 477.87990101490504,
+			"width": 108.30860640643846,
+			"height": 49,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 614736833,
+			"version": 44,
+			"versionNonce": 383761473,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"id": "9d0xOvpityzplCHdx1cos",
+					"type": "arrow"
+				},
+				{
+					"type": "text",
+					"id": "CyilUEhl"
+				}
+			],
+			"updated": 1704702532670,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "CyilUEhl",
+			"type": "text",
+			"x": 532.8345442028899,
+			"y": 483.17990101490506,
+			"width": 96,
+			"height": 38.4,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1761329103,
+			"version": 33,
+			"versionNonce": 775708673,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702532670,
+			"link": null,
+			"locked": false,
+			"text": "元素在链表什\n么位置🤔",
+			"rawText": "元素在链表什么位置🤔",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 34,
+			"containerId": "GhR7teOuyzsRnbOvu386V",
+			"originalText": "元素在链表什么位置🤔",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "9d0xOvpityzplCHdx1cos",
+			"type": "arrow",
+			"x": 474.2775874904878,
+			"y": 463.5224437361264,
+			"width": 50.231850033876526,
+			"height": 40.10676608258211,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 489377473,
+			"version": 45,
+			"versionNonce": 1593871393,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702532670,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					50.231850033876526,
+					40.10676608258211
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "GhR7teOuyzsRnbOvu386V",
+				"gap": 2.170803475306343,
+				"focus": -0.6823457263147499
+			},
+			"startArrowhead": null,
+			"endArrowhead": "triangle"
+		},
+		{
+			"id": "F9h7KbmI8K1LepAFRNE3n",
+			"type": "rectangle",
+			"x": 442.20368160163434,
+			"y": 856.2318087302881,
+			"width": 94.01719078947588,
+			"height": 29.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 773002177,
+			"version": 28,
+			"versionNonce": 2129954351,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "Xd6ZclDY"
+				}
+			],
+			"updated": 1704702555191,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "Xd6ZclDY",
+			"type": "text",
+			"x": 465.2122769963723,
+			"y": 861.2318087302881,
+			"width": 48,
+			"height": 19.2,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1488170081,
+			"version": 10,
+			"versionNonce": 36530031,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702559910,
+			"link": null,
+			"locked": false,
+			"text": "树节点",
+			"rawText": "树节点",
+			"fontSize": 16,
+			"fontFamily": 3,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 15,
+			"containerId": "F9h7KbmI8K1LepAFRNE3n",
+			"originalText": "树节点",
+			"lineHeight": 1.2
+		},
+		{
+			"id": "HW_6O3kTTdhHJVI__0n-l",
+			"type": "rectangle",
+			"x": 425.10957026854385,
+			"y": 1215.5939283901166,
+			"width": 131.99704792893465,
+			"height": 37.53035229658826,
+			"angle": 0,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1245681583,
+			"version": 56,
+			"versionNonce": 1607428239,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1704702696530,
+			"link": null,
+			"locked": false
+		},
+		{
 			"id": "Uq0EikE9",
 			"type": "text",
 			"x": -256.6957702636719,
@@ -867,9 +1094,9 @@ recheck头节点是否变化，防止其他线程并发修改 ^16FCdxP0
 		"currentItemFontSize": 16,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
-		"currentItemEndArrowhead": "arrow",
-		"scrollX": 121.57332973718974,
-		"scrollY": 261.20738894782806,
+		"currentItemEndArrowhead": "triangle",
+		"scrollX": 275.81967301772977,
+		"scrollY": -185.41635129731733,
 		"zoom": {
 			"value": 0.8687402057647708
 		},
