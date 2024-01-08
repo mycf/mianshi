@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/list.md",
+                "file": "分布式/Redis/redis.md",
                 "mode": "source",
                 "source": false
               }
@@ -224,7 +224,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/list.md",
+                "file": "分布式/Redis/redis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +241,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/list.md",
+                "file": "分布式/Redis/redis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +264,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/list.md"
+                "file": "分布式/Redis/redis.md"
               }
             }
           },
@@ -276,13 +276,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
