@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/nacos/Nacos.md",
+                "file": "分布式/zookeeper.md",
                 "mode": "source",
                 "source": false
               }
@@ -225,7 +225,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/nacos/Nacos.md",
+                "file": "分布式/zookeeper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -242,7 +242,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/nacos/Nacos.md",
+                "file": "分布式/zookeeper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -265,7 +265,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/nacos/Nacos.md"
+                "file": "分布式/zookeeper.md"
               }
             }
           },
@@ -393,6 +393,7 @@
   },
   "active": "879491de20037f58",
   "lastOpenFiles": [
+    "分布式/nacos/Nacos.md",
     "Java基础/UnSafe.md",
     "Excalidraw/ConcurrentHashMap 2024-01-07 23.42.34.excalidraw.md",
     "Java基础/ConcurrentHashMap.md",
@@ -420,7 +421,6 @@
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "Excalidraw/Scripts/Downloaded/Slideshow.md",
     "计算机基础",
-    "Java基础/JVM/双亲委派.md",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
