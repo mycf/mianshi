@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/kafka.md",
+                "file": "分布式/Redis/redis.md",
                 "mode": "source",
                 "source": false
               }
@@ -225,7 +225,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/kafka.md",
+                "file": "分布式/Redis/redis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -242,7 +242,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/kafka.md",
+                "file": "分布式/Redis/redis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -265,7 +265,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/kafka.md"
+                "file": "分布式/Redis/redis.md"
               }
             }
           },
@@ -393,8 +393,8 @@
   },
   "active": "879491de20037f58",
   "lastOpenFiles": [
-    "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/kafka/kafka.md",
+    "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/快速了解kafka.md",
