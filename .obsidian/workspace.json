@@ -163,7 +163,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "mode": "source",
                 "source": false
               }
@@ -236,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/Thread.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -276,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/Thread.md"
+                "file": "分布式/Redis/Redis Sentinel.md"
               }
             }
           },
@@ -403,6 +403,7 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "Java基础/Thread.md",
     "分布式/Seata.md",
     "分布式/Redis/Redis Sentinel.md",
     "分布式/Redis/Redis Cluter.md",
@@ -428,7 +429,6 @@
     "Excalidraw/list 2023-12-20 21.25.39.excalidraw.md",
     "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/kafka/03-消费者.md",
-    "分布式/消息队列/kafka/快速了解kafka.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
