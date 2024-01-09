@@ -163,7 +163,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "mode": "source",
                 "source": false
               }
@@ -236,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -276,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/07-客户端.md"
+                "file": "分布式/Redis/Redis Sentinel.md"
               }
             }
           },
@@ -401,8 +401,15 @@
       }
     ]
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "分布式/Redis/Redis Cluter.md",
+    "分布式/Redis/Redis big key.md",
+    "分布式/Redis/Redis Sentinel.md",
+    "分布式/消息队列/kafka/一文理解如何实现接口的幂等性.md",
+    "分布式/消息队列/kafka/消息挤压.md",
+    "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
+    "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/Untitled.md",
@@ -411,12 +418,8 @@
     "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
     "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
-    "分布式/消息队列/kafka/07-客户端.md",
     "分布式/消息队列/kafka/06-服务端.md",
     "分布式/Redis/Redis 分布式锁.md",
-    "分布式/Redis/Redis big key.md",
-    "分布式/Redis/Redis Cluter.md",
-    "分布式/Redis/Redis Sentinel.md",
     "分布式/Redis/Redis为什么那么快.md",
     "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md",
     "HashMap死循环.excalidraw.md",
@@ -426,9 +429,6 @@
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/快速了解kafka.md",
     "分布式/消息队列/kafka/控制器.md",
-    "分布式/Zookeeper/Zookeeper.md",
-    "分布式/Zookeeper/zk集群搭建.md",
-    "分布式/分布式事务.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
