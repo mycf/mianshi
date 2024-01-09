@@ -163,7 +163,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/Redis Sentinel.md",
+                "file": "分布式/Seata.md",
                 "mode": "source",
                 "source": false
               }
@@ -236,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/Redis Sentinel.md",
+                "file": "分布式/Seata.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/Redis Sentinel.md",
+                "file": "分布式/Seata.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -276,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/Redis Sentinel.md"
+                "file": "分布式/Seata.md"
               }
             }
           },
@@ -403,9 +403,9 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "分布式/Redis/Redis Sentinel.md",
     "分布式/Redis/Redis Cluter.md",
     "分布式/Redis/Redis big key.md",
-    "分布式/Redis/Redis Sentinel.md",
     "分布式/消息队列/kafka/一文理解如何实现接口的幂等性.md",
     "分布式/消息队列/kafka/消息挤压.md",
     "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
