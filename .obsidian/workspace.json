@@ -156,9 +156,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "072c7eeee95e116e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "分布式/Redis/zset.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 13
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -224,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/Redis/zset.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/Redis/zset.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -264,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/redis.md"
+                "file": "分布式/Redis/zset.md"
               }
             }
           },
@@ -276,7 +288,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -388,8 +401,9 @@
       }
     ]
   },
-  "active": "879491de20037f58",
+  "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "分布式/Redis/redis.md",
     "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
     "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
@@ -402,7 +416,6 @@
     "分布式/Redis/Redis为什么那么快.md",
     "分布式/Redis/zset.md",
     "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md",
-    "分布式/Redis/redis.md",
     "HashMap死循环.excalidraw.md",
     "分布式/Redis/list.md",
     "Excalidraw/list 2023-12-20 21.25.39.excalidraw.md",
