@@ -163,7 +163,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "mode": "source",
                 "source": false
               }
@@ -236,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
+                "file": "分布式/消息队列/kafka/07-客户端.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -276,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md"
+                "file": "分布式/消息队列/kafka/07-客户端.md"
               }
             }
           },
@@ -403,6 +403,7 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/Untitled.md",
     "分布式/Redis/redis.md",
@@ -428,7 +429,6 @@
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/zk集群搭建.md",
     "分布式/分布式事务.md",
-    "分布式/Untitled 1.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
