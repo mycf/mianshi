@@ -166,7 +166,7 @@ MappedByteBuffer map(int mode,long position,long size);
 
 ### 直接内存映射代码示例
 
-```
+```java
 static final int BUFFER_SIZE = 1024;
 
 /**

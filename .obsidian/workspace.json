@@ -163,7 +163,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
                 "mode": "source",
                 "source": false
               }
@@ -236,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -276,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/redis.md"
+                "file": "分布式/消息队列/kafka/NIO效率高的原理之零拷贝与直接内存映射.md"
               }
             }
           },
@@ -403,8 +403,10 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
-    "分布式/Redis/zset.md",
+    "分布式/消息队列/kafka/kafka.md",
+    "分布式/消息队列/kafka/Untitled.md",
     "分布式/Redis/redis.md",
+    "分布式/Redis/zset.md",
     "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
     "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
@@ -419,7 +421,6 @@
     "HashMap死循环.excalidraw.md",
     "分布式/Redis/list.md",
     "Excalidraw/list 2023-12-20 21.25.39.excalidraw.md",
-    "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/中间件的选型.md",
     "分布式/消息队列/kafka/03-消费者.md",
     "分布式/消息队列/kafka/快速了解kafka.md",
@@ -429,7 +430,6 @@
     "分布式/分布式事务.md",
     "分布式/Untitled 1.md",
     "分布式/Zookeeper",
-    "分布式/Untitled.md",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
     "分布式/nocas",
