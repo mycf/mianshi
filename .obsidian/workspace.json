@@ -163,7 +163,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "mode": "source",
                 "source": false
               }
@@ -236,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -276,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md"
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md"
               }
             }
           },
@@ -308,11 +308,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "分布式/Untitled.md",
+    "分布式/Untitled 1.md",
+    "分布式/一文彻底弄懂零拷贝原理.md",
+    "分布式/algolia.md",
+    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
     "分布式/Zookeeper/Zookeeper 实现分布式锁.md",
     "分布式/Zookeeper/Zookeeper.md",
-    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
     "分布式/Zookeeper/zk集群搭建.md",
     "Excalidraw/分布式锁 2023-12-26 12.53.41.excalidraw.md",
     "Excalidraw/类的加载过程 2023-12-22 15.22.29.excalidraw.md",
@@ -332,10 +336,6 @@
     "分布式/消息队列/kafka/kafka.md",
     "分布式/消息队列/kafka/Untitled.md",
     "分布式/Redis/redis.md",
-    "分布式/Redis/zset.md",
-    "分布式/消息队列/kafka/kafka为什么不支持读写分离.md",
-    "分布式/消息队列/kafka/kafka的副本同步机制.md",
-    "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
