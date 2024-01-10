@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mysql/日志-undo log.md",
+                "file": "Mysql/日志-redolog 重做日志.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mysql/日志-undo log.md",
+                "file": "Mysql/日志-redolog 重做日志.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mysql/日志-undo log.md",
+                "file": "Mysql/日志-redolog 重做日志.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mysql/日志-undo log.md"
+                "file": "Mysql/日志-redolog 重做日志.md"
               }
             }
           },
@@ -159,8 +159,8 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
-    "Mysql/日志-redolog 重做日志.md",
     "Mysql/日志-undo log.md",
+    "Mysql/日志-redolog 重做日志.md",
     "Java基础/JVM/synchronized.md",
     "Java基础/ArrayList.md",
     "Java基础/synchronized.md",
