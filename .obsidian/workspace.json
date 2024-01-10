@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mysql/日志-redolog 重做日志.md",
+                "file": "Mysql/日志-undo log.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mysql/日志-redolog 重做日志.md",
+                "file": "Mysql/日志-undo log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mysql/日志-redolog 重做日志.md",
+                "file": "Mysql/日志-undo log.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mysql/日志-redolog 重做日志.md"
+                "file": "Mysql/日志-undo log.md"
               }
             }
           },
@@ -159,6 +159,7 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "Mysql/日志-redolog 重做日志.md",
     "Mysql/日志-undo log.md",
     "Java基础/JVM/synchronized.md",
     "Java基础/ArrayList.md",
@@ -184,7 +185,6 @@
     "分布式/Redis/Redis big key.md",
     "分布式/消息队列/kafka/一文理解如何实现接口的幂等性.md",
     "分布式/消息队列/kafka/消息挤压.md",
-    "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
