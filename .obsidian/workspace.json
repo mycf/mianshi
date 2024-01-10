@@ -163,7 +163,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/Redis Sentinel.md",
+                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
                 "mode": "source",
                 "source": false
               }
@@ -236,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/Redis Sentinel.md",
+                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/Redis Sentinel.md",
+                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -276,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/Redis Sentinel.md"
+                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md"
               }
             }
           },
@@ -403,9 +403,11 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "分布式/Redis/Redis 分布式锁.md",
+    "分布式/Redis/Redis为什么那么快.md",
+    "分布式/Redis/Redis Sentinel.md",
     "Java基础/Thread.md",
     "分布式/Seata.md",
-    "分布式/Redis/Redis Sentinel.md",
     "分布式/Redis/Redis Cluter.md",
     "分布式/Redis/Redis big key.md",
     "分布式/消息队列/kafka/一文理解如何实现接口的幂等性.md",
@@ -421,8 +423,6 @@
     "分布式/消息队列/kafka/kafka的副本同步机制.md",
     "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
     "分布式/消息队列/kafka/06-服务端.md",
-    "分布式/Redis/Redis 分布式锁.md",
-    "分布式/Redis/Redis为什么那么快.md",
     "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md",
     "HashMap死循环.excalidraw.md",
     "分布式/Redis/list.md",

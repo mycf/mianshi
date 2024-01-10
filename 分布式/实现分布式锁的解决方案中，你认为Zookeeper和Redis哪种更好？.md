@@ -40,8 +40,7 @@ Zookeeper天生的设计定位就是一个分布式协调组件，是CP模型，
 排他锁（Exclusive Locks），又被称为写锁或独占锁，如果事务T1对数据对象O1加上排他锁，那么整个加锁期间，只允许事务T1对O1进行读取和更新操作，其他任何事务都不能进行读或写。
 
 定义锁：
-
-/exclusive_lock/lock
+`/exclusive_lock/lock`
 
 **实现方式：**
 
@@ -80,7 +79,7 @@ curator 的几种锁方案 ：
 下面例子模拟 50 个线程使用重入排它锁 InterProcessMutex 同时争抢锁：
 
 ## 实例
-
+```java
 public class InterprocessLock {  
     public static void main(String[] args)  {  
         CuratorFramework zkClient = getZkClient();  
@@ -134,6 +133,7 @@ public class InterprocessLock {
         return zkClient;  
     }  
 }  
+```
 
 控制台每间隔一秒钟输出一条记录：
 
