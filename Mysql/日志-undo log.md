@@ -40,7 +40,7 @@ undo log是mysql中比较重要的事务日志之一，顾名思义，undo log�
 
 在MySQL中，undo log日志的作用主要有两个：
 
-- 1、提供回滚操作【undo log实现事务的原子性】
+- 提供回滚操作【undo log实现事务的原子性】
 
 我们在进行数据更新操作的时候，不仅会记录redo log，还会记录undo log，如果因为某些原因导致事务回滚，那么这个时候MySQL就要执行回滚（rollback）操作，利用undo log将数据恢复到事务开始之前的状态。
 
