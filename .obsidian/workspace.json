@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "Java基础/HashMap.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "Java基础/HashMap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "Java基础/HashMap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md"
+                "file": "Java基础/HashMap.md"
               }
             }
           },
@@ -159,13 +159,15 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "Java基础/FutureTask.md",
+    "分布式/Redis/Redis Cluter.md",
+    "分布式/Zookeeper/Zookeeper.md",
     "分布式/消息队列/kafka/kafka.md",
     "Java基础/死锁.md",
     "Java基础/Arraylist 与 LinkedList的区别.md",
     "Java基础/BlockingQueue.md",
     "Java基础/ArrayList和Vector的区别.md",
     "分布式/Zookeeper/zk集群搭建.md",
-    "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/Zookeeper 实现分布式锁.md",
     "分布式/分布式事务.md",
     "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
@@ -183,8 +185,6 @@
     "Java基础/Class.md",
     "Mysql/日志-redolog 重做日志.md",
     "Mysql/日志-undo log.md",
-    "Java基础/synchronized.md",
-    "框架/Spring/SpringBoot/springboot的启动流程.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
