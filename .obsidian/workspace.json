@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/Untitled.md",
+                "file": "Java基础/AbstractQueuedSynchronizer.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/Untitled.md",
+                "file": "Java基础/AbstractQueuedSynchronizer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/Untitled.md",
+                "file": "Java基础/AbstractQueuedSynchronizer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/Untitled.md"
+                "file": "Java基础/AbstractQueuedSynchronizer.md"
               }
             }
           },
@@ -160,7 +160,7 @@
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
     "Java基础/Thread.md",
-    "Java基础/Untitled.md",
+    "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/JVM/synchronized.md",
     "Java基础/线程池参数设计.md",
     "Java基础/ArrayList和Vector的区别.md",
