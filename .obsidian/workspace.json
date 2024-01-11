@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/Redis 缓存.md",
+                "file": "Java基础/sleep与wait的区别 sleep(0).md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/Redis 缓存.md",
+                "file": "Java基础/sleep与wait的区别 sleep(0).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/Redis 缓存.md",
+                "file": "Java基础/sleep与wait的区别 sleep(0).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/Redis 缓存.md"
+                "file": "Java基础/sleep与wait的区别 sleep(0).md"
               }
             }
           },
@@ -160,12 +159,14 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "Java基础/ThreadPoolExecutor.md",
+    "Java基础/线程池参数设计.md",
+    "分布式/Redis/Redis 缓存.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/ArrayList.md",
     "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/Thread.md",
     "Java基础/JVM/synchronized.md",
-    "Java基础/线程池参数设计.md",
     "Java基础/ArrayList和Vector的区别.md",
     "Java基础/BlockingQueue.md",
     "Java基础/CompletionService.md",
@@ -184,8 +185,6 @@
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/zk集群搭建.md",
     "Excalidraw/分布式锁 2023-12-26 12.53.41.excalidraw.md",
-    "Excalidraw/类的加载过程 2023-12-22 15.22.29.excalidraw.md",
-    "Excalidraw/BlockingQueue 2023-12-27 22.33.30.excalidraw.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
