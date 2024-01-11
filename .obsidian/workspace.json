@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/为什么要重写hashCode方法.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/为什么要重写hashCode方法.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/为什么要重写hashCode方法.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/为什么要重写hashCode方法.md"
+                "file": "Java基础/java 线程之间是如何通信的.md"
               }
             }
           },
@@ -157,14 +157,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "072c7eeee95e116e",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/死锁.md",
+    "Java基础/为什么要重写hashCode方法.md",
     "Java基础/HashMap.md",
     "Java基础/FutureTask.md",
     "分布式/Redis/Redis Cluter.md",
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/消息队列/kafka/kafka.md",
-    "Java基础/死锁.md",
     "Java基础/Arraylist 与 LinkedList的区别.md",
     "Java基础/BlockingQueue.md",
     "Java基础/ArrayList和Vector的区别.md",
@@ -184,7 +185,6 @@
     "Java基础/JVM/synchronized.md",
     "Java基础/CompletionService.md",
     "Java基础/Class.md",
-    "Mysql/日志-redolog 重做日志.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
