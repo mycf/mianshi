@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/Arraylist 与 LinkedList的区别.md",
+                "file": "Java基础/BlockingQueue.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/Arraylist 与 LinkedList的区别.md",
+                "file": "Java基础/BlockingQueue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/Arraylist 与 LinkedList的区别.md",
+                "file": "Java基础/BlockingQueue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/Arraylist 与 LinkedList的区别.md"
+                "file": "Java基础/BlockingQueue.md"
               }
             }
           },
@@ -157,8 +157,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "072c7eeee95e116e",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/Arraylist 与 LinkedList的区别.md",
+    "Java基础/ArrayList和Vector的区别.md",
     "分布式/Zookeeper/zk集群搭建.md",
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/Zookeeper 实现分布式锁.md",
@@ -174,10 +176,8 @@
     "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/Thread.md",
     "Java基础/JVM/synchronized.md",
-    "Java基础/ArrayList和Vector的区别.md",
     "Java基础/BlockingQueue.md",
     "Java基础/CompletionService.md",
-    "Java基础/Arraylist 与 LinkedList的区别.md",
     "Java基础/Class.md",
     "Mysql/日志-redolog 重做日志.md",
     "Mysql/日志-undo log.md",
