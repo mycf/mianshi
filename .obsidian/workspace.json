@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/sleep与wait的区别 sleep(0).md",
+                "file": "分布式/一文彻底弄懂零拷贝原理.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/sleep与wait的区别 sleep(0).md",
+                "file": "分布式/一文彻底弄懂零拷贝原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/sleep与wait的区别 sleep(0).md",
+                "file": "分布式/一文彻底弄懂零拷贝原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/sleep与wait的区别 sleep(0).md"
+                "file": "分布式/一文彻底弄懂零拷贝原理.md"
               }
             }
           },
@@ -157,8 +157,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "072c7eeee95e116e",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/sleep与wait的区别 sleep(0).md",
     "Java基础/ThreadPoolExecutor.md",
     "Java基础/线程池参数设计.md",
     "分布式/Redis/Redis 缓存.md",
@@ -184,7 +185,6 @@
     "分布式/Zookeeper/Zookeeper 实现分布式锁.md",
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/zk集群搭建.md",
-    "Excalidraw/分布式锁 2023-12-26 12.53.41.excalidraw.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
