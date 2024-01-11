@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/Untitled.md",
+                "file": "Java基础/死锁.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/Untitled.md",
+                "file": "Java基础/死锁.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/Untitled.md",
+                "file": "Java基础/死锁.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/Untitled.md"
+                "file": "Java基础/死锁.md"
               }
             }
           },
@@ -160,7 +160,7 @@
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
     "Java基础/Arraylist 与 LinkedList的区别.md",
-    "Java基础/Untitled.md",
+    "Java基础/死锁.md",
     "Java基础/BlockingQueue.md",
     "Java基础/ArrayList和Vector的区别.md",
     "分布式/Zookeeper/zk集群搭建.md",
