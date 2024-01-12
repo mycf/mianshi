@@ -34,6 +34,7 @@ public PriorityQueue(int initialCapacity) {
 
 ```
 
+# offer
 
 ```java
 public boolean offer(E e) {
@@ -53,3 +54,4 @@ public boolean offer(E e) {
 
 ```
 
+![[PriorityQueue 2024-01-12 22.21.34.excalidraw]]
