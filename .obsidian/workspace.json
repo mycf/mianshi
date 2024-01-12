@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
+                "file": "Java基础/PriorityQueue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
+                "file": "Java基础/PriorityQueue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md"
+                "file": "Java基础/PriorityQueue.md"
               }
             }
           },
@@ -177,10 +177,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aa57c2d083d49410",
+  "active": "072c7eeee95e116e",
   "lastOpenFiles": [
-    "Java基础/PriorityQueue.md",
     "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
+    "Java基础/PriorityQueue.md",
     "Java基础/AbstractQueue.md",
     "Java基础/DelayQueue.md",
     "Java基础/死锁.md",
