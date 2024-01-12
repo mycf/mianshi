@@ -54,4 +54,4 @@ public boolean offer(E e) {
 
 ```
 
-![[PriorityQueue 2024-01-12 22.21.34.excalidraw]]
+![[PriorityQueue 2024-01-12 22.21.34.excalidraw|100%]]

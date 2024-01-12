@@ -6,7 +6,7 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 37.750135208220655,
         "children": [
           {
             "id": "072c7eeee95e116e",
@@ -19,24 +19,13 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c1521af0269457ee",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "d9d6a549a6191174",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 62.249864791779345,
         "children": [
           {
             "id": "83eeed028ee10fe0",
@@ -115,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
+                "file": "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
+                "file": "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md"
+                "file": "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md"
               }
             }
           },
@@ -188,10 +177,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c1521af0269457ee",
+  "active": "83eeed028ee10fe0",
   "lastOpenFiles": [
-    "Java基础/PriorityQueue.md",
+    "Excalidraw/Untitled.md",
+    "Excalidraw/Untitled 1.md",
     "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
+    "Java基础/PriorityQueue.md",
     "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
     "Java基础/AbstractQueue.md",
     "Java基础/DelayQueue.md",
@@ -214,8 +205,6 @@
     "Java基础/sleep与wait的区别 sleep(0).md",
     "Java基础/ThreadPoolExecutor.md",
     "Java基础/线程池参数设计.md",
-    "分布式/Redis/Redis 缓存.md",
-    "Java基础/ArrayList.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
