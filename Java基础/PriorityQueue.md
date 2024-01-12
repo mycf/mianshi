@@ -1,3 +1,4 @@
+**优先队列的作用是能保证每次取出的元素都是队列中权值最小的**(Java的优先队列每次取最小元素，C++的优先队列每次取最大元素)。
 
 ```java
 // 默认容量
@@ -29,3 +30,21 @@ public PriorityQueue(int initialCapacity) {
 
 ```
 
+
+```java
+public boolean offer(E e) {
+	if (e == null)
+		throw new NullPointerException();
+	modCount++;
+	int i = size;
+	// 实际元素数量大于等于队列大小
+	if (i >= queue.length)
+		// 需要扩容
+		grow(i + 1);
+	// 
+	siftUp(i, e);
+	size = i + 1;
+	return true;
+}
+
+```
