@@ -55,3 +55,38 @@ public boolean offer(E e) {
 ```
 
 ![[PriorityQueue 2024-01-12 22.21.34.excalidraw|100%]]
+
+```java
+private void siftUp(int k, E x) {
+	if (comparator != null)
+		siftUpUsingComparator(k, x, queue, comparator);
+	else
+		siftUpComparable(k, x, queue);
+}
+
+private static <T> void siftUpComparable(int k, T x, Object[] es) {
+	Comparable<? super T> key = (Comparable<? super T>) x;
+	while (k > 0) {
+		int parent = (k - 1) >>> 1;
+		Object e = es[parent];
+		if (key.compareTo((T) e) >= 0)
+			break;
+		es[k] = e;
+		k = parent;
+	}
+	es[k] = key;
+}
+
+private static <T> void siftUpUsingComparator(
+	int k, T x, Object[] es, Comparator<? super T> cmp) {
+	while (k > 0) {
+		int parent = (k - 1) >>> 1;
+		Object e = es[parent];
+		if (cmp.compare(x, (T) e) >= 0)
+			break;
+		es[k] = e;
+		k = parent;
+	}
+	es[k] = x;
+}
+```
