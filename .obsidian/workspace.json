@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/DelayQueue.md",
+                "file": "Java基础/PriorityQueue.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/DelayQueue.md",
+                "file": "Java基础/PriorityQueue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/DelayQueue.md",
+                "file": "Java基础/PriorityQueue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/DelayQueue.md"
+                "file": "Java基础/PriorityQueue.md"
               }
             }
           },
@@ -159,8 +159,9 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
-    "Java基础/死锁.md",
     "Java基础/DelayQueue.md",
+    "Java基础/PriorityQueue.md",
+    "Java基础/死锁.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/为什么要重写hashCode方法.md",
     "Java基础/HashMap.md",
@@ -184,7 +185,6 @@
     "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/Thread.md",
     "Java基础/JVM/synchronized.md",
-    "Java基础/CompletionService.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
