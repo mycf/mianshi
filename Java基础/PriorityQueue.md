@@ -1,5 +1,9 @@
 **优先队列的作用是能保证每次取出的元素都是队列中权值最小的**(Java的优先队列每次取最小元素，C++的优先队列每次取最大元素)。
 
+Java中*PriorityQueue*实现了*Queue*接口，不允许放入`null`元素；其通过堆实现，具体说是通过完全二叉树(_complete binary tree_)实现的**小顶堆**(任意一个非叶子节点的权值，都不大于其左右子节点的权值)，也就意味着可以通过数组来作为*PriorityQueue*的底层实现。
+
+![[PriorityQueue 2024-01-12 21.38.39.excalidraw]]
+
 ```java
 // 默认容量
 private static final int DEFAULT_INITIAL_CAPACITY = 11;

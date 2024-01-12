@@ -6,6 +6,7 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
+        "dimension": 34.523809523809526,
         "children": [
           {
             "id": "072c7eeee95e116e",
@@ -16,6 +17,23 @@
                 "file": "Java基础/PriorityQueue.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "a7b424d45a2896ee",
+        "type": "tabs",
+        "dimension": 65.47619047619048,
+        "children": [
+          {
+            "id": "aa57c2d083d49410",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md"
               }
             }
           }
@@ -69,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -85,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/PriorityQueue.md",
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/PriorityQueue.md",
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/PriorityQueue.md"
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md"
               }
             }
           },
@@ -142,7 +161,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,10 +177,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "072c7eeee95e116e",
+  "active": "c39a7d4de1e5f2c9",
   "lastOpenFiles": [
-    "Java基础/AbstractQueue.md",
     "Java基础/PriorityQueue.md",
+    "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
+    "Java基础/AbstractQueue.md",
     "Java基础/DelayQueue.md",
     "Java基础/死锁.md",
     "Java基础/java 线程之间是如何通信的.md",
@@ -184,7 +205,6 @@
     "分布式/Redis/Redis 缓存.md",
     "Java基础/ArrayList.md",
     "Java基础/AbstractQueuedSynchronizer.md",
-    "Java基础/Thread.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
