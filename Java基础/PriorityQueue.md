@@ -1,10 +1,12 @@
 
 ```java
+// 实际存储元素的数组
 transient Object[] queue; // non-private to simplify nested class access
 
 /**
  * The number of elements in the priority queue.
  */
+// 
 int size;
 
 /**
