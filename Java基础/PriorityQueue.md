@@ -38,16 +38,16 @@ public PriorityQueue(int initialCapacity) {
 
 ```java
 public boolean offer(E e) {
-	if (e == null)
+	if (e == null) // 不允许放入null
 		throw new NullPointerException();
 	modCount++;
 	int i = size;
 	// 实际元素数量大于等于队列大小
 	if (i >= queue.length)
-		// 需要扩容
+		// 自动扩容
 		grow(i + 1);
 	// 
-	siftUp(i, e);
+	siftUp(i, e); //调整
 	size = i + 1;
 	return true;
 }
