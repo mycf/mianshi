@@ -31,10 +31,13 @@ public E take() throws InterruptedException {
 	lock.lockInterruptibly();
 	try {
 		for (;;) {
+			// 获取首节点
 			E first = q.peek();
 			if (first == null)
+				// 等待被唤醒
 				available.await();
 			else {
+				// 获取延迟时间
 				long delay = first.getDelay(NANOSECONDS);
 				if (delay <= 0L)
 					return q.poll();
