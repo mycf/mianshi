@@ -28,8 +28,8 @@ B+树的创造者[Rudolf Bayer](https://zh.wikipedia.org/wiki/Rudolf_Bayer "Rudo
 ## 算法[[编辑](https://zh.wikipedia.org/w/index.php?title=B%2B%E6%A0%91&action=edit&section=2 "编辑章节：算法")]
 
 ### 查找[[编辑](https://zh.wikipedia.org/w/index.php?title=B%2B%E6%A0%91&action=edit&section=3 "编辑章节：查找")]
-
-查找以典型的方式进行，类似于[二叉查找树](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91 "二叉查找树")。起始于根节点，自顶向下遍历树，选择其分离值在要查找值的任意一边的子指针。在节点内部典型的使用是[二分查找](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE "二分查找")来确定这个位置。
+j
+查找以典型的方式进行，类似于[二叉查找树](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91 "二叉查找树")。起始于根节点，自顶向下遍历树，选择其分离值在要查找值的任意一边jjj的子指针。在节点内部典型的使用是[二分查找](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE "二分查找")来确定这个位置。
 
 ### 插入[[编辑](https://zh.wikipedia.org/w/index.php?title=B%2B%E6%A0%91&action=edit&section=4 "编辑章节：插入")]
 
@@ -39,7 +39,7 @@ B+树的创造者[Rudolf Bayer](https://zh.wikipedia.org/wiki/Rudolf_Bayer "Rudo
 2. 如果没有节点处于违规状态则处理结束。
 3. 如果某个节点有过多元素，则把它分裂为两个节点，每个都有最小数目的元素。在树上递归向上继续这个处理直到到达根节点，如果根节点被分裂，则建立一个新根节点。为了使它工作，元素的最小和最大数目典型的必须选择为使最小数不小于最大数的一半。
 
-### 删除[[编辑](https://zh.wikipedia.org/w/index.php?title=B%2B%E6%A0%91&action=edit&section=5 "编辑章节：删除")]
+### 删除
 
 1. 首先，查找要删除的值。接着从包含它的节点中删除这个值。
 2. 如果没有节点处于违规状态则处理结束。
