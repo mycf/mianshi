@@ -40,6 +40,7 @@ public E take() throws InterruptedException {
 				// 获取延迟时间
 				long delay = first.getDelay(NANOSECONDS);
 				if (delay <= 0L)
+					// 获取首节点
 					return q.poll();
 				first = null; // don't retain ref while waiting
 				if (leader != null)
