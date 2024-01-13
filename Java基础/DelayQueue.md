@@ -42,13 +42,17 @@ public E take() throws InterruptedException {
 				if (delay <= 0L)
 					// 获取首节点
 					return q.poll();
+				// 首节点还没到期不能取出
 				first = null; // don't retain ref while waiting
 				if (leader != null)
+					// 第一个排队的线程还在，你也去无限期等待
 					available.await();
 				else {
 					Thread thisThread = Thread.currentThread();
+					// 当前线程变成leader
 					leader = thisThread;
 					try {
+						// leader线程相对于其他
 						available.awaitNanos(delay);
 					} finally {
 						if (leader == thisThread)
