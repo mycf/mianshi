@@ -2,8 +2,6 @@
 # offer
 
 # poll
-![[Queue#`E peek()`：]]
-![[Queue#4. `E poll()`：]]
 
 ```java
 public E poll() {
@@ -22,3 +20,6 @@ public E poll() {
 }
 
 ```
+
+![[Queue#`E peek()`：]]
+![[Queue#`E poll()`：]]
