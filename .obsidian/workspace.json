@@ -6,7 +6,6 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
-        "dimension": 42.18496484586262,
         "children": [
           {
             "id": "072c7eeee95e116e",
@@ -17,6 +16,16 @@
                 "file": "计算机基础/二进制运算.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "87612435b0fdd390",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md"
               }
             }
           },
@@ -32,23 +41,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "29ff30d2a2be2f4d",
-        "type": "tabs",
-        "dimension": 57.81503515413738,
-        "children": [
-          {
-            "id": "dfe6123d5361954a",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md"
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -188,11 +180,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "dfe6123d5361954a",
+  "active": "87612435b0fdd390",
   "lastOpenFiles": [
-    "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
-    "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
     "计算机基础/二进制运算.md",
+    "Excalidraw/Scripts/Downloaded/Auto Layout.md",
+    "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
+    "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
+    "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
     "Java基础/PriorityQueue.md",
     "Excalidraw/Untitled.md",
     "Excalidraw/Untitled 1.md",
@@ -215,14 +209,12 @@
     "分布式/分布式事务.md",
     "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
     "分布式/一文彻底弄懂零拷贝原理.md",
-    "Java基础/sleep与wait的区别 sleep(0).md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
     "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
-    "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Pasted Image 20231220210201_774.png",
     "计算机基础/计算机网络",
