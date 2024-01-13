@@ -95,3 +95,12 @@ private static <T> void siftUpUsingComparator(
 }
 ```
 
+# element()和peek()
+
+`element()`和`peek()`的语义完全相同，都是获取但不删除队首元素，也就是队列中权值最小的那个元素，二者唯一的区别是当方法失败时前者抛出异常，后者返回`null`。根据小顶堆的性质，堆顶那个元素就是全局最小的那个；由于堆用数组表示，根据下标关系，`0`下标处的那个元素既是堆顶元素。所以**直接返回数组`0`下标处的那个元素即可**。
+
+```java
+public E peek() {
+	return (E) queue[0];
+}
+```

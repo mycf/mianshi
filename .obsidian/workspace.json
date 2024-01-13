@@ -20,6 +20,28 @@
             }
           },
           {
+            "id": "7e58eb7ada42c57f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "35cd9e6c771bbbe3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "87612435b0fdd390",
             "type": "leaf",
             "state": {
@@ -39,7 +61,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -106,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/PriorityQueue.md",
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/PriorityQueue.md",
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/PriorityQueue.md"
+                "file": "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw 1.md"
               }
             }
           },
@@ -179,8 +202,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "072c7eeee95e116e",
+  "active": "35cd9e6c771bbbe3",
   "lastOpenFiles": [
+    "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
+    "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw 1.md",
+    "Java基础/PriorityQueue.md",
     "计算机基础/二进制运算.md",
     "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
     "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
@@ -188,10 +214,8 @@
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.md",
     "Excalidraw/Scripts/Downloaded/Auto Layout.md",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
-    "Java基础/PriorityQueue.md",
     "Excalidraw/Untitled.md",
     "Excalidraw/Untitled 1.md",
-    "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
     "Java基础/AbstractQueue.md",
     "Java基础/DelayQueue.md",
     "Java基础/死锁.md",
