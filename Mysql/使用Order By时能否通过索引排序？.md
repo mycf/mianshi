@@ -386,30 +386,24 @@ InnoDB会自调优(self-tuning)，如果判定建立自适应哈希索引(Adapti
 索引下推（INDEX CONDITION PUSHDOWN，简称 ICP）是在 MySQL 5.6 针对扫描二级索引的一项优化改进。总的来说是通过把索引过滤条件下推到存储引擎，来减少 MySQL 存储引擎访问基表的次数以及 MySQL 服务层访问存储引擎的次数。ICP 适用于 MYISAM 和 INNODB，本篇的内容只基于 INNODB。
 
 在讲这个技术之前你得对mysql架构有一个简单的认识，见下图
+![image.png](https://gitee.com/ycfan/images/raw/master/img/20240113221128.png)
 
 
+● MySQL 服务层：也就是 SERVER 层，用来解析 SQL 的语法、语义、生成查询计划、接管从 MySQL 存储引擎层上推的数据进行二次过滤等等。
+● MySQL 存储引擎层：按照 MySQL 服务层下发的请求，通过索引或者全表扫描等方式把数据上传到 MySQL 服务层。
+● MySQL 索引扫描：根据指定索引过滤条件，遍历索引找到索引键对应的主键值后回表过滤剩余过滤条件。
+● MySQL 索引过滤：通过索引扫描并且基于索引进行二次条件过滤后再回表。
+![](https://cdn.nlark.com/yuque/0/2022/png/8380143/1671003728948-337a6fe2-7266-41f6-9fd1-4e51ae6ea5be.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0#averageHue=%23f2f1f1&clientId=uf8e23505-f563-4&from=paste&height=468&id=u6883ae79&originHeight=936&originWidth=2050&originalType=binary&ratio=1&rotation=0&showTitle=false&size=152642&status=done&style=none&taskId=u0808de18-45d4-4dba-ba14-666293cfd58&title=&width=1025)
+
+● 使用索引下推实现
+![](https://cdn.nlark.com/yuque/0/2022/png/8380143/1671003734248-9a0400c4-e897-4e95-bc77-5793bb03daed.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0#averageHue=%23f3f3f3&clientId=uf8e23505-f563-4&from=paste&height=469&id=ued5d43ad&originHeight=938&originWidth=2158&originalType=binary&ratio=1&rotation=0&showTitle=false&size=140290&status=done&style=none&taskId=u7c3f56b6-d08c-4be2-97c9-f323880ba33&title=&width=1079)
 
 
-●
-MySQL 服务层：也就是 SERVER 层，用来解析 SQL 的语法、语义、生成查询计划、接管从 MySQL 存储引擎层上推的数据进行二次过滤等等。
-●
-MySQL 存储引擎层：按照 MySQL 服务层下发的请求，通过索引或者全表扫描等方式把数据上传到 MySQL 服务层。
-●
-MySQL 索引扫描：根据指定索引过滤条件，遍历索引找到索引键对应的主键值后回表过滤剩余过滤条件。
-●
-MySQL 索引过滤：通过索引扫描并且基于索引进行二次条件过滤后再回表。
-
-
-●
-使用索引下推实现
-
-
-
-索引下推的使用条件
+## 索引下推的使用条件
 
 ● ICP目标是减少全行记录读取，从而减少IO 操作，只能用于非聚簇索引。聚簇索引本身包含的表数据，也就不存在下推一说。
 ● 只能用于`range`、 `ref`、 `eq_ref`、`ref_or_null`访问方法；
-● where 条件中是用 and 而非 `or` 的时候。
+● where 条件中是用 `and` 而非 `or` 的时候。
 ● ICP适用于分区表。
 ● ICP不支持基于虚拟列上建立的索引，比如说函数索引
 ● ICP不支持引用子查询作为条件。
