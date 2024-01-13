@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/PriorityQueue.md",
+                "file": "Java基础/DelayQueue.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,8 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -126,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/PriorityQueue.md",
+                "file": "Java基础/DelayQueue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/PriorityQueue.md",
+                "file": "Java基础/DelayQueue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/PriorityQueue.md"
+                "file": "Java基础/DelayQueue.md"
               }
             }
           },
@@ -201,11 +200,11 @@
   },
   "active": "072c7eeee95e116e",
   "lastOpenFiles": [
+    "Java基础/PriorityQueue.md",
     "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
     "Excalidraw/PriorityQueue 2024-01-12 21.38.40.excalidraw.md",
     "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
     "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
-    "Java基础/PriorityQueue.md",
     "计算机基础/二进制运算.md",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.md",
