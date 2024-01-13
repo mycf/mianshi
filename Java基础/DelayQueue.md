@@ -13,7 +13,7 @@ public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
 ```
 
 > [!NOTE] 思考：PriorityQueue
-> 第一个元素是最小的过期时间，监控第一个元素就可以知道什么时候去取数据，类似redis监控过期key
+> 第一个元素是最小的过期时间，监控第一个元素就可以知道什么时候去取数据，类似redis监控过期key，最小的过期时间就是系统下次运行的时间
 
 # offer
 
