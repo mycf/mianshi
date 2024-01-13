@@ -61,6 +61,7 @@ public boolean offer(E e) {
 // x 元素
 private void siftUp(int k, E x) {
 	if (comparator != null)
+		// comparator是内部变量，把它传过去有点无聊
 		siftUpUsingComparator(k, x, queue, comparator);
 	else
 		siftUpComparable(k, x, queue);
@@ -73,6 +74,7 @@ private static <T> void siftUpComparable(int k, T x, Object[] es) {
 		Object e = es[parent];
 		if (key.compareTo((T) e) >= 0)
 			break;
+		// 和父节点进行交换
 		es[k] = e;
 		k = parent;
 	}
