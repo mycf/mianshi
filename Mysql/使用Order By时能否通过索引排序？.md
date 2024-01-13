@@ -407,23 +407,24 @@ MySQL 索引过滤：通过索引扫描并且基于索引进行二次条件过�
 
 索引下推的使用条件
 
-●
-ICP目标是减少全行记录读取，从而减少IO 操作，只能用于非聚簇索引。聚簇索引本身包含的表数据，也就不存在下推一说。
-●
-只能用于range、 ref、 eq_ref、ref_or_null访问方法；
-●
-where 条件中是用 and 而非 or 的时候。
-●
-ICP适用于分区表。
-●
-ICP不支持基于虚拟列上建立的索引，比如说函数索引
-●
-ICP不支持引用子查询作为条件。
-●
-ICP不支持存储函数作为条件，因为存储引擎无法调用存储函数。
+● ICP目标是减少全行记录读取，从而减少IO 操作，只能用于非聚簇索引。聚簇索引本身包含的表数据，也就不存在下推一说。
+● 只能用于`range`、 `ref`、 `eq_ref`、`ref_or_null`访问方法；
+● where 条件中是用 and 而非 `or` 的时候。
+● ICP适用于分区表。
+● ICP不支持基于虚拟列上建立的索引，比如说函数索引
+● ICP不支持引用子查询作为条件。
+● ICP不支持存储函数作为条件，因为存储引擎无法调用存储函数。
 
 索引下推相关语句
 
+```mysql
+# 查看索引下推是否开启
+select @@optimizer_switch
+# 开启索引下推
+set optimizer_switch="index_condition_pushdown=on";
+# 关闭索引下推
+set optimizer_switch="index_condition_pushdown=off";
+```
 
 # 什么是唯一索引？
 
