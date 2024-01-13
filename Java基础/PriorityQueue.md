@@ -69,7 +69,7 @@ private void siftUp(int k, E x) {
 private static <T> void siftUpComparable(int k, T x, Object[] es) {
 	Comparable<? super T> key = (Comparable<? super T>) x;
 	while (k > 0) {
-		int parent = (k - 1) >>> 1;
+		int parent = (k - 1) >>> 1; // parentNo = (nodeNo-1)/2
 		Object e = es[parent];
 		if (key.compareTo((T) e) >= 0)
 			break;
