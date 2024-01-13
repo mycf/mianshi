@@ -39,8 +39,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
+                "file": "计算机基础/二进制运算.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
+                "file": "计算机基础/二进制运算.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md"
+                "file": "计算机基础/二进制运算.md"
               }
             }
           },
@@ -180,10 +179,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "87612435b0fdd390",
+  "active": "072c7eeee95e116e",
   "lastOpenFiles": [
-    "计算机基础/二进制运算.md",
     "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
+    "计算机基础/二进制运算.md",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.md",
     "Excalidraw/Scripts/Downloaded/Auto Layout.md",
