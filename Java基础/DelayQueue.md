@@ -1,4 +1,20 @@
 
+```java
+public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
+    implements BlockingQueue<E> {
+
+    private final transient ReentrantLock lock = new ReentrantLock();
+	// 使用优先队列保存元素
+    private final PriorityQueue<E> q = new PriorityQueue<E>();
+
+```
+
+```
+```
+
+> [!NOTE] 思考：PriorityQueue
+> 监控第一个元素就可以
+
 # offer
 
 # poll
