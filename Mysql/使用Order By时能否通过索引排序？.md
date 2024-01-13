@@ -516,7 +516,6 @@ select * from user where age = 18 and username = '张三';
 -- 刚刚不是手最左前缀匹配吗，为什么放到第二位也可以呢？
 -- 虽说顺序不一致，但是在SQL执行过程中，根据查询条件命中索引，
 -- 无论我username在不在前面，都会按照username去进行索引查找。
-
 ```
 
 # 使用Order By时能否通过索引排序？
@@ -524,7 +523,6 @@ select * from user where age = 18 and username = '张三';
 我们知道在很多场景下会导致索引失效，比如说没有遵循B+树的最左匹配原则，但是也有一些情况是遵循了最左匹配原则但是还是没有走索引，这里我们使用order by进行排序的时候就有不走索引的情况，那么带大家来分析一下
 
 ```mysql
-
 drop table if exists `user`;
 drop table if exists `user_example`;
 create table `user`(
