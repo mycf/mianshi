@@ -49,10 +49,10 @@ public E take() throws InterruptedException {
 					available.await();
 				else {
 					Thread thisThread = Thread.currentThread();
-					// 当前线程变成leader
+					// 当前线程为leader
 					leader = thisThread;
 					try {
-						// leader线程相对于其他
+						// leader线程进入限期等待（timedout-waiting）
 						available.awaitNanos(delay);
 					} finally {
 						if (leader == thisThread)
