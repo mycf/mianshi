@@ -77,13 +77,16 @@
             "id": "1da5f9517f90d2f4",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md"
+                "file": "Java基础/DelayQueue.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -149,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JUC/Condition.md",
+                "file": "Java基础/DelayQueue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JUC/Condition.md",
+                "file": "Java基础/DelayQueue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JUC/Condition.md"
+                "file": "Java基础/DelayQueue.md"
               }
             }
           },
@@ -222,18 +225,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "072c7eeee95e116e",
+  "active": "1da5f9517f90d2f4",
   "lastOpenFiles": [
-    "Java基础/DelayQueue.md",
+    "Java基础/PriorityQueue.md",
+    "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
+    "Java基础/Queue.md",
     "Java基础/JUC/Condition.md",
+    "Java基础/DelayQueue.md",
     "Java基础/BlockingQueue.md",
     "Java基础/Untitled.md",
-    "Java基础/Queue.md",
-    "Java基础/PriorityQueue.md",
     "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
     "Excalidraw/PriorityQueue 2024-01-12 21.38.40.excalidraw.md",
     "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
-    "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
     "计算机基础/二进制运算.md",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.md",

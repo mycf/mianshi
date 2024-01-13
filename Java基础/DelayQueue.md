@@ -46,14 +46,14 @@ public E take() throws InterruptedException {
 				first = null; // don't retain ref while waiting
 				if (leader != null)
 					// 第一个排队的线程还在，你也去无限期等待
-					available.await();
+					available.await(); // 唤醒之后，继续循环
 				else {
 					Thread thisThread = Thread.currentThread();
 					// 当前线程为leader
 					leader = thisThread;
 					try {
 						// leader线程进入限期等待（timedout-waiting）
-						available.awaitNanos(delay);
+						available.awaitNanos(delay);// 唤醒之后，继续循环
 					} finally {
 						if (leader == thisThread)
 							leader = null;
@@ -63,6 +63,7 @@ public E take() throws InterruptedException {
 		}
 	} finally {
 		if (leader == null && q.peek() != null)
+			// 唤醒一个线程
 			available.signal();
 		lock.unlock();
 	}
