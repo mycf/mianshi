@@ -572,27 +572,24 @@ show variables like 'sort_buffer_size';
 ●
 当待排序的数据量大于sort buffer 时，那我们的sort buffer 就不够用了对吧。这个时候MySQL就得要借助外部文件来进行排序了。将待排序数据拆成多个小文件，对各个小文件进行排序，最后再汇总成一个有序的文件，外部排序使用的算法时归并排序
 
-我们来聊聊row_id排序
+我们来聊聊==row_id排序==
 
-和大家说一个这个参数max_length_for_sort_data ，在我们MySQL中专门控制用户排序的行数据长度参数。默认是4096，也就是说如果超过了这个长度MySQL就会自动升级成row_id算法。
+和大家说一个这个参数*max_length_for_sort_data* ，在我们MySQL中专门控制用户排序的行数据长度参数。默认是4096，也就是说如果超过了这个长度MySQL就会自动升级成row_id算法。
 
-SQL
-复制代码
-1
-2
-// 默认max_length_for_sort_data的大小为4096字节
+```mysql
+-- 默认max_length_for_sort_data的大小为4096字节
 show variables like 'max_length_for_sort_data';
+```
 
 row_id排序的思想就是把不需要的数据不放到sort_buffer中，让sort_buffer中只存放需要排序的字段。
 
 举个例子：
 
-```sql
-
-```
+```mysql
 explain select nickname,card_id,age from user order by card_id;
+```
 
-我们前面说到了sort buffer，在sort buffer里面进行排序的数据是我们select的全部字段，所以当我们查询的字段越多，那么sort buffer能容纳的数据量也就越小。而通过row_id排序就只会存放row_id 字段和排序相关的字段。其余的字段等排序完成之后通过主键ID进行回表拿。
+我们前面说到了`sort buffer`，在`sort buffer`里面进行排序的数据是我们select的全部字段，所以当我们查询的字段越多，那么sort buffer能容纳的数据量也就越小。而==通过row_id排序就只会存放row_id 字段和排序相关的字段。其余的字段等排序完成之后通过主键ID进行回表拿。==
 
 # group by 分组和 order by 在索引使用上有什么不同吗？
 
