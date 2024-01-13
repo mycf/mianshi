@@ -29,7 +29,7 @@ B+树的创造者[Rudolf Bayer](https://zh.wikipedia.org/wiki/Rudolf_Bayer "Rudo
 
 ### 查找[[编辑](https://zh.wikipedia.org/w/index.php?title=B%2B%E6%A0%91&action=edit&section=3 "编辑章节：查找")]
 j
-查找以典型的方式进行，类似于[二叉查找树](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91 "二叉查找树")。起始于根节点，自顶向下遍历树，选择其分离值在要查找值的任意一边jjj的子指针。在节点内部典型的使用是[二分查找](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE "二分查找")来确定这个位置。
+查找以典型的方式进行，类似于[二叉查找树](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91 "二叉查找树")。起始于根节点，自顶向下遍历树，选择其分离值在要查找值的任意一边的子指针。在节点内部典型的使用是[二分查找](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE "二分查找")来确定这个位置。
 
 ### 插入[[编辑](https://zh.wikipedia.org/w/index.php?title=B%2B%E6%A0%91&action=edit&section=4 "编辑章节：插入")]
 
