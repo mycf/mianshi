@@ -57,6 +57,8 @@ public boolean offer(E e) {
 ![[PriorityQueue 2024-01-12 22.21.34.excalidraw|100%]]
 
 ```java
+// k 索引位置
+// x 元素
 private void siftUp(int k, E x) {
 	if (comparator != null)
 		siftUpUsingComparator(k, x, queue, comparator);
@@ -90,3 +92,4 @@ private static <T> void siftUpUsingComparator(
 	es[k] = x;
 }
 ```
+
