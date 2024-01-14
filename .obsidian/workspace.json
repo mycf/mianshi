@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Dubbo/Untitled.md",
+                "file": "框架/Dubbo/Dubbo的注册.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Dubbo/Untitled.md",
+                "file": "框架/Dubbo/Dubbo的注册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Dubbo/Untitled.md",
+                "file": "框架/Dubbo/Dubbo的注册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Dubbo/Untitled.md"
+                "file": "框架/Dubbo/Dubbo的注册.md"
               }
             }
           },
@@ -226,7 +226,7 @@
   "active": "1da5f9517f90d2f4",
   "lastOpenFiles": [
     "框架/Dubbo/dubbo.md",
-    "框架/Dubbo/Untitled.md",
+    "框架/Dubbo/Dubbo的注册.md",
     "Java基础/BlockingQueue.md",
     "Mysql/使用Order By时能否通过索引排序？.md",
     "Mysql/Untitled",
