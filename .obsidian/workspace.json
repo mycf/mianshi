@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/死锁.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/死锁.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/死锁.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/死锁.md"
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md"
               }
             }
           },
@@ -225,6 +225,7 @@
   },
   "active": "1da5f9517f90d2f4",
   "lastOpenFiles": [
+    "Java基础/死锁.md",
     "框架/Dubbo/Dubbo的注册.md",
     "框架/Dubbo/dubbo.md",
     "Java基础/BlockingQueue.md",
@@ -250,7 +251,6 @@
     "Excalidraw/Untitled.md",
     "Excalidraw/Untitled 1.md",
     "Java基础/AbstractQueue.md",
-    "Java基础/死锁.md",
     "Java基础/java 线程之间是如何通信的.md",
     "Java基础/为什么要重写hashCode方法.md",
     "Java基础/HashMap.md",
