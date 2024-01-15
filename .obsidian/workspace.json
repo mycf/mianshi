@@ -67,9 +67,11 @@
             "id": "87612435b0fdd390",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md"
+                "file": "Java基础/BlockingQueue.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -86,7 +88,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -152,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/性能优化/01-概述.md",
+                "file": "Java基础/BlockingQueue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/性能优化/01-概述.md",
+                "file": "Java基础/BlockingQueue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/性能优化/01-概述.md"
+                "file": "Java基础/BlockingQueue.md"
               }
             }
           },
@@ -229,6 +231,13 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/为什么要重写hashCode方法.md",
+    "Java基础/头插法.excalidraw.md",
+    "Java基础/线程池参数设计.md",
+    "Java基础/线程池.md",
+    "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
+    "Excalidraw/PriorityQueue 2024-01-12 21.38.40.excalidraw.md",
+    "Java基础/JVM/性能优化/01-概述.md",
     "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
     "Java基础/JVM/性能优化/性能优化案例7：日均百万级订单交易系统如何设置JVM参数.md",
     "Java基础/JVM/性能优化/性能优化案例6：调整垃圾收集器提高服务的吞吐量.md",
@@ -248,13 +257,6 @@
     "分布式/Redis/list.md",
     "分布式/Redis/Base理论.md",
     "分布式/Redis/CAP理论.md",
-    "分布式/Zookeeper/zk集群搭建.md",
-    "分布式/Zookeeper/Zookeeper.md",
-    "分布式/Zookeeper/Zookeeper 实现分布式锁.md",
-    "分布式/分布式事务.md",
-    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
-    "分布式/一文彻底弄懂零拷贝原理.md",
-    "Java基础/什么情况下会内存溢出，怎么解决.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
