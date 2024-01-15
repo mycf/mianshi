@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/Untitled.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/Untitled.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/Untitled.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/Untitled.md"
+                "file": "Java基础/JVM/垃圾收集器.md"
               }
             }
           },
@@ -223,10 +223,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1da5f9517f90d2f4",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
-    "Java基础/JVM/垃圾收集器.md",
     "Java基础/JVM/Untitled.md",
+    "Java基础/JVM/垃圾收集器.md",
     "框架/mybatis/缓存.md",
     "框架/mybatis/Mybatis中的井号和$有什么区别.md",
     "Java基础/Thread.md",
