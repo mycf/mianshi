@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "分布式/Redis/复制.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "分布式/Redis/复制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "分布式/Redis/复制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md"
+                "file": "分布式/Redis/复制.md"
               }
             }
           },
@@ -229,7 +229,12 @@
   },
   "active": "1da5f9517f90d2f4",
   "lastOpenFiles": [
+    "分布式/Zookeeper/zk集群搭建.md",
+    "分布式/Zookeeper/Zookeeper.md",
+    "分布式/Zookeeper/Zookeeper 实现分布式锁.md",
+    "分布式/分布式事务.md",
     "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+    "分布式/一文彻底弄懂零拷贝原理.md",
     "分布式/Redis/CAP理论.md",
     "Java基础/什么情况下会内存溢出，怎么解决.md",
     "Java基础/死锁.md",
@@ -250,11 +255,6 @@
     "算法/二分查找.md",
     "算法/反转链表.md",
     "算法/红黑树.md",
-    "分布式/Zookeeper/Zookeeper.md",
-    "框架/Spring/SpringBoot/springboot的启动流程.md",
-    "框架/Dubbo/Dubbo的注册.md",
-    "框架/Dubbo/dubbo.md",
-    "Java基础/BlockingQueue.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
