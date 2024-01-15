@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/Spring事务失效的场景.md",
+                "file": "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/Spring事务失效的场景.md",
+                "file": "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/Spring事务失效的场景.md",
+                "file": "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/Spring事务失效的场景.md"
+                "file": "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md"
               }
             }
           },
@@ -209,10 +209,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e58eb7ada42c57f",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
-    "框架/Spring/Spring的事务隔离级别.md",
+    "Java基础/JVM/性能优化/Untitled 1.md",
+    "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
     "框架/Spring/Spring事务失效的场景.md",
+    "框架/Spring/Spring的事务隔离级别.md",
     "Java基础/为什么要重写hashCode方法.md",
     "Java基础/JUC/Condition.md",
     "Java基础/JUC/CountDownLatch.md",
@@ -232,11 +234,9 @@
     "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
     "Java基础/JVM/性能优化/性能优化案例7：日均百万级订单交易系统如何设置JVM参数.md",
     "Java基础/JVM/性能优化/性能优化案例6：调整垃圾收集器提高服务的吞吐量.md",
-    "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
     "Java基础/JVM/性能优化/补充：浅堆深堆与内存泄露.md",
     "Java基础/JVM/性能优化/03. JVM 监控及诊断工具-GUI 篇.md",
     "Java基础/JVM/性能优化/02-JVM 监控及诊断工具-命令行篇.md",
-    "分布式/Redis/Redis为什么那么快.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",

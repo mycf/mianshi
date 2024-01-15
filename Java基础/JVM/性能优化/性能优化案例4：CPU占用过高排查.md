@@ -37,3 +37,5 @@
 
 ![](https://ask.qcloudimg.com/http-save/7250484/5w4kjcy5qp.png)
 
+# 哪些场景会导致cpu过高
+
