@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/为什么要重写hashCode方法.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/为什么要重写hashCode方法.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/为什么要重写hashCode方法.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/为什么要重写hashCode方法.md"
+                "file": "框架/Spring/Spring事务失效的场景.md"
               }
             }
           },
@@ -209,8 +209,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "7e58eb7ada42c57f",
   "lastOpenFiles": [
+    "框架/Spring/Spring的事务隔离级别.md",
+    "框架/Spring/Spring事务失效的场景.md",
+    "Java基础/为什么要重写hashCode方法.md",
     "Java基础/JUC/Condition.md",
     "Java基础/JUC/CountDownLatch.md",
     "Java基础/JUC/CyclicBarrier.md",
@@ -221,7 +224,6 @@
     "Java基础/CompletionService.md",
     "Java基础/Class.md",
     "Java基础/BlockingQueue.md",
-    "Java基础/为什么要重写hashCode方法.md",
     "Java基础/头插法.excalidraw.md",
     "Java基础/线程池参数设计.md",
     "Java基础/线程池.md",
@@ -235,8 +237,6 @@
     "Java基础/JVM/性能优化/03. JVM 监控及诊断工具-GUI 篇.md",
     "Java基础/JVM/性能优化/02-JVM 监控及诊断工具-命令行篇.md",
     "分布式/Redis/Redis为什么那么快.md",
-    "分布式/Redis/Redis Sentinel.md",
-    "分布式/Redis/Redis Cluter.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
