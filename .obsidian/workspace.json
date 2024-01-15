@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/三色标记.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/三色标记.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/三色标记.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/三色标记.md"
+                "file": "Java基础/java 线程之间是如何通信的.md"
               }
             }
           },
@@ -225,6 +225,8 @@
   },
   "active": "1da5f9517f90d2f4",
   "lastOpenFiles": [
+    "Java基础/ThreadPoolExecutor.md",
+    "Java基础/JVM/三色标记.md",
     "Java基础/JVM/垃圾收集器.md",
     "Java基础/JVM/Untitled.md",
     "框架/mybatis/缓存.md",
@@ -250,8 +252,6 @@
     "Java基础/Queue.md",
     "Java基础/JUC/Condition.md",
     "Java基础/Untitled.md",
-    "Excalidraw/PriorityQueue 2024-01-12 21.38.39.excalidraw.md",
-    "Excalidraw/PriorityQueue 2024-01-12 21.38.40.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "分布式/Zookeeper",
