@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/复制.md",
+                "file": "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/复制.md",
+                "file": "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/复制.md",
+                "file": "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/复制.md"
+                "file": "分布式/Redis/一文了解如何发现并解决Redis热key与大key问题.md"
               }
             }
           },
@@ -227,15 +227,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1da5f9517f90d2f4",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "分布式/Redis/list.md",
+    "分布式/Redis/Redis 分布式锁.md",
+    "分布式/Redis/redis.md",
+    "分布式/Redis/Base理论.md",
+    "分布式/Redis/CAP理论.md",
+    "分布式/Redis/复制.md",
     "分布式/Zookeeper/zk集群搭建.md",
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/Zookeeper 实现分布式锁.md",
     "分布式/分布式事务.md",
     "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
     "分布式/一文彻底弄懂零拷贝原理.md",
-    "分布式/Redis/CAP理论.md",
     "Java基础/什么情况下会内存溢出，怎么解决.md",
     "Java基础/死锁.md",
     "Java基础/线程池.md",
@@ -250,11 +255,6 @@
     "Java基础/JVM/Untitled.md",
     "框架/mybatis/缓存.md",
     "框架/mybatis/Mybatis中的井号和$有什么区别.md",
-    "Java基础/Thread.md",
-    "算法/插入排序.md",
-    "算法/二分查找.md",
-    "算法/反转链表.md",
-    "算法/红黑树.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
