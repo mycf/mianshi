@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/Redis为什么那么快.md",
+                "file": "Java基础/JVM/性能优化/01-概述.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/Redis为什么那么快.md",
+                "file": "Java基础/JVM/性能优化/01-概述.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/Redis为什么那么快.md",
+                "file": "Java基础/JVM/性能优化/01-概述.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/Redis为什么那么快.md"
+                "file": "Java基础/JVM/性能优化/01-概述.md"
               }
             }
           },
@@ -209,7 +209,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -229,6 +229,14 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
+    "Java基础/JVM/性能优化/性能优化案例7：日均百万级订单交易系统如何设置JVM参数.md",
+    "Java基础/JVM/性能优化/性能优化案例6：调整垃圾收集器提高服务的吞吐量.md",
+    "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
+    "Java基础/JVM/性能优化/补充：浅堆深堆与内存泄露.md",
+    "Java基础/JVM/性能优化/03. JVM 监控及诊断工具-GUI 篇.md",
+    "Java基础/JVM/性能优化/02-JVM 监控及诊断工具-命令行篇.md",
+    "分布式/Redis/Redis为什么那么快.md",
     "分布式/Redis/Redis Sentinel.md",
     "分布式/Redis/Redis Cluter.md",
     "分布式/Redis/Redis 缓存.md",
@@ -247,14 +255,6 @@
     "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
     "分布式/一文彻底弄懂零拷贝原理.md",
     "Java基础/什么情况下会内存溢出，怎么解决.md",
-    "Java基础/死锁.md",
-    "Java基础/线程池.md",
-    "Java基础/HashMap.md",
-    "Java基础/java 线程之间是如何通信的.md",
-    "Java基础/java的过滤器和拦截器有什么区别?.md",
-    "Java基础/Java是值传递还是引用传递？.md",
-    "Java基础/java接口调优.md",
-    "Java基础/ThreadPoolExecutor.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
