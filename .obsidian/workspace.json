@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/mybatis/Mybatis中的井号和$有什么区别.md",
+                "file": "Java基础/Thread.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/mybatis/Mybatis中的井号和$有什么区别.md",
+                "file": "Java基础/Thread.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/mybatis/Mybatis中的井号和$有什么区别.md",
+                "file": "Java基础/Thread.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/mybatis/Mybatis中的井号和$有什么区别.md"
+                "file": "Java基础/Thread.md"
               }
             }
           },
@@ -223,8 +223,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "1da5f9517f90d2f4",
   "lastOpenFiles": [
+    "算法/插入排序.md",
+    "算法/二分查找.md",
+    "算法/反转链表.md",
+    "算法/红黑树.md",
+    "分布式/Zookeeper/Zookeeper.md",
+    "框架/mybatis/Mybatis中的井号和$有什么区别.md",
     "框架/mybatis/缓存.md",
     "框架/Spring/SpringBoot/springboot的启动流程.md",
     "Java基础/死锁.md",
@@ -235,7 +241,6 @@
     "Mysql/Untitled",
     "Mysql/为什么建议设置not null.md",
     "算法/B+树.md",
-    "算法/红黑树.md",
     "Java基础/DelayQueue.md",
     "Java基础/PriorityQueue.md",
     "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
@@ -248,12 +253,7 @@
     "计算机基础/二进制运算.md",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.md",
-    "Excalidraw/Scripts/Downloaded/Auto Layout.md",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
-    "Excalidraw/Untitled.md",
-    "Excalidraw/Untitled 1.md",
-    "Java基础/AbstractQueue.md",
-    "Java基础/java 线程之间是如何通信的.md",
     "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
     "计算机基础",
