@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Redis/Redis Cluter.md",
+                "file": "分布式/Redis/Redis为什么那么快.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/Redis Cluter.md",
+                "file": "分布式/Redis/Redis为什么那么快.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/Redis Cluter.md",
+                "file": "分布式/Redis/Redis为什么那么快.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/Redis Cluter.md"
+                "file": "分布式/Redis/Redis为什么那么快.md"
               }
             }
           },
@@ -230,6 +230,7 @@
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
     "分布式/Redis/Redis Sentinel.md",
+    "分布式/Redis/Redis Cluter.md",
     "分布式/Redis/Redis 缓存.md",
     "分布式/Redis/Redis big key.md",
     "分布式/Redis/Redis 分布式锁.md",
@@ -254,7 +255,6 @@
     "Java基础/Java是值传递还是引用传递？.md",
     "Java基础/java接口调优.md",
     "Java基础/ThreadPoolExecutor.md",
-    "Java基础/JVM/三色标记.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
