@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md"
+                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md"
               }
             }
           },
@@ -225,6 +225,14 @@
   },
   "active": "1da5f9517f90d2f4",
   "lastOpenFiles": [
+    "Java基础/什么情况下会内存溢出，怎么解决.md",
+    "Java基础/死锁.md",
+    "Java基础/线程池.md",
+    "Java基础/HashMap.md",
+    "Java基础/java 线程之间是如何通信的.md",
+    "Java基础/java的过滤器和拦截器有什么区别?.md",
+    "Java基础/Java是值传递还是引用传递？.md",
+    "Java基础/java接口调优.md",
     "Java基础/ThreadPoolExecutor.md",
     "Java基础/JVM/三色标记.md",
     "Java基础/JVM/垃圾收集器.md",
@@ -238,20 +246,12 @@
     "算法/红黑树.md",
     "分布式/Zookeeper/Zookeeper.md",
     "框架/Spring/SpringBoot/springboot的启动流程.md",
-    "Java基础/死锁.md",
     "框架/Dubbo/Dubbo的注册.md",
     "框架/Dubbo/dubbo.md",
     "Java基础/BlockingQueue.md",
     "Mysql/使用Order By时能否通过索引排序？.md",
     "Mysql/Untitled",
     "Mysql/为什么建议设置not null.md",
-    "算法/B+树.md",
-    "Java基础/DelayQueue.md",
-    "Java基础/PriorityQueue.md",
-    "Excalidraw/PriorityQueue 2024-01-12 22.21.34.excalidraw.md",
-    "Java基础/Queue.md",
-    "Java基础/JUC/Condition.md",
-    "Java基础/Untitled.md",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
     "分布式/Zookeeper",
