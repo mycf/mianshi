@@ -3,14 +3,15 @@
 
 接下来让我们看下其他几个过程
 1. 注册 Destruction 回调
-如果 Spring Bean 实现了 DisposableBean 接口或者在 Bean 定义中自定义了销毁方法，Spring 会为这些 Bean 注册一个销毁的回调，确保在容器关闭时能够正确的清理资源。
-源码可以参考 [[AbstractAutowireCapableBeanFactory#registerDisposableBeanlfNecessary]]。
+	- 如果 Spring Bean 实现了 DisposableBean 接口或者在 Bean 定义中自定义了销毁方法，Spring 会为这些 Bean 注册一个销毁的回调，确保在容器关闭时能够正确的清理资源。
+	- 源码可以参考 [[AbstractAutowireCapableBeanFactory#registerDisposableBeanlfNecessary]]。
 2. Bean 的正常使用,
 3. 调用 DisposableBean#destory().
-	当容器关闭时，如果 Bean 实现了 DisposableBean 接口，destory()就会被调用源码可以参考 DisposableBeanAdapter # destroy]]。
-4.调用自定义的 destory-method.
-如果 Bean 在配置文件中定义了销毁方法，那么该方法就会被调用。
-源码可以参考 DisposableBeanAdapter # destroy()。
+	- 当容器关闭时，如果 Bean 实现了 DisposableBean 接口，destory()就会被调用。
+	- 源码可以参考 [[DisposableBeanAdapter#destroy]]。
+1. 调用自定义的 destory-method.
+	- 如果 Bean 在配置文件中定义了销毁方法，那么该方法就会被调用。
+	- 源码可以参考 [[DisposableBeanAdapter#destroy]]。
 
 
 
