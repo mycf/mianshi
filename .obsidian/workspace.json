@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/spring bean的生命周期.md",
+                "file": "框架/Spring/Spring 定义bean的方式.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试.md",
+                "file": "框架/Spring/Spring 定义bean的方式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试.md",
+                "file": "框架/Spring/Spring 定义bean的方式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试.md"
+                "file": "框架/Spring/Spring 定义bean的方式.md"
               }
             }
           },
@@ -173,9 +172,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b35a187f440e3c64",
+  "active": "a0f05b9c004d18fe",
   "lastOpenFiles": [
     "框架/Spring/spring bean的生命周期.md",
+    "框架/Spring/Spring 定义bean的方式.md",
+    "面试.md",
     "框架/Spring/什么是MVC.md",
     "框架/Spring/@Async.md",
     "框架/Spring/AsyncExecutionlnterceptor.md",
@@ -183,7 +184,6 @@
     "框架/Spring/AsyncExecutionlnterceptor 1.md",
     "框架/Spring/Spring事务失效的场景.md",
     "附录.md",
-    "面试.md",
     "Java基础/JVM/synchronized.md",
     "算法/树/红黑树.md",
     "算法/树/平衡二叉树.md",
@@ -201,7 +201,6 @@
     "Java基础/JVM/性能优化/Untitled 1.md",
     "框架/Spring/Spring的事务隔离级别.md",
     "Java基础/为什么要重写hashCode方法.md",
-    "Java基础/JUC/Condition.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
