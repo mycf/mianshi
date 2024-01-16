@@ -14,8 +14,16 @@
 	- 该阶段主要是遍历所有的 BeanPostProcessor 的实现，并执行它的 postProcessBeforelnitialization() 方法
 	- 源码可以参考 [[AbstractAutowireCapableBeanFactory#applyBeanPostProcessorsBeforelnitialization]]。
 5.初始化，主要是 InitializingBean 接口方法的回调和自定义初始化方法的调用。
-该阶段，Spring 会判断该对象是否实现了 |nitializingBean 接口，如果实现了，则会调用当前对象中的afterPropertiesSet(l
+该阶段，Spring 会判断该对象是否实现了 InitializingBean 接口，如果实现了，则会调用当前对象中的afterPropertiesSet(l
 方法。
-。另外，如果 Bean 在配置文件中定义了初始化方法，那么该方法将会被调用。
-。源码可以参考 AbstractAutowireCapableBeanFactory # invokelnitMethods()。
+	- 另外，如果 Bean 在配置文件中定义了初始化方法，那么该方法将会被调用。
+	- 源码可以参考 [[AbstractAutowireCapableBeanFactory#invokelnitMethods]]。
 6.初始化后，主要是 BeanPostProcessor 的后置处理
+	- 该阶段主要是遍历所有的 BeanPostProcessor 的实现，并执行它的 postProcessAfterinitialization()方法
+	- 此阶段中，有一个 BeanPostProcessor 的实现:AnnotationAwareAspectJAutoProxyCreator 比较重要，因为它的postProcessAfterlnitialization()中完成了 AOP 代理对象的创建。
+	- 源码可以参考 AbstractAutowireCapableBeanFactory # applyBeanPostProcessorsAfterlnitialization().
+
+此外，对于非懒加载的单例 Bean、懒加载的单例 Bean 以及原型 Bean，它们创建的过程也是有区别的：
+1. 非懒加载的单例 Bean:lOC 容器初始化的时候会完成创建;
+2.懒加载的单例 Bean:也就是设置了 lazy-init 属性或者使用了 @Lazy 注解的 Bean，这类 Bean，10℃ 容器初始化的时候并不会创建，当使用的时候才会去创建;
+3.上面这两种单例 Bean、创建完之后会被存入到一个 Map<String,Object>中，我们称之为单例池，单例池 的 key 为beanName，value 为 Bean 对象，下次 getBean()时会直接从单例池中获取;4.原型 Bean:也就是设置了 @Scope("prototype")的 Bean，这类 Bean，每次使用的时候都会创建一个新的 Bean 对象，并且Spring 容器并不会管理这些 Bean。
