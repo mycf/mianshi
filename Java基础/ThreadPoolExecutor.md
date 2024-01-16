@@ -10,7 +10,7 @@
 
 -100000000000000000000000000000
 ![[ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw|100%]]
-
+![[ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw]]
 |         |     |
 | ------- | --- |
 | RUNNING |     |

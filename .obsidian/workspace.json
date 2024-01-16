@@ -6,6 +6,7 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
+        "dimension": 38.32378223495702,
         "children": [
           {
             "id": "072c7eeee95e116e",
@@ -69,6 +70,23 @@
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "2b59559ac223a59c",
+        "type": "tabs",
+        "dimension": 61.676217765042985,
+        "children": [
+          {
+            "id": "34d09a95572659bc",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -119,7 +137,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -135,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md",
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/ThreadPoolExecutor.md"
+                "file": "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md"
               }
             }
           },
@@ -196,7 +215,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,8 +230,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e58eb7ada42c57f",
+  "active": "34d09a95572659bc",
   "lastOpenFiles": [
+    "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md",
+    "Java基础/ThreadPoolExecutor.md",
     "Java基础/死锁.md",
     "Java基础/JVM/volatile.md",
     "Java基础/JVM/CMS.md",
@@ -236,8 +258,6 @@
     "Excalidraw/二进制运算 2024-01-13 08.57.51.excalidraw.md",
     "Java基础/JVM/性能优化/01-概述.md",
     "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
-    "Java基础/JVM/性能优化/性能优化案例7：日均百万级订单交易系统如何设置JVM参数.md",
-    "Java基础/JVM/性能优化/性能优化案例6：调整垃圾收集器提高服务的吞吐量.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
