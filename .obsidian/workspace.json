@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b35a187f440e3c64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "面试.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/spring bean的生命周期.md",
+                "file": "面试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/spring bean的生命周期.md",
+                "file": "面试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/spring bean的生命周期.md"
+                "file": "面试.md"
               }
             }
           },
@@ -160,8 +173,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a0f05b9c004d18fe",
+  "active": "b35a187f440e3c64",
   "lastOpenFiles": [
+    "框架/Spring/spring bean的生命周期.md",
     "框架/Spring/什么是MVC.md",
     "框架/Spring/@Async.md",
     "框架/Spring/AsyncExecutionlnterceptor.md",
@@ -171,7 +185,6 @@
     "附录.md",
     "面试.md",
     "Java基础/JVM/synchronized.md",
-    "框架/Spring/spring bean的生命周期.md",
     "算法/树/红黑树.md",
     "算法/树/平衡二叉树.md",
     "算法/树/B+树.md",
