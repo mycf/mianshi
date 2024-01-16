@@ -8,7 +8,7 @@
 3. **Aware 接口方法回调**
 	- 依赖注入完成后，Spring 会判断该对象是否实现了 BeanNameAware/BeanClassLoaderAware/BeanFactoryAware 接口。
 	- 如果实现了，Spring 就会相应的调用 setBeanName()/setBeanClassLoader()/setBeanFactory()方法并传入相应的参数。
-	- 源码可以参考 AbstractAutowireCapableBeanFactory # invokeAwareMethods()
+	- 源码可以参考 [[AbstractAutowireCapableBeanFactory#invokeAwareMethods]]
 4. **初始化前，主要是 BeanPostProcessor 的前置处理。**
 	- BeanPostProcessor 是 Spring IOC 容器给我们提供的一个扩展接口，它的主要作用是帮助我们在 Bean的初始化前后可以添加一些自己的处理逻辑，Spring 中内置了很多 BeanPostProcessor，当然，我们也可以自定义一个或多个BeanPostProcessor 接口的实现，然后注册到容器中。
 	- 该阶段主要是遍历所有的 BeanPostProcessor 的实现，并执行它的 postProcessBeforelnitialization() 方法
