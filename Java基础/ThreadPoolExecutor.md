@@ -10,7 +10,8 @@
 
 -100000000000000000000000000000
 ![[ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw|100%]]
-![[ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw]]
+![[ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw|100%]]
+
 |         |     |
 | ------- | --- |
 | RUNNING |     |
@@ -23,7 +24,7 @@
 > getTask为null的时候
 
 # 线程回收
-![[ThreadPoolExecutor 2024-01-07 13.27.24.excalidraw]]
+![[ThreadPoolExecutor 2024-01-07 13.27.24.excalidraw|100%]]
 
 # 线程池的构造函数
 ```java

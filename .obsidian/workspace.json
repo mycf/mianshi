@@ -6,7 +6,6 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
-        "dimension": 38.32378223495702,
         "children": [
           {
             "id": "072c7eeee95e116e",
@@ -70,23 +69,6 @@
           }
         ],
         "currentTab": 3
-      },
-      {
-        "id": "2b59559ac223a59c",
-        "type": "tabs",
-        "dimension": 61.676217765042985,
-        "children": [
-          {
-            "id": "34d09a95572659bc",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md"
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -154,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md",
+                "file": "Java基础/ThreadPoolExecutor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md"
+                "file": "Java基础/ThreadPoolExecutor.md"
               }
             }
           },
@@ -215,8 +197,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -230,7 +211,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "34d09a95572659bc",
+  "active": "7e58eb7ada42c57f",
   "lastOpenFiles": [
     "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md",
     "Java基础/ThreadPoolExecutor.md",
