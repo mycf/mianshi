@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/树/红黑树.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/树/红黑树.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/树/红黑树.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/树/红黑树.md"
+                "file": "框架/Spring/Spring事务失效的场景.md"
               }
             }
           },
@@ -211,13 +211,14 @@
   },
   "active": "7e58eb7ada42c57f",
   "lastOpenFiles": [
+    "框架/Spring/spring bean的生命周期.md",
+    "算法/树/红黑树.md",
     "算法/树/平衡二叉树.md",
     "算法/树/B+树.md",
     "算法/插入排序.md",
     "算法/树/二叉查找树.md",
     "算法/树",
     "算法/树/二叉树.md",
-    "算法/树/红黑树.md",
     "Java基础/ThreadPoolExecutor.md",
     "Excalidraw/ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw.md",
     "Java基础/死锁.md",
@@ -237,7 +238,6 @@
     "Java基础/ConcurrentHashMap.md",
     "Java基础/CompletionService.md",
     "Java基础/Class.md",
-    "Java基础/BlockingQueue.md",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
