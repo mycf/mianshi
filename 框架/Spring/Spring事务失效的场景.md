@@ -7,7 +7,8 @@
 	同一个类中的方法调用，属于 this 调用，并不会使用代理对象。不过，该问题可以使用如下方式解决
 2. `@Transactional` 注解应用在==非 public== 修饰的方法上。
 3. `@Transactional` 注解应用在 static/final 修饰的方法上。
-
+# @Transactional 注解使用不当的场景
+1.@Transactional 注解的 propagation 事务传播行为属性设置不当。如果将事务方法的事务传播行为设置为了不支持事务的传播类型，那么该事务方法的事务将会失效。
 
 
 
