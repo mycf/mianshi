@@ -1,0 +1,3 @@
+`@Async` 是 Spring 框架中提供的一个可以标注一个方法或一个类中的方法为异步执行的注解。@Async 注解底层也是基于 SpringAOP 实现的，Spring 容器在启动初始化 bean 时，会判断类中是否使用了 `@Async` 注解，如果使用了该注解，则会为其创建切入点和切入点处理器。当标注了 `@Async` 注解的方法被调用时，会调用切入点处理器的 invoke 方法，在 invoke 方法中会为标注了 `@Async` 注解的方法生成一个 `Callable` 对象，并提交给线程池的一个线程来执行，从而实现了该方法的异步执行。
+那么，为什么不建议直接使用 @Async 注解呢?问题的根源就在这个线程池身上。接下来让我们根据源码看下 Spring 是怎么选择这个线程池的，
+Spring 为 @Async 注解选定线程池的源码在 AsyncExecutionlnterceptor # getDefaultExecutor 方法中:
