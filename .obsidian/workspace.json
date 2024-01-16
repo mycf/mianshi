@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/Spring事务失效的场景.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/Spring事务失效的场景.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/Spring事务失效的场景.md",
+                "file": "Java基础/JVM/synchronized.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/Spring事务失效的场景.md"
+                "file": "Java基础/JVM/synchronized.md"
               }
             }
           },
@@ -211,6 +211,7 @@
   },
   "active": "7e58eb7ada42c57f",
   "lastOpenFiles": [
+    "框架/Spring/Spring事务失效的场景.md",
     "框架/Spring/spring bean的生命周期.md",
     "算法/树/红黑树.md",
     "算法/树/平衡二叉树.md",
@@ -226,7 +227,6 @@
     "Java基础/JVM/CMS.md",
     "Java基础/JVM/性能优化/性能优化案例4：CPU占用过高排查.md",
     "Java基础/JVM/性能优化/Untitled 1.md",
-    "框架/Spring/Spring事务失效的场景.md",
     "框架/Spring/Spring的事务隔离级别.md",
     "Java基础/为什么要重写hashCode方法.md",
     "Java基础/JUC/Condition.md",

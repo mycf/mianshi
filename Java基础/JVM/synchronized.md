@@ -6,7 +6,7 @@ synchronized关键字，这是一种块结构（Block Structured）的同步语�
 ·被synchronized修饰的同步块在持有锁的线程执行完毕并释放锁之前，会无条件地阻塞后面其他线程的进入。这意味着无法像处理某些数据库中的锁那样，强制已获取锁的线程释放锁；也无法强制正在等待锁的线程中断等待或超时退出。
 
 
-
+https://www.cnblogs.com/aspirant/p/11470858.html
 
 
 # [不可不说的Java“锁”事](https://tech.meituan.com/2018/11/15/java-lock.html)
