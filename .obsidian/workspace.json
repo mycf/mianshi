@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/可达性分析算法.md",
+                "file": "Mysql/快照读和当前读.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/可达性分析算法.md",
+                "file": "Mysql/快照读和当前读.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/可达性分析算法.md",
+                "file": "Mysql/快照读和当前读.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/可达性分析算法.md"
+                "file": "Mysql/快照读和当前读.md"
               }
             }
           },
@@ -186,6 +186,10 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Mysql/分布式事务.md",
+    "Mysql/日志-redolog 重做日志.md",
+    "Mysql/日志-undo log.md",
+    "Java基础/JVM/可达性分析算法.md",
     "Java基础/JVM/三色标记.md",
     "Java基础/JVM/垃圾收集器.md",
     "Java基础/JVM/JVM垃圾回收算法.md",
@@ -209,10 +213,6 @@
     "框架/Spring/springMVC/常用注解.md",
     "框架/Spring/springMVC/@EnableAspectJAutoProxy.md",
     "框架/Spring/springMVC/@ResponseStatus.md",
-    "框架/Spring/springMVC/@Import.md",
-    "框架/Spring/springMVC/@Configuration.md",
-    "框架/Spring/Spring 定义bean的方式.md",
-    "面试.md",
     "算法/树",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
