@@ -1,5 +1,5 @@
 如图，Spring 中 Bean 的创建大概可以分为以下几个阶段:
-1. **实例化
+1. **实例化**
 	- 该阶段主要通过推断构造方法并调用，完成该 Bean 的实例化。
 	- 源码可以参考 [[AbstractAutowireCapableBeanFactory#createBeanInstance]]
 2. **属性填充，也就是依赖注入。**

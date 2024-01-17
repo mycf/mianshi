@@ -1,6 +1,6 @@
-如图，Spring Bean 的整个生命周期可以分为 3个大的阶段:创建、使用和销毁;还可以分为6个小的阶段:实例化、初始
+如图，Spring Bean 的整个生命周期可以分为 3个大的阶段：创建、使用和销毁；还可以分为6个小的阶段:实例化、初始
 化、注册 Destruction 回调、Bean 的正常使用和 Bean 的销毁。
-
+![[Spring bean的创建过程]]
 接下来让我们看下其他几个过程
 1. 注册 Destruction 回调
 	- 如果 Spring Bean 实现了 DisposableBean 接口或者在 Bean 定义中自定义了销毁方法，Spring 会为这些 Bean 注册一个销毁的回调，确保在容器关闭时能够正确的清理资源。

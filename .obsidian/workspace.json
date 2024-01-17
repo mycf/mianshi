@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/springMVC/DispatcherServlet.md",
+                "file": "框架/Spring/spring bean的生命周期.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95e5ba230cbcb56e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "框架/Spring/Spring bean的创建过程.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/springMVC/DispatcherServlet.md",
+                "file": "框架/Spring/Spring bean的创建过程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/springMVC/DispatcherServlet.md",
+                "file": "框架/Spring/Spring bean的创建过程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/springMVC/DispatcherServlet.md"
+                "file": "框架/Spring/Spring bean的创建过程.md"
               }
             }
           },
@@ -172,11 +185,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a0f05b9c004d18fe",
+  "active": "95e5ba230cbcb56e",
   "lastOpenFiles": [
+    "框架/Spring/spring bean的生命周期.md",
+    "框架/Spring/深入理解Spring BeanPostProcessor & InstantiationAwareBeanPostProcessor.md",
+    "框架/Spring/springMVC/什么是MVC.md",
+    "框架/Spring/springMVC/DispatcherServlet.md",
     "框架/Spring/springMVC/SpringMVC.md",
     "框架/Spring/springMVC/web.xml.md",
-    "框架/Spring/springMVC/DispatcherServlet.md",
     "框架/Spring/@Autowired和@Resource的区别.md",
     "框架/Spring/@Async.md",
     "框架/Spring/springMVC/常用注解.md",
@@ -187,9 +203,7 @@
     "框架/Spring/Spring bean的创建过程.md",
     "框架/Spring/ff.md",
     "框架/Spring/Spring 定义bean的方式.md",
-    "框架/Spring/spring bean的生命周期.md",
     "面试.md",
-    "框架/Spring/什么是MVC.md",
     "框架/Spring/AsyncExecutionlnterceptor.md",
     "Java基础/Queue.md",
     "框架/Spring/AsyncExecutionlnterceptor 1.md",
@@ -199,7 +213,6 @@
     "算法/树/红黑树.md",
     "算法/树/平衡二叉树.md",
     "算法/树/B+树.md",
-    "算法/插入排序.md",
     "算法/树",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
