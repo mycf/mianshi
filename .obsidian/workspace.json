@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a0f05b9c004d18fe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java基础/JVM/G1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "95e5ba230cbcb56e",
             "type": "leaf",
             "state": {
@@ -109,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/G1.md",
+                "file": "框架/Spring/Spring bean的创建过程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/G1.md",
+                "file": "框架/Spring/Spring bean的创建过程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/G1.md"
+                "file": "框架/Spring/Spring bean的创建过程.md"
               }
             }
           },
@@ -184,10 +172,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a0f05b9c004d18fe",
+  "active": "95e5ba230cbcb56e",
   "lastOpenFiles": [
-    "Java基础/JVM/JVM内存结构.md",
     "Java基础/JVM/G1.md",
+    "Java基础/JVM/JVM内存结构.md",
     "框架/Spring/springMVC/Spring AOP在什么场景下会失效.md",
     "框架/Spring/说说Spring中的AOP.md",
     "Mysql/快照读和当前读.md",
