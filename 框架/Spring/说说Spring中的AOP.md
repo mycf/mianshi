@@ -20,6 +20,6 @@ AOP 中有如下几个概念
 4. Pointcut:表示切点。用来匹配一个或多个连接点。
 5. Introduction:可以使用 @DeclareParents 注解来给所匹配的类添加一个接口，并指定一个默认实现。
 6. Target object:目标对象，即被代理对象。
-7. AOP proxy:表示代理工厂。，在Spring Framework中，要么是 JDK 动态代理，要么是CGLib 代理:用来创建代理对多
+7. AOP proxy:表示代理工厂。用来创建代理对象，在Spring Framework中，要么是 JDK 动态代理，要么是CGLib 代理:
 8. Weaving:表示织入，即创建代理对象的动作。这个动作可以发生在编译时期(比如 Aspejctj)，或者运行时，比如 Spring AOP
 
