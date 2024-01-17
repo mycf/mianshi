@@ -3,11 +3,11 @@
 Spring AOP 是基于 Java 中的动态代理实现的，我们知道、Java 的动态代理有两种实现方式：一种是基于 JDK 的动态代理、另外一种则是基于 CGLib 的动态代理。Spring AOP 中的 _ProxyFactory_ 类，在底层对这两种实现方式进行了封装。如果目标类实现了接口，Spring AOP 会默认选择 JDK 的动态代理；否则会选择 CGLib 的动态代理;当然，我们也可以通过配置强制使用 CGLib 的动态代理。
 
 另外，熟悉 Soring IOC 生命周期的小伙伴，应该都清楚：Spring AOP 是在 IOC 的初始化后的阶段进行的。接下来让我们根据源码看下 Spring AOP 的实现流程:
-1.源码位置:AbstractAutowireCapableBeanFactory # initializeBean。首先让我们看下初始化 bean 的源码中，该方法中会调用applyBeanPostProcessorsAfterinitialization()方法进行初始化后的操作，Spring AOP 就是在该阶段进行的。
+1. 源码位置：[[AbstractAutowireCapableBeanFactory#initializeBean]]。首先让我们看下初始化 bean 的源码中，该方法中会调用applyBeanPostProcessorsAfterinitialization()方法进行初始化后的操作，Spring AOP 就是在该阶段进行的。
 
-2.源码位置: AbstractAutowireCapableBeanFactory # applyBeanPostProcessorsAfterinitialization。接下来让我们看下applyBeanPostProcessorsAfterlnitialization 方法，该方法会遍历所有的 BeanPostProcessor，然后调用其postProcessAfterlnitialization 方法。
+2. 源码位置: [[AbstractAutowireCapableBeanFactory#applyBeanPostProcessorsAfterinitialization]]。接下来让我们看下applyBeanPostProcessorsAfterlnitialization 方法，该方法会遍历所有的 BeanPostProcessor，然后调用其postProcessAfterlnitialization 方法。
 
-3.源码位置:AbstractAutoProxyCreator # postProcessAfterinitialization。接下来让我们看下 postProcessAfternitialization 方法，该方法中，如果是出现了循环依赖并进行了 AOP，则会直接返回原始对象，否则会进入 wraplfNecessary 方法。该方法就是 正常进行 AOP 的地方。
+3. 源码位置:AbstractAutoProxyCreator # postProcessAfterinitialization。接下来让我们看下 postProcessAfternitialization 方法，该方法中，如果是出现了循环依赖并进行了 AOP，则会直接返回原始对象，否则会进入 wraplfNecessary 方法。该方法就是 正常进行 AOP 的地方。
 
 AOP中的概念
 估计会有很多小伙伴和威哥一样，都会觉得 AOP 中的概念十分的生涩难懂!确实，Spring 官网中是这么说的:
