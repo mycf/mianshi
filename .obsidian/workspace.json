@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/Spring的三级缓存.md",
+                "file": "框架/Spring/@Lazy是如何解决循环依赖问题的.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/Spring的三级缓存.md",
+                "file": "框架/Spring/@Lazy是如何解决循环依赖问题的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/Spring的三级缓存.md",
+                "file": "框架/Spring/@Lazy是如何解决循环依赖问题的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/Spring的三级缓存.md"
+                "file": "框架/Spring/@Lazy是如何解决循环依赖问题的.md"
               }
             }
           },
@@ -184,11 +184,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a0f05b9c004d18fe",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "框架/Spring/Spring的三级缓存.md",
     "框架/Spring/@Lazy是如何解决循环依赖问题的.md",
     "框架/Spring/什么是Spring的循环依赖问题.md",
-    "框架/Spring/Spring的三级缓存.md",
     "框架/Spring/Untitled",
     "框架/Spring/Spring的事务传播行为.md",
     "框架/Spring/SpringBoot/DeferredImportSelector.md",
