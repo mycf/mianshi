@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/springMVC/Spring AOP在什么场景下会失效.md",
+                "file": "Java基础/JVM/G1.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/springMVC/Spring AOP在什么场景下会失效.md",
+                "file": "Java基础/JVM/G1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/springMVC/Spring AOP在什么场景下会失效.md",
+                "file": "Java基础/JVM/G1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/springMVC/Spring AOP在什么场景下会失效.md"
+                "file": "Java基础/JVM/G1.md"
               }
             }
           },
@@ -186,8 +186,10 @@
   },
   "active": "a0f05b9c004d18fe",
   "lastOpenFiles": [
-    "框架/Spring/说说Spring中的AOP.md",
+    "Java基础/JVM/JVM内存结构.md",
+    "Java基础/JVM/G1.md",
     "框架/Spring/springMVC/Spring AOP在什么场景下会失效.md",
+    "框架/Spring/说说Spring中的AOP.md",
     "Mysql/快照读和当前读.md",
     "Mysql/分布式事务.md",
     "Mysql/日志-redolog 重做日志.md",
@@ -211,8 +213,6 @@
     "框架/Spring/深入理解Spring BeanPostProcessor & InstantiationAwareBeanPostProcessor.md",
     "框架/Spring/springMVC/什么是MVC.md",
     "框架/Spring/springMVC/web.xml.md",
-    "框架/Spring/@Autowired和@Resource的区别.md",
-    "框架/Spring/@Async.md",
     "算法/树",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
