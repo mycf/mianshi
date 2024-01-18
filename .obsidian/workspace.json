@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/ZGC 收集器.md",
+                "file": "Java基础/JVM/G1 和 CMS的区别.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/ZGC 收集器.md",
+                "file": "Java基础/JVM/G1 和 CMS的区别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/ZGC 收集器.md",
+                "file": "Java基础/JVM/G1 和 CMS的区别.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/ZGC 收集器.md"
+                "file": "Java基础/JVM/G1 和 CMS的区别.md"
               }
             }
           },
@@ -174,8 +174,9 @@
   },
   "active": "95e5ba230cbcb56e",
   "lastOpenFiles": [
-    "Java基础/JVM/性能优化/Untitled.md",
     "Java基础/JVM/ZGC 收集器.md",
+    "Java基础/JVM/G1 和 CMS的区别.md",
+    "Java基础/JVM/性能优化/Untitled.md",
     "Java基础/JVM/性能优化/Untitled 1.md",
     "Java基础/JVM/方法区.md",
     "Java基础/JVM/G1.md",
@@ -200,7 +201,6 @@
     "框架/Spring/springMVC/SpringMVC.md",
     "框架/Spring/springMVC/DispatcherServlet.md",
     "框架/Spring/SpringBoot/Spring Boot中jar包启动的原理.md",
-    "框架/Spring/spring bean的生命周期.md",
     "算法/树",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
