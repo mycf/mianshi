@@ -141,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md",
+                "file": "Java基础/JVM/什么是零拷贝.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +158,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md",
+                "file": "Java基础/JVM/什么是零拷贝.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md"
+                "file": "Java基础/JVM/什么是零拷贝.md"
               }
             }
           },
@@ -217,10 +217,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c029b642f86a04bd",
+  "active": "548af89403614686",
   "lastOpenFiles": [
-    "Java基础/JVM/什么是零拷贝.md",
     "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md",
+    "Java基础/JVM/什么是零拷贝.md",
     "Java基础/JVM/垃圾收集器.md",
     "Java基础/JVM/类的加载过程.md",
     "Java基础/JVM/G1.md",
