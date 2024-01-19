@@ -73,8 +73,19 @@
                 "file": "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md"
               }
             }
+          },
+          {
+            "id": "17e66db040704670",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/什么是零拷贝 2024-01-19 21.26.57.excalidraw.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -219,6 +230,7 @@
   },
   "active": "548af89403614686",
   "lastOpenFiles": [
+    "Excalidraw/什么是零拷贝 2024-01-19 21.26.57.excalidraw.md",
     "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md",
     "Java基础/JVM/什么是零拷贝.md",
     "Java基础/JVM/垃圾收集器.md",
@@ -244,7 +256,6 @@
     "Java基础/JVM/JVM垃圾回收算法.md",
     "框架/Spring/@Lazy是如何解决循环依赖问题的.md",
     "框架/Spring/Spring的三级缓存.md",
-    "框架/Spring/什么是Spring的循环依赖问题.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
