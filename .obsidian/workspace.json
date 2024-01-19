@@ -6,7 +6,6 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
-        "dimension": 33.45272206303725,
         "children": [
           {
             "id": "95e5ba230cbcb56e",
@@ -53,34 +52,6 @@
                 "file": "面试.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "f1d4b3234fb7d1f2",
-        "type": "tabs",
-        "dimension": 66.54727793696274,
-        "children": [
-          {
-            "id": "c029b642f86a04bd",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "17e66db040704670",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/什么是零拷贝 2024-01-19 21.26.57.excalidraw.md"
               }
             }
           }
