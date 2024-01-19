@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "548af89403614686",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java基础/JVM/什么是零拷贝.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "ac85bb843479dae5",
             "type": "leaf",
             "state": {
@@ -43,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Java基础/JVM/什么是零拷贝.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Java基础/JVM/什么是零拷贝.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md"
+                "file": "Java基础/JVM/什么是零拷贝.md"
               }
             }
           },
@@ -185,8 +198,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "95e5ba230cbcb56e",
+  "active": "548af89403614686",
   "lastOpenFiles": [
+    "Java基础/JVM/垃圾收集器.md",
+    "Java基础/JVM/什么是零拷贝.md",
     "Java基础/JVM/类的加载过程.md",
     "Java基础/JVM/G1.md",
     "Java基础/JVM/G1 和 CMS的区别.md",
@@ -206,14 +221,12 @@
     "Mysql/日志-undo log.md",
     "Java基础/JVM/可达性分析算法.md",
     "Java基础/JVM/三色标记.md",
-    "Java基础/JVM/垃圾收集器.md",
     "Java基础/JVM/JVM垃圾回收算法.md",
     "框架/Spring/@Lazy是如何解决循环依赖问题的.md",
     "框架/Spring/Spring的三级缓存.md",
     "框架/Spring/什么是Spring的循环依赖问题.md",
     "框架/Spring/Untitled",
     "框架/Spring/Spring的事务传播行为.md",
-    "框架/Spring/SpringBoot/DeferredImportSelector.md",
     "算法/树",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
