@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md"
+                "file": "Java基础/JVM/垃圾收集器.md"
               }
             }
           },
@@ -187,15 +187,16 @@
   },
   "active": "95e5ba230cbcb56e",
   "lastOpenFiles": [
+    "Java基础/JVM/类的加载过程.md",
+    "Java基础/JVM/G1.md",
+    "Java基础/JVM/G1 和 CMS的区别.md",
     "框架/Spring/spring bean的生命周期.md",
     "框架/Spring/Spring bean的创建过程.md",
     "框架/Spring/AbstractAutowireCapableBeanFactory.md",
-    "Java基础/JVM/G1 和 CMS的区别.md",
     "Java基础/JVM/ZGC 收集器.md",
     "Java基础/JVM/性能优化/Untitled.md",
     "Java基础/JVM/性能优化/Untitled 1.md",
     "Java基础/JVM/方法区.md",
-    "Java基础/JVM/G1.md",
     "Java基础/JVM/JVM内存结构.md",
     "框架/Spring/springMVC/Spring AOP在什么场景下会失效.md",
     "框架/Spring/说说Spring中的AOP.md",
@@ -213,7 +214,6 @@
     "框架/Spring/Untitled",
     "框架/Spring/Spring的事务传播行为.md",
     "框架/Spring/SpringBoot/DeferredImportSelector.md",
-    "框架/Spring/springMVC/SpringMVC.md",
     "算法/树",
     "Mysql/Untitled",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
