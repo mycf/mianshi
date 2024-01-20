@@ -23,14 +23,21 @@ Selector 一般被称为选择器或者多路复用器，要实现 Selector 管�
 
 NIO 三大核心组件的关系如下图：
 ![image.png](https://gitee.com/ycfan/images/raw/master/img/20240120162207.png)
-SelectionKey的类型和就绪条件
+# SelectionKey的类型和就绪条件
 在向 Selector 对象注册感兴趣的事件时，JAVA NIO 在抽象类 SelectionKey 中共定义了四种事件类型：OP_READ、OP_WRITE、OP CONNECT、OP_ACCEPT，分别对应 I/O 读写、请求连接 和 接受连接操作。
 
 | 操作类型 | 就绪条件及说明 |
 | ---- | ---- |
 | OP_READ | 当操作系统读缓冲区有数据可读时就绪。一般需要注册该事件。 |
-| OP_WRITE | 当操作系统写缓冲区有空闲空间时就绪。一般情况下写缓冲区都有空闲空间小块数据直接写入即可没必要注册该操作类型，否则该条件不断就绪浪费CPU；但如果是写密集型的操作类型就很有必要，比如文件下载等，缓冲区很可能满，比如文件下载等，缓冲区很可能满，同时注意写完后取消注册。 |
-| OP_CONNECT |  |
-| OP_ACCEPT |  |
+| OP_WRITE | 当操作系统写缓冲区有空闲空间时就绪。一般情况下写缓冲区都有空闲空间，小块数据直接写入即可没必要注册该操作类型，否则该条件不断就绪浪费CPU；但如果是写密集型的任务，注册该操作类型就很有必要，比如文件下载等，缓冲区很可能满，同时注意写完后取消注册。 |
+| OP_CONNECT | 当SocketChannel.connct()请求连接成功后就绪。该操作只给客户端使用。 |
+| OP_ACCEPT | 当接收到一个客户端连接请求时就绪。该操作只给服务器使用。 |
+# 客户端和服务端关注的事件类到
 
-注册该当SocketChannel.connct()请求连接成功后就绪。该操作只给客户端使用。当接收到一个客户端连接请求时就绪。该操作只给服务器使用。
+OP_READ
+OP WRITE
+TOP CONNEC
+OP ACCEPT
+服务器 ServerSocketChannel
+服务器 SocketChannel
+客户端 SocketChannel
