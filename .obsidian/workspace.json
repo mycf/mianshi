@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/什么是零拷贝.md",
+                "file": "分布式/一文彻底弄懂零拷贝原理.md",
                 "mode": "source",
                 "source": false
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/什么是零拷贝.md",
+                "file": "分布式/一文彻底弄懂零拷贝原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/什么是零拷贝.md",
+                "file": "分布式/一文彻底弄懂零拷贝原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/什么是零拷贝.md"
+                "file": "分布式/一文彻底弄懂零拷贝原理.md"
               }
             }
           },
@@ -201,9 +201,9 @@
   },
   "active": "548af89403614686",
   "lastOpenFiles": [
+    "Java基础/JVM/什么是零拷贝.md",
     "Excalidraw/什么是零拷贝 2024-01-19 21.26.57.excalidraw.md",
     "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md",
-    "Java基础/JVM/什么是零拷贝.md",
     "Java基础/JVM/垃圾收集器.md",
     "Java基础/JVM/类的加载过程.md",
     "Java基础/JVM/G1.md",
