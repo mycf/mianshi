@@ -12,10 +12,9 @@ Channel 是应用程序和操作系统交互事件、传递数据的通道，通
 - ServerSocketChannel：应用服务程序的监听通道，可视为被 Channel 包装的 ServerSocket;
 - SocketChannel：TCP Socket 的监听通道，可视为被 Channel 包装的 Socket;
 
-Buffer 缓冲区，主要用于和 Channel 进行交互。以写为例，应用程序先将数据写入缓冲区，再通过通道把缓冲区的数据发送出去;读也是一样，数据先从通道读到缓冲区，应用程序再读取缓冲区的数据。Buffer 缓冲区本质上是一个字节数组，Buffer 读写数据一般遵循如下步骤:
-1.写数据到 Buffer 缓冲区;
-2.调用 flip()方法将 Buffer 从写模式切换到读模式;
-3.从 Buffer 中读取数据;
-4.调用 clear()方法或者 compact()方法清理数据，准备下一次的写入;
-常见的 Buffer 实现有:ByteBuffer, CharBuffer, DoubleBuffer, FloatBuffer, IntBuffer, LongBuffer.
-ShortBuffer;此外还有 MappedByteBuffer, HeapByteBuffer, DirectByteBuffer 等。
+Buffer 缓冲区，主要用于和 Channel 进行交互。以写为例，应用程序先将数据写入缓冲区，再通过通道把缓冲区的数据发送出去;读也是一样，数据先从通道读到缓冲区，应用程序再读取缓冲区的数据。Buffer 缓冲区本质上是一个字节数组，Buffer 读写数据一般遵循如下步骤：
+1. 写数据到 Buffer 缓冲区;
+2. 调用 flip() 方法将 Buffer 从写模式切换到读模式;
+3. 从 Buffer 中读取数据;
+4. 调用 clear()方法或者 compact()方法清理数据，准备下一次的写入;
+常见的 Buffer 实现有：ByteBuffer, CharBuffer, DoubleBuffer, FloatBuffer, IntBuffer, LongBuffer. ShortBuffer;此外还有 MappedByteBuffer, HeapByteBuffer, DirectByteBuffer 等。
