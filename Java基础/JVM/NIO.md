@@ -17,7 +17,7 @@ Buffer 缓冲区，主要用于和 Channel 进行交互。以写为例，应用�
 2. 调用 flip() 方法将 Buffer 从写模式切换到读模式;
 3. 从 Buffer 中读取数据;
 4. 调用 clear()方法或者 compact()方法清理数据，准备下一次的写入;
-常见的 Buffer 实现有：ByteBuffer, CharBuffer, DoubleBuffer, FloatBuffer, IntBuffer, LongBuffer. ShortBuffer;此外还有 MappedByteBuffer, HeapByteBuffer, DirectByteBuffer 等。
+常见的 Buffer 实现有：ByteBuffer，CharBuffe，DoubleBuffer，FloatBuffer，IntBuffer，LongBuffer，ShortBuffer；此外还有 MappedByteBuffer，HeapByteBuffer，DirectByteBuffer 等。
 
 Selector 一般被称为选择器或者多路复用器，要实现 Selector 管理 Channel，首先需要将 Channel 及其关注的事件注册在 Selector 上，Selector 会不断轮询出就绪状态的 Channel 关注的事件集合，进而做相应的业务处理。通常情况下，一个线程会开启一个 Selector，而一个 Selector 可以管理多个 Channel，也就是说，一个线程就可以管理多个网络连接，即所谓的多路复用。
 
