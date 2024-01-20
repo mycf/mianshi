@@ -32,12 +32,12 @@ NIO 三大核心组件的关系如下图：
 | OP_WRITE | 当操作系统写缓冲区有空闲空间时就绪。一般情况下写缓冲区都有空闲空间，小块数据直接写入即可没必要注册该操作类型，否则该条件不断就绪浪费CPU；但如果是写密集型的任务，注册该操作类型就很有必要，比如文件下载等，缓冲区很可能满，同时注意写完后取消注册。 |
 | OP_CONNECT | 当SocketChannel.connct()请求连接成功后就绪。该操作只给客户端使用。 |
 | OP_ACCEPT | 当接收到一个客户端连接请求时就绪。该操作只给服务器使用。 |
-# 客户端和服务端关注的事件类到
-
-OP_READ
-OP WRITE
-TOP CONNEC
-OP ACCEPT
-服务器 ServerSocketChannel
-服务器 SocketChannel
-客户端 SocketChannel
+# 客户端和服务端关注的事件类型
+|  | OP_READ | OP_WRITE | OP_CONNECT | OP_ACCEPT |
+| ---- | ---- | ---- | ---- | ---- |
+| 服务器 ServerSocketChannel |  |  |  | Y |
+| 服务器 SocketChannel | Y | Y |  |  |
+| 客户端 SocketChannel | Y | Y | Y |  |
+# 直接缓冲和非直接缓冲
+HeapByteBuffer 堆缓冲，也叫非直接缓冲。它通过 allocate()方法在 JVM 堆内存中分配的缓冲，真正 flush 到远程的时候会先拷贝到直接内存，再做下一步操作。
+方法在直接内存中分配，这样可以减少一次复制过程，提高 I/0 读取的效而 DirectByteBuffer 则是通过 allocateDirect(率。虽然直接缓冲可以进行高效的 I/0 操作，但它使用的内存是操作系统分配的，绕过了JVM堆栈:建立和销毁比堆栈上的缓冲区要更大的开销
