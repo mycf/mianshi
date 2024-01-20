@@ -18,3 +18,21 @@ Buffer 缓冲区，主要用于和 Channel 进行交互。以写为例，应用�
 3. 从 Buffer 中读取数据;
 4. 调用 clear()方法或者 compact()方法清理数据，准备下一次的写入;
 常见的 Buffer 实现有：ByteBuffer, CharBuffer, DoubleBuffer, FloatBuffer, IntBuffer, LongBuffer. ShortBuffer;此外还有 MappedByteBuffer, HeapByteBuffer, DirectByteBuffer 等。
+
+Selector 一般被称为选择器或者多路复用器，要实现 Selector 管理 Channel，首先需要将 Channel 及其关注的事件注册在 Selector 上，Selector 会不断轮询出就绪状态的 Channel 关注的事件集合，进而做相应的业务处理。通常情况下，一个线程会开启一个 Selector，而一个 Selector 可以管理多个 Channel，也就是说，一个线程就可以管理多个网络连接，即所谓的多路复用。
+
+NIO 三大核心组件的关系如下图：
+![image.png](https://gitee.com/ycfan/images/raw/master/img/20240120162207.png)
+SelectionKey的类型和就绪条件
+在向 Selector 对象注册感兴趣的事件时，JAVA NIO 在抽象类 SelectionKey 中共定义了四种事件类型：OP_READ、OP_WRITE、OP CONNECT、OP_ACCEPT，分别对应 I/O 读写、请求连接 和 接受连接操作。
+
+| 操作类型| |
+| --- | --- |
+|  |  |
+
+OP_READ
+OP WRITE
+OPCONNECT
+OP_ACCEPT
+就绪条件及说明
+据可读时就绪。一般需要注册该事件。当操作系统读缓冲区有数当操作系统写缓冲区有空空间时就绪。一般情况下写缓冲区都有空闲空间小块数据直接写入即可没必要注册该操作类型任务，比如文件下载等，否则该条件不断就绪浪费CPU;但如果是写密集型的操作类型就很有必要，同时注意写完后取消注册。缓冲区很可能满，注册该当SocketChannel.connct()请求连接成功后就绪。该操作只给客户端使用。当接收到一个客户端连接请求时就绪。该操作只给服务器使用。
