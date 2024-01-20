@@ -6,7 +6,6 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
-        "dimension": 33.2378223495702,
         "children": [
           {
             "id": "95e5ba230cbcb56e",
@@ -29,6 +28,26 @@
                 "file": "Mysql/说说一条更新语句的执行过程.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "54cedd08b01a5ee8",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "415bbd4fb7ed8949",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md"
               }
             }
           },
@@ -57,24 +76,7 @@
             }
           }
         ],
-        "currentTab": 1
-      },
-      {
-        "id": "87dd5edf48b153a4",
-        "type": "tabs",
-        "dimension": 66.7621776504298,
-        "children": [
-          {
-            "id": "dbc5c5f8b83c5d46",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md"
-              }
-            }
-          }
-        ]
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -217,7 +219,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "dbc5c5f8b83c5d46",
+  "active": "54cedd08b01a5ee8",
   "lastOpenFiles": [
     "Mysql/说说一条更新语句的执行过程.md",
     "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md",
