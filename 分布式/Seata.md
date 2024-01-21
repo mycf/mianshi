@@ -242,6 +242,17 @@ AT 模式基于 **支持本地 ACID 事务** 的 **关系型数据库**：
 当某分支事务的 try 阶段阻塞时，可能导致全局事务超时而触发二阶段的 cancel 操作。在未执行 try 操作时先执行了 cancel 操作，这时 cancel 不能做回滚，就是空回滚。
 ![image.png](https://gitee.com/ycfan/images/raw/master/img/20240121204539.png)
 
+对于已经空回滚的业务，如果以后继续执行 try ，就永远不可能 confirm 或 cancel ，这就是业务悬挂。应当阻止执行空回滚后的 try 操作，避免悬挂。
+
+为了实现空回滚、防止业务悬挂，以及幂等性要求。我们必须在数据库记录冻结金额的同时，记录当前事务id和执行状态，为此我们设计了一张表:
+```mysql
+CREATE TABLE account_freeze_tbl(
+`xid` varchar(128) NOT NULL,
+`user_id`,varchar(255) DEFAULT NULL COMMENT '用户id',
+`freeze_money`int(11)unsigned DEFAULT'O'COMMENT '冻结金额',state`int(1)DEFAULT NULL COMMENT'事务状态，0:try，1:confirm，2:cancel',PRIMARY KEY(xid`)USING BTREE
+)ENGINE=InNODB DEFAULT CHARSET=Utf8 ROW FORMAT=COMPACT;
+
+```
 
 # Saga 模式
 
