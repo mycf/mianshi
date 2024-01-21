@@ -249,9 +249,10 @@ AT 模式基于 **支持本地 ACID 事务** 的 **关系型数据库**：
 CREATE TABLE account_freeze_tbl(
 `xid` varchar(128) NOT NULL,
 `user_id`,varchar(255) DEFAULT NULL COMMENT '用户id',
-`freeze_money`int(11)unsigned DEFAULT'O'COMMENT '冻结金额',state`int(1)DEFAULT NULL COMMENT'事务状态，0:try，1:confirm，2:cancel',PRIMARY KEY(xid`)USING BTREE
-)ENGINE=InNODB DEFAULT CHARSET=Utf8 ROW FORMAT=COMPACT;
-
+`freeze_money`int(11) unsigned DEFAULT'O'COMMENT '冻结金额',
+`state` int(1) DEFAULT NULL COMMENT'事务状态，0:try，1:confirm，2:cancel',
+PRIMARY KEY(xid`)USING BTREE
+) ENGINE=InNODB DEFAULT CHARSET=Utf8 ROW FORMAT=COMPACT;
 ```
 
 # Saga 模式
