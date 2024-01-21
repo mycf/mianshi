@@ -239,6 +239,9 @@ AT 模式基于 **支持本地 ACID 事务** 的 **关系型数据库**：
 
 所谓 TCC 模式，是指支持把 **自定义** 的分支事务纳入到全局事务的管理中。
 ## TCC 的空回滚和业务悬挂
+当某分支事务的 try 阶段阻塞时，可能导致全局事务超时而触发二阶段的 cancel 操作。在未执行 try 操作时先执行了 cancel 操作，这时 cancel 不能做回滚，就是空回滚。
+![image.png](https://gitee.com/ycfan/images/raw/master/img/20240121204539.png)
+
 
 # Saga 模式
 
