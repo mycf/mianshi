@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/Spring的三级缓存.md",
+                "file": "框架/Spring/Spring的事务传播行为.md",
                 "mode": "source",
                 "source": false
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/Spring的三级缓存.md",
+                "file": "框架/Spring/Spring的事务传播行为.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/Spring的三级缓存.md",
+                "file": "框架/Spring/Spring的事务传播行为.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +189,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/Spring的三级缓存.md"
+                "file": "框架/Spring/Spring的事务传播行为.md"
               }
             }
           },
@@ -227,6 +227,7 @@
   },
   "active": "95e5ba230cbcb56e",
   "lastOpenFiles": [
+    "框架/Spring/Spring的三级缓存.md",
     "框架/Spring/spring三级缓存.md",
     "Java基础/JVM/垃圾收集器.md",
     "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md",
@@ -252,7 +253,6 @@
     "框架/Spring/说说Spring中的AOP.md",
     "Mysql/快照读和当前读.md",
     "Mysql/分布式事务.md",
-    "Mysql/日志-redolog 重做日志.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
