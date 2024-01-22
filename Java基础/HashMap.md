@@ -1,16 +1,18 @@
 # 1.8
 ## 初始化
+
 ```java
     public HashMap() {
         this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
     }
-j```
+```
 
 ## put插入
 ![[HashMap 2024-01-06 14.11.10.excalidraw|100%]]
+
 ## 数组扩容
 ![[HashMap 2024-01-06 15.31.21.excalidraw|100%]]
-总结
+### 总结
 - JDK1.8 同样是先生成新数组，长度是老数组的2倍;
 - 遍历老数组桶中的每个元素;
 - 如果桶节点没有形成链表，计算出新数组的索位置，直接转移到新数组;
@@ -126,6 +128,13 @@ static {
 	// 正常都是Integer.MAX_VALUE;
 	ALTERNATIVE_HASHING_THRESHOLD = threshold;
 ```
-
+### 总结
+总结:
+·先生成长度是老数组的2倍的新数组;
+·遍历老数组中桶中的每个元素;
+根据key计算新数组的索引下标;
+按照索引将元素添加到新数组中去;
+·所有元素转移完之后，将新数组赋值给Ha;hMap对象的table属性。
+注意:JDK1.7多线程环境下扩容会产生链表环问题，引发严重的性能问题。JDK1.8中采用尾插法&链表重新链接解决了此问题。
 # JDK7 头插法死锁问题
 ![[HashMap死循环.excalidraw|100%]]
