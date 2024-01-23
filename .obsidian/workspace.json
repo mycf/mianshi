@@ -6,7 +6,6 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
-        "dimension": 40.257879656160455,
         "children": [
           {
             "id": "548af89403614686",
@@ -14,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "框架/mybatis/Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -123,23 +122,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "95ff3f0d6df74c2e",
-        "type": "tabs",
-        "dimension": 59.742120343839545,
-        "children": [
-          {
-            "id": "c4aab7b544895f62",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md"
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -189,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -206,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
+                "file": "框架/mybatis/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
+                "file": "框架/mybatis/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -246,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md"
+                "file": "框架/mybatis/Untitled.md"
               }
             }
           },
@@ -282,9 +263,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c4aab7b544895f62",
+  "active": "548af89403614686",
   "lastOpenFiles": [
     "算法/树/二叉树.md",
+    "框架/mybatis/Untitled.md",
     "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "Java基础/JVM/双亲委派.md",
     "Java基础/HashMap.md",
@@ -309,7 +291,6 @@
     "Java基础/JVM/G1.md",
     "Java基础/JVM/G1 和 CMS的区别.md",
     "框架/Spring/Spring bean的创建过程.md",
-    "框架/Spring/AbstractAutowireCapableBeanFactory.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
