@@ -6,6 +6,7 @@
       {
         "id": "0c1704d757f3fa32",
         "type": "tabs",
+        "dimension": 40.257879656160455,
         "children": [
           {
             "id": "548af89403614686",
@@ -13,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/双亲委派.md",
+                "file": "算法/树/二叉树.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,6 +123,23 @@
             }
           }
         ]
+      },
+      {
+        "id": "95ff3f0d6df74c2e",
+        "type": "tabs",
+        "dimension": 59.742120343839545,
+        "children": [
+          {
+            "id": "c4aab7b544895f62",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,7 +189,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -187,7 +206,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/双亲委派.md",
+                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +223,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/双亲委派.md",
+                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,7 +246,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/双亲委派.md"
+                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md"
               }
             }
           },
@@ -248,7 +267,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -262,10 +282,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "548af89403614686",
+  "active": "c4aab7b544895f62",
   "lastOpenFiles": [
-    "Java基础/HashMap.md",
+    "算法/树/二叉树.md",
+    "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "Java基础/JVM/双亲委派.md",
+    "Java基础/HashMap.md",
     "面试.md",
     "Mysql/一条SQL的执行过程是怎样的.md",
     "框架/Spring/spring bean的生命周期.md",
@@ -288,8 +310,6 @@
     "Java基础/JVM/G1 和 CMS的区别.md",
     "框架/Spring/Spring bean的创建过程.md",
     "框架/Spring/AbstractAutowireCapableBeanFactory.md",
-    "Java基础/JVM/ZGC 收集器.md",
-    "Java基础/JVM/性能优化/Untitled.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
