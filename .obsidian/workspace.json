@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mysql/一条SQL的执行过程是怎样的.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "mode": "source",
                 "source": false
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mysql/一条SQL的执行过程是怎样的.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mysql/一条SQL的执行过程是怎样的.md",
+                "file": "Java基础/java 线程之间是如何通信的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mysql/一条SQL的执行过程是怎样的.md"
+                "file": "Java基础/java 线程之间是如何通信的.md"
               }
             }
           },
@@ -266,6 +266,8 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/Java中的管程模型.md",
+    "Mysql/意向锁.md",
     "Mysql/为什么建议设置not null.md",
     "Mysql/一条SQL的执行过程是怎样的.md",
     "Mysql/索引下推.md",
@@ -290,8 +292,6 @@
     "框架/mybatis/mybatis.md",
     "算法/树/二叉树.md",
     "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
-    "Java基础/JVM/双亲委派.md",
-    "面试.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
