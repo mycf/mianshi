@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/JVM内存结构.md",
+                "file": "Mysql/一条SQL的执行过程是怎样的.md",
                 "mode": "source",
                 "source": false
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/JVM内存结构.md",
+                "file": "Mysql/一条SQL的执行过程是怎样的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/JVM内存结构.md",
+                "file": "Mysql/一条SQL的执行过程是怎样的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/JVM内存结构.md"
+                "file": "Mysql/一条SQL的执行过程是怎样的.md"
               }
             }
           },
@@ -266,6 +266,11 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Mysql/为什么建议设置not null.md",
+    "Mysql/一条SQL的执行过程是怎样的.md",
+    "Mysql/索引下推.md",
+    "Mysql/如何设计索引.md",
+    "Java基础/JVM/JVM内存结构.md",
     "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/JVM/synchronized.md",
     "Java基础/JVM/什么是零拷贝.md",
@@ -287,11 +292,6 @@
     "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "Java基础/JVM/双亲委派.md",
     "面试.md",
-    "Mysql/一条SQL的执行过程是怎样的.md",
-    "框架/Spring/spring bean的生命周期.md",
-    "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md",
-    "分布式/Seata.md",
-    "Java基础/JVM/volatile.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
