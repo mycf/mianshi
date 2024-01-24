@@ -120,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
+                "file": "算法/树/二叉树.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
+                "file": "算法/树/二叉树.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md"
+                "file": "算法/树/二叉树.md"
               }
             }
           },
@@ -262,8 +262,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "deca552983c59d62",
+  "active": "4f5aae7714cb29a3",
   "lastOpenFiles": [
+    "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "算法/树/二叉树.md",
     "算法/树/平衡二叉树.md",
     "Java基础/HashMap.md",
@@ -289,7 +290,6 @@
     "Java基础/JVM/JVM内存结构.md",
     "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/JVM/synchronized.md",
-    "Java基础/JVM/什么是零拷贝.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
