@@ -56,6 +56,16 @@
             }
           },
           {
+            "id": "deca552983c59d62",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md"
+              }
+            }
+          },
+          {
             "id": "49d15cf49ab4a47c",
             "type": "leaf",
             "state": {
@@ -110,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -176,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -193,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -216,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/树/二叉树.md"
+                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md"
               }
             }
           },
@@ -252,12 +262,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "deca552983c59d62",
   "lastOpenFiles": [
+    "算法/树/二叉树.md",
     "算法/树/平衡二叉树.md",
     "Java基础/HashMap.md",
     "算法/树/[.md",
-    "算法/树/二叉树.md",
     "分布式/Redis/redis.md",
     "Java基础/sleep与wait的区别 sleep(0).md",
     "框架/Dubbo/Dubbo的可扩展机制SPI源码解析.md",
