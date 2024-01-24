@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Java基础/AbstractQueuedSynchronizer.md",
                 "mode": "source",
                 "source": false
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Java基础/AbstractQueuedSynchronizer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md",
+                "file": "Java基础/AbstractQueuedSynchronizer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/垃圾收集器.md"
+                "file": "Java基础/AbstractQueuedSynchronizer.md"
               }
             }
           },
@@ -264,8 +264,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "038fc89602936c4d",
   "lastOpenFiles": [
+    "Java基础/JVM/synchronized.md",
+    "Java基础/JVM/什么是零拷贝.md",
+    "Java基础/JVM/垃圾收集器.md",
     "Java基础/JVM/CMS.md",
     "Java基础/JVM/对象内存分配流程.md",
     "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
@@ -289,9 +292,6 @@
     "分布式/Seata.md",
     "Java基础/JVM/volatile.md",
     "Mysql/说说一条更新语句的执行过程.md",
-    "框架/Spring/Spring的事务传播行为.md",
-    "框架/Spring/Spring的三级缓存.md",
-    "框架/Spring/spring三级缓存.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
