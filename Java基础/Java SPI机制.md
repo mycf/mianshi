@@ -33,7 +33,7 @@ com.example.demo.java.YuUserServiceImpl
 
 
 ```java
-    ServiceLoader<UserService> serviceLoader = ServiceLoakkder.load(UserService.class);
+    ServiceLoader<UserService> serviceLoader = ServiceLoader.load(UserService.class);
     Iterator<UserService> serviceIterator = serviceLoader.iterator();
     while (serviceIterator.hasNext()) {
       UserService service = serviceIterator.next();

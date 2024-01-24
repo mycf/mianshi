@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/HashMap.md",
                 "mode": "source",
                 "source": false
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/HashMap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md",
+                "file": "Java基础/HashMap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/java 线程之间是如何通信的.md"
+                "file": "Java基础/HashMap.md"
               }
             }
           },
@@ -264,8 +264,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "038fc89602936c4d",
   "lastOpenFiles": [
+    "Java基础/PriorityQueue.md",
+    "Java基础/Queue.md",
+    "Java基础/RandownAccess.md",
+    "Java基础/java接口调优.md",
+    "Java基础/Java是值传递还是引用传递？.md",
+    "Java基础/jdk9 模块.md",
+    "Java基础/Java SPI机制.md",
+    "Java基础/java 最终变量和最终有效变量.md",
+    "Java基础/java 线程之间是如何通信的.md",
     "Java基础/Java中的管程模型.md",
     "Mysql/意向锁.md",
     "Mysql/为什么建议设置not null.md",
@@ -283,15 +292,6 @@
     "Java基础/JVM/性能优化/性能优化案例7：日均百万级订单交易系统如何设置JVM参数.md",
     "Java基础/JVM/性能优化/01-概述.md",
     "Java基础/ArrayList.md",
-    "Java基础/HashMap.md",
-    "Java基础/线程池.md",
-    "Mysql/日志-undo log.md",
-    "分布式/Zookeeper/Zookeeper.md",
-    "分布式/Zookeeper/zk集群搭建.md",
-    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
-    "框架/mybatis/mybatis.md",
-    "算法/树/二叉树.md",
-    "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
