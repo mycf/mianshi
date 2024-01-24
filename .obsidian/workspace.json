@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/线程池.md",
+                "file": "Java基础/JVM/对象内存分配流程.md",
                 "mode": "source",
                 "source": false
               }
@@ -167,8 +167,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -188,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/线程池.md",
+                "file": "Java基础/JVM/对象内存分配流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +204,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/线程池.md",
+                "file": "Java基础/JVM/对象内存分配流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/线程池.md"
+                "file": "Java基础/JVM/对象内存分配流程.md"
               }
             }
           },
@@ -266,6 +265,8 @@
   },
   "active": "548af89403614686",
   "lastOpenFiles": [
+    "Java基础/线程池.md",
+    "Java基础/JVM/对象内存分配流程.md",
     "Mysql/日志-undo log.md",
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/zk集群搭建.md",
@@ -290,8 +291,6 @@
     "Java基础/JVM/NIO.md",
     "Java基础/JVM/什么是零拷贝.md",
     "分布式/一文彻底弄懂零拷贝原理.md",
-    "Excalidraw/什么是零拷贝 2024-01-19 21.26.57.excalidraw.md",
-    "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
