@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/对象内存分配流程.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "mode": "source",
                 "source": false
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/对象内存分配流程.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/对象内存分配流程.md",
+                "file": "Java基础/JVM/垃圾收集器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/对象内存分配流程.md"
+                "file": "Java基础/JVM/垃圾收集器.md"
               }
             }
           },
@@ -266,12 +266,13 @@
   },
   "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/JVM/CMS.md",
+    "Java基础/JVM/对象内存分配流程.md",
     "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
     "Java基础/JVM/性能优化/性能优化案例7：日均百万级订单交易系统如何设置JVM参数.md",
     "Java基础/JVM/性能优化/01-概述.md",
     "Java基础/ArrayList.md",
     "Java基础/HashMap.md",
-    "Java基础/JVM/对象内存分配流程.md",
     "Java基础/线程池.md",
     "Mysql/日志-undo log.md",
     "分布式/Zookeeper/Zookeeper.md",
@@ -291,7 +292,6 @@
     "框架/Spring/Spring的事务传播行为.md",
     "框架/Spring/Spring的三级缓存.md",
     "框架/Spring/spring三级缓存.md",
-    "Java基础/JVM/垃圾收集器.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
