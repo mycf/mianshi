@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/HashMap.md",
+                "file": "Java基础/ArrayList.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +121,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -187,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/对象内存分配流程.md",
+                "file": "Java基础/ArrayList.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/对象内存分配流程.md",
+                "file": "Java基础/ArrayList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/对象内存分配流程.md"
+                "file": "Java基础/ArrayList.md"
               }
             }
           },
@@ -263,10 +264,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "548af89403614686",
+  "active": "038fc89602936c4d",
   "lastOpenFiles": [
-    "Java基础/线程池.md",
+    "Java基础/HashMap.md",
     "Java基础/JVM/对象内存分配流程.md",
+    "Java基础/线程池.md",
     "Mysql/日志-undo log.md",
     "分布式/Zookeeper/Zookeeper.md",
     "分布式/Zookeeper/zk集群搭建.md",
@@ -275,7 +277,6 @@
     "算法/树/二叉树.md",
     "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "Java基础/JVM/双亲委派.md",
-    "Java基础/HashMap.md",
     "面试.md",
     "Mysql/一条SQL的执行过程是怎样的.md",
     "框架/Spring/spring bean的生命周期.md",
