@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+                "file": "分布式/Zookeeper/Zookeeper.md",
                 "mode": "source",
                 "source": false
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+                "file": "分布式/Zookeeper/Zookeeper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+                "file": "分布式/Zookeeper/Zookeeper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md"
+                "file": "分布式/Zookeeper/Zookeeper.md"
               }
             }
           },
@@ -266,6 +266,8 @@
   },
   "active": "548af89403614686",
   "lastOpenFiles": [
+    "分布式/Zookeeper/zk集群搭建.md",
+    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
     "框架/mybatis/mybatis.md",
     "算法/树/二叉树.md",
     "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
@@ -290,8 +292,6 @@
     "Excalidraw/什么是零拷贝 2024-01-19 21.26.56.excalidraw.md",
     "Java基础/JVM/类的加载过程.md",
     "Java基础/JVM/G1.md",
-    "Java基础/JVM/G1 和 CMS的区别.md",
-    "框架/Spring/Spring bean的创建过程.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
