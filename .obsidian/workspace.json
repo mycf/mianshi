@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/ArrayList.md",
+                "file": "Java基础/JVM/对象内存分配流程.md",
                 "mode": "source",
                 "source": false
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/ArrayList.md",
+                "file": "Java基础/JVM/对象内存分配流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/ArrayList.md",
+                "file": "Java基础/JVM/对象内存分配流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/ArrayList.md"
+                "file": "Java基础/JVM/对象内存分配流程.md"
               }
             }
           },
@@ -264,8 +264,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "038fc89602936c4d",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
+    "Java基础/JVM/性能优化/性能优化案例7：日均百万级订单交易系统如何设置JVM参数.md",
+    "Java基础/JVM/性能优化/01-概述.md",
+    "Java基础/ArrayList.md",
     "Java基础/HashMap.md",
     "Java基础/JVM/对象内存分配流程.md",
     "Java基础/线程池.md",
@@ -288,10 +292,6 @@
     "框架/Spring/Spring的三级缓存.md",
     "框架/Spring/spring三级缓存.md",
     "Java基础/JVM/垃圾收集器.md",
-    "Mysql/MySQL 执行一条查询语句的内部执行过程.md",
-    "Java基础/JVM/NIO.md",
-    "Java基础/JVM/什么是零拷贝.md",
-    "分布式/一文彻底弄懂零拷贝原理.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
