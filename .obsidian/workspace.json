@@ -49,19 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/HashMap.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "038fc89602936c4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "算法/树/二叉树.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +110,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -188,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "算法/树/二叉树.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +193,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Redis/redis.md",
+                "file": "算法/树/二叉树.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +216,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Redis/redis.md"
+                "file": "算法/树/二叉树.md"
               }
             }
           },
@@ -264,11 +252,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "038fc89602936c4d",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "算法/树/平衡二叉树.md",
+    "Java基础/HashMap.md",
+    "算法/树/[.md",
+    "算法/树/二叉树.md",
+    "分布式/Redis/redis.md",
     "Java基础/sleep与wait的区别 sleep(0).md",
     "框架/Dubbo/Dubbo的可扩展机制SPI源码解析.md",
-    "Java基础/HashMap.md",
     "Java基础/PriorityQueue.md",
     "Java基础/Queue.md",
     "Java基础/RandownAccess.md",
@@ -288,10 +280,6 @@
     "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/JVM/synchronized.md",
     "Java基础/JVM/什么是零拷贝.md",
-    "Java基础/JVM/垃圾收集器.md",
-    "Java基础/JVM/CMS.md",
-    "Java基础/JVM/对象内存分配流程.md",
-    "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
