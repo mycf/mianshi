@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/sleep与wait的区别 sleep(0).md",
+                "file": "分布式/Redis/redis.md",
                 "mode": "source",
                 "source": false
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/sleep与wait的区别 sleep(0).md",
+                "file": "分布式/Redis/redis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/sleep与wait的区别 sleep(0).md",
+                "file": "分布式/Redis/redis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/sleep与wait的区别 sleep(0).md"
+                "file": "分布式/Redis/redis.md"
               }
             }
           },
@@ -264,8 +264,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "038fc89602936c4d",
   "lastOpenFiles": [
+    "Java基础/sleep与wait的区别 sleep(0).md",
     "框架/Dubbo/Dubbo的可扩展机制SPI源码解析.md",
     "Java基础/HashMap.md",
     "Java基础/PriorityQueue.md",
@@ -291,7 +292,6 @@
     "Java基础/JVM/CMS.md",
     "Java基础/JVM/对象内存分配流程.md",
     "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
-    "Java基础/JVM/性能优化/性能优化案例7：日均百万级订单交易系统如何设置JVM参数.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
