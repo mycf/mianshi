@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "算法/冒泡排序.md",
                 "mode": "source",
                 "source": false
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "算法/冒泡排序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "算法/冒泡排序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/树/二叉树.md"
+                "file": "算法/冒泡排序.md"
               }
             }
           },
@@ -262,11 +262,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4f5aae7714cb29a3",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "算法/插入排序.md",
+    "算法/树/二叉树.md",
     "Java基础/Deque.md",
     "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
-    "算法/树/二叉树.md",
     "算法/树/平衡二叉树.md",
     "Java基础/HashMap.md",
     "算法/树/[.md",
@@ -289,7 +290,6 @@
     "Mysql/索引下推.md",
     "Mysql/如何设计索引.md",
     "Java基础/JVM/JVM内存结构.md",
-    "Java基础/AbstractQueuedSynchronizer.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
