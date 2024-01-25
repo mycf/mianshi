@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "Java基础/Deque.md",
                 "mode": "source",
                 "source": false
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "Java基础/Deque.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "Java基础/Deque.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/树/二叉树.md"
+                "file": "Java基础/Deque.md"
               }
             }
           },
@@ -264,8 +264,9 @@
   },
   "active": "4f5aae7714cb29a3",
   "lastOpenFiles": [
-    "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "算法/树/二叉树.md",
+    "Java基础/Deque.md",
+    "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "算法/树/平衡二叉树.md",
     "Java基础/HashMap.md",
     "算法/树/[.md",
@@ -289,7 +290,6 @@
     "Mysql/如何设计索引.md",
     "Java基础/JVM/JVM内存结构.md",
     "Java基础/AbstractQueuedSynchronizer.md",
-    "Java基础/JVM/synchronized.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
