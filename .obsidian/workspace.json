@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "分布式/Redis/redis.md",
                 "mode": "source",
                 "source": false
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "分布式/Redis/redis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/树/二叉树.md",
+                "file": "分布式/Redis/redis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/树/二叉树.md"
+                "file": "分布式/Redis/redis.md"
               }
             }
           },
@@ -262,11 +262,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "4f5aae7714cb29a3",
   "lastOpenFiles": [
+    "算法/树/二叉树.md",
     "算法/冒泡排序.md",
     "算法/插入排序.md",
-    "算法/树/二叉树.md",
     "Java基础/Deque.md",
     "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "算法/树/平衡二叉树.md",
