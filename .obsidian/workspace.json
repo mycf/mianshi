@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "分布式/nacos/Nacos.md",
                 "mode": "source",
                 "source": false
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "分布式/nacos/Nacos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md",
+                "file": "分布式/nacos/Nacos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/Zookeeper/Zookeeper.md"
+                "file": "分布式/nacos/Nacos.md"
               }
             }
           },
@@ -264,6 +264,7 @@
   },
   "active": "4f5aae7714cb29a3",
   "lastOpenFiles": [
+    "分布式/Zookeeper/Zookeeper.md",
     "算法/LeetCode/5. 最长回文子串.md",
     "算法/Untitled.md",
     "算法/LeetCode",
@@ -290,7 +291,6 @@
     "Java基础/Java中的管程模型.md",
     "Mysql/意向锁.md",
     "Mysql/为什么建议设置not null.md",
-    "Mysql/一条SQL的执行过程是怎样的.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
