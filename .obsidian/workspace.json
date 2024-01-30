@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "mode": "source",
                 "source": false
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "框架/Spring/Spring事务失效的场景.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/mybatis/缓存.md"
+                "file": "框架/Spring/Spring事务失效的场景.md"
               }
             }
           },
@@ -262,10 +262,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a1058dfcb5948e2",
+  "active": "4f5aae7714cb29a3",
   "lastOpenFiles": [
-    "框架/mybatis/mybatis.md",
     "框架/mybatis/缓存.md",
+    "框架/mybatis/mybatis.md",
     "Java基础/UnSafe.md",
     "框架/mybatis.md",
     "框架/Spring/Spring的事务传播行为.md",
