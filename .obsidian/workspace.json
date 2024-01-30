@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/mybatis/mybatis.md",
+                "file": "框架/mybatis/缓存.md",
                 "mode": "source",
                 "source": false
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/mybatis/mybatis.md",
+                "file": "框架/mybatis/缓存.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/mybatis/mybatis.md",
+                "file": "框架/mybatis/缓存.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/mybatis/mybatis.md"
+                "file": "框架/mybatis/缓存.md"
               }
             }
           },
@@ -262,8 +262,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4f5aae7714cb29a3",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "框架/mybatis/mybatis.md",
     "框架/mybatis/缓存.md",
     "Java基础/UnSafe.md",
     "框架/mybatis.md",
@@ -290,7 +291,6 @@
     "Java基础/Queue.md",
     "Java基础/RandownAccess.md",
     "Java基础/java接口调优.md",
-    "Java基础/Java是值传递还是引用传递？.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
