@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "分布式/分布式事务.md",
                 "mode": "source",
                 "source": false
               }
@@ -185,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "分布式/分布式事务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "分布式/分布式事务.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,7 +225,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md"
+                "file": "分布式/分布式事务.md"
               }
             }
           },
@@ -246,8 +246,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -261,8 +260,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "548af89403614686",
+  "active": "1a1058dfcb5948e2",
   "lastOpenFiles": [
+    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+    "分布式/一文彻底弄懂零拷贝原理.md",
+    "Java基础/JVM/finalize.md",
+    "Java基础/JVM/G1 和 CMS的区别.md",
     "Java基础/JVM/JVM垃圾回收算法.md",
     "分布式/Redis/Redis big key.md",
     "Java基础/JVM/NIO.md",
@@ -285,10 +288,6 @@
     "Mysql/explain.md",
     "Mysql/索引下推.md",
     "Mysql/说说一条更新语句的执行过程.md",
-    "Mysql/使用Order By时能否通过索引排序？.md",
-    "Mysql/日志-redolog 重做日志.md",
-    "Mysql/日志-binlog 二进制文件.md",
-    "Java基础/JVM/对象内存分配流程.md",
     "算法/LeetCode",
     "框架/Spring/Untitled",
     "算法/树",
