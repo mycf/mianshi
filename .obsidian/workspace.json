@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "Java基础/ThreadLocal.md",
                 "mode": "source",
                 "source": false
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "Java基础/ThreadLocal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "Java基础/ThreadLocal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/mybatis/缓存.md"
+                "file": "Java基础/ThreadLocal.md"
               }
             }
           },
@@ -264,8 +264,9 @@
   },
   "active": "4f5aae7714cb29a3",
   "lastOpenFiles": [
-    "框架/Spring/Spring事务失效的场景.md",
+    "Java基础/JVM/G1 和 CMS的区别.md",
     "框架/mybatis/缓存.md",
+    "框架/Spring/Spring事务失效的场景.md",
     "框架/mybatis/mybatis.md",
     "Java基础/UnSafe.md",
     "框架/mybatis.md",
@@ -290,7 +291,6 @@
     "框架/Dubbo/Dubbo的可扩展机制SPI源码解析.md",
     "Java基础/PriorityQueue.md",
     "Java基础/Queue.md",
-    "Java基础/RandownAccess.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
