@@ -119,8 +119,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -186,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/ThreadLocal.md",
+                "file": "Java基础/JVM/对象内存分配流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/ThreadLocal.md",
+                "file": "Java基础/JVM/对象内存分配流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +225,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/ThreadLocal.md"
+                "file": "Java基础/JVM/对象内存分配流程.md"
               }
             }
           },
@@ -262,8 +261,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4f5aae7714cb29a3",
+  "active": "548af89403614686",
   "lastOpenFiles": [
+    "Java基础/HashMap.md",
+    "Java基础/ThreadLocal.md",
     "Java基础/JVM/G1 和 CMS的区别.md",
     "框架/mybatis/缓存.md",
     "框架/Spring/Spring事务失效的场景.md",
@@ -285,12 +286,10 @@
     "Java基础/Deque.md",
     "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md",
     "算法/树/平衡二叉树.md",
-    "Java基础/HashMap.md",
     "算法/树/[.md",
     "Java基础/sleep与wait的区别 sleep(0).md",
     "框架/Dubbo/Dubbo的可扩展机制SPI源码解析.md",
     "Java基础/PriorityQueue.md",
-    "Java基础/Queue.md",
     "框架/Spring/Untitled",
     "算法/树",
     "Mysql/Untitled",
