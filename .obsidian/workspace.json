@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/springCloud/eureka.md",
+                "file": "框架/mybatis/缓存.md",
                 "mode": "source",
                 "source": false
               }
@@ -185,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/springCloud/eureka.md",
+                "file": "框架/mybatis/缓存.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/springCloud/eureka.md",
+                "file": "框架/mybatis/缓存.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,7 +225,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/springCloud/eureka.md"
+                "file": "框架/mybatis/缓存.md"
               }
             }
           },
@@ -262,6 +262,7 @@
   },
   "active": "548af89403614686",
   "lastOpenFiles": [
+    "框架/Spring/springCloud/eureka.md",
     "框架/Spring/springMVC/SpringMVC.md",
     "框架/Spring/springMVC/什么是MVC.md",
     "设计模式.md",
@@ -287,7 +288,6 @@
     "Java基础/@CallerSensitive.md",
     "Java基础/解决hash冲突的办法有哪些？HashMap用的哪种?.md",
     "Java基础/Java SPI机制.md",
-    "Java基础/java 最终变量和最终有效变量.md",
     "算法/LeetCode",
     "框架/Spring/Untitled",
     "算法/树",
