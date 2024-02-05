@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "分布式/分布式id.md",
                 "mode": "source",
                 "source": false
               }
@@ -185,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "分布式/分布式id.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/mybatis/缓存.md",
+                "file": "分布式/分布式id.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,7 +225,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/mybatis/缓存.md"
+                "file": "分布式/分布式id.md"
               }
             }
           },
@@ -262,6 +262,8 @@
   },
   "active": "548af89403614686",
   "lastOpenFiles": [
+    "框架/mybatis/缓存.md",
+    "分布式/分布式id.md",
     "框架/Spring/springCloud/eureka.md",
     "框架/Spring/springMVC/SpringMVC.md",
     "框架/Spring/springMVC/什么是MVC.md",
@@ -286,8 +288,6 @@
     "Java基础/JVM/JVM内存结构.md",
     "Java基础/JVM/javap的使用.md",
     "Java基础/@CallerSensitive.md",
-    "Java基础/解决hash冲突的办法有哪些？HashMap用的哪种?.md",
-    "Java基础/Java SPI机制.md",
     "算法/LeetCode",
     "框架/Spring/Untitled",
     "算法/树",
