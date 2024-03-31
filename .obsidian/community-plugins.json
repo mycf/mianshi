@@ -8,5 +8,6 @@
   "obsidian-excalidraw-plugin",
   "templater-obsidian",
   "obsidian-git",
-  "obsidian-code-block-enhancer"
+  "obsidian-code-block-enhancer",
+  "dataview"
 ]

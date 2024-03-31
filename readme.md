@@ -6,3 +6,6 @@
 [大神知乎](https://zhuanlan.zhihu.com/p/25042028?utm_id=0) 
 
 [一个java的网站](https://heapdump.cn/question/6140836) 
+
+分布式id
+https://cloud.tencent.com/developer/article/1814860

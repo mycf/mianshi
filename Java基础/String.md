@@ -1,7 +1,10 @@
-# [深入解析String#intern](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html)
 
-2014年03月06日 作者: john_yang [文章链接](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html) 8330字 17分钟阅读
+# intern()
+`String#intern()`方法用于在运行时将字符串添加到内部的字符串池中，并***返回字符串池中的引用。
 
+```java
+public native String intern();  
+```
 在 JAVA 语言中有8中基本类型和一种比较特殊的类型`String`。这些类型为了使他们在运行过程中速度更快，更节省内存，都提供了一种常量池的概念。常量池就类似一个JAVA系统级别提供的缓存。
 
 8种基本类型的常量池都是系统协调的，`String`类型的常量池比较特殊。它的主要使用方法有两种：
@@ -9,57 +12,22 @@
 - 直接使用双引号声明出来的`String`对象会直接存储在常量池中。
 - 如果不是用双引号声明的`String`对象，可以使用`String`提供的`intern`方法。intern 方法会从字符串常量池中查询当前字符串是否存在，若不存在就会将当前字符串放入常量池中
 
-接下来我们主要来谈一下`String#intern`方法。
-
-首先深入看一下它的实现原理。
-
-## 1，JAVA 代码
-
-```
-/** 
- * Returns a canonical representation for the string object. 
- * <p> 
- * A pool of strings, initially empty, is maintained privately by the 
- * class <code>String</code>. 
- * <p> 
- * When the intern method is invoked, if the pool already contains a 
- * string equal to this <code>String</code> object as determined by 
- * the {@link #equals(Object)} method, then the string from the pool is 
- * returned. Otherwise, this <code>String</code> object is added to the 
- * pool and a reference to this <code>String</code> object is returned. 
- * <p> 
- * It follows that for any two strings <code>s</code> and <code>t</code>, 
- * <code>s.intern()&nbsp;==&nbsp;t.intern()</code> is <code>true</code> 
- * if and only if <code>s.equals(t)</code> is <code>true</code>. 
- * <p> 
- * All literal strings and string-valued constant expressions are 
- * interned. String literals are defined in section 3.10.5 of the 
- * <cite>The Java&trade; Language Specification</cite>. 
- * 
- * @return  a string that has the same contents as this string, but is 
- *          guaranteed to be from a pool of unique strings. 
- */  
-public native String intern();  
-```
-
-`String#intern`方法中看到，这个方法是一个 native 的方法，但注释写的非常明了。“如果常量池中存在当前字符串, 就会直接返回当前字符串. 如果常量池中没有此字符串, 会将此字符串放入常量池中后, 再返回”。
-
-## 2，native 代码
+## 2 native 代码
 
 在 jdk7后，oracle 接管了 JAVA 的源码后就不对外开放了，根据 jdk 的主要开发人员声明 openJdk7 和 jdk7 使用的是同一分主代码，只是分支代码会有些许的变动。所以可以直接跟踪 openJdk7 的源码来探究 intern 的实现。
 
-####native实现代码: \openjdk7\jdk\src\share\native\java\lang\String.c
+#### native实现代码: openjdk7\\jdk\src\\share\\native\\java\\lang\\String.c
 
-```
+```c
 Java_java_lang_String_intern(JNIEnv *env, jobject this)  
 {  
     return JVM_InternString(env, this);  
 }  
 ```
 
-\openjdk7\hotspot\src\share\vm\prims\jvm.h
+\\openjdk7\\hotspot\\src\\share\\vm\\prims\\jvm.h
 
-```
+```c
 /* 
 * java.lang.String 
 */  
@@ -69,7 +37,7 @@ JVM_InternString(JNIEnv *env, jstring str);
 
 \openjdk7\hotspot\src\share\vm\prims\jvm.cpp
 
-```
+```c
 // String support ///////////////////////////////////////////////////////////////////////////  
 JVM_ENTRY(jstring, JVM_InternString(JNIEnv *env, jstring str))  
   JVMWrapper("JVM_InternString");  
@@ -99,7 +67,7 @@ oop StringTable::intern(Handle string_or_null, jchar* name,
 
 \openjdk7\hotspot\src\share\vm\classfile\symbolTable.cpp
 
-```
+```c++
 oop StringTable::lookup(int index, jchar* name,  
                         int len, unsigned int hash) {  
   for (HashtableEntry<oop>* l = bucket(index); l != NULL; l = l->next()) {  
@@ -118,14 +86,13 @@ oop StringTable::lookup(int index, jchar* name,
 要注意的是，String的String Pool是一个固定大小的`Hashtable`，默认值大小长度是1009，如果放进String Pool的String非常多，就会造成Hash冲突严重，从而导致链表会很长，而链表长了后直接会造成的影响就是当调用`String.intern`时性能会大幅下降（因为要一个一个找）。
 
 在 jdk6中`StringTable`是固定的，就是1009的长度，所以如果常量池中的字符串过多就会导致效率下降很快。在jdk7中，`StringTable`的长度可以通过一个参数指定：
-
 - `-XX:StringTableSize=99991`
 
 相信很多 JAVA 程序员都做做类似 `String s = new String("abc")`这个语句创建了几个对象的题目。 这种题目主要就是为了考察程序员对字符串对象的常量池掌握与否。上述的语句中是创建了2个对象，第一个对象是”abc”字符串存储在常量池中，第二个对象在JAVA Heap中的 String 对象。
 
 来看一段代码：
 
-```
+```java
 public static void main(String[] args) {
     String s = new String("1");
     s.intern();
@@ -146,7 +113,7 @@ public static void main(String[] args) {
 
 具体为什么稍后再解释，然后将`s3.intern();`语句下调一行，放到`String s4 = "11";`后面。将`s.intern();` 放到`String s2 = "1";`后面。是什么结果呢
 
-```
+```java
 public static void main(String[] args) {
     String s = new String("1");
     String s2 = "1";
@@ -165,17 +132,15 @@ public static void main(String[] args) {
 - jdk6 下`false false`
 - jdk7 下`false false`
 
-####1，jdk6中的解释
+#### 1.jdk6中的解释
 
 ![jdk6图](https://awps-assets.meituan.net/mit-x/blog-images-bundle-2014/4903ce64.png)
-
-jdk6图
 
 注：图中绿色线条代表 string 对象的内容指向。 黑色线条代表地址指向。
 
 如上图所示。首先说一下 jdk6中的情况，在 jdk6中上述的所有打印都是 false 的，因为 jdk6中的常量池是放在 Perm 区中的，Perm 区和正常的 JAVA Heap 区域是完全分开的。上面说过如果是使用引号声明的字符串都是会直接在字符串常量池中生成，而 new 出来的 String 对象是放在 JAVA Heap 区域。所以拿一个 JAVA Heap 区域的对象地址和字符串常量池的对象地址进行比较肯定是不相同的，即使调用`String.intern`方法也是没有任何关系的。
 
-####2，jdk7中的解释
+#### 2，jdk7中的解释
 
 再说说 jdk7 中的情况。这里要明确一点的是，在 Jdk6 以及以前的版本中，字符串的常量池是放在堆的 Perm 区的，Perm 区是一个类静态的区域，主要存储一些加载类的信息，常量池，方法片段等内容，默认大小只有4m，一旦常量池中大量使用 intern 是会直接产生`java.lang.OutOfMemoryError: PermGen space`错误的。 所以在 jdk7 的版本中，字符串常量池已经从 Perm 区移到正常的 Java Heap 区域了。为什么要移动，Perm 区域太小是一个主要原因，当然据消息称 jdk8 已经直接取消了 Perm 区域，而新建立了一个元区域。应该是 jdk 开发者认为 Perm 区域已经不适合现在 JAVA 的发展了。
 
@@ -206,13 +171,13 @@ jdk7图2
 - 将String常量池 从 Perm 区移动到了 Java Heap区
 - `String#intern` 方法时，如果存在堆中的对象，会直接保存对象的引用，而不会重新创建对象。
 
-## 1,intern 正确使用例子
+## 1.intern 正确使用例子
 
 接下来我们来看一下一个比较常见的使用`String#intern`方法的例子。
 
 代码如下：
 
-```
+```java
 static final int MAX = 1000 * 10000;
 static final String[] arr = new String[MAX];
 
@@ -253,7 +218,7 @@ public static void main(String[] args) throws Exception {
 
 在使用 fastjson 进行接口读取的时候，我们发现在读取了近70w条数据后，我们的日志打印变的非常缓慢，每打印一次日志用时30ms左右，如果在一个请求中打印2到3条日志以上会发现请求有一倍以上的耗时。在重新启动 jvm 后问题消失。继续读取接口后，问题又重现。接下来我们看一下出现问题的过程。
 
-####1，根据 log4j 打印日志查找问题原因
+#### 1，根据 log4j 打印日志查找问题原因
 
 在使用`log4j#info`打印日志的时候时间非常长。所以使用 housemd 软件跟踪 info 方法的耗时堆栈。
 
@@ -271,7 +236,7 @@ org/apache/logging/log4j/core/async/AsyncLogger.log(Marker, String, Level, Messa
 
 `Log4jLogEvent.calcLocation()`的代码如下:
 
-```
+```java
 public static StackTraceElement calcLocation(final String fqcnOfLogger) {  
     if (fqcnOfLogger == null) {  
         return null;  
@@ -397,13 +362,3 @@ if (size >= MAX_SIZE) {
 这个问题是70w 数据量时候的引发的，如果是几百万的数据量的话可能就不只是30ms 的问题了。因此在使用系统级提供的`String#intern`方式一定要慎重！
 
 本文大体的描述了 `String#intern`和字符串常量池的日常使用，jdk 版本的变化和`String#intern`方法的区别，以及不恰当使用导致的危险等内容，让大家对系统级别的 `String#intern`有一个比较深入的认识。让我们在使用和接触它的时候能避免出现一些 bug，增强系统的健壮性。
-
-以下是几个比较关键的几篇博文。感谢！
-
-- [Save Memory by Using String Intern in Java](https://blog.codecentric.de/en/2012/03/save-memory-by-using-string-intern-in-java/)
-- [Java String array: is there a size of method?](http://stackoverflow.com/questions/921384/java-string-array-is-there-a-size-of-method)
-- [Understanding String Table Size in HotSpot](http://xmlandmore.blogspot.com/2013/05/understanding-string-table-size-in.html)
-- [How is Java’s String#intern() method implemented?](http://stackoverflow.com/questions/3323608/how-is-javas-stringintern-method-implemented)
-- [JDK7里的String.intern的变化](http://hellojava.info/?p=61)
-
-[String](https://tech.meituan.com/tags/string.html), [intern](https://tech.meituan.com/tags/intern.html), [字符串常量池](https://tech.meituan.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0.html), [Log4j](https://tech.meituan.com/tags/log4j.html)

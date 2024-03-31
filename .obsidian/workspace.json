@@ -13,113 +13,70 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/分布式id.md",
+                "file": "Java基础/Contended.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "95e5ba230cbcb56e",
+            "id": "f0779dab795faddc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/HashMap.md",
+                "file": "订单支付超时未支付 关闭订单.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "303ed7077b90bfd3",
+            "id": "c7a6ead3fd89c7cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/HashMap.md",
+                "file": "分布式/Mysql/mysql.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4f5aae7714cb29a3",
+            "id": "f1fe9e75e59233a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/ThreadLocal.md",
+                "file": "Java基础/JVM/CMS.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "deca552983c59d62",
+            "id": "bd53499f0812ea1a",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/二叉树 2024-01-23 16.18.10.excalidraw.md"
+                "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md"
               }
             }
           },
           {
-            "id": "49d15cf49ab4a47c",
+            "id": "a7ee8bff836bce47",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Java基础/HashMap.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a672ec407f3fde0e",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "54cedd08b01a5ee8",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "415bbd4fb7ed8949",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/说说一条更新语句的执行过程 2024-01-20 22.40.41.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "ac85bb843479dae5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "框架/Spring/Spring bean的创建过程.md",
-                "mode": "source",
-                "source": false
+                "file": "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -148,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#一起聊聊",
+                "query": "relay",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -169,7 +126,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -185,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/分布式id.md",
+                "file": "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/分布式id.md",
+                "file": "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/分布式id.md"
+                "file": "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf"
               }
             }
           },
@@ -246,66 +204,67 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "548af89403614686",
+  "active": "a7ee8bff836bce47",
   "lastOpenFiles": [
-    "框架/mybatis/缓存.md",
-    "分布式/分布式id.md",
-    "框架/Spring/springCloud/eureka.md",
-    "框架/Spring/springMVC/SpringMVC.md",
-    "框架/Spring/springMVC/什么是MVC.md",
-    "设计模式.md",
-    "elstaicsearch/Untitled.md",
-    "算法/二分查找.md",
-    "分布式/消息队列/kafka/消息积压.md",
-    "分布式/消息队列/kafka/控制器.md",
-    "分布式/消息队列/kafka/快速了解kafka.md",
-    "分布式/消息队列/kafka/日志存储.md",
-    "分布式/消息队列/kafka/什么是ISR，为什么引入ISR.md",
-    "分布式/消息队列/kafka/07-客户端.md",
-    "分布式/消息队列/kafka/03-消费者.md",
-    "分布式/分布式事务.md",
-    "分布式/一文彻底弄懂零拷贝原理.md",
-    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
-    "Java基础/JVM/finalize.md",
+    "Java基础/Throwable.md",
+    "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf",
+    "Java基础/JVM/方法区.md",
+    "Java基础/JVM/对象内存分配流程.md",
+    "Java基础/JVM/常见参数.md",
     "Java基础/JVM/G1 和 CMS的区别.md",
-    "Java基础/JVM/JVM垃圾回收算法.md",
-    "分布式/Redis/Redis big key.md",
+    "Java基础/JVM/jps的使用.md",
+    "Java基础/JVM/G1.md",
+    "Java基础/JVM/CMS.md",
+    "Java基础/JVM/finalize.md",
+    "Java基础/JVM/FullGC 触发的场景.md",
+    "Java基础/JVM/引用.md",
+    "Java基础/JVM/双亲委派.md",
+    "Java基础/JVM/什么是零拷贝.md",
+    "Java基础/JVM/三色标记.md",
+    "Java基础/JVM/类加载器.md",
+    "Java基础/JVM/类的加载过程.md",
+    "Java基础/JVM/垃圾收集器.md",
+    "Java基础/JVM/对象.md",
+    "Java基础/JVM/查看jdk使用的垃圾收集器.md",
+    "Java基础/JVM/synchronized.md",
     "Java基础/JVM/NIO.md",
-    "Java基础/JVM/JVM内存结构.md",
-    "Java基础/JVM/javap的使用.md",
-    "Java基础/@CallerSensitive.md",
-    "算法/LeetCode",
-    "框架/Spring/Untitled",
-    "算法/树",
-    "Mysql/Untitled",
+    "Java基础/JVM/Java内存模型.md",
+    "Java基础/JVM/可达性分析算法.md",
+    "Java基础/JVM/工具/Untitled.md",
+    "Java基础/JVM/readme.md",
+    "算法/限流算法",
+    "算法/代码随想录PDF全集V3.0/8.《代码随想录》回溯算法（V3.0）.pdf",
+    "Pasted image 20240321163010.png",
+    "算法/代码随想录PDF全集V3.0/0.《代码随想录》PDF说明V3.0.pdf",
+    "算法/代码随想录PDF全集V3.0/9.《代码随想录》贪心算法（V3.0）.pdf",
+    "算法/代码随想录PDF全集V3.0/7.《代码随想录》二叉树（V3.0）.pdf",
+    "算法/代码随想录PDF全集V3.0/6.《代码随想录》栈与队列（V3.0）.pdf",
+    "算法/代码随想录PDF全集V3.0/5.《代码随想录》双指针（V3.0）.pdf",
+    "算法/代码随想录PDF全集V3.0/4.《代码随想录》字符串（V3.0）.pdf",
+    "算法/代码随想录PDF全集V3.0/3.《代码随想录》哈希表（V3.0）.pdf",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
-    "分布式/Zookeeper",
     "Excalidraw/Scripts/Downloaded/Slideshow.svg",
-    "计算机基础",
-    "分布式/nocas",
     "Excalidraw/Scripts/Downloaded/Set Dimensions.svg",
     "Excalidraw/Scripts/Downloaded/Elbow connectors.svg",
     "Excalidraw/Scripts/Downloaded/Connect elements.svg",
     "Pasted Image 20231220210201_774.png",
-    "计算机基础/计算机网络",
     "Pasted image 20231209135344.png",
-    "Excalidraw",
-    "设计模式/Untitled/Untitled",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Pasted image 20231205220432.png"

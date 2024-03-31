@@ -2,5 +2,6 @@
   "accentColor": "",
   "theme": "moonstone",
   "cssTheme": "Blue Topaz",
-  "baseFontSize": 13
+  "baseFontSize": 15,
+  "baseFontSizeAction": true
 }

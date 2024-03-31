@@ -47,4 +47,3 @@ com.example.demo.java.UserServiceImplhello spi
 com.example.demo.java.YuUserServiceImplhello yu
 ```
 
-[文章](https://www.cnblogs.com/zhujiqian/p/17826211.html)

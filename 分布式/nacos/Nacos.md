@@ -1,4 +1,5 @@
 这里是官方的书籍
+[[nacos.pdf]]
 https://developer.aliyun.com/ebook/36?spm=a2c6h.26392470.ebook-read.55.6da71513bjwFLU
 [官网]: https://nacos.io/
 Dynamic Naming and Configuration Service
@@ -62,3 +63,31 @@ Nacos 1.0.0 介绍的另外一个新特性是: 临时实例和持久化实例。
 
 
 ![image.png](https://gitee.com/ycfan/images/raw/master/img/20231213130232.png)
+
+#面试 
+#### Nacos的服务注册表结构是怎样的？
+
+Nacos采用了数据的分级存储模型，最外层是Namespace，用来隔离环境。然后是Group，用来对服务分组。接下来就是服务（Service）了，一个服务包含多个实例，但是可能处于不同机房，因此Service下有多个集群（Cluster），Cluster下是不同的实例（Instance）。
+
+对应到Java代码中，Nacos采用了一个多层的Map来表示。结构为Map<String, Map<String, Service>>，其中最外层Map的key就是namespaceId，值是一个Map。内层Map的key是group拼接serviceName，值是Service对象。Service对象内部又是一个Map，key是集群名称，值是Cluster对象。而Cluster对象内部维护了Instance的集合。
+
+#### Nacos如何支撑阿里内部数十万服务注册压力？
+
+Nacos内部接收到注册的请求时，不会立即写数据，而是将服务注册的任务放入一个阻塞队列就立即响应给客户端。然后利用线程池读取阻塞队列中的任务，异步来完成实例更新，从而提高并发写能力。
+
+#### Nacos如何避免并发读写冲突问题？
+
+Nacos在更新实例列表时，会采用CopyOnWrite技术，首先将旧的实例列表拷贝一份，然后更新拷贝的实例列表，再用更新后的实例列表来覆盖旧的实例列表。
+
+这样在更新的过程中，就不会对读实例列表的请求产生影响，也不会出现脏读问题了。
+
+#### Nacos与Eureka的区别有哪些？
+
+Nacos与Eureka有相同点，也有不同之处，可以从以下几点来描述：
+
+- 接口方式：Nacos与Eureka都对外暴露了Rest风格的API接口，用来实现服务注册、发现等功能
+- 实例类型：Nacos的实例有永久和临时实例之分；而Eureka只支持临时实例
+- 健康检测：Nacos对临时实例采用心跳模式检测，对永久实例采用主动请求来检测；Eureka只支持心跳模式
+- 服务发现：Nacos支持定时拉取和订阅推送两种模式；Eureka只支持定时拉取模式
+
+  
