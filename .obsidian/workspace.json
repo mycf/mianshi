@@ -64,19 +64,9 @@
                 "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md"
               }
             }
-          },
-          {
-            "id": "a7ee8bff836bce47",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf"
-              }
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -143,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf",
+                "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf",
+                "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf"
+                "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md"
               }
             }
           },
@@ -219,10 +209,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a7ee8bff836bce47",
+  "active": "bd53499f0812ea1a",
   "lastOpenFiles": [
-    "Java基础/Throwable.md",
     "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf",
+    "Java基础/Throwable.md",
     "Java基础/JVM/方法区.md",
     "Java基础/JVM/对象内存分配流程.md",
     "Java基础/JVM/常见参数.md",
