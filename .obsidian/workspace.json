@@ -59,9 +59,11 @@
             "id": "bd53499f0812ea1a",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md"
+                "file": "Java基础/JVM/未命名.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -116,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "609c7c35c75da3fe",
@@ -133,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md",
+                "file": "Java基础/JVM/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md",
+                "file": "Java基础/JVM/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/零拷贝-传统 IO.excalidraw.md"
+                "file": "Java基础/JVM/未命名.md"
               }
             }
           },
@@ -211,6 +212,8 @@
   },
   "active": "bd53499f0812ea1a",
   "lastOpenFiles": [
+    "Excalidraw/零拷贝-传统 IO.excalidraw.md",
+    "Java基础/JVM/未命名.md",
     "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf",
     "Java基础/Throwable.md",
     "Java基础/JVM/方法区.md",
@@ -236,7 +239,6 @@
     "Java基础/JVM/Java内存模型.md",
     "Java基础/JVM/可达性分析算法.md",
     "Java基础/JVM/工具/Untitled.md",
-    "Java基础/JVM/readme.md",
     "算法/限流算法",
     "算法/代码随想录PDF全集V3.0/8.《代码随想录》回溯算法（V3.0）.pdf",
     "Pasted image 20240321163010.png",
