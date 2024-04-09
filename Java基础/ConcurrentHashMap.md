@@ -117,9 +117,9 @@ JDK1.8中，ConcurrentHashap的实现方式进行了改进，使用CAS+synchroni
 用CAS 操作 + 自旋来尝试修改，复杂的流程则对当前槽使用synchronized来同步修改。这样可以避免分段锁机制下的锁粒度太大，以及在高并发场景下，由于线程数量过多而导致的锁竞争问题，从而提高了并发性能。
 
 # 为什么ConcurrentHashMap不允许null值?
-
+#面试 
 · 主要是为了让ConcurrentHashMap的语义更加准确。
-· 假如ConcurrentHashMap支持nul，那么get方法就会返回nul值。那么就会存在一个不确定性，到底这个nul是put进去的还是没有找到该key而返回的nuI呢?
+· 假如ConcurrentHashMap支持nul，那么get方法就会返回null值。那么就会存在一个不确定性，到底这个nul是put进去的还是没有找到该key而返回的nuIl呢?
 · 在非并发环境下，这个问题可以通过contains方法来排除。但是，在并发环境下，contains方法执行过程中可能会被其他线程修改而导致结果不准确。
 · 所以，为了不存在二义性，并发的Map框架一般都是不允许null的。
 
@@ -144,7 +144,7 @@ private transient volatile int sizeCtl;
 
 ```
 
-. ForwardingNode：扩容时的转移标记节点，其hashcode=MOVED，代表着此时table正在做扩容操作。扩容期间，若table某个元素为 null，那么该元素设置为 ForwardingNode，当下个线程向这个元素插入数据，检查hashcode= MOVED，就会帮助扩容。
+- ForwardingNode：扩容时的转移标记节点，其hashcode=MOVED，代表着此时table正在做扩容操作。扩容期间，若table某个元素为 null，那么该元素设置为 ForwardingNode，当下个线程向这个元素插入数据，检查hashcode= MOVED，就会帮助扩容。
 
 ## get
 #面试 

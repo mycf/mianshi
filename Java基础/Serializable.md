@@ -5,12 +5,12 @@
 （3）序列化性能差，资源占用率高（主要是CPU资源占用高）。
 
 # 为什么建议显式地定义 serialVersionUID
+#面试 
+在 Java 中，实现了序列化接口（Serializable）的类可以被序列化和反序列化，即可以在不同的 Java 虚拟机或存储介质之间进行对象的传输和持久化。
 
-在 Java 中，实现了序列化接口（Serializable）的类可以被序列化和反序列化，即可以在不同的 Java 虚拟机或存储介质之间进行对象的传输和持久化。当一个类实现了 Serializable 接口时，编译器会自动为该类生成一个默认的序列版本号（serialVersionUID）。
+如果一个类实现了 Serializable 接口但没有显式地定义 serialVersionUID 字段，编译器会根据类的结构自动生成一个 serialVersionUID。这种自动生成的 serialVersionUID 是基于类的结构（如类名、成员变量、方法等）进行计算的。
 
-如果一个类实现了 Serializable 接口但没有显式地定义 serialVersionUID 字段，编译器会根据类的结构自动生成一个 serialVersionUID。这种自动生成的 serialVersionUID 是基于类的结构（如类名、成员变量、方法等）进行计算的，每个类都会有一个默认的 serialVersionUID。
-
-如果不显式地定义 serialVersionUID，并且类的结构发生了变化（如添加、删除或修改了成员变量、方法等），那么编译器生成的默认 serialVersionUID 可能会发生变化。这可能会导致在反序列化过程中出现序列化版本不匹配的异常（InvalidClassException）。
+如果不显式地定义 serialVersionUID，并且类的结构发生了变化（如添加、删除或修改了成员变量、方法等），那么编译器生成的默认 serialVersionUID 可能会发生变化。这可能会导致在反序列化过程中出现序列化版本不匹配的异常（`InvalidClassException`）。
 
 当序列化版本号不匹配时，Java 的序列化机制会拒绝进行反序列化操作，以防止不兼容的类版本之间的数据不一致性。为了避免这种情况，建议显式地定义 serialVersionUID 字段，并确保在类结构发生变化时适当地更新 serialVersionUID 的值。
 
