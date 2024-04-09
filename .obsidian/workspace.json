@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机基础/计算机网络/TCP的流量控制.md",
+                "file": "计算机基础/计算机网络/TCP的运输连接管理.md",
                 "mode": "source",
                 "source": false
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机基础/计算机网络/TCP的流量控制.md",
+                "file": "计算机基础/计算机网络/TCP的运输连接管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机基础/计算机网络/TCP的流量控制.md",
+                "file": "计算机基础/计算机网络/TCP的运输连接管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机基础/计算机网络/TCP的流量控制.md"
+                "file": "计算机基础/计算机网络/TCP的运输连接管理.md"
               }
             }
           },
@@ -235,8 +235,9 @@
   },
   "active": "9d0d346fefe7afa2",
   "lastOpenFiles": [
-    "计算机基础/计算机网络/TCP和UDP的对比.md",
     "计算机基础/计算机网络/TCP的流量控制.md",
+    "计算机基础/计算机网络/TCP的运输连接管理.md",
+    "计算机基础/计算机网络/TCP和UDP的对比.md",
     "计算机基础/计算机网络/TCP协议和UDP协议有什么区别?.md",
     "订单支付超时未支付 关闭订单.md",
     "算法/树/完全二叉树.md",
@@ -264,7 +265,6 @@
     "书籍/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (Z-Library).pdf",
     "Java基础/Throwable.md",
     "Java基础/JVM/方法区.md",
-    "Java基础/JVM/对象内存分配流程.md",
     "算法/限流算法",
     "Pasted image 20240321163010.png",
     "算法/代码随想录PDF全集V3.0/0.《代码随想录》PDF说明V3.0.pdf",
