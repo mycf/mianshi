@@ -10,6 +10,7 @@
 - `doFilter()` ：容器中的每一次请求都会调用该方法， `FilterChain` 用来调用下一个过滤器 `Filter`。
 - `destroy()`： 当容器销毁 过滤器实例时调用该方法，一般在方法中销毁或关闭资源，在过滤器 `Filter` 的整个生命周期也只会被调用一次
 
+```java
 @Component
 public class MyFilter implements Filter {
     
@@ -32,6 +33,7 @@ public class MyFilter implements Filter {
         System.out.println("Filter 后置");
     }
 }
+```
 
 #### 2、拦截器 (Interceptor)
 
@@ -42,7 +44,7 @@ public class MyFilter implements Filter {
 - `preHandle()` ：这个方法将在请求处理之前进行调用。**注意**：如果该方法的返回值为`false` ，将视为当前请求结束，不仅自身的拦截器会失效，还会导致其他的拦截器也不再执行。
 - `postHandle()`：只有在 `preHandle()` 方法返回值为`true` 时才会执行。会在Controller 中的方法调用之后，DispatcherServlet 返回渲染视图之前被调用。 **有意思的是**：`postHandle()` 方法被调用的顺序跟 `preHandle()` 是相反的，先声明的拦截器 `preHandle()` 方法先执行，而`postHandle()`方法反而会后执行。
 - `afterCompletion()`：只有在 `preHandle()` 方法返回值为`true` 时才会执行。在整个请求结束之后， DispatcherServlet 渲染了对应的视图之后执行。
-
+```java
 @Component
 public class MyInterceptor implements HandlerInterceptor {
 
@@ -65,9 +67,11 @@ public class MyInterceptor implements HandlerInterceptor {
         System.out.println("Interceptor 后置");
     }
 }
+```
 
 将自定义好的拦截器处理类进行注册，并通过`addPathPatterns`、`excludePathPatterns`等属性设置需要拦截或需要排除的 `URL`。
 
+```java
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
 
@@ -77,6 +81,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(new MyInterceptor1()).addPathPatterns("/**");
     }
 }
+```
 
 ### 我们不一样
 
@@ -118,11 +123,13 @@ public final class ApplicationFilterChain implements FilterChain {
 
 而每个`xxxFilter` 会先执行自身的 `doFilter()` 过滤逻辑，最后在执行结束前会执行`filterChain.doFilter(servletRequest, servletResponse)`，也就是回调`ApplicationFilterChain`的`doFilter()` 方法，以此循环执行实现函数回调。
 
+```java
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
         filterChain.doFilter(servletRequest, servletResponse);
     }
+```
 
 #### 2、使用范围不同
 
@@ -144,6 +151,7 @@ public final class ApplicationFilterChain implements FilterChain {
 
 在上边我们已经同时配置了过滤器和拦截器，再建一个`Controller`接收请求测试一下。
 
+```java
 @Controller
 @RequestMapping()
 public class Test {
@@ -155,6 +163,7 @@ public class Test {
         return null;
     }
 }
+```
 
 项目启动过程中发现，过滤器的`init()`方法，随着容器的启动进行了初始化。  
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200603152935516.png? "在这里插入图片描述")  
@@ -178,6 +187,7 @@ Filter 处理中
 
 下边我们分别在过滤器和拦截器中都注入`service`，看看有什么不同？
 
+```java
 @Component
 public class TestServiceImpl implements TestService {
 
@@ -186,9 +196,11 @@ public class TestServiceImpl implements TestService {
         System.out.println("我是方法A");
     }
 }
+```
 
 过滤器中注入`service`，发起请求测试一下 ，日志正常打印出`“我是方法A”`。
 
+```java
 @Autowired
     private TestService testService;
 
@@ -199,6 +211,7 @@ public class TestServiceImpl implements TestService {
         testService.a();
         filterChain.doFilter(servletRequest, servletResponse);
     }
+```
 
 Filter 处理中
 我是方法A
@@ -216,6 +229,7 @@ Interceptor 后置
 
 解决方案也很简单，我们在注册拦截器之前，先将`Interceptor` 手动进行注入。**注意**：在`registry.addInterceptor()`注册的是`getMyInterceptor()` 实例。
 
+```java
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
 
@@ -231,6 +245,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(getMyInterceptor()).addPathPatterns("/**");
     }
 }
+```
 
 #### 6、控制执行顺序不同
 
@@ -238,18 +253,22 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
 过滤器用`@Order`注解控制执行顺序，通过`@Order`控制过滤器的级别，值越小级别越高越先执行。
 
+```java
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @Component
 public class MyFilter2 implements Filter {
+```
 
 拦截器默认的执行顺序，就是它的注册顺序，也可以通过`Order`手动设置控制，值越小越先执行。
 
+```java
  @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new MyInterceptor2()).addPathPatterns("/**").order(2);
         registry.addInterceptor(new MyInterceptor1()).addPathPatterns("/**").order(1);
         registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").order(3);
     }
+```
 
 看到输出结果发现，先声明的拦截器 `preHandle()` 方法先执行，而`postHandle()`方法反而会后执行。
 
@@ -268,6 +287,7 @@ Interceptor1 处理后
 
 **那为什么会这样呢？** 得到答案就只能看源码了，我们要知道`controller` 中所有的请求都要经过核心组件`DispatcherServlet`路由，都会执行它的 `doDispatch()` 方法，而拦截器`postHandle()`、`preHandle()`方法便是在其中调用的。
 
+```java
 protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
     
         try {
@@ -308,9 +328,11 @@ protected void doDispatch(HttpServletRequest request, HttpServletResponse respon
         }
         ...........
     }
+```
 
 看看两个方法`applyPreHandle(）`、`applyPostHandle(）`具体是如何被调用的，就明白为什么`postHandle()`、`preHandle()` 执行顺序是相反的了。
 
+```java
 boolean applyPreHandle(HttpServletRequest request, HttpServletResponse response) throws Exception {
         HandlerInterceptor[] interceptors = this.getInterceptors();
         if(!ObjectUtils.isEmpty(interceptors)) {
@@ -335,12 +357,6 @@ void applyPostHandle(HttpServletRequest request, HttpServletResponse response, @
             }
         }
     }
+```
 
 发现两个方法中在调用拦截器数组 `HandlerInterceptor[]` 时，循环的顺序竟然是相反的。。。，导致`postHandle()`、`preHandle()` 方法执行的顺序相反。  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200603184307199.png? "在这里插入图片描述")
-
-### 总结
-
-我相信大部分人都能熟练使用滤器和拦截器，但两者的差别还是需要多了解下，不然开发中使用不当，时不时就会出现奇奇怪怪的问题，以上内容比较简单，新手学习老鸟复习，有遗漏的地方还望大家积极补充，如有理解错误之处，还望不吝赐教。
-
----
