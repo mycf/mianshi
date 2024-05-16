@@ -1,20 +1,4 @@
-# 基本属性 
-| 状态         | 源码                    | 10进制       |                                                                                                                                                             2进制 |
-| ---------- | --------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| COUNT_MASK | (1 << COUNT_BITS) - 1 | 536870911  |                                                                                                                         0001 1111 1111 1111 1111 1111 1111 1111 |
-| RUNNING    | -1 << COUNR_BITS      | -536870912 | 绝对值 0010 0000 0000 0000 0000 0000 0000 0000<br>取反     1101  1111   1111    1111 1111 1111 1111 1111 <br> +1       1110   0000 0000 0000 0000 0000 0000 0000<br> |
-| SHUTDOWN   | 0 << COUNT_BITS;      | 0          |                                                                                                                                                               0 |
-| STOP       | 1 << COUNT_BITS;      | 536870912  |                                                                                                                           10 0000 0000 0000 0000 0000 0000 0000 |
-| TIDYING    | 2 << COUNT_BITS;      | 1073741824 |                                                                                                                          100 0000 0000 0000 0000 0000 0000 0000 |
-| TERMINATED | 3 << COUNT_BITS       | 1610612736 |                                                                                                                          110 0000 0000 0000 0000 0000 0000 0000 |
 
--100000000000000000000000000000
-![[ThreadPoolExecutor 2024-01-04 21.59.25.excalidraw|100%]]
-![[ThreadPoolExecutor 2024-01-16 15.21.18.excalidraw|100%]]
-
-|         |     |
-| ------- | --- |
-| RUNNING |     |
 # 任务提交
 ![[ThreadPoolExecutor 2023-12-26 21.48.29.excalidraw|100%]]
 # 任务运行
@@ -240,3 +224,28 @@ private Runnable getTask() {
 
 > [!NOTE] 上面代码中什么时候会出现工作线程数大于最大线程数，`wc > maximumPoolSize`
 > 动态调整最大线程数：如果在线程池运行过程中，通过调用线程池的 `setMaximumPoolSize()` 方法动态减少了最大线程数，而此时活动线程数超过了原先的最大线程数，就会出现 `wc > maximumPoolSize` 的情况。
+
+# Java 默认的线程拒绝策略有以下几种：
+
+1. AbortPolicy（默认）：该拒绝策略会直接抛出 `RejectedExecutionException` 异常，终止执行并丢弃新提交的任务。
+
+2. CallerRunsPolicy：当线程池无法处理新提交的任务时，会将任务返回给提交任务的线程来执行。这样做的效果是，如果线程池正在执行任务的线程数量已达到最大值，新的任务会由提交任务的线程直接执行，而不会被丢弃。
+
+3. DiscardPolicy：该拒绝策略会默默地丢弃无法处理的新任务，没有任何异常抛出。
+
+4. DiscardOldestPolicy：当线程池无法处理新提交的任务时，会丢弃队列中最旧的一个任务（即等待时间最长的任务），然后尝试再次提交新任务。
+
+除了这些默认的拒绝策略外，还可以通过实现 `RejectedExecutionHandler` 接口来定义自定义的拒绝策略。自定义拒绝策略可以根据业务需求进行灵活的处理，例如将无法处理的任务记录日志、存储到队列中等。
+
+在使用线程池时，可以通过 `ThreadPoolExecutor` 的构造方法或 `ExecutorService` 的 `newThreadPoolExecutor` 方法来指定拒绝策略。例如：
+
+```java
+// 使用 AbortPolicy 拒绝策略
+ExecutorService executor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(queueSize));
+
+// 使用自定义拒绝策略
+RejectedExecutionHandler myRejectedHandler = new MyRejectedHandler();
+ExecutorService executor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(queueSize), myRejectedHandler);
+```
+
+请注意，在使用自定义拒绝策略时，要确保拒绝策略的实现是线程安全的，以避免并发问题。

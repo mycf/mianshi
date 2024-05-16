@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/限流算法/计数器算法.md",
+                "file": "Java基础/JVM/逃逸分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/限流算法/计数器算法.md",
+                "file": "Java基础/JVM/逃逸分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/限流算法/计数器算法.md",
+                "file": "Java基础/JVM/逃逸分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/限流算法/计数器算法.md"
+                "file": "Java基础/JVM/逃逸分析.md"
               }
             }
           }
@@ -245,42 +245,42 @@
   },
   "active": "aca91f22b1ac12f6",
   "lastOpenFiles": [
-    "Java基础/WildcardType.md",
-    "算法/限流算法/计数器算法.md",
-    "Java基础/TypeVariable.md",
-    "Java基础/ParameterizedType.md",
-    "框架/Spring/SpringBoot/整合mybatis.md",
-    "Java基础/Executors.md",
+    "Java基础/JVM/Untitled.md",
     "Java基础/ThreadPoolExecutor.md",
-    "框架/Spring/RequsetParam.md",
-    "框架/Sentinel/Sentinel.md",
-    "分布式/Mysql/如何设计索引.md",
-    "场景/会员批量过期方案.md",
-    "设计模式.md",
-    "场景",
-    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
-    "分布式/Redis/CAP理论.md",
-    "分布式/Redis/Redis 分布式锁.md",
-    "框架/Spring/spring bean的生命周期.md",
-    "分布式/Mysql/字段/timestamp.md",
-    "分布式/Mysql/字段/datetime.md",
-    "分布式/Mysql/字段/DATE.md",
-    "分布式/Mysql/字段/字段.md",
-    "分布式/Redis/redis.md",
+    "Java基础/Executors.md",
+    "Java基础/Executors.md~",
+    "Java基础/JVM/逃逸分析.md",
+    "Java基础/JVM/对象内存分配流程.md",
+    "Java基础/ThreadPoolExecutor.md~",
+    "Java基础/JVM/GC Roots.md",
+    "Java基础/JVM/可达性分析算法.md",
+    "Java基础/JVM/垃圾回收算法.md",
+    "Java基础/JVM/垃圾收集器.md",
+    "Java基础/JVM/类的加载过程.md",
+    "Java基础/JVM/G1 和 CMS的区别.md",
+    "Java基础/JVM/G1.md",
+    "Java基础/JVM/性能优化/Untitled.md",
+    "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
+    "Java基础/JVM/查看jdk使用的垃圾收集器.md",
+    "分布式/分布式事务.md",
+    "分布式/Redis/Redis 深度历险核心原理和应用实践.pdf",
+    "分布式/Redis/Redis Sentinel.md",
+    "分布式/Redis/Redis6.0为什么又要引入多线程？.md",
     "分布式/Redis/Redis Sentinel脑裂.md",
-    "分布式/Mysql/使用Order By时能否通过索引排序？.md",
-    "面试.md",
-    "分布式/Mysql/死锁.md",
-    "分布式/数据库/数据库优化.md",
+    "分布式/Redis/Redis为什么被设计成单线程的？.md",
+    "分布式/Redis/Redis为什么那么快.md",
+    "分布式/Redis/Redis 缓存.md",
+    "分布式/Redis/Redis 分布式锁.md",
+    "分布式/Redis/redis.md",
+    "分布式/Redis/复制.md",
+    "分布式/Redis/场景-big key问题.md",
+    "场景",
     "分布式/Mysql/字段",
     "分布式/数据库",
     "框架/Spring/springCloud/组件",
     "书籍/亿级流量网站架构核心技术.pdf",
     "书籍/从0开始学架构 Gordon.epub",
     "书籍/大型网站技术架构 核心原理.pdf",
-    "算法/代码随想录PDF全集V3.0/7.《代码随想录》二叉树（V3.0）.pdf",
-    "算法/代码随想录PDF全集V3.0/9.《代码随想录》贪心算法（V3.0）.pdf",
-    "算法/代码随想录PDF全集V3.0/8.《代码随想录》回溯算法（V3.0）.pdf",
     "Pasted image 20240321163010.png",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
