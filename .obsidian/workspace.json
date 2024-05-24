@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/消息队列/kafka/Kafka为什么吞吐量大、速度快？.md",
+                "file": "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/消息队列/kafka/Kafka为什么吞吐量大、速度快？.md",
+                "file": "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/消息队列/kafka/Kafka为什么吞吐量大、速度快？.md",
+                "file": "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/消息队列/kafka/Kafka为什么吞吐量大、速度快？.md"
+                "file": "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md"
               }
             }
           }
@@ -245,6 +245,10 @@
   },
   "active": "aca91f22b1ac12f6",
   "lastOpenFiles": [
+    "分布式/消息队列/kafka/kafka.md",
+    "框架/Spring/cglib和jdk动态代理.md",
+    "Java基础/机器码和字节码.md",
+    "分布式/消息队列/kafka/Kafka为什么吞吐量大、速度快？.md",
     "分布式/消息队列/kafka/Kafka为什么吞吐量大、速度快？~.md",
     "Java基础/JVM/kafa.md",
     "Java基础/JVM/逃逸分析.md",
@@ -270,10 +274,6 @@
     "分布式/Redis/Redis6.0为什么又要引入多线程？.md",
     "分布式/Redis/Redis Sentinel脑裂.md",
     "分布式/Redis/Redis为什么被设计成单线程的？.md",
-    "分布式/Redis/Redis为什么那么快.md",
-    "分布式/Redis/Redis 缓存.md",
-    "分布式/Redis/Redis 分布式锁.md",
-    "分布式/Redis/redis.md",
     "场景",
     "分布式/Mysql/字段",
     "分布式/数据库",
