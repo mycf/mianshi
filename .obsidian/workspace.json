@@ -37,7 +37,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/ArrayList.md",
+                "file": "框架/Dubbo/dubbo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "df5e549ed31dbd6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java基础/Synchronized 轻量级锁会自旋？.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,7 +126,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -143,7 +155,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "成本",
+                "query": "前序遍历",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,7 +192,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/ArrayList.md",
+                "file": "Java基础/Synchronized 轻量级锁会自旋？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +209,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/ArrayList.md",
+                "file": "Java基础/Synchronized 轻量级锁会自旋？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +232,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/ArrayList.md"
+                "file": "Java基础/Synchronized 轻量级锁会自旋？.md"
               }
             }
           }
@@ -243,37 +255,37 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aca91f22b1ac12f6",
+  "active": "df5e549ed31dbd6a",
   "lastOpenFiles": [
-    "分布式/消息队列/kafka/Kafka的选举机制与Rebalance机制.md",
-    "分布式/消息队列/kafka/kafka.md",
-    "框架/Spring/cglib和jdk动态代理.md",
-    "Java基础/机器码和字节码.md",
-    "分布式/消息队列/kafka/Kafka为什么吞吐量大、速度快？.md",
-    "分布式/消息队列/kafka/Kafka为什么吞吐量大、速度快？~.md",
-    "Java基础/JVM/kafa.md",
-    "Java基础/JVM/逃逸分析.md",
-    "Java基础/JVM/Untitled.md",
-    "Java基础/ThreadPoolExecutor.md",
-    "Java基础/Executors.md",
-    "Java基础/Executors.md~",
-    "Java基础/JVM/对象内存分配流程.md",
-    "Java基础/ThreadPoolExecutor.md~",
-    "Java基础/JVM/GC Roots.md",
-    "Java基础/JVM/可达性分析算法.md",
-    "Java基础/JVM/垃圾回收算法.md",
-    "Java基础/JVM/垃圾收集器.md",
-    "Java基础/JVM/类的加载过程.md",
+    "Java基础/ConcurrentHashMap.md",
+    "Java基础/Synchronized 轻量级锁会自旋？.md",
+    "算法/树/二叉树.md",
+    "设计模式~.md",
+    "Java基础/jdk基础工具.md",
+    "Java基础/Untitled 1.md",
+    "加解密~.md",
+    "加解密.md",
+    "Untitled.md",
     "Java基础/JVM/G1 和 CMS的区别.md",
+    "框架/Dubbo/Dubbo的负载均衡原理解析.md",
+    "框架/Dubbo/Dubbo的集群容错策略有哪些？它们的工作原理是什么？.md",
+    "框架/Dubbo/Dubbo的可扩展机制SPI源码解析.md",
+    "框架/Dubbo/dubbo.md",
+    "框架/Dubbo/服务消费端泛化调用.md",
+    "Java基础/JVM/GC Roots.md",
     "Java基础/JVM/G1.md",
-    "Java基础/JVM/性能优化/Untitled.md",
-    "Java基础/JVM/性能优化/JVM的常见参数配置知道哪些？.md",
-    "Java基础/JVM/查看jdk使用的垃圾收集器.md",
+    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
+    "分布式/分布式id.md",
     "分布式/分布式事务.md",
+    "Java基础/java8.md",
+    "Java基础/NIO/零拷贝.md",
+    "分布式/一文彻底弄懂零拷贝原理.md",
+    "框架/mybatis/Mybatis中的井号和$有什么区别.md",
+    "分布式/Redis/Base理论.md",
+    "分布式/Redis/CAP理论.md",
+    "Java基础/Executors.md~",
+    "Java基础/ThreadPoolExecutor.md~",
     "分布式/Redis/Redis 深度历险核心原理和应用实践.pdf",
-    "分布式/Redis/Redis Sentinel.md",
-    "分布式/Redis/Redis6.0为什么又要引入多线程？.md",
-    "分布式/Redis/Redis Sentinel脑裂.md",
     "场景",
     "分布式/Mysql/字段",
     "分布式/数据库",

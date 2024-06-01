@@ -46,6 +46,7 @@ public ArrayList(Collection<? extends E> c) {
 ```java
 private Object[] grow(int minCapacity) {
 	int oldCapacity = elementData.length;
+	// DEFAULTCAPACITY_EMPTY_ELEMENTDATA 使用无参构造
 	if (oldCapacity > 0 || elementData != DEFAULTCAPACITY_EMPTY_ELEMENTDATA) {
 		// 如果上送的最小容量大于原容量1.5倍，最小容量为新容量，否则为原容量1.5倍
 		int newCapacity = ArraysSupport.newLength(oldCapacity,
@@ -155,7 +156,7 @@ int newCapacity = oldCapacity + (oldCapacity >> 1);
 
 让我们逐步解释这行代码的含义：
 
-1. `(oldCapacity >> 1)`：这是一个位运算操作符，表示将 `oldCapacity` 的二进制表示向右移动一位，相当于将 `oldCapacity` 除以 2（即右移一位相当于除以 2 的整数除法）。这个操作可以有效地将原始容量减半。
+1. `(oldCapacity >> 1)`：这是一j个位运算操作符，表示将 `oldCapacity` 的二进制表示向右移动一位，相当于将 `oldCapacity` 除以 2（即右移一位相当于除以 2 的整数除法）。这个操作可以有效地将原始容量减半j。
 
 2. `oldCapacity + (oldCapacity >> 1)`：这是将原始容量 `oldCapacity` 和减半后的值相加，得到新的容量。这个计算公式可以在需要扩容的情况下，按照一定的策略（通常是增加一半）来计算新的容量。
 

@@ -1,7 +1,7 @@
 函数式接口就是只定义一个抽象方法的接口。
 
 @FunctionalInterface又是怎么回事?  
-如果你去看看新的Java API，会发现函数式接口带有@FunctionalInterface的标注(3.4 节中会深入研究函数式接口，并会给出一个长长的列表)。==这个标注用于表示该接口会设计成一个函数式接口。如果你用@FunctionalInterface定义了一个接口，而它却不是函数式接口的话，编译器将返回一个提示原因的错误。==例如，错误消息可能是“Multiple non-overriding abstract methods found in interface Foo”，表明存在多个抽象方法。请注意，@FunctionalInter- face不是必需的，但对于为此设计的接口而言，使用它是比较好的做法。它就像是@Override 标注表示方法被重写了。
+如果你去看看新的Java API，会发现函数式接口带有@FunctionalInterface的标注(3.4 节中会深入研究函数式接口，并会给出一个长长的列表)。==这个标注用于表示该接口会设计成一个函数式接口。如果你用@FunctionalInterface定义了一个接口，而它却不是函数式接口的话，编译器将返回一个提示原因的错误。==例如，错误消息可能是“Multiple non-overriding abstract methods found in interface Foo”，表明存在多个抽象方法。请注意，@FunctionalInterface不是必需的，但对于为此设计的接口而言，使用它是比较好的做法。它就像是@Override 标注表示方法被重写了。
 # 方法引用
 方法引用让你可以重复使用现有的方法定义，并像Lambda一样传递它们。
 

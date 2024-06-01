@@ -1,4 +1,9 @@
 
+```java
+List<T> org.apache.dubbo.common.extension.ExtensionLoader.getActivateExtension(URL url, String key)
+```
+
+
 | 层次名 | 作用 |
 | ---- | ---- |
 | Service | 业务层。包括业务代码的接口与实现，即开发者实现的业务代码。 |

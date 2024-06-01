@@ -1,4 +1,13 @@
 # 1.7
+
+**主要利用 Unsafe 操作 + ReentrantLock+分段思想,
+
+主要用到的 Unsafe 操作:
+. compareAndSwapObject:通过cas的方式修改对象的属性
+. putOrderedObject:并发安全的给数组的某个位置赋值
+· getObjectVolatile :并发安全的获取数组某个位置的元素
+
+ConcurrentHashMap采用分段锁技术将哈希表分成多个段(segment),每个段拥有一个可重入锁。这样可以在多个线程访问哈希表时，只需要锁住需要操作的那个段，而不是整个哈希表，从而提高了并发性能。
 ![[ConcurrentHashMap 1.7 构造方法.excalidraw|100%]]
 
 
@@ -45,7 +54,7 @@ Segment        -[#000082,plain]-^  ReentrantLock
 ## 构造函数
 
 ![[ConcurrentHashMap 2024-01-07 18.30.49.excalidraw|100%]]
-# put插入
+## put插入
 
 ![[ConcurrentHashMap 2024-01-07 20.39.18.excalidraw|100%]]
 ## 扩容
@@ -54,9 +63,12 @@ Segment        -[#000082,plain]-^  ReentrantLock
 可以看出，1.7 的分段锁已经有了细化锁粒度的概念，它的一个缺陷是 Segment 数组一旦初始化了之后不会扩容，只有 HashEntry 数组会扩容，这就导致并发度过于死板，不能随着数据的增加而提高并发度。
 # 1.8
 
-总而言之，就是平日的操作会维护 map 里面的节点数量，会先通过 CAS 修改 baseCount ，如果成功就直接返回，如果失败说明此时有线程在竞争，那么就通过 hash 选择一个 CounterCell 对象就行修改，最终 size 的结果就是 baseCount + 所有 CounterCell 。
+主要利用 `Unsafe` 操作 + `synchronized` 关键字 + `分段思想`。
+JDK1.8中，`ConcurrentHashap`的实现方式进行了改进，使用`CAS`+`synchronized`来保证线程安全。简单的写操作，会使用`CAS操作 + 自旋`来尝试修改，复杂的流程则对当前槽使用`synchronized`来同步修改。这样可以避免分段锁机制下的锁粒度太大，以及在高并发场景下，由于线程数量过多而导致的锁竞争问题，从而提高了并发性能。
 
-这种通过 counterCell 数组来减少并发下场景下对单个成员变量的竞争压力，提高了并发度，提升了性能，这也就是 LongAdder 的思想。
+总而言之，就是平日的操作会维护 map 里面的节点数量，会先通过 `CAS` 修改 `baseCount` ，如果成功就直接返回，如果失败说明此时有线程在竞争，那么就通过 hash 选择一个 `CounterCell` 对象就行修改，最终 size 的结果就是 `baseCount + 所有 CounterCell` 。
+
+这种通过 `counterCell` 数组来减少并发下场景下对单个成员变量的竞争压力，提高了并发度，提升了性能，这也就是 `LongAdder` 的思想。
 
 ## size
 先利用`sumCount()`计算，然后如果值超过int的最大值，就返回int的最大值。但是有时size就会超过最大值，这时最好用`mappingCount`方法
@@ -97,54 +109,8 @@ final long sumCount() {
 }
 ```
 
-`baseCount` 是一个vlolatile变量，在addCount方法会使用它，而addCount方法在put结束后会调用更新计数。 在并发情况下，如果CAS修改baseCount失败后，就会使用到CounterCell类
-利用CAS操作修改CountCell的值，
-如果上面CAS操作也失败了，在fullAddCount方法中，会继续死循环操作，直到成功。
+`baseCount` 是一个`volatile`变量，在`addCount`方法会使用它，而`addCount`方法在put结束后会调用更新计数。 在并发情况下，如果CAS修改baseCount失败后，就会使用到`CounterCell`类，利用CAS操作修改`CountCell`的值，如果上面CAS操作也失败了，在fullAddCount方法中，会继续死循环操作，直到成功。
 
-
-# JDK 1.7
-**主要利用 Unsafe 操作 + ReentrantLock+分段思想,
-
-主要用到的 Unsafe 操作:
-. compareAndSwapObject:通过cas的方式修改对象的属性
-. putOrderedObject:并发安全的给数组的某个位置赋值
-· getObjectVolatile :并发安全的获取数组某个位置的元素
-
-ConcurrentHashMap采用分段锁技术将哈希表分成多个段(segment),每个段拥有一个可重入锁。这样可以在多个线程访问哈希表时，只需要锁住需要操作的那个段，而不是整个哈希表，从而提高了并发性能。
-# JDK 1.8
-主要利用 Unsafe 操作 + synchronized 关键字 +分段思想。
-JDK1.8中，ConcurrentHashap的实现方式进行了改进，使用CAS+synchronized来保证线程安全。简单的写操作，会使
-用CAS 操作 + 自旋来尝试修改，复杂的流程则对当前槽使用synchronized来同步修改。这样可以避免分段锁机制下的锁粒度太大，以及在高并发场景下，由于线程数量过多而导致的锁竞争问题，从而提高了并发性能。
-
-# 为什么ConcurrentHashMap不允许null值?
-#面试 
-· 主要是为了让ConcurrentHashMap的语义更加准确。
-· 假如ConcurrentHashMap支持nul，那么get方法就会返回null值。那么就会存在一个不确定性，到底这个nul是put进去的还是没有找到该key而返回的nuIl呢?
-· 在非并发环境下，这个问题可以通过contains方法来排除。但是，在并发环境下，contains方法执行过程中可能会被其他线程修改而导致结果不准确。
-· 所以，为了不存在二义性，并发的Map框架一般都是不允许null的。
-
-
-```java
-// Node节点hash值，标识为指定的特殊节点，正常node节点hash值就是 key.hashCode() > 0
-static final int MOVED     = -1; // ForwardingNode 节点hash标识
-static final int TREEBIN   = -2; // TreeBin 红黑树头节点hash标识
-static final int RESERVED  = -3; // ReservedNode 节点标识
-static final int HASH_BITS = 0x7fffffff; // 正常节点hash散列的可用位数
-
-/** 可用cpu核心数 */
-static final int NCPU = Runtime.getRuntime().availableProcessors();
-/**
- * 表初始化时的容量和触发扩容操作的阈值
- * 分为以下几种情况：
- * 0 ：数组未被初始化，初始容量为16
- * >0 ：如果数组未被初始化，那么记录数组的初始容量。如果数组已被初始化，那么记录的是数组的扩容阈值（数组的初始容量 * 0.75）
- * < -1 ：表示数组正在扩容，-(1+n)表示此时有n个线程正在共同完成数组的扩容操作。
- */
-private transient volatile int sizeCtl;
-
-```
-
-- ForwardingNode：扩容时的转移标记节点，其hashcode=MOVED，代表着此时table正在做扩容操作。扩容期间，若table某个元素为 null，那么该元素设置为 ForwardingNode，当下个线程向这个元素插入数据，检查hashcode= MOVED，就会帮助扩容。
 
 ## get
 #面试 
@@ -153,8 +119,8 @@ private transient volatile int sizeCtl;
 	a. 为空，直接返回null
 	b. 不为空，判断头节点是否是目标节点
 		i. 是，则直接返回value
-		ii. eh<0,说明是ForwardingNode节点或者是TreeBin红黑树头节点
-			1. 如果是ForwardingNode,则会进入nextTab进行查找，查找方式同样是链表或红黑树查找方式进行遍历
+		ii. eh<0,说明是`ForwardingNode`节点或者是`TreeBin`红黑树头节点
+			1. 如果是`ForwardingNode`，则会进入`nextTab`进行查找，查找方式同样是链表或红黑树查找方式进行遍历
 			2. 如果是红黑树的结构，当红黑树正在调整时，使用的是较慢的方式：链表迭代进行查找节点，而不是等待树调整后再查找；如果再循环的过程中，红黑树已经调整完毕,则又会自动采用红黑树查找方式进行遍历
 		iii.遍历链表匹配目标节点。
 ```java
@@ -341,3 +307,33 @@ private final Node<K,V>[] initTable() {
 }
 
 ```
+# 为什么ConcurrentHashMap不允许null值?
+#面试 
+· 主要是为了让ConcurrentHashMap的语义更加准确。
+· 假如ConcurrentHashMap支持nul，那么get方法就会返回null值。那么就会存在一个不确定性，到底这个nul是put进去的还是没有找到该key而返回的nuIl呢?
+· 在非并发环境下，这个问题可以通过contains方法来排除。但是，在并发环境下，contains方法执行过程中可能会被其他线程修改而导致结果不准确。
+· 所以，为了不存在二义性，并发的Map框架一般都是不允许null的。
+
+
+```java
+// Node节点hash值，标识为指定的特殊节点，正常node节点hash值就是 key.hashCode() > 0
+static final int MOVED     = -1; // ForwardingNode 节点hash标识
+static final int TREEBIN   = -2; // TreeBin 红黑树头节点hash标识
+static final int RESERVED  = -3; // ReservedNode 节点标识
+static final int HASH_BITS = 0x7fffffff; // 正常节点hash散列的可用位数
+
+/** 可用cpu核心数 */
+static final int NCPU = Runtime.getRuntime().availableProcessors();
+/**
+ * 表初始化时的容量和触发扩容操作的阈值
+ * 分为以下几种情况：
+ * 0 ：数组未被初始化，初始容量为16
+ * >0 ：如果数组未被初始化，那么记录数组的初始容量。如果数组已被初始化，那么记录的是数组的扩容阈值（数组的初始容量 * 0.75）
+ * < -1 ：表示数组正在扩容，-(1+n)表示此时有n个线程正在共同完成数组的扩容操作。
+ */
+private transient volatile int sizeCtl;
+
+```
+
+- ForwardingNode：扩容时的转移标记节点，其hashcode=MOVED，代表着此时table正在做扩容操作。扩容期间，若table某个元素为 null，那么该元素设置为 ForwardingNode，当下个线程向这个元素插入数据，检查hashcode= MOVED，就会帮助扩容。
+
