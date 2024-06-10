@@ -56,6 +56,16 @@
             }
           },
           {
+            "id": "5b4d88730cb23eeb",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.3"
+              }
+            }
+          },
+          {
             "id": "84310473e28d36c8",
             "type": "leaf",
             "state": {
@@ -126,7 +136,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -255,8 +265,19 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "df5e549ed31dbd6a",
+  "active": "5b4d88730cb23eeb",
   "lastOpenFiles": [
+    "Java基础/NIO/Linux网络I/O.md~",
+    "Java基础/NIO/Linux网络I/O.md",
+    "Java基础/NIO/Linux网络I/O模型.md~",
+    "Java基础/NIO/Linux网络I/O模型.md",
+    "Java基础/NIO/Linux网络I",
+    "Java基础/NIO/aa.md",
+    "Java基础/NIO/Linux网络IO模型简.md",
+    "Java基础/NIO/Linux网络I/O模型简.md",
+    "Java基础/NIO/Untitled.md~",
+    "Java基础/NIO/Untitled.md",
+    "Java基础/NIO/Untitled Folder",
     "a.out",
     "C++/test.cpp~",
     "C++/test.cpp",
@@ -281,18 +302,6 @@
     "框架/Spring/SpringBoot/SpringBoot的自动装配.md",
     "Java基础/JVM/OopMap.md",
     "Java基础/ConcurrentHashMap.md",
-    "算法/树/二叉树.md",
-    "设计模式~.md",
-    "Java基础/jdk基础工具.md",
-    "Java基础/Untitled 1.md",
-    "加解密~.md",
-    "加解密.md",
-    "Java基础/Executors.md~",
-    "Java基础/ThreadPoolExecutor.md~",
-    "分布式/Redis/Redis 深度历险核心原理和应用实践.pdf",
-    "场景",
-    "分布式/Mysql/字段",
-    "分布式/数据库",
     "Pasted image 20240321163010.png",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
