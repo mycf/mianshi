@@ -250,11 +250,16 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
   "active": "df5e549ed31dbd6a",
   "lastOpenFiles": [
+    "C++/test.cpp~",
+    "C++/test.cpp",
+    "C++",
     "分布式/hotkey/Untitled.md",
     "Java基础/Synchronized 轻量级锁会自旋？.md",
     "分布式/hotkey",
@@ -281,7 +286,6 @@
     "Java基础/Untitled 1.md",
     "加解密~.md",
     "加解密.md",
-    "Untitled.md",
     "Java基础/Executors.md~",
     "Java基础/ThreadPoolExecutor.md~",
     "分布式/Redis/Redis 深度历险核心原理和应用实践.pdf",
@@ -289,8 +293,6 @@
     "分布式/Mysql/字段",
     "分布式/数据库",
     "框架/Spring/springCloud/组件",
-    "书籍/亿级流量网站架构核心技术.pdf",
-    "书籍/从0开始学架构 Gordon.epub",
     "Pasted image 20240321163010.png",
     "Excalidraw/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
