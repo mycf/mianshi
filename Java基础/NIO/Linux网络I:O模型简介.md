@@ -32,3 +32,9 @@ select最大的缺陷就是单个进程所打开的FD是有一定限制的，它
 传统select/poll的另一个致命弱点，就是当你拥有一个很大的socket集合时，由于网络延时或者链路空闲，任一时刻只有少部分的socket是“活跃”的，但是select/poll每次调用都会线性扫描全部的集合，导致效率呈现线性下降。epoll不存在这个问题，它只会对“活跃”的socket进行操作——这是因为在内核实现中，epoll是根据每个fd上面的callback函数实现的。那么，只有“活跃”的socket才会去主动调用callback函数，其他idle状态的socket则不会。在这点上，epoll实现了一个伪AIO。针对epoll和select性能对比的benchmark测试表明：如果所有的socket都处于活跃态——例如一个高速LAN环境，epoll并不比select/poll效率高太多；相反，如果过多使用epoll_ctl，效率相比还有稍微地降低。但是一旦使用idle connections模拟WAN环境，epoll的效率就远在select/poll之上了。
 
 3.使用mmap加速内核与用户空间的消息传递。
+
+包括创建一个epoll描述符、添加监听事件、阻塞等待所监听的事件发生、关闭epoll描述符等。
+
+值得说明的是，用来克服select/poll缺点的方法不只有epoll，epoll只是一种Linux的实现方案。在freeBSD下有kqueue，而dev/poll是最古老的Solaris的方案，使用难度依次递增。kqueue是freebsd的宠儿，它实际上是一个功能相当丰富的kernel事件队列，它不仅仅是select/poll的升级，而且可以处理signal、目录结构变化、进程等多种事件。kqueue是边缘触发的。/dev/poll是Solaris的产物，是这一系列高性能API中最早出现的。Kernel提供了一个特殊的设备文件/dev/poll，应用程序打开这个文件得到操作fd_set的句柄，通过写入pollfd来修改它，一个特殊的ioctl调用用来替换select。不过由于出现的年代比较早，所以/dev/poll的接口实现比较原始。
+
+
