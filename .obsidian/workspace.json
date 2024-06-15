@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机基础/计算机网络/TCP的运输连接管理.md",
+                "file": "框架/Spring/@Autowired和@Resource的区别.md",
                 "mode": "source",
                 "source": false
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机基础/计算机网络/TCP的运输连接管理.md",
+                "file": "框架/Spring/@Autowired和@Resource的区别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,7 +209,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算机基础/计算机网络/TCP的运输连接管理.md",
+                "file": "框架/Spring/@Autowired和@Resource的区别.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -232,7 +232,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机基础/计算机网络/TCP的运输连接管理.md"
+                "file": "框架/Spring/@Autowired和@Resource的区别.md"
               }
             }
           }
@@ -258,6 +258,8 @@
   },
   "active": "df5e549ed31dbd6a",
   "lastOpenFiles": [
+    "框架/Spring/@Autowired和@Resource的区别.md~",
+    "计算机基础/计算机网络/TCP的运输连接管理.md",
     "常见的跨域处理方式有哪些？.md",
     "Java基础/Contended.md",
     "框架/netty/TCP粘包:拆包.md~",
@@ -302,8 +304,6 @@
     "框架/Sentinel/Sentinel.md",
     "框架/Spring/SpringBoot/说一说你对SpringBoot中约定优越配置的理解.md",
     "框架/Spring/SpringBoot/整合mybatis.md",
-    "框架/Spring/SpringBoot/DeferredImportSelector.md",
-    "框架/Spring/SpringBoot/AutoConfigurationPackage.md",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
