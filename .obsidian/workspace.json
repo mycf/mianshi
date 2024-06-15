@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "框架/Spring/@Autowired和@Resource的区别.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "mode": "source",
                 "source": false
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/@Autowired和@Resource的区别.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,7 +209,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/@Autowired和@Resource的区别.md",
+                "file": "分布式/Redis/Redis Sentinel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -232,7 +232,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/@Autowired和@Resource的区别.md"
+                "file": "分布式/Redis/Redis Sentinel.md"
               }
             }
           }
@@ -258,6 +258,7 @@
   },
   "active": "df5e549ed31dbd6a",
   "lastOpenFiles": [
+    "框架/Spring/@Autowired和@Resource的区别.md",
     "框架/Spring/@Autowired和@Resource的区别.md~",
     "计算机基础/计算机网络/TCP的运输连接管理.md",
     "常见的跨域处理方式有哪些？.md",
@@ -275,7 +276,6 @@
     "分布式/Mysql/事务.md~",
     "框架/Spring/Spring的事务隔离级别.md~",
     "框架/Spring/Spring的事务传播行为.md~",
-    "Java基础/JVM/finalize.md~",
     "assets/2024-06-11-19-54-15.png",
     "assets/2024-06-11-19-53-14.png",
     "assets/2024-06-11-19-51-43.png",
