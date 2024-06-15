@@ -4,7 +4,7 @@
   "uploadServer": "http://127.0.0.1:36677/upload",
   "deleteServer": "http://127.0.0.1:36677/delete",
   "imageSizeSuffix": "",
-  "picgoCorePath": "/usr/local/bin/node /usr/local/bin/picgo upload",
+  "picgoCorePath": "",
   "workOnNetWork": false,
   "fixPath": false,
   "applyImage": true,
