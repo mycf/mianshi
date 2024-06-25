@@ -84,7 +84,6 @@ public static void testPrototypeScope() {
 }
 ```
 运行后无任何输出。
-
 ```java
 public static void testPrototypeScope() {
     GenericApplicationContext context = new GenericApplicationContext();
