@@ -49,9 +49,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "分布式/分布式事务.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "4d2d794e1d2adb5b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
               }
             }
           },
@@ -126,7 +136,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -192,7 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分布式/分布式事务.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,7 +219,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分布式/分布式事务.md",
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -232,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分布式/分布式事务.md"
+                "file": "框架/Spring/SpringBoot/springboot的启动流程.md"
               }
             }
           }
@@ -256,23 +266,27 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "df5e549ed31dbd6a",
+  "active": "4d2d794e1d2adb5b",
   "lastOpenFiles": [
+    "框架/Spring/SpringBoot/springboot的启动流程.md~",
+    "分布式/分布式事务.md",
+    "框架/Spring/SpringBoot/SpringBoot的自动装配.md~",
+    "分布式/Redis/数据库和缓存如何保证一致性？.md~",
+    "分布式/Redis/Redis 缓存.md~",
+    "Java基础/JVM/类的加载过程.md~",
+    "分布式/Zookeeper/zookeeper脑裂.md~",
+    "分布式/Redis/数据库和缓存如何保证一致性？.md",
+    "分布式/Redis/内存淘汰策略.md",
+    "分布式/Zookeeper/Zookeeper.md~",
     "分布式/分布式事务.md~",
     "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
     "框架/Dubbo/dubbo.md~",
     "框架/mybatis/缓存.md~",
     "框架/mybatis/mybatis.md~",
-    "计算机基础/位运算.md~",
-    "框架/Spring/spring bean的生命周期.md~",
-    "框架/Spring/SpringFramework/Spring Framework.md~",
     "框架/Spring/SpringFramework/Spring Framework.md",
     "框架/Spring/SpringFramework/SpringFramework.md",
     "框架/Spring/SpringBoot/Spring Boot.md",
-    "框架/Spring/SpringBoot/springboot.md~",
     "框架/Spring/SpringBoot/springboot.md",
-    "框架/Spring/SpringFramework/springMVC/SpringMVC.md~",
-    "算法/树/树.md~",
     "算法/树/树.md",
     "框架/Spring/SpringFramework/springMVC/过滤器 (Filter) 和 拦截器 (Interceptor) 有啥区别啊.md",
     "框架/Spring/SpringFramework/springMVC/过滤器.md",
@@ -287,13 +301,9 @@
     "框架/Spring/SpringFramework/springMVC/@Import.md",
     "框架/Spring/SpringFramework/springMVC/@EnableAspectJAutoProxy.md",
     "框架/Spring/SpringFramework/springMVC/@Configuration.md",
-    "框架/Spring/SpringFramework/springMVC",
     "分布式/一文彻底弄懂零拷贝原理.md",
     "框架/mybatis/Mybatis中的井号和$有什么区别.md",
     "分布式/Redis/Redis Sentinel.md",
-    "框架/Spring/@Autowired和@Resource的区别.md",
-    "计算机基础/计算机网络/TCP的运输连接管理.md",
-    "常见的跨域处理方式有哪些？.md",
     "assets/2024-06-11-19-54-15.png",
     "assets/2024-06-11-19-53-14.png",
     "assets/2024-06-11-19-51-43.png",
