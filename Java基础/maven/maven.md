@@ -251,4 +251,8 @@ jar tf maven-model-builder-3.9.4.jar|grep pom
 jar xf lib/maven-model-builder-3.9.4.jar org/apache/maven/model/pom-4.0.0.xml
 cat org/apache/maven/model/pom-4.0.0.xml 
 ```
+### 部署至远程仓库
+
+在命令行运行mvn clean deploy,Maven就会将项目构建输出的构件部署到配置对应的远程仓库，如果项目当前的版本是快照版本，则部署到快照版本仓库地址，否则就部署到发布版本仓库地址
+
 
