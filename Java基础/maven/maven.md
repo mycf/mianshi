@@ -1,3 +1,9 @@
+Maven坐标的元素包括groupId、artifactId、version、packaging、classifier。
+- groupId：定义当前Maven项目隶属的实际项目。
+  groupId的表示方式与Java包名的表示方式类似，通常与域名反向一一对应。
+- artifactId：该元素定义实际项目中的一个Maven项目（模块），推荐的做法是使用实际项目名称作为artifactId的前缀。
+Maven内置了一个中央仓库的地址（http://repo1.maven.org/maven2）
+
 
 
 ```sh
