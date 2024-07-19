@@ -245,6 +245,10 @@ mvn dependency:tree
 ## 远程仓库
 
 ## 中央仓库
-
-
+$M2_HOME/lib/maven-model-builder-3.0.jar（在Maven 2中，jar文件路径类似于$M2_HOME/lib/maven-2.2.1-uber.jar），然后访问路径org/apache/maven/model/pom-4.0.0.xml（maven 2中为org/apache/maven/project/pom-4.0.0.xml
+```sh
+jar tf maven-model-builder-3.9.4.jar|grep pom
+jar xf lib/maven-model-builder-3.9.4.jar org/apache/maven/model/pom-4.0.0.xml
+cat org/apache/maven/model/pom-4.0.0.xml 
+```
 
