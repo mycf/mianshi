@@ -103,3 +103,11 @@ Maven会在打包之前执行编译、测试等操作。这里jar:jar任务负�
 | system            | Y                     | Y                     | --                      | 本地的，maven仓库之外的类库文件 |
 
 
+依赖范围影响传递性依赖
+|          | compile  | test | provided |
+|----------|----------|------|----------|
+| compile  | compile  |      |          |
+| test     | test     |      |          |
+| provided | provided |      | provided |
+| runtime  | runtime  |      |          |
+
