@@ -2,6 +2,16 @@ Maven坐标的元素包括groupId、artifactId、version、packaging、classifie
 - groupId：定义当前Maven项目隶属的实际项目。
   groupId的表示方式与Java包名的表示方式类似，通常与域名反向一一对应。
 - artifactId：该元素定义实际项目中的一个Maven项目（模块），推荐的做法是使用实际项目名称作为artifactId的前缀。
+  在默认情况下，Maven生成的构件，其文件名会以artifactId作为开头
+- version：该元素定义Maven项目当前所处的版本
+- packaging：该元素定义Maven项目的打包方式。
+  打包方式通常与所生成构件的文件扩展名对应
+  打包方式会影响到构建的生命周期，比如jar打包和war打包会使用不同的命令。最后，当不定义packaging的时候，Maven会使用默认值jar。
+- classifier：该元素用来帮助定义构建输出的一些附属构件。
+  注意，不能直接定义项目的classifier，因为附属构件不是项目直接默认生成的，而是由附加的插件帮助生成。
+
+groupId、artifactId、version是必须定义的，packaging是可选的（默认为jar），而classifier是不能直接定义的。
+
 Maven内置了一个中央仓库的地址（http://repo1.maven.org/maven2）
 
 
