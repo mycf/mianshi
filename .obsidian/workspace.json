@@ -269,9 +269,9 @@
   "active": "4d2d794e1d2adb5b",
   "lastOpenFiles": [
     "Java基础/maven/maven.md~",
+    "Java基础/maven/maven.md",
     "Java基础/maven/jar.md~",
     "Java基础/maven/jar.md",
-    "Java基础/maven/maven.md",
     "分布式/Mysql/mysql命令执行.md~",
     "分布式/Mysql/mysql命令执行.md",
     "分布式/Mysql/索引失效.md~",
@@ -283,7 +283,6 @@
     "算法/Bubble.java~",
     "算法/Bubble.java",
     "分布式/分布式事务.md",
-    "框架/Spring/SpringBoot/SpringBoot的自动装配.md~",
     "分布式/Redis/数据库和缓存如何保证一致性？.md",
     "分布式/Redis/内存淘汰策略.md",
     "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
