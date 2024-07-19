@@ -232,5 +232,19 @@ mvn dependency:tree
 ### 自定义本地仓库目录地址
 可以编辑文件～/.m2/settings.xml，设置localRepository元素的值为想要的仓库地址。
 ```xml
-<settings></settings><localRepository>D:\java\repository</localRepository></settings>
+<settings>
+  <localRepository>D:\java\repository</localRepository>
+</settings>
 ```
+
+一个构件只有在本地仓库中之后，才能由其他Maven项目使用，那么构件如何进入到本地仓库中呢？
+最常见的是依赖Maven从远程仓库下载到本地仓库中。
+还有一种常见的情况是，将本地项目的构件安装到Maven仓库中。
+通过执行`mvn clean install`，Install插件的install目标将项目的构建输出文件安装到本地仓库。
+
+## 远程仓库
+
+## 中央仓库
+
+
+
