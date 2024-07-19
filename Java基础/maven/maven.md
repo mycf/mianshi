@@ -133,4 +133,68 @@ A-＞B-＞Y（1.0）、A-＞C-＞Y（2.0），Y（1.0）和Y（2.0）的依赖�
 
 ## 排除依赖
 
+使用exclusions元素声明排除依赖，exclusions可以包含一个或者多个exclusion子元素，因此可以排除一个或者多个传递性依赖。需要注意的是，声明exclusion的时候只需要groupId和artifactId，而不需要version元素，这是因为只需要groupId和artifactId就能唯一定位依赖图中的某个依赖。换句话说，Maven解析后的依赖中，不可能出现groupId和artifactId相同，但是version不同的两个依赖
 
+
+1.Jar包冲突的通常表现
+Jar包冲突往往是很诡异的事情，也很难排查，但也会有一些共性的表现。
+
+抛出java.lang.ClassNotFoundException：典型异常，主要是依赖中没有该类。导致原因有两方面：第一，的确没有引入该类；第二，由于Jar包冲突，Maven仲裁机制选择了错误的版本，导致加载的Jar包中没有该类。
+
+抛出java.lang.NoSuchMethodError：找不到特定的方法。Jar包冲突，导致选择了错误的依赖版本，该依赖版本中的类对不存在该方法，或该方法已经被升级。
+
+抛出java.lang.NoClassDefFoundError，java.lang.LinkageError等，原因同上。
+
+没有异常但预期结果不同：加载了错误的版本，不同的版本底层实现不同，导致预期结果不一致。
+
+2.Jar包冲突的本质
+Jar包冲突的本质：Java应用程序因某种因素，加载不到正确的类而导致其行为跟预期不一致。
+
+具体分两种情况：
+
+情况一：项目依赖了同一Jar包的多个版本，并且选错了版本；
+
+情况二：同样的类在不同的Jar包中出现，导致JVM加载了错误的类；
+
+　　情况一，同一个依赖引入了多个Jar包版本，不同的Jar包版本有不同的类和方法。由于Maven依赖树的仲裁机制导致Maven加载了错误的Jar包，从而导致Jar包冲突；
+
+　　情况二，同一类在不同的Jar包中出现。这种情况是由于JVM的同一个类加载器对于同一个类只会加载一次，现在加载一个类之后，同全限定名的类便不会进行加载，从而出现Jar包冲突的问题。
+
+　　针对第二种情况，如果不是类冲突抛出了异常，你可能根本意识不到，所以就显得更为棘手。这种情况就可以采用前文所述的通过分析不同类加载器的优先级及加载路径、文件系统的文件加载顺序等进行调整来解决。
+
+3.解决Jar包冲突的方法
+　　几种场景下解决Jar冲突的方法：
+
+Maven默认处理：路径最近者优先和第一声明优先；
+
+排除法：使用 Maven Helper，可以将冲突的Jar包在pom.xml中通过exclude来进行排除；
+
+版本锁定法：如果项目中依赖同一Jar包的很多版本，一个个排除非常麻烦，此时可用版本锁定法，即直接明确引入指定版本的依赖。此种方式的优先级最高。
+
+通过设置classpath指定jar包加载的先后顺序　
+
+3.1Mavenhelper 解决冲突
+
+具体步骤：　　
+
+　　　　1.使用mavenHelper 选择 Confilicts；
+
+　　　　2.如果列表存在冲突的依赖，则点击查看冲突的详情
+
+　　　　3.对冲突的依赖可进行右键；使用 exclude 进行排除即可解决冲突
+
+3.2 通过设置 classpath 指定jar包加载的先后顺序
+　　第一种方式：
+java -jar -classpath C:\dependency\framework.jar:C:\location\otherFramework.jar  test.jar
+　　第二种方式（-cp 等于 -classpath）：
+
+java -jar -cp C:\dependency\framework.jar:C:\location\otherFramework.jar  test.jar
+　　第三种方式：
+
+-Djava.class.path=a.jar
+　　第四种方式：
+
+-Xbootclasspath/a: 
+
+
+### 归类依赖
