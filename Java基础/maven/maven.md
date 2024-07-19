@@ -227,4 +227,10 @@ mvn dependency:tree
 
 ## 本地仓库
 
+默认情况下，不管是在Windows还是Linux上，每个用户在自己的用户目录下都有一个路径名为.m2/repository/的仓库目录。
 
+### 自定义本地仓库目录地址
+可以编辑文件～/.m2/settings.xml，设置localRepository元素的值为想要的仓库地址。
+```xml
+<settings></settings><localRepository>D:\java\repository</localRepository></settings>
+```
