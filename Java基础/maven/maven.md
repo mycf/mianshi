@@ -67,6 +67,13 @@ Maven会在打包之前执行编译、测试等操作。这里jar:jar任务负�
 - exclusions：用来排除传递性依赖，见5.9.1节。
 
 ## 依赖的范围
+
+### 三种classpath 
+
+1. Maven在编译项目主代码的时候需要使用一套classpath。在上例中，编译项目主代码的时候需要用到spring-core，该文件以依赖的方式被引入到classpath中。
+2. 其次，Maven在编译和执行测试的时候会使用另外一套classpath。上例中的JUnit就是一个很好的例子，该文件也以依赖的方式引入到测试使用的classpath中，不同的是这里的依赖范围是test。
+3. 最后，实际运行Maven项目的时候，又会使用一套classpath，上例中的spring-core需要在该classpath中，而JUnit则不需要。
+
 依赖范围就是用来控制依赖与三种classpath（编译classpath、测试classpath、运行classpath）的关系，Maven有以下几种依赖范围：
 
 - compile：编译依赖范围。如果没有指定，就会默认使用该依赖范围。使用此依赖范围的Maven依赖，对于编译、测试、运行三种classpath都有效。典型的例子是spring-core，在编译、测试和运行的时候都需要使用该依赖。
@@ -80,3 +87,13 @@ Maven会在打包之前执行编译、测试等操作。这里jar:jar任务负�
 - system：系统依赖范围。该依赖与三种classpath的关系，和provided依赖范围完全一致。但是，使用system范围的依赖时必须通过systemPath元素显式地指定依赖文件的路径。由于此类依赖不是通过Maven仓库解析的，而且往往与本机系统绑定，可能造成构建的不可移植，因此应该谨慎使用。systemPath元素可以引用环境变量，如：
 
 - import（Maven 2.0.9及以上）：导入依赖范围。该依赖范围不会对三种classpath产生实际的影响
+
+
+
+| 依赖范围 | Column2 | Column3 | Column4 | Column5 |
+| --------------- | --------------- | --------------- | --------------- | --------------- |
+| Item1.1 | Item2.1 | Item3.1 | Item4.1 | Item5.1 |
+| Item1.2 | jjj | Item3.2 | Item4.2 | Item5.2 |
+| Item1.3 | Item2.3 | Item3.3 | Item4.3 | Item5.3 |
+| Item1.4 | Item2.4 | Item3.4 | Item4.4 | Item5.4 |
+
