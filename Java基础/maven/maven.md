@@ -121,15 +121,15 @@ Maven会在打包之前执行编译、测试等操作。这里jar:jar任务负�
 
 **Maven依赖调解（Dependency Mediation）的第一原则是：路径最近者优先。**
 
-例如，项目A有这样的依赖关系：A-＞B-＞C-＞X（1.0）、A-＞D-＞X（2.0），X是A的传递性依赖，但是两条依赖路径上有两个版本的X，那么哪个X会被Maven解析使用呢？两个版本都被解析显然是不对的，因为那会造成依赖重复，因此必须选择一个。该例中X（1.0）的路径长度为3，而X（2.0）的路径长度为2，因此X（2.0）会被解析使用。
+例如，项目A有这样的依赖关系：A->B->C->X（1.0）、A->D->X（2.0），X是A的传递性依赖，但是两条依赖路径上有两个版本的X，那么哪个X会被Maven解析使用呢？两个版本都被解析显然是不对的，因为那会造成依赖重复，因此必须选择一个。该例中X（1.0）的路径长度为3，而X（2.0）的路径长度为2，因此X（2.0）会被解析使用。
 
 **Maven依赖调解的第二原则：第一声明者优先。**
 
-A-＞B-＞Y（1.0）、A-＞C-＞Y（2.0），Y（1.0）和Y（2.0）的依赖路径长度是一样的，都为2。那么到底谁会被解析使用呢？在Maven 2.0.8及之前的版本中，这是不确定的，但是从Maven 2.0.9开始，为了尽可能避免构建的不确定性。在依赖路径长度相等的前提下，在POM中依赖声明的顺序决定了谁会被解析使用，顺序最靠前的那个依赖优胜。该例中，如果B的依赖声明在C之前，那么Y（1.0）就会被解析使用。
+A->B->Y（1.0）、A->C->Y（2.0），Y（1.0）和Y（2.0）的依赖路径长度是一样的，都为2。那么到底谁会被解析使用呢？在Maven 2.0.8及之前的版本中，这是不确定的，但是从Maven 2.0.9开始，为了尽可能避免构建的不确定性。在依赖路径长度相等的前提下，在POM中依赖声明的顺序决定了谁会被解析使用，顺序最靠前的那个依赖优胜。该例中，如果B的依赖声明在C之前，那么Y（1.0）就会被解析使用。
 
 ## 可选依赖
 
-假设有这样一个依赖关系，项目A依赖于项目B，项目B依赖于项目X和Y,B对于X和Y的依赖都是可选依赖：A-＞B、B-＞X（可选）、B-＞Y（可选）。根据传递性依赖的定义，如果所有这三个依赖的范围都是compile，那么X、Y就是A的compile范围传递性依赖。然而，由于这里X、Y是**可选依赖，依赖将不会得以传递。**
+假设有这样一个依赖关系，项目A依赖于项目B，项目B依赖于项目X和Y,B对于X和Y的依赖都是可选依赖：A->B、B->X（可选）、B->Y（可选）。根据传递性依赖的定义，如果所有这三个依赖的范围都是compile，那么X、Y就是A的compile范围传递性依赖。然而，由于这里X、Y是**可选依赖，依赖将不会得以传递。**
 
 ## 排除依赖
 
@@ -308,5 +308,24 @@ Maven会首先解析聚合模块的POM、分析要构建的模块、并计算出
 有了父模块，就需要让其他模块来继承它。
 
 ```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.juvenxu.mvnbook.account</groupId>
+        <artifactId>account-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../account-parent/pom.xml</relativePath>
+    </parent>
 
+    <artifactId>account-email</artifactId>
+    <name>Account Email</name>
+    <dependencies>
+    <build>
+        <plugins>……</plugins>
+    </build>
+</project>
 ```
+
+
+子模块隐式地从父模块继承
