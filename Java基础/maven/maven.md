@@ -429,6 +429,27 @@ db.username=${db.username}
 db.username=lala
 ```
 
+# Profile
+
+1.命令行激活用户可以使用mvn命令行参数-P加上profile的id来激活profile，多个id之间以逗号分隔。
+
+2.settings文件显式激活如果用户希望某个profile默认一直处于激活状态，就可以配置settings.xml文件的active-Profiles元素，表示其配置的profile对于所有项目都处于激活状态
+
+3.系统属性激活用户可以配置当某系统属性存在的时候，自动激活profile
+
+4.操作系统环境激活Profile还可以自动根据操作系统环境激活，如果构建在不同的操作系统有差异，用户完全可以将这些差异写进profile，然后配置它们自动基于操作系统环境激活
+
+
+5.文件存在与否激活Maven能够根据项目中某个文件存在与否来决定是否激活profile
+
+
+6.默认激活用户可以在定义profile的时候指定其默认激活
+使用activeByDefault元素用户可以指定profile自动激活。不过需要注意的是，如果POM中有任何一个profile通过以上其他任意一种方式被激活了，所有的默认激活配置都会失效。
+
+
+
+
+
 # 项目站点
 
 配置maven-site-plugin
@@ -446,8 +467,7 @@ db.username=lala
 ```
 
 
-生成站点
-执行`mvn site`
+生成站点 执行`mvn site`
 
 在默认情况下Maven生成的站点包含了很多项目信息链接，这其实是由一个名为maven-project-info-reports-plugin的插件生成的。
 该插件会基于POM配置生成下列项目信息报告：
