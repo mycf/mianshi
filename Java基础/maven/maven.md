@@ -446,8 +446,14 @@ db.username=lala
 6.默认激活用户可以在定义profile的时候指定其默认激活
 使用activeByDefault元素用户可以指定profile自动激活。不过需要注意的是，如果POM中有任何一个profile通过以上其他任意一种方式被激活了，所有的默认激活配置都会失效。
 
+查看激活的profile
 
+maven-help-plugin提供了一个目标帮助用户了解当前激活的profile：`mvn help:active-profiles`
 
+maven-help-plugin还有另外一个目标用来列出当前所有的profile：`mvn help:all-profiles`
+
+profile的种类
+pom.xml：很显然，pom.xml中声明的profile只对当前项目有效。用户settings.xml：用户目录下.m2/settings.xml中的profile对本机上该用户所有的Maven项目有效。全局settings.xml:Maven安装目录下conf/settings.xml中的profile对本机上所有的Maven项目有效。
 
 
 # 项目站点
