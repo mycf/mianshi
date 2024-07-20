@@ -361,11 +361,11 @@ reporting：包括项目的报告输出目录配置、报告插件配置等。
 
 # Maven 属性
 
-最常见的使用Maven属性的方式，通过＜properties＞元素用户可以自定义一个或多个Maven属性，然后在POM的其他地方使用${属性名称}的方式引用该属性，这种做法的最大意义在于消除重复。
+最常见的使用Maven属性的方式，通过<properties>元素用户可以自定义一个或多个Maven属性，然后在POM的其他地方使用${属性名称}的方式引用该属性，这种做法的最大意义在于消除重复。
 
 内置属性：主要有两个常用内置属性——${basedir}表示项目根目录，即包含pom.xml文件的目录；${version}表示项目版本。
 
-POM属性：用户可以使用该类属性引用POM文件中对应元素的值。例如${project.artifactId}就对应了＜project＞＜artifactId＞元素的值，常用的POM属性包括：■${project.build.sourceDirectory}：项目的主源码目录，默认为src/main/java/。
+POM属性：用户可以使用该类属性引用POM文件中对应元素的值。例如${project.artifactId}就对应了<project><artifactId>元素的值，常用的POM属性包括：■${project.build.sourceDirectory}：项目的主源码目录，默认为src/main/java/。
 ■${project.build.testSourceDirectory}：项目的测试源码目录，默认为src/test/java/。
 ■${project.build.directory}：项目构建输出目录，默认为target/。
 ■${project.outputDirectory}：项目主代码编译输出目录，默认为target/classes/。
@@ -376,7 +376,7 @@ POM属性：用户可以使用该类属性引用POM文件中对应元素的值�
 ■${project.build.finalName}：项目打包输出文件的名称，默认为${project.artifactId}-${project.version}。
 这些属性都对应了一个POM元素，它们中一些属性的默认值都是在超级POM中定义的，可以参考8.5节。
 
-自定义属性：用户可以在POM的＜properties＞元素下自定义Maven属性。
+自定义属性：用户可以在POM的<properties>元素下自定义Maven属性。
 
 Settings属性：与POM属性同理，用户使用以settings.开头的属性引用settings.xml文件中XML元素的值，如常用的${settings.localRepository}指向用户本地仓库的地址。
 
