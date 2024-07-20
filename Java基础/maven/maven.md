@@ -303,6 +303,27 @@ Maven会首先解析聚合模块的POM、分析要构建的模块、并计算出
 
 Maven会首先解析聚合模块的POM、分析要构建的模块、并计算出一个反应堆构建顺序（Reactor Build Order），然后根据这个顺序依次构建各个模块。反应堆是所有模块组成的一个构建结构。
 
+```xml
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.yu.account</groupId>
+  <artifactId>account-aggregator</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>account-aggregator</name>
+
+  <modules>
+    <module>account-email</module>
+    <module>account-persist</module>
+    <module>account-parent</module>
+  </modules>
+</project>
+```
+
+
 ## 继承
 
 父模块只是为了帮助消除配置的重复，因此它本身不包含除POM之外的项目文件，也就不需要src/main/java/之类的文件夹了。
