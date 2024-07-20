@@ -303,6 +303,8 @@ Maven会首先解析聚合模块的POM、分析要构建的模块、并计算出
 
 Maven会首先解析聚合模块的POM、分析要构建的模块、并计算出一个反应堆构建顺序（Reactor Build Order），然后根据这个顺序依次构建各个模块。反应堆是所有模块组成的一个构建结构。
 
+**account-aggregator pom.xml**
+
 ```xml
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
