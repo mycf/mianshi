@@ -390,7 +390,35 @@ Java系统属性：所有Java系统属性都可以使用Maven属性引用，例�
 
 POM配置插件解析资源文件中的Maven属性，即开启资源过滤。
 
+```xml
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <db.username>lala</db.ss>
+      </properties>
+    </profile>
+  </profiles>
 
+```
+
+```xml
+  <build>
+    <testResources>
+      <testResource>
+        <directory>${project.basedir}/src/test/resources</directory>
+        <filtering>true</filtering>
+      </testResource>
+    </testResources>
+  </build>
+
+```
+
+test/resources/db.properties
+
+```properties
+db.username=${db.username}
+```
 
 # 项目站点
 
