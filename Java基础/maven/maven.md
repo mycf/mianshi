@@ -384,6 +384,14 @@ Java系统属性：所有Java系统属性都可以使用Maven属性引用，例�
 
 环境变量属性：所有环境变量都可以使用以env.开头的Maven属性引用。例如${env.JAVA_HOME}指代了JAVA_HOME环境变量的值。用户可以使用mvn help:system查看所有的环境变量。
 
+## 资源过滤
+
+资源文件的处理其实是maven-resources-plugin做的事情，它默认的行为只是将项目主资源文件复制到主代码编译输出目录中，将测试资源文件复制到测试代码编译输出目录中。
+
+POM配置插件解析资源文件中的Maven属性，即开启资源过滤。
+
+
+
 # 项目站点
 
 配置maven-site-plugin
