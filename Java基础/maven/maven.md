@@ -380,4 +380,19 @@ reporting：包括项目的报告输出目录配置、报告插件配置等。
 生成站点
 执行`mvn site`
 
+在默认情况下Maven生成的站点包含了很多项目信息链接，这其实是由一个名为maven-project-info-reports-plugin的插件生成的。
+该插件会基于POM配置生成下列项目信息报告：
+关于（about）：项目描述。
+持续集成（Continuous Integration）：项目持续集成服务器信息。
+依赖（Dependencies）：项目依赖信息，包括传递性依赖、依赖图、依赖许可证以及依赖文件的大小、所包含的类数目等。
+依赖收敛（Dependency Convergence）：只针对多模块项目生成，提供一些依赖健康状况分析，如各模块使用的依赖版本是否一致、项目中是否有SNAPSHOT依赖。
+依赖管理（Dependency Management）：基于项目的依赖管理配置生成的报告。
+问题追踪（Issue Tracking）：项目的问题追踪系统信息。
+邮件列表（Mailing Lists）：项目的邮件列表信息。
+插件管理（Plugin Management）：项目所使用插件的列表。
+项目许可证（Project License）：项目许可证信息。
+项目概述（Project Summary）：项目概述包括坐标、名称、描述等。
+项目团队（Project Team）：项目团队信息。
+源码仓库（Source Repository）：项目的源码仓库信息。
+
 
