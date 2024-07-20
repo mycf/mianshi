@@ -266,9 +266,21 @@ site生命周期有pre-site、site、post-site和site-deploy四个阶段，其�
 
 当插件目标被绑定到不同的生命周期阶段的时候，其执行顺序会由生命周期阶段的先后顺序决定。如果多个目标被绑定到同一个阶段，它们的执行顺序会是怎样？答案很简单，当多个插件目标绑定到同一个阶段的时候，这些插件声明的先后顺序决定了目标的执行顺序。
 
+### 使用maven-help-plugin描述插件
+获取maven-compiler-plugin 2.1版本的信息
 
 ```sh
 mvn help:describe -Dplugin=org.apache.maven.plugins:maven-compiler-plugin:2.1 
-mvn help:describe -Dplugin=org.apache.maven.plugins:maven-compiler-plugin     
 mvn help:describe -Dplugin=compiler                                           
 ```
+
+目标前缀（Goal Prefix），其作用是方便在命令行直接运行插件。
+
+在描述插件的时候，还可以省去版本信息，让Maven自动获取最新版本来进行表述。
+```sh
+mvn help:describe -Dplugin=org.apache.maven.plugins:maven-compiler-plugin     
+```
+
+## 聚合
+
+
