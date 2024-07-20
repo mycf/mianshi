@@ -255,11 +255,13 @@ cat org/apache/maven/model/pom-4.0.0.xml
 
 在命令行运行mvn clean deploy,Maven就会将项目构建输出的构件部署到配置对应的远程仓库，如果项目当前的版本是快照版本，则部署到快照版本仓库地址，否则就部署到发布版本仓库地址
 
-生命周期
+# 生命周期
 
-
+## clean
 
 clean生命周期仅有pre-clean、clean和post-clean三个阶段，其中的clean与maven-clean-plugin:clean绑定。maven-clean-plugin仅有clean这一个目标，其作用就是删除项目的输出目录。
+
+## site
 
 site生命周期有pre-site、site、post-site和site-deploy四个阶段，其中，site和maven-site-plugin:site相互绑定，site-deploy和maven-site-plugin:depoy相互绑定。maven-site-plugin有很多目标，其中，site目标用来生成项目站点，deploy目标用来将项目站点部署到远程服务器上。
 
@@ -356,3 +358,26 @@ build：包括项目的源码目录配置、输出目录配置、插件配置、
 reporting：包括项目的报告输出目录配置、报告插件配置等。
 
 ### 依赖管理
+
+
+# 项目站点
+
+配置maven-site-plugin
+
+```xml
+<pluginManagement>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.0-beta-1</version>
+        </plugin>
+    </plugins>
+</pluginManagement>
+```
+
+
+生成站点
+执行`mvn site`
+
+
