@@ -328,4 +328,30 @@ Maven会首先解析聚合模块的POM、分析要构建的模块、并计算出
 ```
 
 
-子模块隐式地从父模块继承
+子模块隐式地从父模块继承groupId version
+对于artifactId元素来说，子模块应该显式声明
+
+
+可继承的pom元素
+
+groupId：项目组ID，项目坐标的核心元素。
+version：项目版本，项目坐标的核心元素。
+description：项目的描述信息。
+organization：项目的组织信息。
+inceptionYear：项目的创始年份。
+url：项目的URL地址。
+developers：项目的开发者信息。
+contributors：项目的贡献者信息。
+distributionManagement：项目的部署配置。
+issueManagement：项目的缺陷跟踪系统信息。
+
+ciManagement：项目的持续集成系统信息。
+scm：项目的版本控制系统信息。
+mailingLists：项目的邮件列表信息。
+properties：自定义的Maven属性。
+dependencies：项目的依赖配置。
+dependencyManagement：项目的依赖管理配置。
+repositories：项目的仓库配置。
+build：包括项目的源码目录配置、输出目录配置、插件配置、插件管理配置等。
+reporting：包括项目的报告输出目录配置、报告插件配置等。
+
