@@ -56,16 +56,6 @@
             }
           },
           {
-            "id": "4d2d794e1d2adb5b",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
-          },
-          {
             "id": "84310473e28d36c8",
             "type": "leaf",
             "state": {
@@ -136,7 +126,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -266,7 +256,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4d2d794e1d2adb5b",
+  "active": "df5e549ed31dbd6a",
   "lastOpenFiles": [
     "Java基础/maven/maven.md~",
     "Java基础/maven/maven.md",
