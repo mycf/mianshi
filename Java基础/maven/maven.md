@@ -388,20 +388,23 @@ Java系统属性：所有Java系统属性都可以使用Maven属性引用，例�
 
 资源文件的处理其实是maven-resources-plugin做的事情，它默认的行为只是将项目主资源文件复制到主代码编译输出目录中，将测试资源文件复制到测试代码编译输出目录中。
 
-POM配置插件解析资源文件中的Maven属性，即开启资源过滤。
+配置插件解析资源文件中的Maven属性，即开启资源过滤。
+
+针对开发环境的数据库配置
 
 ```xml
   <profiles>
     <profile>
       <id>dev</id>
       <properties>
-        <db.username>lala</db.ss>
+        <db.username>lala</db.username>
       </properties>
     </profile>
   </profiles>
 
 ```
 
+为测试资源目录开启过滤
 ```xml
   <build>
     <testResources>
@@ -418,6 +421,12 @@ test/resources/db.properties
 
 ```properties
 db.username=${db.username}
+```
+
+运行命令`mvn clean install -Pdev`，查看`cat test-classes/db.properties`
+
+```properties
+db.username=lala
 ```
 
 # 项目站点
