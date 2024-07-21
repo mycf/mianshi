@@ -1,3 +1,4 @@
+[官方文档](https://maven.apache.org/download.cgi)
 Maven坐标的元素包括groupId、artifactId、version、packaging、classifier。
 
 - groupId：定义当前Maven项目隶属的实际项目。
@@ -402,14 +403,14 @@ Maven 中处理多模块项目的机制称为reactor。 Maven 核心的这一部
 - 构建中另一个模块上的构建扩展声明
 - 元素中声明的顺序<modules>（如果没有其他规则适用）
 
-命令行选项
+## 命令行选项
 
---resume-from- 从指定的项目中恢复反应堆（例如当它在中间发生故障时）
---also-make- 在反应器中构建指定的项目及其任何依赖项
---also-make-dependents- 构建指定的项目以及任何依赖于它们的项目
---fail-fast- 默认行为 - 每当模块构建失败时，立即停止整体构建
---fail-at-end- 如果某个模块构建失败，则继续其余的反应堆并在最后报告所有失败的模块
---non-recursive- 不要使用反应堆构建，即使当前项目声明了模块并仅在当前目录中构建项目
+-rf,--resume-from 从指定的项目中恢复反应堆（例如当它在中间发生故障时）
+-am,--also-make 在反应器中构建指定的项目及其任何依赖项
+-amd,--also-make-dependents 构建指定的项目以及任何依赖于它们的项目
+--fail-fast 默认行为  每当模块构建失败时，立即停止整体构建
+--fail-at-end 如果某个模块构建失败，则继续其余的反应堆并在最后报告所有失败的模块
+--non-recursive 不要使用反应堆构建，即使当前项目声明了模块并仅在当前目录中构建项目
 
 ### 反应堆的构建顺序
 
