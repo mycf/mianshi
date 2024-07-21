@@ -74,9 +74,7 @@ Maven会在打包之前执行编译、测试等操作。这里jar:jar任务负�
 编译classpath、测试classpath、运行classpath
 
 1. Maven在**编译**项目主代码的时候需要使用一套classpath。在上例中，编译项目主代码的时候需要用到spring-core，该文件以依赖的方式被引入到classpath中。
-
 2. 其次，Maven在编译和执行测试的时候会使用另外一套classpath。上例中的JUnit就是一个很好的例子，该文件也以依赖的方式引入到测试使用的classpath中，不同的是这里的依赖范围是test。
-
 3. 最后，实际**运行**Maven项目的时候，又会使用一套classpath，上例中的spring-core需要在该classpath中，而JUnit则不需要。
 
 依赖范围就是用来控制依赖与三种classpath的关系，Maven有以下几种依赖范围：
