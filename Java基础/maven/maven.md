@@ -1,4 +1,5 @@
 Maven坐标的元素包括groupId、artifactId、version、packaging、classifier。
+
 - groupId：定义当前Maven项目隶属的实际项目。
   groupId的表示方式与Java包名的表示方式类似，通常与域名反向一一对应。
 
