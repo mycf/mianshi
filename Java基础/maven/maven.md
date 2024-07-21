@@ -1,4 +1,8 @@
 [官方文档](https://maven.apache.org/download.cgi)
+
+
+`MAVEN_OPTS`环境变量
+
 Maven坐标的元素包括groupId、artifactId、version、packaging、classifier。
 
 - groupId：定义当前Maven项目隶属的实际项目。
