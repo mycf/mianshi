@@ -387,8 +387,54 @@ reporting：包括项目的报告输出目录配置、报告插件配置等。
 
 ### 反应堆的构建顺序
 
+创建maven工程如下
+```sh
+➜  account tree     
+.
+├── account-email
+│   └── pom.xml
+├── account-parent
+│   └── pom.xml
+├── account-persist
+│   └── pom.xml
+└── pom.xml
 
+4 directories, 4 files
 
+```
+聚合模块pom.xml如下
+```xml
+➜  account cat pom.xml 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.yu.account</groupId>
+  <artifactId>account-aggregator</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>account-aggregator</name>
+
+  <modules>
+    <module>account-email</module>
+    <module>account-persist</module>
+    <module>account-parent</module>
+  </modules>
+</project>
+```
+
+查看反应堆
+```sh
+➜  account mvn clean
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] account-parent                                                     [pom]
+[INFO] account-email                                                      [jar]
+[INFO] account-persist                                                    [jar]
+[INFO] account-aggregator                                                 [pom]
+```
 
 
 # Maven 属性
