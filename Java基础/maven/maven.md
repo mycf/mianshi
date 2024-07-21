@@ -256,6 +256,8 @@ cat org/apache/maven/model/pom-4.0.0.xml
 
 # 生命周期
 
+内置三种构建生命周期：clean、default和site。default生命周期负责处理项目部署，clean生命周期负责处理项目清理，而site生命周期负责创建项目的网站。
+
 ## clean
 
 clean生命周期仅有pre-clean、clean和post-clean三个阶段，其中的clean与maven-clean-plugin:clean绑定。maven-clean-plugin仅有clean这一个目标，其作用就是删除项目的输出目录。
