@@ -2,6 +2,23 @@
 
 
 `MAVEN_OPTS`环境变量
+用于启动运行 Maven 的 JVM 的参数
+
+`MAVEN_ARGS`环境变量：
+从 Maven 3.9.0 开始，此变量包含在 CLI 参数之前传递给 Maven 的参数。
+
+`settings.xml`文件：
+位于 USER_HOME/.m2 的设置文件旨在包含跨项目 Maven 使用的任何配置。
+
+`.mvn`目录：
+位于项目**顶级目录**中的文件
+
+- `maven.config`
+- `jvm.config`
+- `extensions.xml`
+
+
+
 
 Maven坐标的元素包括groupId、artifactId、version、packaging、classifier。
 
