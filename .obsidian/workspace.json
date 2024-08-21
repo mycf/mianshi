@@ -56,6 +56,16 @@
             }
           },
           {
+            "id": "74ad37704b5c03af",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
+            }
+          },
+          {
             "id": "84310473e28d36c8",
             "type": "leaf",
             "state": {
@@ -126,7 +136,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -256,7 +266,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "df5e549ed31dbd6a",
+  "active": "74ad37704b5c03af",
   "lastOpenFiles": [
     "PUT和POST有什么区别?.md~",
     "框架/序列化/Protobuf.md~",
