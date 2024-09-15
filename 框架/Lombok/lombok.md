@@ -149,9 +149,6 @@ public class ToStringExample {
 
 With Lombok：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 import lombok.EqualsAndHashCode;
@@ -185,9 +182,6 @@ public class EqualsAndHashCodeExample {
 
 Native Java：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 import java.util.Arrays;
@@ -280,9 +274,6 @@ public class EqualsAndHashCodeExample {
 
 With Lombok：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 import lombok.AccessLevel;
@@ -307,9 +298,6 @@ public class ConstructorExample<T> {
 
 Native Java：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 public class ConstructorExample<T> {
@@ -350,9 +338,6 @@ public class ConstructorExample<T> {
 
 With Lombok：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 import lombok.AccessLevel;
@@ -379,9 +364,6 @@ public class DataExample {
 
 Native Java：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 import java.util.Arrays;
@@ -521,9 +503,6 @@ public class DataExample {
 
 只能标注到类上，将生成类的一个当前流程的一种链式构造工厂，如下：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 User buildUser = User.builder().username("riemann").password("123").build();
@@ -533,9 +512,6 @@ User buildUser = User.builder().username("riemann").password("123").build();
 
 With Lombok：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 import lombok.Builder;
@@ -555,9 +531,6 @@ public class BuilderExample {
 
 Native Java：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 import java.util.Set;
@@ -660,9 +633,6 @@ public class BuilderExample {
 
 标注到类上，`chain`属性设置为`true`时，类的所有属性的`setter`方法返回值将为`this`，用来支持`setter`方法的链式写法。如：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 new User().setUsername("riemann").setPassword("123");
@@ -670,9 +640,6 @@ new User().setUsername("riemann").setPassword("123");
 
 `fluent`属性设置为`true`时，类的所有`getter`，`setter`方法将省略`get`和`set`前缀，获取属性值直接使用属性名相同的无参方法，设置属性值使用属性名相同的有参方法，并且返回值为this。如：
 
-代码语言：javascript
-
-复制
 
 ```javascript
 User user = new User().username("riemann").password("123");
@@ -682,9 +649,6 @@ String password = user.password();
 
 标注到属性上，使用`prefix`设置需要省略的属性生成`getter`，`setter`方法时的前缀，且属性必须为驼峰式命名。
 
-代码语言：javascript
-
-复制
 
 ```javascript
 @Accessors(prefix = "r")
@@ -695,9 +659,6 @@ private String rUsername = "riemann";
 
 编译之后为
 
-代码语言：javascript
-
-复制
 
 ```javascript
 public String getUsername() {
