@@ -13,7 +13,7 @@
 
 With Lombok：
 
-```javascript
+```java
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,7 +37,7 @@ public class GetterSetterExample {
 Native Java：
 
 
-```javascript
+```java
 public class GetterSetterExample {
 
   private int age = 10;
@@ -73,7 +73,7 @@ public class GetterSetterExample {
 
 With Lombok：
 
-```javascript
+```java
 import lombok.ToString;
 
 @ToString
@@ -104,7 +104,7 @@ public class ToStringExample {
 Native Java：
 
 
-```javascript
+```java
 import java.util.Arrays;
 
 public class ToStringExample {
@@ -150,7 +150,7 @@ public class ToStringExample {
 With Lombok：
 
 
-```javascript
+```java
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode
@@ -183,7 +183,7 @@ public class EqualsAndHashCodeExample {
 Native Java：
 
 
-```javascript
+```java
 import java.util.Arrays;
 
 public class EqualsAndHashCodeExample {
@@ -275,7 +275,7 @@ public class EqualsAndHashCodeExample {
 With Lombok：
 
 
-```javascript
+```java
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -299,7 +299,7 @@ public class ConstructorExample<T> {
 Native Java：
 
 
-```javascript
+```java
 public class ConstructorExample<T> {
   private int x, y;
   @NonNull 
@@ -339,7 +339,7 @@ public class ConstructorExample<T> {
 With Lombok：
 
 
-```javascript
+```java
 import lombok.AccessLevel;
 import lombok.Setter;
 import lombok.Data;
@@ -365,7 +365,7 @@ public class DataExample {
 Native Java：
 
 
-```javascript
+```java
 import java.util.Arrays;
 
 public class DataExample {
@@ -504,7 +504,7 @@ public class DataExample {
 只能标注到类上，将生成类的一个当前流程的一种链式构造工厂，如下：
 
 
-```javascript
+```java
 User buildUser = User.builder().username("riemann").password("123").build();
 ```
 
@@ -513,7 +513,7 @@ User buildUser = User.builder().username("riemann").password("123").build();
 With Lombok：
 
 
-```javascript
+```java
 import lombok.Builder;
 import lombok.Singular;
 import java.util.Set;
@@ -532,7 +532,7 @@ public class BuilderExample {
 Native Java：
 
 
-```javascript
+```java
 import java.util.Set;
 
 public class BuilderExample {
@@ -634,14 +634,14 @@ public class BuilderExample {
 标注到类上，`chain`属性设置为`true`时，类的所有属性的`setter`方法返回值将为`this`，用来支持`setter`方法的链式写法。如：
 
 
-```javascript
+```java
 new User().setUsername("riemann").setPassword("123");
 ```
 
 `fluent`属性设置为`true`时，类的所有`getter`，`setter`方法将省略`get`和`set`前缀，获取属性值直接使用属性名相同的无参方法，设置属性值使用属性名相同的有参方法，并且返回值为this。如：
 
 
-```javascript
+```java
 User user = new User().username("riemann").password("123");
 String username = user.username();
 String password = user.password();
@@ -650,7 +650,7 @@ String password = user.password();
 标注到属性上，使用`prefix`设置需要省略的属性生成`getter`，`setter`方法时的前缀，且属性必须为驼峰式命名。
 
 
-```javascript
+```java
 @Accessors(prefix = "r")
 @Getter
 @Setter
@@ -660,7 +660,7 @@ private String rUsername = "riemann";
 编译之后为
 
 
-```javascript
+```java
 public String getUsername() {
     return rUsername;
 }
