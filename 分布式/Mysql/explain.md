@@ -91,9 +91,8 @@ Explain select * from users;
 
 Explain语句返回列的各列含义：
 
-|   |   |
-|---|---|
 |**列名**|**含义**|
+|---|---|
 |id|每个select都有一个对应的id号，并且是从1开始自增的|
 |select_type|查询语句执行的查询操作类型|
 |table|表名|
