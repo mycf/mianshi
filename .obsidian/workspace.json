@@ -59,9 +59,11 @@
             "id": "74ad37704b5c03af",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.7"
+                "file": "加解密.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -129,10 +131,8 @@
             "id": "9d0d346fefe7afa2",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "书籍/亿级流量网站架构核心技术.pdf"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -202,7 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "file": "加解密.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +219,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
+                "file": "加解密.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -242,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md"
+                "file": "加解密.md"
               }
             }
           }
@@ -268,6 +268,8 @@
   },
   "active": "74ad37704b5c03af",
   "lastOpenFiles": [
+    "附录.md",
+    "加解密.md",
     "框架/Lombok/lombok.md~",
     "框架/Lombok/lombok.md",
     "框架/Lombok",
@@ -284,7 +286,6 @@
     "Java基础/maven/maven.md",
     "Java基础/maven/jar.md~",
     "Java基础/maven/jar.md",
-    "分布式/Mysql/mysql命令执行.md~",
     "分布式/Mysql/mysql命令执行.md",
     "分布式/Mysql/索引失效.md",
     "分布式/分布式事务.md",
@@ -303,7 +304,6 @@
     "框架/Spring/SpringFramework/springMVC/什么是MVC.md",
     "框架/Spring/SpringFramework/springMVC/web.xml.md",
     "框架/Spring/SpringFramework/springMVC/Spring AOP在什么场景下会失效.md",
-    "框架/Spring/SpringFramework/springMVC/SpringMVC.md",
     "assets/2024-06-11-19-54-15.png",
     "assets/2024-06-11-19-53-14.png",
     "assets/2024-06-11-19-51-43.png",
