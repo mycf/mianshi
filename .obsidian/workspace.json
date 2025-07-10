@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/AbstractQueuedSynchronizer.md",
+                "file": "Java基础/JVM/ZGC 收集器.md",
                 "mode": "source",
                 "source": false
               }
@@ -202,7 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/AbstractQueuedSynchronizer.md",
+                "file": "Java基础/JVM/ZGC 收集器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +219,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/AbstractQueuedSynchronizer.md",
+                "file": "Java基础/JVM/ZGC 收集器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -242,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/AbstractQueuedSynchronizer.md"
+                "file": "Java基础/JVM/ZGC 收集器.md"
               }
             }
           }
@@ -268,9 +268,9 @@
   },
   "active": "74ad37704b5c03af",
   "lastOpenFiles": [
+    "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/线程池参数设计.md",
     "Java基础/Arraylist 与 LinkedList的区别.md",
-    "Java基础/AbstractQueuedSynchronizer.md",
     "Java基础/ArrayList.md",
     "加解密.md",
     "附录.md",
