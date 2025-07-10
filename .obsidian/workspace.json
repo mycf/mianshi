@@ -61,9 +61,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           },
@@ -202,7 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +219,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md",
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -242,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java基础/JVM/G1 和 CMS的区别.md"
+                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
               }
             }
           }
@@ -268,6 +268,7 @@
   },
   "active": "74ad37704b5c03af",
   "lastOpenFiles": [
+    "Java基础/JVM/G1 和 CMS的区别.md",
     "Java基础/JVM/G1.md",
     "Java基础/JVM/volatile.md",
     "Java基础/JVM/ZGC 收集器.md",
@@ -303,7 +304,6 @@
     "框架/Spring/SpringFramework/SpringFramework.md",
     "框架/Spring/SpringBoot/Spring Boot.md",
     "框架/Spring/SpringBoot/springboot.md",
-    "算法/树/树.md",
     "assets/2024-06-11-19-54-15.png",
     "assets/2024-06-11-19-53-14.png",
     "assets/2024-06-11-19-51-43.png",
