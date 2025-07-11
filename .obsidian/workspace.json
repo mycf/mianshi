@@ -44,30 +44,6 @@
             }
           },
           {
-            "id": "df5e549ed31dbd6a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "框架/Spring/SpringBoot/springboot的启动流程.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "74ad37704b5c03af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
             "id": "84310473e28d36c8",
             "type": "leaf",
             "state": {
@@ -136,7 +112,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -202,7 +178,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+                "file": "框架/Dubbo/dubbo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +195,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
+                "file": "框架/Dubbo/dubbo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -242,7 +218,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md"
+                "file": "框架/Dubbo/dubbo.md"
               }
             }
           }
@@ -266,8 +242,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "74ad37704b5c03af",
+  "active": "aca91f22b1ac12f6",
   "lastOpenFiles": [
+    "Java基础/头插法.excalidraw.md",
+    "Java基础/解决hash冲突的办法有哪些？HashMap用的哪种?.md",
+    "Java基础/什么情况下会内存溢出，怎么解决.md",
+    "Java基础/机器码和字节码.md",
+    "Java基础/1.7新特性.md",
+    "框架/Spring/SpringBoot/springboot的启动流程.md",
+    "Excalidraw/07-客户端 2023-12-31 16.23.54.excalidraw.md",
     "Java基础/JVM/G1 和 CMS的区别.md",
     "Java基础/JVM/G1.md",
     "Java基础/JVM/volatile.md",
@@ -297,13 +280,6 @@
     "分布式/Mysql/mysql命令执行.md",
     "分布式/Mysql/索引失效.md",
     "分布式/分布式事务.md",
-    "分布式/Redis/数据库和缓存如何保证一致性？.md",
-    "分布式/Redis/内存淘汰策略.md",
-    "分布式/实现分布式锁的解决方案中，你认为Zookeeper和Redis哪种更好？.md",
-    "框架/Spring/SpringFramework/Spring Framework.md",
-    "框架/Spring/SpringFramework/SpringFramework.md",
-    "框架/Spring/SpringBoot/Spring Boot.md",
-    "框架/Spring/SpringBoot/springboot.md",
     "assets/2024-06-11-19-54-15.png",
     "assets/2024-06-11-19-53-14.png",
     "assets/2024-06-11-19-51-43.png",
