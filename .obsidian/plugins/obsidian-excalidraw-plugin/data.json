@@ -213,7 +213,7 @@
             "containerId": null,
             "originalText": "Application\nserver",
             "lineHeight": 1.3499999999999994,
-            "baseline": 34
+            "baseline": 36
           }
         ],
         "id": "RvVPPnlpmZ_6TD-iqoiZ5",
@@ -349,7 +349,7 @@
             "containerId": null,
             "originalText": "Multi\nInstance\nserver",
             "lineHeight": 1.3443715956615416,
-            "baseline": 53
+            "baseline": 55
           }
         ],
         "id": "uUelCmUsx0jw5-Y_yxB0j",
@@ -424,7 +424,7 @@
             "containerId": null,
             "originalText": "server",
             "lineHeight": 1.320687725575955,
-            "baseline": 19
+            "baseline": 21
           }
         ],
         "id": "4L1nczP8wjjVXT2WUDmXX",
@@ -560,7 +560,7 @@
             "containerId": null,
             "originalText": "Multi Instance",
             "lineHeight": 1.3218415496714844,
-            "baseline": 19
+            "baseline": 21
           }
         ],
         "id": "8v1S5_bPrJMfIadhkdei6",
@@ -1147,7 +1147,7 @@
             "containerId": null,
             "originalText": "Relational DB",
             "lineHeight": 1.350000000000001,
-            "baseline": 16
+            "baseline": 18
           }
         ],
         "id": "3Ya5LO_eaAtmf6yjJfkfU",
@@ -1458,7 +1458,7 @@
             "containerId": null,
             "originalText": "Object Storage",
             "lineHeight": 1.350000000000001,
-            "baseline": 16
+            "baseline": 18
           }
         ],
         "id": "wTyU8Q1f1uP0oJyXvn9fq",
@@ -2364,7 +2364,7 @@
             "containerId": null,
             "originalText": "Cold Storage",
             "lineHeight": 1.3499999999999988,
-            "baseline": 16
+            "baseline": 18
           }
         ],
         "id": "loWc49yj0qKYnLDRI1NQG",
@@ -2646,7 +2646,7 @@
             "containerId": null,
             "originalText": "Document DB",
             "lineHeight": 1.4240667712990924,
-            "baseline": 17
+            "baseline": 19
           }
         ],
         "id": "gUETcyki9Nwgs8Gg3WegG",
@@ -2692,7 +2692,7 @@
             "containerId": null,
             "originalText": "Columnar DB",
             "lineHeight": 1.3420772212688767,
-            "baseline": 17
+            "baseline": 18
           },
           {
             "type": "line",
@@ -3047,7 +3047,7 @@
             "containerId": null,
             "originalText": "Graph DB",
             "lineHeight": 1.3499999999999999,
-            "baseline": 17
+            "baseline": 19
           },
           {
             "type": "line",
@@ -4151,7 +4151,7 @@
             "containerId": null,
             "originalText": "Stack\nStorage",
             "lineHeight": 1.3500000000000014,
-            "baseline": 34
+            "baseline": 35
           }
         ],
         "id": "JfdIij6vJSjoQd3pHfeT6",
@@ -4899,7 +4899,7 @@
             "containerId": null,
             "originalText": "Cache",
             "lineHeight": 1.269574560630744,
-            "baseline": 20
+            "baseline": 22
           }
         ],
         "id": "aP9RjZ0O1VepzYHWVDi6Z",
@@ -5527,7 +5527,7 @@
             "containerId": null,
             "originalText": "Auth &\n IAM",
             "lineHeight": 1.3328788279541297,
-            "baseline": 45
+            "baseline": 47
           }
         ],
         "id": "mPWPVHOB_dZIhK5A2I75F",
@@ -6396,7 +6396,7 @@
             "containerId": null,
             "originalText": "Load\nBalancer",
             "lineHeight": 1.355813473102399,
-            "baseline": 33
+            "baseline": 35
           }
         ],
         "id": "57usN3LIkfvRaJ7pWj1N-",
@@ -6803,7 +6803,7 @@
             "containerId": null,
             "originalText": "Message Q",
             "lineHeight": 1.3500000000000016,
-            "baseline": 17
+            "baseline": 19
           }
         ],
         "id": "uFK6o-1gz_8NLjWGmx7XP",
@@ -7041,7 +7041,7 @@
             "containerId": null,
             "originalText": "Pipeline",
             "lineHeight": 1.2999999999999996,
-            "baseline": 22
+            "baseline": 24
           }
         ],
         "id": "FtIZYm5HzkUX8qoa4Wcex",
@@ -7394,7 +7394,7 @@
             "containerId": null,
             "originalText": "cloud",
             "lineHeight": 1.3499999999999974,
-            "baseline": 19
+            "baseline": 21
           }
         ],
         "id": "nzWxGf1-_EtCi1D01oP6t",
@@ -8669,7 +8669,7 @@
             "containerId": null,
             "originalText": "7",
             "lineHeight": 1.2999999999999994,
-            "baseline": 9
+            "baseline": 10
           },
           {
             "type": "text",
@@ -8710,7 +8710,7 @@
             "containerId": null,
             "originalText": "Archive",
             "lineHeight": 1.3,
-            "baseline": 15
+            "baseline": 17
           }
         ],
         "id": "MEcZfZEXtgrCeb4YBnfsa",
@@ -8756,7 +8756,7 @@
             "containerId": null,
             "originalText": "Mobile",
             "lineHeight": 1.276888277439391,
-            "baseline": 14
+            "baseline": 16
           },
           {
             "type": "rectangle",
@@ -9102,7 +9102,7 @@
             "containerId": null,
             "originalText": "Web Application",
             "lineHeight": 1.3499999999999985,
-            "baseline": 15
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -9294,7 +9294,7 @@
             "containerId": null,
             "originalText": "G",
             "lineHeight": 1.2999999999999996,
-            "baseline": 12
+            "baseline": 14
           },
           {
             "type": "text",
@@ -9336,7 +9336,7 @@
             "containerId": null,
             "originalText": "o",
             "lineHeight": 1.3000000000000003,
-            "baseline": 12
+            "baseline": 14
           },
           {
             "type": "text",
@@ -9378,7 +9378,7 @@
             "containerId": null,
             "originalText": "o",
             "lineHeight": 1.3000000000000003,
-            "baseline": 12
+            "baseline": 14
           },
           {
             "type": "text",
@@ -9420,7 +9420,7 @@
             "containerId": null,
             "originalText": "g",
             "lineHeight": 1.3,
-            "baseline": 12
+            "baseline": 14
           },
           {
             "type": "text",
@@ -9462,7 +9462,7 @@
             "containerId": null,
             "originalText": "l",
             "lineHeight": 1.3,
-            "baseline": 12
+            "baseline": 14
           },
           {
             "type": "text",
@@ -9504,7 +9504,7 @@
             "containerId": null,
             "originalText": "e",
             "lineHeight": 1.3000000000000003,
-            "baseline": 12
+            "baseline": 14
           },
           {
             "type": "rectangle",
@@ -11073,7 +11073,7 @@
             "containerId": null,
             "originalText": "JSON",
             "lineHeight": 1.5682862358092613,
-            "baseline": 81
+            "baseline": 89
           },
           {
             "type": "line",
@@ -17731,7 +17731,7 @@
             "containerId": null,
             "originalText": "DNS",
             "lineHeight": 1.5723270440251587,
-            "baseline": 77
+            "baseline": 84
           },
           {
             "type": "line",
@@ -18783,7 +18783,7 @@
             "containerId": null,
             "originalText": "Slack",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           }
         ],
         "id": "mb6aDt8lLpnjb9BXfkKzo",
@@ -19276,7 +19276,7 @@
             "containerId": null,
             "originalText": "Docker",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           }
         ],
         "id": "Qsr_bCZKjzSUef9igg3F_",
@@ -19642,7 +19642,7 @@
             "containerId": null,
             "originalText": "GitHub",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           }
         ],
         "id": "K39d22cEulRClkwYv67oo",
@@ -19721,7 +19721,7 @@
             "containerId": null,
             "originalText": "VPC",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           },
           {
             "type": "rectangle",
@@ -20112,7 +20112,7 @@
             "containerId": null,
             "originalText": "Private subnet",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           },
           {
             "type": "rectangle",
@@ -20399,7 +20399,7 @@
             "containerId": null,
             "originalText": "Public subnet",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           },
           {
             "type": "rectangle",
@@ -20654,7 +20654,7 @@
             "containerId": null,
             "originalText": "User",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           },
           {
             "type": "line",
@@ -20794,7 +20794,7 @@
             "containerId": null,
             "originalText": "Users",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           },
           {
             "type": "ellipse",
@@ -21396,7 +21396,7 @@
             "containerId": null,
             "originalText": "Device",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           }
         ],
         "id": "9_9pebw1kmiJPt-x9timk",
@@ -21472,7 +21472,7 @@
             "containerId": null,
             "originalText": "Server",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           },
           {
             "type": "line",
@@ -21703,7 +21703,7 @@
             "containerId": null,
             "originalText": "Email",
             "lineHeight": 1.25,
-            "baseline": 18
+            "baseline": 20
           },
           {
             "type": "rectangle",
