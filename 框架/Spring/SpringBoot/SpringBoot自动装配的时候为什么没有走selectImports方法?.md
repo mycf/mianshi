@@ -1,24 +1,16 @@
-
-
-  本文首先需要大家对SpringBoot的自动装配比较清楚，如果不清楚的可以移步我之前介绍的自动装配的相关视频和文章。
-
 ## 一、疑惑点
 
-  我们之前在分析SpringBoot自动装配源码的时候讲过在 `@EnableAutoConfiguration`注解上通过 `@Import`注解导入了一个 `ImportSelector`接口的实现类 `AutoConfigurationImportSelector`。按照之前对 `@Import` 注解的理解，应该会执行重写的 `selectImports` 方法，但调试的时候，执行的流程好像和我们期待的不一样哦，没有走 `selectImports`方法。
+  `@EnableAutoConfiguration`注解上通过 `@Import`注解导入了一个 `ImportSelector`接口的实现类 `AutoConfigurationImportSelector`。按照之前对 `@Import` 注解的理解，应该会执行重写的 `selectImports` 方法，但调试的时候，执行的流程好像和我们期待的不一样哦，没有走 `selectImports`方法。
 
   通过Debug模式，端点定位我们能够发现进入到了getAutoConfigurationEntry方法中。
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/862888162855f5ba804f509c29489011.png)
 
-image.png
 
   但是没有进入selectImports方法。
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/a564e7c04269cfb3473431629bcce705.png)
 
-image.png
-
-  这是什么原因呢？他不是实现了ImportSelector接口吗？怎么和我们之前理解的不一样呢？这就需要我们再来细说下@Import注解了。
 
 ## 二、@Import
 
@@ -34,7 +26,6 @@ image.png
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/69a322457c015fa66898ae660e6856a1.png)
 
-image.png
 
   那这个DeferredImportSelector这个接口的作用是什么呢？字面含义是延迟导入的意思。具体怎么实现的后面再说，我们先来说下他的作用。
 
@@ -76,7 +67,6 @@ public class JavaConfig {
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/d7e2286edd983f32c6b7ea29dbc0602c.png)
 
-image.png
 
 但是如果我们重写了DeferredImportSelector中的Group接口，并重写了getImportGroup，那么[容器](https://cloud.tencent.com/product/tke?from_column=20065&from=20065)在启动的时候就不会执行selectImports方法了，而是执行getImportGroup方法。进而执行Group中重写的方法。
 
@@ -181,7 +171,6 @@ image.png
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/435e84bb9541ffcfbab188a6ea825b87.png)
 
-image.png
 
 然后来看下导入的类型是ImportSelector接口的逻辑。
 
@@ -199,7 +188,6 @@ image.png
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/34786a2e10c9fc9ae039b54250790c9e.png)
 
-image.png
 
 ### 2.process方法
 
@@ -207,13 +195,11 @@ image.png
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/1cf2a58944c03069343628be255c0047.png)
 
-image.png
 
 进入process方法
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/671a8317c708dde8b043f98c75f82eb0.png)
 
-image.png
 
 先看register方法
 
@@ -225,7 +211,6 @@ image.png
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/bb4ed60a1ea254e6b55d30005333ceb1.png)
 
-image.png
 
 进去后我们需要进入getImports方法中。
 
@@ -237,7 +222,6 @@ image.png
 
 ![image.png](https://ask.qcloudimg.com/http-save/yehe-4919348/8a74512f15fd9ae259fcf5d9b7861b32.png)
 
-image.png
 
 到这儿是不是帮助大家解决了自动装配为什么没有走 `AutoConfigurationImportSelector`中的 `selectImports` 方法了!!!
 

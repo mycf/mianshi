@@ -1,3 +1,5 @@
+# zookeeper
+
 ZooKeeper 是 Apache 软件基金会的一个软件项目，它为大型分布式计算提供开源的分布式配置服务、同步服务和命名注册。
 
 ZooKeeper 的架构通过冗余服务实现高可用性。
@@ -34,7 +36,7 @@ ZAB 协议的恢复模式使用了以下策略：
 - 1、选举 zxid 最大的节点作为新的 leader
 - 2、新 leader 将事务日志中尚未提交的消息进行处理
 
-##  Leader 选举原理
+## Leader 选举原理
 
 zookeeper 的 leader 选举存在两个阶段，一个是服务器启动时 leader 选举，另一个是运行过程中 leader 服务器宕机。在分析选举原理前，先介绍几个重要的参数。
 
@@ -73,7 +75,9 @@ zookeeper 的 leader 选举存在两个阶段，一个是服务器启动时 lead
 - （3）处理投票。规则同启动过程。
 - （4）统计投票。与启动过程相同。
 - （5）改变服务器状态。与启动过程相同。
+
 # 监听
+
 ## 永久监听
 
 ## ZK监听缺陷
@@ -90,9 +94,11 @@ zookeeper 的 leader 选举存在两个阶段，一个是服务器启动时 lead
 - PERSISTENT_RECURSIVE：持久化递归订阅，在PERSISTENT的基础上，增加了子节点修改事件的触发，以及子节点的子节点的数据变化都会触发相关事件（满足递归订阅特性）
 
 # ZooKeeper的顺序一致性
+
 众所周知，ZooKeeper 专门设计了 Zab（Zookeeper Atomic Broadcast）协议作为其数据一致性协议。利用 Zab 协议的数据写入由 Leader 结点协调，使用两阶段提交的方式，达到数据的最终一致性。为什么是最终一致性呢？我们先了解下两阶段的过程，如图一所示：
 ![img](https://static001.geekbang.org/resource/image/21/7e/21acd912633271fbca4d795194747e7e.jpg?wh=822*298)
 数据写入过程如下：
+
 - 第一阶段：每次的数据写入事件作为提案广播给所有 Follower 结点；可以写入的结点返回确认信息 ACK；
 - 第二阶段：Leader 收到一半以上的 ACK 信息后确认写入可以生效，向所有结点广播 COMMIT 将提案生效。
 根据写入过程的两阶段的描述，可以知道 ZooKeeper 保证的是最终一致性，即 Leader 向客户端返回写入成功后，可能有部分 Follower 还没有写入最新的数据，所以是最终一致性。
@@ -112,4 +118,3 @@ ZooKeeper 集群的写入是由 Leader 结点协调的，真实场景下写入�
 Leader 是如何判断当前 ZXID 之前是否还有未提交提案的呢？由于前提是保证顺序提交的，所以 Leader 只需判断 outstandingProposals 里，当前 ZXID 的前一个 ZXID 是否存在。代码如下：
 ![img](https://static001.geekbang.org/resource/image/0c/d1/0c853e6bcdebab9077aa44e3831d6ed1.jpg?wh=622*114)
 所以 ZooKeeper 是通过两阶段提交保证数据的最终一致性，并且通过严格按照 ZXID 的顺序生效提案保证其顺序一致性的。
-
