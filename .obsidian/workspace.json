@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "0712ea165a199d88",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
+          },
+          {
             "id": "f0779dab795faddc",
             "type": "leaf",
             "state": {
@@ -139,7 +151,8 @@
               "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -278,6 +291,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -288,7 +302,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "548af89403614686",
+  "active": "0712ea165a199d88",
   "lastOpenFiles": [
     "Excalidraw/类的加载过程 2023-12-22 14.11.52.excalidraw.md",
     "Excalidraw/07-客户端 2023-12-31 17.08.33.excalidraw.md",
